@@ -1,0 +1,26 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/tde-kdbusnotification/tde-kdbusnotification.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Notifications for the Trinity Desktop Environment
+
+[T] Kdbusnotification is a small program for the Trinity Desktop that displays
+[T] DBUS notifications via passive popups.
+
+[U] https://www.trinitydesktop.org/
+
+[A] Trinity Desktop Developers
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/x11
+[F] OBJDIR
+
+[L] GPL
+[V] 14.1.6
+
+[CV-GROUP] tde
+[D] a85ba8c382cc5290484ab45aaa5a2fbc31ed7cbe8f5595a474e26f48 kdbusnotification-trinity-14.1.6.tar.xz https://mirror.ppa.trinitydesktop.org/trinity/releases/R14.1.6/main/applications/system/
+
+. $base/package/*/*/tde-conf.in

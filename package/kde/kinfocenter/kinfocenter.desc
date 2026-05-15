@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/kinfocenter/kinfocenter.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,19 +11,30 @@
 [U] https://www.kde.org
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
-[E] opt kdoctools
-[E] opt docbook-xml
-[E] opt docbook-xsl
+[F] CROSS OBJDIR
+
+[E] opt kdoctools docbook-xml docbook-xsl
 
 [L] GPL
-[S] Stable
-[V] 6.3.5
-[P] X -----5---9 162.420
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 6.6.5
 
 [CV-GROUP] kde-plasma
-[D] 1d9da1d3ae1d8129e0e492a6e7158a703dfced3a7c78194c3cf39207 kinfocenter-6.3.5.tar.xz https://download.kde.org/stable/plasma/6.3.5/
+[D] 3750cb072d84ac956189cad1690d673346424782f6db85119f544e59 kinfocenter-6.6.5.tar.xz https://download.kde.org/stable/plasma/6.6.5/
+
+. $base/package/*/*/kde-conf.in
+
+pkginstalled kdoctools || var_append cmakeopt ' ' -DBUILD_DOC=OFF
+
+kcm_about_distro() {
+    cat > $root/etc/xdg/kcm-about-distrorc <<-EOT
+	[General]
+	LogoPath=$datadir/icons/breeze/places/32/start-here-kde.svg
+	Website=https://t2linux.com
+	Version=$sdever
+	Variant=${SDECFG_TARGET^}
+EOT
+}
+hook_add postmake 5 kcm_about_distro

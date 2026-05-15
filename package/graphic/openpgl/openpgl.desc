@@ -1,0 +1,29 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/openpgl/openpgl.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Intel(R) Open Path Guiding Library
+
+[T] The Intel Open Path Guiding Library (Intel Open PGL) implements a set of
+[T] representations and training algorithms needed to integrate path guiding
+[T] into a renderer. Open PGL offers implementations of current state-of-the-art
+[T] path guiding methods, which increase the sampling quality and, therefore,
+[T] the efficiency of a renderer. The goal of Open PGL is to provide
+[T] implementations that are well tested and robust enough to be used in a
+[T] production environment.
+
+[U] https://github.com/RenderKit/openpgl
+
+[A] Intel
+[M] Aleksi Venäläinen <aleksi.venalainen@outlook.com>
+
+[C] extra/base
+[F] OBJDIR
+
+[V] 0.7.1
+[L] APL
+[P] X -----5---9 300.600
+
+[D] c6805668cd0c1af048b9930d78be513fa80413d0287fb9bee7e4fe09 openpgl-0.7.1.tar.gz https://github.com/RenderKit/openpgl/archive/v0.7.1/

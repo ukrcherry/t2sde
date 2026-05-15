@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gwenhywfar/gwenhywfar.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,16 +15,19 @@
 [U] https://www.aquamaniac.de
 
 [A] Martin Preuss <martin@libchipcard.de>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [L] GPL
-[S] Stable
-[V] 3.10.1
+[V] 5.14.1
 [P] X -----5---9 175.000
 
-[O] pkginstalled openssl && var_append confopt ' ' "--with-openssl-includes=$root/$(pkgprefix openssl)/include"
-[O] pkginstalled openssl && var_append confopt ' ' "--with-openssl-libs=$root/$(pkgprefix openssl)/${libdir##*/}"
+[D] fecd7abcd43acddb8b12c5aab225a9225565069e3140db367121b4ea gwenhywfar-5.14.1.tar.gz https://www.aquamaniac.de/rdm/attachments/download/630/
 
-[D] 24ebe08047213df969f76fd3c8c0acdb2052b1066dc3eb2764e8da39 gwenhywfar-3.10.1.tar.gz !http://www2.aquamaniac.de/sites/download/download.php?package=01&release=25&file=01&dummy=gwenhywfar-3.10.1.tar.gz
+var_append CC_WRAPPER_APPEND ' ' -std=gnu17
+guis=
+pkginstalled gtk+ && var_append guis ' ' gtk3
+pkginstalled qt4 && var_append guis ' ' qt4
+pkginstalled qt5base && var_append guis ' ' qt5
+var_append confopt ' ' "--with-guis='$guis'"

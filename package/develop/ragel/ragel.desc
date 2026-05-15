@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/ragel/ragel.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Finite state machine compiler
+
+[T] Finite state machine compiler.
+
+[U] https://www.colm.net/open-source/ragel/
+
+[A] Ragel Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 6.10
+[L] GPL
+[P] X -----5---9 400.000
+
+[D] 50a017a8aa5e7e5e211c8a597b2e331320e779ee8cdd5a876cc47179 ragel-6.10.tar.gz https://www.colm.net/files/ragel/

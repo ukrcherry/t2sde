@@ -1,0 +1,23 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/gnome-foundry/gnome-foundry.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] A GNOME IDE library
+
+[T] This tool aims to extract much of what makes GNOME Builder an IDE into a
+[T] library and companion command-line tool.
+
+[U] https://gitlab.gnome.org/GNOME/foundry
+
+[A] The GNOME Project <gnome-devel-list@gnome.org>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool extra/desktop/gnome
+[F] CROSS
+
+[L] LGPL
+[V] 1.0.0
+
+[D] d747d48477435932d64f2feac50bedd489d549a1fd18a4b3c027572e foundry-1.0.0.tar.gz https://gitlab.gnome.org/GNOME/foundry/-/archive/1.0.0/

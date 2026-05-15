@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/kcolorchooser/kcolorchooser.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -13,16 +13,15 @@
 [U] https://apps.kde.org/kcolorchooser/
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 25.04.1
-[P] X -----5---9 162.900
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 26.04.1
 
 [CV-GROUP] kde-gear
-[D] ee5c187593e326fba1d72180d46681ef29b3c5b000eede89a4ccfc8e kcolorchooser-25.04.1.tar.xz https://download.kde.org/stable/release-service/25.04.1/src/
+[D] c44631043279c6c54b722dd15d18a3e964b0f32f422ff154fa8a8c62 kcolorchooser-26.04.1.tar.xz https://download.kde.org/stable/release-service/26.04.1/src/
+
+. $base/package/*/*/kde-conf.in

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/docker-buildx/docker-buildx.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,7 +12,7 @@
 [U] https://github.com/docker/buildx
 
 [A] Docker buildx contributors (see AUTHORS file)
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 [F] CROSS NO-LTO
@@ -20,12 +20,11 @@
 [E] add containerd docker-engine
 
 [L] APL
-[S] Stable
-[V] 0.23.0
+[V] 0.34.0
 
-[O] . $base/package/*/*/go-conf.in
-[O] var_remove GCC_WRAPPER_REMOVE ' ' '-gdwarf*'
-[O] var_append goconfopt ' ' "-o bin/$pkg ./cmd/buildx"
-[O] hook_add postmake 5 "cp bin/$pkg $root$libexecdir/docker/cli-plugins/"
+[D] 63b6df2646577712fbc74ca1cb8447da07bd7883516b14253522dfd3 buildx-0.34.0.tar.gz https://github.com/docker/buildx/archive/v0.34.0/
 
-[D] 87f31f1c6d3e955a61cffcef4d6bf8988bc3dd9fd9f75bbd666b8892 buildx-0.23.0.tar.gz https://github.com/docker/buildx/archive/v0.23.0/
+. $base/package/*/*/go-conf.in
+var_remove GCC_WRAPPER_REMOVE ' ' '-gdwarf*'
+var_append goconfopt ' ' "-o bin/$pkg ./cmd/buildx"
+hook_add postmake 5 "cp bin/$pkg $root$libexecdir/docker/cli-plugins/"

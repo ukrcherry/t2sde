@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libksba/libksba.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,17 +15,16 @@
 [U] https://www.gnupg.org
 
 [A] Werner Koch <wk@gnupg.org> (Maintainer)
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [F] CROSS
 [C] extra/crypto
 
 [L] GPL
-[S] Stable
-[V] 1.6.7
+[V] 1.8.0
 [P] X -----5---9 118.200
 
-# guide cross compiling
-[O] var_append confopt ' ' "--with-gpg-error-prefix=$root/`pkgprefix libgpg-error`"
+[D] b063330f6dec685e3919bf8f4253165a28b6a3c53ea6fded03bec00c libksba-1.8.0.tar.bz2 https://gnupg.org/ftp/gcrypt/libksba/
 
-[D] 48ab15758e65b6b4e3277917bb01e3400e5ccdc9e2d91947c44f663d libksba-1.6.7.tar.bz2 https://gnupg.org/ftp/gcrypt/libksba/
+# guide cross compiling
+var_append confopt ' ' "--with-gpg-error-prefix=$root/`pkgprefix libgpg-error`"

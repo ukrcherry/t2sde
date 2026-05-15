@@ -1,0 +1,26 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/dune/dune.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] A composable build system for OCaml
+
+[T] Dune is a build system for OCaml projects. Using it, you can build
+[T] executables, libraries, run tests, and much more.
+
+[U] https://dune.build/
+
+[A] Jane Street Group, LLC
+[M] Tomas Glozar <tglozar@gmail.com>
+
+[C] extra/development
+
+[L] MIT
+[V] 3.22.2
+[P] X -----5---9 192.000
+
+[D] 7c4538b33ebdd2f3d287b01877ac837e6cb5d60debaf7898d24d31e3 dune-3.22.2.tbz https://github.com/ocaml/dune/releases/download/3.22.2/
+
+confopt=
+var_append makeopt ' ' release

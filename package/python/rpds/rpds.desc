@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/rpds/rpds.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,13 +11,12 @@
 [U] https://github.com/crate-py/rpds
 
 [A] Julian Berman <Julian+rpds@GrayVines.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [L] MIT
-[S] Stable
-[V] 0.24.0
+[V] 0.30.0
 [P] X -----5---9 110.265
 
-[D] a9ff7b45c0a54591247fb5e74fcc25e386bf27c46e3256943d9c3384 rpds-0.24.0.tar.gz https://github.com/crate-py/rpds/archive/v0.24.0/
+[D] 34bad4f251a2f4487c364d30883467c19690a12d30639aecbc306dd0 rpds-0.30.0.tar.gz https://github.com/crate-py/rpds/archive/v0.30.0/

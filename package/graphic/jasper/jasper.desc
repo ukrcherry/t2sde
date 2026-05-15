@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/jasper/jasper.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -14,7 +14,7 @@
 [U] https://jasper-software.github.io/jasper/
 
 [A] Michael Adams <mdadams@ece.uvic.ca>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] CROSS FPIC OBJDIR
@@ -22,12 +22,11 @@
 [E] opt doxygen
 
 [L] MIT
-[S] Stable
-[V] 4.2.4
+[V] 4.2.9
 [P] X -----5---9 124.600
 
-[O] var_append cmakeopt ' ' -DALLOW_IN_SOURCE_BUILD=ON
-
 [CV-URL] https://github.com/jasper-software/jasper/releases
-[D] a8b4a451b1ddaf0298f48f79bf613b25e54af0563d344d9f689d7693 jasper-4.2.4.tar.gz https://github.com/jasper-software/jasper/releases/download/version-4.2.4/
-[D] 2c552364ba24288c10467f3e1a6ef3e5d84fad4cae7d5831d0651690 jasper-WebAssembly-4.2.4.tar.gz https://github.com/jasper-software/jasper/releases/download/version-4.2.4/
+[D] e506e6324a09a74711bc7384c207015777b42663df01ad10aa69c265 jasper-4.2.9.tar.gz https://github.com/jasper-software/jasper/releases/download/version-4.2.9/
+[D] 532ee9a86804af58eebe87873d81d39c813ac081206f43ec0dd7bcce jasper-WebAssembly-4.2.9.tar.gz https://github.com/jasper-software/jasper/releases/download/version-4.2.9/
+
+var_append cmakeopt ' ' -DALLOW_IN_SOURCE_BUILD=ON

@@ -1,0 +1,29 @@
+[TIMESTAMP] 1750597199 Sun Jun 22 14:59:59 2025
+[BUILDTIME] 6 (9)
+[SIZE] 0.80 MB, 31 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] cairo
+[DEP] cmake
+[DEP] coreutils
+[DEP] diffutils
+[DEP] gawk
+[DEP] gdk-pixbuf
+[DEP] glib
+[DEP] grep
+[DEP] libjpeg
+[DEP] libpng
+[DEP] libtiff
+[DEP] libxml
+[DEP] linux-header
+[DEP] meson
+[DEP] ninja
+[DEP] openjpeg
+[DEP] openssl
+[DEP] sed
+[DEP] sqlite
+[DEP] tar
+[DEP] uthash
+[DEP] xz
+[DEP] zlib

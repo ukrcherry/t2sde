@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/cmfactionicons/cmfactionicons.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -18,17 +18,16 @@
 [T] * ZPT macros which build either horizontal or vertical icon bars for a
 [T] set of actions.
 
-[U] https://www.zope.org/Members/tseaver/CMFActionIcons/
+[U] https://github.com/zopefoundation/Products.CMFActionIcons
 
 [A] tseaver <tseaver@zope.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 
 [L] OpenSource
-[S] Stable
 [V] 0.9
 
-[O] . $base/package/*/zope/zope-conf.in
-
 [D] 09ed1b57dc3c1b73af3745e80428e7d20970c10c5429ef73ad1b3827 CMFActionIcons-0.9.tar.gz http://www.zope.org/Members/tseaver/CMFActionIcons/CMFActionIcons-0.9/
+
+. $base/package/*/zope/zope-conf.in

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libkmahjongg/libkmahjongg.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -12,16 +12,16 @@
 [U] https://www.kde.org
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 25.04.1
+[V] 26.04.1
 [P] X -----5---9 162.800
 
-[O] . $base/package/*/*/kde-conf.in
-
 [CV-GROUP] kde-gear
-[D] 4e9d3ed2d033450b520e21edb2fa1db3e80afe7259d00db2c91f194a libkmahjongg-25.04.1.tar.xz https://download.kde.org/stable/release-service/25.04.1/src/
+[D] 80a2b8fb4c09ca3975a9c61019f02a1051075013beaa194e4f382c87 libkmahjongg-26.04.1.tar.xz https://download.kde.org/stable/release-service/26.04.1/src/
+
+. $base/package/*/*/kde-conf.in

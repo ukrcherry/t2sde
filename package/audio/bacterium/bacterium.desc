@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/bacterium/bacterium.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -35,22 +35,20 @@
 [T] However - this package also includes the 'bacterium_gui' program which
 [T] can be used for creating *.synth files and running BacteriuM over them.
 
-[U] http://members.ping.de/~stefan/
+[U] https://web.archive.org/web/20020802232654/http://members.ping.de/~stefan/
 
 [A] Stefan Fendt <stefan@lionfish.ping.de> {Author of BacteriuM}
 [A] Claire Xenia Wolf <claire@clairexen.net> {Author of BacteriuM_GUI)
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] CROSS
 
 [L] GPL
-[S] Stable
 [V] 0.2.100
 
 [SRC] bacterium
-
-[O] hook_add postmake 5 "if [ -d examples ]; then cp -r examples $root$docdir/; fi"
-
 [D] 1191159655 bacterium-0.2.100.tar.bz2 ftp://members.ping.de/pub/Linux/bacterium/
 [D] 3211755723 bacterium_gui-0.2.tar.bz2 ftp://members.ping.de/pub/Linux/bacterium/
+
+hook_add postmake 5 "if [ -d examples ]; then cp -r examples $root$docdir/; fi"

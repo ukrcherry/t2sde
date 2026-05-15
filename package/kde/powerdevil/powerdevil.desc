@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/powerdevil/powerdevil.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,17 +13,17 @@
 [U] https://invent.kde.org/plasma/powerdevil
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
-[E] opt kdoctools
+[F] CROSS OBJDIR
+
+[E] opt kdoctools docbook-xml docbook-xsl
 
 [L] GPL
-[S] Stable
-[V] 6.3.5
-[P] X -----5---9 162.420
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 6.6.5
 
 [CV-GROUP] kde-plasma
-[D] 68701d7aeafbe950d2b182b8628da2b9c0be3a7b76992bacf35a38aa powerdevil-6.3.5.tar.xz https://download.kde.org/stable/plasma/6.3.5/
+[D] cb578f4d9e90448bd8472a08a6ac771874bc589732edc2cfde68c842 powerdevil-6.6.5.tar.xz https://download.kde.org/stable/plasma/6.6.5/
+
+. $base/package/*/*/kde-conf.in

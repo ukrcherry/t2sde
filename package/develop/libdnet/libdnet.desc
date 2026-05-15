@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libdnet/libdnet.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -22,15 +22,14 @@
 [U] https://libdnet.sourceforge.net/
 
 [A] Dug Song <dugsong@monkey.org>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [L] OpenSource
 
-[S] Stable
-[V] 1.18.0
+[V] 1.18.2
 [P] X -----5---9 180.000
 
-[O] pkginstalled check || var_append confopt ' ' --without-check
+[D] 1a0372b8a4e960cf0485672d239053fd7f2a5edb1cc95f79abac6c22 libdnet-1.18.2.tar.gz https://github.com/dugsong/libdnet/archive/
 
-[D] 32d72d23fdebe854e7520331205ac4f1ddd66887cade94ac5a19f52a libdnet-1.18.0.tar.gz https://github.com/dugsong/libdnet/archive/
+pkginstalled check || var_append confopt ' ' --without-check

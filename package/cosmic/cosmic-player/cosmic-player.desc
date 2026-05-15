@@ -1,26 +1,26 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/cosmic-player/cosmic-player.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
-[I] cosmic-player
+[I] COSMIC media player
 
-[T] cosmic-player.
+[T] The COSMIC media player supports the Vulkan API for rendering and VA-API
+[T] GPU-accelerated video decoding.
 
 [U] https://github.com/pop-os/cosmic-player/
 
 [A] System76 <info@system76.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 [F] CROSS
 
 [L] GPL3
-[S] Alpha
-[V] epoch-1.0.0-alpha.7
-
-[O] . $base/package/cosmic/*/cosmic-conf.in
+[V] 1.0.13
 
 [CV-GROUP] cosmic-desktop
-[D] 597785a96d05405c59014fe2300d948a03de9df0144ff5ecd6419ea3 cosmic-player-epoch-1.0.0-alpha.7.tar.gz https://github.com/pop-os/cosmic-player/archive/epoch-1.0.0-alpha.7/
+[D] ea2398404b888d813d4851331cd9020afa7200a2e5134faa42e6c43a cosmic-player-epoch-1.0.13.tar.gz https://github.com/pop-os/cosmic-player/archive/epoch-1.0.13/
+
+. $base/package/cosmic/*/cosmic-conf.in

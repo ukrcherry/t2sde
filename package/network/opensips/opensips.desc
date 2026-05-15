@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/opensips/opensips.desc
-[COPY] Copyright (C) 2010 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2010 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -19,13 +19,32 @@
 [A] Bogdan-Andrei Iancu <team@openser.org>
 [A] Daniel-Constantin Mierla <team@openser.org>
 [A] Elena-Ramona Modroiu <team@openser.org>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network
 
 [L] GPL
-[S] Stable
-[V] 3.5.5
-[P] X -----5---9 201.300
+[V] 3.6.5
 
-[D] 625b6ca3a81e78a7ce82260b2dff6d6738aa6a1ffba9f5720d51534a opensips-3.5.5.tar.gz http://opensips.org/pub/opensips/3.5.x/
+[D] 1b6341a77429ef74a262c0181476f22e1248b50c73141a1e2b700b66 opensips-3.6.5.tar.gz https://opensips.org/pub/opensips/3.6.x/
+
+if [ $prefix_auto = 1 ]; then
+	if [ "$SDECFG_PKG_SER_PREFIX" ]; then
+	  prefix="$SDECFG_PKG_SER_PREFIX"
+	else
+	  prefix="opt/opensips"
+	fi
+	set_confopt
+fi
+
+pkginstalled openssl && hook_add premake 5 'export TLS=1'
+
+var_append makeopt ' ' cfg-prefix=$root
+var_append makeopt ' ' cfg-target=$sysconfdir/
+var_append makeopt ' ' cfg-dir=$sysconfdir/
+var_append makeopt ' ' man-prefix=$root
+var_append makeopt ' ' man-dir=$mandir
+var_append makeopt ' ' doc-prefix=$root
+var_append makeopt ' ' doc-dir=$docdir
+
+makeinstopt="$makeopt install"

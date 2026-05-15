@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libmnl/libmnl.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,7 +13,7 @@
 [U] https://netfilter.org/projects/libmnl/
 
 [A] Pablo Neira Ayuso
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/system
 [F] CROSS
@@ -21,8 +21,7 @@
 [E] opt doxygen
 
 [L] LGPL
-[S] Stable
 [V] 1.0.5
 [P] X -----5---9 184.200
 
-[D] e89d1b6b671cb37f7c3014410c1cfc9192e52248a412eeb61637c02e libmnl-1.0.5.tar.bz2 http://ftp.netfilter.org/pub/libmnl/
+[D] e89d1b6b671cb37f7c3014410c1cfc9192e52248a412eeb61637c02e libmnl-1.0.5.tar.bz2 https://ftp.netfilter.org/pub/libmnl/

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/rsyslog/rsyslog.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -18,13 +18,12 @@
 [U] https://www.rsyslog.com/
 
 [A] Rainer Gerhards <rgerhards@adiscon.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/system
 [F] CROSS
 
 [L] GPL
-[S] Beta
-[V] 8.2304.0
+[V] 8.2604.0
 
-[D] 71eb54444eef5cfa594f13acf33e32a44ead51884ca75779bbebb4a7 rsyslog-8.2304.0.tar.gz http://www.rsyslog.com/files/download/rsyslog/
+[D] ce6ba65bcb66530ceff68300812d5765f71b2645213158d454666ad1 rsyslog-8.2604.0.tar.gz https://www.rsyslog.com/files/download/rsyslog/

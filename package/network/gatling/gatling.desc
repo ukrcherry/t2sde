@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gatling/gatling.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -9,22 +9,21 @@
 [T] A small, fast, scalable web and ftp server with IPv6 support.
 [T] It can also read-only export files thru SMB.
 
-[U] https://www.fefe.de/gatling/
+[U] http://www.fefe.de/gatling/
 
 [A] Felix von Leitner <felix-gatling@fefe.de>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [F] CROSS DIETLIBC
 [C] extra/server
 
 [L] GPL
-[S] Beta
 [V] 0.16
-
-[O] makeopt=
-[O] var_append makeinstopt ' ' prefix=/$prefix
-[O] var_append makeinstopt ' ' "DIET= CFLAGS=-I$root`pkgprefix includedir libowfat`/libowfat"
-[O] pkginstalled openssl && var_append makeinstopt ' ' tlsgatling
 
 [CV-URL] http://www.fefe.de/gatling/
 [D] d5a487d6ad306e97876de2e27cfde51a8416a9f0b7d299dbd676d253 gatling-0.16.tar.xz http://www.fefe.de/gatling/
+
+makeopt=
+var_append makeinstopt ' ' prefix=/$prefix
+var_append makeinstopt ' ' "DIET= CFLAGS=-I$root`pkgprefix includedir libowfat`/libowfat"
+pkginstalled openssl && var_append makeinstopt ' ' tlsgatling

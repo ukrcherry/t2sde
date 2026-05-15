@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/netcdf/netcdf.desc
-[COPY] Copyright (C) 2010 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2010 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -18,9 +18,8 @@
 [C] extra/scientific
 
 [L] OpenSource
-[S] Stable
-[V] 4.1.1
+[V] 4.10.0
 
-[O] var_append confopt ' ' --disable-netcdf-4
+[D] 58215f05417a085a73bfa110adc2917363c1fc2ec2a9fcf0237171dd netcdf-c-4.10.0.tar.gz https://github.com/Unidata/netcdf-c/archive/refs/tags/v4.10.0/
 
-[D] 6c56c16d06097316f66046e4919166863603945afb6287c0b0092f6b netcdf-4.1.1.tar.gz http://www.unidata.ucar.edu/downloads/netcdf/ftp/
+var_append confopt ' ' --disable-netcdf-4

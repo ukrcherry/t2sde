@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libbpf/libbpf.desc
-[COPY] Copyright (C) 2021 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2021 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -19,12 +19,11 @@
 [F] CROSS
 
 [L] LGPL BSD
-[S] Stable
-[V] 1.5.0
+[V] 1.7.0
 [P] X -----5---9 139.000
 
-[O] var_append makeopt ' ' -Csrc
-[O] var_append makeinstopt ' ' -Csrc
-[O] var_append makeinstopt ' ' "DESTDIR=$root LIBSUBDIR=${libdir##*/}"
+[D] f369e03692bfdb0030bdc9e7a226e218d9c7f2110da74a0204753cf0 libbpf-1.7.0.tar.gz https://github.com/libbpf/libbpf/archive/v1.7.0/
 
-[D] a232466970a03d94f4d2e15899abfb1c5e1a41c0e159706dbdcdf812 libbpf-1.5.0.tar.gz https://github.com/libbpf/libbpf/archive/v1.5.0/
+var_append makeopt ' ' -Csrc
+var_append makeinstopt ' ' -Csrc
+var_append makeinstopt ' ' "DESTDIR=$root LIBSUBDIR=${libdir##*/}"

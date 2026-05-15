@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/wireshark/wireshark.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -16,30 +16,38 @@
 [U] https://www.wireshark.org/
 
 [A] Gerald Combs
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network
 [F] NO-LTO.gcc
 
+[E] opt asciidoctor
 [E] opt bcg729
+[E] opt cups
+[E] opt krb5
 [E] opt libmaxminddb
+[E] opt libopus
 [E] opt libsmi
 [E] opt libssh
 [E] opt lua
+[E] opt minizip-ng
 [E] opt nghttp2
 [E] opt nghttp3
+[E] opt opencore-amr
+[E] opt ruby
 [E] opt spandsp
 [E] opt qt6multimedia
+[E] opt snappy
 [E] opt speex
-[E] opt libopus
+[E] opt xxhash
+[E] opt zlib-ng
 
 [L] GPL
-[S] Stable
-[V] 4.4.6
-
-[O] var_append confopt ' ' --without-ucdsnmp
-[O] var_append confopt ' ' --with-ssl
-[O] hook_add postmake 5 "cp doc/R* doc/r* $docdir"
+[V] 4.6.5
 
 [CV-FLAGS] ODD-UNSTABLE
-[D] e73572131b329f6bbbfb01c9590c03cae7174103c7a84f241ece6920 wireshark-4.4.6.tar.xz https://1.eu.dl.wireshark.org/src/
+[D] fca03ce95bea5418878213495ecd91ba30bdde9eed1a8c51dcb4ff01 wireshark-4.6.5.tar.xz https://1.eu.dl.wireshark.org/src/
+
+var_append confopt ' ' --without-ucdsnmp
+var_append confopt ' ' --with-ssl
+hook_add postmake 5 "cp doc/R* doc/r* $docdir"

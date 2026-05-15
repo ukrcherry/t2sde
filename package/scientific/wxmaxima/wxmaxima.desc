@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/wxmaxima/wxmaxima.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,15 +14,14 @@
 [T] down-key) and completion based on previous input (tab-key). wxMaxima
 [T] provides 2d formated display of maxima output.
 
-[U] https://wxmaxima.sourceforge.net/
+[U] https://wxmaxima-developers.github.io/wxmaxima/
 
 [A] Andrej Vodopivec <andrejv@users.sourceforge.net>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/scientific
 
 [L] GPL
-[S] Beta
-[V] 13.04.2
+[V] 26.05.0
 
-[D] 21a75e690f61aa63883641ca973283e959ddb10c16cb1a8b422167fc wxMaxima-13.04.2.tar.gz http://dl.sourceforge.net/sourceforge/wxmaxima/
+[D] cc03df40d57652c509c140fd8077d3819369d77eb94c44adea4043cf wxMaxima-26.05.0.tar.gz https://github.com/wxMaxima-developers/wxmaxima/archive/Version-26.05.0/

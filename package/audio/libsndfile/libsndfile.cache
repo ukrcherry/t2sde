@@ -1,18 +1,27 @@
-[TIMESTAMP] 1737565527 Wed Jan 22 18:05:27 2025
-[BUILDTIME] 14 (9)
-[SIZE] 1.80 MB, 48 files
+[TIMESTAMP] 1768843808 Mon Jan 19 18:30:08 2026
+[BUILDTIME] 25 (9)
+[SIZE] 1.38 MB, 49 files
 
 [DEP] alsa-lib
+[DEP] automake
 [DEP] bash
 [DEP] binutils
 [DEP] coreutils
 [DEP] diffutils
 [DEP] findutils
+[OPT] flac
 [DEP] gawk
 [DEP] grep
-[DEP] gzip
+[OPT] lame
+[OPT] libogg
+[OPT] libopus
+[OPT] libvorbis
 [DEP] linux-header
 [DEP] make
+[OPT] mpg123
+[DEP] pkgconfig
+[DEP] python
 [DEP] sed
-[DEP] sqlite
 [DEP] tar
+[DEP] util-linux
+[DEP] xz

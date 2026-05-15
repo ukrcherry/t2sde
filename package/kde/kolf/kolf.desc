@@ -1,31 +1,29 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/kolf/kolf.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
 [I] A miniature golf game
 
-[T] Kolf is a miniature golf game. The game is played from an overhead view, 
+[T] Kolf is a miniature golf game. The game is played from an overhead view,
 [T] with a short bar representing the golf club.
 
 [U] https://apps.kde.org/kolf/
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
-[E] opt kdoctools
-[E] opt docbook-xml
-[E] opt docbook-xsl
+[F] CROSS OBJDIR
+
+[E] opt kdoctools docbook-xml docbook-xsl
 
 [L] GPL
-[S] Stable
-[V] 25.04.1
-[P] X -----5---9 179.300
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 26.04.1
 
 [CV-GROUP] kde-gear
-[D] 5c511d2d81e456a67caf740c17d83c08028d1fde4c26550e7f20935a kolf-25.04.1.tar.xz https://download.kde.org/stable/release-service/25.04.1/src/
+[D] 726a30ec9c36d3155ce3bb2eab7034bdba984cbe475655cfd40f60d8 kolf-26.04.1.tar.xz https://download.kde.org/stable/release-service/26.04.1/src/
+
+. $base/package/*/*/kde-conf.in

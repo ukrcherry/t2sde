@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/ufraw/ufraw.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -19,13 +19,12 @@
 [U] https://ufraw.sourceforge.net/
 
 [A] Udi Fuchs <udifuchs@gmail.com>
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 [F] CROSS
 
 [L] GPL
-[S] Beta
 [V] 0.22
 
-[D] d3e0cb60b1de764498644f1752246a4b3bcbced20372d213190eedc9 ufraw-0.22.tar.gz http://dl.sourceforge.net/sourceforge/ufraw/
+[D] d3e0cb60b1de764498644f1752246a4b3bcbced20372d213190eedc9 ufraw-0.22.tar.gz https://prdownloads.sourceforge.net/sourceforge/ufraw/

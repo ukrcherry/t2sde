@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/glances/glances.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] System monitoring tool
+
+[T] Glances is an open-source system cross-platform monitoring tool. It allows
+[T] real-time monitoring of various aspects of your system such as CPU, memory,
+[T] disk, network usage etc.
+
+[U] https://nicolargo.github.io/glances/
+
+[A] Nicolas Hennion
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+
+[E] add psutil
+
+[L] LGPL
+[V] 4.5.4
+
+[D] 14ce7773391a9643fa31a666ae172c18cdfe3ca4061583ae6346ab9e glances-4.5.4.tar.gz https://github.com/nicolargo/glances/archive/refs/tags/v4.5.4/

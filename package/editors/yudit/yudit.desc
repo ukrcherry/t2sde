@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/yudit/yudit.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -18,12 +18,11 @@
 [U] https://www.yudit.org/
 
 [A] Gaspar Sinai <gsinai@yudit.org>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/editor
 
 [L] GPL
-[S] Stable
 [V] 3.1.0
 
-[D] 2e04bd43e71a04e6384acfe789bfd751084501d5d563f1d4d1947a07 yudit-3.1.0.tar.gz http://yudit.org/download/
+[D] 2e04bd43e71a04e6384acfe789bfd751084501d5d563f1d4d1947a07 yudit-3.1.0.tar.gz https://yudit.org/download/

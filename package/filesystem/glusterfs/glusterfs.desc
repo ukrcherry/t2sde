@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/glusterfs/glusterfs.desc
-[COPY] Copyright (C) 2009 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2009 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -17,18 +17,17 @@
 [U] https://gluster.org/community/
 
 [A] http://www.gluster.org/core-team.php
-[M] René Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/system
 
 [L] GPL
-[S] Stable
-[V] 11.1
+[V] 11.2
 [P] X -----5---9 300.000
 
-[O] hook_add preconf 5 "cp -vf /usr/share/automake/config.{guess,sub} ."
-[O] pkginstalled tcmalloc || var_append confopt ' ' --without-tcmalloc
-[O] var_append GCC_WRAPPER_REMOVE ' ' -Werror=implicit-function-declaration
+[D] 7db7de11e5475669b749c026e04c9e82702033aed2e19538a2d375ef glusterfs-11.2.tar.gz https://github.com/gluster/glusterfs/archive/v11.2/
 
-[CV-URL] https://download.gluster.org/pub/gluster/glusterfs/LATEST/
-[D] fbd6782ebaf2f625c049a86f8da3a3508ae1d0c98b6a7f7596cc6fa9 glusterfs-11.1.tar.gz https://download.gluster.org/pub/gluster/glusterfs/11/11.1/
+autogen=1
+hook_add preconf 5 "cp -vf /usr/share/automake/config.{guess,sub} ."
+pkginstalled tcmalloc || var_append confopt ' ' --without-tcmalloc
+var_append GCC_WRAPPER_REMOVE ' ' -Werror=implicit-function-declaration

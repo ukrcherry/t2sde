@@ -1,0 +1,30 @@
+[TIMESTAMP] 1737661519 Thu Jan 23 20:45:19 2025
+[BUILDTIME] 6 (9)
+[SIZE] 1.00 MB, 95 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] cmake
+[OPT] consolekit
+[DEP] coreutils
+[DEP] diffutils
+[DEP] duktape
+[DEP] expat
+[DEP] gawk
+[DEP] gettext
+[DEP] glib
+[OPT] gobject-introspection
+[DEP] grep
+[DEP] gzip
+[DEP] linux-header
+[DEP] m4
+[DEP] meson
+[DEP] ninja
+[DEP] openssl
+[DEP] pam
+[DEP] pkgconfig
+[DEP] python
+[DEP] sed
+[DEP] setuptools
+[OPT] systemd
+[DEP] tar

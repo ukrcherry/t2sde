@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/wcm/wcm.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,7 +12,7 @@
 [U] https://wayfire.org/
 
 [A] Iliya Bozhinov
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/x11
 
@@ -20,10 +20,9 @@
 [E] opt wdisplays
 
 [L] MIT
-[S] Beta
-[V] 0.9.0
+[V] 0.10.0
 
-[O] var_append mesonopt ' ' -Denable_wdisplays=false
-[O] pkginstalled wf-shell || var_append mesonopt ' ' -Dwf_shell=disabled
+[D] 59df8880eac46cfdddaa28ab410324e7d1d23cfc3ab9f21e952ab45c wcm-0.10.0.tar.gz git+https://github.com/WayfireWM/wcm.git v0.10.0
 
-[D] 2fb363be8ab70cc737b8f443393c6c2f65aedc6dff4fbfe2a3ac51e6 wcm-0.9.0.tar.gz git+https://github.com/WayfireWM/wcm.git v0.9.0
+var_append mesonopt ' ' -Denable_wdisplays=false
+pkginstalled wf-shell || var_append mesonopt ' ' -Dwf_shell=disabled

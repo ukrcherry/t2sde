@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/mpich/mpich.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,14 +12,15 @@
 [U] https://www.mpich.org
 
 [A] Argonne National Laboratories
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [E] opt valgrind
 
 [L] OpenSource
-[S] Stable
-[V] 4.3.0
+[V] 5.0.1
 
-[D] 41918bbffe11f284400ccef183bcc99459ce7a8e23f0f05abed195c0 mpich-4.3.0.tar.gz https://www.mpich.org/static/downloads/4.3.0/
+[D] b94f676117b1fab5587913daa42ed30d13092b1e27d69f4e9b6a32a6 mpich-5.0.1.tar.gz https://www.mpich.org/static/downloads/5.0.1/
+
+var_append GCC_WRAPPER_APPEND ' ' -std=gnu17

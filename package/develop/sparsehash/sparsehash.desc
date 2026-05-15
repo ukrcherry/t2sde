@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/sparsehash/sparsehash.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Library that contains several hash-map implementations
+
+[T] Library that contains several hash-map implementations.
+
+[U] https://github.com/sparsehash/sparsehash
+
+[A] Sparsehash Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 2.0.4
+[L] BSD
+
+[D] 769ac48b07b92b5338399b50e7583c155bc3ef97d938dea261f785d7 sparsehash-2.0.4.tar.gz https://github.com/sparsehash/sparsehash/archive/

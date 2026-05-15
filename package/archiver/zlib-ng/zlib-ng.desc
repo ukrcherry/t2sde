@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/zlib-ng/zlib-ng.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,16 +11,15 @@
 [U] https://github.com/zlib-ng/zlib-ng
 
 [A] Hans Kristian Rosbach
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/library
 [F] CROSS DIETLIBC NO-LTO.gcc
 
 [L] OpenSource
-[S] Stable
-[V] 2.2.4
+[V] 2.3.3
 [P] X 01---5---9 102.400
 
-[O] var_remove GCC_WRAPPER_REMOVE ' ' '-march*'
+[D] c9521e11ad3df1be70e033e87231838f28594276e29075904cd9dde1 zlib-ng-2.3.3.tar.gz https://github.com/zlib-ng/zlib-ng/archive/2.3.3/
 
-[D] cd6101abe93b269403450c8e035b5480f40b194fd633186ca9a318d4 zlib-ng-2.2.4.tar.gz https://github.com/zlib-ng/zlib-ng/archive/2.2.4/
+var_remove GCC_WRAPPER_REMOVE ' ' '-march*'

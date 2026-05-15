@@ -1,0 +1,25 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/libtsm/libtsm.desc
+# Copyright (C) 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Terminal-emulator State Machine
+
+[T] Terminal-emulator State Machine.
+
+[U] https://github.com/kmscon/libtsm/
+
+[A] Aetf <aetf@unlimitedcodeworks.xyz>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] LGPL
+[V] 4.5.0
+[P] X -----5---9 200.000
+
+[D] 3c9e61e9c6af78050fedb78b12c524d9b7994eb13cc5fc744b1e6d14 libtsm-4.5.0.tar.gz https://github.com/kmscon/libtsm/archive/v4.5.0/
+
+var_append mesonopt ' ' -Dtests=false

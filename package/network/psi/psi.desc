@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/psi/psi.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -14,15 +14,14 @@
 
 [A] Justin Karneges
 [A] Kevin Smith
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network
 
 [L] GPL
-[S] Stable
 [V] 1.5
 
-[D] f231445c4ca77f093af7f0ff9347a9550703485b296bbc8c208d3744 psi-1.5.tar.xz http://dl.sourceforge.net/sourceforge/psi/
+[D] f231445c4ca77f093af7f0ff9347a9550703485b296bbc8c208d3744 psi-1.5.tar.xz https://prdownloads.sourceforge.net/sourceforge/psi/
 [D] 8e64d0ef877e8885a98416dcaa6fa385d57db04a84559276f213cc76 psi-0.10_bg_a.qm !http://psi-im.org/files/translation/0.10/psi_bg.qm
 [D] 60d6fc2915cd132c2ebc7ada1752a78788c482fe9b2f5446161d67aa psi-0.10_eo_a.qm !http://psi-im.org/files/translation/0.10/psi_eo.qm
 [D] 7b8b33869c7db8f5a9ae5e51fee5d4653cc72f40f17f5e7b16044886 psi-0.10_es_a.qm !http://psi-im.org/files/translation/0.10/psi_es.qm
@@ -34,3 +33,17 @@
 [D] 7d1999a4efa9b56ae6d38990aae994e79006356c4441e73f2d96f1ed psi-0.10_pt_BR_a.qm !http://psi-im.org/files/translation/0.10/psi_pt_BR.qm
 [D] 4161915ff05b3aa7355e931a749ff6cda31fd3e05b615a09ff51f3b5 psi-0.10_sl_a.qm !http://psi-im.org/files/translation/0.10/psi_sl.qm
 [D] 6a223b809948a89fa849497817e9729d012873e4b1576e1113a86ea4 psi-0.10_vi_a.qm !http://psi-im.org/files/translation/0.10/psi_vi.qm
+
+pkgprefix -t kdelibs
+prefix=`pkgprefix kdelibs`
+set_confopt
+
+confopt="--prefix=$root/$prefix"
+
+postmake_psi() {
+	local file=
+	for file in `match_source_file -p '\.qm'`; do
+		cp -v $file $datadir/$pkg/psi_${file##*_}
+	done
+}
+hook_add postmake 3 postmake_psi

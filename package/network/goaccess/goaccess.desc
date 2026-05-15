@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/goaccess/goaccess.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Real-time web log analyzer and interactive viewer
+
+[T] Real-time web log analyzer and interactive viewer.
+
+[U] https://goaccess.io/
+
+[A] Goaccess Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.10.2
+[L] GPL
+
+[D] 0199492b2c80f2cc58d7e4d9a37463dd78ea7cfdb030ca0fea731118 goaccess-1.10.2.tar.gz https://tar.goaccess.io/

@@ -1,11 +1,11 @@
-[TIMESTAMP] 1737725265 Fri Jan 24 14:27:45 2025
-[BUILDTIME] 12 (9)
-[SIZE] 4.51 MB, 581 files
+[TIMESTAMP] 1759942779 Wed Oct  8 18:59:39 2025
+[BUILDTIME] 20 (9)
+[SIZE] 4.28 MB, 577 files
 
+[DEP] appstream-glib
 [DEP] bash
 [DEP] binutils
 [DEP] cairo
-[DEP] cmake
 [DEP] coreutils
 [DEP] desktop-file-utils
 [DEP] diffutils
@@ -13,24 +13,20 @@
 [DEP] gdk-pixbuf
 [DEP] gettext
 [OPT] glib
-[DEP] gnome-shell-extensions
 [DEP] graphene
 [DEP] grep
-[DEP] gsettings-desktop-schemas
 [DEP] gtk
-[DEP] gtk+
 [DEP] harfbuzz
 [DEP] itstool
 [DEP] json-glib
 [DEP] libadwaita
 [DEP] libarchive
-[DEP] libgnomekbd
-[DEP] libgweather
 [DEP] linux-header
 [DEP] meson
 [DEP] ninja
 [DEP] openssl
 [DEP] pango
+[DEP] python
 [DEP] sed
 [DEP] tar
 [DEP] xz

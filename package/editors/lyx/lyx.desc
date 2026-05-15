@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/lyx/lyx.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -16,14 +16,16 @@
 [U] https://www.lyx.org/
 
 [A] LyX Team <lyx-users@lists.lyx.org>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/editor
 
 [L] GPL
-[S] Stable
-[V] 2.4.3
+[V] 2.5.1
 
-[O] prefix="usr/X11"; set_confopt
+[D] 7bc59708af6c31dd6cf8f5275273099e1897dec9a943814393787915 lyx-2.5.1.tar.xz https://ftp.lip6.fr/pub/lyx/stable/2.5.x/
 
-[D] 10a00c02159eb8da3cc57c1d83b2e3d50a2d0fa7eddf302b730a58e0 lyx-2.4.3.tar.gz https://ftp.lip6.fr/pub/lyx/stable/2.4.x/
+prefix="usr/X11"; set_confopt
+export QTDIR=$QT5DIR
+var_append GCC_WRAPPER_INSERT ' ' "-I$root$(pkgprefix includedir libx11)"
+var_append GCC_WRAPPER_INSERT ' ' "-L$root$(pkgprefix libdir libx11)"

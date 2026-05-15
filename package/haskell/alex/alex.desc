@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/alex/alex.desc
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Tool for generating lexical analysers
+
+[T] Tool for generating lexical analysers.
+
+[U] https://haskell-alex.readthedocs.io/en/latest/
+
+[A] Cabal Development Team
+[M] Riley Beckett <rbeckettvt@gmail.com>
+
+[C] extra/tool
+[F] CROSS
+
+[L] BSD
+[V] 3.5.4.2
+
+[D] 7e6bbb6d29db065128b6b95c93c0b776a6080007fb071f3e56412b5f alex-3.5.4.2.tar.gz https://hackage.haskell.org/package/alex-3.5.4.2/
+
+. $base/package/*/*/haskell-conf.in

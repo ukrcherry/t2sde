@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/sparse/sparse.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -18,13 +18,12 @@
 [U] https://sparse.docs.kernel.org/en/latest
 
 [A] Linus Torvalds
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [F] CROSS
 
 [L] OpenSource
-[S] Beta
 [V] 0.6.4
 
 [D] 5cb0c747937b3331d707a709fee3fa228735ba31dec52105fff7127c sparse-0.6.4.tar.gz https://git.kernel.org/pub/scm/devel/sparse/sparse.git/snapshot/

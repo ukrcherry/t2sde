@@ -1,0 +1,26 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/nvidia-settings/nvidia-settings.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] NVIDIA driver control panel
+
+[T] NVIDIA Linux Open Source NVIDIA Driver Control Panel.
+
+[U] https://github.com/NVIDIA/nvidia-settings
+
+[A] Nvidia Corp.
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/development
+[F] CROSS
+[R] + x86 x86-64 arm64
+
+[L] GPL
+[V] 595.71.05
+
+[D] 6409860fef773d5db704a533182a61a4416c4c535ac29bb3751da5d7 nvidia-settings-595.71.05.tar.gz https://github.com/NVIDIA/nvidia-settings/archive/595.71.05/
+
+hook_add postmake 5 "mkdir -p $root$includedir/NVCtrl; install -v src/libXNVCtrl/*.h $root$includedir/NVCtrl/"
+hook_add postmake 5 "install -v src/_out/Linux_x86_64/libXNVCtrl.so $root$libdir"

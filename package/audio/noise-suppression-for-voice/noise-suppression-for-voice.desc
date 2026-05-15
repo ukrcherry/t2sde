@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/noise-suppression-for-voice/noise-suppression-for-voice.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Real-time noise suppression plugin for voice
+
+[T] Real-time noise suppression plugin for voice.
+
+[U] https://github.com/werman/noise-suppression-for-voice
+
+[A] Noise-suppression-for-voice Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 1.10
+[L] GPL3
+
+[D] b189bca6240370faede7cbfc562bc5a7416d6ea80243b6a75a60be68 noise-suppression-for-voice-1.10.tar.gz https://github.com/werman/noise-suppression-for-voice/archive/refs/tags/v1.10/

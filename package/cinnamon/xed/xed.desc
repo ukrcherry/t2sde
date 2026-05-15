@@ -1,0 +1,24 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/xed/xed.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] X-Apps Editor
+
+[T] xed is a small and lightweight text editor. xed supports most standard
+[T] editing features, plus several not found in your average text editor
+[T] (plugins being the most notable of these).
+
+[U] https://github.com/linuxmint/xed
+
+[A] xed Developers
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/editor
+[F] CROSS
+
+[L] GPL
+[V] 3.8.9
+
+[D] 802ca0e6c0a09bd41cd0fb33d6c891f24c0e740b722818a606d29b86 xed-3.8.9.tar.gz https://github.com/linuxmint/xed/archive/3.8.9/

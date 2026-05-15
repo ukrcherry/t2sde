@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/dust/dust.desc
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Disk utilization utility
+
+[T] dust is a more intuitive version of du, to display where the disk space is
+[T] used.
+
+[U] https://github.com/bootandy/dust
+
+[A] bootandy
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+
+[V] 1.2.4
+[L] APL
+
+[D] 9657845d33c587e6f1a49fb3945057048d32ec3bc57d630979cf2df5 dust-1.2.4.tar.gz https://github.com/bootandy/dust/archive/refs/tags/v1.2.4/

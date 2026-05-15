@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/scala/scala.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,13 +12,12 @@
 [U] https://www.scala-lang.org/
 
 [A] École Polytechnique Fédérale
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 3.5.1
+[V] 3.8.3
 
-[D] 7cc8ae00be7df53d390bc7eae0dcaaca9fce7e0f8639b3c6b0658197 scala3-3.5.1.tar.gz https://github.com/scala/scala3/archive/refs/tags/3.5.1/
+[D] 50bb272b895504d48861855f7053770dc55839493fc1ec322dd56dc8 scala3-3.8.3.tar.gz https://github.com/scala/scala3/archive/refs/tags/3.8.3/

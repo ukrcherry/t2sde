@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/uacme/uacme.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Lightweight client for the RFC8555 ACMEv2 protocol
+
+[T] Lightweight client for the RFC8555 ACMEv2 protocol.
+
+[U] https://github.com/ndilieto/uacme
+
+[A] Uacme Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 1.8.1
+[L] GPL3 ISC MIT
+
+[D] 56e4f09684ed2d7b11c4ef26eca860c0ab6d86f835b11673f13e6ab0 uacme-upstream-1.8.1.tar.gz https://github.com/ndilieto/uacme/archive/upstream/1.8.1/

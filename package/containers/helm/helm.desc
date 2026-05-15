@@ -1,10 +1,10 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/helm/helm.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
-[I] Kubernetes Package Manager 
+[I] Kubernetes Package Manager
 
 [T] Tool for managing packages of pre-configured Kubernetes resources (charts).
 
@@ -17,10 +17,9 @@
 [F] CROSS
 
 [L] APL
-[S] Beta
-[V] 3.17.1
+[V] 4.2.0
 
-[O] rungo=0
-[O] var_append makeinstopt ' ' INSTALL_PATH=$root$bindir
+[D] 246b8923a7be4d43c99b7a79260d51e20e90d4f8eb0b810102830aaf helm-v4.2.0.tar.gz https://github.com/helm/helm/archive/v4.2.0/
 
-[D] 0e0f27be50feb4be5536a2cdb68989bf915fc7e2451ecb3e6bfdb741 helm-v3.17.1.tar.gz https://github.com/helm/helm/archive/v3.17.1/
+rungo=0
+var_append makeinstopt ' ' INSTALL_PATH=$root$bindir

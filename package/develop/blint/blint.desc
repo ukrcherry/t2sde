@@ -1,0 +1,23 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/blint/blint.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] A Binary Linter for security properties, and capabilities in executables
+
+[T] BLint is a Binary Linter to check the security properties, and capabilities
+[T] in your executables. Since v2, blint is also an SBOM generator for binaries.
+
+[U] https://github.com/owasp-dep-scan/blint
+
+[A] owasp-dep-scan
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] MIT
+[V] 3.1.2
+
+[D] 8294044c6e15e55a79ef66dfa8409aaa0b87a423771beec98af9c729 blint-3.1.2.tar.gz https://github.com/owasp-dep-scan/blint/archive/v3.1.2/

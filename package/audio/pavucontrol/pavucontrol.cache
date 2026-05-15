@@ -1,7 +1,8 @@
-[TIMESTAMP] 1737812013 Sat Jan 25 14:33:33 2025
-[BUILDTIME] 12 (9)
-[SIZE] 1.06 MB, 64 files
+[TIMESTAMP] 1759925348 Wed Oct  8 14:09:08 2025
+[BUILDTIME] 18 (9)
+[SIZE] 1.18 MB, 70 files
 
+[DEP] appstream-glib
 [DEP] bash
 [DEP] binutils
 [DEP] cairo
@@ -21,11 +22,11 @@
 [DEP] gtkmm
 [DEP] harfbuzz
 [DEP] json-glib
-[DEP] libadwaita
 [DEP] libcanberra
 [DEP] libsigc++
 [DEP] libxml
 [DEP] linux-header
+[OPT] lynx
 [DEP] meson
 [DEP] ninja
 [DEP] openssl
@@ -34,5 +35,4 @@
 [DEP] pulseaudio
 [DEP] sed
 [DEP] tar
-[DEP] tbb
 [DEP] xz

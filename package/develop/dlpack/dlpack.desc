@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/dlpack/dlpack.desc
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Common in-memory tensor structure
+
+[T] DLPack is an open in-memory tensor structure for sharing tensors among
+[T] frameworks.
+
+[U] https://dmlc.github.io/dlpack/latest/
+
+[A] Distributed (Deep) Machine Learning Community
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/development
+[F] OBJDIR
+
+[L] APL
+[V] 1.3
+
+[D] 01b9ab111b8d72a6107fbc4d044e223910326c543ae3ddd6c6a7537e dlpack-1.3.tar.gz https://github.com/dmlc/dlpack/archive/refs/tags/v1.3/

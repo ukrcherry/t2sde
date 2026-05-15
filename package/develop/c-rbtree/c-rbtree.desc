@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/c-rbtree/c-rbtree.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Intrusive Red-Black Tree Collection
+
+[T] Intrusive Red-Black Tree Collection.
+
+[U] https://github.com/c-util/c-rbtree
+
+[A] C-rbtree Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 3.2.0
+[L] APL LGPL
+
+[D] 34368934dec4c23324946f01156216a0aaa38662da6373cacc86c990 c-rbtree-3.2.0.tar.gz https://github.com/c-util/c-rbtree/archive/v3.2.0/

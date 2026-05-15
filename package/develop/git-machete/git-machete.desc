@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/git-machete/git-machete.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Git repository organizer & rebase/merge workflow automation tool
+
+[T] Git repository organizer & rebase/merge workflow automation tool.
+
+[U] https://github.com/VirtusLab/git-machete
+
+[A] Git-machete Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 3.40.1
+[L] MIT
+
+[D] 2640960c53e3fd90b3778d988a0647cf65160aeae8086a94ae3cceb8 git-machete-3.40.1.tar.gz https://github.com/VirtusLab/git-machete/archive/refs/tags/v3.40.1/

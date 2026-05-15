@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/python/python.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -13,19 +13,96 @@
 [U] https://www.python.org/
 
 [A] Stichting Mathematisch Centrum, Amsterdam, The Netherlands
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/development
 [F] CROSS NO-PIE NO-SSP NO-LTO.mips NO-LTO.mips64 NO-LTO.clang
 
+[E] opt bdb
 [E] opt sqlite
+[E] opt tcl tk
 
 [L] OpenSource
-[S] Stable
-[V] 3.12.5
+[V] 3.14.5
 [P] X ?--3-5---9 102.300
 
-[O] [[ $arch_target = sparcv* || $arch_target = powerpc-* ]] && var_append GCC_WRAPPER_REMOVE ' ' -Werror=implicit-function-declaration
-
 [CV-URL] https://www.python.org/downloads/source/
-[D] f719a822b600c423492501a1ef05dedfffb0ee96d66352a42896c872 Python-3.12.5.tar.xz http://www.python.org/ftp/python/3.12.5/
+[D] 2a09b2c4200be941eb5fd860942937613b7d0fb033973b73692d0b70 Python-3.14.5.tar.xz https://www.python.org/ftp/python/3.14.5/
+
+runpysetup=0
+
+[[ $arch_target = sparcv* || $arch_target = powerpc-* ]] && var_append GCC_WRAPPER_REMOVE ' ' -Werror=implicit-function-declaration
+
+python_postmake() {
+	ln -svnf $root$libdir/python${ver%.*} $root$libdir/python
+
+	cat > $root/etc/profile.d/python3 <<-EOT
+		export PYTHON3="$bindir/python3"
+		export PYTHONPATH="$libdir/python${ver%.*}"
+EOT
+}
+atstage toolchain || hook_add postmake 5 python_postmake
+
+var_append confopt ' ' --without-ensurepip
+var_append confopt ' ' "--enable-shared --with-threads --with-platlibdir=${libdir##/${prefix}/}"
+
+# test for tail-call attributes support
+$CC -Werror=attributes -xc -c - -o /dev/null 2>&1 <<-EOT
+__attribute__((preserve_none))
+int foo(int);
+__attribute__((preserve_none))
+int bar(int);
+int foo(int i) { return i;}
+int bar(int i) { __attribute__((musttail)) return foo(i);}
+EOT
+[ $? = 0 ] && var_append confopt ' ' --with-tail-call-interp
+
+python_modules() {
+	if pkginstalled gdbm; then
+		sed -i 's/#_gdbm _gdbmmodule.c -lgdbm/_gdbm _gdbmmodule.c -lgdbm/' Modules/Setup
+	fi
+
+	if pkginstalled readline; then
+		sed -i 's/#readline/readline/' Modules/Setup
+	fi
+
+	if pkginstalled openssl; then
+		sed -i 's/#_ssl/_ssl/' Modules/Setup
+	fi
+
+	if pkginstalled zlib; then
+		sed -i 's/#zlib/zlib/' Modules/Setup
+	fi
+}
+atstage toolchain || hook_add preconf 5 python_modules
+
+# We can savely ignore this dependencies.
+var_append flistrfilter '|' ".*:	/usr/lib.*/python.*/site-packages/.*"
+
+# toolchain
+if atstage toolchain; then
+	export LDFLAGS="-Wl,-rpath,${root}${libdir}"
+else
+	export ax_cv_c_float_words_bigendian=$arch_bigendian
+fi
+
+# default python symlinks
+hook_add postmake 5 'ln -sf python3 $root$bindir/python'
+hook_add postmake 5 'ln -sf python3-config $root$bindir/python-config'
+
+if atstage cross; then
+	# need a working getaddrinfo(), force enable or disable ipv6:
+	var_append confopt ' ' " --enable-ipv6 --with-build-python=python"
+
+	export READELF=${CC%-*}-readelf # e.g. for altered sparcv9
+	var_append configcache ' ' ac_cv_buggy_getaddrinfo=no
+	var_append configcache ' ' ac_cv_file__dev_ptmx=yes
+	var_append configcache ' ' ac_cv_file__dev_ptc=no
+	var_insert CFLAGS ' ' -I$root/usr/include
+	var_insert LDFLAGS ' ' "-L$root$libdir -L$root/${libdir##*/}"
+	var_insert LDFLAGS ' ' -L$builddir/Python-$ver
+	var_append configprefix ' ' "CFLAGS=\"$CFLAGS\""
+	var_append configprefix ' ' "LDFLAGS=\"$LDFLAGS\""
+fi
+
+hook_add postmake 5 "cp $confdir/EXTERNALLY-MANAGED $root$libdir/${pkg}${ver%.*}/"

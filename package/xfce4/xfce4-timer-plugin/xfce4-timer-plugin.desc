@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xfce4-timer-plugin/xfce4-timer-plugin.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,17 +12,15 @@
 [U] http://xfce-goodies.berlios.de/
 
 [A] Kemal Ilgar Eroglu
-[M] Johan <linuxmasterjedi@free.fr>
+[M] Johan Boyé <linuxmasterjedi@free.fr>
 
 [C] extra/desktop/xfce
 [F] CROSS
 
 [L] BSD
-[S] Beta
-[V] 1.7.3
+[V] 1.8.0
 
-[O] . $base/package/xfce4/*/xfce4-conf.in
- 
-[O] var_append GCC_WRAPPER_APPEND ' ' "$(pkg-config x11 --libs-only-L)"
+[D] 1215e3b6e4c9839dabb80934ca15350ccc901892adaf7fa569a308bb xfce4-timer-plugin-1.8.0.tar.xz https://archive.xfce.org/src/panel-plugins/xfce4-timer-plugin/1.8/
 
-[D] c7ba412376838b2dcfac0dc477246a9462a6e4e0ddbf0ba02dd80fcf xfce4-timer-plugin-1.7.3.tar.bz2 https://archive.xfce.org/src/panel-plugins/xfce4-timer-plugin/1.7/
+. $base/package/xfce4/*/xfce4-conf.in
+var_append GCC_WRAPPER_APPEND ' ' "$(pkg-config x11 --libs-only-L)"

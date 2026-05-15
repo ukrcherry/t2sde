@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/foomatic-filters/foomatic-filters.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,15 +14,13 @@
 
 [A] Till Kamppeter <till.kamppeter@gmail.com>
 [A] Grant Taylor <gtaylor@picante.com>
-[M] Susanne Klaus <susan@t2-project.org>
+[M] Susanne Klaus <vadja@gmx.de>
 
 [C] extra/printing
 
 [L] GPL
-[S] Stable
 [V] 4.0.17
-[P] X -----5---9 142.800
 
-[O] pkginstalled dbus || var_append confopt ' ' --disable-dbus
+[D] e5d8c10c7ff7389f0da27bd95368bbc05d01de3324fe03d1980eea2c foomatic-filters-4.0.17.tar.gz https://www.openprinting.org/download/foomatic/
 
-[D] e5d8c10c7ff7389f0da27bd95368bbc05d01de3324fe03d1980eea2c foomatic-filters-4.0.17.tar.gz http://www.openprinting.org/download/foomatic/
+pkginstalled dbus || var_append confopt ' ' --disable-dbus

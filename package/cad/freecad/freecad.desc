@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/freecad/freecad.desc
-[COPY] Copyright (C) 2015 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2015 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,20 +14,23 @@
 [U] https://www.freecad.org/
 
 [A] FreeCAD Authors
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/cad
+[F] OBJDIR
 
 [E] opt doxygen
 
 [L] GPL
-[S] Stable
-[V] 1.0.0
-[P] X -----5---9 800.200
+[V] 1.1.1
 
-[O] prefix=opt/freecad
-[O] srcdir=.
-[O] var_append GCC_WRAPPER_INSERT ' ' "$(pkg-config --cflags --libs glu)"
-[O] var_append cmakeopt ' ' "-DOPENGL_gl_LIBRARY=$(pkgprefix libdir glu)/libGLU.so"
+[D] 0d41b2a10ca692783deec4cb6f8ff154c73ed9d6b301dc08e9b0874f freecad_source_1.1.1.tar.gz https://github.com/FreeCAD/FreeCAD/releases/download/1.1.1/
 
-[D] 22923db6dc2f9adacb5edc8781cc1e32c8ddc5db29134d4c74649108 freecad_source-1.0.0.tar.gz !https://github.com/FreeCAD/FreeCAD/releases/download/1.0.0/freecad_source.tar.gz
+[ $prefix_auto = 1 ] && prefix="opt/freecad" && set_confopt
+
+srcdir=.
+
+var_append GCC_WRAPPER_INSERT ' ' "$(pkg-config --cflags --libs glu)"
+var_append cmakeopt ' ' "-DOPENGL_gl_LIBRARY=$(pkgprefix libdir glu)/libGLU.so"
+var_append cmakeopt ' ' -DFREECAD_QT_VERSION=6
+var_append cmakeopt ' ' -DENABLE_DEVELOPER_TESTS=OFF

@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/hfst/hfst.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Helsinki Finite-State Transducer Technology toolkit
+
+[T] Helsinki Finite-State Transducer Technology toolkit.
+
+[U] http://www.ling.helsinki.fi/kieliteknologia/tutkimus/hfst/
+
+[A] Hfst Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 3.17.1
+[L] LGPL3
+
+[D] 882edb567710fd608bc8eca9314fd40f3f33eae767600e48184219d6 hfst-3.17.1.tar.gz https://github.com/hfst/hfst/releases/download/v3.17.1/

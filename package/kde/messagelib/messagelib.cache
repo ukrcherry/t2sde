@@ -1,9 +1,7 @@
+[TIMESTAMP] 1765394016 Wed Dec 10 20:13:36 2025
+[BUILDTIME] 1950 (9)
+[SIZE] 15.29 MB, 1117 files
 
-[TIMESTAMP] 1718821352 Wed Jun 19 20:22:32 2024
-[BUILDTIME] 900 (9)
-[SIZE] 19.32 MB, 1101 files
-
-[DEP] 00-dirtree
 [DEP] akonadi
 [DEP] akonadi-contacts
 [DEP] akonadi-mime
@@ -12,12 +10,14 @@
 [DEP] binutils
 [DEP] cmake
 [DEP] coreutils
+[DEP] cups
 [DEP] diffutils
 [DEP] extra-cmake-modules
 [DEP] freetype
 [DEP] gawk
 [DEP] gettext
 [DEP] gpgme
+[DEP] gpgmepp
 [DEP] grantleetheme
 [DEP] grep
 [DEP] karchive
@@ -53,17 +53,17 @@
 [DEP] libkleo
 [DEP] linux-header
 [DEP] make
+[DEP] openssl
 [DEP] pimcommon
 [DEP] pkgconfig
 [DEP] procps
-[DEP] qca2
+[DEP] python
+[DEP] qgpgme
 [DEP] qt6base
-[DEP] qt6declarative
 [DEP] qt6webengine
 [DEP] sed
 [DEP] sonnet
 [DEP] syntax-highlighting
 [DEP] tar
-[DEP] tbb
 [DEP] vulkan-headers
 [DEP] xz

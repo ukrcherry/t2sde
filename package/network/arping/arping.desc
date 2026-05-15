@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/arping/arping.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -12,12 +12,12 @@
 [T] its IP address, or its MAC address.
 
 [A] Thomas Habets <thomas@habets.pp.se>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network
+[F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 2.25
+[V] 2.28
 
-[D] 087e3e8943fdc1beff8bc36a34a57c0e95cbd7e2333f3006f625be43 arping-2.25.tar.gz http://www.habets.pp.se/synscan/files/
+[D] a0fe6e529d6ef8d380847a538808e466e5ccf002efaa2593bed028d1 arping-2.28.tar.gz https://www.habets.pp.se/synscan/files/

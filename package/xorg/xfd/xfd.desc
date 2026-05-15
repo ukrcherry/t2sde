@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xfd/xfd.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,15 +13,14 @@
 [U] https://www.X.org
 
 [A] X.org Foundation {http://www.X.org}
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/x11
 [F] CROSS
 
 [L] OpenSource
-[S] Stable
-[V] 1.1.4
+[V] 1.1.5
 
-[O] . package/*/*/modular-x-conf.in
+[D] 57d6cd996d3c866f7e9f0d9fd649b6cdfd8efefb78c95fe31b96f107 xfd-1.1.5.tar.xz http://xorg.freedesktop.org/releases/individual/app/
 
-[D] d1f79d66c81bd4d730364eb77310c72461f72a98f17da07b523ebef6 xfd-1.1.4.tar.xz http://xorg.freedesktop.org/releases/individual/app/
+. package/*/*/modular-x-conf.in

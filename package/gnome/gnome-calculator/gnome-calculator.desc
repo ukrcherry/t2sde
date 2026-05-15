@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gnome-calculator/gnome-calculator.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,16 +11,14 @@
 [U] https://www.gnome.org
 
 [A] The GNOME Project <gnome-devel-list@gnome.org>
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/shell extra/desktop/gnome
 
 [L] LGPL
-[S] Stable
-[V] 48.1
-[P] X -----5---9 200.100
-
-[O] . $base/package/*/*/gnome-conf.in
+[V] 50.0
 
 [CV-URL] https://download.gnome.org/sources/gnome-calculator/cache.json
-[D] d86dd7e5b94d11b3ef01502df5db3db23742206dc92a3956840be906 gnome-calculator-48.1.tar.xz https://download.gnome.org/sources/gnome-calculator/48/
+[D] c2759f894fff1e3657ade9bafb5b4cb475e6d227f46c2c810759f4b5 gnome-calculator-50.0.tar.xz https://download.gnome.org/sources/gnome-calculator/50/
+
+. $base/package/*/*/gnome-conf.in

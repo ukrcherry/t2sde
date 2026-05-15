@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/iproute2/iproute2.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -19,15 +19,36 @@
 
 [A] Alexey Kuznetsov <kuznet@ms2.inr.ac.ru>
 [A] Bert Hubert <ahu@ds9a.nl>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/system
-[F] CROSS DIETLIBC NO-LTO.clang
+# LTO breaks looking up internal symbols, like vlan_link_util
+[F] CROSS DIETLIBC NO-LTO
 [K] + linux
 
+[E] opt bdb
+[E] opt libbpf
+
 [L] GPL
-[S] Stable
-[V] 6.14.0
+[V] 7.0.0
 [P] X -----5---9 190.000
 
-[D] f3d3a57d9aa1cb9ce75118dd6638a95040d544f122b4409a5c635213 iproute2-6.14.0.tar.xz http://www.kernel.org/pub/linux/utils/net/iproute2/
+[D] 15cf7cdcb6aaec5b43eeefadd5d4e67fbe7022c99cad5f0b646c6635 iproute2-7.0.0.tar.xz https://www.kernel.org/pub/linux/utils/net/iproute2/
+
+[ $prefix_auto = 1 ] && prefix= && set_confopt
+
+cleanconfopt=0
+
+hook_add preconf 5 "sed -i s/gcc/$CC/ configure"
+var_remove_regex makeinstopt ' ' 'PREFIX=.*'
+
+var_append makeopt ' ' KERNEL_INCLUDE=$root/usr/include
+var_append makeopt ' ' LIBC_INCLUDE=$root/usr/include
+var_append makeinstopt ' ' "DESTDIR=$root/$prefix SBINDIR=$sbindir MANDIR=$mandir DOCDIR=$infodir"
+
+ipr2_pm() {
+	$CC $base/package/*/iproute2/ipnm2nwbc.c -o $root$sbindir/ipnm2nwbc
+	cp $base/package/*/iproute2/dumpnetcfg.sh $root$sbindir/dumpnetcfg
+	chmod +x $root$sbindir/dumpnetcfg
+}
+hook_add postmake 5 ipr2_pm

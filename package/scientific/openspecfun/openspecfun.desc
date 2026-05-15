@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/openspecfun/openspecfun.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A collection of special mathematical functions
+
+[T] A collection of special mathematical functions.
+
+[U] https://github.com/JuliaMath/openspecfun
+
+[A] Openspecfun Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.5.7
+[L] MIT PublicDomain
+
+[D] 684ba5eca85bb6395548668f4bf7a38d7f40bc6c3df9b16c4437a45c openspecfun-0.5.7.tar.gz https://github.com/JuliaLang/openspecfun/archive/v0.5.7/

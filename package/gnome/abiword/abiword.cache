@@ -1,15 +1,20 @@
-[TIMESTAMP] 1745878824 Tue Apr 29 01:20:24 2025
-[BUILDTIME] 210 (9)
-[SIZE] 19.17 MB, 310 files
+[TIMESTAMP] 1771500923 Thu Feb 19 12:35:23 2026
+[BUILDTIME] 230 (9)
+[SIZE] 19.68 MB, 311 files
 
 [DEP] at-spi2-core
+[DEP] autoconf
+[DEP] autoconf-archive
+[DEP] automake
 [DEP] bash
 [DEP] binutils
 [DEP] boost
+[DEP] bzip2
 [DEP] cairo
 [DEP] coreutils
 [DEP] diffutils
 [DEP] findutils
+[DEP] flex
 [DEP] fontconfig
 [DEP] fribidi
 [DEP] gawk
@@ -18,22 +23,27 @@
 [DEP] goffice
 [DEP] grep
 [DEP] gtk+
-[DEP] gzip
 [DEP] harfbuzz
-[OPT] libbonobo
+[DEP] libgcrypt
+[DEP] libgpg-error
 [DEP] libgsf
 [DEP] libical
 [DEP] libjpeg
 [DEP] libpng
 [DEP] librsvg
+[DEP] libtool
 [DEP] libx11
 [DEP] libxml
 [DEP] libxslt
 [DEP] linux-header
+[DEP] m4
 [DEP] make
 [DEP] pango
+[DEP] perl
+[DEP] pkgconfig
 [DEP] sed
 [DEP] tar
+[DEP] util-linux
 [DEP] wv
 [DEP] xorgproto
 [DEP] zlib

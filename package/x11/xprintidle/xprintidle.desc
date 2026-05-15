@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/xprintidle/xprintidle.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Query X server for user's idle time and print it in stdout
+
+[T] Query X server for user's idle time and print it in stdout.
+
+[U] https://github.com/g0hl1n/xprintidle
+
+[A] Xprintidle Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.3.0
+[L] GPL
+
+[D] c436e782f9b0ce959b95b4302074d7659e419cf5d667f29d933aff91 xprintidle-0.3.0.tar.gz https://github.com/g0hl1n/xprintidle/archive/refs/tags/0.3.0/

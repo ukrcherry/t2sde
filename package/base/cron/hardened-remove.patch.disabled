@@ -1,0 +1,81 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/cron/hardened-remove.patch.disabled
+# Copyright (C) 2004 - 2025 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0 or patched project license
+# --- T2-COPYRIGHT-END ---
+
+Never ever remove my crontab with a mistyping -e, again ... - it just
+happens too quickly!
+
+  - Rene Rebe <rene@exactcode.de>
+
+--- cron3.0pl1/crontab.1.vanilla	2010-07-18 23:13:02.000000000 +0200
++++ cron3.0pl1/crontab.1	2010-07-18 23:22:52.000000000 +0200
+@@ -24,7 +24,7 @@
+ .SH SYNOPSIS
+ crontab [ -u user ] file
+ .br
+-crontab [ -u user ] [ -i ] { -e | -l | -r }
++crontab [ -u user ] [ -i ] { -e | -l | -rr }
+ .SH DESCRIPTION
+ .I crontab
+ is the program used to install, deinstall or list the tables
+@@ -88,8 +88,11 @@
+ below.
+ .PP
+ The
+-.I -r
+-option causes the current crontab to be removed.
++.I -rr
++option causes the current crontab to be removed. NOTE: Since users accidently
++managed to delete their crontab serveral times, accidently hitting -r instead
++of -e, - we decided that -r needs to be specified two (!) times in order to
++delete the user's crontab, by default for the T2 SDE.
+ .PP
+ The
+ .I -e
+--- cron3.0pl1/crontab.c.vanilla	2010-07-18 23:13:02.000000000 +0200
++++ cron3.0pl1/crontab.c	2010-07-18 23:23:22.000000000 +0200
+@@ -82,11 +82,11 @@
+ {
+ 	fprintf(stderr, "%s: usage error: %s\n", ProgramName, msg);
+ 	fprintf(stderr, "usage:\t%s [-u user] file\n", ProgramName);
+-	fprintf(stderr, "\t%s [ -u user ] [ -i ] { -e | -l | -r }\n", ProgramName);
++	fprintf(stderr, "\t%s [ -u user ] [ -i ] { -e | -l | -rr }\n", ProgramName);
+ 	fprintf(stderr, "\t\t(default operation is replace, per 1003.2)\n");
+ 	fprintf(stderr, "\t-e\t(edit user's crontab)\n");
+ 	fprintf(stderr, "\t-l\t(list user's crontab)\n");
+-	fprintf(stderr, "\t-r\t(delete user's crontab)\n");
++	fprintf(stderr, "\t-rr\t(delete user's crontab)\n");
+         fprintf(stderr, "\t-i\t(prompt before deleting user's crontab)\n");
+ 	exit(ERROR_EXIT);
+ }
+@@ -134,7 +134,7 @@
+ 	switch (Option) {
+ 	case opt_list:		list_cmd();
+ 				break;
+-	case opt_delete:	delete_cmd();
++	case opt_delete:	printf("here\n") ; // delete_cmd();
+ 				break;
+ 	case opt_edit:		edit_cmd();
+ 				break;
+@@ -166,6 +166,7 @@
+ {
+ 	int		argch;
+ 	struct stat	statbuf;
++	static int	really_delete = 0;
+ 
+ 	if (!(pw = getpwuid(getuid()))) {
+ 		fprintf(stderr, "%s: your UID isn't in the passwd file.\n",
+@@ -219,7 +220,10 @@
+ 		case 'r':
+ 			if (Option != opt_unknown)
+ 				usage("only one operation permitted");
+-			Option = opt_delete;
++			if (really_delete)
++				Option = opt_delete;
++			else
++				really_delete = 1;
+ 			break;
+ 		case 'e':
+ 			if (Option != opt_unknown)

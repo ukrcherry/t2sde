@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/opencolorio/opencolorio.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,19 +15,19 @@
 [T] and is LUT-format agnostic, supporting many popular formats.
 
 [A] Academy Software Foundation
-[M] Aleksi V <aleksi.venalainen@outlook.com>
+[M] Aleksi Venäläinen <aleksi.venalainen@outlook.com>
 
 [U] https://opencolorio.org/
 
 [C] extra/development
 [F] OBJDIR
 
+[E] opt openexr
+
 [L] BSD
-[S] Stable
-[V] 2.4.2
-[P] X -----5---9 400.200
+[V] 2.5.2
+[P] X -----5---9 300.800
 
-#[O] var_append cmakeopt ' ' -DBUILD_SHARED_LIBS=OFF
-#[O] var_append cmakeopt ' ' -DOCIO_INSTALL_EXT_PACKAGES=ALL
+[D] dc9ced310ea08b817e818c7c736e54904166623c5b8e78d47dba837e opencolorio-v2.5.2.tar.gz https://github.com/AcademySoftwareFoundation/OpenColorIO/archive/v2.5.2/
 
-[D] 286ae399e7723da7fb431a8c08813b1992202f487f7278bbffc933c3 opencolorio-v2.4.2.tar.gz https://github.com/AcademySoftwareFoundation/OpenColorIO/archive/v2.4.2/
+hook_add premake 5 "mkdir -p ext/dist/usr/${libdir##*/}; ln -svf /usr/${libdir##*/}/libpystring.a ext/dist/usr/${libdir##*/}"

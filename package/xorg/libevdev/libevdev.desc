@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libevdev/libevdev.desc
-[COPY] Copyright (C) 2014 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2014 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -16,18 +16,17 @@
 [U] https://www.freedesktop.org/wiki/Software/libevdev/
 
 [A] The XCB developers
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/x11
 [F] CROSS
 
 [L] OpenSource
-[S] Stable
-[V] 1.13.4
+[V] 1.13.6
 [P] X -----5---9 112.402
 
-[O] . package/*/*/modular-x-conf.in
-[O] pkginstalled doxygen || var_append mesonopt ' ' -Ddocumentation=disabled
-[O] var_append mesonopt ' ' -Dtests=disabled
+[D] f7e68a885c37068db1689f6c3f82351bad983af9c1ef868c5e80785d libevdev-1.13.6.tar.xz http://www.freedesktop.org/software/libevdev/
 
-[D] 581ccafead38c639982094f4b0c0607d72362856e8f5e68d8c1711d6 libevdev-1.13.4.tar.xz http://www.freedesktop.org/software/libevdev/
+. package/*/*/modular-x-conf.in
+pkginstalled doxygen || var_append mesonopt ' ' -Ddocumentation=disabled
+var_append mesonopt ' ' -Dtests=disabled

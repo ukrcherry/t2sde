@@ -1,0 +1,44 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/rrdtool/rrdtool.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Round Robin Database and graph generation
+
+[T] RRD is the Acronym for Round Robin Database. RRD is a system to store
+[T] and display time-series data (i.e. network bandwidth, machine-room
+[T] temperature, server load average). It stores the data in a very compact
+[T] way that will not expand over time, and it presents useful graphs by
+[T] processing the data to enforce a certain data density. It can be used
+[T] either via simple wrapper scripts (from shell or Perl) or via frontends
+[T] that poll network devices and put a friendly user interface on it.
+
+[U] https://oss.oetiker.ch/rrdtool/
+
+[A] Tobias Oetiker <tobi@oetiker.ch>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS NO-LTO.gcc
+
+[E] opt python
+[E] opt lua
+
+[L] GPL
+[V] 1.9.0
+[P] X -----5---9 127.401
+
+[D] 0b13173f3795e546d68544d586e7612051eb915d2f2652d16d74ffa8 rrdtool-1.9.0.tar.gz https://github.com/oetiker/rrdtool-1.x/releases/download/v1.9.0/
+
+atstage native || hook_add preconf 5 "echo 'rd_cv_ieee_works=yes' >> config.cache"
+
+var_append confopt ' ' '--disable-ruby --disable-tcl --enable-shared'
+var_append confopt ' ' --docdir=$docdir
+
+if atstage native; then
+	pkginstalled perl && var_append makeinstop ' ' site-perl-install
+else
+	var_append confopt ' ' --disable-perl
+fi

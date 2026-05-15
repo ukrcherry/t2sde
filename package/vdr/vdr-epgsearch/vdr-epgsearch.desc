@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/vdr-epgsearch/vdr-epgsearch.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -17,11 +17,9 @@
 [F] FPIC
 
 [L] GPL
-[S] Beta
-[V] 1.0.0
-[P] X -----5---9 611.000
+[V] 2.4.6
 
-[O] . $base/package/vdr/*/vdr-plugin-conf.in
-[O] hook_add postmake 5 "plugin_register epgsearch"
+[D] fe769cb7ac344d6cdb961aa66a8996b9f6dcb4320ae25b7463d5b5a4 vdr-epgsearch-2.4.6.zip https://github.com/vdr-projects/vdr-plugin-epgsearch/archive/v2.4.6/
 
-[D] d817a1cecf563d15511877f56b282f9ff489a25079a3f325212a5eb2 vdr-epgsearch-1.0.0.tgz http://winni.vdr-developer.org/epgsearch/downloads/
+. $base/package/vdr/*/vdr-plugin-conf.in
+hook_add postmake 5 "plugin_register epgsearch"

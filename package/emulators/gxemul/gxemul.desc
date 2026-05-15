@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gxemul/gxemul.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,14 +13,22 @@
 [U] https://gavare.se/gxemul/
 
 [A] Anders Gavare <anders@gavare.se>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/emulator
 
 [E] opt doxygen
 
 [L] BSD
-[S] Stable
 [V] 0.7.0
 
-[D] 67974fa45409ff7e17a12c1730889a970a0d1a95b1781ec376ed80f3 gxemul-0.7.0.tar.gz http://gavare.se/gxemul/src/
+[D] 67974fa45409ff7e17a12c1730889a970a0d1a95b1781ec376ed80f3 gxemul-0.7.0.tar.gz https://gavare.se/gxemul/src/
+
+# no install target
+makeinstopt=
+
+gxemul_install() {
+	install gxemul $root$bindir/
+	install man/gxemul.1 $root$mandir/man1/
+}
+hook_add postmake 5 gxemul_install

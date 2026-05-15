@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/ansible/ansible.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Core components for Ansible
+
+[T] Core components for Ansible.
+
+[U] https://ansible.com/
+
+[A] Ansible Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 13.6.0
+[L] GPL3
+[P] X -----5---9 700.000
+
+[D] 1a7ea11203f523ffc7dffdf232fa7f9ed0bce19206fd86c1edb70d9e ansible-13.6.0.tar.gz https://pypi.python.org/packages/source/a/ansible/
+
+runpipinstall=0

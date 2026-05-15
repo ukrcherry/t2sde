@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/doas/doas.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] OpenBSD's temporary privilege escalation tool
+
+[T] OpenBSD's temporary privilege escalation tool.
+
+[U] https://github.com/Duncaen/OpenDoas
+
+[A] Doas Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 6.8.2
+[L] ISC
+
+[D] a91f6a0a53afe3ea4d65f5ace95e5dfd3986864d4205f3088fbc7bc0 doas-6.8.2.tar.gz https://github.com/Duncaen/OpenDoas/archive/v6.8.2/

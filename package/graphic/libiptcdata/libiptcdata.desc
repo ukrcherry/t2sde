@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libiptcdata/libiptcdata.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Libiptcdata is a C library for manipulating IPTC metadata within multimedia
+
+[T] Libiptcdata is a C library for manipulating IPTC metadata within multimedia.
+
+[U] https://github.com/ianw/libiptcdata
+
+[A] Libiptcdata Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.0.5
+[L] LGPL
+
+[D] 9750ba7d3cc72e93525df26edeec57d6c7469546306d5e956898f191 libiptcdata-1.0.5.tar.gz https://github.com/ianw/libiptcdata/releases/download/release_1_0_5/

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/dolphin/dolphin.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -14,19 +14,20 @@
 [U] https://apps.kde.org/dolphin/
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
-[E] opt kdoctools
-[E] opt docbook-xml
-[E] opt docbook-xsl
+[F] CROSS OBJDIR
+
+[E] opt kdoctools docbook-xml docbook-xsl
+[E] opt phonon
 
 [L] GPL
-[S] Stable
-[V] 25.04.1
-[P] X -----5---9 180.000
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 26.04.1
+[P] X -----5---9 400.000
 
 [CV-GROUP] kde-gear
-[D] 1356c9dddb4872ba2bfb354f9b716e921d6ab591ec5a598becc41010 dolphin-25.04.1.tar.xz https://download.kde.org/stable/release-service/25.04.1/src/
+[D] 1edc591d66206e7ae2a6d46032089413be3c9f853aa443e7bfae0e3f dolphin-26.04.1.tar.xz https://download.kde.org/stable/release-service/26.04.1/src/
+
+. $base/package/*/*/kde-conf.in
+var_append cmakeopt ' ' -DBUILD_TESTING=OFF

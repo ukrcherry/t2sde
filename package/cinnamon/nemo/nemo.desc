@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/nemo/nemo.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,13 +12,12 @@
 
 [U] https://github.com/linuxmint/nemo
 
-[A] linuxmint
-[M] The T2 Project <t2@t2-project.org>
+[A] Linux Mint Team
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/desktop/cinnamon
 
 [L] GPL
-[S] Stable
-[V] 6.4.5
+[V] 6.6.4
 
-[D] 2d327af551a9cb62e26817e5ae9ad2a8378eba8203f6ae2b4b1564f2 nemo-6.4.5.tar.gz https://github.com/linuxmint/nemo/archive/refs/tags/6.4.5/
+[D] a5cecb43ccc6d4ab50e2f825112a0bb07f2f9b14adc70022f63b8df0 nemo-6.6.4.tar.gz https://github.com/linuxmint/nemo/archive/refs/tags/6.6.4/

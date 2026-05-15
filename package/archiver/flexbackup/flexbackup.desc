@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/flexbackup/flexbackup.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,12 +12,11 @@
 [U] http://www.edwinh.org/flexbackup/
 
 [A] Edwin Huffstutler <edwinh@computer.org>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/tool
 
 [L] GPL
-[S] Stable
 
 [V] 1.2.1
 

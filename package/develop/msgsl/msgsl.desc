@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/msgsl/msgsl.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] C++ Guideline Support Library implementation by Microsoft
+
+[T] C++ Guideline Support Library implementation by Microsoft.
+
+[U] https://github.com/microsoft/GSL
+
+[A] Msgsl Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 4.2.1
+[L] MIT
+
+[D] be63c731911af114a21db59d83554ed163e9c3e37c35b1f8fdb87695 msgsl-4.2.1.tar.gz https://github.com/microsoft/GSL/archive/v4.2.1/
+
+var_append GCC_WRAPPER_APPEND ' ' -std=gnu++17

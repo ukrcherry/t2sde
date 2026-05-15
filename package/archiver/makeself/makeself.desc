@@ -1,0 +1,28 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/makeself/makeself.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] A self-extracting archiving tool
+
+[T] makeself.sh is a small shell script that generates a self-extractable
+[T] compressed tar archive from a directory. The resulting file appears as a
+[T] shell script (many of those have a .run suffix), and can be launched as is.
+
+[U] https://makeself.io/
+
+[A] Stéphane Peter
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] GPL
+[V] 2.7.1
+
+[D] bdfac88ee9793efcdbfdea91c48dbb19a1cb93ccb5cd0f5ca65cd9ac makeself-release-2.7.1.tar.gz https://github.com/megastep/makeself/archive/release-2.7.1/
+
+runmake=0
+hook_add postmake 5 'cp -vf makeself.sh $root$bindir/makeself'
+hook_add postmake 5 'cp -vf makeself.1 $root$mandir/man1'

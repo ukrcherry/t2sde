@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---.
 [COPY] t2/package/*/yash/yash.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---.
 
@@ -14,13 +14,14 @@
 [U] https://github.com/magicant/yash/
 
 [A] Yash Authors
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/base
 [F] CROSS NO-LTO.gcc
 
-[V] 2.58.1
+[V] 2.61
 [L] GPL
-[S] Stable
 
-[D] 3e9cd104f093cb311b6b993038bbf51c277d00fbfdd30de7e32ca8a2 yash-2.58.1.tar.xz https://github.com/magicant/yash/releases/download/2.58.1/
+[D] 34aa6879da6905cc7894be6462fe78b789d87f771e26dc902928304e yash-2.61.tar.xz https://github.com/magicant/yash/releases/download/2.61/
+
+var_remove confopt ' ' --disable-debug

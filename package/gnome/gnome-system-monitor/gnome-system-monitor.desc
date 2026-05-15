@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gnome-system-monitor/gnome-system-monitor.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -19,11 +19,9 @@
 [F] CROSS
 
 [L] LGPL
-[S] Stable
-[V] 48.1
-[P] X -----5---9 169.500
-
-[O] . $base/package/*/*/gnome-conf.in
+[V] 50.0
 
 [CV-URL] https://download.gnome.org/sources/gnome-system-monitor/cache.json
-[D] 673c448c1fd1d4fc4dcfedd820b5bb39638da4ac216c5e99c435db5c gnome-system-monitor-48.1.tar.xz https://download.gnome.org/sources/gnome-system-monitor/48/
+[D] 2daba31b1a1bace6b879fa495f9eb79c3aa1ee952590ab95381d60c1 gnome-system-monitor-50.0.tar.xz https://download.gnome.org/sources/gnome-system-monitor/50/
+
+. $base/package/*/*/gnome-conf.in

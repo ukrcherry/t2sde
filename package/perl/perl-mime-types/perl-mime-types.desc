@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/perl-mime-types/perl-mime-types.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,13 +12,12 @@
 [U] https://search.cpan.org/~markov/MIME-Types/
 
 [A] Mark Overmeer
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [L] Artistic GPL
-[S] Stable
-[V] 2.28
+[V] 2.30
 [P] X -----5---9 113.300
 
-[D] ba358b0148a7bdca47f1a9bd7b82e5fb0b3cb4b36eeb46ed02597f67 MIME-Types-2.28.tar.gz http://search.cpan.org/CPAN/authors/id/M/MA/MARKOV/
+[D] 8d8df1a99abfd9d3eb6c8b88a773c02681ebc854c71727647ed4a49c MIME-Types-2.30.tar.gz http://search.cpan.org/CPAN/authors/id/M/MA/MARKOV/

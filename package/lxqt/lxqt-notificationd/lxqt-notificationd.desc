@@ -1,27 +1,27 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/lxqt-notificationd/lxqt-notificationd.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
 [I] LXQt notification daemon
 
-[T] LXQt notification daemon.
+[T] lxqt-notificationd is LXQt's implementation of a daemon according to the
+[T] Desktop Notifications Specification.
 
 [U] https://github.com/lxqt/lxqt-notificationd
 
 [A] Lxqt-notificationd Authors
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/base
 [F] OBJDIR
 
-[V] 2.2.0
 [L] LGPL
-[S] Stable
-
-[O] var_append GCC_WRAPPER_APPEND ' ' -I$(pkgprefix includedir kwindowsystem)
-[O] var_append GCC_WRAPPER_APPEND ' ' -L$(pkgprefix libdir layer-shell-qt)
+[V] 2.4.0
 
 [CV-GROUP] lxqt
-[D] 10ae62a1c11fc4d070c61e1c655a4b315de757f0ec39c8965ec0ebca lxqt-notificationd-2.2.0.tar.xz https://github.com/lxqt/lxqt-notificationd/releases/download/2.2.0/
+[D] 40f7e4423553419928ac5da0ffaee3b3250e588bc0753d7b8ce978ba lxqt-notificationd-2.4.0.tar.xz https://github.com/lxqt/lxqt-notificationd/releases/download/2.4.0/
+
+var_append GCC_WRAPPER_APPEND ' ' -I$(pkgprefix includedir kwindowsystem)
+var_append GCC_WRAPPER_APPEND ' ' -L$(pkgprefix libdir layer-shell-qt)

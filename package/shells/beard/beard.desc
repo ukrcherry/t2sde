@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/beard/beard.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Simple hibernation daemon
+
+[T] Simple hibernation daemon.
+
+[U] https://codeberg.org/ahills/beard/
+
+[A] Beard Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[L] PublicDomain
+[V] 0.4
+
+[D] 65d00197d38449bdb2970c0b7da5d557f9df7fdd3aceff2a55d1115e beard-0.4.tar.gz !https://codeberg.org/ahills/beard/archive/v0.4.tar.gz

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libraw/libraw.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,15 +15,14 @@
 [U] https://www.libraw.org/
 
 [A] Alex Tutubalin <lexa@lexa.ru>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/graphic
 [F] CROSS
 
 [L] GPL
-[S] Beta
-[V] 0.21.4
+[V] 0.22.1
 [P] X -----5---9 133.400
 
 [CV-URL] https://www.libraw.org/download
-[D] a4efa1f0cdf64cf9930474aac88d1c7a912015db15078078b020a9da LibRaw-0.21.4.tar.gz http://www.libraw.org/data/
+[D] 17e5d7bfcf1cbe293440caaeacf786ef415de8dc1b5e572cd195b56c LibRaw-0.22.1.tar.gz https://www.libraw.org/data/

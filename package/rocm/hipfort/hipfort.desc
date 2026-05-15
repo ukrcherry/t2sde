@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/hipfort/hipfort.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,17 +11,16 @@
 [U] https://github.com/ROCm/hipfort
 
 [A] Advanced Micro Devices, Inc.
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [F] CROSS
 [C] extra/development
 
 [L] MIT
-[S] Stable
-[V] 6.4.0
+[V] 7.2.3
 [P] X -----5---9 300.240
 
-[O] . $base/package/*/*/rocm-conf.in
-
 [CV-GROUP] rocm
-[D] 975bd3ff539f9b6b0415c97016414cf7a5dc30c897b90b6f90df9e5b hipfort-rocm-6.4.0.tar.gz https://github.com/ROCm/hipfort/archive/rocm-6.4.0/
+[D] ae1b6926b540f72334e2926029c934e8aaa05d2a4986a4c7e1f3162d hipfort-rocm-7.2.3.tar.gz https://github.com/ROCm/hipfort/archive/rocm-7.2.3/
+
+. $base/package/*/*/rocm-conf.in

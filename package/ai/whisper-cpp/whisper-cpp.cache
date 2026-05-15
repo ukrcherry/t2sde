@@ -8,11 +8,9 @@
 [DEP] coreutils
 [DEP] diffutils
 [DEP] gawk
-[DEP] git
 [DEP] grep
 [DEP] gzip
 [DEP] linux-header
 [DEP] make
 [DEP] sed
 [DEP] tar
-[DEP] tbb

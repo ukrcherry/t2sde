@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/tetradraw/tetradraw.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -13,15 +13,14 @@
 [U] https://tetradraw.sourceforge.net/
 
 [A] John McCutchan <ttb@tentacle.dhs.org>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/editor
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 2.0.2
+[V] 2.0.3
 
-[O] var_append makeopt ' ' "tetradraw_LDADD='-L/${libdir##*/} -lncursesw -lmenuw' tetraview_LDADD='-L/${libdir##*/} -lncursesw -lmenuw'"
+[D] a969756071d86380de58433f38bc94beba5a1c25004a333c939bc944 tetradraw_2.0.3.orig.tar.gz https://deb.debian.org/debian/pool/main/t/tetradraw/
 
-[D] 8878cc89766c0d0925edc128c9d66aa7182d8d12ae34f5a807053d00 tetradraw-2.0.2.tar.gz http://dl.sourceforge.net/sourceforge/tetradraw/
+var_append makeopt ' ' "tetradraw_LDADD='-L/${libdir##*/} -lncursesw -lmenuw' tetraview_LDADD='-L/${libdir##*/} -lncursesw -lmenuw'"

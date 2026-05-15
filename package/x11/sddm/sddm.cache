@@ -1,0 +1,31 @@
+[TIMESTAMP] 1760563826 Wed Oct 15 23:30:26 2025
+[BUILDTIME] 85 (9)
+[SIZE] 5.16 MB, 215 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] cmake
+[OPT] consolekit
+[DEP] coreutils
+[DEP] diffutils
+[DEP] gawk
+[DEP] grep
+[DEP] gzip
+[DEP] libxau
+[DEP] libxcb
+[DEP] linux-header
+[DEP] make
+[DEP] pam
+[DEP] pkgconfig
+[OPT] qt5base
+[OPT] qt5declarative
+[OPT] qt5tools
+[OPT] qt6base
+[OPT] qt6declarative
+[OPT] qt6tools
+[DEP] sed
+[DEP] shadow
+[OPT] systemd
+[DEP] tar
+[DEP] vulkan-headers
+[DEP] xorgproto

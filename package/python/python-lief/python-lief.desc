@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/python-lief/python-lief.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,7 +12,7 @@
 [U] https://lief.re/
 
 [A] Romain Thomas <contact@lief.re>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
@@ -23,11 +23,10 @@
 [E] add python-annotated-types
 
 [L] APL
-[S] Beta
-[V] 0.16.2
+[V] 0.17.6
 [P] X -----5---9 220.000
 
-[O] srcdir=LIEF*/api/python/
-[O] runpysetup=1 runmake=0 runcmake=0
+[D] f62d9d50169c8233ab674b631d33af0418ba88639d71f13749038307 lief-0.16-2.tar.gz https://github.com/lief-project/LIEF/archive/refs/tags/0.17.6/
 
-[D] f62d9d50169c8233ab674b631d33af0418ba88639d71f13749038307 lief-0.16-2.tar.gz https://github.com/lief-project/LIEF/archive/refs/tags/0.16.2/
+srcdir=LIEF*/api/python/
+runpysetup=1 runmake=0 runcmake=0

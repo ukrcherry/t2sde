@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/ccache/ccache.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -14,17 +14,20 @@
 [U] https://ccache.samba.org/
 
 [A] Andrew Tridgell
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/development
 [F] CROSS DIETLIBC NO-LTO.gcc
 
+[E] opt fmt
+[E] opt xxhash
+[E] opt zstd
+
 [L] GPL
-[S] Stable
-[V] 4.11.3
+[V] 4.13.6
 [P] X 0-2--5---9 105.400
 
-[O] var_append cmakeopt ' ' '-DUSE_CCACHE=OFF -DENABLE_TESTING=OFF -DREDIS_STORAGE_BACKEND=OFF'
-
 [CV-URL] https://ccache.dev/download.html
-[D] 461d2027686cbde6657938947b75fe23ed22d017defb3ee87c0272ea ccache-4.11.3.tar.xz https://github.com/ccache/ccache/releases/download/v4.11.3/
+[D] bb3b89ac2593e01ca26ad2da2dfc03b0038ab79ef4fcfe58f8eb3eb2 ccache-4.13.6.tar.xz https://github.com/ccache/ccache/releases/download/v4.13.6/
+
+var_append cmakeopt ' ' '-DUSE_CCACHE=OFF -DENABLE_TESTING=OFF -DREDIS_STORAGE_BACKEND=OFF'

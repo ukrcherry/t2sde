@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libretls/libretls.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Port of libtls from libressl to openssl
+
+[T] Port of libtls from libressl to openssl.
+
+[U] https://git.causal.agency/libretls/
+
+[A] Libretls Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 3.8.1
+[L] ISC BSD MIT
+[P] X -----5---9 700.000
+
+[D] 1f6d1e228ae7ac617311f314543bbd6868b16c54ecd62551a7d59d0f libretls-3.8.1.tar.gz https://causal.agency/libretls/

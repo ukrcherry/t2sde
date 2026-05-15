@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/rinutils/rinutils.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] C11 / gnu11 utilities C library
+
+[T] C11 / gnu11 utilities C library.
+
+[U] https://www.shlomifish.org/open-source/projects/
+
+[A] Rinutils Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.10.3
+[L] MIT
+[P] X -----5---9 700.000
+
+[D] 19163a485f96999bce1d4fbcf0831b4ac3c203dd9bd4e3d6bb8617a5 rinutils-0.10.3.tar.xz https://github.com/shlomif/rinutils/releases/download/0.10.3/

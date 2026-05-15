@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/yle-dl/yle-dl.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,7 +12,7 @@
 [U] https://aajanki.github.io/yle-dl/index-en.html
 
 [A] Antti Ajanki
-[M] Aleksi V <aleksi.venalainen@outlook.com>
+[M] Aleksi Venäläinen <aleksi.venalainen@outlook.com>
 
 [C] extra/multimedia
 
@@ -30,7 +30,6 @@
 [E] add wget
 
 [L] GPL3
-[S] Stable
-[V] 20250126
+[V] 20250730
 
-[D] 9d48b70ceaf537fe9f8c5db8522bab74189508f8e3732c166a38e604 yle-dl-20250126.tar.gz https://github.com/aajanki/yle-dl/archive/20250126/
+[D] bb967a369b7ef86704443a52d2cd30133ef030240b79db2dd3afdc73 yle-dl-20250730.tar.gz https://github.com/aajanki/yle-dl/archive/refs/tags/releases/20250730/

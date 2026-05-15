@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/bdb33-java/bdb33-java.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -13,19 +13,18 @@
 [U] http://www.sleepycat.com The BDB Homepage
 
 [A] Sleepycat
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/library
 [F] KAFFE
 
 [L] BSD
-[S] Stable
 [V] 3.3.11
 [P] O -----5---9 300.000
 
-[O] . $base/package/*/bdb33/bdb33.conf
+[D] d13d5ae961e878ac714a89d6639d26b9dd12b6641653393768f2c8cc db-3.3.11.tar.gz https://download.oracle.com/berkeley-db/
 
-[O] var_append patchfiles ' ' "$(echo $confdir/../bdb33/*.patch)"
-[O] makeinstopt=$(echo "$makeinstopt" | sed -e 's,install_lib,install_java,;s,DOCLIST=java,DOCLIST=api_java,')
+. $base/package/*/bdb33/bdb33.conf
 
-[D] d13d5ae961e878ac714a89d6639d26b9dd12b6641653393768f2c8cc db-3.3.11.tar.gz http://download.oracle.com/berkeley-db/
+var_append patchfiles ' ' "$(echo $confdir/../bdb33/*.patch)"
+makeinstopt=$(echo "$makeinstopt" | sed -e 's,install_lib,install_java,;s,DOCLIST=java,DOCLIST=api_java,')

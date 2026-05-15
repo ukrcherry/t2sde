@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/a2ps/a2ps.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -21,15 +21,14 @@
 [U] https://www.gnu.org/software/a2ps/
 
 [A] Akim Demaille <demaille@inf.enst.fr>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/printing
 [F] CROSS AUTOMAKE-QUIRK
 
 [L] GPL
-[S] Stable
-[V] 4.15.6
+[V] 4.15.8
 
-[O] var_append makeinstopt ' ' lispdir=$docdir
+[D] 28b211563de7c85d8a287880dfdc7407f1d004ebf5ab488622e574fe a2ps-4.15.8.tar.gz https://ftp.gnu.org/gnu/a2ps/
 
-[D] 41a4f1c45305a37d35cc3843716b6d7b1265f65ab956e53199345dd5 a2ps-4.15.6.tar.gz https://ftp.gnu.org/gnu/a2ps/
+var_append makeinstopt ' ' lispdir=$docdir

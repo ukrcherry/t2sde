@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/rpcsvc-proto/rpcsvc-proto.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -18,13 +18,11 @@
 
 [F] CROSS
 [C] base/system
-[R] - sparc
 
 [L] GPL
-[S] Stable
 [V] 1.4.4
 [P] X ?----5---9 189.400
 
-[O] [ "$SDECFG_LIBC" = musl ] && var_append GCC_WRAPPER_INSERT ' ' -D_LARGEFILE64_SOURCE=1
-
 [D] c9bae74933079b9b3cb8d9b6f498de64882300323822b573d915ab6d rpcsvc-proto-1.4.4.tar.xz https://github.com/thkukuk/rpcsvc-proto/releases/download/v1.4.4/
+
+[ "$SDECFG_LIBC" = musl ] && var_append GCC_WRAPPER_INSERT ' ' -D_LARGEFILE64_SOURCE=1

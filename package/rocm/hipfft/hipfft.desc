@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/hipfft/hipfft.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,17 +11,16 @@
 [U] https://github.com/ROCm/hipFFT
 
 [A] Advanced Micro Devices, Inc.
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [F] CROSS OBJDIR
 [C] extra/development
 
 [L] MIT
-[S] Stable
-[V] 6.4.0
+[V] 7.2.3
 [P] X -----5---9 300.225
 
-[O] . $base/package/*/*/rocm-conf.in
-
 [CV-GROUP] rocm
-[D] 40b584f7be89fc9db75b303acddac177cc9380db143cccc3eb41d48f hipFFT-rocm-6.4.0.tar.gz https://github.com/ROCm/hipFFT/archive/rocm-6.4.0/
+[D] 7d22d7d7db79054c53528e97be6d697e097933d83b9e78857af0dfa1 hipFFT-rocm-7.2.3.tar.gz https://github.com/ROCm/hipFFT/archive/rocm-7.2.3/
+
+. $base/package/*/*/rocm-conf.in

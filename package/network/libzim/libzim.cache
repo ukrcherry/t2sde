@@ -1,0 +1,23 @@
+[TIMESTAMP] 1737680782 Fri Jan 24 02:06:22 2025
+[BUILDTIME] 55 (9)
+[SIZE] 0.94 MB, 28 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] coreutils
+[DEP] diffutils
+[DEP] gawk
+[DEP] grep
+[DEP] gtest
+[DEP] gzip
+[DEP] icu4c
+[DEP] linux-header
+[DEP] meson
+[DEP] ninja
+[DEP] openssl
+[DEP] python
+[DEP] sed
+[DEP] tar
+[DEP] xapian-core
+[DEP] xz
+[DEP] zstd

@@ -11,7 +11,6 @@
 [DEP] freetype
 [DEP] gawk
 [DEP] gcc
-[DEP] git
 [DEP] grep
 [DEP] jinja2
 [DEP] libglvnd
@@ -29,7 +28,6 @@
 [DEP] pkgconfig
 [DEP] python
 [DEP] sed
-[DEP] tbb
 [DEP] unzip
 [DEP] xorgproto
 [DEP] zlib

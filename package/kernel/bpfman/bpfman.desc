@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/bpfman/bpfman.desc
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] An eBPF Manager for Linux and Kubernetes
+
+[T] Bpfman (formerly know as bpfd) operates as an eBPF manager, focusing on
+[T] simplifying the deployment and administration of eBPF programs.
+
+[U] https://github.com/bpfman/bpfman
+
+[A] Dave Tucker <dave@dtucker.co.uk>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] OpenSource
+[V] 0.6.0
+
+[D] 29d97c4232c72c6536f7e8c5456c646b8bc4f048a810477cbb0bcb10 bpfman-0.6.0.tar.gz https://github.com/bpfman/bpfman/archive/v0.6.0/
+
+cargoinstopt=
+hook_add postmake 5 "install target/*/$pkg* $root$bindir/"

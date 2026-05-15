@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/perl-uri/perl-uri.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -16,13 +16,12 @@
 [T] various ways.
 
 [A] Gisle Aas
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [L] Artistic GPL
-[S] Stable
-[V] 5.32
+[V] 5.34
 [P] X -----5---9 113.600
 
-[D] e6f3107e9526abb3a5680cc9b0e250f9eb5aefc3a25b70e644024c18 URI-5.32.tar.gz https://cpan.metacpan.org/authors/id/O/OA/OALDERS/
+[D] 47d3c1707c67402eebe5ba76f0b829c5c060d14437ee1576c0970a0b URI-5.34.tar.gz https://cpan.metacpan.org/authors/id/O/OA/OALDERS/

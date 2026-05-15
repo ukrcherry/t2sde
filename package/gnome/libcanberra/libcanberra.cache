@@ -1,22 +1,23 @@
-[TIMESTAMP] 1746965390 Sun May 11 14:09:50 2025
-[BUILDTIME] 6 (9)
-[SIZE] 0.50 MB, 58 files
+[TIMESTAMP] 1768854274 Mon Jan 19 21:24:34 2026
+[BUILDTIME] 12 (9)
+[SIZE] 0.81 MB, 56 files
 
-[DEP] alsa-lib
+[OPT] alsa-lib
 [DEP] at-spi2-core
+[DEP] automake
 [DEP] bash
+[DEP] binutils
 [DEP] cairo
 [DEP] coreutils
 [DEP] diffutils
 [DEP] findutils
 [DEP] gawk
 [DEP] gdk-pixbuf
-[OPT] glib
+[DEP] glib
 [DEP] grep
 [DEP] gstreamer
-[DEP] gtk+
-[DEP] gtk+2
-[DEP] gtk-doc
+[OPT] gtk+
+[OPT] gtk+2
 [DEP] harfbuzz
 [DEP] libogg
 [DEP] libtool
@@ -32,5 +33,6 @@
 [DEP] tar
 [DEP] tdb
 [DEP] udev
+[DEP] util-linux
 [DEP] xorgproto
 [DEP] xz

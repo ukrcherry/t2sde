@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/liblinphone/liblinphone.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] An Internet Protocol phone using the SIP protocol
+
+[T] Linphone is an Internet Protocol phone for the Gnome desktop, using
+[T] the SIP protocol. It is easy to use and includes many codecs, among
+[T] them the popular GSM and the free Speex codecs. Also included is a
+[T] commandline version named 'linphonec'.
+
+[U] https://www.linphone.org/ Linphone Homepage
+
+[A] Simon MORLAT <simon.morlat@linphone.org>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/network
+
+[L] AGPL3
+[V] 5.4.100
+[P] X -----5---9 211.600
+
+[D] 6a075116b25d33979e8ae7326fa73efff4fac54fd46d58cc51ba4c39 liblinphone-5.4.100.tar.bz2 https://gitlab.linphone.org/BC/public/liblinphone/-/archive/5.4.100/

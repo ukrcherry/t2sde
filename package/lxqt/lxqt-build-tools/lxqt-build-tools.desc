@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/lxqt-build-tools/lxqt-build-tools.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,15 +11,14 @@
 [U] https://lxqt.org/
 
 [A] Lxqt-build-tools Authors
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/base
 [F] OBJDIR
 
-[V] 2.2.0
+[V] 2.4.0
 [L] BSD
-[S] Stable
 [P] X -----5---9 200.000
 
 [CV-GROUP] lxqt
-[D] ebb6c944fa7a6cc65ac5207c6e64d2c772558965f975105f94a1ac29 lxqt-build-tools-2.2.0.tar.xz https://github.com/lxde/lxqt-build-tools/releases/download/2.2.0/
+[D] f971222e845df2c4ff58c5e3149708168b936625f847562644cea66f lxqt-build-tools-2.4.0.tar.xz https://github.com/lxde/lxqt-build-tools/releases/download/2.4.0/

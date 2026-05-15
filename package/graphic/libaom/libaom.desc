@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libaom/libaom.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,18 +14,19 @@
 [U] https://aomedia.org/
 
 [A] Alliance for Open Media
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] OBJDIR CROSS
 
+[E] add yasm
 [E] opt doxygen
 
 [L] BSD
-[S] Stable
-[V] 3.12.0
+[V] 3.13.3
 [P] X -----5---9 124.600
 
-[O] [ "$SDECFG_STATIC" = 1 ] || var_append cmakeopt ' ' -DBUILD_SHARED_LIBS=ON
+[D] ffda3b064dc2244052b3699f00e59b39c3ed5deeaf66dc8d1f1aba00 aom-v3.13.3.tar.gz git+https://aomedia.googlesource.com/aom v3.13.3
 
-[D] 023835c9a8be54e55030716c6062311b2475cb01ebd53aeac9ecec95 aom-3.12.0.tar.gz git+https://aomedia.googlesource.com/aom v3.12.0
+[ "$SDECFG_STATIC" = 1 ] || var_append cmakeopt ' ' -DBUILD_SHARED_LIBS=ON
+[ "$arch" = arm64 ] && var_remove GCC_WRAPPER_REMOVE ' ' "-march*"

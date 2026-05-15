@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/ck/ck.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Concurrency primitives, safe memory reclamation mechanisms and non-blocking data structures
+
+[T] Concurrency primitives, safe memory reclamation mechanisms and non-blocking (including lock-free) data structures.
+
+[U] https://concurrencykit.org/
+
+[A] Ck Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 0.7.2
+[L] BSD APL
+[P] X -----5---9 700.000
+
+[D] c6d8a400f2e82aed8f9082815c87753e7862c89af28fd025d23ef8ae ck-0.7.2.tar.gz https://github.com/concurrencykit/ck/archive/refs/tags/0.7.2/

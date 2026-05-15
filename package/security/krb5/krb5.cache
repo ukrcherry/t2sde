@@ -1,19 +1,22 @@
-
-[TIMESTAMP] 1648163528 Thu Mar 24 23:12:08 2022
-[BUILDTIME] 20 (5) ERROR
-[SIZE] 4.07 MB, 187 files
+[TIMESTAMP] 1774281287 Mon Mar 23 16:54:47 2026
+[BUILDTIME] 60 (9)
+[SIZE] 6.18 MB, 181 files
 
 [DEP] automake
+[DEP] bash
 [DEP] binutils
+[DEP] bison
 [DEP] coreutils
 [DEP] diffutils
+[DEP] e2fsprogs
 [DEP] findutils
-[DEP] flex
 [DEP] gawk
+[DEP] gettext
 [DEP] grep
+[DEP] gzip
 [DEP] keyutils
-[DEP] libedit
-[DEP] m4
+[DEP] linux-header
+[DEP] lmdb
 [DEP] make
 [DEP] openssl
 [DEP] perl
@@ -21,4 +24,4 @@
 [DEP] python
 [DEP] sed
 [DEP] tar
-[DEP] tcl
+[DEP] util-linux

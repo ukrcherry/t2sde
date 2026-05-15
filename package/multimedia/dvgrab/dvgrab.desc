@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/dvgrab/dvgrab.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -28,13 +28,17 @@
 [U] https://www.kinodv.org/
 
 [A] Arne Schirmacher <schirmacher@users.sourceforge.net>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] CROSS
 
-[L] GPL
-[S] Stable
-[V] 3.5
+[E] opt libquicktime
 
-[D] 59d55d08c7a5d35b3bf4f63de6dd97ba93afdae8bc04bedec8fd116a dvgrab-3.5.tar.gz http://dl.sourceforge.net/sourceforge/kino/
+[L] GPL
+[V] 3.5.2
+
+[D] 721841f81fbb3c02e75a9b23f5a55d73a395123ccb9fa3ac65b47e92 dvgrab-3.5.2.tar.gz https://github.com/ddennedy/dvgrab/archive/v3.5.2/
+
+var_append GCC_WRAPPER_APPEND ' ' -Wno-narrowing
+autogen=1

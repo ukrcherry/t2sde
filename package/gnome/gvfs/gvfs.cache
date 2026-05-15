@@ -1,24 +1,24 @@
+[TIMESTAMP] 1773418566 Fri Mar 13 17:16:06 2026
+[BUILDTIME] 25 (9)
+[SIZE] 6.57 MB, 160 files
 
-[TIMESTAMP] 1736862357 Tue Jan 14 15:45:57 2025
-[BUILDTIME] 14 (9) ERROR
-[SIZE] 0.01 MB, 6 files
-
-[DEP] 00-dirtree
 [OPT] avahi
 [DEP] bash
 [DEP] binutils
 [DEP] coreutils
 [DEP] diffutils
+[DEP] findutils
 [DEP] fuse
 [DEP] gawk
 [OPT] gcr
+[DEP] gettext
 [OPT] glib
 [DEP] grep
 [DEP] gudev
 [OPT] libarchive
 [OPT] libbluray
 [DEP] libcap
-[DEP] libcdio
+[OPT] libcdio
 [OPT] libcdio-paranoia
 [DEP] libgcrypt
 [DEP] libgpg-error
@@ -37,9 +37,11 @@
 [DEP] openssl
 [DEP] p11-kit
 [OPT] polkit
+[DEP] python
 [OPT] samba
 [DEP] sed
 [OPT] systemd
 [DEP] tar
 [OPT] udisks
+[DEP] util-linux
 [DEP] xz

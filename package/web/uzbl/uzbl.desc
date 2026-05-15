@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/uzbl/uzbl.desc
+[COPY] Copyright (C) 2010 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] The uzbl web interface tools
+
+[T] Uzbl is a web browser follows the UNIX philosophy - "Write programs
+[T] that do one thing and do it well. Write programs to work together.
+[T] Write programs to handle text streams, because that is a universal
+[T] interface."
+
+[U] https://www.uzbl.org/
+
+[A] Dieterbe <uzbl-dev@lists.uzbl.org>
+[M] Roger Mason <rmason@mun.ca>
+
+[C] extra/network
+
+[L] OpenSource
+[V] 0.9.1
+
+[D] 9e05f2304f59f4411fc2542db8762e2dc54197e09d88c628f284cdc9 uzbl-0.9.1.tar.gz https://github.com/uzbl/uzbl/archive/v0.9.1/
+
+runpysetup=0

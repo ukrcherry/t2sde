@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/kdesdk-kio/kdesdk-kio.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,17 +11,15 @@
 [U] https://invent.kde.org/sdk/kdesdk-kio
 
 [A] The KDE-Team
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/desktop/kde
-[F] CROSS
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Beta
-[V] 25.04.1
-[P] X -----5---9 400.000
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 26.04.1
 
 [CV-GROUP] kde-gear
-[D] 3614852faa4a13b29c3a6eaf4a30fa92133f21be78cb314d85dfc102 kdesdk-kio-25.04.1.tar.xz https://download.kde.org/stable/release-service/25.04.1/src/
+[D] a66dfdb5d8644bd957fe1832918d53f092cf78ecc916f636d582d64c kdesdk-kio-26.04.1.tar.xz https://download.kde.org/stable/release-service/26.04.1/src/
+
+. $base/package/*/*/kde-conf.in

@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/afetch/afetch.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Fast and simple system info written in C
+
+[T] Fast and simple system info written in C.
+
+[U] https://github.com/13-CF/afetch
+
+[A] Afetch Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 2.2.0
+[L] GPL3
+
+[D] f97e938423d7547e14307a30c7ae9c9fe0c03e422f0b9bedbf7dc94f afetch-2.2.0.tar.gz https://github.com/13-CF/afetch/archive/refs/tags/V2.2.0/

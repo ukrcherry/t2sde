@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/csmith/csmith.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Tool for generating random C programs
+
+[T] Tool for generating random C programs.
+
+[U] https://github.com/csmith-project/csmith/
+
+[A] Csmith Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 2.3.0
+[L] BSD
+
+[D] 035ba850ba5a69aaa2209654387b4fad8b2f5882578a36e30d124fb8 csmith-2.3.0.tar.gz https://github.com/csmith-project/csmith/archive/refs/tags/csmith-2.3.0/

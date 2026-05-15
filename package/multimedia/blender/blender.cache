@@ -1,43 +1,41 @@
+[TIMESTAMP] 1777076456 Fri 24 Apr 2026 08:20:56 PM EDT
+[BUILDTIME] 1850 (9)
+[SIZE] 121.15 MB, 1809 files
 
-[TIMESTAMP] 1723520192 Tue Aug 13 06:36:32 2024
-[BUILDTIME] 1750 (9)
-[SIZE] 72.27 MB, 1694 files
-
-[DEP] 00-dirtree
 [DEP] bash
 [DEP] binutils
-[DEP] boost
-[DEP] bzip2
+[DEP] ceres-solver
 [DEP] cmake
 [DEP] coreutils
 [DEP] diffutils
+[DEP] eigen
 [OPT] embree
 [DEP] epoxy
 [DEP] ffmpeg
 [DEP] fftw3
+[DEP] fmt
 [DEP] freetype
 [DEP] gawk
+[DEP] git
 [DEP] gmp
 [DEP] grep
+[DEP] ilmbase
 [DEP] jack
-[DEP] libdecor
 [DEP] libglvnd
 [DEP] libharu
 [DEP] libjpeg
 [DEP] libpng
-[DEP] libsdl2
 [DEP] libsndfile
+[DEP] libspnav
 [DEP] libtiff
 [OPT] libwebp
 [DEP] libx11
 [DEP] libxext
 [DEP] libxfixes
 [DEP] libxi
-[DEP] libxxf86vm
 [DEP] linux-header
 [DEP] make
-[DEP] minizip-ng
-[OPT] numpy
+[DEP] numpy
 [DEP] openal
 [DEP] opencolorio
 [DEP] openexr
@@ -45,19 +43,24 @@
 [DEP] openjpeg
 [DEP] openpgl
 [DEP] openshadinglanguage
+[OPT] opensubdiv
+[DEP] pipewire
 [DEP] pkgconfig
 [DEP] potrace
 [DEP] pugixml
 [DEP] pulseaudio
 [OPT] python
+[DEP] rubberband
 [DEP] sed
+[DEP] shaderc
+[DEP] sse2neon
 [DEP] tar
-[OPT] tbb
+[DEP] util-linux
+[DEP] vulkan-headers
 [DEP] wayland
 [DEP] wayland-protocols
 [DEP] xkbcommon
 [DEP] xorgproto
 [DEP] xz
-[DEP] yaml-cpp
 [DEP] zlib
 [DEP] zstd

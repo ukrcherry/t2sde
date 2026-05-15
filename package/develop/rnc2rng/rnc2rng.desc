@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/rnc2rng/rnc2rng.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] RELAX NG Compact to regular syntax conversion library
+
+[T] RELAX NG Compact to regular syntax conversion library.
+
+[U] https://github.com/djc/rnc2rng
+
+[A] Rnc2rng Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 2.7.0
+[L] MIT
+
+[D] f1529f9952182e2bdc17bf270a93a91ac53f5a2fc406e336ed5fb419 rnc2rng-2.7.0.tar.gz !https://files.pythonhosted.org/packages/source/r/rnc2rng/rnc2rng-2.7.0.tar.gz

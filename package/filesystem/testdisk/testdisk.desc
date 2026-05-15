@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/testdisk/testdisk.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,16 +14,16 @@
 [U] https://www.cgsecurity.org/wiki/TestDisk
 
 [A] Grenier Christophe <grenier@cgsecurity.org>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/filesystem
 [F] CROSS
 
-[L] GPL
-[S] Stable
-[V] 7.1
+[E] opt qt5base
+[E] opt ntfs-3g
 
-[O] var_append confopt ' ' '--without-ntfs' # failed due list header messup
+[L] GPL
+[V] 7.2
 
 [CV-URL] https://www.cgsecurity.org/wiki/TestDisk_Download
-[D] cffddaa65c2cc3946877962bce9e1b7e27b567428b76a8ff8a470dc2 testdisk-7.1.tar.bz2 http://www.cgsecurity.org/
+[D] 3492a9bd6a1edbeb2997ad46c34f8a91c63e2b571d4c2158d44baf8e testdisk-7.2.tar.bz2 https://www.cgsecurity.org/

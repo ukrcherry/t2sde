@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/python-multipart/python-multipart.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,15 +12,14 @@
 
 [A] Andrew Dunham <andrew@du.nham.ca>
 [A] Marcelo Trylesinski <marcelotryle@gmail.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [E] add hatchling
 
 [L] APL
-[S] Stable
-[V] 0.0.20
+[V] 0.0.28
 [P] X -----5---9 110.000
 
-[D] 4b639dbe35f3809a46d5f4fa1d8dfd119b0ab6badd989045c16d4542 python-multipart-0.0.20.tar.gz https://github.com/Kludex/python-multipart/archive/0.0.20/
+[D] e75ccb3763e26adeb112544b237c7d522243193683ee020911806eb6 python-multipart-0.0.28.tar.gz https://github.com/Kludex/python-multipart/archive/0.0.28/

@@ -1,0 +1,22 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/arcticfox/hotfix-icu4c-std.patch
+# Copyright (C) 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0 or patched project license
+# --- T2-COPYRIGHT-END ---
+
+--- Arctic-Fox-47.0/build/moz.configure/toolchain.configure.vanilla	2026-02-14 21:59:10.110000000 +0100
++++ Arctic-Fox-47.0/build/moz.configure/toolchain.configure	2026-02-14 22:00:27.525818566 +0100
+@@ -345,13 +345,6 @@
+     # Note: MSVC, while supporting C++11, still reports 199711L for __cplusplus.
+     # Note: this is a strict version check because we used to always add
+     # -std=gnu++11.
+-    if info.language == 'C++':
+-        if info.type in ('clang', 'gcc') and info.language_version != 201103:
+-            append_flag('-std=gnu++11')
+-        # MSVC 2015 headers include C++14 features, but don't guard them
+-        # with appropriate checks.
+-        if info.type == 'clang-cl' and info.language_version != 201402:
+-            append_flag('-std=c++14')
+ 
+     # We force clang-cl to emulate Visual C++ 2015 Update 2 with fallback to
+     # cl.exe.

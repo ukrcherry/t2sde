@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/kamera/kamera.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -14,18 +14,18 @@
 [U] https://apps.kde.org/kamera/
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
-[E] opt kdoctools
-[E] opt docbook-xml
+[F] CROSS OBJDIR
+
+[E] opt kdoctools docbook-xml docbook-xsl
 
 [L] GPL
-[S] Stable
-[V] 25.04.1
+[V] 26.04.1
 [P] X -----5---9 162.900
 
-[O] . $base/package/*/*/kde-conf.in
-
 [CV-GROUP] kde-gear
-[D] 3f608adc5fd31235a36a6a452e11aab9e27a4d87970fe7511eeb0d6e kamera-25.04.1.tar.xz https://download.kde.org/stable/release-service/25.04.1/src/
+[D] 0fbc225ad6d131a105aae2dfce2806b66e2b1e8078d91f43ab40c21a kamera-26.04.1.tar.xz https://download.kde.org/stable/release-service/26.04.1/src/
+
+. $base/package/*/*/kde-conf.in

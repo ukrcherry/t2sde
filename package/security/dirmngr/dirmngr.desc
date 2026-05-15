@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/dirmngr/dirmngr.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,12 +12,21 @@
 [U] https://www.gnupg.org/aegypten/
 
 [A] The Aegypten Project
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 
 [L] GPL
-[S] Beta
-[V] 1.1.0rc1
+[V] 1.1.1
 
-[D] f107f2332b9c10dbba37d7904fd091bfa04445635fe3a84a4372080f dirmngr-1.1.0rc1.tar.bz2 http://ftp.gnupg.org/gcrypt/alpha/dirmngr/
+[D] c6377d99c6cf2c715e9583993861f9bfb5b3d6f3ceb57a74c1aa3096 dirmngr-1.1.1.tar.bz2 https://www.gnupg.org/ftp/gcrypt/dirmngr/
+
+pkgprefix -t openldap
+LDAPLIBS="$root/$(pkgprefix libdir openldap)"
+LDAPINCS="$root/$(pkgprefix includedir openldap)"
+
+var_append GCC_WRAPPER_APPEND ' ' -I$LDAPINCS
+var_append GCC_WRAPPER_APPEND ' ' -L$LDAPLIBS
+
+var_append CPP_WRAPPER_APPEND ' ' -I$LDAPINCS
+var_append CPP_WRAPPER_APPEND ' ' -L$LDAPLIBS

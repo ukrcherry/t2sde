@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xf86-input-void/xf86-input-void.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,15 +11,14 @@
 [U] https://www.X.org
 
 [A] X.org Foundation {http://www.X.org}
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/x11
 [F] CROSS
 
 [L] OpenSource
-[S] Stable
 [V] 1.4.2
 
-[O] . package/*/*/modular-x-conf.in
-
 [D] a7c0daf519937ce353e8204cada6b27ccde75ce85c3d5a11d79fa2de xf86-input-void-1.4.2.tar.xz http://xorg.freedesktop.org/releases/individual/driver/
+
+. package/*/*/modular-x-conf.in

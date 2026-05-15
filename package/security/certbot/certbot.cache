@@ -1,18 +1,29 @@
+[TIMESTAMP] 1773053841 Mon Mar  9 11:57:21 2026
+[BUILDTIME] 6 (9)
+[SIZE] 1.49 MB, 191 files
 
-[TIMESTAMP] 1707772558 Mon Feb 12 21:15:58 2024
-[BUILDTIME] 1 (9)
-[SIZE] 1.55 MB, 189 files
-
-[DEP] 00-dirtree
+[DEP] acme
 [DEP] bash
 [DEP] coreutils
+[DEP] cython
 [DEP] diffutils
-[DEP] findutils
 [DEP] gawk
 [DEP] grep
 [DEP] gzip
 [DEP] openssl
+[DEP] parsedatetime
+[DEP] pydistro
+[DEP] pyidna
+[DEP] pyrequests
+[DEP] pyrfc3339
 [DEP] python
+[DEP] python-configargparse
+[DEP] python-configobj
+[DEP] python-cryptography
+[DEP] python-gpep517
+[DEP] python-josepy
+[DEP] python-pyopenssl
 [DEP] sed
 [DEP] setuptools
 [DEP] tar
+[DEP] util-linux

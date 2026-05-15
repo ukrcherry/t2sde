@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/binaryen/binaryen.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Compiler infrastructure and toolchain library for WebAssembly, in C++
+
+[T] Binaryen is a compiler and toolchain infrastructure library for
+[T] WebAssembly, written in C++. It aims to make compiling to WebAssembly easy,
+[T] fast, and effective.
+
+[U] https://github.com/WebAssembly/binaryen
+
+[A] Binaryen Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[L] APL
+[V] 129
+
+[D] 6ed64fdb6e4b2b779a87d622ea5eb14527cb4d37024d7e4582c841d4 binaryen-129.tar.gz https://github.com/WebAssembly/binaryen/archive/version_129/
+
+var_append cmakeopt ' ' -DBUILD_TESTS=OFF

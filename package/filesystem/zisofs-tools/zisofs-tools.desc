@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/zisofs-tools/zisofs-tools.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -18,15 +18,14 @@
 
 [A] H. Peter Anvin <hpa@zytor.com>
 
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/filesystem
 [F] CROSS
 
 [L] GPL
-[S] Stable
 [V] 1.0.8
 
-[O] var_append makeinstopt ' ' INSTALLROOT=$root
+[D] 70bf7a45a73e301022df1748253f005638f76b0d9e56cb3cbd8bf592 zisofs-tools-1.0.8.tar.bz2 https://src.fedoraproject.org/repo/pkgs/zisofs-tools/zisofs-tools-1.0.8.tar.bz2/2d0ed8c9a1f60b45f949b136f9be1f6c/
 
-[D] 70bf7a45a73e301022df1748253f005638f76b0d9e56cb3cbd8bf592 zisofs-tools-1.0.8.tar.bz2 http://www.kernel.org/pub/linux/utils/fs/zisofs/
+var_append makeinstopt ' ' INSTALLROOT=$root

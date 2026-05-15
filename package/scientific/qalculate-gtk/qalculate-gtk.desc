@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/qalculate-gtk/qalculate-gtk.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] GTK UI for the libqalculate multi-purpose desktop calculator
+
+[T] Qalculate! is a multi-purpose cross-platform desktop calculator. It is
+[T] simple to use but provides power and versatility normally reserved for
+[T] complicated math packages, as well as useful tools for everyday needs (such
+[T] as currency conversion and percent calculation).
+
+[U] https://qalculate.github.io/
+
+[A] Libqalculate Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[L] GPL
+[V] 5.10.0
+
+[D] aa4f0cd50e033fbf5ca437f5c0db5025efbb23f6e1b9530bc6278134 qalculate-gtk-5.10.0.tar.gz https://github.com/Qalculate/qalculate-gtk/releases/download/v5.10.0/

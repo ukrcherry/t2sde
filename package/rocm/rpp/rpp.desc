@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/rpp/rpp.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,17 +13,16 @@
 [U] https://github.com/ROCm/rpp
 
 [A] Advanced Micro Devices, Inc.
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [F] CROSS OBJDIR
 [C] extra/development
 
 [L] MIT
-[S] Stable
-[V] 6.4.0
+[V] 7.2.3
 [P] X -----5---9 300.350
 
-[O] . $base/package/*/*/rocm-conf.in
-
 [CV-GROUP] rocm
-[D] 44a066e1e3f39c0f1c3a7582c68bd443630b51148b8632e5c1b0b30d rpp-rocm-6.4.0.tar.gz https://github.com/ROCm/rpp/archive/rocm-6.4.0/
+[D] 0c6b062437ae586c0c42f1d2be7cfa095f79c3994e8ac49e53efc022 rpp-rocm-7.2.3.tar.gz https://github.com/ROCm/rpp/archive/rocm-7.2.3/
+
+. $base/package/*/*/rocm-conf.in

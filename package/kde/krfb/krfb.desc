@@ -1,32 +1,30 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/krfb/krfb.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
 [I] Desktop sharing
 
-[T] Krfb Desktop Sharing is a server application that allows you to share your 
-[T] current session with a user on another machine, who can use a VNC client to 
+[T] Krfb Desktop Sharing is a server application that allows you to share your
+[T] current session with a user on another machine, who can use a VNC client to
 [T] view or even control the desktop.
 
 [U] https://apps.kde.org/krfb/
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
-[E] opt kdoctools
-[E] opt docbook-xml
-[E] opt docbook-xsl
+[F] CROSS OBJDIR
+
+[E] opt kdoctools docbook-xml docbook-xsl
 
 [L] GPL
-[S] Stable
-[V] 25.04.1
-[P] X -----5---9 179.300
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 26.04.1
 
 [CV-GROUP] kde-gear
-[D] ea084e2842ae3daf200e47b893e64677db71900761e816b087fd3951 krfb-25.04.1.tar.xz https://download.kde.org/stable/release-service/25.04.1/src/
+[D] 838e3a11ce52016f951d697dfb20bd7f77c672acc77b195eb0340d3d krfb-26.04.1.tar.xz https://download.kde.org/stable/release-service/26.04.1/src/
+
+. $base/package/*/*/kde-conf.in

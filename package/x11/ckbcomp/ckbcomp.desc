@@ -1,0 +1,29 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/ckbcomp/ckbcomp.desc
+# Copyright (C) 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] XKB keyboard layout translation utility
+
+[T] ckbcomp -- translate XKB layout to loadkeys or kbdcontrol format.
+
+[U] https://salsa.debian.org/installer-team/console-setup/
+
+[A] Anton Zinoviev <anton@lml.bas.bg>
+[M] NoTag <notag@t2sde.org>
+
+[C] extra/tool
+[F] CROSS
+
+[E] add perl
+
+[L] GPL
+[V] 1.247
+
+[D] 8af56bc5d4c81a97f469177559cf346df363b664e56e73728a78004e console-setup-1.247.tar.bz2 https://salsa.debian.org/installer-team/console-setup/-/archive/1.247/
+
+runmake=
+
+hook_add inmake 5 "install -m 644 man/$pkg.1 $root$mandir/man1"
+hook_add inmake 5 "cd Keyboard && install -m 755 $pkg $root$bindir/$pkg"

@@ -1,0 +1,29 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/uutils-coreutils/uutils-coreutils.desc
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Cross-platform Rust rewrite of the GNU coreutils
+
+[T] uutils coreutils is a cross-platform reimplementation of the GNU coreutils
+[T] in Rust. While all programs have been implemented, some options might be
+[T] missing or different behavior might be experienced.
+
+[U] https://github.com/uutils/coreutils
+
+[A] uutils developers
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CUSTOM-LTO
+
+[L] MIT
+[V] 0.8.0
+
+[D] 3d1e4a0be9ce2b7635663eed6067d1bbfdf763cf28ac524a52de770a uutils-coreutils-0.8.0.tar.gz https://github.com/uutils/coreutils/archive/refs/tags/0.8.0/
+
+prefix=opt/$pkg/
+
+var_append cargoinstopt ' ' "--no-default-features -F unix"
+[ "$SDECFG_LTO" = 1 ] && export CARGO_PROFILE_RELEASE_LTO=true || export CARGO_PROFILE_RELEASE_LTO=off

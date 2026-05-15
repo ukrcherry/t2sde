@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/cdlabelgen/cdlabelgen.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -19,18 +19,17 @@
 
 [A] B W Fitzpatrick <fitz@red-bean.com> {origien author}
 [A] Avinash Chopde <avinash@aczone.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network
 [F] CROSS
 
 [L] BSD
-[S] Stable
 [V] 4.3.0
 
-# prevent make run since only a make install is available ...
-[O] makeopt=
-[O] var_append makeinstopt ' ' "BASE_DIR=$root/$prefix LIB_DIR=$root/$prefix/share/cdlabelgen"
+[CV-URL] https://www.aczoom.com/tools/cdinsert/
+[D] 00077f1ab2d26a6758c2659bc034935613b644eb0a257e0db0314c84 cdlabelgen-4.3.0.tgz https://www.aczoom.com/pub/tools/
 
-[CV-URL] http://www.aczoom.com/tools/cdinsert/
-[D] 00077f1ab2d26a6758c2659bc034935613b644eb0a257e0db0314c84 cdlabelgen-4.3.0.tgz http://www.aczoom.com/pub/tools/
+# prevent make run since only a make install is available ...
+makeopt=
+var_append makeinstopt ' ' "BASE_DIR=$root/$prefix LIB_DIR=$root/$prefix/share/cdlabelgen"

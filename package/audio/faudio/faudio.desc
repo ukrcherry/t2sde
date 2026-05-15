@@ -1,0 +1,25 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/faudio/faudio.desc
+# Copyright (C) 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Accuracy-focused XAudio reimplementation for open platforms
+
+[T] FAudio is an accuracy-focused XAudio reimplementation for open platforms.
+
+[U] https://github.com/FNA-XNA/FAudio
+
+[A] Ethan Lee
+[A] Luigi Auriemma
+[A] The MonoGame Team
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/audio
+[F] CROSS
+
+[L] OpenSource
+[V] 26.05
+[P] X -----5---9 200.000
+
+[D] 2c5ea014bede8b9b2597675bde4ee85f78cf95759018a49855aa2985 FAudio-26.05.tar.gz https://github.com/FNA-XNA/FAudio/archive/26.05/

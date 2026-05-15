@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/bcg729/bcg729.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A C implementation of the ITU G729 Annex A/B codec
+
+[T] A C implementation of the ITU G729 Annex A/B codec.
+
+[U] https://github.com/BelledonneCommunications/bcg729
+
+[A] Bcg729 Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.1.1
+[L] GPL3
+[P] X -----5---9 300.000
+
+[D] 8946005daae790cdefb3f96d083e16c83e5559b7face21b4628f11f8 bcg729-1.1.1.tar.gz https://github.com/BelledonneCommunications/bcg729/archive/1.1.1/
+
+var_append cmakeopt ' ' -DCMAKE_POLICY_VERSION_MINIMUM=3.5

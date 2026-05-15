@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/python-safehttpx/python-safehttpx.desc
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Help protect application from SSRF attacks
+
+[T] A small Python library created to help developers protect their
+[T] applications from Server Side Request Forgery (SSRF) attacks.
+
+[U] https://github.com/gradio-app/safehttpx
+
+[A] Abubakar Abid <abubakar@hf.co>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/development
+
+[E] add hatchling
+[E] add httpx
+
+[L] APL
+[V] 0.1.7
+[P] X -----5---9 110.011
+
+[D] 9376aa6d5ad07fe5da53b6d0e15f3e02b48429b8bf7aa26622adab60 safehttpx-0.1.7.tar.gz https://files.pythonhosted.org/packages/source/s/safehttpx/

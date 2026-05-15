@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xdg-desktop-portal-lxqt/xdg-desktop-portal-lxqt.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,13 +11,12 @@
 [U] https://github.com/lxqt/xdg-desktop-portal-lxqt/
 
 [A] Lxqt Authors
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/base
 [F] OBJDIR
 
-[V] 1.2.0
+[V] 1.4.0
 [L] LGPL
-[S] Stable
 
-[D] 4fc404ca91253254220791a7faf8b9256d819b7eb0f476960ea9a1d3 xdg-desktop-portal-lxqt-1.2.0.tar.gz https://github.com/lxqt/xdg-desktop-portal-lxqt/archive/refs/tags/1.2.0/
+[D] 87180c2b2c564935c3306b08aa7b5bea798d6f862f3dc7d0ff520da2 xdg-desktop-portal-lxqt-1.4.0.tar.gz https://github.com/lxqt/xdg-desktop-portal-lxqt/archive/refs/tags/1.4.0/

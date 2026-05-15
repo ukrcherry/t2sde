@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/neofetch/neofetch.desc
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A command-line system information tool
+
+[T] A command-line system information tool written in bash 3.2+
+
+[U] https://github.com/dylanaraps/neofetch
+
+[A] Dylan Araps
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/multimedia
+[F] CROSS
+
+[L] GPL
+[V] 7.1.0
+
+[D] d24e8189bab887cf04c3f9922499dda6fb25888dd9445d0bda1692fe neofetch-7.1.0.tar.gz https://github.com/dylanaraps/neofetch/archive/7.1.0/

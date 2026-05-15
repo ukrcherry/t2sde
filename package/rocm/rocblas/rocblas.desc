@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/rocblas/rocblas.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,7 +13,7 @@
 [U] https://github.com/ROCm/rocBLAS
 
 [A] Advanced Micro Devices, Inc.
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [F] CROSS OBJDIR
 [C] extra/development
@@ -21,16 +21,15 @@
 [E] opt doxygen
 
 [L] MIT
-[S] Stable
-[V] 6.4.0
+[V] 7.2.3
 [P] X -----5---9 300.195
 
-[O] . $base/package/*/*/rocm-conf.in
-[O] var_append cmakeopt ' ' "-DCMAKE_INSTALL_LIBDIR=${libdir##*/}"
-[O] var_append cmakeopt ' ' -DCMAKE_C_COMPILER=/$prefix/bin/clang
-[O] var_append cmakeopt ' ' -DCMAKE_CXX_COMPILER=/$prefix/bin/clang++
-[O] var_append cmakeopt ' ' "-DHIP_PLATFORM=amd -DHIP_COMPILER=clang"
-[O] var_append cmakeopt ' ' "-DAMDGPU_TARGETS='$SDECFG_PKG_ROCM_ARCHS'"
-
 [CV-GROUP] rocm
-[D] 50efcc67b3280df7b094b930034735647e56861ee0df1c65f4cd4a41 rocBLAS-rocm-6.4.0.tar.gz https://github.com/ROCm/rocBLAS/archive/rocm-6.4.0/
+[D] a51e84c3ae223817626c938a135aa1b1a9ead9630f1a53c0a62cebe7 rocBLAS-rocm-7.2.3.tar.gz https://github.com/ROCm/rocBLAS/archive/rocm-7.2.3/
+
+. $base/package/*/*/rocm-conf.in
+var_append cmakeopt ' ' "-DCMAKE_INSTALL_LIBDIR=${libdir##*/}"
+var_append cmakeopt ' ' -DCMAKE_C_COMPILER=/$prefix/bin/clang
+var_append cmakeopt ' ' -DCMAKE_CXX_COMPILER=/$prefix/bin/clang++
+var_append cmakeopt ' ' "-DHIP_PLATFORM=amd -DHIP_COMPILER=clang"
+var_append cmakeopt ' ' "-DAMDGPU_TARGETS='$SDECFG_PKG_ROCM_ARCHS'"

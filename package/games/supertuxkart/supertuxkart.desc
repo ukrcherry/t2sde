@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
-[COPY] t2/package/*/tuxkart/tuxkart.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] t2/package/*/supertuxkart/supertuxkart.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -12,15 +12,14 @@
 [U] https://supertuxkart.net
 
 [A] Steve Baker <sjbaker1@airmail.net>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/game
 #[C] extra/game/racing
 
 [L] GPL
-[S] Stable
-[V] 1.4
+[V] 1.5
 
-[O] var_append cmakeopt ' ' '-DBUILD_RECORDER=0 -DUSE_WIIUSE=NO'
+[D] 5186e4e3fe902374c9c651060f61a8466ff4ead7cdcc9c17ebf30b59 SuperTuxKart-1.5-src.tar.gz https://github.com/supertuxkart/stk-code/releases/download/1.5/
 
-[D] c3aff5003bbf9ddfd55a87796a3e5a182af5dca8409a184133ae48d0 SuperTuxKart-1.4-src.tar.xz https://github.com/supertuxkart/stk-code/releases/download/1.4/
+var_append cmakeopt ' ' '-DBUILD_RECORDER=0 -DUSE_WIIUSE=NO'

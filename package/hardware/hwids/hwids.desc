@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/hwids/hwids.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Hardware identification databases
+
+[T] Hardware identification databases.
+
+[U] https://github.com/gentoo/hwids/
+
+[A] Hwids Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 20210613
+[L] BSD GPL
+
+[D] 5ecc28e7d512afe1e924c1023bf4425e2c4576b8f40514d728e36ffb hwids-20210613.tar.gz https://github.com/gentoo/hwids/archive/

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/cpuburn/cpuburn.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -24,18 +24,28 @@
 [T]
 [T] cpuburn is a shell wrapper for easy use of this applications
 
-[U] http://pages.sbcglobal.net/redelm/
+[U] https://web.archive.org/web/20110623074500/pages.sbcglobal.net/redelm/
 
 [A] Robert Redelmeier <redelm@ev1.net>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/tool
 [F] CROSS DIETLIBC
 
-[R] + x86 x86-64
+[R] + arm x86 x86-64
 
 [L] GPL
-[S] Stable
-[V] 1.4
+[V] 1.4a
 
-[D] 87a00c8b17fd2ba0b6801ceeb2be343eb38b9574dd86ab314c2201bc cpuburn_1_4.tar.gz !http://pages.sbcglobal.net/redelm/cpuburn_1_4_tar.gz
+[D] c7e40a1edb4204d21619c9a5e2a4a8c91e581a1baf0f44e785f468de cpuburn_1_4a_tar.gz https://web.archive.org/web/20110110021132if_/http://pages.sbcglobal.net/redelm/
+
+runmake=0
+cpuburn_main() {
+	for x in burnP5 burnP6 burnK6 burnK7 burnBX burnMMX
+	do
+		$KCC -s -m32 -nostdlib -o $x ${x}.S
+		install -v $x $root$sbindir/
+	done
+	install $confdir/cpuburn.sh $root$sbindir/cpuburn
+}
+hook_add inmake 5 cpuburn_main

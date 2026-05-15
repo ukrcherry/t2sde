@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/axtls/axtls.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,17 +15,17 @@
 [T] renegotiation, highly configurable compile-time options, and interfaces
 [T] for C#, VB. NET, Java, and Perl. It also implements a Web server.
 
-[U] http://axtls.cerocclub.com.au/
+[U] https://sourceforge.net/projects/axtls/
 
 [A] Cameron Rich <cameronrich@yahoo.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/security
 
 [L] LGPL
-[S] Stable
 [V] 2.1.5
 
-[O] hook_add preconf 5 "yes '' | make oldconfig"
-[O] var_append makeinstopt ' ' PREFIX=$root/$prefix
-[D] 7243644ef660fa88ff3468e047945ab2df2538092a4934bb95f96fd7 axTLS-2.1.5.tar.gz http://dl.sourceforge.net/sourceforge/axtls/
+[D] 7243644ef660fa88ff3468e047945ab2df2538092a4934bb95f96fd7 axTLS-2.1.5.tar.gz https://prdownloads.sourceforge.net/sourceforge/axtls/
+
+hook_add preconf 5 "yes '' | make oldconfig"
+var_append makeinstopt ' ' PREFIX=$root/$prefix

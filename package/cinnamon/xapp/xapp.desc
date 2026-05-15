@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xapp/xapp.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,14 +12,13 @@
 
 [U] https://github.com/linuxmint/xapp
 
-[A] linuxmint
-[M] The T2 Project <t2@t2-project.org>
+[A] Linux Mint Team
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/desktop/cinnamon
 
 [L] GPL
-[S] Stable
-[V] 2.8.8
+[V] 3.2.2
 [P] X -----5---9 300.000
 
-[D] b7f16895a07ad304d0fd8c93cd0eda44fcc2ec82c0e315242dbb1eeb xapp-2.8.8.tar.gz https://github.com/linuxmint/xapp/archive/refs/tags/2.8.8/
+[D] accb378355b390bdff9451f86edc97f9ab31ce793f393b2b34f245f6 xapp-3.2.2.tar.gz https://github.com/linuxmint/xapp/archive/refs/tags/3.2.2/

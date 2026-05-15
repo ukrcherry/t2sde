@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/pillow/pillow.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,16 +13,17 @@
 [U] https://pypi.org/project/pillow
 
 [A] Jeffrey A. Clark and contributors
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] CROSS
 
+[E] opt lcms2
 [E] opt libwebp
+[E] opt openjpeg
 
 [L] MIT
-[S] Stable
-[V] 11.1.0
+[V] 12.2.0
 [P] X -----5---9 400.000
 
-[D] f63d582f65a30378ff4781dc0d80ddd3dab7dbf8780ec78b2e753ae8 pillow-11.1.0.tar.gz https://files.pythonhosted.org/packages/f3/af/c097e544e7bd278333db77933e535098c259609c4eb3b85381109602fb5b/
+[D] 5d928e5b57d24777f412f6e8a11e2030924a846b325cb703e7df5a85 pillow-12.2.0.tar.gz https://files.pythonhosted.org/packages/source/p/pillow/

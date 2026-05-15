@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/amap/amap.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,16 +11,15 @@
 [T] It also identifies non-ascii based applications. This is achieved by sending
 [T] trigger packets, and looking up the responses in a list of response strings.
 
-[U] https://thc.org/thc-amap/
+[U] https://github.com/hackerschoice/THC-Archive
 
 [A] van Hauser and DJ RevMoon / THC <amap-dev@thc.org>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 [F] CROSS
 
 [L] GPL
-[S] Stable
 [V] 5.4
 
 [D] 841518ddcca41edcd6b9c811c94dc5d7f7326f6706c82a3b5e7f9696 amap-5.4.tar.gz https://github.com/hackerschoice/THC-Archive/raw/master/Tools/

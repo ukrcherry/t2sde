@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libdatrie/libdatrie.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Library for double-array trie
+
+[T] libdatrie is an implementation of double-array structure for representing
+[T] trie. Trie is a kind of digital search tree, an efficient indexing method
+[T] in which search time is independent of database size.
+
+[U] https://github.com/tlwg/libdatrie
+
+[A] Theppitak Karoonboonyanan <theppitak@gmail.com>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/library
+
+[E] opt doxygen
+
+[L] LGPL
+[V] 0.2.14
+[P] X -----5---9 700.000
+
+[D] ec7a46954e748dd6eddfe23aa1a7339066c86f07e3fb808f14bbb313 libdatrie-0.2.14.tar.xz https://github.com/tlwg/libdatrie/releases/download/v0.2.14/

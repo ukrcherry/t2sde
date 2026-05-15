@@ -1,25 +1,23 @@
-[TIMESTAMP] 1745932674 Tue Apr 29 16:17:54 2025
-[BUILDTIME] 45 (9)
-[SIZE] 10.22 MB, 378 files
+[TIMESTAMP] 1777204470 Sun Apr 26 13:54:30 2026
+[BUILDTIME] 55 (9)
+[SIZE] 10.62 MB, 379 files
 
 [DEP] 00-dirtree
 [DEP] alsa-lib
-[DEP] at-spi2-core
+[DEP] automake
 [DEP] bash
 [DEP] binutils
-[DEP] bzip2
 [DEP] cairo
 [DEP] coreutils
 [DEP] dbus
 [DEP] diffutils
 [DEP] findutils
 [DEP] gawk
-[DEP] gdk-pixbuf
 [DEP] glib
 [DEP] glu
 [DEP] grep
 [DEP] groff
-[DEP] gtk+
+[DEP] gzip
 [DEP] harfbuzz
 [DEP] libglvnd
 [DEP] libjpeg
@@ -35,7 +33,7 @@
 [DEP] pkgconfig
 [DEP] sed
 [DEP] tar
-[DEP] tbb
+[DEP] util-linux
 [DEP] wayland
 [DEP] wayland-protocols
 [DEP] xkbcommon

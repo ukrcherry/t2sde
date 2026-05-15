@@ -1,0 +1,29 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/stressapptest/stressapptest.desc
+[COPY] Copyright (C) 2009 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Stressful application test
+
+[T] Stressful Application Test (or stressapptest, its unix name) tries to
+[T] maximize randomized traffic to memory from processor and I/O, with the
+[T] intent of creating a realistic high load situation in order to test
+[T] the existing hardware devices in a computer.
+
+[U] https://code.google.com/p/stressapptest/
+
+[A] Nick J. Sanders
+[M] René Rebe <rene@exactco.de>
+
+[C] base/tool
+[F] CROSS
+[R] - avr32 arc
+
+[L] APL
+[V] 1.0.11
+
+[CV-FLAGS] NO-PREFIX
+[D] ff06ff09036b66a998e2d48b784022bb9a22682b293eed45a5b3deda stressapptest-1.0.11.tar.gz https://github.com/stressapptest/stressapptest/archive/v1.0.11/
+
+var_append CXX_WRAPPER_APPEND ' ' -std=c++11 # for older, e.g. gcc-5

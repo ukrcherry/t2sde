@@ -1,13 +1,16 @@
-[TIMESTAMP] 1743029469 Wed Mar 26 23:51:09 2025
-[BUILDTIME] 6 (9)
-[SIZE] 2.25 MB, 35 files
+[TIMESTAMP] 1771783583 Sun Feb 22 19:06:23 2026
+[BUILDTIME] 10 (9)
+[SIZE] 2.50 MB, 50 files
 
 [DEP] at-spi2-core
 [DEP] bash
+[DEP] binutils
 [DEP] bzip2
 [DEP] cairo
+[DEP] cmake
 [DEP] coreutils
 [DEP] diffutils
+[DEP] findutils
 [DEP] gawk
 [DEP] gdk-pixbuf
 [DEP] gettext
@@ -20,10 +23,12 @@
 [DEP] libx11
 [DEP] linux-header
 [DEP] lm_sensors
-[DEP] make
+[DEP] meson
+[DEP] ninja
 [DEP] openssl
 [DEP] pango
-[DEP] pkgconfig
+[DEP] python
 [DEP] sed
 [DEP] tar
+[DEP] util-linux
 [DEP] xorgproto

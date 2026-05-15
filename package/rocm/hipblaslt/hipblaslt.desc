@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/hipblaslt/hipblaslt.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,21 +14,20 @@
 [U] https://github.com/ROCm/hipBLASLt
 
 [A] Advanced Micro Devices, Inc.
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [F] CROSS OBJDIR
 [C] extra/development
 
 [L] MIT
-[S] Stable
-[V] 6.4.0
+[V] 7.2.3
 [P] X -----5---9 300.190
 
-[O] . $base/package/*/*/rocm-conf.in
-[O] var_append cmakeopt ' ' -DCMAKE_C_COMPILER=/$prefix/bin/clang
-[O] var_append cmakeopt ' ' -DCMAKE_CXX_COMPILER=/$prefix/bin/clang++
-[O] var_append cmakeopt ' ' "-DHIP_PLATFORM=amd -DHIP_COMPILER=clang"
-[O] var_append cmakeopt ' ' "-DAMDGPU_TARGETS='$SDECFG_PKG_ROCM_ARCHS'"
-
 [CV-GROUP] rocm
-[D] 4e178659b4792c0184b8cebbe5e538007ed2138fb95428058e10f79d hipBLASLt-rocm-6.4.0.tar.gz https://github.com/ROCm/hipBLASLt/archive/rocm-6.4.0/
+[D] c3424f0b31f1ae53bb496534ef01f94b69cc6369792940dafce3cf82 hipBLASLt-rocm-7.2.3.tar.gz https://github.com/ROCm/hipBLASLt/archive/rocm-7.2.3/
+
+. $base/package/*/*/rocm-conf.in
+var_append cmakeopt ' ' -DCMAKE_C_COMPILER=/$prefix/bin/clang
+var_append cmakeopt ' ' -DCMAKE_CXX_COMPILER=/$prefix/bin/clang++
+var_append cmakeopt ' ' "-DHIP_PLATFORM=amd -DHIP_COMPILER=clang"
+var_append cmakeopt ' ' "-DAMDGPU_TARGETS='$SDECFG_PKG_ROCM_ARCHS'"

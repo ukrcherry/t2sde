@@ -1,0 +1,29 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/kscannerbuttons/kscannerbuttons.desc
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A monitor which responds to scanner button presses
+
+[T] KScannerButtons is a daemon plus an optional KDE frontend for monitoring
+[T] your scanner buttons so that actions can be taken in response to button
+[T] presses. It's composed of a daemon (sanebuttond), a frontend that will
+[T] display an icon in the systray, and a dialog box to configure and launch
+[T] the daemon. It is based on the button monitoring capabilities found in
+[T] some SANE backends. It has been tested with the avision backend and an
+[T] HP 5300C scanner. The frontend requires Kommander (kde-webdev).
+
+[U] http://cardot.net/KScannerButtons/
+
+[A] Jean-Christophe Cardot <freshmeat@cardot.net>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+
+[L] GPL
+[V] 0.9.5
+
+[D] c84d00bd65d110c1483c238b4fbe5cc6a9ce26c3f1a7493f54954bc4 kscannerbuttons-0.9.5.tar.bz2 http://cardot.net/KScannerButtons/
+
+var_append makeinstopt ' ' PREFIX=$root$bindir/

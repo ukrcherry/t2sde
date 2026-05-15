@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/lshw/lshw.desc
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A small tool to provide detailed hardware configuration information
+
+[T] Lshw (HardWare LiSter) is a small tool for Linux to provide detailed
+[T] information on the hardware configuration of the machine. It can report
+[T] exact memory configuration, firmware version, mainboard configuration,
+[T] CPU version and speed, cache configuration, bus speed, etc.
+
+[U] https://www.ezix.org/software/lshw.html
+
+[A] Lyonel <lyonel@ezix.org>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] GPL
+[V] B.02.20
+
+[D] 4c525522d9db1cd7fa95d85432f2ddeae4f207aa071ee990dad35c46 lshw-B.02.20.tar.gz https://www.ezix.org/software/files/

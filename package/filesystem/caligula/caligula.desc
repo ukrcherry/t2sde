@@ -1,0 +1,22 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/caligula/caligula.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] A user-friendly TUI for disk imaging
+
+[T] A user-friendly, lightweight TUI for disk imaging.
+
+[U] https://github.com/ifd3f/caligula
+
+[A] Astrid Yu
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] GPL
+[V] 0.4.11
+
+[D] 784d3d5a2351907d4e1e74869ceb92722c083792cf19e5c59e67fe75 caligula-0.4.11.tar.gz https://github.com/ifd3f/caligula/archive/v0.4.11/

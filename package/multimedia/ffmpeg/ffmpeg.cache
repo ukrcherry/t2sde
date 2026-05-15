@@ -1,6 +1,6 @@
-[TIMESTAMP] 1744734910 Tue Apr 15 18:35:10 2025
-[BUILDTIME] 280 (9)
-[SIZE] 56.86 MB, 231 files
+[TIMESTAMP] 1768854347 Mon Jan 19 21:25:47 2026
+[BUILDTIME] 370 (9)
+[SIZE] 50.14 MB, 227 files
 
 [DEP] alsa-lib
 [DEP] bash
@@ -13,12 +13,14 @@
 [OPT] freetype
 [DEP] gawk
 [DEP] grep
+[DEP] gzip
 [OPT] harfbuzz
 [OPT] imlib2
 [OPT] intel-onevpl
 [OPT] lame
 [OPT] libaom
 [OPT] libbluray
+[OPT] libcdio
 [OPT] libcdio-paranoia
 [OPT] libdc1394
 [DEP] libdrm
@@ -27,19 +29,24 @@
 [OPT] libsdl2
 [OPT] libtheora
 [DEP] libva
+[OPT] libvdpau
 [OPT] libvorbis
 [OPT] libvpl
 [OPT] libvpx
 [OPT] libx11
 [OPT] libxcb
 [OPT] libxext
+[DEP] libxml
 [OPT] libxv
 [DEP] linux-header
+[DEP] lzo
 [DEP] make
 [OPT] nasm
 [OPT] nvidia-vaapi-driver
 [OPT] opencore-amr
 [OPT] openssl
+[DEP] perl
+[DEP] pkgconfig
 [OPT] pulseaudio
 [OPT] rav1e
 [DEP] sed
@@ -47,9 +54,13 @@
 [OPT] speex
 [OPT] svt-av1
 [DEP] tar
+[DEP] texinfo
+[DEP] util-linux
+[OPT] valgrind
 [OPT] x264
 [OPT] x265
 [OPT] xorgproto
 [OPT] xvid
 [DEP] xz
+[OPT] yasm
 [OPT] zlib

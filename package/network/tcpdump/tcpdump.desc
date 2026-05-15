@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/tcpdump/tcpdump.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -13,7 +13,7 @@
 [U] https://www.tcpdump.org/
 
 [A] Van Jacobson, Craig Leres and Steven McCanne
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/tool
 [F] CROSS NO-LTO.gcc
@@ -21,9 +21,9 @@
 [E] opt libsmi
 
 [L] OpenSource
-[S] Stable
-[V] 4.99.5
+[V] 4.99.6
 
 [CV-URL] https://www.tcpdump.org/
-[O] atstage cross && hook_add preconf 5 "echo 'ac_cv_linux_vers=2' >> config.cache"
-[D] fa279499014c837042cc8b47be8660e21d3c49f5e182bece079daf6d tcpdump-4.99.5.tar.gz https://www.tcpdump.org/release/
+[D] e67aab4f0d29f882973c01537b714e868de2216b28aa2dd46e631907 tcpdump-4.99.6.tar.gz https://www.tcpdump.org/release/
+
+atstage cross && hook_add preconf 5 "echo 'ac_cv_linux_vers=2' >> config.cache"

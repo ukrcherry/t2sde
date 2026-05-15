@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/lximage-qt/lximage-qt.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,14 +11,13 @@
 [U] https://github.com/lxqt/lximage-qt
 
 [A] Lximage-qt Authors
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/base
 [F] OBJDIR
 
-[V] 2.2.0
+[V] 2.4.0
 [L] LGPL
-[S] Stable
 
 [CV-GROUP] lxqt
-[D] 958b95e039daeb608599cf2f253da5a99b7c883e738397f4559f2260 lximage-qt-2.2.0.tar.xz https://github.com/lxqt/lximage-qt/releases/download/2.2.0/
+[D] 01255d04c7d74dd2009dc3d27097b85ed656925b60f164b1024a926f lximage-qt-2.4.0.tar.xz https://github.com/lxqt/lximage-qt/releases/download/2.4.0/

@@ -1,13 +1,12 @@
+[TIMESTAMP] 1770548215 Sun Feb  8 11:56:55 2026
+[BUILDTIME] 75 (9)
+[SIZE] 8.63 MB, 573 files
 
-[TIMESTAMP] 1718822866 Wed Jun 19 20:47:46 2024
-[BUILDTIME] 45 (9)
-[SIZE] 6.97 MB, 456 files
-
-[DEP] 00-dirtree
 [DEP] bash
 [DEP] binutils
 [DEP] cmake
 [DEP] coreutils
+[DEP] cups
 [DEP] diffutils
 [OPT] docbook-xml
 [OPT] docbook-xsl
@@ -23,7 +22,6 @@
 [DEP] kconfigwidgets
 [DEP] kcoreaddons
 [DEP] kdbusaddons
-[DEP] kde-cli-tools
 [OPT] kdoctools
 [DEP] ki18n
 [DEP] kio
@@ -39,11 +37,10 @@
 [DEP] pkgconfig
 [DEP] procps
 [DEP] qt6base
-[DEP] qt6declarative
 [DEP] qt6webengine
 [DEP] sed
 [DEP] tar
-[DEP] tbb
+[DEP] util-linux
 [DEP] vulkan-headers
 [DEP] xapian-core
 [DEP] xz

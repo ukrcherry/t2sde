@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/eyed3/eyed3.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] ID3 tag editor in Python
+
+[T] eyeD3 is a Python tool for working with audio files, specifically MP3 files
+[T] containing ID3 metadata (i.e. song info).
+
+[U] https://eyed3.nicfit.net/
+
+[A] Eyed3 Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[L] GPL3
+[V] 0.9.9
+
+[D] 79466f0b8fe896e8631774ff4276aa3369ee6822514173f8a4997058 eyeD3-0.9.9.tar.gz https://github.com/nicfit/eyeD3/archive/refs/tags/v0.9.9/

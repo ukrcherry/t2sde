@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/gst-libav/gst-libav.desc
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] GStreamer FFmpeg Plug-in
+
+[T] GStreamer FFmpeg plug-in contains one plugin with a set of elements
+[T] using the FFmpeg library code. It contains most popular decoders as
+[T] well as very fast colorspace conversion elements.
+
+[U] https://gstreamer.freedesktop.org/
+
+[A] The GStreamer Project
+[M] Susanne Klaus <vadja@gmx.de>
+
+[C] extra/multimedia extra/desktop/gnome
+[F] CROSS
+
+[L] LGPL
+[V] 1.28.3
+
+[CV-GROUP] gst
+[CV-FLAGS] ODD-UNSTABLE
+[D] 66b8d1fe80d6bd8d06529a4e20ef87652849a7fc72426181f80a5706 gst-libav-1.28.3.tar.xz https://gstreamer.freedesktop.org/src/gst-libav/

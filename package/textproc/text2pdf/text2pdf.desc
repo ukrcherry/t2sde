@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/text2pdf/text2pdf.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -19,16 +19,15 @@
 [U] http://www.eprg.org/pdfcorner/text2pdf/
 
 [A] Phil Smith <psmith@computerstream.co.uk>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 [F] CROSS
 
 [L] OpenSource
-[S] Stable
-[V] 53
+[V] 1.1
 
-[O] srctar= runmake=0
-[O] hook_add inmake 5 "$CC -o $root$bindir/text2pdf $(match_source_file -p text2pdf)"
+[D] 21bb171209b10a66a246672d1c18431842ed75d0b0845d52c33120ee text2pdf-1.1.tar.gz https://github.com/philips/text2pdf/archive/3f6d725/
 
-[D] 60ac6e9d10118bb526392d2659a3261dcef399ce5588eae023984e2c text2pdf-53.c !http://www.eprg.org/pdfcorner/text2pdf/text2pdf.c
+var_append makeinstopt ' ' BINDIR=$root$bindir
+hook_add postmake 5 'install text2pdf.1 $root$mandir/man1/'

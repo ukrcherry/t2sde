@@ -1,0 +1,13 @@
+[TIMESTAMP] 1774692032 Sat Mar 28 11:00:32 2026
+[BUILDTIME] 1 (9) ERROR
+[SIZE] 0.00 MB, 7 files
+
+[DEP] bash
+[DEP] coreutils
+[DEP] diffutils
+[DEP] findutils
+[DEP] gawk
+[DEP] grep
+[DEP] gzip
+[DEP] sed
+[DEP] tar

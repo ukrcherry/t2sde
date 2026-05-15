@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libdbusmenu-lxqt/libdbusmenu-lxqt.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,14 +13,13 @@
 [U] https://github.com/lxqt/libdbusmenu-lxqt/
 
 [A] libdbusmenu-lxqt Authors
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/base
 [F] OBJDIR
+
+[V] 0.4.0
+[L] LGPL
 [P] X -----5---9 200.000
 
-[V] 0.3.0
-[L] LGPL
-[S] Stable
-
-[D] d1a9840b6e093b82c19e0ad47ff79594b04f04487920b77475473893 libdbusmenu-lxqt-0.3.0.tar.gz https://github.com/lxqt/libdbusmenu-lxqt/archive/refs/tags/0.3.0/
+[D] dd94d285cacfd8f266a206d151298cca523a7094adec8a8153c8f272 libdbusmenu-lxqt-0.4.0.tar.gz https://github.com/lxqt/libdbusmenu-lxqt/archive/refs/tags/0.4.0/

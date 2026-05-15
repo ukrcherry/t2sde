@@ -1,0 +1,28 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/w3m/w3m.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] WWW capable pager
+
+[T] w3m is a pager with WWW capability. It IS a pager, but it can be
+[T] used as a text-mode WWW browser.
+
+[U] https://w3m.sourceforge.net/
+
+[A] Akinori Ito <aito@fw.ipsj.or.jp>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/office
+
+[L] Free-to-use
+[V] 0.5.6
+
+[D] b89064021c4db891409baab8083c6bc7e4ae5d0ceb1dc7cc1c894e6f w3m-0.5.6.tar.gz !https://git.sr.ht/~rkta/w3m/archive/v0.5.6.tar.gz
+
+var_append confopt ' ' --with-ssl
+var_append GCC_WRAPPER_APPEND ' ' -I$root$(pkgprefix includedir imlib2)
+var_append GCC_WRAPPER_APPEND ' ' -L$root$(pkgprefix libdir libx11)
+var_append GCC_WRAPPER_APPEND ' ' -std=gnu11

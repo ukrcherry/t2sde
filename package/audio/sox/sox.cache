@@ -1,9 +1,8 @@
-[TIMESTAMP] 1737974194 Mon Jan 27 11:36:34 2025
-[BUILDTIME] 25 (9)
-[SIZE] 2.41 MB, 37 files
+[TIMESTAMP] 1770718348 Tue Feb 10 11:12:28 2026
+[BUILDTIME] 45 (9)
+[SIZE] 2.90 MB, 38 files
 
 [OPT] alsa-lib
-[DEP] autoconf
 [DEP] automake
 [DEP] bash
 [DEP] binutils
@@ -28,14 +27,14 @@
 [DEP] libtool
 [OPT] libvorbis
 [DEP] linux-header
-[DEP] m4
 [DEP] make
 [OPT] opusfile
-[DEP] perl
+[DEP] pkgconfig
 [OPT] pulseaudio
 [DEP] sed
 [OPT] speex
 [OPT] speexdsp
 [DEP] tar
 [OPT] twolame
+[DEP] util-linux
 [DEP] zlib

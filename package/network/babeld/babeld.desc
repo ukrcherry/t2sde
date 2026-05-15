@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/babeld/babeld.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A loop-avoiding distance-vector routing protocol
+
+[T] A loop-avoiding distance-vector routing protocol.
+
+[U] https://www.irif.fr/~jch/software/babel/
+
+[A] Babeld Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 1.13.1
+[L] MIT
+
+[D] ca53dc8a5debb54bbfb44fadd573a31b67438c7ac611f83db3ff6e46 babeld-1.13.1.tar.gz https://www.irif.fr/~jch/software/files/

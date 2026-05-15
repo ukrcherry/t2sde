@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/intel-gmmlib/intel-gmmlib.desc
-[COPY] Copyright (C) 2023 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2023 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -18,9 +18,14 @@
 [C] base/x11
 [F] CROSS OBJDIR
 
+[R] + arm64 x86-64 
+
 [L] OpenSource
-[S] Stable
-[V] 22.7.2
+[V] 22.10.0
 [P] X -----5---9 127.600
 
-[D] 06d4609c1fd80059704a9c60446290fd16f022e9ce347d00e951b792 intel-gmmlib-22.7.2.tar.gz https://github.com/intel/gmmlib/archive/
+[D] 38cca6fd6a7a396ee8baad24bc0f0e9a2a19a403f24096898aaeb294 intel-gmmlib-22.10.0.tar.gz https://github.com/intel/gmmlib/archive/
+
+var_append cmakeopt ' ' -DRUN_TEST_SUITE=OFF
+[[ $arch = x86* ]] && var_append GCC_WRAPPER_APPEND ' ' -msse4.1
+var_append GCC_WRAPPER_REMOVE ' ' -Werror=format-security

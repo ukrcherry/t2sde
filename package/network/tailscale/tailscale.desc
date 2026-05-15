@@ -1,0 +1,35 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/tailscale/tailscale.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] The easiest, most secure way to use WireGuard and 2FA
+
+[T] The easiest, most secure way to use WireGuard and 2FA.
+
+[U] https://tailscale.com/
+
+[A] Tailscale Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[L] BSD
+[V] 1.98.2
+
+[D] 0542150bf5e2ca20c7eb2f4c47dfd7c540873cac5756d804afddc344 tailscale-1.98.2.tar.gz https://github.com/tailscale/tailscale/archive/v1.98.2/
+
+. $base/package/*/*/go-conf.in
+
+hook_add preconf 5 'rm -rf cmd/tsshd'
+var_append goconfopt ' ' '-o bin/ ./cmd/*'
+hook_add postmake 5 tailscale_postmake
+
+tailscale_postmake() {
+	for x in bin/*; do
+		cmd="${x##*/}"
+		[[ "$cmd" != "tailscale"* ]] && cmd="${pkg}-${cmd}"
+		cp -v $x $root$bindir/${cmd}
+	done
+}

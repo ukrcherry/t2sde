@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/hipblas-common/hipblas-common.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,17 +11,16 @@
 [U] https://github.com/ROCm/hipBLAS-common
 
 [A] Advanced Micro Devices, Inc.
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [F] CROSS
 [C] extra/development
 
 [L] MIT
-[S] Stable
-[V] 6.4.0
+[V] 7.2.3
 [P] X -----5---9 300.180
 
-[O] . $base/package/*/*/rocm-conf.in
-
 [CV-GROUP] rocm
-[D] bd9a0bc13bbf05b2e68983248580e0d39263a4a92144067ce4513a55 hipBLAS-common-rocm-6.4.0.tar.gz https://github.com/ROCm/hipBLAS-common/archive/rocm-6.4.0/
+[D] 5995425d24d2da0e928eea25b30f75cd38d5f48e87f5b379cf245602 hipBLAS-common-rocm-7.2.3.tar.gz https://github.com/ROCm/hipBLAS-common/archive/rocm-7.2.3/
+
+. $base/package/*/*/rocm-conf.in

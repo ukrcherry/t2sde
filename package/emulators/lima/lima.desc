@@ -1,0 +1,29 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/lima/lima.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Linux virtual machines, with a focus on running containers
+
+[T] Lima launches Linux virtual machines with automatic file sharing and port
+[T] forwarding (similar to WSL2). The original goal of Lima was to promote
+[T] containerd including nerdctl to Mac users, but Lima can be used for
+[T] non-container applications as well.
+
+[U] https://lima-vm.io/
+
+[A] Lima Developers
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] APL
+[V] 2.1.1
+
+[D] fd377009e007b4f14378d8fe0f3a12a34d62fa29cbdbfcc0bebe8019 lima-2.1.1.tar.gz https://github.com/lima-vm/lima/archive/v2.1.1/
+
+rungo=0
+hook_add premake 5 "sed -i 's/VERSION :=.*/VERSION := v'$ver'/' Makefile"
+hook_add premake 5 "sed -i 's/VERSION_TRIMMED :=.*/VERSION_TRIMMED := '$ver'/' Makefile"

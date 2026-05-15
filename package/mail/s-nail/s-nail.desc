@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/s-nail/s-nail.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] SysV mail/BSD Mail/POSIX mailx: send and receive Internet mail
+
+[T] SysV mail/BSD Mail/POSIX mailx: send and receive Internet mail.
+
+[U] https://www.sdaoden.eu/code.html#s-mailx
+
+[A] S-nail Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 14.9.25
+[L] BSD
+
+[D] d3d72cbe759e3d1afd5cce6c632f8d476fd45e9eefab8ad30d0f9ab3 s-nail-14.9.25.tar.xz https://ftp.sdaoden.eu/

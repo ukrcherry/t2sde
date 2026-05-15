@@ -1,6 +1,6 @@
-[TIMESTAMP] 1744905984 Thu Apr 17 18:06:24 2025
-[BUILDTIME] 75 (5)
-[SIZE] 2.94 MB, 163 files
+[TIMESTAMP] 1770547594 Sun Feb  8 11:46:34 2026
+[BUILDTIME] 45 (9)
+[SIZE] 2.99 MB, 163 files
 
 [DEP] bash
 [DEP] binutils
@@ -10,10 +10,8 @@
 [OPT] docbook-xml
 [OPT] docbook-xsl
 [DEP] extra-cmake-modules
-[DEP] findutils
 [DEP] gawk
 [DEP] gettext
-[DEP] git
 [DEP] gmp
 [DEP] grep
 [DEP] kcolorscheme
@@ -24,6 +22,7 @@
 [OPT] kdoctools
 [DEP] kguiaddons
 [DEP] ki18n
+[DEP] kiconthemes
 [DEP] knotifications
 [DEP] kwidgetsaddons
 [DEP] kxmlgui
@@ -32,11 +31,10 @@
 [DEP] make
 [DEP] mpc
 [DEP] mpfr
-[DEP] pkgconfig
 [DEP] procps
 [DEP] qt6base
 [DEP] sed
 [DEP] tar
-[DEP] tbb
+[DEP] util-linux
 [DEP] vulkan-headers
 [DEP] xz

@@ -1,31 +1,29 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/kanagram/kanagram.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
 [I] Letter Order Game
 
-[T] Kanagram is a game based on anagrams of words: the puzzle is solved when 
+[T] Kanagram is a game based on anagrams of words: the puzzle is solved when
 [T] the letters of the scrambled word are put back in the correct order.
 
 [U] https://apps.kde.org/kanagram/
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
-[E] opt kdoctools
-[E] opt docbook-xml
-[E] opt docbook-xsl
+[F] CROSS OBJDIR
+
+[E] opt kdoctools docbook-xml docbook-xsl
 
 [L] GPL
-[S] Stable
-[V] 25.04.1
-[P] X -----5---9 162.900
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 26.04.1
 
 [CV-GROUP] kde-gear
-[D] 1adf7dba0a974fac8a77cefbc19391936bfba89781f74dcc0cc67a88 kanagram-25.04.1.tar.xz https://download.kde.org/stable/release-service/25.04.1/src/
+[D] 8407c0dcbb0f48fd34fc3870e3b7f70decae4834a1258e2cf929bc49 kanagram-26.04.1.tar.xz https://download.kde.org/stable/release-service/26.04.1/src/
+
+. $base/package/*/*/kde-conf.in

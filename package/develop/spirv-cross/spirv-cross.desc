@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/spirv-cross/spirv-cross.desc
+[COPY] Copyright (C) 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] A tool designed for parsing and converting SPIR-V to other shader languages
+
+[T] SPIRV-Cross is a practical tool and library for performing reflection on
+[T] SPIR-V and disassembling SPIR-V back to high level languages. 
+
+[U] https://github.com/KhronosGroup/SPIRV-Cross
+
+[A] Spirv-Cross Authors
+[M] Jack Jamison <jackqjamison@gmail.com>
+
+[C] base/x11
+
+[V] 1.4.341.0
+[L] APL
+
+[D] 46da2d172fe420344cb5549cb509436f34c917bdd1c88ad98976a830 SPIRV-Cross-1.4.341.0.tar.gz https://github.com/KhronosGroup/SPIRV-Cross/archive/vulkan-sdk-1.4.341.0/
+
+runmake=0
+var_append cmakeopt ' ' -GNinja

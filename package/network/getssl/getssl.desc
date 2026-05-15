@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/getssl/getssl.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A pure shell implementation of the LetsEncrypt ACME protocol
+
+[T] A pure shell implementation of the LetsEncrypt ACME protocol.
+
+[U] https://github.com/srvrco/getssl
+
+[A] Getssl Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 2.49
+[L] GPL3
+
+[D] b0e97492ec1ff901b303e0d423f54a38025650634de095a842d994c8 getssl-2.49.tar.gz https://github.com/srvrco/getssl/archive/v2.49/

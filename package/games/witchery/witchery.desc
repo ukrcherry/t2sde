@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/witchery/witchery.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Build distroless images with Alpine tools
+
+[T] Build distroless images with Alpine tools.
+
+[U] https://github.com/witchery-project/witchery
+
+[A] Witchery Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 0.0.3
+[L] ISC
+
+[D] 27438ed8b4faa4fdbc9615bb257d5252f862573e765b3ea6c410bd2c witchery-0.0.3.tar.gz https://github.com/witchery-project/witchery/archive/v0.0.3/

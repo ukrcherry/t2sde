@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/rancid/rancid.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] RANCID - Really Awesome New Cisco confIg Differ
+
+[T] RANCID - Really Awesome New Cisco confIg Differ.
+
+[U] https://www.shrubbery.net/rancid/
+
+[A] Rancid Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 3.14
+[L] BSD
+
+[D] 6af51a2c751fdb7eac7cea4d37ab2795b917b9fe09a8de0fcdac67d6 rancid-3.14.tar.gz https://shrubbery.net/pub/rancid/

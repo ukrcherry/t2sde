@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/massif-visualizer/massif-visualizer.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,15 +11,15 @@
 [U] https://www.kde.org
 
 [A] The KDE-Team
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 25.04.1
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 26.04.1
 
 [CV-GROUP] kde-gear
-[D] 917a254fb9016f0dc5d5e36bc3ff6bcf9a208b60e7f4ad298f7162a8 massif-visualizer-25.04.1.tar.xz https://download.kde.org/stable/release-service/25.04.1/src/
+[D] 5d62c31562552dabf6ad215d59d9da66241d6102e8e41c0043aab229 massif-visualizer-26.04.1.tar.xz https://download.kde.org/stable/release-service/26.04.1/src/
+
+. $base/package/*/*/kde-conf.in

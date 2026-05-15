@@ -1,0 +1,28 @@
+[TIMESTAMP] 1764676185 Tue Dec  2 13:49:45 2025
+[BUILDTIME] 3 (9)
+[SIZE] 0.27 MB, 61 files
+
+[DEP] appstream
+[DEP] bash
+[DEP] blueprint-compiler
+[DEP] coreutils
+[DEP] diffutils
+[DEP] gawk
+[DEP] gdk-pixbuf
+[DEP] gettext
+[DEP] glib
+[DEP] gobject-introspection
+[DEP] graphene
+[DEP] grep
+[DEP] gtk
+[DEP] gzip
+[DEP] harfbuzz
+[DEP] libadwaita
+[DEP] libxml
+[DEP] meson
+[DEP] ninja
+[DEP] openssl
+[DEP] pango
+[DEP] python
+[DEP] sed
+[DEP] tar

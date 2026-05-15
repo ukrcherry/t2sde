@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libisofs/libisofs.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -16,7 +16,7 @@
 [A] Vreixo Formoso
 [A] Mario Danic
 [A] Thomas Schmitt
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/filesystem
 [F] CROSS
@@ -24,10 +24,9 @@
 [E] opt acl
 
 [L] GPL
-[S] Gamma
-[V] 1.5.6.pl01
+[V] 1.5.8
 [P] X -----5---9 390.000
 
-[O] var_append confopt ' ' --disable-ldconfig-at-install
+[D] 1175a17814089800e75a151f9df6042feddcf83f0b2e5d98494d470e libisofs-1.5.8.tar.gz https://files.libburnia-project.org/releases/
 
-[D] 4f9514018ce29762dfb743e5ebb308bc84690c6e9bb281ab3b3eb222 libisofs-1.5.6.pl01.tar.gz http://files.libburnia-project.org/releases/
+var_append confopt ' ' --disable-ldconfig-at-install

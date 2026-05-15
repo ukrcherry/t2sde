@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/tensile/tensile.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,17 +14,16 @@
 [U] https://github.com/ROCm/Tensile
 
 [A] Advanced Micro Devices, Inc.
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [F] CROSS
 [C] extra/development
 
 [L] MIT
-[S] Stable
-[V] 6.4.0
+[V] 7.2.2
 [P] X -----5---9 300.885
 
-[O] . $base/package/*/*/rocm-conf.in
-
 [CV-GROUP] rocm
-[D] c9f1fe7a51191427a893668eb5198fd57f7ffd60da622c431122f94f Tensile-rocm-6.4.0.tar.gz https://github.com/ROCm/Tensile/archive/rocm-6.4.0/
+[D] 0a28ddc581a5b998f5bbb84aff714eba1899745412826d88b62361f6 Tensile-rocm-7.2.2.tar.gz https://github.com/ROCm/Tensile/archive/rocm-7.2.2/
+
+. $base/package/*/*/rocm-conf.in

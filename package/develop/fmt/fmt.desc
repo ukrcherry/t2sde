@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/fmt/fmt.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Fast and safe formatting library alternative to C stdio and C++ iostreams
+
+[U] https://fmt.dev
+
+[T] Ffmt is an open-source formatting library providing a fast and safe
+[T] alternative to C stdio and C++ iostreams.
+
+[A] Victor Zverovich
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/development
+# NO-LTO due to .a, TODO: shared
+[F] CROSS NO-LTO
+
+[L] OpenSource
+[V] 12.1.0
+[P] X -----5---9 194.000
+
+[D] 467d0c61f491670f0da31e2aa15284365df7148d4a606a0c6385d04e fmt-12.1.0.zip https://github.com/fmtlib/fmt/releases/download/12.1.0/

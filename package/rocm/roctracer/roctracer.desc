@@ -1,10 +1,10 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/roctracer/roctracer.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
-[I] ROCm Tracer Callback/Activity Library for Performance tracing AMD GPUs 
+[I] ROCm Tracer Callback/Activity Library for Performance tracing AMD GPUs
 
 [T] ROC-tracer library: Runtimes Generic Callback/Activity APIs. The goal of
 [T] the implementation is to provide a generic independent from specific
@@ -15,7 +15,7 @@
 [U] https://github.com/ROCm/roctracer
 
 [A] Advanced Micro Devices, Inc.
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [F] CROSS
 [C] extra/development
@@ -23,11 +23,10 @@
 [E] opt doxygen
 
 [L] MIT
-[S] Stable
-[V] 6.4.0
+[V] 7.2.3
 [P] X -----5---9 300.840
 
-[O] . $base/package/*/*/rocm-conf.in
-
 [CV-GROUP] rocm
-[D] f58b0b5483cb8bfba980860b62d712619d582b5919951a9cadab6d4c roctracer-rocm-6.4.0.tar.gz https://github.com/ROCm/roctracer/archive/rocm-6.4.0/
+[D] 36fbf58bb97af95cacea5feceb18d0b7044873578c4d74997ea37ab2 roctracer-rocm-7.2.3.tar.gz https://github.com/ROCm/roctracer/archive/rocm-7.2.3/
+
+. $base/package/*/*/rocm-conf.in

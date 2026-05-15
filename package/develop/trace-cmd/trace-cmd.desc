@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/trace-cmd/trace-cmd.desc
-[COPY] Copyright (C) 2021 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2021 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,14 +14,13 @@
 [U] https://www.trace-cmd.org
 
 [A] Steven Rostedt <srostedt@redhat.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/tool
 
 [L] GPL
-[S] Stable
-[V] 3.3.1
+[V] 3.4
 
-[O] pkginstalled xmlto || var_append mesonopt ' ' -Ddoc=false
+[D] b657d53673537e1d0d0cefd6c41eb5b2103d5f39d20750eabe6ee127 trace-cmd-v3.4.tar.gz https://git.kernel.org/pub/scm/utils/trace-cmd/trace-cmd.git/snapshot/
 
-[D] e294f1fbaae26b65e17576078443b12cea297ab70ee6fd1f0c08d79f trace-cmd-v3.3.1.tar.gz https://git.kernel.org/pub/scm/utils/trace-cmd/trace-cmd.git/snapshot/
+pkginstalled xmlto || var_append mesonopt ' ' -Ddoc=false

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/wine/wine.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -18,7 +18,7 @@
 [U] https://www.winehq.org/
 
 [A] Alexandre Julliard and many others
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/emulator
 [F] CROSS NO-SSP NO-PIE NO-LTO
@@ -30,8 +30,56 @@
 [E] del valgrind
 
 [L] LGPL
-[S] Stable
-[V] 10.7
-[P] X ?----5---9 177.100
+[V] 11.8
+[P] X ?----5---9 400.000
 
-[D] 87faeb2335690ad1b876125b0013d5531f8327296fbf21b2f19250f0 wine-10.7.tar.xz https://dl.winehq.org/wine/source/10.x/
+[D] 5df71e05f507cfce517fe7468e9c4991219a15310c5774e180aa8152 wine-11.8.tar.xz https://dl.winehq.org/wine/source/11.x/
+
+build_tools() {
+	makeinstopt=
+	mkdir -p $root$bindir/../tools
+	for d in . sfnt2fon widl winebuild winegcc wmc wrc wine; do
+		eval $MAKE $makeopt -C $d
+		local f
+		case $d in
+		.)	f="install makedep make_xftmpl" ;;
+		*)	f=$d ;;
+		esac
+		mkdir -p $root$bindir/../tools/$d
+		for x in $f; do
+			install $d/$x $root$bindir/../tools/$d/
+		done
+	done
+}
+
+if atstage toolchain; then
+	hook_add premake 5 "cd tools"
+	makeinstopt=
+	hook_add inmake 5 build_tools
+	var_append confopt ' ' --without-x
+	[[ $arch_build = *64-* ]] && var_append confopt ' ' --enable-win64
+elif atstage cross; then
+	var_append confopt ' ' --with-wine-tools=$root/TOOLCHAIN/cross
+	hook_add premake 5 'ln -svf $PWD $root/TOOLCHAIN/cross/usr/share/wine'
+
+	# force configure to actually use our pkg-config
+	export PKG_CONFIG=pkg-config
+
+	# since cb87d40 and despite fefd6e2 not installed by make
+	hook_add postmake 5 "ln -srvf $root$libdir/wine/*/wine $root$bindir/wine"
+fi
+
+if ! atstage toolchain; then
+	[ $arch_sizeof_char_p = 8 ] && var_append confopt ' ' --enable-win64
+	
+	case "$arch" in
+	    x86)	GCC_WRAPPER_INSERT="${GCC_WRAPPER_INSERT/i486/i586}" ;;
+	    x86-64)	var_append confopt ' ' '--enable-archs=i386,x86_64' ;;
+	    arm64)	var_append confopt ' ' '--enable-archs=arm,aarch64' ;;
+	esac
+
+	var_append GCC_WRAPPER_APPEND ' ' "-I$root$(pkgprefix includedir libx11)"
+	var_append GCC_WRAPPER_APPEND ' ' "-c?:-L$root$(pkgprefix libdir libx11)"
+fi
+
+var_append confopt ' ' --disable-tests

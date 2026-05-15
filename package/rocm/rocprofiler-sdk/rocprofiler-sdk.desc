@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/rocprofiler-sdk/rocprofiler-sdk.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,17 +13,16 @@
 [U] https://github.com/ROCm/rocprofiler-sdk
 
 [A] Advanced Micro Devices, Inc.
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [F] CROSS
 [C] extra/development
 
 [L] MIT
-[S] Stable
-[V] 6.4.0
+[V] 7.2.2
 [P] X -----5---9 300.705
 
-[O] . $base/package/*/*/rocm-conf.in
-
 [CV-GROUP] rocm
-[D] 34bef86e2709531da365c378ddc86ad437020c82632dc47eb6b5991a rocprofiler-sdk-rocm-6.4.0.tar.gz https://github.com/ROCm/rocprofiler-sdk/archive/rocm-6.4.0/
+[D] 0dd224410c7cfa75c696f49f8d315accbd96eeb7998b6c1e3beb1636 rocprofiler-sdk-rocm-7.2.2.tar.gz https://github.com/ROCm/rocprofiler-sdk/archive/rocm-7.2.2/
+
+. $base/package/*/*/rocm-conf.in

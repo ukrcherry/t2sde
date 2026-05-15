@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/brltty/brltty.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Refreshable braille display driver daemon
+
+[T] Refreshable braille display driver daemon.
+
+[U] https://brltty.app
+
+[A] Brltty Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[E] opt doxygen
+
+[L] LGPL
+[V] 6.9.1
+
+[D] 6841a8bf7b9b435e32103e43a09d807a28a862e43d6e4479e7974d90 brltty-6.9.1.tar.xz http://brltty.app/archive/

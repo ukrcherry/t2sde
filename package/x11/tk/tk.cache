@@ -1,11 +1,13 @@
-[TIMESTAMP] 1739129458 Sun Feb  9 20:30:58 2025
-[BUILDTIME] 14 (5)
-[SIZE] 8.85 MB, 579 files
+[TIMESTAMP] 1768865112 Tue Jan 20 00:25:12 2026
+[BUILDTIME] 25 (9)
+[SIZE] 8.79 MB, 511 files
 
 [DEP] bash
 [DEP] binutils
 [DEP] coreutils
+[OPT] cups
 [DEP] diffutils
+[DEP] findutils
 [DEP] fontconfig
 [DEP] freetype
 [DEP] gawk
@@ -14,10 +16,13 @@
 [DEP] libx11
 [DEP] libxft
 [DEP] libxrender
-[DEP] libxscrnsaver
+[OPT] libxscrnsaver
 [DEP] linux-header
 [DEP] make
+[DEP] pkgconfig
 [DEP] sed
 [DEP] tar
 [DEP] tcl
+[DEP] util-linux
 [DEP] xorgproto
+[DEP] zip

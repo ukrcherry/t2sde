@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/misctools/misctools.desc
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Various small UNIX utilities
+
+[T] MiscTools is a collection of small UNIX utilities that are fairly
+[T] trivial but nevertheless useful. These include a binary dump program,
+[T] a directory browser/selector, a file truncator, an ASCII-code lookup
+[T] utility, a program for printing fortunes, a curses-based terminal lock
+[T] program, and a few others.
+
+[U] https://github.com/hyperrealm/misctools
+
+[A] Mark Lindner <mark_a_lindner@yahoo.com>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+
+[L] GPL
+[V] 2.7
+[P] O
+
+[D] 6d0b329ba1727802a7996072db7d508d8b976f8f9fbccb55abb08101 misctools-2.7.tar.gz https://hyperrealm.github.io/misctools/dist/

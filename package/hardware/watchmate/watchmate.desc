@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/watchmate/watchmate.desc
+[COPY] Copyright (C) 2023 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] PineTime companion app
+
+[T] Companion app for InfiniTime-powered PineTime smart watch.
+
+[U] https://github.com/azymohliad/watchmate/
+
+[A] Andrii Zymohliad <azymohliad@pm.me>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/network
+
+[L] GPL3
+[V] 0.5.3
+
+[D] e3126fb525a6d0417e62e3142bd4851d39cc33744af9d2d2ae128f52 watchmate-0.5.3.tar.gz https://github.com/azymohliad/watchmate/archive/v0.5.3/
+
+cargoinstopt=
+hook_add postmake 5 "install target/*/watchmate $root$bindir/"

@@ -1,6 +1,6 @@
-[TIMESTAMP] 1737547543 Wed Jan 22 13:05:43 2025
-[BUILDTIME] 10 (9)
-[SIZE] 3.06 MB, 168 files
+[TIMESTAMP] 1769535924 mar. 27 janv. 2026 18:45:24
+[BUILDTIME] 16 (9)
+[SIZE] 3.36 MB, 178 files
 
 [DEP] bash
 [DEP] binutils
@@ -11,19 +11,22 @@
 [DEP] gawk
 [DEP] gettext
 [OPT] glib
+[OPT] glycin
 [OPT] gobject-introspection
 [DEP] grep
+[OPT] gtk-doc
 [OPT] libjpeg
+[OPT] libjpeg-turbo
 [OPT] libpng
 [OPT] libtiff
 [DEP] linux-header
 [DEP] meson
 [DEP] ninja
 [DEP] openssl
-[DEP] pkgconfig
 [DEP] python
 [DEP] sed
 [DEP] setuptools
 [DEP] shared-mime-info
 [DEP] tar
+[DEP] util-linux
 [DEP] xz

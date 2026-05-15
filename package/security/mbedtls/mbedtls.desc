@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/mbedtls/mbedtls.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,19 +11,17 @@
 [U] https://tls.mbed.org/
 
 [A] Mbedtls Authors
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/base
 [F] OBJDIR
 
-[V] 3.6.3
+[V] 3.6.4
 [L] APL
-[S] Stable
-[P] X -----5---9 200.000
+[P] X -----5---9 162.890
 
-[O] hook_add prepatch 5 'tar -C framework --strip-components=1 $taropt $(match_source_file -p framework)'
-[O] var_append cmakeopt ' ' '-DENABLE_TESTING=OFF -DENABLE_PROGRAMS=OFF'
-[O] var_append cmakeopt ' ' -DLIB_INSTALL_DIR=$libdir
+[CV-FLAGS] NO-MAJOR
+[D] 75cfaf360f7ff54979e20557fc64dfc86ad0c09b5732647825e59156 mbedtls-3.6.4.tar.bz2 https://github.com/Mbed-TLS/mbedtls/releases/download/mbedtls-3.6.4/
 
-[D] b84a2c15987dbf8aab740a866e58304e5cb4d5d9d3e0024b401bc990 mbedtls-3.6.3.tar.gz https://github.com/ARMmbed/mbedtls/archive/v3.6.3/
-[D] 1f00a5b74ca361a44bd288cefba483f904c06a39cd37c4630a02ddfd mbedtls-framework-623c1b4.tar.gz https://github.com/Mbed-TLS/mbedtls-framework/archive/623c1b4/
+var_append cmakeopt ' ' '-DENABLE_TESTING=OFF -DENABLE_PROGRAMS=OFF'
+var_append cmakeopt ' ' -DLIB_INSTALL_DIR=$libdir

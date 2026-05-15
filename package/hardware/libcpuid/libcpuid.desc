@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libcpuid/libcpuid.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] C library for x86 CPU detection and feature extraction
+
+[T] C library for x86 CPU detection and feature extraction.
+
+[U] https://github.com/anrieff/libcpuid
+
+[A] Libcpuid Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[E] opt doxygen
+
+[V] 0.8.1
+[L] BSD
+
+[D] ca26d9e42194077354172dd2c36798d54c71823ed48142eb59107bd2 libcpuid-0.8.1.tar.gz https://github.com/anrieff/libcpuid/archive/refs/tags/v0.8.1/

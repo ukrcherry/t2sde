@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/zathura-djvu/zathura-djvu.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -17,7 +17,6 @@
 [F] CROSS
 
 [L] ZLIB
-[S] Stable
-[V] 0.2.10
+[V] 2026.02.03
 
-[D] 833dfdde42b6ee7c04692575b5764c049fba8780cbef04d0414aa8dc zathura-djvu-0.2.10.tar.xz https://pwmt.org/projects/zathura-djvu/download/
+[D] 7db9667a5d60eb3f18bd84e939fa4cd1d70140f51798595fa239427a zathura-djvu-2026.02.03.tar.xz https://pwmt.org/projects/zathura-djvu/download/

@@ -1,0 +1,27 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/chafa/chafa.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Terminal graphics for the 21st century
+
+[T] Terminal graphics for the 21st century.
+
+[U] https://hpjansson.org/chafa
+
+[A] Chafa Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[E] opt gtk-doc docbook-xml docbook-xsl
+[E] opt libjxl
+[E] opt libwebp
+
+[L] LGPL3
+[V] 1.18.2
+[P] X -----5---9 700.000
+
+[D] 7e0951db5ef6cd285360f4728dcba22828843de59063d7c2d64aa0d9 chafa-1.18.2.tar.xz https://github.com/hpjansson/chafa/releases/download/1.18.2/

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/htmldoc/htmldoc.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,15 +14,14 @@
 [U] https://www.htmldoc.org
 
 [A] Easy Software Products
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 [F] CROSS
 [E] opt cups
 
 [L] GPL
-[S] Stable
-[V] 1.9.20
+[V] 1.9.23
 [P] X -----5---9 150.000
 
-[D] f084d619d00573137e9557ddbb71fbfdee6af0cae16a5356b6c7e2dd htmldoc-1.9.20-source.tar.gz https://github.com/michaelrsweet/htmldoc/releases/download/v1.9.20/
+[D] 3d911cd8ada0d17f733f2e6bacd6017019dd109d56effb2a9abe1fae htmldoc-1.9.23-source.tar.gz https://github.com/michaelrsweet/htmldoc/releases/download/v1.9.23/

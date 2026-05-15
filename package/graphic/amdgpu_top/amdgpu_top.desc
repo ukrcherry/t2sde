@@ -1,0 +1,24 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/amdgpu_top/amdgpu_top.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Tool to display AMDGPU usage
+
+[T] amdgpu_top is tool that display AMD GPU utilization, like umr or
+[T] clbr/radeontop or intel_gpu_top. The tool displays information gathered
+[T] from performance counters (GRBM, GRBM2), sensors, fdinfo, and AMDGPU driver.
+
+[U] https://github.com/Umio-Yasuno/amdgpu_top
+
+[A] Umio Yasuno
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/graphic
+[F] CROSS
+
+[L] MIT
+[V] 0.11.4
+
+[D] 5a4955cb42e69cced5e28e5bcbf258d48bf810f2e37ee37699da3cc1 amdgpu_top-0.11.4.tar.gz https://github.com/Umio-Yasuno/amdgpu_top/archive/v0.11.4/

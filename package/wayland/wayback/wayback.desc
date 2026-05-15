@@ -1,0 +1,25 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/wayback/wayback.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] X11 compatibility layer for Wayland
+
+[T] Wayback is an X11 compatibility layer which allows for running full X11
+[T] desktop environments using Wayland components. It is intended to eventually
+[T] replace the classic X.Org server, thus reducing maintenance burden of X11
+[T] applications.
+
+[U] https://wayback.freedesktop.org
+
+[A] Ariadne Conill
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/x11
+[F] CROSS
+
+[L] MIT
+[V] 0.3
+
+[D] d0906a82c47beba18ba1c3c7c1fda42d618a6452c6fdad83035583ef wayback-0.3.tar.bz2 https://gitlab.freedesktop.org/wayback/wayback/-/archive/0.3/

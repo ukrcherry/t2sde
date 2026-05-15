@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libkgapi/libkgapi.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -12,16 +12,16 @@
 [U] https://www.kde.org
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 25.04.1
-[P] X -----5---9 162.420
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 26.04.1
+[P] X -----5---9 182.920
 
 [CV-GROUP] kde-gear
-[D] 9cd5ef67a244e9923708585965500f0a57e3996455f4fa30580e42a2 libkgapi-25.04.1.tar.xz https://download.kde.org/stable/release-service/25.04.1/src/
+[D] effbce9cf25db446d505cac701fcb071d23987836a65e5a4df0de39f libkgapi-26.04.1.tar.xz https://download.kde.org/stable/release-service/26.04.1/src/
+
+. $base/package/*/*/kde-conf.in

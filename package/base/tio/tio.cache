@@ -1,0 +1,20 @@
+[TIMESTAMP] 1750546766 Sun Jun 22 00:59:26 2025
+[BUILDTIME] 3 (9)
+[SIZE] 0.19 MB, 8 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] cmake
+[DEP] coreutils
+[DEP] diffutils
+[DEP] gawk
+[DEP] glib
+[DEP] grep
+[DEP] linux-header
+[DEP] lua
+[DEP] meson
+[DEP] ninja
+[DEP] openssl
+[DEP] sed
+[DEP] tar
+[DEP] xz

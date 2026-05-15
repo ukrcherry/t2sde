@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/incidenceeditor/incidenceeditor.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -12,16 +12,16 @@
 [U] https://www.kde.org
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 25.04.1
+[V] 26.04.1
 [P] X -----5---9 162.420
 
-[O] . $base/package/*/*/kde-conf.in
-
 [CV-GROUP] kde-gear
-[D] fbd22d13b45198a65d98d81eedb0044bd44bf03db779f6593a770c91 incidenceeditor-25.04.1.tar.xz https://download.kde.org/stable/release-service/25.04.1/src/
+[D] 1c29198e5805d7cb92b46075a0b2210de3379ae37b3889d242e5593d incidenceeditor-26.04.1.tar.xz https://download.kde.org/stable/release-service/26.04.1/src/
+
+. $base/package/*/*/kde-conf.in

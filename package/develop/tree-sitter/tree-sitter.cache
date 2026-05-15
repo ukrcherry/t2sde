@@ -1,6 +1,6 @@
-[TIMESTAMP] 1737563234 Wed Jan 22 17:27:14 2025
-[BUILDTIME] 2 (9)
-[SIZE] 0.49 MB, 13 files
+[TIMESTAMP] 1776336930 chu 16 abr 2026 12:55:30
+[BUILDTIME] 3 (9)
+[SIZE] 0.53 MB, 14 files
 
 [DEP] bash
 [DEP] binutils
@@ -13,3 +13,4 @@
 [DEP] make
 [DEP] sed
 [DEP] tar
+[DEP] util-linux

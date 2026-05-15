@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/getmail/getmail.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -18,13 +18,12 @@
 [U] https://pyropus.ca/software/getmail/
 
 [A] Charles Cazabon <freshmeat@discworld.dyndns.org>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 6.19.07
+[V] 6.19.12
 
-[D] 63ccadac48b73f86cff5f8b3f016da57e83f8f9635e31e8153017fb0 getmail-6.19.07.tar.gz https://github.com/getmail6/getmail6/archive/v6.19.07/
+[D] 83e89e269faf615dafdb32daf40d3265d4912cb181185f59bd6129de getmail-6.19.12.tar.gz https://github.com/getmail6/getmail6/archive/v6.19.12/

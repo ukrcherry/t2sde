@@ -1,0 +1,28 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/stfl/stfl.desc
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A curses-based widget set for text terminals
+
+[T] A library which implements a curses-based widget set for text
+[T] terminals.
+
+[U] http://www.clairexen.net/stfl/
+
+[A] Claire Xenia Wolf <claire@clairexen.net>
+[M] Koen Vervloesem <koen@vervloesem.eu>
+
+[C] extra/base
+[F] FPIC
+
+[L] LGPL
+[V] 0.24 bbb2404
+[P] X -----5---9 400.000
+
+[D] d33e1f2555b51f9d862a7ab9f84927bade5ad99d89838889c36e2a6d stfl-0.24-bbb2404.zip !https://github.com/newsboat/stfl/archive/bbb2404.zip
+
+var_append makeopt ' ' FOUND_RUBY=0
+var_append makeinstopt ' ' FOUND_RUBY=0
+var_append GCC_WRAPPER_INSERT ' ' -pthread

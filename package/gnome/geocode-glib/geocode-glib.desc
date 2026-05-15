@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/geocode-glib/geocode-glib.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,19 +14,18 @@
 [U] https://ftp.gnome.org/pub/gnome/sources/geocode-glib/3.26/geocode-glib-3.26.1.tar.xz
 
 [A] <ratnikov.ev@gmail.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/shell
 [F] CROSS
 
 [L] GPL
-[S] Stable
 [V] 3.26.4
 [P] X -----5---9 177.200
 
-[O] . $base/package/*/*/gnome-conf.in
-[O] runconf=0
-[O] var_append mesonopt ' ' '-Denable-gtk-doc=false -Dsoup2=false'
-
 [CV-URL] https://download.gnome.org/sources/geocode-glib/cache.json
 [D] 322f4a416aa6a4e42f3158ebffcab6ecc7769edfb013c4285fcdf5ec geocode-glib-3.26.4.tar.xz http://ftp.gnome.org/pub/gnome/sources/geocode-glib/3.26/
+
+. $base/package/*/*/gnome-conf.in
+runconf=0
+var_append mesonopt ' ' '-Denable-gtk-doc=false -Dsoup2=false'

@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libdsme/libdsme.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Libraries for programs that communicate with the Device State Management Entity
+
+[T] Libraries for programs that communicate with the Device State Management Entity.
+
+[U] https://github.com/sailfishos/libdsme
+
+[A] Libdsme Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.67.0
+[L] LGPL
+
+[D] 651993ba5cde9e6d748f2fd4e0fe7c1bb3a918d441049d637019d1f2 libdsme-0.67.0.tar.gz https://github.com/sailfishos/libdsme//archive/0.67.0/

@@ -1,0 +1,27 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/tdeartwork/tdeartwork.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Artworks for the Trinity Desktop Environment
+
+[T] tdeartwork contains additional artworks for the Trinity Desktop Environment
+[T] like themes, screensaver, sounds, wallpapers, widget styles and window
+[T] styles.
+
+[U] https://www.trinitydesktop.org/
+
+[A] Trinity Desktop Developers
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/x11
+[F] OBJDIR
+
+[L] GPL
+[V] 14.1.6
+
+[CV-GROUP] tde
+[D] 9bc6b0dda03a5a04a683d76c465c60ead30f669218fb009dedf99ed3 tdeartwork-trinity-14.1.6.tar.xz https://mirror.ppa.trinitydesktop.org/trinity/releases/R14.1.6/main/core/
+
+. $base/package/*/*/tde-conf.in

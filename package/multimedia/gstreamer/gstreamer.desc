@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gstreamer/gstreamer.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -24,12 +24,25 @@
 [C] extra/multimedia extra/desktop/gnome
 [F] CROSS NO-LTO LATOMIC.arch32
 
+[E] opt gtk+ pango cairo harfbuzz gdk-pixbuf at-spi2-core
 [E] opt rustc
 
 [L] LGPL
-[S] Stable
-[V] 1.26.1
+[V] 1.28.3
 [P] X -----5---9 126.700
 
 [CV-GROUP] gst
-[D] 5c5785972555cba6eb4199f293e4e638f2c70bd7d32242337cd10c23 gstreamer-1.26.1.tar.xz https://gstreamer.freedesktop.org/src/gstreamer/
+[CV-FLAGS] ODD-UNSTABLE
+[D] f2909269854a9893099c86953b530372a172dedc7508ecb2ea8e1a2c gstreamer-1.28.3.tar.xz https://gstreamer.freedesktop.org/src/gstreamer/
+
+#var_append flistrfilter '|' ".*: var/.*/gstreamer-.*/registry.xml"
+
+export GI_SCANNER_DISABLE_CACHE=1
+export PYTHONPYCACHEPREFIX=$builddir/cache
+
+var_append mesonopt ' ' '-Dbash-completion=disabled \
+		-Dpackage-name="GStreamer (T2)" \
+		-Dpackage-origin="https://t2sde.org"'
+
+pkginstalled gobject-introspection && var_append mesonopt ' ' -Dintrospection=enabled
+pkginstalled libcap && var_append mesonopt ' ' -Dptp-helper-permissions=capabilities

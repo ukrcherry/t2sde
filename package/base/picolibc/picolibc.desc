@@ -1,0 +1,25 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/picolibc/picolibc.desc
+# Copyright (C) 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] A C library designed for embedded 32- and 64- bit systems
+
+[T] Picolibc is a library offering standard C library APIs that targets small
+[T] embedded systems with limited RAM. Picolibc was formed by blending code
+[T] from Newlib and AVR Libc.
+
+[U] https://keithp.com/picolibc
+
+[A] Keith Packard <keithp@keithp.com>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/library
+[F] CROSS
+
+[L] OpenSource
+[V] 1.8.11
+[P] O 01---5---9 101.600
+
+[D] 2e344faa5ee706e0327abea17fdfd5354c3784fcfb5ef3e35ea10c82 picolibc-1.8.11.tar.gz https://github.com/picolibc/picolibc/archive/1.8.11/

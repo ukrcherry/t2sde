@@ -1,6 +1,6 @@
-[TIMESTAMP] 1739219769 Mon Feb 10 21:36:09 2025
-[BUILDTIME] 10 (5)
-[SIZE] 0.35 MB, 47 files
+[TIMESTAMP] 1759855642 Tue Oct  7 18:47:22 2025
+[BUILDTIME] 12 (9)
+[SIZE] 0.34 MB, 49 files
 
 [DEP] bash
 [DEP] binutils
@@ -11,11 +11,11 @@
 [DEP] gawk
 [DEP] gettext
 [DEP] grep
+[DEP] kconfig
 [DEP] kcoreaddons
 [DEP] ki18n
 [DEP] linux-header
 [DEP] make
-[DEP] pkgconfig
 [DEP] procps
 [DEP] python
 [DEP] qt6base
@@ -23,6 +23,5 @@
 [DEP] qt6multimedia
 [DEP] sed
 [DEP] tar
-[DEP] tbb
 [DEP] vulkan-headers
 [DEP] xz

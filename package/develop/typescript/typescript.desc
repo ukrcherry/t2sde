@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/typescript/typescript.desc
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A superset of JavaScript that compiles to clean JavaScript output
+
+[T] TypeScript is a language for application-scale JavaScript. TypeScript
+[T] adds optional types to JavaScript that support tools for large-scale
+[T] JavaScript applications for any browser, for any host, on any OS.
+
+[U] https://github.com/microsoft/TypeScript
+
+[A] Microsoft
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/development
+[F] CROSS
+
+[L] APL
+[V] 6.0.3
+
+[D] 07f9ebb6985ff9ce7332a7c39f47be3ad1954b585f359bd92787e3ea TypeScript-6.0.3.tar.gz https://github.com/microsoft/TypeScript/archive/v6.0.3/

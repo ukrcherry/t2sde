@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/zzz/zzz.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Suspend or hibernate your computer
+
+[T] Suspend or hibernate your computer.
+
+[U] https://github.com/jirutka/zzz
+
+[A] Zzz Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[L] MIT
+[V] 0.2.0
+
+[D] 11a2e2501353b492f1631f74a06a907799393dbbe64d1e510265126d zzz-0.2.0.tar.gz https://github.com/jirutka/zzz/archive/v0.2.0/

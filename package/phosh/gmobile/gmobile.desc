@@ -1,0 +1,22 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/gmobile/gmobile.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Functions useful in mobile related, glib based projects
+
+[T] gmobile carries some helpers for glib based environments on mobile devices.
+
+[U] https://phosh.mobi/
+
+[A] Phosh Devs
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] GPL3
+[V] 0.7.1
+
+[D] 777549abc3cd09c3c52b5e03f76d42c0c36e4064d16b685db4c1c2c4 gmobile-v0.7.1.tar.bz2 https://gitlab.gnome.org/World/Phosh/gmobile/-/archive/v0.7.1/

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/qt6activeqt/qt6activeqt.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,17 +11,15 @@
 [U] https://qt.io
 
 [A] Trolltech AS <www.trolltech.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
-[F] CROSS NO-LTO.gcc
+[F] CROSS OBJDIR
 
 [L] LGPL
-[S] Stable
-[V] 6.9.0
-[P] X -----5---9 127.000
-
-[O] [ $prefix_auto = 1 ] && prefix=$(pkgprefix qt6base) && set_confopt
+[V] 6.11.1
 
 [CV-GROUP] qt6
-[D] 341fdcd1ec2ec0184e911f1e7498a7b688a7316ccd329336ddf9665d qtactiveqt-everywhere-src-6.9.0.tar.xz http://download.qt.io/official_releases/qt/6.9/6.9.0/submodules/
+[D] 0c9d9d90143161739bc67788685a6127a1c42a2c4b38f0bb7d8abc58 qtactiveqt-everywhere-src-6.11.1.tar.xz http://download.qt.io/official_releases/qt/6.11/6.11.1/submodules/
+
+. $base/package/*/*/qt6-conf.in

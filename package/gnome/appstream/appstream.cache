@@ -1,8 +1,9 @@
-[TIMESTAMP] 1738962275 Fri Feb  7 22:04:35 2025
-[BUILDTIME] 10 (9)
-[SIZE] 3.69 MB, 112 files
+[TIMESTAMP] 1760305842 Sun Oct 12 23:50:42 2025
+[BUILDTIME] 16 (9)
+[SIZE] 5.33 MB, 115 files
 
 [DEP] bash
+[OPT] bash-completion
 [DEP] binutils
 [DEP] coreutils
 [DEP] curl
@@ -10,17 +11,19 @@
 [DEP] gawk
 [DEP] gettext
 [OPT] glib
+[OPT] gobject-introspection
 [DEP] gperf
 [DEP] grep
 [DEP] itstool
+[DEP] libfyaml
 [OPT] libstemmer
 [DEP] libxml
 [DEP] libxmlb
-[DEP] libyaml
 [DEP] linux-header
 [DEP] meson
 [DEP] ninja
 [DEP] openssl
+[DEP] python
 [DEP] sed
 [OPT] systemd
 [DEP] tar

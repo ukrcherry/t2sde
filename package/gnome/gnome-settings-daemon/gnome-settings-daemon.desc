@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gnome-settings-daemon/gnome-settings-daemon.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,16 +11,16 @@
 [U] https://www.gnome.org
 
 [A] The GNOME Project <gnome-devel-list@gnome.org>
-[M] Aldas Nabazas <aldas@t2-project.org>
+[M] Aldas Nabazas <baldzius@gmail.com>
 
 [C] extra/base extra/desktop/gnome
 
 [L] LGPL
-[S] Stable
-[V] 48.1
+[V] 50.1
 [P] X -----5---9 185.400
 
-[O] . $base/package/*/*/gnome-conf.in
-
 [CV-URL] https://download.gnome.org/sources/gnome-settings-daemon/cache.json
-[D] c679640633429aae6e6490fad14cb8ebd80179b92c8314857718ec3e gnome-settings-daemon-48.1.tar.xz https://download.gnome.org/sources/gnome-settings-daemon/48/
+[D] 3d94cf98573bbb39cdb7cc9c47f14f3e4f99edd9ede0fe17666c23f7 gnome-settings-daemon-50.1.tar.xz https://download.gnome.org/sources/gnome-settings-daemon/50/
+
+. $base/package/*/*/gnome-conf.in
+pkginstalled systemd || var_append mesonopt ' ' -Dsystemd=false

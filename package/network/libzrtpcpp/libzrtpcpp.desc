@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libzrtpcpp/libzrtpcpp.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,13 +14,14 @@
 [U] https://www.gnu.org/software/ccrtp/
 
 [A] Werner Dittman <Werner.Dittmann@t-online.de>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network
 [F] CROSS
 
 [L] GPL
-[S] Beta
-[V] 2.3.4
+[V] 4.7.0
 
-[D] a7c5372691e409ab05d3fc7538bfa7c72dfe299a7174f45b8d01f08a libzrtpcpp-2.3.4.tar.gz http://ftp.gnu.org/gnu/ccrtp/
+[D] 90055663978bf8ce97fc367bcfcf7ff73a37c98dac9e9b826a4b8f5c libzrtpcpp-4.7.0.tar.gz https://github.com/wernerd/ZRTPCPP/archive/4.7.0/
+
+var_append cmakeopt ' ' -DCMAKE_POLICY_VERSION_MINIMUM=3.5

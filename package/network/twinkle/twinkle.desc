@@ -1,0 +1,33 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/twinkle/twinkle.desc
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A SIP software phone
+
+[T] Twinkle is a software phone for voice over IP communications using the SIP
+[T] protocol. You can use it for direct IP phone to IP phone communication, or
+[T] in a network using a SIP proxy to route your calls. Some of the features
+[T] offered are call waiting, call hold, 3-way conference call, call transfer,
+[T] and call reject. It supports STUN or a statically configured public
+[T] IP address for NAT traversal. When using STUN, it will send keep-alive
+[T] packets to keep NAT bindings alive. It supports ZRTP for secure voice
+[T] communication.
+
+[U] http://twinkle.dolezel.info/
+
+[A] Michel <michel@twinklephone.com>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/network
+[F] CROSS OBJDIR
+
+[L] GPL
+[V] 1.10.3
+
+[D] 0c53b0ccaf8bebcbc0976dfa5158d1b18310a94959badce7110a239b twinkle-1.10.3.tar.gz https://github.com/LubosD/twinkle/archive/v1.10.3/
+
+. $base/package/*/*/kde-conf.in
+
+var_append cmakeopt ' ' -DCMAKE_POLICY_VERSION_MINIMUM=3.5

@@ -1,11 +1,11 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/knewstuff/knewstuff.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
-[I] KDE Frameworks 5 Tier 3 module for downloading application assets
+[I] KDE Frameworks module for downloading application assets
 
 [T] The KNewStuff library implements collaborative data sharing for
 [T] applications. It uses libattica to support the Open Collaboration Services
@@ -14,16 +14,16 @@
 [U] https://www.kde.org
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 6.14.0
+[V] 6.26.0
 [P] X -----5---9 200.200
 
-[O] . $base/package/*/*/kde-conf.in
-
 [CV-GROUP] kde-frameworks
-[D] 23c2a7d570d816e668876437f0dbdb7d321f702864a8e17b29e1db5b knewstuff-6.14.0.tar.xz https://download.kde.org/stable/frameworks/6.14/
+[D] ae198e656456fc5ce7e2a8c4d7fddc823d9c79bfeb1d9974a121572b knewstuff-6.26.0.tar.xz https://download.kde.org/stable/frameworks/6.26/
+
+. $base/package/*/*/kde-conf.in

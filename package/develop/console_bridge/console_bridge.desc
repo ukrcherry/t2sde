@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/console_bridge/console_bridge.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Logging that seamlessly pipes into rosconsole/rosout for ROS-dependent packages
+
+[T] Logging that seamlessly pipes into rosconsole/rosout for ROS-dependent packages.
+
+[U] https://github.com/ros/console_bridge
+
+[A] Console_bridge Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.0.2
+[L] BSD
+
+[D] 7823b4313de55d2af81b82c3d612d3cf6cff15c1a58201105b27cdf6 console_bridge-1.0.2.tar.gz https://github.com/ros/console_bridge/archive/1.0.2/

@@ -1,0 +1,23 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/libx86/lheader.patch
+# Copyright (C) 2009 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0 or patched project license
+# --- T2-COPYRIGHT-END ---
+
+diff -Nur libx86-1.1-orig/lrmi.c libx86-1.1/lrmi.c
+--- libx86-1.1-orig/lrmi.c	2009-09-29 16:34:06.000000000 +0000
++++ libx86-1.1/lrmi.c	2009-09-29 16:34:52.000000000 +0000
+@@ -54,6 +54,13 @@
+ #include "lrmi.h"
+ #include "x86-common.h"
+ 
++#if defined(__linux__) && !defined(TF_MASK)
++	#define TF_MASK X86_EFLAGS_TF
++	#define IF_MASK X86_EFLAGS_IF
++	#define VIF_MASK X86_EFLAGS_VIF
++	#define IOPL_MASK X86_EFLAGS_IOPL
++#endif
++
+ #if defined(__linux__)
+ #define DEFAULT_VM86_FLAGS 	(IF_MASK | IOPL_MASK)
+ #elif defined(__NetBSD__) || defined(__FreeBSD__)

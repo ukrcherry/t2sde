@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/mercury/mercury.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Compiler for the Mercury language
+
+[T] Compiler for the Mercury language.
+
+[U] https://www.mercurylang.org
+
+[A] Mercury Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 22.01.8
+[L] GPL
+
+[D] 70b6a8498fa457f9b0696567c2f3071b03f16068d03ca9267ac1d4ab mercury-srcdist-22.01.8.tar.xz http://dl.mercurylang.org/release/

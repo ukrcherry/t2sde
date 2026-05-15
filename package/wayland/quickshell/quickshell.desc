@@ -1,0 +1,32 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/quickshell/quickshell.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Flexible toolkit for making desktop shells
+
+[T] Flexible toolkit for making desktop shells with QtQuick, for Wayland and X11.
+
+[U] https://github.com/quickshell-mirror/quickshell
+
+[A] outfoxxed
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS OBJDIR
+
+[L] LGPL3
+[V] 0.3.0
+
+[D] 32520d5878e72aec3968e6e54937807f08bf506e7d25995fc0f91013 quickshell-v0.3.0.tar.gz !https://git.outfoxxed.me/quickshell/quickshell/archive/v0.3.0.tar.gz
+
+var_append cmakeopt ' ' -GNinja
+var_append cmakeopt ' ' -DCRASH_REPORTER=OFF
+pkginstalled libxcb && var_append GCC_WRAPPER_APPEND ' ' "-I$root/$(pkgprefix includedir libxcb)"
+
+pkginstalled jemalloc || var_append cmakeopt ' ' -DUSE_JEMALLOC=OFF
+pkginstalled hyprland || var_append cmakeopt ' ' -DHYPRLAND=OFF
+pkginstalled i3 || var_append cmakeopt ' ' -DI3=OFF
+pkginstalled libx11 || var_append cmakeopt ' ' -DX11=OFF
+pkginstalled wayland || var_append cmakeopt ' ' -DWAYLAND=OFF

@@ -1,0 +1,25 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/hexyl/hexyl.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] A command-line hex viewer
+
+[T] hexyl is a hex viewer for the terminal. It uses a colored output to
+[T] distinguish different categories of bytes (NULL bytes, printable ASCII
+[T] characters, ASCII whitespace characters, other ASCII characters and
+[T] non-ASCII).
+
+[U] https://github.com/sharkdp/hexyl
+
+[A] hexyl Developers
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] APL
+[V] 0.17.0
+
+[D] aea3784ab50faad2321822e56b07086f34b118648173a1f13b801046 hexyl-0.17.0.tar.gz https://github.com/sharkdp/hexyl/archive/v0.17.0/

@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/muon/muon.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A meson-compatible build system
+
+[T] A meson-compatible build system.
+
+[U] https://muon.build
+
+[A] Muon Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 0.6.0
+[L] GPL3 APL
+
+[D] bcbd2fe0df1d38a9947b8000a42df402d7ebc5e91def66be5bb8d40b muon-v0.6.0.tar.gz https://muon.build/releases/v0.6.0/
+#TODO: fill subprojects
+#[D] c56d60ea3db36526043ebb0537c6bbff929fb0da6ef650a608d75890 meson-docs-0.63.0-40-g280f3423b.tar.gz https://mochiro.moe/wrap/

@@ -1,26 +1,19 @@
+[TIMESTAMP] 1760541396 Wed Oct 15 17:16:36 2025
+[BUILDTIME] 100 (9)
+[SIZE] 9.27 MB, 308 files
 
-[TIMESTAMP] 1280313938 Wed Jul 28 10:45:38 2010
-[BUILDTIME] 90 (5)
-[SIZE] 6.17 MB, 282 files
-
-[DEP] 00-dirtree
+[DEP] bash
 [DEP] binutils
-[DEP] clucene
 [DEP] coreutils
 [DEP] curl
 [DEP] diffutils
-[DEP] file
 [DEP] findutils
 [DEP] gawk
 [DEP] grep
+[DEP] gzip
 [DEP] icu4c
-[DEP] libidn
 [DEP] linux-header
 [DEP] make
-[DEP] ncurses
-[DEP] openssl
-[DEP] pkgconfig
 [DEP] sed
-[DEP] sysfiles
 [DEP] tar
-[DEP] zlib
+[DEP] xapian-core

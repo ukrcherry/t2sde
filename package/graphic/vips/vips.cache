@@ -1,6 +1,6 @@
-[TIMESTAMP] 1743022217 Wed Mar 26 21:50:17 2025
+[TIMESTAMP] 1760442977 Tue Oct 14 13:56:17 2025
 [BUILDTIME] 55 (9)
-[SIZE] 5.45 MB, 87 files
+[SIZE] 5.75 MB, 84 files
 
 [DEP] bash
 [DEP] binutils
@@ -9,6 +9,7 @@
 [DEP] coreutils
 [DEP] diffutils
 [DEP] expat
+[DEP] fftw3
 [DEP] fontconfig
 [DEP] freetype
 [DEP] gawk
@@ -20,8 +21,8 @@
 [DEP] gzip
 [DEP] harfbuzz
 [DEP] highway
-[DEP] imagemagick
 [DEP] lcms2
+[DEP] libarchive
 [DEP] libexif
 [OPT] libheif
 [DEP] libjpeg

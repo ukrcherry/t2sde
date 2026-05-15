@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/pearpc/pearpc.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,15 +13,14 @@
 [U] https://pearpc.sf.net
 
 [A] seppel <sb@biallas.net>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/emulator
 [F] CROSS
 
 [L] GPL
-[S] Beta
 [V] 0.5
 
-[O] hook_add postmake 5 "cp ppccfg.example $root$docdir/"
+[D] 770b33b5bfe7a08549a78bdada88e8b544992da8bbc52696a55f38df pearpc-0.5.tar.bz2 https://prdownloads.sourceforge.net/sourceforge/pearpc/
 
-[D] 770b33b5bfe7a08549a78bdada88e8b544992da8bbc52696a55f38df pearpc-0.5.tar.bz2 http://dl.sourceforge.net/sourceforge/pearpc/
+hook_add postmake 5 "cp ppccfg.example $root$docdir/"

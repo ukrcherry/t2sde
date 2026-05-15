@@ -1,0 +1,23 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/phosh/phosh.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] A Wayland shell for GNOME on mobile devices
+
+[T] A Wayland shell for GNOME on mobile devices. For a matching compositor see
+[T] phoc. For an on screen keyboard see squeekboard.
+
+[U] https://phosh.mobi/
+
+[A] Phosh Devs
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] GPL3
+[V] 0.54.0
+
+[D] cdc45a695369e195327bf3f14dc803f91233cac3d6f6fe1be0a3e47c phosh-v0.54.0.tar.bz2 https://gitlab.gnome.org/World/Phosh/phosh/-/archive/v0.54.0/

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/yaf-splash/yaf-splash.desc
-[COPY] Copyright (C) 2014 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2014 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,14 +15,21 @@
 [U] https://www.nongnu.org/yaf-splash/
 
 [A] John Morton
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 
 [L] GPL
-[S] Stable
 [V] 1.02
 
-#source no longer hosted by author, get from here:
+[D] cb7ede431cc2ec08b8a723dcb38953c278f9e76fc80f34b96ad8c881 yaf-splash-1.02.tar.gz https://ftp.icm.edu.pl/pub/Linux/dist/sunsite-distributions/fatdog/source/900/
 
-[D] 6e69f94975dbc45035c555359bfd004270d13b7f32bbcd5252279dd6 yaf-splash-1.02.tar.bz2 http://distro.ibiblio.org/quirky/quirky6/sources/t2/april/
+var_append confopt ' ' "--x-libraries=`pkgprefix libdir libx11`--x-includes=`pkgprefix includedir libx11`"
+var_append GCC_WRAPPER_APPEND ' ' -L$root$(pkgprefix libdir libx11)
+hook_add preconf 5 'rm -f yaf-splash'
+
+makeinstopt=
+ys_set_dest() {
+	install -m755 -s yaf-splash $root/usr/X11R7/bin
+}
+hook_add postmake 6 ys_set_dest

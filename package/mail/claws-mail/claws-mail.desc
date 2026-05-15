@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/claws-mail/claws-mail.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -18,15 +18,31 @@
 [U] https://www.claws-mail.org/
 
 [A] The Claws Mail Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office
 
 [L] GPL
-[S] Stable
-[V] 4.3.1
+[V] 4.4.0
 [P] X -----5---9 174.000
 
-[O] . $base/package/*/*/gnome-conf.in
+[D] ea087b862e669bdec23186cacaa921d1c21027cdb8e5bb267a39038a claws-mail-4.4.0.tar.xz https://www.claws-mail.org/download.php?file=releases/
 
-[D] 5a7adee623411208f3b50b7b4d6685c18dd03951aa715fb8170880f7 claws-mail-4.3.1.tar.xz https://www.claws-mail.org/download.php?file=releases/
+. $base/package/*/*/gnome-conf.in
+
+if pkginstalled openldap; then
+	pkgprefix -t openldap
+	LDAPLIBS="$root/$(pkgprefix libdir openldap)"
+	LDAPINCS="$root/$(pkgprefix includedir openldap)"
+
+	var_append GCC_WRAPPER_APPEND ' ' -I$LDAPINCS
+	var_append GCC_WRAPPER_APPEND ' ' -L$LDAPLIBS
+
+	var_append CPP_WRAPPER_APPEND ' ' -I$LDAPINCS
+	var_append CPP_WRAPPER_APPEND ' ' -L$LDAPLIBS
+fi
+
+if pkginstalled clamav; then
+	pkgprefix -t clamav
+	var_append GCC_WRAPPER_APPEND ' ' "`pkg-config libclamav --cflags`"
+fi

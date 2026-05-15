@@ -1,16 +1,16 @@
-[TIMESTAMP] 1737923385 Sun Jan 26 21:29:45 2025
-[BUILDTIME] 10550 (9)
-[SIZE] 111.90 MB, 176 files
+[TIMESTAMP] 1760358705 Mon Oct 13 14:31:45 2025
+[BUILDTIME] 10850 (9)
+[SIZE] 127.00 MB, 179 files
 
-[DEP] asciidoctor
 [DEP] bash
 [DEP] binutils
 [DEP] cairo
 [DEP] cmake
 [DEP] coreutils
 [DEP] diffutils
-[DEP] ecasound
 [DEP] epoxy
+[DEP] expat
+[OPT] flite
 [DEP] fontconfig
 [DEP] freetype
 [DEP] gawk
@@ -21,7 +21,7 @@
 [DEP] gperf
 [DEP] graphene
 [DEP] grep
-[DEP] gst-plugins-base
+[OPT] gst-plugins-base
 [DEP] gstreamer
 [OPT] gstreamer-webrtc
 [OPT] gtk
@@ -38,7 +38,7 @@
 [DEP] libpng
 [DEP] libsoup3
 [DEP] libtasn1
-[OPT] libwebp
+[DEP] libwebp
 [DEP] libx11
 [DEP] libxml
 [DEP] libxslt
@@ -56,9 +56,8 @@
 [DEP] sed
 [DEP] setuptools
 [DEP] sqlite
+[OPT] sysprof
 [DEP] tar
-[DEP] tbb
-[DEP] unifdef
 [DEP] xorgproto
 [DEP] xz
 [DEP] zlib

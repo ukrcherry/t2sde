@@ -1,0 +1,41 @@
+[TIMESTAMP] 1774826057 Mon Mar 30 01:14:17 2026
+[BUILDTIME] 320 (9)
+[SIZE] 18.81 MB, 502 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] cairo
+[DEP] cmake
+[DEP] coreutils
+[DEP] diffutils
+[DEP] enchant
+[DEP] expat
+[DEP] extra-cmake-modules
+[DEP] gawk
+[DEP] gdk-pixbuf
+[DEP] gettext
+[DEP] glib
+[DEP] grep
+[DEP] gzip
+[DEP] harfbuzz
+[DEP] libxcb
+[DEP] libxkbfile
+[DEP] linux-header
+[DEP] make
+[DEP] nlohmann-json
+[DEP] openssl
+[DEP] pango
+[DEP] pkgconfig
+[DEP] sed
+[OPT] systemd
+[DEP] tar
+[DEP] util-linux
+[DEP] wayland
+[DEP] wayland-protocols
+[DEP] xcb-imdkit
+[DEP] xcb-util
+[DEP] xcb-util-keysyms
+[DEP] xcb-util-wm
+[DEP] xkbcommon
+[DEP] xorgproto
+[DEP] zlib

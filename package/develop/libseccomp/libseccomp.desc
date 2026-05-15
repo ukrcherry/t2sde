@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libseccomp/libseccomp.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,13 +14,12 @@
 [U] https://github.com/seccomp/libseccomp
 
 [A] Paul Moore <paul@paul-moore.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [F] CROSS NO-LTO.gcc
 
 [L] GPL
-[S] Stable
 [V] 2.6.0
 [P] X -----5---9 177.000
 

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/awesome-ttf-fonts/awesome-ttf-fonts.desc
-[COPY] Copyright (C) 2021 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2021 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -18,7 +18,13 @@
 [F] CROSS
 
 [L] OpenSource
-[S] Stable
-[V] 6.7.2
+[V] 7.2.0
 
-[D] 13cfb2f0e010bca81eae868641bc191b035934a0f88689b19c1776e1 awesome-ttf-fonts-6.7.2.tar.gz https://github.com/FortAwesome/Font-Awesome/archive/6.7.2/
+[D] 65cdbd516364f68a8a974469bff9567135c5092b58a173d4dd3573d5 awesome-ttf-fonts-7.2.0.tar.gz https://github.com/FortAwesome/Font-Awesome/archive/7.2.0/
+
+runmake=0
+
+aw_inst() {
+	cp -fv webfonts/*.ttf otfs/*.otf $root$datadir/fonts/
+}
+hook_add postmake 5 aw_inst

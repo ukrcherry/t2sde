@@ -1,24 +1,23 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/lxqt-panel/lxqt-panel.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
 [I] The LXQt desktop panel
 
-[T] The LXQt desktop panel.
+[T] lxqt-panel represents the taskbar of LXQt.
 
 [U] https://github.com/lxqt/lxqt-panel
 
 [A] Lxqt-panel Authors
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/base
 [F] OBJDIR
 
-[V] 2.2.0
 [L] LGPL
-[S] Stable
+[V] 2.4.0
 
 [CV-GROUP] lxqt
-[D] ef2eba61fd85e76547d047427be96cc4326db9e0f7d5a607ea3c3df4 lxqt-panel-2.2.0.tar.xz https://github.com/lxqt/lxqt-panel/releases/download/2.2.0/
+[D] 035d907bfda44b106a29264433ead679173fd4dfd34d54a8a5701fff lxqt-panel-2.4.0.tar.xz https://github.com/lxqt/lxqt-panel/releases/download/2.4.0/

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/ddnet/ddnet.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -16,18 +16,17 @@
 [U] https://ddnet.org
 
 [A] ddnet.org
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/game
 
 [E] opt libopus
 
 [L] ZLIB
-[S] Stable
-[V] 19.2
+[V] 19.8.3
 
-[O] runcargo=0
-[O] var_append CXX_WRAPPER_INSERT ' ' "-I$root$(pkgprefix includedir libx11)"
-[O] var_append CXX_WRAPPER_INSERT ' ' "-L$root$(pkgprefix libdir glib)"
+[D] ce4d72e5afc348f287d4f0f7f92c4626fc579fc90e75dd51de080b67 ddnet-19.8.3.tar.gz https://github.com/ddnet/ddnet/archive/refs/tags/19.8.3/
 
-[D] 6966abbebac872c80dad7df6322c1762e63f65b64f6d74598bc4b076 ddnet-19.2.tar.gz https://github.com/ddnet/ddnet/archive/refs/tags/19.2/
+runcargo=0
+var_append CXX_WRAPPER_INSERT ' ' "-I$root$(pkgprefix includedir libx11)"
+var_append CXX_WRAPPER_INSERT ' ' "-L$root$(pkgprefix libdir glib)"

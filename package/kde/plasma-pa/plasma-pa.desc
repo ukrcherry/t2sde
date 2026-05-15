@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/plasma-pa/plasma-pa.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,18 +11,20 @@
 [U] https://www.kde.org
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
-[E] opt kdoctools
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 6.3.5
-[P] X -----5---9 162.420
-
-[O] . $base/package/*/*/kde-conf.in
-[O] var_append GCC_WRAPPER_APPEND ' ' "$(pkg-config --cflags libcanberra)"
+[V] 6.6.5
 
 [CV-GROUP] kde-plasma
-[D] e6cb53346374f4da9fc3bfe88b340f358b016f1328c841044bb725dd plasma-pa-6.3.5.tar.xz https://download.kde.org/stable/plasma/6.3.5/
+[D] b9c6c8158ad4c30330942488e647a961482049d4872c94fda4baf8ff plasma-pa-6.6.5.tar.xz https://download.kde.org/stable/plasma/6.6.5/
+
+. $base/package/*/*/kde-conf.in
+
+atstage cross && var_append CXX_WRAPPER_APPEND ' ' "-L$root$(pkgprefix libdir glib)"
+var_append GCC_WRAPPER_APPEND ' ' "$(pkg-config --cflags libcanberra)"
+
+pkginstalled kdoctools docbook-xml docbook-xsl || var_append cmakeopt ' ' -DBUILD_DOC=OFF

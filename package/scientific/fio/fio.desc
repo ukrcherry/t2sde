@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/fio/fio.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Flexible I/O Tester
+
+[T] Flexible I/O Tester.
+
+[U] https://github.com/axboe/fio
+
+[A] Fio Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS NO-LTO.clang
+
+[V] 3.42
+[L] GPL
+
+[D] 696a5bfb2c133e5dd8f499d063ba0b11ce1ccb7574c4bce9a8898da7 fio-3.42.tar.gz https://github.com/axboe/fio/archive/fio-3.42/
+
+var_append confopt ' ' --disable-libnfs

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/plasma-vault/plasma-vault.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,17 +11,15 @@
 [U] https://www.kde.org
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
-[F] OBJDIR
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 6.3.5
-[P] X -----5---9 162.420
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 6.6.5
 
 [CV-GROUP] kde-plasma
-[D] 5bfa6c8f4800c870e39ab7722b9a3cc04dc2e838a361405bf4118ca0 plasma-vault-6.3.5.tar.xz https://download.kde.org/stable/plasma/6.3.5/
+[D] 0571fec25bbbd29aa494d7b39130ffca1350958e3fec089fd15090c3 plasma-vault-6.6.5.tar.xz https://download.kde.org/stable/plasma/6.6.5/
+
+. $base/package/*/*/kde-conf.in

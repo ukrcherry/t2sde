@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/bat/bat.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,12 +13,11 @@
 [U] https://github.com/sharkdp/bat
 
 [A] bat-developers
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 
-[V] 0.25.0
 [L] APL MIT
-[S] Stable
+[V] 0.26.1
 
-[D] 5dd1d15a0678fc265127299915596f5c383efcd3445d490c9b7d69f6 bat-0.25.0.tar.gz https://github.com/sharkdp/bat/archive/refs/tags/v0.25.0/
+[D] a1217ce2885119cb18efa8a201a444bd9428c201910e9ff5ea9b245e bat-0.26.1.tar.gz https://github.com/sharkdp/bat/archive/refs/tags/v0.26.1/

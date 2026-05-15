@@ -1,6 +1,6 @@
-[TIMESTAMP] 1744917613 Thu Apr 17 21:20:13 2025
-[BUILDTIME] 145 (9)
-[SIZE] 31.48 MB, 836 files
+[TIMESTAMP] 1773347507 Thu Mar 12 21:31:47 2026
+[BUILDTIME] 385 (9)
+[SIZE] 36.73 MB, 841 files
 
 [DEP] bash
 [DEP] binutils
@@ -13,11 +13,13 @@
 [DEP] fontconfig
 [DEP] freetype
 [DEP] gawk
+[OPT] ghostscript
 [DEP] glib
 [OPT] graphviz
 [DEP] grep
 [DEP] harfbuzz
 [OPT] ilmbase
+[OPT] jbigkit
 [OPT] lcms2
 [OPT] libheif
 [OPT] libjpeg
@@ -37,9 +39,10 @@
 [OPT] openjpeg
 [DEP] pango
 [OPT] perl
+[DEP] pkgconfig
 [DEP] sed
 [DEP] tar
-[DEP] tbb
+[DEP] util-linux
 [OPT] xorgproto
 [DEP] xz
 [DEP] zlib

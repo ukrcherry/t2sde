@@ -1,6 +1,6 @@
-[TIMESTAMP] 1739138483 Sun Feb  9 23:01:23 2025
-[BUILDTIME] 8 (5)
-[SIZE] 0.86 MB, 68 files
+[TIMESTAMP] 1776498151 Sat Apr 18 09:42:31 2026
+[BUILDTIME] 12 (9)
+[SIZE] 0.99 MB, 79 files
 
 [DEP] bash
 [DEP] binutils
@@ -9,9 +9,10 @@
 [DEP] coreutils
 [DEP] curl
 [DEP] diffutils
+[DEP] findutils
 [DEP] gawk
+[DEP] gdk-pixbuf
 [DEP] gettext
-[DEP] git
 [DEP] glib
 [DEP] grep
 [DEP] gzip
@@ -19,7 +20,7 @@
 [DEP] libdrm
 [DEP] libinput
 [DEP] libpng
-[DEP] libxcb
+[OPT] librsvg
 [DEP] libxml
 [DEP] linux-header
 [DEP] meson
@@ -27,11 +28,12 @@
 [DEP] openssl
 [DEP] pango
 [DEP] pixman
+[DEP] python
 [DEP] sed
 [DEP] tar
 [DEP] udev
+[DEP] util-linux
 [DEP] wayland
 [DEP] wayland-protocols
 [DEP] wlroots
-[DEP] xcb-util-wm
 [DEP] xkbcommon

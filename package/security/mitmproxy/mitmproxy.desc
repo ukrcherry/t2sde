@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/mitmproxy/mitmproxy.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Interactive TLS-capable intercepting HTTP proxy
+
+[T] Interactive TLS-capable intercepting HTTP proxy.
+
+[U] https://mitmproxy.org/
+
+[A] Mitmproxy Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 12.2.3
+[L] MIT
+
+[D] d13cd14114a3be979f2f15ce5d95922fc13d1bfc537d5e91acad9303 mitmproxy-v12.2.3.tar.gz https://github.com/mitmproxy/mitmproxy/archive/v12.2.3/

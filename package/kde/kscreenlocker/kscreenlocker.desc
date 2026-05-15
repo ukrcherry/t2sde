@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/kscreenlocker/kscreenlocker.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -13,16 +13,16 @@
 [U] https://invent.kde.org/plasma/kscreenlocker
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 6.3.5
-[P] X -----5---9 162.900
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 6.6.5
+[P] X -----5---9 200.020
 
 [CV-GROUP] kde-plasma
-[D] 02c44c28c2559fe25fd8fd6d4f5bbbf184a13f1c5856358c82dfd1a8 kscreenlocker-6.3.5.tar.xz https://download.kde.org/stable/plasma/6.3.5/
+[D] 8394cd1e2e0797b7aecd0e926e7fe824b2bc4c6f504e5f2b238fd002 kscreenlocker-6.6.5.tar.xz https://download.kde.org/stable/plasma/6.6.5/
+
+. $base/package/*/*/kde-conf.in

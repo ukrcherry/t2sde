@@ -1,0 +1,31 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/embree/embree.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] High Performance Ray Tracing Kernels
+
+[T] Embree is a high-performance ray tracing library developed at Intel
+[T] which supports x86 and ARM CPUs; as well as Intel Arc GPUs.
+
+[U] https://www.embree.org/
+
+[A] Intel
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS NO-LTO
+
+[V] 4.4.1
+[L] APL
+[P] X -----5---9 300.500
+
+[D] 10dbaa1291d70f1523b14e986de3ab6f9008b75eb5fd4f1a686b0047 embree-4.4.1.tar.gz https://github.com/embree/embree/archive/v4.4.1/
+
+[ "$SDECFG_STATIC" = 1 ] &&
+	var_append cmakeopt ' ' '-DEMBREE_STATIC_LIB=ON -DBUILD_SHARED_LIBS=OFF' ||
+	var_append cmakeopt ' ' '-DEMBREE_STATIC_LIB=OFF -DBUILD_SHARED_LIBS=ON'
+var_append cmakeopt ' ' -DEMBREE_TUTORIALS=OFF
+pkginstalled ispc && var_append cmakeopt ' ' -DEMBREE_ISPC_SUPPORT=ON
+var_append cmakeopt ' ' -DEMBREE_MAX_ISA=AVX512SKX -DEMBREE_RAY_MASK=ON'

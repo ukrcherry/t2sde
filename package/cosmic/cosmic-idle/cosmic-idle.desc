@@ -1,26 +1,26 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/cosmic-idle/cosmic-idle.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
-[I] cosmic-idle
+[I] Timer to blank the screen/lock the session in the COSMIC desktop environment
 
-[T] cosmic-idle.
+[T] Timer to blank the screen/lock the session in the COSMIC desktop
+[T] environment.
 
 [U] https://github.com/pop-os/cosmic-idle/
 
 [A] System76 <info@system76.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 [F] CROSS
 
 [L] GPL3
-[S] Alpha
-[V] epoch-1.0.0-alpha.7
-
-[O] . $base/package/cosmic/*/cosmic-conf.in
+[V] 1.0.13
 
 [CV-GROUP] cosmic-desktop
-[D] 62381fc76eb736c72ec7202d3cfec5c885c9ce01c1642c61e59d2e9d cosmic-idle-epoch-1.0.0-alpha.7.tar.gz https://github.com/pop-os/cosmic-idle/archive/epoch-1.0.0-alpha.7/
+[D] 281a7733fb5b6f513941fc7f356736c18b73ee7019a8df980c7a535f cosmic-idle-epoch-1.0.13.tar.gz https://github.com/pop-os/cosmic-idle/archive/epoch-1.0.13/
+
+. $base/package/cosmic/*/cosmic-conf.in

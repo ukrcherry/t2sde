@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xfce4-eyes-plugin/xfce4-eyes-plugin.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,14 +13,13 @@
 [A] Benedikt Meurer <benedikt.meurer@unix-ag.uni-siegen.de>
 [A] Danny Milosavljevic <danny_milo@yahoo.com>
 [A] Nick Schermer <nick@xfce.org>
-[M] Johan <linuxmasterjedi@free.fr>
+[M] Johan Boyé <linuxmasterjedi@free.fr>
 
 [C] extra/desktop/xfce
 [F] CROSS
 [L] BSD
-[S] Beta
-[V] 4.6.2
+[V] 4.7.0
 
-[O] . $base/package/xfce4/*/xfce4-conf.in
+[D] f4d4f20268440e352369c332b0d74072fda2177468b4a3387275493c xfce4-eyes-plugin-4.7.0.tar.xz https://archive.xfce.org/src/panel-plugins/xfce4-eyes-plugin/4.7/
 
-[D] 8ab834152ecfccb2790a3d308af359015ca435e7b3cf92b598ad45be xfce4-eyes-plugin-4.6.2.tar.bz2 https://archive.xfce.org/src/panel-plugins/xfce4-eyes-plugin/4.6/
+. $base/package/xfce4/*/xfce4-conf.in

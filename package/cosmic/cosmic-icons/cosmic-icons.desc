@@ -1,12 +1,12 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/cosmic-icons/cosmic-icons.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
-[I] cosmic-icons
+[I] Icons for the COSMIC desktop environment
 
-[T] cosmic-icons.
+[T] Icons for the COSMIC desktop environment.
 
 [U] https://github.com/pop-os/cosmic-icons/
 
@@ -17,11 +17,9 @@
 [F] CROSS
 
 [L] GPL3
-[S] Alpha
-[V] epoch-1.0.0-alpha.7
-[P] X -----5---9 148.000
-
-[O] . $base/package/cosmic/*/cosmic-conf.in
+[V] 1.0.13
 
 [CV-GROUP] cosmic-desktop
-[D] d9bdf67f0444ad9744cc6c9b743760f5b050442461fcdcfbb222dcc9 cosmic-icons-epoch-1.0.0-alpha.7.tar.gz https://github.com/pop-os/cosmic-icons/archive/epoch-1.0.0-alpha.7/
+[D] 7bdacfb11b9dd90f184615421101096f0d84b5113f3bdb0730d4297f cosmic-icons-epoch-1.0.13.tar.gz https://github.com/pop-os/cosmic-icons/archive/epoch-1.0.13/
+
+. $base/package/cosmic/*/cosmic-conf.in

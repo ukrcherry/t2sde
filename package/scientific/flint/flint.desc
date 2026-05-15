@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/flint/flint.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] C library in support of computations in number theory
+
+[T] FLINT is a C library for doing number theory. At its core, FLINT provides
+[T] arithmetic in standard rings such as the integers, rationals, algebraic,
+[T] real, complex and p-adic numbers, finite fields, and number fields.
+
+[U] https://www.flintlib.org/
+
+[A] Flint Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/library
+[F] CROSS
+
+[L] LGPL
+[V] 3.5.0
+
+[D] f809f26f23aaef848afae6ec4fdb7329ac0b03e475693273da1729c6 flint-3.5.0.tar.gz https://flintlib.org/download/

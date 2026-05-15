@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gst-plugins-bad/gst-plugins-bad.desc
-[COPY] Copyright (C) 2010 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2010 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -17,26 +17,56 @@
 [C] extra/multimedia extra/desktop/gnome
 [F] CROSS NO-LTO
 
+[E] opt faac
+[E] opt ilmbase
 [E] opt ladspa
 [E] opt libaom
 [E] opt libopus
 [E] opt libwebp
+[E] opt libzvbi
+[E] opt libaac
 [E] opt neon
 [E] opt openexr
 [E] opt openh264
 [E] opt orc
 [E] opt speex
 [E] opt libdc1394
+[E] opt libde265
+[E] opt lilv
+[E] opt lv2
+[E] opt abseil-cpp
+[E] opt faac
+[E] opt gsm
+[E] opt glslang
+[E] opt json-glib
+[E] opt libaac
+[E] opt libass
+[E] opt libfreeaptx
+[E] opt liblc3
+[E] opt libldac
+[E] opt liblrdf
+[E] opt libmodplug
+[E] opt librsvg
+[E] opt libtiff
+[E] opt libzvbi
+[E] opt openal
+[E] opt openjpeg
+[E] opt raptor
+[E] opt shaderc
+[E] opt soundtouch
+[E] opt spandsp
+[E] opt svt-av1
+[E] opt webrtc-audio-processing-1
 
 [L] LGPL
-[S] Stable
-[V] 1.26.1
-[P] X -----5---9 200.800
-
-[O] var_append mesonopt ' ' '-Dsctp=enabled -Dtests=disabled -Dexamples=disabled'
-[O] var_append mesonopt ' ' '-Dpackage-name="GStreamer base plug-ins (T2 SDE)" -Dpackage-origin="t2sde.org.org"'
-[O] pkginstalled gobject-introspection && var_append mesonopt ' ' -Dintrospection=enabled
+[V] 1.28.3
+[P] X -----5---9 179.800
 
 [CV-GROUP] gst
-[D] c7a68c7d490410a1456a5a2381c38f987b0ce07811f52d8439aaa35b gst-plugins-bad-1.26.1.tar.xz https://gstreamer.freedesktop.org/src/gst-plugins-bad/
+[CV-FLAGS] ODD-UNSTABLE
+[D] c679a765bf33471bdb6dfc51573c0ce56dfdd065c73a4c73993c0e02 gst-plugins-bad-1.28.3.tar.xz https://gstreamer.freedesktop.org/src/gst-plugins-bad/
 
+var_append mesonopt ' ' '-Dsctp=enabled -Dtests=disabled -Dexamples=disabled'
+var_append mesonopt ' ' '-Dpackage-name="GStreamer base plug-ins (T2)" -Dpackage-origin="t2sde.org.org"'
+pkginstalled gobject-introspection && var_append mesonopt ' ' -Dintrospection=enabled
+pkginstalled libqrencode || var_append mesonopt ' ' -Dqroverlay=disabled

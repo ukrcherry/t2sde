@@ -1,0 +1,28 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/minikube/minikube.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Tool to run Kubernetes locally
+
+[T] minikube implements a local Kubernetes cluster. minikube's primary goals
+[T] are to be the best tool for local Kubernetes application development and to
+[T] support all Kubernetes features that fit.
+
+[U] https://minikube.sigs.k8s.io/docs/
+
+[A] Kubernetes Developers
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/development
+[F] CROSS
+
+[L] APL
+[V] 1.38.1
+
+[D] 020c7fd8713c8b303922a72c6f74b95b06b9d092f6f41885b1f5e983 minikube-1.38.1.tar.gz https://github.com/kubernetes/minikube/archive/v1.38.1/
+
+. $base/package/*/*/go-conf.in
+var_append goconfopt ' ' "-o build/ ./cmd/{auto-pause,extract,gvisor,minikube,storage-provisioner}"
+hook_add postmake 5 "cp -vf build/* $root$bindir/"

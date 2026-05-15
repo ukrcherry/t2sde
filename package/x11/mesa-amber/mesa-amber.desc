@@ -1,0 +1,69 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/mesa-amber/mesa-amber.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] 3-D graphics library with OpenGL API with non-Gallium drivers
+
+[T] Mesa is a 3-D graphics library with an API which is very similar to that
+[T] of OpenGL*. To the extent that Mesa utilizes the OpenGL command syntax
+[T] or state machine, it is being used with authorization from Silicon Graphics,
+[T] Inc. However, the author makes no claim that Mesa is in any way a
+[T] compatible replacement for OpenGL or associated with Silicon Graphics, Inc.
+[T] Those who want a licensed implementation of OpenGL should contact a licensed
+[T] vendor.
+[T]
+[T] While Mesa is not a licensed OpenGL implementation, it is currently
+[T] being tested with the OpenGL conformance tests. For the current
+[T] conformance status see the CONFORM file included in the Mesa distribution.
+[T]
+[T] This package contains the Mesa 21 "Amber" branch. The last version with
+[T] for non-Gallium drivers.
+[T]
+[T] * OpenGL(R) is a registered trademark of Silicon Graphics, Inc.
+
+[A] Brian Paul <brian@mesa3d.org>
+[M] Tomas Glozar <tglozar@gmail.com>
+
+[U] https://www.mesa3d.org/
+
+[C] base/x11
+[F] CROSS NO-LTO LATOMIC.sparc
+
+[L] OpenSource
+[V] 21-027ccc89
+
+[D] c9e233a6b4c7778b9bf60d0f1cacabd9b823cb593f1a5b677c0fa5b1 mesa-21-027ccc89.tar.gz git+https://gitlab.freedesktop.org/mesa/mesa 027ccc89
+
+dridrv=
+galdrv= # swrast
+vuldrv=
+platforms= # drm
+
+# "amber" for amber branch, to co-exist w/ main "mesa" package
+pkginstalled mesa &&
+	var_append mesonopt ' ' '-Damber=true' # -Dosmesa=true'
+
+pkginstalled libx11 && var_append platforms ',' x11
+pkginstalled wayland && var_append platforms ',' wayland
+
+if pkginstalled libdrm; then
+    var_append mesonopt ' ' -Degl=enabled
+    var_append mesonopt ' ' '-Dplatforms=$platforms -Dgles1=enabled -Dgles2=enabled'
+
+    var_append dridrv ',' "r100,r200,nouveau"
+
+    case "$arch" in
+    x86*)
+	#var_append dridrv ',' "i915,i965"
+	:
+	;;
+    esac
+else
+    var_append mesonopt ' ' -Ddri=disabled
+fi
+
+var_append mesonopt ' ' -Dvulkan-drivers=$vuldrv
+var_append mesonopt ' ' "-Ddri-drivers=$dridrv -Dgallium-drivers=$galdrv"
+var_append mesonopt ' ' '-Dgbm=disabled -Dglx=auto -Dshared-glapi=enabled'

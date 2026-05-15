@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/vanessa_socket/vanessa_socket.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] User space TCP/IP pipe
+
+[T] User space TCP/IP pipe.
+
+[U] https://horms.net/projects/perdition/
+
+[A] Vanessa_socket Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.0.13
+[L] LGPL
+
+[D] 8d440baabde5fdae4e09925d18104fafe6bbde5fd21a925151399894 vanessa_socket-0.0.13.tar.xz http://horms.net/projects/vanessa/download/vanessa_socket/0.0.13/

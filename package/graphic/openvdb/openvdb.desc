@@ -1,0 +1,30 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/openvdb/openvdb.desc
+[COPY] Copyright (C) 2023 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Sparse volume data structure and tools
+
+[T] OpenVDB is an open source C++ library comprising a novel hierarchical
+[T] data structure and a large suite of tools for the efficient storage
+[T] and manipulation of sparse volumetric data discretized on
+[T] three-dimensional grids. It was developed by DreamWorks Animation for
+[T] use in volumetric applications typically encountered in feature film
+[T] production.
+
+[U] https://github.com/AcademySoftwareFoundation/openvdb/
+
+[A] AcademySoftwareFoundation
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] OBJDIR
+
+[E] opt graphviz
+
+[L] MPL
+[V] 13.0.0
+[P] X -----5---9 400.000
+
+[D] e9168a74aec14e4889594629599243f15ea39d315e5c14e5cd475139 openvdb-13.0.0.tar.gz https://github.com/AcademySoftwareFoundation/openvdb/archive/refs/tags/v13.0.0/

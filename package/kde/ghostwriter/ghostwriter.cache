@@ -1,13 +1,12 @@
+[TIMESTAMP] 1770547472 Sun Feb  8 11:44:32 2026
+[BUILDTIME] 135 (9)
+[SIZE] 6.28 MB, 54 files
 
-[TIMESTAMP] 1718741436 Tue Jun 18 22:10:36 2024
-[BUILDTIME] 60 (9)
-[SIZE] 6.89 MB, 45 files
-
-[DEP] 00-dirtree
 [DEP] bash
 [DEP] binutils
 [DEP] cmake
 [DEP] coreutils
+[DEP] cups
 [DEP] diffutils
 [DEP] extra-cmake-modules
 [DEP] gawk
@@ -19,16 +18,14 @@
 [DEP] kxmlgui
 [DEP] linux-header
 [DEP] make
-[DEP] pkgconfig
-[DEP] qt65compat
 [DEP] qt6base
-[DEP] qt6declarative
 [DEP] qt6tools
+[DEP] qt6translations
 [DEP] qt6webchannel
 [DEP] qt6webengine
 [DEP] sed
 [DEP] sonnet
 [DEP] tar
-[DEP] tbb
+[DEP] util-linux
 [DEP] vulkan-headers
 [DEP] xz

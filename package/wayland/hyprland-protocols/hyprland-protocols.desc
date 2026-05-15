@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/hyprland-protocols/hyprland-protocols.desc
-[COPY] Copyright (C) 2023 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2023 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,14 +11,13 @@
 [U] https://hyprland.org/
 
 [A] vaxerski
-[M] The T2 Project <t2@t2sde.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/x11
 [F] CROSS
 
 [L] BSD
-[S] Beta
-[V] 0.6.4
+[V] 0.7.0
 [P] X -----5---9 200.000
 
-[D] 4177ca46312b34286cf842ba8e90d20e6e1543a0b39b5d5cfd1774cc hyprland-protocols-v0.6.4.tar.gz !https://github.com/hyprwm/hyprland-protocols/archive/refs/tags/v0.6.4.tar.gz
+[D] 263473d76e381e6b70124dd092a87dda4ae9b84e3f242b063d4a56f1 hyprland-protocols-v0.7.0.tar.gz !https://github.com/hyprwm/hyprland-protocols/archive/refs/tags/v0.7.0.tar.gz

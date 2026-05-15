@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/hidapi/hidapi.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,17 +13,16 @@
 [U] https://github.com/libusb/hidapi
 
 [A] Alan Ott <alan@signal11.us>:
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/library
 [F] CROSS
 
 [L] GPL3 BSD
-[S] Stable
-[V] 0.14.0
+[V] 0.15.0
 [P] X -----5---9 110.000
 
-[O] runcmake=0 runmeson=0
-[O] hook_add preconf 5 "./bootstrap"
+[D] 39e8caf068512ce665e4c418d4122f46434e6422dcd10859ec5ac44a hidapi-0.15.0.tar.gz https://github.com/libusb/hidapi/archive/
 
-[D] cf9751622b9a310acab12ffee67f4762c4e761b6c15385f3154e5dfd hidapi-0.14.0.tar.gz https://github.com/libusb/hidapi/archive/
+runcmake=0 runmeson=0
+hook_add preconf 5 ./bootstrap

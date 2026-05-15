@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/aspell-te/aspell-te.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Telugu dictionary for aspell
+
+[T] The Telugu dictionary for aspell.
+
+[U] http://aspell.net
+
+[A] The Aspell project
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/office
+[F] CROSS
+
+[L] GPL
+[V] 0.01-2
+
+[D] 2c48a055c4cabcda031bda839833e582db4dccc19ee555d06706f946 aspell6-te-0.01-2.tar.bz2 https://ftp.gnu.org/gnu/aspell/dict/te/
+
+confopt=

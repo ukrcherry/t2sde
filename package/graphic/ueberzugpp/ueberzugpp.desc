@@ -1,0 +1,28 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/ueberzugpp/ueberzugpp.desc
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Drop in replacement for ueberzug written in C++
+
+[T] Uberzug++ is a command line utility written in C++ which allows to draw images
+[T] on terminals by using X11/wayland child windows, sixels, kitty and iterm2.
+
+[U] https://github.com/jstkdng/ueberzugpp
+
+[A] jstkdng
+[M] Riley Beckett <rbeckettvt@gmail.com>
+
+[C] extra/tool
+[F] CROSS
+
+[L] GPL
+[V] 2.9.8
+
+[D] 873d0de15bf4e3ca933b9179697d759280a8711aecca4e5464d2d26e ueberzugpp-2.9.8.tar.gz https://github.com/jstkdng/ueberzugpp/archive/v2.9.8/
+
+pkginstalled opencv || var_append cmakeopt ' ' '-DENABLE_OPENCV=OFF'
+pkginstalled opencv && var_append GCC_WRAPPER_APPEND ' ' -I$root$(pkgprefix includedir opencv)/opencv4
+pkginstalled dbus && var_append cmakeopt ' ' '-DENABLE_DBUS=ON'
+pkginstalled wayland && var_append cmakeopt ' ' '-DENABLE_WAYLAND=ON'

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/simh/simh.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -23,7 +23,7 @@
 [U] http://simh.trailing-edge.com/
 
 [A] Robert M Supnik
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/emulator
 [F] CROSS
@@ -32,8 +32,29 @@
 [E] opt libpcap
 
 [L] OpenSource
-[S] Stable
-[V] 312-5
+[V] 3.12-5
 
+[CV-TR] s/\.//
 [CV-URL] http://simh.trailing-edge.com/
 [D] 3eda4dbde501932eafc5d1ea6887b60180c5305e5db746cd0d7b08ae simhv312-5.zip http://simh.trailing-edge.com/sources/
+
+var_remove_regex makeopt " " "CC=.*"
+
+makeinstopt=
+
+simh_premake() {
+	mkdir BIN
+}
+
+simh_postmake() {
+	rm -rf BIN/buildtools
+	cp -vf BIN/* $root$bindir/
+}
+
+simh_postdoc() {
+	cp `find -name '*.txt' -printf '%p '` $root$docdir/
+}
+
+hook_add premake 5 simh_premake
+hook_add postmake 5 simh_postmake
+hook_add postdoc 5 simh_postdoc

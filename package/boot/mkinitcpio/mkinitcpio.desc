@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/mkinitcpio/mkinitcpio.desc
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Mkinitcpio
+
+[T] This package contains mkinitcpio.
+
+[A] Aaron Griffin <aaronmgrifin@gmail.com>
+[A] Tobias Powalowski <tpowa@archlinux.org>
+[M] Tobias Richter <tri@imi.st>
+
+[C] base/system
+[F] CROSS
+
+[L] GPL
+[V] 41
+
+[D] f512e767d4fae6c808f8cff98953bf953cee25dae9f1fbb3cc4d9f94 mkinitcpio-v41.tar.gz https://gitlab.archlinux.org/archlinux/mkinitcpio/mkinitcpio/-/archive/v41/

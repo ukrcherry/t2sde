@@ -1,21 +1,27 @@
-[TIMESTAMP] 1739137850 Sun Feb  9 22:50:50 2025
-[BUILDTIME] 25 (5)
-[SIZE] 3.51 MB, 170 files
+[TIMESTAMP] 1773053816 Mon Mar  9 11:56:56 2026
+[BUILDTIME] 60 (9)
+[SIZE] 3.53 MB, 171 files
 
 [DEP] bash
 [DEP] binutils
+[DEP] cf
 [DEP] coreutils
 [DEP] diffutils
+[DEP] file
+[DEP] findutils
 [DEP] gawk
 [DEP] grep
 [DEP] gzip
+[DEP] imake
 [DEP] libdv
 [DEP] libjpeg
 [DEP] libpng
+[DEP] libsdl
 [DEP] libx11
 [DEP] linux-header
 [DEP] make
+[DEP] pkgconfig
 [DEP] sed
 [DEP] tar
-[DEP] tbb
+[DEP] util-linux
 [DEP] xorgproto

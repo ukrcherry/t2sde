@@ -1,6 +1,6 @@
-[TIMESTAMP] 1737709102 Fri Jan 24 09:58:22 2025
-[BUILDTIME] 16 (9)
-[SIZE] 1.35 MB, 11 files
+[TIMESTAMP] 1768851665 Mon Jan 19 20:41:05 2026
+[BUILDTIME] 12 (9)
+[SIZE] 1.60 MB, 12 files
 
 [DEP] bash
 [DEP] binutils
@@ -11,8 +11,11 @@
 [DEP] grep
 [DEP] libglvnd
 [DEP] linux-header
-[DEP] make
+[DEP] meson
+[DEP] ninja
+[DEP] openssl
+[DEP] python
 [DEP] sed
 [DEP] tar
-[DEP] tbb
+[DEP] util-linux
 [DEP] xz

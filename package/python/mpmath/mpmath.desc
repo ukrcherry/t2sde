@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/mpmath/mpmath.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,14 +11,16 @@
 [U] https://github.com/mpmath/mpmath
 
 [A] Fredrik Johansson <fredrik.johansson@gmail.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/development
 [E] add setuptools-scm
 
 [L] BSD
-[S] Stable
-[V] 1.4.0a5
+[V] 1.4.1
 [P] X -----5---9 110.000
 
-[D] 33f74ffc61a4239b7bfc5dce00ecb7ee52bbbcdbd2b2f7dba8794833 mpmath-1.4.0a5.tar.gz https://github.com/mpmath/mpmath/archive/1.4.0a5/
+[D] d07319d4cc3efe3d99e7310c6863561cc732f6cc80a9860d2876b39d mpmath-1.4.1.tar.gz https://github.com/mpmath/mpmath/archive/1.4.1/
+
+# missing .git directory with the package version
+export SETUPTOOLS_SCM_PRETEND_VERSION_FOR_MPMATH="$ver"

@@ -1,0 +1,19 @@
+[TIMESTAMP] 1767645259 Mon Jan  5 21:34:19 2026
+[BUILDTIME] 85 (9)
+[SIZE] 3.58 MB, 7 files
+
+[DEP] bash
+[DEP] cargo
+[DEP] coreutils
+[DEP] curl
+[DEP] diffutils
+[DEP] gawk
+[DEP] gettext
+[DEP] grep
+[DEP] gzip
+[DEP] linux-header
+[DEP] openssl
+[DEP] rustc
+[DEP] sed
+[DEP] tar
+[DEP] zlib

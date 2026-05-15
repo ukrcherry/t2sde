@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libldac/libldac.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,14 +11,15 @@
 [U] https://github.com/EHfive/ldacBT
 
 [A] Libldac Authors
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/base
 [F] CROSS
 
 [V] 2.0.2.3
 [L] APL
-[S] Stable
 [P] X -----5---9 179.500
 
 [D] b10731e15409a5333b61d2244fb2e87369d083736d2d74c6b2fb3162 ldacBT-2.0.2.3.tar.gz https://github.com/EHfive/ldacBT/releases/download/v2.0.2.3/
+
+var_append cmakeopt ' ' -DCMAKE_POLICY_VERSION_MINIMUM=3.5

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/smproxy/smproxy.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,15 +12,14 @@
 [U] https://www.X.org
 
 [A] X.org Foundation {http://www.X.org}
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/x11
 [F] CROSS
 
 [L] OpenSource
-[S] Stable
-[V] 1.0.7
+[V] 1.0.8
 
-[O] . package/*/*/modular-x-conf.in
+[D] 759b5bcd2eca4f9613b259d0fad4cdd0e0b53ad146ff80e82ce92e08 smproxy-1.0.8.tar.xz http://xorg.freedesktop.org/releases/individual/app/
 
-[D] 80825781a2cd1d124ff85339a0a387bc6d6b0f920fd9f9774db489ef smproxy-1.0.7.tar.xz http://xorg.freedesktop.org/releases/individual/app/
+. package/*/*/modular-x-conf.in

@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/fbreader/fbreader.desc
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] An e-book reader for Linux PDAs and desktop computers
+
+[T] FBReader is an e-book reader. It currently works on the Sharp Zaurus,
+[T] Siemens Simpad with Opensimpad ROM, Nokia 770/N800 Internet Tablet, Archos
+[T] PMA430, Motorola E680i/A780 smartphones, PepperPad 3, Asus Eee PC, IRex
+[T] iLiad, UMPC, and Linux/Windows XP/FreeBSD desktop computers. It supports
+[T] several e-book formats: plucker, palmdoc, zTXT, HTML, CHM, fb2, TCR
+[T] (psion text), OEB, OpenReader, RTF, non-DRM'ed Mobipocket, and plain text.
+
+[U] https://fbreader.org/
+
+[A] Nikolay Pultsin <geometer@mawhrin.net>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/office
+
+[L] GPL
+[V] 0.99.5
+
+[D] bb061aff0d06ef57225bb1f4347259034f891a39e1341dc5ecd19d44 fbreader-sources-0.99.5.tar.gz https://github.com/geometer/FBReader/archive/refs/tags/0.99.5/

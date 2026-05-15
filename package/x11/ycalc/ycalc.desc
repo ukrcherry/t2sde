@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/ycalc/ycalc.desc
-[COPY] Copyright (C) 2014 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2014 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,16 +11,25 @@
 [U] http://83.156.189.247/ti58c/site/articles.php?langue=EN&smenu=and%20Linux
 
 [A] Ulf Nordquist <un@pobox.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/x11
 [F] CROSS
 
 [L] GPL
-[S] Stable
 [V] 1.09.1-1
-
-[O] . package/*/*/modular-x-conf.in
 
 #other old sources on internet don't compile. use this one:
 [D] 5d32ca7fb43ec8946ee546ae03a07b0ccaa4016add152aeca0102fc8 ycalc-1.09.1-1.tar.bz2 http://distro.ibiblio.org/quirky/quirky6/sources/t2/april/
+
+. package/*/*/modular-x-conf.in
+
+makeinstopt=
+ycalc_post() {
+	install -m755 -s ycalc $root/usr/bin
+}
+hook_add postmake 5 ycalc_post
+
+if [[ $libdir == *lib64 ]]; then
+	hook_add premake 4 "sed -i -e 's%/lib%/lib64%' Makefile"
+fi

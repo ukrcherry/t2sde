@@ -1,6 +1,6 @@
-[TIMESTAMP] 1744285819 Thu Apr 10 13:50:19 2025
+[TIMESTAMP] 1775040268 Wed Apr  1 12:44:28 2026
 [BUILDTIME] 540 (9)
-[SIZE] 96.38 MB, 107 files
+[SIZE] 377.64 MB, 160 files
 
 [DEP] bash
 [DEP] binutils
@@ -8,6 +8,7 @@
 [DEP] coreutils
 [OPT] curl
 [DEP] diffutils
+[DEP] findutils
 [DEP] gawk
 [DEP] grep
 [DEP] gzip
@@ -19,6 +20,7 @@
 [DEP] make
 [OPT] opencl-headers
 [OPT] opencl-loader
+[DEP] openssl
 [DEP] pkgconfig
 [DEP] python
 [OPT] rocblas
@@ -27,5 +29,5 @@
 [DEP] sed
 [OPT] shaderc
 [DEP] tar
-[DEP] tbb
+[DEP] util-linux
 [OPT] vulkan-headers

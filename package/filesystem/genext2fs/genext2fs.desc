@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/genext2fs/genext2fs.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,13 +13,14 @@
 [U] https://genext2fs.sourceforge.net/
 
 [A] Xavier Bestel <xavier.bestel@free.fr>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/tool
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 1.4.1
+[V] 1.6.2
 
-[D] 64d9b10f15a5056b5e118c857b02391581e1a7d11cfa78f5c7694d95 genext2fs-1.4.1.tar.gz http://ovh.dl.sourceforge.net/sourceforge/genext2fs/
+[D] 9f40096bd5ea4bc574e6373fc68282702174f879da7d414b0e8bd4ae genext2fs-1.6.2.tar.gz https://github.com/bestouff/genext2fs/archive/v1.6.2/
+
+hook_add preconf 5 ./autogen.sh

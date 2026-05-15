@@ -1,0 +1,28 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/rustfs/rustfs.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] High-performance distributed object storage
+
+[T] RustFS is a high-performance distributed object storage software built with
+[T] Rust, positioned as an alternative to MinIO.
+
+[U] https://rustfs.com/
+
+[A] The RustFS Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/filesystem
+[F] CROSS NO-LTO
+
+[L] APL
+[V] 1.0.0-alpha.99
+
+[D] 4abc76e0eff7285a90cc6211dad7b2c90ded3055d99ffa91fda9740b rustfs-1.0.0-alpha.99.tar.gz https://github.com/rustfs/rustfs/archive/1.0.0-alpha.99/
+
+cargoinstopt=
+var_append GCC_WRAPPER_APPEND ' ' "*jitterentropy*?-O0"
+atstage cross && hook_add postmake 5 "install -v target/${arch_target}/*/{rustfs-mcp,rustfs,gproto} $root$bindir"
+atstage native && hook_add postmake 5 "install -v target/*/{rustfs-mcp,rustfs,gproto} $root$bindir"

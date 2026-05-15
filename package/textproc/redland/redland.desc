@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/redland/redland.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -18,19 +18,19 @@
 [U] https://librdf.org/
 
 [A] Dave Beckett <dave@dajobe.org>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/text
+[F] CROSS
 
 [E] opt gtk-doc
 [E] opt mysql
 [E] opt postgresql
 
 [L] GPL
-[S] Stable
-[V] 1.0.17.1
+[V] 1.0.17
 
-[SRC] .
+[D] 8a41994b6abf9e1c5a0f2fc89959f41cd2b6179b2c0f6e22aed788f0 redland-1.0.17.tar.gz https://download.librdf.org/source/
 
-[D] cf4a9f55bfbbc444eb2c41fe9abe518da17f2921a86f064520f8917e redland-1.0.10.tar.gz http://download.librdf.org/source/
-[D] 786b1e90e479d5727adfb47e347bd597681bbc457efe3579ac9c3ebd redland-bindings-1.0.17.1.tar.gz http://download.librdf.org/source/
+var_append confopt ' ' --with-raptor=system
+var_append confopt ' ' --with-rasqal=system

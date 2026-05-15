@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/svt-av1/svt-av1.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,14 +14,18 @@
 [U] https://gitlab.com/AOMediaCodec/SVT-AV1/
 
 [A] Netflix
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] CROSS
 
+# always add for x86
+[E] add nasm
+
 [L] BSD
-[S] Stable
-[V] 3.0.0
+[V] 4.1.0
 [P] X -----5---9 124.600
 
-[D] cda50f5675b9b62813b71746a575a4d19508edc7d7aee04e3e85d5b9 SVT-AV1-3.0.0.tar.gz https://gitlab.com/AOMediaCodec/SVT-AV1/-/archive/v3.0.0/
+[D] 6d271429667895201807ed842df73462976de53bf93171803f4be4be SVT-AV1-4.1.0.tar.gz https://gitlab.com/AOMediaCodec/SVT-AV1/-/archive/v4.1.0/
+
+[ "$arch" = arm64 ] && var_remove GCC_WRAPPER_REMOVE ' ' "-march*"

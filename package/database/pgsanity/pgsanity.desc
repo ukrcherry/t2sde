@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/pgsanity/pgsanity.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Check the syntax of Postgresql SQL files
+
+[T] Check the syntax of Postgresql SQL files.
+
+[U] https://github.com/markdrago/pgsanity
+
+[A] Pgsanity Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.3.0
+[L] MIT
+
+[D] 79d533a66adc22bad40639711b3177e1aac404f26e995473d8786de7 pgsanity-0.3.0.tar.gz https://github.com/markdrago/pgsanity/archive/v0.3.0/

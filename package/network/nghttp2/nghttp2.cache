@@ -1,18 +1,25 @@
-[TIMESTAMP] 1739040101 Sat Feb  8 19:41:41 2025
-[BUILDTIME] 6 (5)
-[SIZE] 0.85 MB, 21 files
+[TIMESTAMP] 1774017293 Fri Mar 20 15:34:53 2026
+[BUILDTIME] 18 (9)
+[SIZE] 3.23 MB, 27 files
 
+[DEP] automake
 [DEP] bash
 [DEP] binutils
 [DEP] bzip2
+[OPT] c-ares
 [DEP] coreutils
 [DEP] diffutils
+[DEP] findutils
 [DEP] gawk
 [DEP] grep
+[OPT] jansson
+[OPT] libev
 [DEP] libevent
 [DEP] linux-header
 [DEP] make
 [DEP] openssl
+[DEP] pkgconfig
 [OPT] python
 [DEP] sed
 [DEP] tar
+[DEP] util-linux

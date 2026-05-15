@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libmdf/libmdf.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Millistream Data Feed API library
+
+[T] Millistream Data Feed API library.
+
+[U] https://millistream.com
+
+[A] Libmdf Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.0.29
+[L] LGPL3
+
+[D] 56626ff0099a7e1c0e23611de6b511386cc24d33802aa30d4f933630 libmdf-1.0.29.tar.gz https://packages.millistream.com/source/

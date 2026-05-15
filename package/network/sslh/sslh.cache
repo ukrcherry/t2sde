@@ -1,0 +1,23 @@
+[TIMESTAMP] 1750597266 Sun Jun 22 15:01:06 2025
+[BUILDTIME] 2 (9)
+[SIZE] 0.13 MB, 7 files
+
+[DEP] 00-dirtree
+[DEP] bash
+[DEP] binutils
+[DEP] coreutils
+[DEP] diffutils
+[DEP] findutils
+[DEP] gawk
+[DEP] grep
+[DEP] gzip
+[DEP] libbsd
+[DEP] libcap
+[DEP] libconfig
+[DEP] libev
+[DEP] linux-header
+[DEP] make
+[DEP] pcre2
+[DEP] perl
+[DEP] sed
+[DEP] tar

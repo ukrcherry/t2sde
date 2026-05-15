@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libopenshot-audio/libopenshot-audio.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,7 +13,7 @@
 [U] https://www.openshot.org/
 
 [A] Jonathan Thomas <jonathan@openshot.org>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] CROSS
@@ -22,7 +22,7 @@
 [E] opt graphviz
 
 [L] LGPL3
-[S] Stable
-[V] 0.4.0
+[V] 0.6.0
+[P] X -----5---9 300.000
 
-[D] 3d5dbf2322486247e0787231ee61a99cef3922da6f61027f7c3b0077 libopenshot-audio-0.4.0.tar.gz https://github.com/OpenShot/libopenshot-audio/archive/v0.4.0/
+[D] d24536e21fd4f349ab0754a1d8901337c73ed52128a9bb7acacd8f6e libopenshot-audio-0.6.0.tar.gz https://github.com/OpenShot/libopenshot-audio/archive/v0.6.0/

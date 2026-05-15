@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/ettercap/ettercap.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -11,17 +11,16 @@
 [T] active and passive dissection of many protocols and includes many
 [T] features for network and host analysis.
 
-[U] https://ettercap.sourceforge.net/
+[U] https://www.ettercap-project.org/
 
 [A] Alberto Ornaghi <alor@users.sourceforge.net>
 [A] Marco Valleri <crwm@freemail.it>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network
+[F] OBJDIR
 
 [L] GPL
-[S] Beta
-[V] NG-0.7.3
+[V] 0.8.4.1
 
-[D] 1525854625 ettercap-NG-0.7.3.tar.gz http://dl.sourceforge.net/sourceforge/ettercap/
-[D] X etter.passive.os.fp http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/~checkout~/ettercap/ettercap/
+[D] 5b97742076a58d73716c8d9774f4b555ddcb62cc1b2cc82b8f0cc79c ettercap-0.8.4.1.tar.gz https://github.com/Ettercap/ettercap/releases/download/v0.8.4.1/

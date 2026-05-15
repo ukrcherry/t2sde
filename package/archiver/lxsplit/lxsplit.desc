@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/lxsplit/lxsplit.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -9,19 +9,18 @@
 [T] This utility is used to split up huge files into smaller pieces without
 [T] compression. It is fully compatable with HJSplit.
 
-[U] https://www.freebyte.com/hjsplit/
+[U] https://lxsplit.sourceforge.net/
 
 [A] Richard Stellingwerff <remenic@remenic.2y.net>
-[M] Leonel Ivan Saafigueroa <leonel@saafigueroa.com.ar>
+[M] Leonel Iván Saafigueroa <leonel@saafigueroa.com.ar>
 
 [C] base/tool
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 0.1.1
+[V] 0.2.4
 
-[O] makeinstopt=
-[O] hook_add postmake 5 "install lxsplit $root$bindir/"
+[D] d6571011e84810d92ea7bf8766049038d284200c21a6b0a1cb746f19 lxsplit-0.2.4.tar.gz https://download.sourceforge.net/lxsplit/
 
-[D] 032c81e8f5f790327a31e229000158d593a9a08477e73179f044bb83 lxsplit-0.1.1.tar.gz !http://www.freebyte.com/download/lxsplit.tar.gz
+makeinstopt=
+hook_add postmake 5 "install lxsplit $root$bindir/"

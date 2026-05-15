@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libwebp/libwebp.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -12,7 +12,7 @@
 [U] https://github.com/webmproject/libwebp
 
 [A] Google
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] CROSS
@@ -23,15 +23,15 @@
 [E] opt libpng
 [E] opt libsdl2
 [E] opt libtiff
+[E] opt glu libglvnd
 
 [L] OpenSource
-[S] Stable
-[V] 1.5.0
-[P] X -----5---9 130.100
-
-[O] var_append GCC_WRAPPER_APPEND ' ' -I$root/usr/X11/include
-[O] var_append cmakeopt ' ' -DWEBP_BUILD_EXTRAS=OFF
-[O] [ "$SDECFG_STATIC" = 0 ] && var_append cmakeopt ' ' -DBUILD_SHARED_LIBS=ON
+[V] 1.6.0
+[P] X -----5---9 130.001
 
 [CV-FLAGS] NO-PREFIX
-[D] cad427fd99448525a190ce258953e9ec4f95b3ae3a9cee5f6efee060 libwebp-1.5.0.tar.gz https://github.com/webmproject/libwebp/archive/v1.5.0/
+[D] 51df65c073dbdcae0174333d6b0643e3abd02c2c81085ee3263e7276 libwebp-1.6.0.tar.gz https://github.com/webmproject/libwebp/archive/v1.6.0/
+
+var_append GCC_WRAPPER_APPEND ' ' -I$root/usr/X11/include
+var_append cmakeopt ' ' -DWEBP_BUILD_EXTRAS=OFF
+[ "$SDECFG_STATIC" = 0 ] && var_append cmakeopt ' ' -DBUILD_SHARED_LIBS=ON

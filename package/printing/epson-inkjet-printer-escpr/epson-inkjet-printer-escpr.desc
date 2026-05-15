@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/epson-inkjet-printer-escpr/epson-inkjet-printer-escpr.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Epson Inkjet Printer Driver for Linux
+
+[T] Epson Inkjet Printer Driver (ESC/P-R) for Linux.
+
+[U] https://download.ebz.epson.net/dsc/search/01/search/?OSC=LX
+
+[A] Epson-inkjet-printer-escpr Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.8.6-1
+[L] GPL
+
+[D] dac76f12ff0b8b0a500dbced2824d6fa68b75240c604efc00a0893c9 epson-inkjet-printer-escpr-1.8.6-1.tar.gz https://github.com/vmartins/epson-inkjet-printer-escpr/releases/download/v1.8.6/

@@ -1,6 +1,6 @@
-[TIMESTAMP] 1743810051 Sat Apr  5 00:40:51 2025
-[BUILDTIME] 18 (9)
-[SIZE] 5.55 MB, 35 files
+[TIMESTAMP] 1766349748 Sun Dec 21 21:42:28 2025
+[BUILDTIME] 45 (9)
+[SIZE] 5.67 MB, 36 files
 
 [OPT] alsa-lib
 [DEP] bash
@@ -11,24 +11,29 @@
 [DEP] docutils
 [DEP] ffmpeg
 [DEP] gawk
-[DEP] git
 [DEP] grep
 [DEP] gzip
-[DEP] jack
+[OPT] jack
 [DEP] lcms2
 [OPT] libarchive
 [DEP] libass
-[DEP] libbluray
+[OPT] libbluray
 [OPT] libcaca
-[DEP] libcdio
-[DEP] libcdio-paranoia
+[OPT] libcdio
+[OPT] libcdio-paranoia
+[DEP] libdisplay-info
+[DEP] libdrm
+[OPT] libdvdnav
 [DEP] libglvnd
 [DEP] libjpeg
 [DEP] libplacebo
 [DEP] libva
+[DEP] libx11
+[DEP] libxfixes
 [OPT] libxpresent
 [DEP] linux-header
 [OPT] luajit
+[DEP] mesa
 [DEP] meson
 [DEP] ninja
 [DEP] openssl
@@ -43,4 +48,5 @@
 [OPT] wayland
 [DEP] wayland-protocols
 [DEP] xkbcommon
+[DEP] xorgproto
 [DEP] zlib

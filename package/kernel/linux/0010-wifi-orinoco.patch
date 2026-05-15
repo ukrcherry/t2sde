@@ -688,7 +688,7 @@ to cfg80211 has stalled in 2010.
 +	return err;
 +}
 +
-+static int orinoco_set_wiphy_params(struct wiphy *wiphy, u32 changed)
++static int orinoco_set_wiphy_params(struct wiphy *wiphy, int idx, u32 changed)
 +{
 +	struct orinoco_private *priv = wiphy_priv(wiphy);
 +	int frag_value = -1;
@@ -9414,7 +9414,7 @@ to cfg80211 has stalled in 2010.
 +
 +static void ezusb_request_timerfn(struct timer_list *t)
 +{
-+	struct request_context *ctx = from_timer(ctx, t, timer);
++	struct request_context *ctx = timer_container_of(ctx, t, timer);
 +
 +	ctx->outurb->transfer_flags |= URB_ASYNC_UNLINK;
 +	if (usb_unlink_urb(ctx->outurb) == -EINPROGRESS) {
@@ -9610,7 +9610,7 @@ to cfg80211 has stalled in 2010.
 +
 +	spin_lock_irqsave(&upriv->req_lock, flags);
 +
-+	del_timer(&ctx->timer);
++	timer_delete(&ctx->timer);
 +
 +	if (ctx->killed) {
 +		spin_unlock_irqrestore(&upriv->req_lock, flags);
@@ -9741,7 +9741,7 @@ to cfg80211 has stalled in 2010.
 +		ctx->state = EZUSB_CTX_COMPLETE;
 +
 +		/* Stop the intimer */
-+		del_timer(&ctx->timer);
++		timer_delete(&ctx->timer);
 +		spin_unlock_irqrestore(&upriv->req_lock, flags);
 +
 +		/* Call the completion handler */
@@ -9754,7 +9754,7 @@ to cfg80211 has stalled in 2010.
 +		pr_warn("Matched IN URB, unexpected context state(0x%x)\n",
 +			state);
 +		/* Throw this CTX away and try submitting another */
-+		del_timer(&ctx->timer);
++		timer_delete(&ctx->timer);
 +		ctx->outurb->transfer_flags |= URB_ASYNC_UNLINK;
 +		usb_unlink_urb(ctx->outurb);
 +		ezusb_req_queue_run(upriv);
@@ -10612,7 +10612,7 @@ to cfg80211 has stalled in 2010.
 +		if (err == -EINPROGRESS)
 +			wait_for_completion(&ctx->done);
 +
-+		del_timer_sync(&ctx->timer);
++		timer_delete_sync(&ctx->timer);
 +		/* FIXME: there is an slight chance for the irq handler to
 +		 * be running */
 +		if (!list_empty(&ctx->list))

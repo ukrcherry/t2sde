@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/newsboat/newsboat.desc
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] An RSS feedreader for text terminals
+
+[T] Newsboat is an RSS/Atom feed reader for the text console.
+[T] It’s an actively maintained fork of Newsbeuter.
+
+[U] https://newsboat.org
+
+[A] Andreas Krennmair <ak@synflood.at>
+[M] Koen Vervloesem <koen@vervloesem.eu>
+
+[C] extra/tool
+
+[L] MIT
+[V] 2.43
+
+[D] 823eeabc9d14e0dbbb855d72cd715e535ded9ae0d2a8c725367d9518 newsboat-2.43.tar.xz https://newsboat.org/releases/2.43/
+
+runcargo=0
+pkginstalled asciidoctor || hook_add preconf 5 "sed -i '/^all:/ s,doc,,' Makefile"
+pkginstalled asciidoctor || hook_add preconf 5 "sed -i '/^install:/ s,install-docs,,' Makefile"

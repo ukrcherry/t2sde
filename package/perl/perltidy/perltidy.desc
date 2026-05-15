@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/perltidy/perltidy.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -15,13 +15,12 @@
 [U] https://perltidy.sourceforge.net
 
 [A] Steve Hancock <perltidy@users.sourceforge.net>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [L] GPL
-[S] Stable
-[V] 20250311
+[V] 20260204
 [P] X -----5---9 197.500
 
-[D] 667d6c57c072e116e1ad96340d56b58d70f20ccf537c5ed8f3b5d90b Perl-Tidy-20250311.tar.gz http://dl.sourceforge.net/perltidy/
+[D] e543afe03b2d52bebe1a368a42b4855dca65538df343b603b20ba450 Perl-Tidy-20260204.tar.gz https://download.sourceforge.net/perltidy/

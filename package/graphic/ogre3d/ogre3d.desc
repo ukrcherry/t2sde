@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/ogre3d/ogre3d.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -16,15 +16,11 @@
 [A] Thomas Muldowney
 [A] James O'Sullivan
 [A] Wladimir J. van der Laan
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/graphic
 
 [L] LGPL
-[S] Stable
-[V] v1-4-7
+[V] 14.5.2
 
-[O] pkginstalled devil || var_append confopt ' ' --disable-devil
-[O] var_append confopt ' ' --disable-cg
-
-[D] 3ec9b9425d8eefa1612a8f773be0e0f73ddb8fe24ddcc36f198b7541 ogre-linux_osx-v1-4-7.tar.bz2 http://dl.sourceforge.net/sourceforge/ogre/
+[D] 138ab265a05a616d75f62c07c9065b40c9878413190549c21c04dc44 ogre-v14.5.2.tar.gz https://github.com/OGRECave/ogre/archive/v14.5.2/

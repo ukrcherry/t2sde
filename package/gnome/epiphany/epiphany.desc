@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/epiphany/epiphany.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -13,7 +13,7 @@
 [T] The package seems to be a fork of galeon to rewrite it more cleanly
 [T] and to conform to the GNOME human interface guidelines.
 
-[U] https://www.gnome.org/projects/epiphany/
+[U] https://apps.gnome.org/Epiphany/
 
 [A] Marco Pesenti Gritti <marco@it.gnome.org>
 [M] Susanne Klaus <vadja@gmx.de>
@@ -21,11 +21,10 @@
 [C] extra/office extra/desktop/gnome
 
 [L] GPL
-[S] Stable
-[V] 48.3
+[V] 50.4
 [P] X -----5---9 210.500
 
-[O] . $base/package/*/*/gnome-conf.in
-
 [CV-URL] https://download.gnome.org/sources/epiphany/cache.json
-[D] 59bbc5ae8ca6cb7cadebdaec6ab5bf9e5d9ef41cd8b7e25e1836b920 epiphany-48.3.tar.xz https://download.gnome.org/sources/epiphany/48/
+[D] 44e2a8010bc7794cc43231801243c915d0069474da2124c6658ef72a epiphany-50.4.tar.xz https://download.gnome.org/sources/epiphany/50/
+
+. $base/package/*/*/gnome-conf.in

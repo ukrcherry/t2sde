@@ -1,10 +1,10 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/rocprofiler-compute/rocprofiler-compute.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
-[I] Advanced Profiling and Analytics for AMD Hardware 
+[I] Advanced Profiling and Analytics for AMD Hardware
 
 [T] ROCm Compute Profiler is a system performance profiling tool for machine
 [T] learning/HPC workloads running on AMD MI GPUs. The tool presently targets
@@ -13,17 +13,16 @@
 [U] https://github.com/ROCm/rocprofiler-compute
 
 [A] Advanced Micro Devices, Inc.
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [F] CROSS
 [C] extra/development
 
 [L] MIT
-[S] Stable
-[V] 6.4.0
+[V] 7.2.2
 [P] X -----5---9 300.675
 
-[O] . $base/package/*/*/rocm-conf.in
-
 [CV-GROUP] rocm
-[D] efd9d8eb3dc18dca664accc89388c639e994529563d26f3944d9947a rocprofiler-compute-rocm-6.4.0.tar.gz https://github.com/ROCm/rocprofiler-compute/archive/rocm-6.4.0/
+[D] 2726d013da19cd414cbd16da67724a20e339dd50a71cf685f16d4251 rocprofiler-compute-rocm-7.2.2.tar.gz https://github.com/ROCm/rocprofiler-compute/archive/rocm-7.2.2/
+
+. $base/package/*/*/rocm-conf.in

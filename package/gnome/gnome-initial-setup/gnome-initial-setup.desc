@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gnome-initial-setup/gnome-initial-setup.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,16 +11,14 @@
 [U] https://www.gnome.org
 
 [A] The GNOME Project <gnome-devel-list@gnome.org>
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/shell extra/desktop/gnome
 
 [L] LGPL
-[S] Stable
-[V] 48.1
-[P] X -----5---9 177.200
-
-[O] . $base/package/*/*/gnome-conf.in
+[V] 50.0
 
 [CV-URL] https://download.gnome.org/sources/gnome-initial-setup/cache.json
-[D] 218934c7b9391cb42b1dba921f67cf140b22d241f25f363400615c4d gnome-initial-setup-48.1.tar.xz https://download.gnome.org/sources/gnome-initial-setup/48/
+[D] 8f34608d8010e3c94237490899e67a7a4148266546c983009d8172a0 gnome-initial-setup-50.0.tar.xz https://download.gnome.org/sources/gnome-initial-setup/50/
+
+. $base/package/*/*/gnome-conf.in

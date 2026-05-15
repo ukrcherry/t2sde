@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/ataidle/ataidle.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,18 +11,17 @@
 [T] APM, and acoustic level settings. It can also show details about the
 [T] installed devices.
 
-[U] http://www.cran.org.uk/bruce/software/ataidle.php
+[U] https://web.archive.org/web/20080223081629/http://www.cran.org.uk/bruce/software/ataidle.php
 
 [A] Bruce Cran <bruce@cran.org.uk>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 [F] CROSS
 
 [L] BSD
-[S] Stable
 [V] 2.7.2
 
-[O] var_append makeinstopt ' ' PREFIX=$root/$prefix
-
 [D] 801feb4a669f7703ff15291de9ec0d491415e55c8485cea16d5014e1 ataidle-2.7.2.tar.gz http://www.cran.org.uk/bruce/software/
+
+var_append makeinstopt ' ' PREFIX=$root/$prefix

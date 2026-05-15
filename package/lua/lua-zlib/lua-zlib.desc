@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/lua-zlib/lua-zlib.desc
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A Lua library to access the zlib library and read/write gzip files
+
+[T] This package provides a library to access zlib library functions and
+[T] also to read/write gzip files using an interface similar to the base
+[T] io package.
+
+[U] https://github.com/brimworks/lua-zlib
+
+[A] Tiago Dionizio
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/archive
+
+[L] MIT
+[V] 1.4
+
+[D] ac3539c27a87d8951b7acf4bb02ed28f880df037feefab2e7ed127c2 lzlib-1.4.tar.gz https://github.com/brimworks/lua-zlib/archive/v1.4/
+
+. $base/package/*/*/lua-conf.in
+var_append makeopt ' ' linux

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/jakarta-bsf/jakarta-bsf.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -24,18 +24,17 @@
 [A] Victor J. Orlikowski <vjo@us.ibm.com>
 [A] Charles Murcko <cmurcko@us.ibm.com>
 [A] Olivier Gruber <ogruber@us.ibm.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [L] APL
-[S] Stable
-[V] 2.3.0
+[V] 2.4.0
 
-[O] . $base/package/*/*/java-conf.in BUILD_FILE=src/build.xml BUILD_TYPE=ANT
-[O] srcdir=bsf-$ver
-[O] buildtarget="compile javadocs"
-[O] buildjardir=src/build/lib
-[O] builddocdir=src/build/javadocs
+[D] 03e372ab3de674f0664784705d8d994dbd67055b563e1bb2115a6786 bsf-src-2.4.0.tar.gz https://dlcdn.apache.org/commons/bsf/source/
 
-[D] 6ada3e0ce83babeeb24ac3c582d8cc58fd95c51d6032999c6f7e0def bsf-src-2.3.0.tar.gz http://cvs.apache.org/dist/jakarta/bsf/v2.3.0rc1/src/
+. $base/package/*/*/java-conf.in BUILD_FILE=src/build.xml BUILD_TYPE=ANT
+srcdir=bsf-$ver
+buildtarget="compile javadocs"
+buildjardir=src/build/lib
+builddocdir=src/build/javadocs

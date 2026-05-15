@@ -9,7 +9,6 @@
 [DEP] findutils
 [DEP] flex
 [DEP] gawk
-[DEP] git
 [DEP] grep
 [DEP] gzip
 [DEP] linux-header
@@ -20,6 +19,5 @@
 [DEP] perl
 [DEP] sed
 [DEP] tar
-[DEP] tbb
 [DEP] unixodbc
 [DEP] zlib

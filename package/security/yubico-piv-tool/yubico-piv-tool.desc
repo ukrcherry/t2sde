@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/yubico-piv-tool/yubico-piv-tool.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] PIV Tools for yubikey
+
+[T] PIV Tools for yubikey.
+
+[U] https://developers.yubico.com/yubico-piv-tool
+
+[A] Yubico-piv-tool Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 2.7.3
+[L] BSD
+
+[D] 98f4b76d7d5b203c8204414108a00af398326f41107c1e7582e00465 yubico-piv-tool-2.7.3.tar.gz https://developers.yubico.com/yubico-piv-tool/Releases/

@@ -1,39 +1,32 @@
+[TIMESTAMP] 1774907589 Mon Mar 30 23:53:09 2026
+[BUILDTIME] 640 (9)
+[SIZE] 38.22 MB, 593 files
 
-[TIMESTAMP] 1234162825 Mon Feb  9 07:00:25 2009
-[BUILDTIME] 40 (5)
-[SIZE] 9.87 MB, 150 files
-
-[DEP] agg
+[DEP] bash
 [DEP] binutils
 [DEP] boost
+[DEP] bzip2
+[DEP] cairo
 [DEP] coreutils
-[DEP] curl
 [DEP] diffutils
-[DEP] dmalloc
-[DEP] expat
 [DEP] findutils
+[DEP] fontconfig
 [DEP] freetype
 [DEP] gawk
-[DEP] gdal
-[DEP] gnupth
 [DEP] grep
-[DEP] hdf5
+[DEP] harfbuzz
+[DEP] icu4c
 [OPT] jasper
-[DEP] libice
-[DEP] libidn
+[DEP] libavif
 [DEP] libjpeg
 [DEP] libpng
-[DEP] libsm
 [DEP] libtiff
-[DEP] libtool
-[DEP] libgif
-[DEP] libx11
-[DEP] libxau
-[DEP] libxcb
-[DEP] libxdmcp
+[DEP] liburing
+[DEP] libwebp
 [DEP] linux-header
 [DEP] ncurses
 [DEP] openssl
+[DEP] pkgconfig
 [DEP] postgresql
 [DEP] proj
 [DEP] python
@@ -41,8 +34,9 @@
 [DEP] sed
 [DEP] setuptools
 [DEP] sqlite
+[DEP] swig
 [DEP] sysfiles
 [DEP] tar
-[DEP] unixodbc
-[DEP] xerces-c
+[DEP] util-linux
+[DEP] wolfssl
 [DEP] zlib

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/glslang/glslang.desc
-[COPY] Copyright (C) 2021 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2021 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -18,17 +18,16 @@
 [F] CROSS OBJDIR NO-LTO.ia64 LATOMIC.sparc
 
 [L] BSD
-[S] Stable
-[V] 15.3.0
+[V] 16.3.0
 [P] X ?----5---9 102.310
 
-[O] var_append cmakeopt ' ' -DBUILD_EXTERNAL=OFF
-[O] var_append cmakeopt ' ' -DBUILD_SHARED_LIBS=ON
-[O] var_append cmakeopt ' ' -DALLOW_EXTERNAL_SPIRV_TOOLS=1
+[D] 719cdc2b30fc19820eed28a20d1a123f5f193825c8840cb2c276e75a glslang-16.3.0.tar.gz https://github.com/KhronosGroup/glslang/archive/16.3.0/
 
-[O] atstage toolchain && export LDFLAGS="-Wl,-rpath,${root}${libdir}"
+var_append cmakeopt ' ' -DBUILD_EXTERNAL=OFF
+var_append cmakeopt ' ' -DALLOW_EXTERNAL_SPIRV_TOOLS=1
+[ "$SDECFG_STATIC" = 1 ] || var_append cmakeopt ' ' -DBUILD_SHARED_LIBS=ON
+
+atstage toolchain && export LDFLAGS="-Wl,-rpath,${root}${libdir}"
 # hotfix remove absolute system installed library, especially w/o $root prefix for cross builds
-[O] atstage cross && var_append GCC_WRAPPER_FILTER '|' "sed 's,$root/TOOLCHAIN.*libSPIRV-Tools\(.*\)\.[as].*,-lSPIRV-Tools\1,g'"
-[O] hook_add premake 5 'sed -i "/usr\/lib.*\/.*\.so/d" */*/*.dir/build.make'
-
-[D] 1d8d93f39173abd3beaec69dc4d4e6a3d7f13fafa962f342985c4136 glslang-15.3.0.tar.gz https://github.com/KhronosGroup/glslang/archive/15.3.0/
+atstage cross && var_append GCC_WRAPPER_FILTER '|' "sed 's,$root/TOOLCHAIN.*libSPIRV-Tools\(.*\)\.[as].*,-lSPIRV-Tools\1,g'"
+hook_add premake 5 'sed -i "/usr\/lib.*\/.*\.so/d" */*/*.dir/build.make'

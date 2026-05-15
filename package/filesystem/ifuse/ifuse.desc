@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/ifuse/ifuse.desc
-[COPY] Copyright (C) 2010 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2010 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,13 +11,12 @@
 [U] https://www.libimobiledevice.org
 
 [A] info@libimobiledevice.org
-[M] Rene Rebe <rene@exactcode.de>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 1.1.4
+[V] 1.2.1
 
-[D] 2508dae98c762b2d063619502ed11565c47c4d20a721f1e533fd406c ifuse-1.1.4.tar.bz2 https://github.com/libimobiledevice/ifuse/releases/download/1.1.4/
+[D] 359b87b92965fb05199d6ddf79f9d1e9dc393aaf4e518dbc3bdecd13 ifuse-1.2.1.tar.bz2 https://github.com/libimobiledevice/ifuse/releases/download/1.2.1/

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/erlang-otp/erlang-otp.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -17,11 +17,27 @@
 [M] Sebastian Czech <t2_@arcor.de>
 
 [C] extra/development
-[F] NOPARALLEL CROSS
+[F] CROSS
 
 [L] OpenSource
-[S] Stable
-[V] 27.3
+[V] 29.0
 
-[D] d1d0cb8a0b1dbb1612cc1658ccfe94d175bf56fd063818452d45165e otp_src_27.3.tar.gz http://www.erlang.org/download/
-[D] 0c279f6e1c094c925da0c58466acc1ae3270891558e75f48d212e5bb otp_doc_man_27.3.tar.gz http://erlang.org/download/
+[D] dd5de4588f636fdddd66562cc74ffb6c3351b00939e15f6d50c102e1 otp_src_29.0.tar.gz https://github.com/erlang/otp/releases/download/OTP-29.0/
+[D] 47c6ee5f106f0cd2a0ca5d848d691f044794da7cd560ea9d2b491c45 otp_doc_man_29.0.tar.gz https://github.com/erlang/otp/releases/download/OTP-29.0/
+
+var_append confopt ' ' "--enable-smp-support --without-javac"
+pkginstalled openssl && var_append confopt ' ' --with-ssl
+
+if atstage "cross"; then
+export erl_xcomp_sysroot=$root
+export ac_cv_func_isnan=yes
+export ac_cv_func_isinf=yes
+fi
+
+LD="$CXX"
+
+install_manpages() {
+    tar $taropt `match_source_file -p otp_doc_man_` -C $root$libdir/erlang/
+}
+
+hook_add postinstall 3 install_manpages

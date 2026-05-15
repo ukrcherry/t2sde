@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/nvidia-texture-tools/nvidia-texture-tools.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,19 +11,19 @@
 [U] https://github.com/castano/nvidia-texture-tools/
 
 [A] Ignacio Castaño <castano@ludicon.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/graphic
 [F] CROSS
 
 [L] MIT
-[S] Stable
 [V] 2.1.2
 
 [P] X -----5---9 300.000
 
-[O] runconf=0
-[O] var_append cmakeopt ' ' '-DNVCORE_SHARED=1 -DNVIMAGE_SHARED=1 -DNVTHREAD_SHARED=1 -DNVTT_SHARED=1'
-[O] var_append cmakeopt ' ' '-DLIB_SUFFIX=${libdir#*/lib}'
-
 [D] b35df8ac4f37daec1ded09a3f541b90c371bdc725dc2235aa9de319a nvidia-texture-tools-2.1.2.tar.gz https://github.com/castano/nvidia-texture-tools/archive/2.1.2/
+
+runconf=0
+var_append cmakeopt ' ' -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+var_append cmakeopt ' ' '-DLIB_SUFFIX=${libdir#*/lib}'
+[ "$SDECFG_STATIC" = 1 ] || var_append cmakeopt ' ' '-DNVCORE_SHARED=1 -DNVIMAGE_SHARED=1 -DNVTHREAD_SHARED=1 -DNVTT_SHARED=1'

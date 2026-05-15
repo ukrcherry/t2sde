@@ -1,0 +1,23 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/phoc/phoc.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] A wlroots based Wayland compositor mostly used on mobile phones
+
+[T] A wlroots based Wayland compositor mostly used on mobile phones. Often used
+[T] as part of Phosh but works perfectly well on its own.
+
+[U] https://gitlab.gnome.org/World/Phosh/phoc
+
+[A] Phosh Devs
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] GPL3 LGPL MIT
+[V] 0.54.0
+
+[D] 4b0f03539c63285dc4ba954f0b44010fe5abe01847a7c6a28c5883c1 phoc-v0.54.0.tar.bz2 https://gitlab.gnome.org/World/Phosh/phoc/-/archive/v0.54.0/

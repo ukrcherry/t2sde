@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/falkon/falkon.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -13,16 +13,17 @@
 [U] https://apps.kde.org/falkon/
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 25.04.1
-[P] X -----5---9 200.300
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 26.04.1
 
 [CV-GROUP] kde-gear
-[D] 4f1b7076a143a3fab9f52d759519a712b7f10d542c2f469fd2617db5 falkon-25.04.1.tar.xz https://download.kde.org/stable/release-service/25.04.1/src/
+[D] 93fd67e86a33ad169e22c549eb79bbce3e0cbd6c048d0e7ba4bcc17a falkon-26.04.1.tar.xz https://download.kde.org/stable/release-service/26.04.1/src/
+
+. $base/package/*/*/kde-conf.in
+
+pkginstalled pyside6 || var_append cmakeopt ' ' -DBUILD_PYTHON_SUPPORT=OFF

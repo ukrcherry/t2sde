@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libgit2/libgit2.desc
-[COPY] Copyright (C) 2013 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2013 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,14 +14,16 @@
 [U] https://libgit2.org/
 
 [A] The libgit2 contributors
-[M] René Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/security
 [F] CROSS
 
+[E] opt krb5
+[E] opt mbedtls
+
 [L] GPL
-[S] Stable
-[V] 1.9.0
+[V] 1.9.3
 [P] X -----5---9 135.800
 
-[D] 140e053d35a6c490ef5501324df2f76e27e85778cc220c7c474f89f1 libgit2-1.9.0.tar.gz https://github.com/libgit2/libgit2/archive/v1.9.0/
+[D] 8e76abc9cc755ed27b7639f93ccfac0fb45aab4652fef1032f0deb44 libgit2-1.9.3.tar.gz https://github.com/libgit2/libgit2/archive/v1.9.3/

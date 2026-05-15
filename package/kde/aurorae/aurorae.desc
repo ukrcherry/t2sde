@@ -1,0 +1,29 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/aurorae/aurorae.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Aurorae is a themeable window decoration for KWin
+
+[T] Aurorae is a themeable window decoration for KWin. It supports theme files
+[T] consisting of several SVG files for decoration and buttons. Themes can be
+[T] installed and selected directly in the configuration module of KWin
+[T] decorations.
+
+[U] https://www.kde.org
+
+[A] The KDE-Team
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
+
+[L] GPL
+[V] 6.6.5
+[P] X -----5---9 220.000
+
+[CV-GROUP] kde-plasma
+[D] 5c7464be237555fe283ea89fff595ea6190960f11669e3512abd3b97 aurorae-6.6.5.tar.xz https://download.kde.org/stable/plasma/6.6.5/
+
+. $base/package/*/*/kde-conf.in

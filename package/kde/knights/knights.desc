@@ -1,31 +1,29 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/knights/knights.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
 [I] A chess board for KDE
 
-[T] KNights is a chess game. As a player, your goal is to defeat your opponent 
+[T] KNights is a chess game. As a player, your goal is to defeat your opponent
 [T] by checkmating their king.
 
 [U] https://apps.kde.org/knights/
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
-[E] opt kdoctools
-[E] opt docbook-xml
-[E] opt docbook-xsl
+[F] CROSS OBJDIR
+
+[E] opt kdoctools docbook-xml docbook-xsl
 
 [L] GPL
-[S] Stable
-[V] 25.04.1
-[P] X -----5---9 179.400
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 26.04.1
 
 [CV-GROUP] kde-gear
-[D] 1723e9f258e0f496f54bbe5edd8775049e4b2fbcb79ebe448da1ae35 knights-25.04.1.tar.xz https://download.kde.org/stable/release-service/25.04.1/src/
+[D] c58b2bc3ac7819484069d1ee576e17a3241c9e6f7a82214a5a2421c0 knights-26.04.1.tar.xz https://download.kde.org/stable/release-service/26.04.1/src/
+
+. $base/package/*/*/kde-conf.in

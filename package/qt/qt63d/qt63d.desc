@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/qt63d/qt63d.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,17 +11,16 @@
 [U] https://qt.io
 
 [A] Trolltech AS <www.trolltech.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
-[F] CROSS NO-LTO.gcc
+[F] CROSS OBJDIR
 
 [L] LGPL
-[S] Stable
-[V] 6.9.0
-[P] X -----5---9 128.000
-
-[O] [ $prefix_auto = 1 ] && prefix=$(pkgprefix qt6base) && set_confopt
+[V] 6.11.1
+[P] X -----5---9 141.000
 
 [CV-GROUP] qt6
-[D] c9eab9abd971ce89e9a97340d8ba1d4d3bbf5ab10c2954c84205c860 qt3d-everywhere-src-6.9.0.tar.xz http://download.qt.io/official_releases/qt/6.9/6.9.0/submodules/
+[D] 5b5c2213e931416a2d623e04b5b5a26959894695a41385bf730b9adf qt3d-everywhere-src-6.11.1.tar.xz http://download.qt.io/official_releases/qt/6.11/6.11.1/submodules/
+
+. $base/package/*/*/qt6-conf.in

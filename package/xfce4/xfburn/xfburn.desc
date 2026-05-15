@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xfburn/xfburn.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,14 +13,13 @@
 [U] https://docs.xfce.org/apps/xfburn/start
 
 [A] Jean-François Wauthy <pollux@xfce.org>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/desktop/xfce
 
 [L] GPL
-[S] Beta
-[V] 0.7.2
+[V] 0.8.0
 
-[O] . $base/package/xfce4/*/xfce4-conf.in
+[D] e2eafac737fa8df4c65c99db3fcbda6017276185d46b510252aadbd3 xfburn-0.8.0.tar.bz2 https://archive.xfce.org/src/apps/xfburn/0.8/
 
-[D] cb91ad7829c82fa5dd065e309bc05c242647bbf207892fb36ab237b2 xfburn-0.7.2.tar.bz2 https://archive.xfce.org/src/apps/xfburn/0.7/
+. $base/package/xfce4/*/xfce4-conf.in

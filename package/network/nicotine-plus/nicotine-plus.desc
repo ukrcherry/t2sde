@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/nicotine-plus/nicotine-plus.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Graphical client for the SoulSeek peer-to-peer system
+
+[T] Graphical client for the SoulSeek peer-to-peer system.
+
+[U] https://nicotine-plus.github.io/nicotine-plus
+
+[A] Nicotine-plus Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 3.3.10
+[L] GPL3
+
+[D] 419b8b54ab4b7f35b281bcf8302fd44f55127d05b421c5526e5e3f99 nicotine-plus-3.3.10.tar.gz https://github.com/Nicotine-Plus/nicotine-plus/archive/3.3.10/

@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/acme/acme.desc
+[COPY] Copyright (C) 2015 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] An implementation of the ACME protocol
+
+[T] An implementation of the ACME protocol.
+
+[U] https://letsencrypt.org
+
+[A] Internet Security Research Group
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/security
+
+[L] APL
+[V] 5.6.0
+
+[D] ff1396fdf3ba97e0ffced89902c2841fa1e99f5e6fca23278dbbd79c certbot-5.6.0.tar.gz https://github.com/certbot/certbot/archive/v5.6.0/
+
+runmake=0
+hook_add preconf 5 "cd $pkg"

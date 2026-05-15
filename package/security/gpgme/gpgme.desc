@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gpgme/gpgme.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -13,7 +13,7 @@
 [T] GPGME is mainly included for Sylpheed, to support crypted eMails.
 
 [A] Werner Koch <wk@gnupg.org> {Maintainer}
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/crypto
 [F] CROSS
@@ -21,8 +21,16 @@
 [E] opt doxygen
 
 [L] GPL
-[S] Stable
-[V] 1.24.2
+[V] 2.0.1
 [P] X -----5---9 157.000
 
-[D] 7e73e8a5693a4f07ca39a10ca57cf97623e7273854626d89f9687877 gpgme-1.24.2.tar.bz2 https://www.gnupg.org/ftp/gcrypt/gpgme/
+[D] df35975462feaf8a5bfbfc0de76df015539e8d393d4276d12891744d gpgme-2.0.1.tar.bz2 https://www.gnupg.org/ftp/gcrypt/gpgme/
+
+cleanconfopt=0
+var_append confopt ' ' '--disable-g13-test --disable-gpg-test --disable-gpgsm-test --disable-gpgconf-test'
+
+langs=
+pkginstalled clisp && var_append langs ' ' cl
+var_append confopt ' ' "--enable-languages=\'$langs\'"
+
+[ "$SDECFG_LIBC" = musl ] && var_append GCC_WRAPPER_INSERT ' ' -D_LARGEFILE64_SOURCE

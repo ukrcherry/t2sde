@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/scorched3d/scorched3d.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,12 +13,13 @@
 [U] http://www.scorched3d.co.uk/
 
 [A] Gavin Camp <gcamp@cisco.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/game
 
 [L] GPL
-[S] Stable
-[V] 41.3
+[V] 44
 
-[D] 74348da2e7cb51b0401c7ee2fd7bf0c7466e4eacf817eb280be53845 Scorched3D-41.3-src.tar.gz http://dl.sourceforge.net/sourceforge/scorched3d/
+[D] 22317d597138fefec57cada14c876b3880ebc036107be4b484c5a334 Scorched3D-44-src.tar.gz https://prdownloads.sourceforge.net/sourceforge/scorched3d/
+
+srcdir=scorched

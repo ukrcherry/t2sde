@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/rocr-runtime/rocr-runtime.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -17,19 +17,18 @@
 [U] https://github.com/ROCm/ROCR-Runtime
 
 [A] Advanced Micro Devices, Inc.
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [F] CROSS NO-LTO
 [C] extra/development
 
 [L] MIT
-[S] Stable
-[V] 6.4.0
+[V] 7.2.2
 [P] X -----5---9 300.750
 
-[O] . $base/package/*/*/rocm-conf.in
-[O] var_append cmakeopt ' ' -DBUILD_ROCR=ON
-[O] var_append cmakeopt ' ' -DBUILD_SHARED_LIBS=ON
-
 [CV-GROUP] rocm
-[D] bdc0676b18b82584563ab4ab9c488d8c58c3ad143ce3329f7f92489e ROCR-Runtime-rocm-6.4.0.tar.gz https://github.com/ROCm/ROCR-Runtime/archive/rocm-6.4.0/
+[D] c2140cf4b11c1e658824055884e344fad57882a4a4e3649dea701469 ROCR-Runtime-rocm-7.2.2.tar.gz https://github.com/ROCm/ROCR-Runtime/archive/rocm-7.2.2/
+
+. $base/package/*/*/rocm-conf.in
+var_append cmakeopt ' ' -DBUILD_ROCR=ON
+[ "$SDECFG_STATIC" = 1 ] || var_append cmakeopt ' ' -DBUILD_SHARED_LIBS=ON

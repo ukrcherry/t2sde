@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/ghostpcl/ghostpcl.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -19,7 +19,10 @@
 [C] extra/printing extra/office
 
 [L] Commercial
-[S] Stable
-[V] 8.71
+[V] 10.06.0
 
-[D] 8d79aa1bc9f2d30dce20412a1f2de21d8cc88da95dd264d70100eb45 ghostpdl-8.71.tar.bz2 http://mirror.cs.wisc.edu/pub/mirrors/ghost/GPL/ghostpdl/
+# only for the dir
+[CV-TR] s/\.//
+[D] f20e5ddbf9fb4bf20bb6f5ff7ed82ee46fd17754aa1fb5afa24a82ed ghostpdl-10.06.0.tar.xz https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10060/
+
+var_append CC_WRAPPER_APPEND ' ' -std=gnu17

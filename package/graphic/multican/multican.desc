@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/multican/multican.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,15 +13,14 @@
 [U] https://multican.sourceforge.net/
 
 [A] Jindrich Novy <jnovy@users.sourceforge.net>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/graphic
 [F] CROSS FPIC
 
 [L] GPL
-[S] Beta
 [V] 0.0.5
 
-[O] var_append makeinstopt ' ' BINDIR=$bindir
+[D] 1ce172f12d0b8bbcf1bd7a62c07042ccaf5db95e64b40d58f9b71b7c multican-0.0.5.tar.gz https://prdownloads.sourceforge.net/sourceforge/multican/
 
-[D] 1ce172f12d0b8bbcf1bd7a62c07042ccaf5db95e64b40d58f9b71b7c multican-0.0.5.tar.gz http://dl.sourceforge.net/sourceforge/multican/
+var_append makeinstopt ' ' BINDIR=$bindir

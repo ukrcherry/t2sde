@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---.
 [COPY] t2/package/*/screengrab/screengrab.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---.
 
@@ -11,13 +11,15 @@
 [U] https://github.com/lxqt/screengrab
 
 [A] Screengrab Authors
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/base
 [F] OBJDIR
 
-[V] 2.10.0
+[V] 3.2.0
 [L] GPL
-[S] Stable
 
-[D] dfe9d246d618d4e8a8200be2c02ffc323ede08b964cf3be7241c4b4c screengrab-2.10.0.tar.xz https://github.com/lxqt/screengrab/releases/download/2.10.0/
+[D] a24bcefec6ee56cf2b7bab2942561a0cdcffc8ece5993564030bfe42 screengrab-3.2.0.tar.xz https://github.com/lxqt/screengrab/releases/download/3.2.0/
+
+var_append GCC_WRAPPER_APPEND ' ' "-I$root$(pkgprefix includedir layer-shell-qt)"
+var_append GCC_WRAPPER_APPEND ' ' "-L$root$(pkgprefix libdir layer-shell-qt)"

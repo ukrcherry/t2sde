@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/pandas/pandas.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,13 +13,12 @@
 [U] https://pypi.org/project/pandas/
 
 [A] The Pandas Development Team <pandas-dev@python.org>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [L] BSD
-[S] Stable
-[V] 2.2.3
+[V] 3.0.3
 [P] X -----5---9 400.350
 
-[D] 1ac0b8e84fe86409c31809046ff59895860942767436ede70474e174 pandas-2.2.3.tar.gz https://files.pythonhosted.org/packages/9c/d6/9f8431bacc2e19dca897724cd097b1bb224a6ad5433784a44b587c7c13af/
+[D] 1fe4c70e28793fd79c1669af59f67ba951459ab81e8ba365d47cf757 pandas-3.0.3.tar.gz https://files.pythonhosted.org/packages/source/p/pandas/

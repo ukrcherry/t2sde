@@ -1,20 +1,27 @@
+[TIMESTAMP] 1759875201 Wed Oct  8 00:13:21 2025
+[BUILDTIME] 40 (9)
+[SIZE] 2.56 MB, 127 files
 
-[TIMESTAMP] 1703773629 Thu Dec 28 14:27:09 2023
-[BUILDTIME] 10 (9)
-[SIZE] 0.99 MB, 72 files
-
-[DEP] 00-dirtree
 [DEP] bash
 [DEP] binutils
+[DEP] cmake
 [DEP] coreutils
 [DEP] diffutils
-[DEP] findutils
+[DEP] fftw3
+[DEP] freeglut
 [DEP] gawk
+[OPT] glu
 [DEP] grep
+[DEP] gsl
 [DEP] gzip
+[DEP] libglvnd
 [DEP] libtiff
 [DEP] linux-header
 [DEP] make
-[DEP] openexr
+[OPT] octave
+[OPT] opencv
+[DEP] pkgconfig
+[OPT] qt5base
 [DEP] sed
 [DEP] tar
+[DEP] zlib

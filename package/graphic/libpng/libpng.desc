@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libpng/libpng.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -17,19 +17,22 @@
 [U] http://www.libpng.org/
 
 [A] Glenn Randers-Pehrson <randeg@alum.rpi.edu>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/library
 [F] CROSS
 
 [L] OpenSource
-[S] Stable
-[V] 1.6.47
-[P] X -----5---9 105.950
+[V] 1.6.55
+[P] X ?----5---9 105.950
 
-[O] hook_add prepatch 5 'gzip -cd $(match_source_file -p *apng.patch.gz) | patch -p1'
-[O] hook_add postmake 5 "ln -sf libpng16/png.h $root$includedir/png.h"
-[O] hook_add postmake 5 "ln -sf libpng16/pngconf.h $root$includedir/pngconf.h"
+[D] 846b0c709a9b3d5604425a13c00691e72a854a040dc0009d53265dee libpng-1.6.55.tar.xz https://prdownloads.sourceforge.net/libpng/libpng16/
+[D] e2cfc12dc7ddd49d6aada64471528fb1c2c53c61340bd6cfaa42db59 libpng-1.6.55-apng.patch.gz https://downloads.sourceforge.net/sourceforge/libpng-apng/
 
-[D] 113f96aab1376c069d8c69c4790e6ba8ece0b8259002247d57c35925 libpng-1.6.47.tar.xz http://dl.sourceforge.net/libpng/libpng16/
-[D] 095c6a0538dbf75da14650163975cd1f82344ec2a0d0becd68ea6b26 libpng-1.6.47-apng.patch.gz https://downloads.sourceforge.net/sourceforge/libpng-apng/
+hook_add prepatch 5 'gzip -cd $(match_source_file -p *apng.patch.gz) | patch -p1'
+hook_add postmake 5 "ln -sf libpng16/png.h $root$includedir/png.h"
+hook_add postmake 5 "ln -sf libpng16/pngconf.h $root$includedir/pngconf.h"
+
+#riscv/filter_rvv_intrinsics.c:37:18: error: invalid argument to built-in function
+#   37 |       row_vals = __riscv_vadd_vv_u8m8(row_vals, prev_vals, vl);
+var_append confopt ' ' --enable-riscv-rvv=no

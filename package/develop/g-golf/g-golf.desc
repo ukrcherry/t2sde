@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/g-golf/g-golf.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,12 +12,11 @@
 [U] https://www.gnu.org/software/g-golf/
 
 [A] David Pirotte <david@altosw.be>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [L] LGPL
-[S] Stable
-[V] 0.8.1
+[V] 0.8.7
 
-[D] e547ac9dd245b0fa349bc077114c41e1fb691f8409eb3de2e97c96f9 g-golf-0.8.1.tar.gz https://ftp.gnu.org/gnu/g-golf/
+[D] f1d13ac6f1acd8bb3f5bc51169747b2dd2237dfe9c1b289b0a886ffe g-golf-0.8.7.tar.gz https://ftp.gnu.org/gnu/g-golf/

@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/mcjoin/mcjoin.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Tiny multicast testing tool
+
+[T] Tiny multicast testing tool.
+
+[U] https://github.com/troglobit/mcjoin
+
+[A] Mcjoin Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 2.12
+[L] ISC
+
+[D] b35417f9e92b2ba7172c3c8eb8b8ab9821a39c7f1ab30be87bf335b7 mcjoin-2.12.tar.gz https://github.com/troglobit/mcjoin/releases/download/v2.12/

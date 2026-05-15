@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/cling/cling.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -8,21 +8,20 @@
 
 [T] Cling is an interactive C++ interpreter, built on the top of LLVM and
 [T] Clang libraries. Its advantages over the standard interpreters are that it
-[T] has command line prompt and uses just-in-time (JIT) compiler for compilation. 
+[T] has command line prompt and uses just-in-time (JIT) compiler for compilation.
 
 [U] https://root.cern/cling/
 
 [A] Cern
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [F] OBJDIR CROSS NO-LTO.gcc LATOMIC.arch32
-[R] - alpha arc avr32 blackfin m68k microblaze nios2 openrisc sparc
+[R] - alpha arc avr32 blackfin cris m68k microblaze nios2 openrisc
 
 [L] BSD
-[S] Stable
-[V] 1.2
+[V] 1.3
 
-[O] var_append cmakeopt ' ' "-DLLVM_EXTERNAL_PROJECTS=cling -DLLVM_EXTERNAL_CLING_SOURCE_DIR=.. -DLLVM_ENABLE_PROJECTS=clang -DLLVM_TARGETS_TO_BUILD=host"
+[D] e00593d1224d7333090b13c80933c2dcdca1e1a5760391d404d6509a cling-1.3.tar.gz https://github.com/vgvassilev/cling/archive/refs/tags/v1.3/
 
-[D] 6531ba35fc11e1fb020ebc994b1300950559316aec37c74ea31254d3 cling-1.2.tar.gz https://github.com/vgvassilev/cling/archive/refs/tags/v1.2/
+var_append cmakeopt ' ' "-DLLVM_EXTERNAL_PROJECTS=cling -DLLVM_EXTERNAL_CLING_SOURCE_DIR=.. -DLLVM_ENABLE_PROJECTS=clang -DLLVM_TARGETS_TO_BUILD=host"

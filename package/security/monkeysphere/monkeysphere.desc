@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/monkeysphere/monkeysphere.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Openpgp web of trust certification tools for SSH and TLS servers
+
+[T] Openpgp web of trust certification tools for SSH and TLS servers.
+
+[U] http://web.monkeysphere.info/
+
+[A] Monkeysphere Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.44
+[L] GPL3
+
+[D] 2bffc8d609c81d251092383119dccb0156a1a6afa4aa83f8f2c53a8c monkeysphere_0.44.orig.tar.gz https://deb.debian.org/debian/pool/main/m/monkeysphere/

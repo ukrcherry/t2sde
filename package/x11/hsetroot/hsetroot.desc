@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/hsetroot/hsetroot.desc
+[COPY] Copyright (C) 2015 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A tool which allows you to compose wallpapers for X
+
+[T] A tool which allows you to compose wallpapers for X.
+
+[U] http://www.thegraveyard.org/hsetroot.php
+
+[A] Hyriand <hyriand@thegraveyard.org>
+[M] René Rebe <rene@exactco.de>
+
+[C] base/x11
+[F] CROSS
+
+[L] GPL
+[V] 1.0.5
+
+[D] 748a86b1d1ecb01e8d1c564c457b5480b4bf810559e61d2f4fd118ad hsetroot-1.0.5.tar.gz http://ftp.netbsd.org/pub/pkgsrc/distfiles/
+
+. package/*/*/modular-x-conf.in
+makeinstopt="${makeinstopt/prefix=/PREFIX=}"

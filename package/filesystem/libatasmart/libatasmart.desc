@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libatasmart/libatasmart.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] ATA S.M.A.R.T. Reading and Parsing Library
+
+[T] ATA S.M.A.R.T. Reading and Parsing Library.
+
+[U] https://0pointer.de/blog/projects/being-smart.html
+
+[A] Libatasmart Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS NO-LTO.clang
+
+[V] 0.19
+[L] LGPL
+[P] X -----5---9 177.290
+
+[D] fe0bf169988fc3cabb9d055361d704df1ecf4144a26204727b314b55 libatasmart-0.19.tar.xz http://0pointer.de/public/
+
+atstage cross && hook_add premake 5 "eval $MAKE -C strpool"

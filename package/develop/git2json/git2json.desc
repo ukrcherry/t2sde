@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/git2json/git2json.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Convert git logs to JSON for easier analysis
+
+[T] Convert git logs to JSON for easier analysis.
+
+[U] https://github.com/tarmstrong/git2json
+
+[A] Git2json Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.2.3
+[L] BSD
+
+[D] d6535a3d93e9b2834fad81c8d7df3dc8278e511d3138022cf0970313 git2json-0.2.3.tar.gz https://files.pythonhosted.org/packages/source/g/git2json/

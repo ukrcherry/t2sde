@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/simgear/simgear.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -18,13 +18,12 @@
 [U] http://www.simgear.org/
 
 [A] Curtis Olsen
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/scientific
 
 [L] GPL
-[S] Stable
-[V] 2024.1.1
+[V] 2024.1.5
 [P] X -----5---9 211.300
 
-[D] 5757b0c9060ca44fc5fee848de28d2a75145780377d9945791fe7590 simgear-v2024.1.1.tar.bz2 https://gitlab.com/flightgear/simgear/-/archive/v2024.1.1/
+[D] f42609e1752a204ecf448e8549a6feffda7a9572ebd4bd415996e437 simgear-v2024.1.5.tar.bz2 https://gitlab.com/flightgear/simgear/-/archive/2024.1.5/

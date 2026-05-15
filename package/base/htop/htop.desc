@@ -1,0 +1,34 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/htop/htop.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Htop is an interactive process viewer for Linux
+
+[T] Htop is an ncurses based interactive process viewer for Linux.
+
+[U] https://htop.sourceforge.net/
+
+[A] Hisham Muhammad <lode@gobolinux.org>
+[M] Aldas Nabazas <baldzius@gmail.com>
+
+[C] extra/tool
+[F] CROSS
+
+[E] opt lm_sensors
+[E] opt unwind
+[E] del git
+
+[L] GPL
+[V] 3.5.1
+
+[D] 86431ec88f5f8c328a0ef1a962f5c084063f219e302c904699d2f348 htop-3.5.1.tar.gz https://github.com/htop-dev/htop/archive/3.5.1/
+
+autogen=1
+
+if atstage cross; then
+	hook_add preconf 5 "echo 'ac_cv_linux_vers=2' >> config.cache"
+	hook_add preconf 5 "echo 'ac_cv_func_malloc_0_nonnull=yes' >> config.cache"
+	hook_add preconf 5 "echo 'ac_cv_func_realloc_0_nonnull=yes' >> config.cache"
+fi

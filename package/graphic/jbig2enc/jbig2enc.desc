@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/jbig2enc/jbig2enc.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -10,13 +10,13 @@
 [T] a number of clever tricks to get better compression than G4.
 
 [A] Adam Langley <gl@imperialviolet.org>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/graphic
 
 [L] APL
-[S] Beta
-[V] 0.27
+[V] 0.31
 
-[CV-URL] http://www.imperialviolet.org/jbig2.html
-[D] 8471e473be236a78b1c62e202ba5f6a2b39e468a730fa08c1f3894b4 jbig2enc-0.27.tar.bz2 http://www.imperialviolet.org/binary/
+[D] b17e3b0a54f9eb583519f306094322f20eb6d1052d74019e553c56f3 jbig2enc-0.31.tar.gz https://github.com/agl/jbig2enc/archive/0.31/
+
+runcmake=0

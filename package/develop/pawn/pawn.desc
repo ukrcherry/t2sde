@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/pawn/pawn.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,17 +15,18 @@
 [U] https://www.compuphase.com/pawn/pawn.htm
 
 [A] ITB CompuPhase
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [F] CROSS
 
 [L] APL
-[S] Stable
-[V] 4.1.7152
+[V] 4.1.7487
 
-[O] srcdir=. nocvsinsrcdir=0
-[O] makeinstopt=
-[O] hook_add postmake 5 "install pawn{cc,run,dbg,disasm} $root$bindir/"
+[D] fa086d2c328b91a08d981b37077b61c91827856d2a6d0487bedff1f1 pawn-4.1.7487.zip https://www.compuphase.com/pawn/
 
-[D] fe1fce2c5d7d926c67704c1b81712193b0774c91a8895f88fc670093 pawn-4.1.7152.zip https://www.compuphase.com/pawn/
+srcdir=. nocvsinsrcdir=0
+var_append cmakeopt ' ' -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+makeinstopt=
+hook_add postmake 5 "install pawn{cc,run,dbg,disasm} $root$bindir/"
+var_append GCC_WRAPPER_APPEND ' ' -std=c17

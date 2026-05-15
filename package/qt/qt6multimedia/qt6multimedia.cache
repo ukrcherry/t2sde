@@ -1,6 +1,6 @@
-[TIMESTAMP] 1743117649 Fri Mar 28 00:20:49 2025
-[BUILDTIME] 185 (9)
-[SIZE] 6.19 MB, 375 files
+[TIMESTAMP] 1760654731 Fri Oct 17 00:45:31 2025
+[BUILDTIME] 270 (9)
+[SIZE] 6.61 MB, 426 files
 
 [DEP] alsa-lib
 [DEP] bash
@@ -9,7 +9,11 @@
 [DEP] coreutils
 [DEP] diffutils
 [DEP] gawk
+[DEP] glib
 [DEP] grep
+[DEP] gst-plugins-bad
+[DEP] gst-plugins-base
+[DEP] gstreamer
 [DEP] libglvnd
 [OPT] libxext
 [DEP] linux-header
@@ -24,6 +28,5 @@
 [DEP] sed
 [DEP] spirv-tools
 [DEP] tar
-[DEP] tbb
 [DEP] vulkan-headers
 [DEP] xz

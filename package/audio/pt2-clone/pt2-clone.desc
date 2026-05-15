@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/pt2-clone/pt2-clone.desc
-[COPY] Copyright (C) 2023 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2023 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,17 +13,16 @@
 [U] https://16-bits.org/pt2.php
 
 [A] Olav Sørensen
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] CROSS
 
 [L] BSD
-[S] Stable
-[V] 1.70
+[V] 1.88
 
-[O] runcmake=0 runmake=0
-[O] hook_add inmake 5 "bash make-linux.sh"
-[O] hook_add postmake 5 "install release/other/pt2-clone $root$bindir/"
+[D] da7924abe5c127c2f70cde758913258d7f2c8b648ebafe370887526a pt2-clone-1.88.tar.gz https://github.com/8bitbubsy/pt2-clone/archive/refs/tags/v1.88/
 
-[D] b038bf0d7b1d29be9e57ef16de30335c083cb757da191b52d9164764 pt2-clone-1.70.tar.gz https://github.com/8bitbubsy/pt2-clone/archive/refs/tags/v1.70/
+runcmake=0 runmake=0
+hook_add inmake 5 "bash make-linux.sh"
+hook_add postmake 5 "install release/other/pt2-clone $root$bindir/"

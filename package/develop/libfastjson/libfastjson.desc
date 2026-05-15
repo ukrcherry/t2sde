@@ -1,0 +1,25 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/libfastjson/libfastjson.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] A fast json library for C
+
+[T] A fast json library for C.
+
+[U] https://github.com/rsyslog/libfastjson/
+
+[A] rsyslog
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/library
+[F] CROSS
+
+[L] OpenSource
+[V] 1.2304.0
+[P] X -----5---9 300.00
+
+[D] 44690108c78e5fbdd9318aa2a21872db5560b5cb53b5da8686184915 libfastjson-1.2304.0.tar.gz https://github.com/rsyslog/libfastjson/archive/refs/tags/v1.2304.0/
+
+autogen=1

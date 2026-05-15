@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/linux-firmware/linux-firmware.desc
-[COPY] Copyright (C) 2015 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2015 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -8,19 +8,52 @@
 
 [T] This package contains vendor device's firmware images.
 
-[U] https://www.kernel.org/
+[U] https://gitlab.com/kernel-firmware/linux-firmware.git
 
 [A] Linus Torvalds <torvalds@osdl.org>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/firmware
 [F] CROSS NOPARALLEL
 [K] + linux
 
 [L] Free-to-use
-[S] Stable
-[V] 20250311
+[V] 20260410
 [P] X -?2--5---9 999.000
 
 [CV-URL] https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/refs/tags
-[D] 8ea970ffebd7720e1f7ad0f2013619f0233746efaf0116428f4296bd linux-firmware-20250311.tar.gz https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot/
+[D] d58492cab8dd08536b93f241834b6da47e83cf41c14e93fd9415e5c0 linux-firmware-20260410.tar.bz2 https://gitlab.com/kernel-firmware/linux-firmware/-/archive/20260410/
+
+noorphaned=1 makeopt=
+#makeinstopt="${makeinstopt/install/install-nodedup}"
+
+[[ $arch = x86* ]] || hook_add premake 2 "sed -i /amd-ucode/d WHENCE"
+
+# delete files shared w/ alsa-firmware, at that includes more we prefer that
+hook_add premake 2 "sed -e '/ctefx.bin/d; /ctspeq.bin/d; /ess.maestro3_assp_kernel.fw/d; \
+/ess.maestro3_assp_minisrc.fw/d; /korg.k1212.dsp/d; \
+/sb16.alaw_main.csp/d; /sb16.ima_adpcm_capture.csp/d; /sb16.ima_adpcm_init.csp/d; \
+/sb16.ima_adpcm_playback.csp/d; /sb16.mulaw_main.csp/d; /yamaha.ds1_ctrl.fw/d; \
+/yamaha.ds1_dsp.fw/d; /yamaha.ds1e_ctrl.fw/d; /yamaha.yss225_registers.bin/d;' -i WHENCE"
+
+lf_find_used() {
+    # extract referenced, used firmware files
+    find $root/lib/modules -name "*.ko" | while read f; do
+	${archprefix}modinfo -F firmware $f
+    done | sort -u | while read f; do
+	for f in $f; do # pattern match
+	   echo "$f"
+    	   # resolve symlinks, needs / escaped, ...
+	   sed -n "/Link: ${f//\//\\/} -> /{ s///p; q}" WHENCE
+	done
+    done > INSTALLED
+
+    # add additional, dynamically string constructed firmware
+    ls intel/ibt-* >> INSTALLED
+}
+# only installed used is a bit tricky, as the kernel needs them for initrd 1st :-/
+[ $stagelevel = 1 ] || hook_add premake 5 lf_find_used
+
+hook_add premake 7 'if [ -s INSTALLED ]; then
+  [[ $arch = x86* ]] && ls amd-ucode/*.bin >> INSTALLED
+  patch -p1 < $confdir/*.diff; fi'

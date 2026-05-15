@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libwacom/libwacom.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,15 +13,15 @@
 [U] https://github.com/linuxwacom/libwacom
 
 [A] Red Hat Inc.
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/x11
+[F] CROSS
 
 [L] OpenSource
-[S] Stable
-[V] 2.15.0
+[V] 2.18.0
 [P] X -----5---9 200.000
 
-[O] var_append mesonopt ' ' -Dtests=disabled
+[D] 5fab4e39ae02923637ef979993ba07a831b688ed176bceb73287bf9d libwacom-2.18.0.tar.gz https://github.com/linuxwacom/libwacom/archive/refs/tags/
 
-[D] 2793994189c89a5445f1533a713a3af2dcc6b9d96bb6fe63f843c6b3 libwacom-2.15.0.tar.gz https://github.com/linuxwacom/libwacom/archive/refs/tags/
+var_append mesonopt ' ' -Dtests=disabled

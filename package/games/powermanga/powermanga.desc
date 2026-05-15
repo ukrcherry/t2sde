@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/powermanga/powermanga.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -14,7 +14,7 @@
 [U] https://linux.tlk.fr
 
 [A] TLK Games
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/game
 #[C] extra/game/arcade
@@ -22,7 +22,17 @@
 [R] + x86 x86-64
 
 [L] GPL
-[S] Stable
-[V] 0.90
+[V] 0.93.1
 
-[D] 2454b9d845fdb47e6f355b66b71b16825c770c457353d2281ecf5c3b powermanga-0.90.tar.gz http://linux.tlk.fr/games/Powermanga/download/
+[D] fe5b0cd6aa9ea115799800cdc56e05023a0c3b65d5cb3b912f113d8a powermanga-0.93.1.tgz https://linux.tlk.fr/games/Powermanga/download/
+
+bindir=$root/$SDECFG_PKG_GAMES_BINDIR
+datadir=$root/$SDECFG_PKG_GAMES_DATADIR
+scoredir=$SDECFG_PKG_GAMES_SCOREDIR
+
+hook_add preconf 5 ./bootstrap
+
+var_append makeopt ' ' "PREFIX=$root/$prefix EXEDIR=$bindir DATADIR=$datadir/powermanga SCOREDIR=$scoredir"
+var_append makeinstopt ' ' $makeopt
+
+hook_add premake 5 "mkdir -p $scoredir"

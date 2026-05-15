@@ -1,0 +1,22 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/cntlm/cntlm.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] NTLM Session Response / NTLMv2 authenticating HTTP proxy
+
+[T] NTLM Session Response / NTLMv2 authenticating HTTP proxy.
+
+[U] https://cntlm.sourceforge.net/
+
+[A] Cntlm Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.94.0
+[L] GPL
+
+[D] 73fc9dc3e57afe162263dc6592c45204c731c6ef38c0ed6854d4e0a3 cntlm-0.94.0.tar.gz https://github.com/versat/cntlm/archive/0.94.0/

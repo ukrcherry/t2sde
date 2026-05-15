@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/rdesktop/rdesktop.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -15,13 +15,17 @@
 [U] http://www.rdesktop.org/
 
 [A] Matthew Chapman <matthewc@cse.unsw.edu.au>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network
 [F] CROSS
 
 [L] GPL
-[S] Stable
 [V] 1.9.0
 
 [D] c4c04789655c076eebb1d2eda2b76c735244d858918a40c67e6572d7 rdesktop-1.9.0.tar.gz https://github.com/rdesktop/rdesktop/releases/download/v1.9.0/
+
+var_append confopt ' ' --x-includes=$root/$(pkgprefix includedir libx11)
+var_append confopt ' ' --x-libraries=$root/$(pkgprefix libdir libx11)
+var_append confopt ' ' --disable-credssp
+pkginstalled pcsc-lite || var_append confopt ' ' --disable-smartcard

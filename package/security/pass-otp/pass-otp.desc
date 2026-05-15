@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/pass-otp/pass-otp.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A pass extension for managing one-time-password tokens
+
+[T] A pass extension for managing one-time-password (OTP) tokens.
+
+[U] https://github.com/tadfisher/pass-otp
+
+[A] Pass-otp Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[E] add oath-toolkit
+
+[V] 1.2.0
+[L] GPL3
+
+[D] 8a0744a774996a9e85251252c166817593b9d016749a5d3547da6f23 pass-otp-1.2.0.tar.gz https://github.com/tadfisher/pass-otp/archive/v1.2.0/
+
+var_append makeinstopt ' ' LIBDIR=$libdir

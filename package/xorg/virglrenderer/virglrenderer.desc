@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/virglrenderer/virglrenderer.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,18 +15,20 @@
 [U] https://virgil3d.github.io
 
 [A] Dave Airlie <airlied@redhat.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
+
+[F] CROSS NO-LTO.gcc
+
+[E] add pyyaml
 
 [C] base/x11
-[F] CROSS NO-LTO.gcc
 [L] MIT
-[S] Alpha
 
-[V] 1.1.1
-[P] X -----5---9 127.500
+[V] 1.3.0
+[P] X -----5---9 600.402
 
-[O] . package/*/*/modular-x-conf.in
-[O] var_append GCC_WRAPPER_APPEND ' ' -c?-I$includedir:-L$libdir
-[O] runconf=0
+[D] 7cb3d0bbe95b5859e6a4e18285c4ac74a18761cc7e2dfe91c76b3609 virglrenderer-1.3.0.tar.bz2 https://gitlab.freedesktop.org/virgl/virglrenderer/-/archive/1.3.0/
 
-[D] 2b2a86f0f3a4fdca2173f2009b09a717b37264b5b9bdb14425a4c87b virglrenderer-1.1.1.tar.bz2 https://gitlab.freedesktop.org/virgl/virglrenderer/-/archive/1.1.1/
+. package/*/*/modular-x-conf.in
+runconf=0
+var_append GCC_WRAPPER_APPEND ' ' -c?-I$includedir:-L$libdir

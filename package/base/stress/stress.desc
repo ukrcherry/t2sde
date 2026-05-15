@@ -1,0 +1,27 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/stress/stress.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Stress test unix-like systems
+
+[T] stress is a tool to impose load on and stress test Unix-like systems.
+[T] It will impose user-specified amounts of CPU, I/O, RAM, and HDD load
+[T] and report any errors it detects. It is used for automated stress
+[T] testing and for debugging system components which fail only or more
+[T] often when under load. It runs on x86, PPC64, and PPC 32 GNU/Linux,
+[T] Tru64, SPARC Solaris, and more.
+
+[U] https://github.com/resurrecting-open-source-projects/stress
+
+[A] Amos Waterland <awaterl@yahoo.com>
+[M] Valentin Ziegler <valentin.ziegler@googlemail.com>
+
+[C] base/tool
+[F] CROSS
+
+[L] GPL
+[V] 1.0.7
+
+[D] 90af9752c51f1d3231f1a60384d74203500abc7ce35d7f9a7b55c8eb stress-1.0.7.tar.gz https://github.com/resurrecting-open-source-projects/stress/releases/download/1.0.7/

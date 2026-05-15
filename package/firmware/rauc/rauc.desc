@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/rauc/rauc.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Safe and secure software updates for embedded Linux
+
+[T] Safe and secure software updates for embedded Linux.
+
+[U] https://rauc.io/
+
+[A] Rauc Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 1.15.2
+[L] LGPL
+
+[D] bc83fb35667b86e28627e542b907dcfaa1f4b5c60f023cff8f2e3d85 rauc-1.15.2.tar.xz https://github.com/rauc/rauc/releases/download/v1.15.2/

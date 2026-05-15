@@ -1,0 +1,28 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libopusenc/libopusenc.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Library for encoding .opus audio files and live streams
+
+[T] Library for encoding .opus audio files and live streams.
+
+[U] https://opus-codec.org
+
+[A] Libopusenc Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[E] opt doxygen
+[E] opt graphviz
+
+[L] BSD
+[V] 0.3.0
+[P] X -----5---9 300.000
+
+[D] c88622bfdb4c97df5a37c58d0b04180c735badaddce53890b7d8d245 libopusenc-0.3.0.tar.gz https://github.com/xiph/libopusenc/archive/v0.3/
+
+autogen=1

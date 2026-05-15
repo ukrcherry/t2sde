@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/dpkg/dpkg.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -20,17 +20,17 @@
 [U] https://www.debian.org/Packages/unstable/base/dpkg.html
 
 [A] Jeff Covey
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 [F] NOPARALLEL
 
-[L] GPL
-[S] Stable
-[V] 1.22.18
-[P] X -----5---9 116.000
+[E] opt zlib-ng
 
-[O] confopt="$confopt --without-sgml-doc --without-start-stop-daemon"
-#don't install perl modules in vendor_perl dir
-[O] hook_add premake 5 "sed -i 's:perl5\/vendor_perl:perl5:' scripts/Makefile"
-[D] 79515eefc0f80b6b5a054998133ec1a8d829a3d6ceb30192fe675215 dpkg_1.22.18.tar.xz http://ftp.debian.org/debian/pool/main/d/dpkg/
+[L] GPL
+[V] 1.23.7
+
+[D] 1ec8c0407a01efb35da62644f5457988744ae134e8768faf1f21c042 dpkg_1.23.7.tar.xz http://ftp.debian.org/debian/pool/main/d/dpkg/
+
+confopt="$confopt --without-sgml-doc --without-start-stop-daemon"
+hook_add premake 5 "sed -i 's:perl5\/vendor_perl:perl5:' scripts/Makefile"

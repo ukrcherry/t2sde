@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/kmymoney/kmymoney.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,21 +11,19 @@
 [T] double-entry accounting software package, for personal
 [T] or small-business use.
 
-[U] https://kmymoney2.sourceforge.net
+[U] https://kmymoney.org/
 
 [A] Thomas Baumgart <ipwizard@users.sourceforge.net>
 [A] Felix Rodriguez <frodriguez@users.sourceforge.net>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
-[F] NOPARALLEL
 [L] GPL
-[S] Beta
-[V] 5.1-890
-[P] O -----5---9 207.600
+[V] 5.2.2
 
-[O] pkginstalled aqbanking && var_append confopt ' ' --enable-kbanking
-[O] . $base/package/*/*/kde-conf.in
+[D] 3f665847edf6488f723c6c777bb2c95ac372257b4b461acac64c2ae4 kmymoney-5.2.2.tar.xz https://download.kde.org/stable/kmymoney/5.2.2/
 
-[D] 6472ccbbb423e0678fabdfaa9a89ca7b866a8d9d80f09564e8386ca3 kmymoney-5.1-890-windows-msvc2019_64-cl.exe https://binary-factory.kde.org/job/KMyMoney_Release_win64/890/artifact/
+. $base/package/*/*/kde-conf.in
+var_append cmakeopt ' ' -DBUILD_WITH_QT6=ON

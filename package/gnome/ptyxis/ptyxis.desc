@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/ptyxis/ptyxis.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,16 +11,13 @@
 [U] https://devsuite.app/ptyxis/
 
 [A] Christian Hergert <chergert@redhat.com>
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/shell extra/desktop/gnome
 
 [L] GPL3
-[S] Stable
-[V] 48.3
-[P] X -----5---9 186.000
-
-[O] . $base/package/*/*/gnome-conf.in
-#[O] pkginstalled nautilus || var_append mesonopt ' ' -Dnautilus_extension=false
+[V] 50.1
 
 [D] fa0a846d0f6c2aadfd343ae24e378b271b4bd3a6edaabb3c154e440b ptyxis-47.6.tar.bz2 https://gitlab.gnome.org/chergert/ptyxis/-/archive/47.6/
+
+. $base/package/*/*/gnome-conf.in

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/tzdata/tzdata.desc
-[COPY] Copyright (C) 2013 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2013 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,17 +13,45 @@
 [U] https://www.iana.org/time-zones
 
 [A] Arthur David Olson
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [F] CROSS
 [C] base/system
 
 [L] PublicDomain
-[S] Stable
-[V] 2025b
+[V] 2026b
 [P] X -----5---9 200.000
 
 [CV-URL] http://www.iana.org/time-zones
+[D] 6d4eb0575d166337e564906a4923878b3c54c2159c5147fd5fd188ec tzcode2026b.tar.gz http://www.iana.org/time-zones/repository/releases/
+[D] 82739546c71d15406bdcb49e083ef8d6d67c43799526051f70d80598 tzdata2026b.tar.gz http://www.iana.org/time-zones/repository/releases/
 
-[D] 2c1ab2cd19493fc8f6f6452c82f1115607466d70808c7a20afca2855 tzcode2025b.tar.gz http://www.iana.org/time-zones/repository/releases/
-[D] f4eba2c8b4caa77d349d697f2145012f06c393c11abdcdd84b347cdc tzdata2025b.tar.gz http://www.iana.org/time-zones/repository/releases/
+runmake=0
+runconf=0
+
+tzcode_extract() {
+	local taropt_orig="$taropt"
+	mkdir -p "${xsrctar%%.*}"
+	taropt="-C ${xsrctar%%.*} $taropt_orig"
+	autoextract_tar "$@"
+	taropt="$taropt_orig"
+}
+custextract='tzcode_extract'
+
+tzdata_extract() {
+	tar -v $taropt $(match_source_file -p tzdata)
+}
+hook_add prepatch 5 tzdata_extract
+
+tzdata_install() {
+	TIMEZONES="africa antarctica asia australasia europe northamerica southamerica etcetera backward"
+
+	mkdir -p $root/usr/share/zoneinfo/{,posix,right}
+	zic -y ./yearistype -d $root/usr/share/zoneinfo -L /dev/null $TIMEZONES
+	zic -y ./yearistype -d $root/usr/share/zoneinfo/posix -L /dev/null $TIMEZONES
+	zic -y ./yearistype -d $root/usr/share/zoneinfo/right -L leapseconds $TIMEZONES
+	zic -y ./yearistype -d $root/usr/share/zoneinfo -L/dev/null -p America/New_York
+	install -p -m 644 *.tab $root/usr/share/zoneinfo/
+	install -m644 leap-seconds.list $root/usr/share/zoneinfo/
+}
+hook_add inmake 5 tzdata_install

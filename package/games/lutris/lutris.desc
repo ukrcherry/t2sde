@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/lutris/lutris.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -19,15 +19,19 @@
 [F] CROSS
 
 [E] opt cython
+[E] add 7zip
+[E] add p11-kit
 [E] add pyidna
 [E] add pydbus
 [E] add pillow
 [E] add python-lxml
+[E] add jansson
+[E] add gnutls
+[E] add samba
 
 [L] GPL3
-[S] Gamma
-[V] 0.5.19
+[V] 0.5.22
 
-[O] runmake=0 runpysetup=0
+[D] 8fdedfe85aa355fd742ab1f9825064fd287162c36f10e1192616f414 lutris-0.5.22.tar.gz https://github.com/lutris/lutris/archive/v0.5.22/
 
-[D] 83d7a32147de86ba9519479acc3a85416501ca8ab85ec70b359f1d50 lutris-0.5.19.tar.gz https://github.com/lutris/lutris/archive/v0.5.19/
+runmake=0 runpysetup=0

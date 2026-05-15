@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/pydantic-core/pydantic-core.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,15 +13,14 @@
 [U] https://github.com/pydantic/pydantic-core
 
 [A] Samuel Colvin <s@muelcolvin.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [E] add python-typing-extensions
 
 [L] MIT
-[S] Alpha
-[V] 2.27.2
+[V] 2.41.5
 [P] X -----5---9 110.265
 
-[D] e62ce898ec46429dd61aedeb367c9f1bff214815d0fabaf98bad65f6 pydantic_core-2.27.2.tar.gz https://files.pythonhosted.org/packages/fc/01/f3e5ac5e7c25833db5eb555f7b7ab24cd6f8c322d3a3ad2d67a952dc0abc/
+[D] afcee38f723d2285d7f4f4741a67dcefa05d1b56c0cefa85b9d42b43 pydantic_core-2.41.5.tar.gz https://files.pythonhosted.org/packages/source/p/pydantic-core/

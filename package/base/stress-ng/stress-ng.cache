@@ -1,0 +1,32 @@
+[TIMESTAMP] 1759859497 Tue Oct  7 19:51:37 2025
+[BUILDTIME] 270 (9)
+[SIZE] 16.23 MB, 25 files
+
+[DEP] 00-dirtree
+[DEP] acl
+[DEP] bash
+[DEP] binutils
+[DEP] coreutils
+[DEP] diffutils
+[DEP] gawk
+[DEP] gmp
+[DEP] grep
+[DEP] gzip
+[DEP] keyutils
+[DEP] kmod
+[DEP] libaio
+[DEP] libbsd
+[DEP] libcap
+[DEP] libglvnd
+[DEP] libjpeg
+[DEP] libmd
+[DEP] libxcrypt
+[DEP] linux-header
+[DEP] make
+[DEP] mesa
+[DEP] mpfr
+[DEP] sed
+[DEP] tar
+[DEP] xxhash
+[DEP] xz
+[DEP] zlib

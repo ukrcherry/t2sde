@@ -1,0 +1,25 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/tdetoys/tdetoys.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Toy apps for Trinity Desktop Environment
+
+[T] TDE toy applications.
+
+[U] https://www.trinitydesktop.org/
+
+[A] Trinity Desktop Developers
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/x11
+[F] OBJDIR
+
+[L] GPL
+[V] 14.1.6
+
+[CV-GROUP] tde
+[D] 70b65c4abd0a2f19cbe8cfcde9d81f51519611ecb328469862ef3fac tdetoys-trinity-14.1.6.tar.xz https://mirror.ppa.trinitydesktop.org/trinity/releases/R14.1.6/main/core/
+
+. $base/package/*/*/tde-conf.in

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/unixodbc/unixodbc.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -22,16 +22,15 @@
 [U] https://www.unixodbc.org/
 
 [A] Nick Gorham <gorham@easysoft.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/database
 [F] CROSS
 
 [L] LGPL
-[S] Stable
-[V] 2.3.12
+[V] 2.3.14
 [P] X -----5---9 158.290
 
-[O] var_append confopt ' ' --enable-gui=no
+[D] e9802d595391603242091303f670da3d07aa98adcdbd7c1dd0720a03 unixODBC-2.3.14.tar.gz https://www.unixodbc.org/
 
-[D] a49401e5d39b5daf96270635747bd2358de3f38a029ee0b35ff4afdd unixODBC-2.3.12.tar.gz https://www.unixodbc.org/
+var_append confopt ' ' --enable-gui=no

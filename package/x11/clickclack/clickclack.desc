@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/clickclack/clickclack.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Haptic/audio feedback daemon for virtual keyboards like svkbd and wvkbd
+
+[T] Haptic/audio feedback daemon for virtual keyboards like svkbd and wvkbd.
+
+[U] https://git.sr.ht/~proycon/clickclack
+
+[A] Clickclack Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.2.3
+[L] MIT
+
+[D] 6d5d21a4e5edb64de73e48890f9d86b39a8ef7b3f4adef5ff58f6108 clickclack-0.2.3.tar.gz !https://git.sr.ht/~proycon/clickclack/archive/0.2.3.tar.gz

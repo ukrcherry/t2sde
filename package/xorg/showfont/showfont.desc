@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/showfont/showfont.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,15 +13,14 @@
 [U] https://www.X.org
 
 [A] X.org Foundation {http://www.X.org}
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/x11
 [F] CROSS
 
 [L] OpenSource
-[S] Stable
-[V] 1.0.6
+[V] 1.0.7
 
-[O] . package/*/*/modular-x-conf.in
+[D] 13516c4cd5178c167405a09a579ffcc63daa128e04849fba5325598c showfont-1.0.7.tar.xz http://xorg.freedesktop.org/releases/individual/app/
 
-[D] f95d667b449f893a600a7879fbcd816dbfda100e4f7fe5759ac14e2c showfont-1.0.6.tar.xz http://xorg.freedesktop.org/releases/individual/app/
+. package/*/*/modular-x-conf.in

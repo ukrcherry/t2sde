@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/openssh/openssh.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -23,16 +23,36 @@
 [A] Tatu Ylonen {Original Author}
 [A] Aaron Campbell, Bob Beck, Markus Friedl, Niels Provos,
 [A] Theo de Raadt, and Dug Song {Current Maintainers}
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/system extra/network
 [F] CROSS FAT-LTO.mips FAT-LTO.mips64
 
 [L] OpenSource
-[S] Stable
-[V] 10.0p1
+[V] 10.3p1
 [P] X -----5---9 191.100
 
-#[O] var_append GCC_WRAPPER_APPEND ' ' -DSANDBOX_SECCOMP_FILTER_DEBUG=1
+[D] aaca3ecc06dcad15529fa52b8b4a5ae69a766cd8ac221214b6a69644 openssh-10.3p1.tar.gz http://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/
 
-[D] fd8ccc744cc2873c6a0184cd4006569b59fe13bbed1eeb6fd0d93481 openssh-10.0p1.tar.gz http://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/
+LD=$CC
+
+[ "$sysconfdir" == "/etc" ] && sysconfdir=/etc/ssh
+#var_append GCC_WRAPPER_APPEND ' ' -DSANDBOX_SECCOMP_FILTER_DEBUG=1
+
+# officially broken for gcc/mips, powerpc and ia64
+[[ "$arch" = mips* || "$arch" = powerpc* || "$arch" = ia64 ]] &&
+	var_append GCC_WRAPPER_REMOVE ' ' -fzero-call-used-regs=used
+
+var_append confopt ' ' "--sysconfdir=\$sysconfdir \
+	--with-md5-passwords \
+	--disable-suid-ssh \
+	--with-xauth=/usr/X11/bin/xauth"
+	#--with-sandbox=no"
+
+pkginstalled pam && var_append confopt ' ' --with-pam
+pkginstalled tcp_wrappers && var_append confopt ' ' --with-tcp-wrappers
+pkginstalled systemd &&
+	var_append GCC_WRAPPER_APPEND ' ' -DSYSTEMD_NOTIFY=1 &&
+	hook_add postmake 5 "pkg_systemd_install_service $confdir/sshd.service"
+
+makeinstopt="DESTDIR=$root install-nokeys"

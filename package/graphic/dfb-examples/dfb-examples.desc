@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/dfb-examples/dfb-examples.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Example programs for the Direct Framebuffer API
+
+[T] Example programs for the Direct Framebuffer API
+
+[U] https://www.directfb.org/
+
+[A] DirectFB Team <dok@directfb.org>
+[M] Michael Tross <michael@tross.org>
+
+[C] extra/multimedia
+
+[L] GPL
+[V] 1.2.0
+[P] O -----5---9 218.700
+
+[D] 1071952629 DirectFB-examples-1.2.0.tar.gz http://www.directfb.org/downloads/Extras/
+#[D] X DirectFB-examples-20080120.tar.bz2 git://git.directfb.org/git/directfb/extras/DirectFB-examples.git a300fff8f68b92d8bf1bfa312aaf7417001cbb3b

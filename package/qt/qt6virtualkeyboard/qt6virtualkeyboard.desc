@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/qt6virtualkeyboard/qt6virtualkeyboard.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,17 +11,18 @@
 [U] https://qt.io
 
 [A] Trolltech AS <www.trolltech.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
-[F] CROSS NO-LTO.gcc
+[F] CROSS OBJDIR
+
+[E] opt hunspell
 
 [L] LGPL
-[S] Stable
-[V] 6.9.0
-[P] X -----5---9 127.110
-
-[O] [ $prefix_auto = 1 ] && prefix=$(pkgprefix qt6base) && set_confopt
+[V] 6.11.1
+[P] X -----5---9 140.110
 
 [CV-GROUP] qt6
-[D] 12eeec7ae4f7f9a1c344dc917f562dd9edfb3aa2173627cf02e3da29 qtvirtualkeyboard-everywhere-src-6.9.0.tar.xz http://download.qt.io/official_releases/qt/6.9/6.9.0/submodules/
+[D] b66af676fa71c97d37e5f07ce1aa8aa28e6dea2bd28536bee63b5d43 qtvirtualkeyboard-everywhere-src-6.11.1.tar.xz http://download.qt.io/official_releases/qt/6.11/6.11.1/submodules/
+
+. $base/package/*/*/qt6-conf.in

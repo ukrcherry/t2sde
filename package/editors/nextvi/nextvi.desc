@@ -1,0 +1,26 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/nextvi/nextvi.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] A small vi/ex terminal text editor
+
+[T] Nextvi is a modern clone of the command-line text editor vi(1), initially
+[T] developed by Bill Joy in 1976 for Unix-based systems.
+
+[U] https://github.com/kyx0r/nextvi
+
+[A] kyx0r
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/editor
+[F] CROSS
+
+[L] OpenSource
+[V] 5.2
+
+[D] 101b4e54e10eca1c4dd4e703ca8d672bccdbbe94d19f73217909f9f3 nextvi-5.2.tar.gz https://github.com/kyx0r/nextvi/archive/5.2/
+
+makeinstopt=
+hook_add postmake 5 'install vi $root$bindir/nextvi'

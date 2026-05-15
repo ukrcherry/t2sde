@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/dvtm/dvtm.desc
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Dynamic virtual terminal manager
+
+[T] dvtm brings the concept of tiling window management, popularized by
+[T] X11-window managers like dwm to the console. As a console window manager it
+[T] tries to make it easy to work with multiple console based programs.
+
+[U] https://www.brain-dump.org/projects/dvtm/
+
+[A] Marc André Tanner
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/shell
+
+[L] MIT
+[V] 0.15
+
+[D] 397c4bf56f86bd921982fa7460ff69a0172eb5eb9dc87a6c9c701816 dvtm-0.15.tar.gz https://www.brain-dump.org/projects/dvtm/

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/talloc/talloc.desc
-[COPY] Copyright (C) 2011 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2011 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -16,17 +16,17 @@
 
 [C] extra/development
 
+[E] opt acl
 [E] opt docbook-xml docbook-xsl libxslt
 [E] del valgrind
 
 [L] GPL
-[S] Stable
-[V] 2.4.3
+[V] 2.4.4
 [P] X -----5---9 115.000
 
-[O] cleanconfopt=0
-[O] var_remove_regex confopt ' ' '--disable-debug'
-[O] [ "$SDECFG_DEBUG" = 1 ] && var_append confopt ' ' --enable-debug
-[O] var_remove_regex confopt ' ' '.*pam.*'
+[D] d0ef45dcae471e2dc12eca75cafa71cab4b86ea1ff30d9c7be0e007b talloc-2.4.4.tar.gz http://samba.org/ftp/talloc/
 
-[D] 2da56e5b7d4da8afac549d9ae800e72ba042546107d685081104d36b talloc-2.4.3.tar.gz http://samba.org/ftp/talloc/
+cleanconfopt=0
+var_remove_regex confopt ' ' '--disable-debug'
+[ "$SDECFG_DEBUG" = 1 ] && var_append confopt ' ' --enable-debug
+var_remove_regex confopt ' ' '.*pam.*'

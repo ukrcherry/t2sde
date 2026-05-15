@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/suricata/suricata.desc
-[COPY] Copyright (C) 2016 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2016 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,13 +14,14 @@
 [U] https://suricata.io/
 
 [A] Open Information Security Foundation
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/system
-[F] CROSS
+[F] CROSS NO-LTO
 
 [L] GPL
-[S] Stable
-[V] 7.0.10
+[V] 8.0.4
 
-[D] b3d31767773459894d2942bc49ff6be7b05ff708d0add78133cd6170 suricata-7.0.10.tar.gz https://www.openinfosecfoundation.org/download/
+[D] c1fdc70ab38673c707a56b8eecc7b228f26e77467c69fffd7b935f7c suricata-8.0.4.tar.gz https://www.openinfosecfoundation.org/download/
+
+hook_add preconf 5 "export RUSTDOC=true"

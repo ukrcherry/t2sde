@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/github-cli/github-cli.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,15 +13,14 @@
 [U] https://cli.github.com/
 
 [A] Github
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [F] CROSS
 
 [L] GPL
-[S] Beta
-[V] 2.72.0
+[V] 2.92.0
 
-[O] rungo=0
+[D] 52efafd851cf88947e5be92ff8b19ec70b641f11a3de76fd5cdefc36 githubcli-v2.92.0.tar.gz https://github.com/cli/cli/archive/v2.92.0/
 
-[D] cc04688396add1da7f712e7de5770ccf0d599ef4becf112ee68d1e7c githubcli-v2.72.0.tar.gz https://github.com/cli/cli/archive/v2.72.0/
+rungo=0

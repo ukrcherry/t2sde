@@ -1,0 +1,27 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/mcp-toolbox/mcp-toolbox.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] MCP server for databases
+
+[T] MCP Toolbox for Databases is an open source MCP server for databases. It
+[T] enables you to develop tools easier, faster, and more securely by handling
+[T] the complexities such as connection pooling, authentication, and more.
+
+[U] https://github.com/googleapis/genai-toolbox
+
+[A] Google APIs
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/ai
+[F] CROSS
+
+[L] APL
+[V] 1.2.0
+
+[D] 0c54dae0b088fe6ccc70b21338d5da3516b10a84bb32f09ecbb00701 genai-toolbox-1.2.0.tar.gz https://github.com/googleapis/genai-toolbox/archive/v1.2.0/
+
+. $base/package/*/*/go-conf.in
+hook_add postmake 5 'cp -vf genai-toolbox $root$bindir/toolbox'

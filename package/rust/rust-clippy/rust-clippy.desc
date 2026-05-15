@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/rust-clippy/rust-clippy.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,17 +15,16 @@
 [U] https://rust-lang.github.io/rust-clippy/
 
 [A] Rust Community
-[M] Rene Rebe <rene@exactcode.de>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/tool
 [F] CROSS
 
-[L] APL
-[S] Stable
-[V] 1.86.0
+[L] APL MIT
+[V] 1.95.0
 
-#[O] cargoinstopt=
-#[O] hook_add postmake 5 'install target/*/rust-analyzer $root$bindir/'
-[O] export RUSTC_BOOTSTRAP=1
+[D] ee846e9adc8ef9122016d6f84af9935a30c30b488320614e28c5ef8b rust-clippy-v1.95.0.tar.gz https://github.com/rust-lang/rust-clippy/archive/rust-1.95.0/
 
-[D] 6ab93ecaf3b3a47c3ab2c53835e0861900320bee28b163b850619b8d rust-clippy-v1.5.1.tar.gz https://github.com/rust-lang/rust-clippy/archive/rust-1.86.0/
+#cargoinstopt=
+#hook_add postmake 5 'install target/*/rust-analyzer $root$bindir/'
+export RUSTC_BOOTSTRAP=1

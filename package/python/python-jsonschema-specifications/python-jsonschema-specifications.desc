@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/python-jsonschema-specifications/python-jsonschema-specifications.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,7 +13,7 @@
 [U] https://github.com/python-jsonschema/jsonschema-specifications
 
 [A] Julian Berman <Julian+jsonschema-specifications@GrayVines.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
@@ -22,9 +22,7 @@
 [E] add referencing
 
 [L] MIT
-[S] Stable
-[V] 2024.10.1
+[V] 2025.9.1
 [P] X -----5---9 109.100
 
-[D] 21c232355c94a3c8eae4d5a3aff9f6dda971ba00a8d324f47bec5b10 jsonschema_specifications-2024.10.1.tar.gz https://files.pythonhosted.org/packages/source/j/jsonschema-specifications/
-
+[D] aed2f4fdeddba2f0cf807a3078af94f4b35ac46ef5058af4c0c1a0ea jsonschema_specifications-2025.9.1.tar.gz https://files.pythonhosted.org/packages/source/j/jsonschema-specifications/

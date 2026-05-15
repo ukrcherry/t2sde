@@ -1,0 +1,26 @@
+[TIMESTAMP] 1759859653 Tue Oct  7 19:54:13 2025
+[BUILDTIME] 6 (9)
+[SIZE] 0.15 MB, 7 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] cmake
+[DEP] coreutils
+[DEP] diffutils
+[DEP] fftw3
+[DEP] gawk
+[DEP] grep
+[DEP] gzip
+[OPT] lame
+[DEP] libconfig
+[DEP] libogg
+[DEP] librtlsdr
+[DEP] libshout
+[DEP] libvorbis
+[DEP] linux-header
+[DEP] make
+[DEP] pkgconfig
+[DEP] pulseaudio
+[DEP] sed
+[DEP] soapysdr
+[DEP] tar

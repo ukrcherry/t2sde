@@ -1,0 +1,26 @@
+[TIMESTAMP] 1768854515 Mon Jan 19 21:28:35 2026
+[BUILDTIME] 20 (9)
+[SIZE] 8.21 MB, 329 files
+
+[DEP] automake
+[DEP] bash
+[DEP] binutils
+[DEP] boost
+[DEP] coreutils
+[OPT] cppunit
+[DEP] diffutils
+[OPT] doxygen
+[DEP] findutils
+[DEP] gawk
+[DEP] grep
+[DEP] icu4c
+[DEP] lcms2
+[DEP] librevenge
+[DEP] linux-header
+[DEP] make
+[DEP] pkgconfig
+[DEP] sed
+[DEP] tar
+[DEP] util-linux
+[DEP] xz
+[DEP] zlib

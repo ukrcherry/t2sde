@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/ctags/ctags.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -15,20 +15,19 @@
 [T] for all possible C language constructs (which no other ctags offers), and
 [T] because most were easily fooled by a number of preprocessor contructs.
 
-[U] https://ctags.sf.net
+[U] https://ctags.io/
 
 [A] Darren Hiebert <dhiebert@users.sourceforge.net>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 5.8
+[V] 6.2.1
 [P] X -----5---9 125.600
 
-[O] var_append confopt ' ' '--bindir=\${prefix}/bin --mandir=\${prefix}/man'
-[O] var_append makeinstopt ' ' prefix=$root/$prefix
+[D] 304041de5167a09b65b4eb396548dc46773d94bf800ce1a2966d797f universal-ctags-6.2.1.tar.gz https://github.com/universal-ctags/ctags/releases/download/v6.2.1/
 
-[D] a6795ffb723d7d2fae4fbb838e67dd1a306d76edd35fa11ac287954e ctags-5.8.tar.gz http://dl.sourceforge.net/sourceforge/ctags/
+var_append confopt ' ' --enable-tmpdir=/tmp
+pkginstalled emacs && var_append confopt ' ' --enable-etags

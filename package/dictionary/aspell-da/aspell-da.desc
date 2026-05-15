@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/aspell-da/aspell-da.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Danish dictionary for aspell
+
+[T] The Danish dictionary for aspell.
+
+[U] http://aspell.net
+
+[A] The Aspell project
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/office
+[F] CROSS
+
+[L] GPL
+[V] 4.6.0
+
+[D] f4fbb32451ff5e1c2e46ba7bee32a47dcf389d00bb5a7b3c49825e36 aspell6-da-4.6.0.tar.gz https://github.com/mortenivar/aspell-da/archive/refs/tags/4.6.0/
+
+confopt=

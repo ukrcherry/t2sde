@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/wayland/wayland.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -16,20 +16,19 @@
 [U] https://wayland.freedesktop.org
 
 [A] X.org Foundation {http://www.X.org}
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/x11
 [F] CROSS
 
 [L] OpenSource
-[S] Stable
-[V] 1.23.1
+[V] 1.25.0
 [P] X ?----5---9 112.400
 
-[O] runconf=0
-[O] atstage cross && var_append PKG_CONFIG_LIBDIR ':' $root/TOOLCHAIN/cross/lib/pkgconfig
-#[O] (! pkginstalled graphviz || atstage toolchain) &&
-[O] var_append mesonopt ' ' '-Ddocumentation=false -Dtests=false'
-
 [CV-URL] https://wayland.freedesktop.org/releases.html
-[D] 3d5d02a706a900c1b23908a9c8cab0ff949e89927ae78482bce443c1 wayland-1.23.1.tar.xz https://gitlab.freedesktop.org/wayland/wayland/-/releases/1.23.1/downloads/
+[D] f98725d9f7c437c2f3fed54f4003d5d36317b81d40f683d828a3d544 wayland-1.25.0.tar.xz https://gitlab.freedesktop.org/wayland/wayland/-/releases/1.25.0/downloads/
+
+runconf=0
+atstage cross && var_append PKG_CONFIG_LIBDIR ':' $root/TOOLCHAIN/cross/lib/pkgconfig
+#(! pkginstalled graphviz || atstage toolchain) &&
+var_append mesonopt ' ' '-Ddocumentation=false -Dtests=false'

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/inih/inih.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -8,18 +8,17 @@
 
 [T] inih (INI Not Invented Here) is a simple .INI file parser written in C.
 
-[U] https://github.com/benhoyt/inih/archive/refs/tags/r53.tar.gz
+[U] https://github.com/benhoyt/inih/
 
 [A] Ben Hoyt
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/library
 [F] CROSS
 [R] - avr32
 
 [L] BSD
-[S] Stable
-[V] 60
+[V] 62
 [P] X -----5---9 110.500
 
-[D] 5af3cd5e3a0e3d88c303755a300ccac169837a00b8d89b1f51028567 inih-r60.tar.gz !https://github.com/benhoyt/inih/archive/refs/tags/r60.tar.gz
+[D] cc0b17594b0bf412789a2ae6b3e38c2d713da8ccbe72c24b4bf27269 inih-r62.tar.gz https://github.com/benhoyt/inih/archive/r62/

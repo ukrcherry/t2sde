@@ -1,27 +1,30 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/cervisia/cervisia.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
-[I] CVS frontend
+[I] A user friendly version control system front-end
 
-[T] CVS frontend.
+[T] Cervisia is a user friendly version control system front-end. The aim is to
+[T] support CVS and other version control system programs in a unified
+[T] interface, featuring conflict resolution, difference and history viewers,
+[T] status for the working copy files, and support for most version control
+[T] functions.
 
 [U] https://www.kde.org
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 25.04.1
-[P] X -----5---9 162.900
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 25.04.3
 
 [CV-GROUP] kde-gear
-[D] 091af08ac04da2eee36be06158de287c71528d1194e1d00c223cd2f6 cervisia-25.04.1.tar.xz https://download.kde.org/stable/release-service/25.04.1/src/
+[D] 59e8d6c43f421d26f788c314d10ed725b33a3ca66b71d320d3209915 cervisia-25.04.3.tar.xz https://download.kde.org/stable/release-service/25.04.3/src/
+
+. $base/package/*/*/kde-conf.in

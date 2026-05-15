@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xfe/xfe.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -18,14 +18,13 @@
 [U] http://roland65.free.fr/xfe/
 
 [A] Roland Baudin <roland.baudin@space.alcatel.fr>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/x11
 
 [L] GPL
-[S] Beta
-[V] 2.0.1
+[V] 2.1.6
 
-[O] var_append GCC_WRAPPER_APPEND ' ' "`pkg-config x11 --cflags --libs-only-L`"
+[D] 7f13da69c2a1e970b06a5221e7b08ec25fb8cc3d24f86f84e1bf6fab xfe-2.1.6.tar.xz https://prdownloads.sourceforge.net/sourceforge/xfe/
 
-[D] 5cb42a95eb679356c1d0a690b9b1f679b7addfec9df673950941a22e xfe-2.0.1.tar.xz http://dl.sourceforge.net/sourceforge/xfe/
+var_append GCC_WRAPPER_APPEND ' ' "`pkg-config x11 --cflags --libs-only-L`"

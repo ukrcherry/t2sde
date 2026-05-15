@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/aide/aide.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -17,12 +17,11 @@
 
 [A] Rami Lehti <rammer@cs.tut.fi>
 [A] Pablo Virolainen <pablo@cs.tut.fi>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/security
 
 [L] GPL
-[S] Beta
-[V] 0.18.8
+[V] 0.19.3
 
-[D] c2577bc841dab0f30e3bc55f6f31256a9dc983511e489a26e2c99a57 aide-0.18.8.tar.gz https://github.com/aide/aide/releases/download/v0.18.8/
+[D] f4ba3afbf2d810b8e51aaecc5d08a5b8d3c7a624fb7b2b1493d18f8c aide-0.19.3.tar.gz https://github.com/aide/aide/releases/download/v0.19.3/

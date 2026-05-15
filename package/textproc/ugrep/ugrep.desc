@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/ugrep/ugrep.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -9,18 +9,17 @@
 [T] Ultra fast grep with interactive TUI, fuzzy search, boolean queries,
 [T] hexdumps and more: search file systems, source code, text, binary files,
 [T] archives (cpio/tar/pax/zip), compressed files (gz/Z/bz2/lzma/xz/lz4/zstd),
-[T] documents etc. A faster, user-friendly and compatible grep replacement. 
+[T] documents etc. A faster, user-friendly and compatible grep replacement.
 
 [U] https://github.com/Genivia/ugrep/wiki
 
 [A] Jens Laas <jens.laas@data.slu.se>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/development
 [F] CROSS DIETLIBC
 
 [L] GPL
-[S] Stable
-[V] 7.4.2
+[V] 7.8.1
 
-[D] cab02159f8c487eaed8dce4b2007f53e995961031b49201f11f230bb ugrep-7.4.2.tar.gz https://github.com/Genivia/ugrep/archive/v7.4.2/
+[D] d844ddb3fa1c327f84f7c590f5672ee9abe8e765bb1d3960e0611abd ugrep-7.8.1.tar.gz https://github.com/Genivia/ugrep/archive/v7.8.1/

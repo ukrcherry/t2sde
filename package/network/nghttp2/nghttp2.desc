@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/nghttp2/nghttp2.desc
-[COPY] Copyright (C) 2013 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2013 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,16 +12,21 @@
 [U] https://www.nghttp2.org/
 
 [A] Tatsuhiro Tsujikawa
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/library
 [F] CROSS NO-LTO.gcc
 
+[E] opt c-ares
+[E] opt libev
+[E] opt jansson
+
 [L] BSD
-[S] Stable
-[V] 1.49.0
+[V] 1.69.0
 [P] X -----5---9 127.200
 
-[O] pkginstalled python || var_append confopt ' ' --disable-python-bindings
+[D] daf239e746da906d9ca752249b62dca77bacde80a8002cc7d23633e6 nghttp2-1.69.0.tar.bz2 https://github.com/nghttp2/nghttp2/releases/download/v1.69.0/
 
-[D] 58b712d053175b54b19c59c93988f3ad308788e12520301d932e3d42 nghttp2-1.49.0.tar.bz2 https://github.com/nghttp2/nghttp2/releases/download/v1.49.0/
+var_append CXX_WRAPPER_APPEND ' ' -std=c++20
+[ $arch = arm ] && var_remove_regex GCC_WRAPPER_INSERT ' ' '-mfpu=.*'
+pkginstalled python || var_append confopt ' ' --disable-python-bindings

@@ -1,0 +1,45 @@
+[TIMESTAMP] 1756409727 Thu Aug 28 21:35:27 2025
+[BUILDTIME] 230 (9)
+[SIZE] 27.27 MB, 7 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] cmake
+[DEP] coreutils
+[DEP] diffutils
+[DEP] extra-cmake-modules
+[DEP] fluidsynth
+[DEP] freetype
+[DEP] gawk
+[DEP] glib
+[DEP] grep
+[DEP] gzip
+[DEP] libevdev
+[DEP] libglvnd
+[DEP] libpng
+[DEP] libsdl2
+[DEP] libslirp
+[DEP] libsndfile
+[DEP] libx11
+[DEP] libxcb
+[DEP] libxext
+[DEP] libxfixes
+[DEP] libxi
+[DEP] linux-header
+[DEP] make
+[DEP] openal
+[DEP] pkgconfig
+[OPT] qt5base
+[OPT] qt5tools
+[OPT] qt5translations
+[OPT] qt6base
+[OPT] qt6tools
+[OPT] qt6translations
+[DEP] rtmidi
+[DEP] sed
+[DEP] tar
+[DEP] vulkan-headers
+[DEP] wayland
+[DEP] xkbcommon
+[DEP] xorgproto
+[DEP] zlib

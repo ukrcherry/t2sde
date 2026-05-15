@@ -1,32 +1,30 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/konquest/konquest.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
 [I] Galactic conquest game
 
-[T] Konquest is a version of Gnu-Lactic Konquest. Players conquer other planets 
-[T] by sending ships to them. The goal is to build an interstellar empire and 
+[T] Konquest is a version of Gnu-Lactic Konquest. Players conquer other planets
+[T] by sending ships to them. The goal is to build an interstellar empire and
 [T] ultimately conquer all other player's planets.
 
 [U] https://apps.kde.org/konquest/
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
-[E] opt kdoctools
-[E] opt docbook-xml
-[E] opt docbook-xsl
+[F] CROSS OBJDIR
+
+[E] opt kdoctools docbook-xml docbook-xsl
 
 [L] GPL
-[S] Stable
-[V] 25.04.1
-[P] X -----5---9 179.300
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 26.04.1
 
 [CV-GROUP] kde-gear
-[D] c1467d92e9a52ea178fa6a0c84591ec9f53f21b23dff9fda5536d52c konquest-25.04.1.tar.xz https://download.kde.org/stable/release-service/25.04.1/src/
+[D] d85dc753e1090401db4412b3cf31ba5bba2b4293c7e7158ac8433cec konquest-26.04.1.tar.xz https://download.kde.org/stable/release-service/26.04.1/src/
+
+. $base/package/*/*/kde-conf.in

@@ -1,0 +1,16 @@
+[TIMESTAMP] 1739233126 Tue Feb 11 01:18:46 2025
+[BUILDTIME] 25 (5)
+[SIZE] 8.72 MB, 821 files
+
+[DEP] bash
+[DEP] coreutils
+[DEP] diffutils
+[OPT] doxygen
+[DEP] gawk
+[OPT] graphviz
+[DEP] grep
+[DEP] gzip
+[DEP] linux-header
+[DEP] make
+[DEP] sed
+[DEP] tar

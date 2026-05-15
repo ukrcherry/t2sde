@@ -1,0 +1,24 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/kmscon/kmscon.desc
+# Copyright (C) 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Linux KMS/DRM based virtual Console Emulator
+
+[T] Linux KMS/DRM based virtual Console Emulator.
+
+[U] https://github.com/kmscon/kmscon
+
+[A] David Herrmann <dh.herrmann@googlemail.com>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] MIT
+[V] 9.3.5
+
+[D] ddb36fc070176c63e7cf38544b3637b1b7955e27ec981c79b1998f8b kmscon-9.3.5.tar.gz https://github.com/kmscon/kmscon/archive/v9.3.5/
+
+var_append mesonopt ' ' -Dtests=false

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/minicom/minicom.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -17,16 +17,12 @@
 
 [A] Miquel van Smoorenburg <miquels@cistron.nl>
 [A] Jukka Lahtinen <walker@clinet.fi>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 2.8
+[V] 2.11.1
 
-[O] confopt="$confopt --enable-dfl-port=/dev/modem"
-
-[CV-URL] http://alioth.debian.org/project/showfiles.php?group_id=30018
-[D] ee6d3842937cd2dbae705465510e119f5f0dda0e2473d7a305e31c80 minicom_2.8.orig.tar.bz2 http://deb.debian.org/debian/pool/main/m/minicom/
+[D] 898924b406852c0d3b074540a9ffaa2368964beb775a43d4927f823a minicom-2.11.1.tar.bz2 https://salsa.debian.org/minicom-team/minicom/-/archive/2.11.1/

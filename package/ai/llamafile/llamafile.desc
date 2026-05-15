@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/llamafile/llamafile.desc
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Distribute and run LLMs with a single file
+
+[T] llamafile lets you distribute and run LLMs with a single file.
+
+[U] https://llamafile.ai
+
+[A] Mozilla Foundation
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/development
+
+[V] 0.10.1
+[L] APL
+
+[D] d0c284d0f5975d95ae9ee17f17a7402a60eca53d3b0353e67d80b95e llamafile-0.10.1.tar.gz https://github.com/Mozilla-Ocho/llamafile/archive/refs/tags/0.10.1/

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/opensbi/opensbi.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,19 +13,19 @@
 [U] https://github.com/riscv-software-src/opensbi
 
 [A] Western Digital Corporation
-[M] Rene Rebe <rene@exactcode.de>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/boot
 [F] CROSS NO-LTO.gcc
 [R] + riscv riscv64
 
-[V] 1.3
-[S] Stable
+[V] 1.8.1
 [L] BSD
 
 [P] O -----5---9 102.050
 
-[O] var_append makeopt ' ' "AS=$CC PLATFORM=generic"
-[O] makeinstopt=; hook_add postmake 5 "install build/platform/generic/firmware/*bin $root/boot/"
+[D] 331dd822c8e83db65698f443f3d657b42c70da6fe64359b1cda306b9 opensbi-1.8.1.tar.gz https://github.com/riscv-software-src/opensbi/archive/v1.8.1/
 
-[D] a049f143977836a9fa2594010328d5f65176958c0c71f67a0963bb18 opensbi-1.3.tar.gz https://github.com/riscv-software-src/opensbi/archive/v1.3/
+var_append makeopt ' ' "AS=$CC PLATFORM=generic"
+makeinstopt=
+hook_add postmake 5 "install build/platform/generic/firmware/*bin $root/boot/"

@@ -1,0 +1,26 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/udp-proxy/udp-proxy.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] A small proxy that proxies UDP packets
+
+[T] A small proxy that proxies UDP packets from one port to another depending
+[T] on the source IP.
+
+[U] https://github.com/netresearch/udp-proxy
+
+[A] netresearch
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] MIT
+[V] 1.0.1
+
+[D] 4f8986c32101aa13fa8b6c41dd3d5f96a74448dec3b7d9b6248c18a5 udp-proxy-1.0.1.tar.gz https://github.com/netresearch/udp-proxy/archive/v1.0.1/
+
+. $base/package/*/*/go-conf.in
+hook_add postmake 5 'cp -vf udp-proxy $root$bindir/'

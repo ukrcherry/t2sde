@@ -1,6 +1,6 @@
-[TIMESTAMP] 1737631055 Thu Jan 23 12:17:35 2025
-[BUILDTIME] 60 (9)
-[SIZE] 0.53 MB, 63 files
+[TIMESTAMP] 1765304082 Tue Dec  9 19:14:42 2025
+[BUILDTIME] 95 (9)
+[SIZE] 0.58 MB, 61 files
 
 [DEP] bash
 [DEP] binutils
@@ -17,14 +17,12 @@
 [DEP] make
 [DEP] pkgconfig
 [DEP] plasma-wayland-protocols
-[DEP] python
 [DEP] qt6base
 [DEP] qt6declarative
-[DEP] qt6wayland
 [DEP] sed
 [DEP] tar
-[DEP] tbb
 [DEP] vulkan-headers
 [DEP] wayland
+[DEP] wayland-protocols
 [DEP] xorgproto
 [DEP] xz

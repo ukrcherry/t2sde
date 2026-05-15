@@ -1,28 +1,27 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/kwave/kwave.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
 [I] A sound editor for KDE
 
-[T] Kwave is a sound editor that can record to, play, open, and edit many file 
+[T] Kwave is a sound editor that can record to, play, open, and edit many file
 [T] formats. Kwave makes it simple to edit audio in many ways.
 
 [U] https://apps.kde.org/kwave/
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 25.04.1
-[P] X -----5---9 179.300
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 26.04.1
 
 [CV-GROUP] kde-gear
-[D] 76b941ef6ec3cd849a73543d54f5673784a6e2a9d97af780e27ffb11 kwave-25.04.1.tar.xz https://download.kde.org/stable/release-service/25.04.1/src/
+[D] 29b8d34a3ee70e5605c8091d745036c22a717a7c2da220b7e2075cd6 kwave-26.04.1.tar.xz https://download.kde.org/stable/release-service/26.04.1/src/
+
+. $base/package/*/*/kde-conf.in

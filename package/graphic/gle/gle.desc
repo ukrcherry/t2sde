@@ -1,0 +1,30 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/gle/gle.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A library package of C functions that draws 3D surfaces
+
+[T] GLE is a library package of C functions that draw extruded surfaces, inclu-
+[T] ding surfaces of revolution, sweeps, tubes, polycones, polycylinders and
+[T] helicoids. Generically, the extruded surface is specified with a 2D poly-
+[T] line that is extruded along a 3D path. A local coordinate system allows
+[T] for additional flexibility in the primitives drawn. Extrusions may be
+[T] texture mapped in a variety of ways. The GLE library generates 3D triangle
+[T] coordinates, lighting normal vectors and texture coordinates as output.
+[T] GLE uses the GL or OpenGL(R) API's to perform the actual rendering.
+
+[U] https://www.linas.org/gle/
+
+[A] Linas Vepstas <linas@linas.org>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/multimedia
+[L] OpenSource
+[V] 4.3.9
+
+[D] 38840d5a88efdf1e2cee9979e06037a97ecd71b239d2fb2f17b611af gle-v4.3.9.tar.gz https://github.com/vlabella/GLE/archive/v4.3.9/
+
+srcdir=*/src

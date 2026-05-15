@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/liberation-fonts/liberation-fonts.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,7 +12,7 @@
 [U] https://fedorahosted.org/liberation-fonts
 
 [A] RedHat Inc.
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/x11
 [F] CROSS
@@ -20,8 +20,14 @@
 [E] add fonttools
 
 [L] GPL
-[S] Stable
 [V] 2.1.5
 [P] X -----5---9 400.800
 
 [D] d9bc096cc268328effcc40fdee68f2cd813ecec852b124d12e7b42b6 liberation-fonts-ttf-2.1.5.tar.gz https://github.com/liberationfonts/liberation-fonts/archive/2.1.5/
+
+makeinstopt=
+
+ttf_inst() {
+	cp -v liberation-fonts-ttf-*/*.ttf $root$datadir/fonts/
+}
+hook_add postmake 5 ttf_inst

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/pyproject-metadata/pyproject-metadata.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,15 +14,16 @@
 [U] https://github.com/pypa/pyproject-metadata
 
 [A] Henry Schreiner
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [F] CROSS
 
+[E] add python-flit-core
+
 [L] MIT
-[S] Stable
-[V] 0.9.1
+[V] 0.11.0
 [P] X -----5---9 109.007
 
 [CV-FLAGS] NO-PREFIX
-[D] 92e4a5aae2743268133e2b4f91f4e672738c5b7fc51521f9946a9f9a pyproject-metadata-0.9.1.tar.gz https://github.com/pypa/pyproject-metadata/archive/refs/tags/0.9.1/
+[D] 98737aa2c3459eb66d8ed9a79e517c697ef0eac931d3a0cb8f1aed90 pyproject-metadata-0.11.0.tar.gz https://github.com/pypa/pyproject-metadata/archive/refs/tags/0.11.0/

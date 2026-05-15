@@ -1,0 +1,28 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/knighttime/knighttime.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Helpers for scheduling the dark-light cycle
+
+[T] The KNightTime provides helpers for scheduiling the dark-light cycle. It
+[T] can be used to implement features such as adjusting the screen color
+[T] temperature based on time of day, etc.
+
+[U] https://invent.kde.org/plasma/knighttime
+
+[A] The KDE-Team
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
+
+[L] GPL
+[V] 6.6.5
+[P] X -----5---9 200.290
+
+[CV-GROUP] kde-plasma
+[D] e2940c5b67c3a511710262d08fa9d3bbfb3582203700285f7a54fa3a knighttime-v6.6.5.tar.gz https://invent.kde.org/plasma/knighttime/-/archive/v6.6.5/
+
+. $base/package/*/*/kde-conf.in

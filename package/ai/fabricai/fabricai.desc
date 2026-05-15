@@ -1,0 +1,26 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/fabricai/fabricai.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Framework for augmenting humans using AI
+
+[T] fabric is an open-source framework for augmenting humans using AI. It
+[T] provides a modular framework for solving specific problems using a
+[T] crowdsourced set of AI prompts that can be used anywhere.
+
+[U] https://github.com/danielmiessler/fabric
+
+[A] Scott Chacon
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+
+[L] MIT
+[V] 1.4.370
+
+[D] 3027e9fe66abb4ae6720d6f4609c2343d3d2287740cdf75fac17dde7 fabric-1.4.370.tar.gz https://github.com/danielmiessler/fabric/archive/v1.4.370/
+
+var_append goconfopt ' ' '-o fabric ./cmd/fabric'
+hook_add postmake 5 'cp -vf fabric $root$bindir/'

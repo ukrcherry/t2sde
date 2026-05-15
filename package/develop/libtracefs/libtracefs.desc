@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libtracefs/libtracefs.desc
-[COPY] Copyright (C) 2021 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2021 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,17 +11,16 @@
 [U] https://www.trace-cmd.org
 
 [A] Steven Rostedt <srostedt@redhat.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/tool
 [E] opt asciidoc
 [E] opt cunit
 
 [L] GPL
-[S] Stable
-[V] 1.8.1
+[V] 1.8.3
 [P] X -----5---9 200.700
 
-[O] pkginstalled xmlto || var_append mesonopt ' ' -Ddoc=false
+[D] e24023b4c3d1b639972c299c0b6525f5e4ab0f6a911e945548edb1ee libtracefs-1.8.3.tar.gz https://git.kernel.org/pub/scm/libs/libtrace/libtracefs.git/snapshot/
 
-[D] 169cbbefa11a3bdfcb57f447a2c77e97b0fc6d6b85f2c560df592172 libtracefs-1.8.1.tar.gz https://git.kernel.org/pub/scm/libs/libtrace/libtracefs.git/snapshot/
+pkginstalled xmlto asciidoc || var_append mesonopt ' ' -Ddoc=false

@@ -1,0 +1,27 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/witr/witr.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Show why is this process running
+
+[T] witr shows the cause why a process is running explicitly.
+
+[U] https://github.com/pranshuparmar/witr
+
+[A] Pranshu Parmar
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/network
+[F] CROSS
+
+[L] APL
+[V] 0.3.1
+
+[D] d03453e7151062ee6ecfd4d7ffc518a922f34124554e9ed9d5a7ad68 witr-0.3.1.tar.gz https://github.com/pranshuparmar/witr/archive/v0.3.1/
+
+. $base/package/*/*/go-conf.in
+var_append goconfopt ' ' "-ldflags '-X main.version=$ver' -o witr ./cmd/witr"
+hook_add postmake 5 'cp -vf witr $root$bindir/'
+hook_add postmake 5 'cp -vf docs/cli/witr.1 $root$mandir/man1/'

@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/shiboken/shiboken.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Generates bindings for C++ libraries using CPython source code
+
+[T] Shiboken generates bindings for C++ libraries using CPython source code.
+
+[U] https://pypi.org/project/Shiboken/
+
+[A] PySide Team
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/development
+
+[L] LGPL
+[V] 1.2.4
+[P] X -----5---9 200.500
+
+[D] 0669b3ef5f4847fa6ce2968a23b49cf62149ca19ffa2b951d8f73f10 Shiboken-1.2.4.tar.gz https://github.com/PySide/Shiboken/archive/1.2.4/
+
+var_append cmakeopt ' ' -DCMAKE_POLICY_VERSION_MINIMUM=3.5

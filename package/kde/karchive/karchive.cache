@@ -1,6 +1,6 @@
-[TIMESTAMP] 1737557569 Wed Jan 22 15:52:49 2025
-[BUILDTIME] 25 (9)
-[SIZE] 0.86 MB, 81 files
+[TIMESTAMP] 1770493389 Sat Feb  7 20:43:09 2026
+[BUILDTIME] 45 (9)
+[SIZE] 0.92 MB, 86 files
 
 [DEP] bash
 [DEP] binutils
@@ -13,12 +13,14 @@
 [DEP] grep
 [DEP] linux-header
 [DEP] make
+[DEP] openssl
 [DEP] pkgconfig
 [DEP] qt6base
 [DEP] qt6tools
+[DEP] qt6translations
 [DEP] sed
 [DEP] tar
-[DEP] tbb
+[DEP] util-linux
 [DEP] xz
 [DEP] zlib
 [DEP] zstd

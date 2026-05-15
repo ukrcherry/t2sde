@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libreoffice/libreoffice.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,72 +14,220 @@
 [A] StarDivision
 [A] Sun Microsystems
 [A] The Document Foundation
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office
 [F] CROSS CUSTOM-LTO.gcc NO-LTO.clang
-[R] - riscv superh
+# some arch just fail linking w/ a symbol or incompatible object format
+[R] - ia64 hppa hppa64 riscv superh
+
+# tests xvfb-run
+[E] del xorg-server
+[E] opt jq
+[E] opt pigz
+[E] opt python-lxml
+[E] opt gpgme libgpg-error
+[E] add afdko
+[E] opt systemtap
 
 [L] OpenSource
-[S] Stable
-[V] 25.2.2.1
-[P] X -----5---9 803.000
+[V] 26.2.3.2
 
-[D] ed4d666b60fc6eb5246bc33afbc887b40b5647625e49ea99f15d6604 libreoffice-25.2.2.1.tar.xz https://download.documentfoundation.org/libreoffice/src/25.2.2/
-# grep 'curl\|wget' libreoffice.err | tr ' ' '\n' | sed -n 's,\(http.*\)/\(.*\),[D] 0 \2 \1/,p' | sort
-[D] ac6c094a23858dac77c29b782c1d3ebd530c764d1abeba6dd17c1a40 1f5def51ca0026cd192958ef07228b52-rasqal-0.9.33.tar.gz https://dev-www.libreoffice.org/src/
-[D] 60bbbca7ca2473239a802abc60ee01c41cb709448d3851a961f2b9c3 lp_solve_5.5.2.11.tar.gz https://dev-www.libreoffice.org/src/
-[D] 843d75ee3475c74891ce1f5b021d8d34bcc5052fa00cf51258bf03d6 48d647fbd8ef8889e5a7f422c1bfda94-clucene-core-2.3.3.4.tar.gz https://dev-www.libreoffice.org/src/
-[D] b644d3e1faf8592471208af08b456fdd5be67e68c243220e19e0d870 5ade6ae2a99bc1e9e57031ca88d36dad-hyphen-2.8.8.tar.gz https://dev-www.libreoffice.org/src/
-[D] f36cc230810df38389cf4c80fb9bf2fb5cb2eb66a3914e09cab15287 CoinMP-1.8.4.tgz https://dev-www.libreoffice.org/src/
-[D] 31d466a34942f8ab49079e56000047dd79e86cbd890af04401c8507b boost_1_87_0.tar.xz https://dev-www.libreoffice.org/src/
+# (grep 'curl\|wget'| tr ' ' '\n' | sed -n 's,\(http.*\)/\(.*\),[D] 0 \2 \1/,p' | sort) < libreoffice.log
+[D] a630d1a87e747814a95ac896ca9bc5dc1663ded2f8c41e43910632cc libreoffice-26.2.3.2.tar.xz https://download.documentfoundation.org/libreoffice/src/26.2.3/
 [D] e0d7538228c8da89071c2e49c994cd7a0c5b9cc311ddcb1ba3410426 box2d-2.4.1.tar.gz https://dev-www.libreoffice.org/src/
-[D] 82505f1f86e2159e227945193dfe45201be949061be3c48db11fcf0a cairo-1.18.2.tar.xz  https://dev-www.libreoffice.org/src/
-[D] 10b48784be071d477601863a3056b028997cf1b6bd22ff14c0b38cd8 cppunit-1.15.1.tar.gz https://dev-www.libreoffice.org/src/
-[D] ac6455a5197c23ad03f26e7855219c9449cefdb1c91f4b165f0009b1 curl-8.12.1.tar.xz https://dev-www.libreoffice.org/src/
-[D] 1238182706e413245d0af1f87bdcbcb6a563b7cf888abe6b3afd2725 dragonbox-1.1.3.tar.gz https://dev-www.libreoffice.org/src/
-[D] 1152f3f892c08428504caebea8668b3cd8b3c8bfa16b514a36e0fa3e dtoa-20180411.tgz https://dev-www.libreoffice.org/src/
-[D] 8a41994b6abf9e1c5a0f2fc89959f41cd2b6179b2c0f6e22aed788f0 e5be03eda13ef68aabab6e42aa67715e-redland-1.0.17.tar.gz https://dev-www.libreoffice.org/src/
-[D] 68abd94ac88de271abcca9b605e17865c0b69a6edd062fe80c92ed08 expat-2.6.4.tar.xz https://dev-www.libreoffice.org/src/
-[D] 049e9651240088b8b5edc2e599395c621e1f47724eebd0b72a74341f frozen-1.2.0.tar.gz https://dev-www.libreoffice.org/src/
-[D] 22b597d88814e42c076bda562ce08cdd891cb8ffd49d4251af05dcdb glm-1.0.1.zip https://dev-www.libreoffice.org/src/
-[D] 5f44e3c562291b7cd71cd8dc64f5b43c3ab719e08c24164fb3654da2 graphite2-minimal-1.3.14.tgz https://dev-www.libreoffice.org/src/
-[D] 3ff3971bec96d38b5f4b8122109fffaaf9fa09c4f3e30c84088c0e18 harfbuzz-8.5.0.tar.xz https://dev-www.libreoffice.org/src/
-[D] d4f178e8ce16452b3d0115cf2723dd3bc50a002edf232c84ca6e8913 hunspell-1.7.2.tar.gz https://dev-www.libreoffice.org/src/
-[D] e055b37fdef67fb8a6ed7d20c9928aea5ce853de08ba7bcf6d7cbf51 icu4c-76_1-data.zip https://dev-www.libreoffice.org/src/
-[D] 4cefc08e68e75b616dd9ae4d05b2f0f4783e50aee6584152c4e3d0a3 icu4c-76_1-src.tgz https://dev-www.libreoffice.org/src/
-[D] 142505f9f354b40c2c855cedc4d4f8ed890df09693e9584f34f591af language-subtag-registry-2025-02-06.tar.bz2 https://dev-www.libreoffice.org/src/
-[D] ddc69f34a57938cd381e660771cd9372d2081cff08c44d56757a2fb1 lcms2-2.17.tar.gz https://dev-www.libreoffice.org/src/
+[D] 16109c08e73c71f27ce60f86afa89d43218e97728b4637f5b2760177 f543e6e2d7275557a839a164941c0a86e5f2c3f2a0042bfc434c88c6dde9e140-opens___.ttf https://dev-www.libreoffice.org/extern/
 [D] 09ee0999a8bcfe00c2484bbf2adff0ee77417f9b9a1c94397ed27472 libabw-0.1.3.tar.xz https://dev-www.libreoffice.org/src/
-[D] 08eb58d7787a3043cfb809ca39d0e540a098d601c7f173a080fab13f libcmis-0.6.2.tar.xz https://dev-www.libreoffice.org/src/
-[D] 4093d24f56e506ed5442f2ba94f9e76355b3e12fa0a77c404da0fd20 libe-book-0.1.3.tar.xz https://dev-www.libreoffice.org/src/
-[D] 39fd5a354e55e16f2faa550a95cee50602a6ec313b83fbd8d52fcd56 libepoxy-1.5.10.tar.gz https://dev-www.libreoffice.org/src/
-[D] cc7d4281328efd04974c69385f904d44351be323653d5b0e53c6aead libepubgen-0.1.1.tar.xz https://dev-www.libreoffice.org/src/
-[D] 05bc616f7ae6d590586da38e43606194bdae47c7499a152cd9f65406 libetonyek-0.1.12.tar.xz https://dev-www.libreoffice.org/src/
-[D] 258be006710bc07f2e12264163220bd8d7e8e12db8cf2fb151e4d174 libexttextcat-3.4.7.tar.xz https://dev-www.libreoffice.org/src/
-[D] 5f693e115caa29cad8d9713973feb1f8599573d84692d710d3bdce86 libjpeg-turbo-3.1.0.tar.gz https://dev-www.libreoffice.org/src/
-[D] 8d627dc94591eec6b6f05498ea7540b4b2a46319db82bfee76e95dd3 liblangtag-0.6.7.tar.bz2 https://dev-www.libreoffice.org/src/
-[D] 8931b6ba46fb139d58b94170d5a1981c692e0c3aa3bd1bb8ab041ad9 libmwaw-0.3.22.tar.xz https://dev-www.libreoffice.org/src/
-[D] 34eb24c0fbeaa98e3525fcdda86b5062c84a84bc5e049de0bdf57a2c libnumbertext-1.0.11.tar.xz https://dev-www.libreoffice.org/src/
-[D] 51f3603e40a0b0e25e73cf0ac322c7d9c5eed9ef8a31dee8f1b4a76a libodfgen-0.1.8.tar.xz https://dev-www.libreoffice.org/src/
-[D] 7a842b669f8349d80db54153b856b7eeafcd6f7f966ee8ed3eb5148d liborcus-0.20.0.tar.xz https://dev-www.libreoffice.org/src/
-[D] c55ebb416bbc81cd96b5e700a28bf2930958a300805360e7ee458ba8 libpagemaker-0.0.4.tar.xz https://dev-www.libreoffice.org/src/
-[D] 113f96aab1376c069d8c69c4790e6ba8ece0b8259002247d57c35925 libpng-1.6.47.tar.xz https://dev-www.libreoffice.org/src/
-[D] 8b1365c2fe1580299694d11185ad4b97dbc6ab70385a306461e7aa75 libqxp-0.0.2.tar.xz https://dev-www.libreoffice.org/src/
-[D] fee5036338fb8846c208c4dd07e36948f769b0eeb8ab7608b139ef34 libstaroffice-0.0.7.tar.xz https://dev-www.libreoffice.org/src/
-[D] fcde0821af230b3d7213a1bff67d8d8c6eade9b3ac2349e3379acc28 libvisio-0.1.8.tar.xz https://dev-www.libreoffice.org/src/
-[D] 06ada53ce953d23e8b0a155c5272067c26a3e7c2e0dcb00eff7981b2 libwpg-0.3.4.tar.xz https://dev-www.libreoffice.org/src/
-[D] 79f8ee095c430d20b1f8acf086d999be6e0c27e152e3ecaa6e873827 libwps-0.4.14.tar.xz https://dev-www.libreoffice.org/src/
-[D] ec09c5c278e7f2cfe4dab54c9cefa9026be2b05b8837036043ac5c61 mdds-3.0.0.tar.xz  https://dev-www.libreoffice.org/src/
-[D] cd0f673c01eef15635f994ec5d90ea51e166b29bbae92b15dfe82772 mythes-1.2.5.tar.xz https://dev-www.libreoffice.org/src/
-[D] 8aec3aabd80874679fb27c1b04bbac90bc9cb1e5c7f5fe60bfb06974 openssl-3.0.15.tar.gz https://dev-www.libreoffice.org/src/
-[D] c29f977c761ec953546c764706ecebe0ea05cd100d933e724cc5fbc5 pdfium-7012.tar.bz2 https://dev-www.libreoffice.org/src/
-[D] f7442a1372336fd92f88ca3ea0981e1f11b7265a5e066d9e3eec0235 phc-winner-argon2-20190702.tar.gz https://dev-www.libreoffice.org/src/
-[D] 07ec4dbba5ca19537d0ea67653516e274c7408f3a2dede4135894c21 pixman-0.42.2.tar.gz https://dev-www.libreoffice.org/src/
-[D] 7c59c0f13df0cbe5751c5425f17a5bd56c2cd229f59023d97b4322d6 poppler-25.02.0.tar.xz https://dev-www.libreoffice.org/src/
-[D] 5e5ac111524437d47640790fcc2c826312fe0b9d0a79a9522d3949aa poppler-data-0.4.12.tar.gz https://dev-www.libreoffice.org/src/
-[D] cf5cb37f3d1dbf0064420f1bc993fff2e1f5376c1df68b5b2e80d960 raptor2-2.0.16.tar.gz https://dev-www.libreoffice.org/src/
-[D] 203fe15ad55ffd67f8a8a3f053499717896b47a810c7b345043e3850 tiff-4.7.0.tar.xz https://dev-www.libreoffice.org/src/
-[D] c25d929fbc0f4d9e81793929f3dc2aeea06587805cd66fabb25e3d66 xmlsec1-1.3.7.tar.gz https://dev-www.libreoffice.org/src/
-[D] d650312afb366604f144ad75ace074252f15d3adbfdeca6250223b40 zxcvbn-c-2.5.tar.gz https://dev-www.libreoffice.org/src/
-[D] 1382832395862ea62af4f8767e562e592902fcfbbd89e66f177efd51 zxing-cpp-2.3.0.tar.gz https://dev-www.libreoffice.org/src/
+[D] 1365b3f098eec0c210fb3bb9f97771019c6ea91f1d037a47e0ba8014 libvisio-0.1.10.tar.xz https://dev-www.libreoffice.org/src/
+[D] e8c0dfd74b754d713b187e814578f51497593b99baa2f33da680bc72 pdfium-7471.tar.bz2 https://dev-www.libreoffice.org/src/
+[D] 0448d8a8deac5b80ac2d30e5efa0db333a5e38fe8ecc78d0d01b9aed skia-m142-f4ed99d2443962782cf5f8b4dd27179f131e7cbe.tar.xz https://dev-www.libreoffice.org/src/
+
+[ $prefix_auto = 1 ] && prefix=opt/libreoffice && set_confopt
+
+ooo_lang='en-US' # de es fr it' #ALL
+
+lo_tarballs() {
+	mkdir -p external/tarballs/
+	for f in `match_source_file -p . | grep -v libreoffice`; do
+		local dl="$f"
+		f=${f##*/}
+		ln -svf $dl external/tarballs/$f
+	done
+}
+hook_add prepatch 5 lo_tarballs
+
+var_append confopt ' ' --with-vendor="T2"
+var_append confopt ' ' --enable-release-build
+var_append confopt ' ' "--with-system-gcc --disable-ccache"
+
+cpu="`echo $arch | arch2uname`"
+var_append confopt ' ' --with-arch=$cpu
+
+[[ $libdir == *lib64 ]] &&
+	var_append confopt ' ' --enable-64bit-libs=yes
+
+[ "$SDECFG_LTO" = 1 ] && var_append confopt ' ' --enable-lto
+
+#var_append confopt ' ' --disable-fetch-external
+var_append confopt ' ' "--with-parallelism=$SDECFG_PARALLEL \
+--disable-sdremote \
+--disable-sdremote-bluetooth \
+--disable-mariadb-sdbc \
+--disable-postgresql-sdbc \
+--disable-firebird-sdbc \
+--disable-scripting-beanshell \
+--with-dotnet=no \
+--enable-access=no \
+--enable-mono=no"
+
+# requires some prebuilt .dll or mingw around - for windows registry mangling
+var_append confopt ' ' --disable-odk
+var_append confopt ' ' --disable-gstreamer-1-0
+var_append confopt ' ' --without-java
+
+var_append confopt ' ' "--without-gpc --enable-crashdump=no --disable-crashdump --disable-binfilter --disable-epm"
+var_append confopt ' ' "--with-system-db --with-db-version=4.3"
+var_append confopt ' ' "--enable-fontconfig --without-myspell-dicts --without-fonts"
+var_append confopt ' ' "--disable-mozilla --without-gssapi"
+
+var_append confopt ' ' "'--with-lang=\"\$ooo_lang\"'"
+var_append confopt ' ' "'--with-dict=\"\$ooo_lang\"'"
+
+ooo_iconset=
+#FIXME: download location [ "$SDECFG_PKG_OOO_ICONS_BLUECURVE" = '1' ] && var_append ooo_iconset ',' Bluecurve
+[ -n "$ooo_iconset" ] && var_append confopt ' ' --with-icons=$ooo_iconset
+
+var_append GCC_WRAPPER_APPEND ' ' "-I$root$(pkgprefix includedir libx11)"
+var_append GCC_WRAPPER_APPEND ' ' "-c?:-L$root$(pkgprefix libdir libx11)"
+var_append confopt ' ' "--x-includes=$root$(pkgprefix includedir libx11)"
+var_append confopt ' ' "--x-libraries=$root$(pkgprefix libdir libx11)"
+
+#output dirs (all options can be found in configure:2715)
+var_append confopt ' ' --docdir=$docdir
+
+var_append confopt ' ' --with-system-headers
+
+var_append confopt ' ' --with-system-afdko
+var_append confopt ' ' --with-system-argon2
+#var_append confopt ' ' --with-system-box2d	#re-enable when libre box2d updates to next major version
+var_append confopt ' ' --with-system-clucene
+var_append confopt ' ' --with-system-coinmp
+var_append confopt ' ' --with-system-dragonbox
+var_append confopt ' ' --with-system-frozen
+var_append confopt ' ' --with-system-glm
+var_append confopt ' ' --with-system-graphite
+var_append confopt ' ' --with-system-harfbuzz
+var_append confopt ' ' --with-system-altlinuxhyph
+var_append confopt ' ' --with-system-libcmis
+var_append confopt ' ' --with-system-libebook
+var_append confopt ' ' --with-system-libepubgen
+var_append confopt ' ' --with-system-libetonyek
+var_append confopt ' ' --with-system-libexttextcat
+var_append confopt ' ' --with-system-liblangtag
+var_append confopt ' ' --with-system-libmwaw
+var_append confopt ' ' --with-system-libnumbertext
+var_append confopt ' ' --with-system-libpagemaker
+var_append confopt ' ' --with-system-libqxp
+var_append confopt ' ' --with-system-libstaroffice
+var_append confopt ' ' --with-system-libwpg
+var_append confopt ' ' --with-system-libwps
+var_append confopt ' ' --with-system-lpsolve
+var_append confopt ' ' --with-system-md4c
+var_append confopt ' ' --with-system-mythes
+var_append confopt ' ' --with-system-redland
+var_append confopt ' ' --with-system-xmlsec
+var_append confopt ' ' --with-system-zxcvbn
+
+pkginstalled abseil-cpp && var_append confopt ' ' --with-system-abseil
+pkginstalled boost &&
+	var_append confopt ' ' "--with-system-boost --with-boost-libdir=$root$(pkgprefix libdir boost)"
+pkginstalled bluez && var_append confopt ' ' --with-system-bluez
+pkginstalled bzip2 && var_append confopt ' ' --with-system-bzip2
+pkginstalled cairo && var_append confopt ' ' --with-system-cairo
+pkginstalled colamd && var_append confopt ' ' --with-system-colamd
+pkginstalled cppunit && var_append confopt ' ' --with-system-cppunit
+pkginstalled curl && var_append confopt ' ' --with-system-curl
+pkginstalled epoxy && var_append confopt ' ' --with-system-epoxy
+pkginstalled expat && var_append confopt ' ' --with-system-expat
+pkginstalled fast_float && var_append confopt ' ' --with-system-fast-float
+pkginstalled fontforge && var_append confopt ' ' --enable-build-opensymbol
+pkginstalled hunspell && var_append confopt ' ' --with-system-hunspell
+pkginstalled icu4c && var_append confopt ' ' --with-system-icu
+pkginstalled lcms2 && var_append confopt ' ' --with-system-lcms2
+pkginstalled libatomic_ops && var_append confopt ' ' --with-system-libatomic_ops
+pkginstalled libcdr && var_append confopt ' ' --with-system-libcdr
+pkginstalled libeot && var_append confopt ' ' --with-system-libeot
+pkginstalled libfixmath && var_append confopt ' ' --with-system-libfixmath
+pkginstalled libfreehand && var_append confopt ' ' --with-system-libfreehand
+pkginstalled libjpeg-turbo && var_append confopt ' ' --with-system-jpeg
+pkginstalled liblockfile && var_append confopt ' ' --with-system-lockfile
+pkginstalled libmspub && var_append confopt ' ' --with-system-libmspub
+pkginstalled libodfgen && var_append confopt ' ' --with-system-libodfgen
+pkginstalled liborcus && var_append confopt ' ' --with-system-orcus
+pkginstalled libpng && var_append confopt ' ' --with-system-libpng
+pkginstalled librevenge && var_append confopt ' ' --with-system-librevenge
+pkginstalled libtiff && var_append confopt ' ' --with-system-libtiff
+pkginstalled libtommath && var_append confopt ' ' --with-system-libtommath
+pkginstalled libwebp && var_append confopt ' ' --with-system-libwebp
+pkginstalled libwpd && var_append confopt ' ' --with-system-libwpd
+pkginstalled libxml && var_append confopt ' ' --with-system-libxml
+pkginstalled libzmf && var_append confopt ' ' --with-system-libzmf
+pkginstalled lzma && var_append confopt ' ' --with-system-lzma
+pkginstalled mdds && var_append confopt ' ' --with-system-mdds
+pkginstalled nss && var_append confopt ' ' --with-system-nss
+pkginstalled openjpeg && var_append confopt ' ' --with-system-openjpeg
+pkginstalled openssl && var_append confopt ' ' --with-system-openssl
+pkginstalled poppler && var_append confopt ' ' --with-system-poppler
+pkginstalled sane-backends && var_append confopt ' ' --with-system-sane
+pkginstalled unixodbc && var_append confopt ' ' --with-system-odbc
+pkginstalled zlib && var_append confopt ' ' --with-system-zlib
+pkginstalled zstd && var_append confopt ' ' --with-system-zstd=yes
+pkginstalled zxing-cpp && var_append confopt ' ' --with-system-zxing
+
+if pkginstalled krb5 && ! pkginstalled heimdal; then
+	var_append confopt ' ' --with-krb5
+else
+	var_append confopt ' ' --without-krb5
+fi
+
+if pkginstalled openldap; then
+	var_append confopt ' ' --with-system-openldap
+	var_append GCC_WRAPPER_APPEND ' ' "-I`pkgprefix includedir openldap`"
+	var_append GCC_WRAPPER_APPEND ' ' "-L`pkgprefix libdir openldap`"
+else
+	var_append confopt ' ' --disable-ldap
+fi
+
+if pkginstalled gpgmepp; then
+	var_append confopt ' ' --with-system-gpgmepp
+else
+	 var_append confopt ' ' --disable-gpgmepp
+fi
+
+# libre is not checking for them
+#pkginstalled serf && var_append confopt ' ' --with-system-serf
+#pkginstalled startup-notification && var_append confopt ' ' --enable-libsn
+#pkginstalled neon && var_append confopt ' ' --with-system-neon
+#pkginstalled libsndfile && var_append confopt ' ' --with-system-sndfile
+#pkginstalled apr && var_append confopt ' ' --with-system-apr
+
+if atstage cross; then
+	export PKG_CONFIG_FOR_BUILD=/usr/bin/pkg-config
+	# for dconf build artifacts
+	export HOME=$builddir/home
+	mkdir -p $HOME
+
+	# why don't have cross compiling python, and skia needs clang :-/
+	var_append confopt ' ' '--enable-python=no --disable-skia'
+
+	# TODO: better, for arm64 crypto:
+	var_remove_regex GCC_WRAPPER_INSERT ' ' '-march=.*'
+	var_remove GCC_WRAPPER_REMOVE ' ' '-march*'
+
+	# don't overwrite it's internal CC vs. HOSTCC defines
+	var_remove_regex makeopt ' ' '[A-Z].*=.*'
+fi
+
+var_append makeopt ' ' build
+atstage native && var_append makeinstopt ' ' DESTDIR=/
+makeinstopt="${makeinstopt/install/distro-pack-install}"

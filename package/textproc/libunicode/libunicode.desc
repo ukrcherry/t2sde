@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libunicode/libunicode.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -12,13 +12,12 @@
 [T] framework for adding support for new encodings.
 
 [A] Tom Tromey <tromey@cygnus.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/text
-[F] CROSS AUTOMAKE-QUIRK
+[F] CROSS
 
 [L] LGPL
-[S] Stable
-[V] 0.4.gnome
+[V] 0.9.0
 
-[D] 57da40eeff148aa401c30248e3f1817b0932d0c05e1b0cb4dfd9d8e9 libunicode-0.4.gnome.tar.gz https://download.gnome.org/sources/libunicode/0.4/
+[D] 0884610a39ea0c274a92a95d782ae73945d288c00d4b3fcd979c4e18 libunicode-0.9.0.tar.gz https://github.com/contour-terminal/libunicode/archive/v0.9.0/

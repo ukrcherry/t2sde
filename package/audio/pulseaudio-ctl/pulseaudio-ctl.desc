@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/pulseaudio-ctl/pulseaudio-ctl.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Control pulseaudio volume from the shell or mapped to keyboard shortcuts
+
+[T] Control pulseaudio volume from the shell or mapped to keyboard shortcuts.
+
+[U] https://github.com/graysky2/pulseaudio-ctl
+
+[A] Pulseaudio-ctl Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.70
+[L] MIT
+
+[D] a24ed01d1ec99f3d9c36446828149c280818ed43a379ba5f7372f646 pulseaudio-ctl-1.70.tar.gz https://github.com/graysky2/pulseaudio-ctl/archive/v1.70/

@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libsoundio/libsoundio.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] C library for cross-platform real-time audio input and output
+
+[T] C library for cross-platform real-time audio input and output.
+
+[U] http://libsound.io
+
+[A] Libsoundio Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 2.0.1-7
+[L] MIT
+
+[D] 3cd7cf4be25c5c877f1d80efc0ec1acedb8bf2eefed20d281c71c7a7 libsoundio-2.0.1-7.tar.gz https://github.com/andrewrk/libsoundio/archive/2.0.1-7/
+
+runzig=0

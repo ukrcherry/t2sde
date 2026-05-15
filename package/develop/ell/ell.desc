@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/ell/ell.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,14 +11,13 @@
 [U] https://iwd.wiki.kernel.org
 
 [A] Marcel Holtmann <marcel@holtmann.org>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network
 [F] CROSS LATOMIC.sparc
 
 [L] GPL
-[S] Stable
-[V] 0.77
+[V] 0.83
 [P] X -----5---9 136.800
 
-[D] 4ec6a5b7668d9639f5fa323aee1aeb9f881d411a9ee9e5205f4abaa2 ell-0.77.tar.xz https://mirrors.edge.kernel.org/pub/linux/libs/ell/
+[D] 0e50d8edbd92c062e42839488b13a1799d40ec5caa5d52883fe04211 ell-0.83.tar.xz https://mirrors.edge.kernel.org/pub/linux/libs/ell/

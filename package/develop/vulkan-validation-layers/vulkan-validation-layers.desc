@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/vulkan-validation-layers/vulkan-validation-layers.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -19,11 +19,10 @@
 [F] CROSS
 
 [L] APL
-[S] Stable
-[V] 1.4.309.0
-
-[O] var_append cmakeopt ' ' "-DCMAKE_INSTALL_INCLUDEDIR=$root$(pkgprefix includedir vulkan-headers)"
-[O] var_append GCC_WRAPPER_APPEND ' ' "-I$root$(pkgprefix includedir libxcb)"
+[V] 1.4.351
 
 [CV-GROUP] vulkan
-[D] 8b6a6c2ffcbac4294c0df875ca113af56023840820c9c023e35260fb Vulkan-Validation-Layers-1.4.309.0.tar.gz https://github.com/KhronosGroup/Vulkan-ValidationLayers/archive/refs/tags/vulkan-sdk-1.4.309.0/
+[D] 77af9d57cfd060879060c54c5c2ba0797f7b63ed147566b765d637a5 Vulkan-Validation-Layers-1.4.351.tar.gz https://github.com/KhronosGroup/Vulkan-ValidationLayers/archive/v1.4.351/
+
+var_append cmakeopt ' ' "-DCMAKE_INSTALL_INCLUDEDIR=$root$(pkgprefix includedir vulkan-headers)"
+var_append GCC_WRAPPER_APPEND ' ' "-I$root$(pkgprefix includedir libxcb)"

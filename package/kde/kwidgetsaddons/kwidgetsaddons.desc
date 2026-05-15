@@ -1,27 +1,27 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/kwidgetsaddons/kwidgetsaddons.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
-[I] KDE Frameworks 5 Tier 1 addon with various classes on top of QtWidgets
+[I] KDE Frameworks addon with various classes on top of QtWidgets
 
-[T] KDE Frameworks 5 Tier 1 addon with various classes on top of QtWidgets.
+[T] KDE Frameworks addon with various classes on top of QtWidgets.
 
 [U] https://invent.kde.org/frameworks/kwidgetsaddons
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 6.14.0
+[V] 6.26.0
 [P] X -----5---9 162.800
 
-[O] . $base/package/*/*/kde-conf.in
-
 [CV-GROUP] kde-frameworks
-[D] 72dfc09dd3942ae32168aad4c2b8f94fb72dcaab9d75dd46754692e5 kwidgetsaddons-6.14.0.tar.xz https://download.kde.org/stable/frameworks/6.14/
+[D] c86b99ab8423a8075a214a1910234064c0013f950c94034676fddcaf kwidgetsaddons-6.26.0.tar.xz https://download.kde.org/stable/frameworks/6.26/
+
+. $base/package/*/*/kde-conf.in

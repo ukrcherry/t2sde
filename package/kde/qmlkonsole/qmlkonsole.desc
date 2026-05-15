@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/qmlkonsole/qmlkonsole.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,17 +11,15 @@
 [U] https://invent.kde.org/plasma-mobile/qmlkonsole
 
 [A] The KDE-Team
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/desktop/kde
-[F] CROSS
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Beta
-[V] 25.04.1
-[P] X -----5---9 400.000
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 26.04.1
 
 [CV-GROUP] kde-gear
-[D] 5934deab51c2d256a32b309024f0d70e9ef46494df1cecdf28345f1f qmlkonsole-25.04.1.tar.xz https://download.kde.org/stable/release-service/25.04.1/src/
+[D] 33b986f32ce75bc547e66458c619fe1e83aeaad4bc79b9e26555a825 qmlkonsole-26.04.1.tar.xz https://download.kde.org/stable/release-service/26.04.1/src/
+
+. $base/package/*/*/kde-conf.in

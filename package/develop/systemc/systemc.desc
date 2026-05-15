@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/systemc/systemc.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] C++ library for modeling and describing complex hardware systems
+
+[T] SystemC addresses the need for a system design and verification language
+[T] that spans hardware and software. It is a language built as an ANSI C++
+[T] class library created for design and verification.
+
+[U] https://www.accellera.org/downloads/standards/systemc
+
+[A] Accellera Systems Initiative
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[L] APL
+[V] 3.0.2
+
+[D] fed96be62747c21c9003ea54efe6fb463835573007cbbd40fc2b9938 systemc-3.0.2.tar.gz https://github.com/accellera-official/systemc/archive/3.0.2/

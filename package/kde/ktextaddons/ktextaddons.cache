@@ -1,6 +1,6 @@
-[TIMESTAMP] 1737678459 Fri Jan 24 01:27:39 2025
-[BUILDTIME] 460 (9)
-[SIZE] 3.16 MB, 513 files
+[TIMESTAMP] 1768604618 Sat Jan 17 00:03:38 2026
+[BUILDTIME] 520 (9)
+[SIZE] 7.61 MB, 860 files
 
 [DEP] bash
 [DEP] binutils
@@ -14,16 +14,24 @@
 [DEP] grep
 [DEP] karchive
 [DEP] kcolorscheme
+[DEP] kcompletion
 [DEP] kconfig
-[DEP] kconfigwidgets
+[DEP] kcoreaddons
 [DEP] ki18n
+[DEP] kiconthemes
 [DEP] kio
+[DEP] kitemviews
+[DEP] kjobwidgets
+[DEP] kservice
+[DEP] ktextwidgets
 [DEP] kwidgetsaddons
 [DEP] linux-header
 [DEP] make
 [DEP] pkgconfig
 [DEP] procps
+[DEP] python
 [DEP] qt6base
+[DEP] qt6multimedia
 [DEP] qt6speech
 [DEP] qt6tools
 [DEP] qtkeychain
@@ -31,6 +39,6 @@
 [DEP] sonnet
 [DEP] syntax-highlighting
 [DEP] tar
-[DEP] tbb
+[DEP] util-linux
 [DEP] vulkan-headers
 [DEP] xz

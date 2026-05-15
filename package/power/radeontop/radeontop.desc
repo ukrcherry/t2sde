@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/radeontop/radeontop.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Amd gpu utilization monitor
+
+[T] Amd gpu utilization monitor.
+
+[U] https://github.com/clbr/radeontop
+
+[A] Radeontop Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.4
+[L] GPL3
+[P] X -----5---9 700.000
+
+[D] 6638103c82a9c0025d96ba5d8130ee91f3dbcf38cbd0d5e02d8150b6 radeontop-1.4.tar.gz https://github.com/clbr/radeontop/archive/refs/tags/v1.4/

@@ -1,0 +1,29 @@
+
+[TIMESTAMP] 1697735617 Thu Oct 19 19:13:37 2023
+[BUILDTIME] 1 (9)
+[SIZE] 1.83 MB, 112 files
+
+[DEP] 00-dirtree
+[DEP] awake
+[DEP] bash
+[DEP] coreutils
+[DEP] diffutils
+[DEP] findutils
+[DEP] gaupol
+[DEP] gawk
+[DEP] grep
+[DEP] gzip
+[DEP] hamster-time-tracker
+[DEP] itstool
+[DEP] junit2html
+[DEP] lensfun
+[DEP] openssl
+[DEP] pexpect
+[DEP] ptyprocess
+[DEP] py-smbpasswd
+[DEP] pycups
+[DEP] python
+[DEP] pyxdg
+[DEP] sed
+[DEP] setuptools
+[DEP] tar

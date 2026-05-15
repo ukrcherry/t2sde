@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/celementtree/celementtree.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,15 +14,14 @@
 [T] range load in zero time (0.0 seconds). This allows you to
 [T] drastically simplify many kinds of XML applications.
 
-[U] http://effbot.org/zone/celementtree.htm
+[U] https://web.archive.org/web/20190707060854/http://effbot.org/zone/celementtree.htm
 
 [A] Fredrik Lundh <fredrik@pythonware.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/library
 
 [L] BSD
-[S] Stable
 [V] 1.0.2-20050302
 
 [D] 08bab602d3ebc32a876965638e7f83cc4768bba4cd2c0600bca37a59 cElementTree-1.0.2-20050302.tar.gz http://effbot.org/downloads/

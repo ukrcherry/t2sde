@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/epr/epr.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] CLI epub reader
+
+[T] CLI epub reader.
+
+[U] https://github.com/wustho/epr
+
+[A] Epr Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 2.4.15
+[L] MIT
+
+[D] 169abb05f3a26c20629a4ff886e3e72155f160ab4b4b05152454b8f4 epr-2.4.15.tar.gz https://github.com/wustho/epr/archive/refs/tags/v2.4.15/

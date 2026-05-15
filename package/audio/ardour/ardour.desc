@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/ardour/ardour.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,21 +14,22 @@
 [U] https://ardour.org/
 
 [A] Artjom Simon
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] NO-LTO
 
 [E] add flac
+[E] opt jack
 
 [L] GPL
-[S] Stable
-[V] 8.12.0
+[V] 9.2.0
 
-[O] runmake=0
-[O] AS="$CC -c"
-[O] hook_add preconf 5 "./waf configure --prefix=$root/$prefix"
-[O] hook_add inmake 5 "./waf"
-[O] hook_add postmake 5 "./waf install"
+[D] b154a38458a68841945f40b23c452aca44616a4ff787ececdeb54444 Ardour-9.2.0.tar.bz2 !https://community.ardour.org/download/release/628?expires=1774209812&signature=619ac0f240c93fda9c3e557bf3ef1b9c1ac06b58a1f26d873fb45496ebe92cb4
 
-[D] 230fdf46576665ddafd1ddc85ffcfa69e00c11b057713212fa3f50f1 Ardour-8.12.0.tar.bz2 !https://community.ardour.org/download/release/610?expires=1743107653&signature=01a275ecec4f5ad3a3dde9c18dfbae2da5ee8b47f131b21a1db34f16d6a02a2c
+runmake=0
+AS="$CC -c"
+
+hook_add preconf 5 "./waf configure --prefix=$root/$prefix"
+hook_add inmake 5 ./waf
+hook_add postmake 5 "./waf install"

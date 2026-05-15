@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gexiv2/gexiv2.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,17 +11,22 @@
 [U] https://wiki.gnome.org/Projects/gexiv2
 
 [A] Gexiv2 Authors
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/base
-[E] add pygobject
+[F] CROSS
 
-[V] 0.14.3
+[V] 0.16.0
 [L] GPL
-[S] Stable
 [P] X -----5---9 154.800
 
-[O] . $base/package/*/*/gnome-conf.in
-[O] var_append GCC_WRAPPER_APPEND ' ' -DEXIV2API=
+[CV-FLAGS] NO-MAJOR
+[D] 3f9d1607e36bec73d6d8d8289b0c8a1776a9b69bc83cd69971074b60 gexiv2-0.16.0.tar.bz2 https://gitlab.gnome.org/GNOME/gexiv2/-/archive/0.16.0/
 
-[D] 4df32818277d5757acc5980943935bc443ccef1b9c6f4e6d911220bc gexiv2-0.14.3.tar.xz https://download.gnome.org/sources/gexiv2/0.14/
+. $base/package/*/*/gnome-conf.in
+var_append GCC_WRAPPER_APPEND ' ' -DEXIV2API=
+
+pkginstalled python gobject-introspection || var_append mesonopt ' ' -Dpython3=false
+pkginstalled gobject-introspection || var_append mesonopt ' ' -Dintrospection=false
+pkginstalled pygobject || var_append mesonopt ' ' -Dpython3=false
+pkginstalled vala || var_append mesonopt ' ' -Dvapi=false

@@ -1,0 +1,21 @@
+[TIMESTAMP] 1739233852 Tue Feb 11 01:30:52 2025
+[BUILDTIME] 2 (5)
+[SIZE] 0.08 MB, 10 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] cmake
+[DEP] coreutils
+[DEP] diffutils
+[DEP] freetype
+[DEP] gawk
+[DEP] grep
+[DEP] gzip
+[DEP] libx11
+[DEP] libxkbfile
+[DEP] linux-header
+[DEP] make
+[DEP] pkgconfig
+[DEP] sed
+[DEP] tar
+[DEP] xorgproto

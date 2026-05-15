@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/kquickimageeditor/kquickimageeditor.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,15 +12,16 @@
 [U] https://invent.kde.org/libraries/kquickimageeditor/
 
 [A] The KDE-Team
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 0.5.1
-[P] X -----5---9 162.900
+[V] 0.6.1
 
-[O] . $base/package/*/*/kde-conf.in
+[D] 39732a5fe80392cae03b6519867a5b2aeda49adc63d0f5de5d666326 kquickimageeditor-0.6.1.tar.xz https://download.kde.org/stable/kquickimageeditor/
 
-[D] 4ba01ff857a2bf52e849f92b3d6ee5db996aab76003699f6f1a15b2e kquickimageeditor-0.5.1.tar.xz https://download.kde.org/stable/kquickimageeditor/
+. $base/package/*/*/kde-conf.in
+
+var_append GCC_WRAPPER_APPEND ' ' -I$root/usr/include/opencv4

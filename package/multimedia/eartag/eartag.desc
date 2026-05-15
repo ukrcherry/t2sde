@@ -1,0 +1,27 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/eartag/eartag.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Small and simple music tag editor
+
+[T] Ear Tag is a simple audio file tag editor. It is primarily geared towards
+[T] making quick edits or bulk-editing tracks in albums/EPs. Unlike other
+[T] tagging programs, Ear Tag does not require the user to set up a music
+[T] library folder.
+
+[U] https://github.com/knuxify/eartag
+
+[A] Eartag Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[L] MIT
+[V] 1.0.2
+
+[D] f16aa08d694a29d2dfe6d79b79a95a87158bac4858e864347af39507 eartag-1.0.2.tar.gz https://github.com/knuxify/eartag/archive/refs/tags/1.0.2/
+
+export GI_TYPELIB_PATH=/opt/gnome/${libdir##*/}/girepository-1.0:/usr/${libdir##*/}/girepository-1.0

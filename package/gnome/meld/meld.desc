@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/meld/meld.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,16 +14,15 @@
 [U] https://meld.sf.net
 
 [A] Stephen Kennedy <stevek@gnome.org>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/editor extra/desktop/gnome
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 3.23.0
-
-[O] hook_add premake 3 'for lang in hu ja ru; do mv po/$lang.po{,.defect}; done'
+[V] 3.23.1
 
 [CV-URL] http://ftp.gnome.org/pub/gnome/sources/meld/cache.json
-[D] f717616e5ef7711bfb7a9f6e6d5b09fcde5058ec07c70bce87444efb meld-3.23.0.tar.xz http://ftp.gnome.org/pub/gnome/sources/meld/3.23/
+[D] 8b1eebb45728d346b2a8ac70886f25fc3cd48ea87d40fbd13d4934df meld-3.23.1.tar.xz http://ftp.gnome.org/pub/gnome/sources/meld/3.23/
+
+hook_add premake 3 'for lang in hu ja ru; do mv po/$lang.po{,.defect}; done'

@@ -1,0 +1,28 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/marmot/marmot.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] A distributed SQLite server with MySQL wire compatible interface
+
+[T] Marmot v2 is a leaderless, distributed SQLite replication system built on a
+[T] gossip-based protocol with distributed transactions and eventual
+[T] consistency.
+
+[U] https://github.com/maxpert/marmot
+
+[A] Zohaib Sibte Hassan
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/database
+[F] CROSS
+
+[L] MIT
+[V] 2.8.0
+
+[D] 06c2ce56fccb6a1727bd48a0604a7efd9f0742a58a48266f043cb9c5 marmot-2.8.0.tar.gz https://github.com/maxpert/marmot/archive/v2.8.0/
+
+. $base/package/*/*/go-conf.in
+export CGO_ENABLED=1 # go-sqlite3 requires cgo to work
+hook_add postmake 5 'cp -vf marmot $root$bindir/'

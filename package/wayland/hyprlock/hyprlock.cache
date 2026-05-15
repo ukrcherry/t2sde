@@ -1,11 +1,10 @@
+[TIMESTAMP] 1776546839 Sat Apr 18 23:13:59 2026
+[BUILDTIME] 40 (9)
+[SIZE] 0.95 MB, 9 files
 
-[TIMESTAMP] 1710708404 Sun Mar 17 21:46:44 2024
-[BUILDTIME] 0 (9) ERROR
-[SIZE] 0.01 MB, 6 files
-
-[DEP] 00-dirtree
 [DEP] bash
 [DEP] binutils
+[DEP] cairo
 [DEP] cmake
 [DEP] coreutils
 [DEP] diffutils
@@ -13,7 +12,21 @@
 [DEP] gawk
 [DEP] grep
 [DEP] gzip
+[DEP] hyprgraphics
+[DEP] hyprlang
+[DEP] hyprutils
+[DEP] hyprwayland-scanner
+[DEP] libdrm
+[DEP] libglvnd
+[DEP] linux-header
 [DEP] make
+[DEP] mesa
+[DEP] pam
 [DEP] pkgconfig
+[DEP] sdbus-cpp
 [DEP] sed
 [DEP] tar
+[DEP] util-linux
+[DEP] wayland
+[DEP] wayland-protocols
+[DEP] xkbcommon

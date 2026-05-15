@@ -1,0 +1,32 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/retawq/retawq.desc
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A multi-threaded Web browser for text terminals
+
+[T] Retawq is a multi-threaded Web browser for text terminals on computers
+[T] with Unix-like operating systems. It is fast, small, nicely configurable,
+[T] and comfortable; e. G. The low-level network communications are performed
+[T] in a non-blocking way, and you can keep open as many &amp;quot;virtual
+[T] windows&amp;quot; as you want and work simultaneously in two of them in
+[T] a split-screen mode.
+
+[U] https://retawq.sourceforge.net/
+
+[A] Arne Thomassen <arne@arne-thomassen.de>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/network
+
+[L] GPL
+[V] 0.2.6c
+
+[D] b72b7d8088ca8d04fdb84cac5c023f0a3eadd5740021e1951676d22d retawq-0.2.6c.tar.gz https://prdownloads.sourceforge.net/sourceforge/retawq/
+
+#if we would want to use the non autoconf configure
+#var_append confopt ' ' --path-prefix=/$prefix
+runconf=0
+var_append makeopt ' ' PATH_INSTALL_PREFIX=/$prefix
+var_append makeinstopt ' ' PATH_INSTALL_PREFIX=$root/$prefix

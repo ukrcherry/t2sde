@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libpinyin/libpinyin.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Library to deal with pinyin
+
+[T] Library to deal with pinyin.
+
+[U] https://github.com/libpinyin/libpinyin
+
+[A] Libpinyin Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 2.10.3
+[L] GPL3
+
+[D] 3c2576d37f5724b8ce0a1a652c6dd4d7b4c34636f98ba1ea98da2007 libpinyin-2.10.3.tar.gz https://downloads.sourceforge.net/project/libpinyin/libpinyin/

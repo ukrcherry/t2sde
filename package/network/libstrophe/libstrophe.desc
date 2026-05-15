@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libstrophe/libstrophe.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Simple, lightweight C library for writing XMPP clients
+
+[T] Simple, lightweight C library for writing XMPP clients.
+
+[U] https://strophe.im/libstrophe/
+
+[A] Libstrophe Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.14.0
+[L] GPL3 MIT
+
+[D] 132386fd0b5600b5eeeca75df5b5972ca5d0e6fa91d12b068573ba2d libstrophe-0.14.0.tar.gz https://github.com/strophe/libstrophe/releases/download/0.14.0/

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libkdepim/libkdepim.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -12,16 +12,16 @@
 [U] https://www.kde.org
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 25.04.1
+[V] 26.04.1
 [P] X -----5---9 162.800
 
-[O] . $base/package/*/*/kde-conf.in
-
 [CV-GROUP] kde-gear
-[D] e07258dd4dcd6b4a6a865f306a69a566ef113fb4a83e71693c72d942 libkdepim-25.04.1.tar.xz https://download.kde.org/stable/release-service/25.04.1/src/
+[D] d92893ae499db00777de6a0e1b80d4bdcbee946d512c9dbb52e695bd libkdepim-26.04.1.tar.xz https://download.kde.org/stable/release-service/26.04.1/src/
+
+. $base/package/*/*/kde-conf.in

@@ -1,0 +1,40 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/freememapplet_tray/freememapplet_tray.desc
+[COPY] Copyright (C) 2014 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Free memory applet for desktop tray
+
+[T] Free memory applet for desktop tray.
+
+[U] https://bkhome.org/news
+
+[A] Barry Kauler
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/graphic
+
+[E] opt libwebp
+
+[L] GPL
+[V] 2.4
+[P] X -----5---9 400.000
+
+[D] 860a3bfc6a8cb9f0ab837c82b2b6a6dc45dad3e002664aebf37e509b freememapplet_tray-2.4.tar.bz2 http://distro.ibiblio.org/quirky/quirky6/sources/t2/april/
+
+build_fmtray() {
+ ./compile
+ if [ -f freememapplet_tray ];then
+  strip --strip-unneeded freememapplet_tray
+  mkdir -p $root/root/Startup
+  cp -a -f freememapplet_tray $root/root/Startup/
+  mkdir -p $root/usr/share/doc/nls/freememapplet_tray
+  cp -a -f freememapplet_tray.pot $root/usr/share/doc/nls/freememapplet_tray/
+ fi
+}
+runmake=0
+hook_add postmake 5 build_fmtray
+
+#oh dear, installs into root/Startup, but T2 doesn't put it into the binary tarball.
+flistroot='root usr var'

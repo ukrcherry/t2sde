@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/par2cmdline/par2cmdline.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] PAR 2.0 compatible file verification and repair tool
+
+[T] par2cmdline is a PAR 2.0 compatible file verification and repair tool.
+
+[U] https://github.com/Parchive/par2cmdline
+
+[A] Par2cmdline Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/archive
+[F] CROSS
+
+[L] GPL
+[V] 1.1.1
+
+[D] 36ac37a4046fdb6cb202a013668751009491277b9f72e521ad93258f par2cmdline-1.1.1.tar.bz2 https://github.com/Parchive/par2cmdline/releases/download/v1.1.1/

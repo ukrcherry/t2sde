@@ -1,0 +1,28 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/wireguard-tools/wireguard-tools.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] An extremely simple yet fast and modern VPN
+
+[T] WireGuard® is an extremely simple yet fast and modern VPN that
+[T] utilizes state-of-the-art cryptography. It aims to be faster, simpler,
+[T] leaner, and more useful than IPsec, while avoiding the massive headache.
+
+[U] https://wireguard.com
+
+[A] Jason A. Donenfeld <Jason@zx2c4.com>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/network
+[F] CROSS
+[R] - avr32
+
+[L] GPL
+[V] 1.0.20260223
+
+[CV-FLAGS] NO-PREFIX
+[D] 44a09e9a63e721e016d82c33f4f4791f129033e84570bdf97363f951 wireguard-1.0.20260223.tar.gz https://github.com/WireGuard/wireguard-tools/archive/v1.0.20260223/
+
+srcdir=*/src

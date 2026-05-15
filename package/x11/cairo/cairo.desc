@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/cairo/cairo.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -22,18 +22,26 @@
 [U] http://cairographics.org/
 
 [A] Carl Worth <cworth@isi.edu>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/x11
 [F] CROSS LATOMIC.sparc
 
 [L] LGPL
-[S] Stable
-[V] 1.18.2
+[V] 1.18.4
 [P] X -----5---9 126.480
 
-# w/ gcc-11.2 other ia64 randomly miscompile
-[O] [ $arch == ia64 ] && var_append GCC_WRAPPER_APPEND ' ' -O2
-[O] [ $arch == sparc ] && var_append confopt ' ' --disable-atomic
+[D] c60d2649c58fc80a103c7596563e9b9e48c4515e12803fcda920ccac cairo-1.18.4.tar.xz http://cairographics.org/releases/
 
-[D] 82505f1f86e2159e227945193dfe45201be949061be3c48db11fcf0a cairo-1.18.2.tar.xz http://cairographics.org/releases/
+# w/ gcc-11.2 other ia64 randomly miscompile
+[ $arch == ia64 ] && var_append GCC_WRAPPER_APPEND ' ' -O2
+[ $arch == sparc ] && var_append confopt ' ' --disable-atomic
+
+hook_add prepatch 5 "rm -rvf $builddir/$pkg-$ver/subprojects"
+
+# warning: conftest has a LOAD segment with RWX
+[[ $arch = powerpc* ]] && var_append GCC_WRAPPER_APPEND ' ' '-c?:-Wl,--no-warn-rwx-segments'
+
+pkginstalled xcb-util && var_append mesonopt ' ' -Dxcb=enabled
+
+var_append mesonopt ' ' -Dtests=disabled

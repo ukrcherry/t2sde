@@ -1,0 +1,30 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/ksh/ksh.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] KornShell
+
+[T] KornShell is an interactive command language that provides access to the
+[T] UNIX system and to many other systems, on the many different computers and
+[T] workstations on which it is implemented. The KornShell language is also a
+[T] complete, powerful, high-level programming language for writing applications,
+[T] often more easily and quicker than with other high-level languages.
+
+[U] http://www.kornshell.com/
+
+[A] David G. Korn
+[A] AT&T Inc.
+[A] Peter Stephenson <pws@zsh.org>
+[M] Eibwen
+[M] Tomas Glozar <tglozar@gmail.com>
+
+[C] base/system
+[F] NO-LTO.gcc
+
+[L] OpenSource
+[V] 2020.0.0
+[P] X -----5---9 106.600
+
+[D] 22ee5458ad61dc5e840c1a3854f9c7eadc942289c98ad9275584226b ksh-2020.0.0.tar.gz !https://github.com/att/ast/archive/refs/tags/2020.0.0.tar.gz

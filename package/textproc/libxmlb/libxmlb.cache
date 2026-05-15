@@ -1,6 +1,6 @@
-[TIMESTAMP] 1746445777 Mon May  5 12:49:37 2025
-[BUILDTIME] 6 (9)
-[SIZE] 0.50 MB, 46 files
+[TIMESTAMP] 1762363236 Wed Nov  5 18:20:36 2025
+[BUILDTIME] 10 (9)
+[SIZE] 1.44 MB, 80 files
 
 [DEP] bash
 [DEP] binutils
@@ -10,6 +10,7 @@
 [OPT] docbook-xsl
 [DEP] gawk
 [DEP] glib
+[OPT] gobject-introspection
 [DEP] grep
 [OPT] gtk-doc
 [DEP] gzip
@@ -19,6 +20,7 @@
 [DEP] openssl
 [DEP] python
 [DEP] sed
+[DEP] setuptools
 [DEP] tar
 [DEP] xz
 [DEP] zstd

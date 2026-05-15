@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/stone/stone.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -10,18 +10,17 @@
 [T] Formerly ROCK Linux now T2 Setup Tool ONE.
 
 [A] Claire Xenia Wolf <claire@clairexen.net>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/system
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 2023-04-18
+[V] 2026-01-05
 [P] X --2--5---9 110.000
 
-[O] srctar= runmake=0 sysconfdir=/etc/stone.d
+srctar= runmake=0 sysconfdir=/etc/stone.d
 
-[O] hook_add postmake 5 "install -v -m 755 $confdir/stone.sh $root$sbindir/stone"
-[O] hook_add postmake 6 "ln -sfv stone $root$sbindir/setup"
-[O] hook_add postdoc 5 "var_remove rmemptydir ' ' \$root\$sysconfdir"
+hook_add postmake 5 "install -v -m 755 $confdir/stone.sh $root$sbindir/stone"
+hook_add postmake 6 "ln -sfv stone $root$sbindir/setup"
+hook_add postdoc 5 "var_remove rmemptydir ' ' \$root\$sysconfdir"

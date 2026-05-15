@@ -1,0 +1,25 @@
+[TIMESTAMP] 1768844241 Mon Jan 19 18:37:21 2026
+[BUILDTIME] 5 (9)
+[SIZE] 1.26 MB, 259 files
+
+[OPT] asciidoc
+[DEP] bash
+[DEP] binutils
+[DEP] cmake
+[DEP] coreutils
+[DEP] diffutils
+[OPT] doxygen
+[DEP] findutils
+[DEP] gawk
+[DEP] grep
+[OPT] gtk+2
+[DEP] libsamplerate
+[DEP] libsndfile
+[DEP] meson
+[DEP] ninja
+[DEP] openssl
+[DEP] python
+[DEP] sed
+[DEP] tar
+[DEP] util-linux
+[DEP] xz

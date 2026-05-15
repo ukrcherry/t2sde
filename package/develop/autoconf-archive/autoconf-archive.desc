@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/autoconf-archive/autoconf-archive.desc
-[COPY] Copyright (C) 2021 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2021 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -8,18 +8,18 @@
 
 [T] The GNU Autoconf Archive is a collection of more than 500 macros for
 [T] GNU Autoconf that have been contributed as free software by friendly
-[T] supporters of the cause from all over the Internet
+[T] supporters of the cause from all over the Internet.
 
 [U] https://www.gnu.org/software/autoconf-archive/
 
 [A] Tom Tromey
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/development
 [F] CROSS DIETLIBC
 
 [L] GPL
-[S] Stable
-[V] 2023.02.20
+[V] 2024.10.16
+[P] X ?----5---9 103.000
 
-[D] 975efb0a27f9096ba5ceec58e075751fab672c3b98f32de7508a0230 autoconf-archive-2023.02.20.tar.xz http://mirrors.syringanetworks.net/gnu/autoconf-archive/
+[D] 1891cd54ab2db86947bd56315d84d2ca867b713b4edef730c451bb6c autoconf-archive-2024.10.16.tar.xz http://mirror.netcologne.de/gnu/autoconf-archive/

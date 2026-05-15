@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/rocprim/rocprim.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,22 +13,21 @@
 [U] https://github.com/ROCm/rocPRIM
 
 [A] Advanced Micro Devices, Inc.
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [F] CROSS
 [C] extra/development
 
 [L] MIT
-[S] Stable
-[V] 6.4.0
+[V] 7.2.3
 [P] X -----5---9 300.197
 
-[O] . $base/package/*/*/rocm-conf.in
-[O] var_append cmakeopt ' ' -DCMAKE_C_COMPILER=/$prefix/bin/clang
-[O] var_append cmakeopt ' ' -DCMAKE_CXX_COMPILER=/$prefix/bin/clang++
-[O] var_append cmakeopt ' ' "-DHIP_PLATFORM=amd -DHIP_COMPILER=clang"
-[O] var_append cmakeopt ' ' "-DAMDGPU_TARGETS='$SDECFG_PKG_ROCM_ARCHS'"
-[O] var_append cmakeopt ' ' "-DBUILD_BENCHMARK=OFF -DBUILD_TEST=OFF"
-
 [CV-GROUP] rocm
-[D] 373f3a45485cc9692fe40f76779cb7c84f973f069049de9bdb937886 rocPRIM-rocm-6.4.0.tar.gz https://github.com/ROCm/rocPRIM/archive/rocm-6.4.0/
+[D] ad61616d9b03611e1ef0aaf85c171c76295ce1e976e534e31dde36e9 rocPRIM-rocm-7.2.3.tar.gz https://github.com/ROCm/rocPRIM/archive/rocm-7.2.3/
+
+. $base/package/*/*/rocm-conf.in
+var_append cmakeopt ' ' -DCMAKE_C_COMPILER=/$prefix/bin/clang
+var_append cmakeopt ' ' -DCMAKE_CXX_COMPILER=/$prefix/bin/clang++
+var_append cmakeopt ' ' "-DHIP_PLATFORM=amd -DHIP_COMPILER=clang"
+var_append cmakeopt ' ' "-DAMDGPU_TARGETS='$SDECFG_PKG_ROCM_ARCHS'"
+var_append cmakeopt ' ' "-DBUILD_BENCHMARK=OFF -DBUILD_TEST=OFF"

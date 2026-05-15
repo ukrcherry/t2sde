@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/pcb/pcb.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -17,15 +17,13 @@
 
 [A] Thomas Nau
 [A] Harry Eaton
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/cad
 
 [L] GPL
-[S] Stable
-[V] 20060822
-[P] X -----5---9 670.200
+[V] 4.3.0
 
-[O] [ $prefix_auto = 1 ] && prefix="opt/pcb" && set_confopt
+[D] 0f491d5b4f5ef51bb6b9badf5dbf6becee7191881aeb19cdabdd7cfa pcb-4.3.0.tar.gz https://prdownloads.sourceforge.net/sourceforge/pcb/
 
-[D] 1462305e4b0da0b7b823e8b46d434f0c985e56e6e51671aae9ff55ac pcb-20060822.tar.gz http://dl.sourceforge.net/sourceforge/pcb/
+[ $prefix_auto = 1 ] && prefix="opt/pcb" && set_confopt

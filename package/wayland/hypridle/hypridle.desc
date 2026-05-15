@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/hypridle/hypridle.desc
-[COPY] Copyright (C) 2023 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2023 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,13 +11,12 @@
 [U] https://hyprland.org/
 
 [A] vaxerski
-[M] The T2 Project <t2@t2sde.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/x11
 [F] CROSS OBJDIR
 
 [L] BSD
-[S] Beta
-[V] 0.1.6
+[V] 0.1.7
 
-[D] 25547d52439a957fed914ec1d833ae088ced30f129dfa69ec7e0ee7a hypridle-v0.1.6.tar.gz https://github.com/hyprwm/hypridle/archive/refs/tags/v0.1.6/
+[D] 548e49674d7c349a8856847259205d4c90b4213eb528e8990dd75de6 hypridle-v0.1.7.tar.gz https://github.com/hyprwm/hypridle/archive/refs/tags/v0.1.7/

@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/haskell-http/haskell-http.desc
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Supports client-side web programming in Haskell
+
+[T] Supports client-side web programming in Haskell.
+
+[U] https://github.com/haskell/HTTP
+
+[A] Warrick Gray <warrick.gray@hotmail.com>
+[M] Riley Beckett <rbeckettvt@gmail.com>
+
+[C] extra/tool
+[F] CROSS
+
+[L] BSD
+[V] 4000.5.0
+
+[D] 11b0e99d674a211467722d4287fe8e06c060b7d3ffbd87a6382477b7 haskell-HTTP-4000.5.0.tar.gz !https://hackage.haskell.org/package/HTTP-4000.5.0/HTTP-4000.5.0.tar.gz
+
+. $base/package/*/*/haskell-conf.in

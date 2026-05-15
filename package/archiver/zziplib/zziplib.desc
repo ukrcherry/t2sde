@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/zziplib/zziplib.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,14 +15,13 @@
 [U] https://zziplib.sourceforge.net/
 
 [A] guidod@gmx.de
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/tool
 [F] CROSS
 
 [L] GPL
-[S] Beta
-[V] 0.13.79
+[V] 0.13.80
 [P] X -----5---9 112.500
 
-[D] 9da2826ed0628e788606f1aab11a7f8d39eb0f8e16609fb65bb061ff zziplib-0.13.79.tar.gz https://github.com/gdraheim/zziplib/archive/v0.13.79/
+[D] 3271345bdc7fce974b8f2d5c24626ef73fe1dc719469ca945022ca09 zziplib-0.13.80.tar.gz https://github.com/gdraheim/zziplib/archive/v0.13.80/

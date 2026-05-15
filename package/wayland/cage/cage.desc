@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/cage/cage.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -21,7 +21,6 @@
 [C] extra/x11
 
 [L] MIT
-[S] Beta
-[V] 0.2.0
+[V] 0.3.0
 
-[D] 54095f55cb1931b2b22792c3a4f4d4626ba0c9bf89542db9a8a2065c cage-0.2.0.tar.gz https://github.com/Hjdskes/cage/releases/download/v0.2.0/
+[D] 9e2ed4261f10e926a8c6a1dc88c4c56f504f98c6e06b3e83357410be cage-0.3.0.tar.gz https://github.com/Hjdskes/cage/releases/download/v0.3.0/

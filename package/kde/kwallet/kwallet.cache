@@ -1,6 +1,6 @@
-[TIMESTAMP] 1737678373 Fri Jan 24 01:26:13 2025
-[BUILDTIME] 120 (9)
-[SIZE] 2.64 MB, 166 files
+[TIMESTAMP] 1758136121 Wed Sep 17 21:08:41 2025
+[BUILDTIME] 210 (9)
+[SIZE] 2.61 MB, 172 files
 
 [DEP] bash
 [DEP] binutils
@@ -13,7 +13,9 @@
 [DEP] freetype
 [DEP] gawk
 [DEP] gettext
+[DEP] glib
 [DEP] gpgme
+[DEP] gpgmepp
 [DEP] grep
 [DEP] kcolorscheme
 [DEP] kconfig
@@ -27,7 +29,7 @@
 [DEP] kwindowsystem
 [DEP] libgcrypt
 [DEP] libgpg-error
-[DEP] libxml
+[DEP] libsecret
 [DEP] linux-header
 [DEP] make
 [DEP] pkgconfig
@@ -36,6 +38,5 @@
 [DEP] qt6base
 [DEP] sed
 [DEP] tar
-[DEP] tbb
 [DEP] vulkan-headers
 [DEP] xz

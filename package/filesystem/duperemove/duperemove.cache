@@ -1,0 +1,21 @@
+[TIMESTAMP] 1739278697 Tue Feb 11 13:58:17 2025
+[BUILDTIME] 2 (5)
+[SIZE] 0.37 MB, 13 files
+
+[DEP] bash
+[DEP] coreutils
+[DEP] diffutils
+[DEP] findutils
+[DEP] gawk
+[DEP] glib
+[DEP] grep
+[DEP] gzip
+[DEP] libbsd
+[DEP] linux-header
+[DEP] make
+[DEP] pkgconfig
+[DEP] sed
+[DEP] sqlite
+[DEP] tar
+[DEP] util-linux
+[DEP] xxhash

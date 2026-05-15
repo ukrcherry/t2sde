@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/perf/perf.desc
-[COPY] Copyright (C) 2021 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2021 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,7 +11,7 @@
 [U] https://perf.wiki.kernel.org/index.php/Main_Page
 
 [A] Linus Torvalds <torvalds@osdl.org>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/tool
 [F] CROSS NO-LTO.gcc
@@ -24,12 +24,10 @@
 [E] opt xmlto
 
 [L] GPL
-[S] Stable
-[V] 6.14.6
-[P] X -----5---9 990.500
-
-[O] srcdir="linux-*/tools/perf"
-[O] makeopt=
+[V] 6.19.14
 
 # https://cdn.kernel.org/pub/linux/kernel/tools/perf/
-[D] 34ba5f30adf7c732171f94eebe67e1d4ff25e1709e99a3c3f458b9c8 linux-6.14.6.tar.xz http://www.kernel.org/pub/linux/kernel/v6.x/
+[D] a778bb689d09b8535eb2c8d2cec5d20eea381378b3bde9a24988b28e linux-6.19.14.tar.xz https://www.kernel.org/pub/linux/kernel/v6.x/
+
+srcdir="linux-*/tools/perf"
+makeopt=

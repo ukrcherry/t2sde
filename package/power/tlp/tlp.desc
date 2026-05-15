@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/tlp/tlp.desc
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Laptop battery saver
+
+[T] A feature-rich command line utility for Linux, saving laptop battery power
+[T] without the need to delve deeper into technical details.
+
+[U] https://linrunner.de/tlp/index.html
+
+[A] linrunner
+[M] Riley Beckett <rbeckettvt@gmail.com>
+
+[C] extra/tool
+[F] CROSS
+
+[L] GPL
+[V] 1.10.1
+
+[D] b8f2d9bd4bf70e07f7a665bd1775085d3bd831678a727522c28c8d20 tlp-1.10.1.tar.gz https://github.com/linrunner/TLP/archive/1.10.1/

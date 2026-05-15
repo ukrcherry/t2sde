@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/ktoblzcheck/ktoblzcheck.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A library to check account numbers and bank codes of german banks
+
+[T] A library to check account numbers and bank codes of german banks.
+
+[U] https://ktoblzcheck.sourceforge.net/
+
+[A] Ktoblzcheck Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[E] opt doxygen
+
+[L] LGPL
+[V] 1.59
+
+[D] 89b4c0dd52496115005d2402b544d11a31c1166d605b9f2227df067c ktoblzcheck-1.59.tar.gz https://downloads.sourceforge.net/project/ktoblzcheck/

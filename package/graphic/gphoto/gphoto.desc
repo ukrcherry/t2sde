@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gphoto/gphoto.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -13,13 +13,12 @@
 
 [U] http://www.gphoto.org/
 [A] Scott Fritzinger <scottf@scs.unr.edu>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
-[L] GPL
-[S] Stable
-[C] extra/office
 [F] CROSS
 
-[V] 2.5.5
+[L] GPL
+[C] extra/office
+[V] 2.5.32
 
-[D] fafcf50b6935ea607d90acf525e5f8a2202ab6e1482847e7db688a39 gphoto2-2.5.5.tar.gz http://dl.sourceforge.net/sourceforge/gphoto/
+[D] 22e7457242093f05da6c05fc2800e16b2baf7f963dbe89f41e7137dd gphoto2-2.5.32.tar.xz https://github.com/gphoto/gphoto2/releases/download/v2.5.32/

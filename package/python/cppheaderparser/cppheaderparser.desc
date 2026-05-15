@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/cppheaderparser/cppheaderparser.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,12 +11,11 @@
 [U] https://pypi.org/project/CppHeaderParser
 
 [A] Jashua Cloutier <jashuac@bellsouth.net>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [L] BSD
-[S] Stable
 [V] 2.7.4
 [P] X -----5---9 128.500
 

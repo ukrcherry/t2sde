@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/zef/zef.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -17,14 +17,12 @@
 [F] CROSS
 
 [L] Artistic
-[S] Stable
-[V] 0.22.8
+[V] 1.1.1
 [P] X -----5---9 209.701
 
-[O] bootstrapdir=$builddir/$pkg-$ver
-[O] PATH=$PATH:$bootstrapdir/bin
-[O] export RAKULIB=$bootstrapdir/lib
-[O] hook_add postmake 2 "ln -sf $root/$prefix/share/perl6/site/bin/zef $root$bindir/zef"
+[D] 17c6ada5145fc94b506161e2b755238574e484558d50570305c5f5a3 zef-1.1.1.tar.gz https://github.com/ugexe/zef/archive/v1.1.1/
 
-[CV-FLAGS] NO-MAJOR # they have a v018.0 typo tag, ... :-/
-[D] 86f931fda345d6114fdc2c6d25460ab8932a78ec6a445c8427194943 zef-0.22.8.tar.gz https://github.com/ugexe/zef/archive/v0.22.8/
+bootstrapdir=$builddir/$pkg-$ver
+PATH=$PATH:$bootstrapdir/bin
+export RAKULIB=$bootstrapdir/lib
+hook_add postmake 2 "ln -sf $root/$prefix/share/perl6/site/bin/zef $root$bindir/zef"

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/thunar-vcs-plugin/thunar-vcs-plugin.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,14 +12,13 @@
 [U] https://docs.xfce.org/xfce/thunar/thunar-vcs-plugin
 
 [A] Peter de Ridder <peter@xfce.org>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/desktop/xfce
 
 [L] GPL
-[S] Alpha
-[V] 0.3.0
+[V] 0.4.0
 
-[O] . $base/package/xfce4/*/xfce4-conf.in
+[D] fb9272921357e32fdba50a4db641baa58202a72087ee1b5821ac9ad8 thunar-vcs-plugin-0.4.0.tar.xz https://archive.xfce.org/src/thunar-plugins/thunar-vcs-plugin/0.4/
 
-[D] a3e9bea83cb7f5707deae398ccb94fb5d73d4d56cdceadab78524f80 thunar-vcs-plugin-0.3.0.tar.bz2 https://archive.xfce.org/src/thunar-plugins/thunar-vcs-plugin/0.3/
+. $base/package/xfce4/*/xfce4-conf.in

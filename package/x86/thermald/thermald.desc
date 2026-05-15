@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---.
 [COPY] t2/package/*/thermald/thermald.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---.
 
@@ -14,15 +14,13 @@
 [U] https://github.com/intel/thermal_daemon
 
 [A] Thermald Authors
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/base
 
-[V] 2.5.9
+[V] 2.5.11
 [L] GPL
-[S] Stable
-[P] X -----5---9 700.000
 
-[O] autogen=1
+[D] 43beb6b6581c488080315d550ffecd43d6dd4e17adf6d6eb69e9016c thermald-2.5.11.tar.gz https://github.com/intel/thermal_daemon/archive/v2.5.11/
 
-[D] 37aa774f3d85aac69b7db2222529631949afc06dbc6e9c63540e450e thermald-2.5.9.tar.gz https://github.com/intel/thermal_daemon/archive/v2.5.9/
+autogen=1

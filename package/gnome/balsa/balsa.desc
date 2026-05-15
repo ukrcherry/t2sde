@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/balsa/balsa.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -25,11 +25,9 @@
 [C] extra/office extra/desktop/gnome
 
 [L] GPL
-[S] Stable
-[V] 2.6.4
+[V] 2.6.5
 [P] X -----5---9 154.200
 
-[O] . $base/package/*/*/gnome-conf.in
-[O] var_append confopt ' ' --without-nm
+[D] cceb4ed1f34d8565b3878b8245b341ff912bd95ed13b9cbcb4d81bb1 balsa-2.6.5.tar.bz2 https://gitlab.gnome.org/GNOME/balsa/-/archive/2.6.5/
 
-[D] af20a0a77dadfa3e6948f6b94c428bf13d3f53adbbedf2b823fa9b4e balsa-2.6.4.tar.xz http://pawsa.fedorapeople.org/balsa/
+. $base/package/*/*/gnome-conf.in

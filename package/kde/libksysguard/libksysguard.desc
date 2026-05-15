@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libksysguard/libksysguard.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,16 +11,20 @@
 [U] https://www.kde.org
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 6.3.5
+[V] 6.6.5
 [P] X -----5---9 200.300
 
-[O] . $base/package/*/*/kde-conf.in
-
 [CV-GROUP] kde-plasma
-[D] 452b77397fe83ac6ae590c35cb8b7e310effa63e20a961b178f8347d libksysguard-6.3.5.tar.xz https://download.kde.org/stable/plasma/6.3.5/
+[D] ae5e5a62d6c02248a0c5179dae8e139c577f31fd33b56837c5e2abfb libksysguard-6.6.5.tar.xz https://download.kde.org/stable/plasma/6.6.5/
+
+. $base/package/*/*/kde-conf.in
+
+atstage cross &&
+	var_append cmakeopt ' ' -DKAUTH_HELPER_INSTALL_DIR=-D$root/$libexecdir/kf6/kauth
+	#var_append cmakeopt ' ' -DCMAKE_INSTALL_PREFIX=$root/ &&

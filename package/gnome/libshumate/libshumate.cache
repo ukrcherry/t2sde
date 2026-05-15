@@ -1,0 +1,49 @@
+[TIMESTAMP] 1773419044 Fri Mar 13 17:24:04 2026
+[BUILDTIME] 25 (9)
+[SIZE] 11.21 MB, 596 files
+
+[DEP] 00-dirtree
+[DEP] bash
+[DEP] binutils
+[DEP] cairo
+[DEP] cantarell-fonts
+[DEP] cmake
+[DEP] coreutils
+[DEP] dejavu-ttf-fonts
+[DEP] diffutils
+[DEP] findutils
+[DEP] font-alias
+[DEP] font-util
+[DEP] fontconfig
+[DEP] freefonts
+[DEP] gawk
+[DEP] gdk-pixbuf
+[DEP] gettext
+[OPT] gi-docgen
+[DEP] glib
+[DEP] gobject-introspection
+[DEP] gperf
+[DEP] graphene
+[DEP] graphviz
+[DEP] grep
+[DEP] gtk
+[DEP] gzip
+[DEP] harfbuzz
+[DEP] json-glib
+[DEP] libsoup3
+[DEP] libxml
+[DEP] linux-header
+[DEP] meson
+[DEP] ninja
+[DEP] openssl
+[DEP] pango
+[DEP] pkgconfig
+[DEP] protobuf-c
+[DEP] python
+[DEP] sed
+[DEP] setuptools
+[DEP] sqlite
+[DEP] tar
+[DEP] util-linux
+[DEP] vala
+[DEP] xorgproto

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/hyprland/hyprland.desc
-[COPY] Copyright (C) 2023 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2023 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,18 +12,17 @@
 [U] https://hyprland.org/
 
 [A] vaxerski
-[M] The T2 Project <t2@t2sde.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/x11
 [F] CROSS OBJDIR NO-LTO
 
 [L] BSD
-[S] Beta
-[V] 0.49.0
+[V] 0.55.1
 
-[O] runmeson=0 runcmake=1
-[O] pkginstalled systemd || var_append cmakeopt ' ' -DNO_SYSTEMD=1
-[O] var_append CXX_WRAPPER_APPEND ' ' -std=c++26
-[O] var_append GCC_WRAPPER_INSERT ' ' "-L$root`pkgprefix libdir pixman`"
+[D] ccc3b7ac2f164a759afa8b450adec6d1d48b9ffd90c3adf6f55d739f hyprland-v0.55.1.tar.gz https://github.com/hyprwm/Hyprland/archive/refs/tags/v0.55.1/
 
-[D] 28a72c8fc65ae8750ca78663242dcdc649c24bdfef378f5f95c48ed0 hyprland-v0.49.0.tar.gz !https://github.com/hyprwm/Hyprland/releases/download/v0.49.0/source-v0.49.0.tar.gz
+runmeson=0 runcmake=1
+pkginstalled systemd || var_append cmakeopt ' ' -DNO_SYSTEMD=1
+var_append CXX_WRAPPER_APPEND ' ' -std=c++26
+var_append GCC_WRAPPER_INSERT ' ' "-L$root`pkgprefix libdir pixman`"

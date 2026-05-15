@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/rrdcollect/rrdcollect.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Read system statistical data and feed it to RRDtool
+
+[T] Read system statistical data and feed it to RRDtool.
+
+[U] https://rrdcollect.sourceforge.net/
+
+[A] Rrdcollect Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 0.2.10
+[L] GPL
+
+[D] 8282e25b41c2e9ec2f054b0439cd523d0679e6edbecebefea00561dd rrdcollect-0.2.10.tar.bz2 https://downloads.sourceforge.net/rrdcollect/

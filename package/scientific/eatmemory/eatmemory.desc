@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/eatmemory/eatmemory.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Simple C program to allocate memory from the command line
+
+[T] Simple C program to allocate memory from the command line.
+
+[U] https://github.com/julman99/eatmemory
+
+[A] Eatmemory Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 1.0.0
+[L] MIT
+
+[D] 76b9044fd5dbf872360d77e2a4f92214e3d364fcb1af84f9b43c3302 eatmemory-1.0.0.tar.gz https://github.com/julman99/eatmemory/archive/v1.0.0/

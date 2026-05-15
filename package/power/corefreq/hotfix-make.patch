@@ -1,0 +1,31 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/corefreq/hotfix-make.patch
+# Copyright (C) 2025 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0 or patched project license
+# --- T2-COPYRIGHT-END ---
+
+--- CoreFreq-2.0.0/Makefile.vanilla
++++ CoreFreq-2.0.0/Makefile
+@@ -184,7 +184,7 @@
+ 	fi
+ 
+ .PHONY: install
+-install: module-install
++install:
+ 	@if [ -e $(BUILD)/corefreq-cli ]; then \
+ 		$(INSTALL) -m 0755 $(BUILD)/corefreq-cli $(PREFIX)/bin; \
+ 	fi
+--- CoreFreq-2.0.8/Makefile.vanilla
++++ CoreFreq-2.0.8/Makefile
+@@ -234,9 +234,8 @@
+ 
+ .PHONY: module-install
+ module-install:
+-	@if [ -e $(BUILD)/corefreqk.ko ]; then \
+-		$(MAKE) -C $(KERNELDIR) M=$(PWD)/$(BUILD) modules_install; \
+-	fi
++	$(MAKE) -C $(KERNELDIR) M=$(PWD)/$(BUILD);
++	$(MAKE) -C $(KERNELDIR) M=$(PWD)/$(BUILD) modules_install;
+ 
+ .PHONY: clean
+ clean:

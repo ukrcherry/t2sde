@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/epic5/epic5.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Enhanced Programmable ircII Client, version 5
+
+[T] Enhanced Programmable ircII Client, version 5.
+
+[U] https://epicsol.org/
+
+[A] Epic5 Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 3.0.3
+[L] BSD
+
+[D] 365fab82042de204e29413c03d4e115d02b792f4b1d1256ad257fa1d epic5-3.0.3.tar.xz https://ftp.epicsol.org/pub/epic/EPIC5-PRODUCTION/

@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/perl-dbd-pg/perl-dbd-pg.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] The PostgresSQL Perl (DBI/DBD) Driver
+
+[T] This is the Perl (DBI) Driver for accessing PostgreSQL.
+
+[U] https://metacpan.org/pod/DBD::Pg
+
+[A] Bruce Momjian
+[A] David Wheeler
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/database
+
+[L] GPL
+[V] 3.20.2
+[P] X -----5---9 176.200
+
+[D] 09077a396d946343d798eea2da2b1a233705b681348226c320fd5ac0 DBD-Pg-3.20.2.tar.gz https://cpan.metacpan.org/authors/id/T/TU/TURNSTEP/
+
+var_append GCC_WRAPPER_APPEND ' ' -std=gnu11

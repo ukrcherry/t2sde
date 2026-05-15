@@ -1,37 +1,38 @@
-[TIMESTAMP] 1745782723 Sun Apr 27 22:38:43 2025
-[BUILDTIME] 45 (9)
-[SIZE] 11.38 MB, 239 files
+[TIMESTAMP] 1760442280 Tue Oct 14 13:44:40 2025
+[BUILDTIME] 40 (9)
+[SIZE] 11.48 MB, 238 files
 
+[OPT] at-spi2-core
 [DEP] bash
 [DEP] binutils
 [DEP] bison
-[DEP] cmake
+[OPT] cairo
 [DEP] coreutils
 [DEP] diffutils
-[DEP] flex
 [DEP] gawk
+[OPT] gdk-pixbuf
 [DEP] gettext
 [DEP] glib
 [DEP] gmp
 [OPT] gobject-introspection
 [DEP] grep
 [DEP] gsl
+[OPT] gtk+
+[OPT] harfbuzz
 [OPT] libcap
 [DEP] libelf
 [DEP] linux-header
 [DEP] m4
-[DEP] make
 [DEP] meson
 [DEP] ninja
 [DEP] openssl
 [DEP] packaging
-[DEP] pkgconfig
+[OPT] pango
 [DEP] python
 [OPT] rustc
 [DEP] sed
 [DEP] setuptools
 [DEP] tar
-[DEP] tbb
 [DEP] tqdm
 [DEP] unwind
 [DEP] xz

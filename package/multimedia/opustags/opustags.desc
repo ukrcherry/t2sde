@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/opustags/opustags.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Ogg Opus tags editor
+
+[T] Ogg Opus tags editor.
+
+[U] https://github.com/fmang/opustags
+
+[A] Opustags Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.10.1
+[L] BSD
+
+[D] 96fd2bffcbc6f28d9500e603abd8c9eb18ff179fc8326550ed951f66 opustags-1.10.1.tar.gz https://github.com/fmang/opustags/archive/refs/tags/1.10.1/

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/lsof/lsof.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -14,13 +14,14 @@
 [U] https://people.freebsd.org/~abe/
 
 [A] Victor A. Abell <abe@cc.purdue.edu>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/tool
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 4.91
+[V] 4.99.6
 
-[D] 762395477cab2d2897541e8580225a04ee95629e94d06db7f923257e lsof_4.91.tar.bz2 http://ftp.fu-berlin.de/pub/unix/tools/lsof/
+[D] de423ab73430cfeb3755873c950a635d1345ea173251bd51d9025831 lsof-4.99.6.tar.gz https://github.com/lsof-org/lsof/releases/download/4.99.6/
+
+autogen=2

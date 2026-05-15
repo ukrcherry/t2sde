@@ -1,6 +1,6 @@
-[TIMESTAMP] 1743153756 Fri Mar 28 10:22:36 2025
-[BUILDTIME] 125 (9)
-[SIZE] 15.33 MB, 205 files
+[TIMESTAMP] 1760363685 Mon Oct 13 15:54:45 2025
+[BUILDTIME] 115 (9)
+[SIZE] 21.30 MB, 903 files
 
 [DEP] babl
 [DEP] bash
@@ -13,7 +13,8 @@
 [DEP] gawk
 [DEP] gdk-pixbuf
 [DEP] gettext
-[DEP] gexiv2
+[OPT] gexiv2
+[OPT] gi-docgen
 [DEP] glib
 [OPT] gobject-introspection
 [DEP] grep
@@ -24,10 +25,10 @@
 [DEP] lcms2
 [DEP] libjpeg
 [DEP] libpng
+[DEP] libraw
 [OPT] librsvg
 [DEP] libsdl2
 [DEP] libtiff
-[DEP] libv4l
 [OPT] libwebp
 [DEP] linux-header
 [DEP] meson
@@ -36,10 +37,10 @@
 [DEP] openssl
 [DEP] pango
 [DEP] pkgconfig
+[OPT] poppler
 [DEP] python
 [DEP] sed
 [DEP] setuptools
 [DEP] tar
-[DEP] tbb
 [OPT] vala
 [DEP] xz

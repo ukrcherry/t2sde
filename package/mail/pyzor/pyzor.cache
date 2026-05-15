@@ -5,10 +5,8 @@
 [DEP] bash
 [DEP] bzip2
 [DEP] coreutils
-[DEP] cython
 [DEP] diffutils
 [DEP] gawk
-[DEP] git
 [DEP] grep
 [DEP] m4
 [DEP] openssl

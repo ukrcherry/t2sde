@@ -1,17 +1,20 @@
+[TIMESTAMP] 1776948345 Thu Apr 23 14:45:45 2026
+[BUILDTIME] 16 (9)
+[SIZE] 1.44 MB, 68 files
 
-[TIMESTAMP] 1694697436 Thu Sep 14 15:17:16 2023
-[BUILDTIME] 6 (9)
-[SIZE] 2.04 MB, 95 files
-
-[DEP] 00-dirtree
+[DEP] bash
 [DEP] binutils
 [DEP] coreutils
-[DEP] fuse2
+[DEP] diffutils
+[DEP] file
+[DEP] findutils
+[OPT] fuse2
 [DEP] gawk
 [DEP] grep
 [DEP] gzip
 [DEP] linux-header
 [DEP] make
+[DEP] pkgconfig
 [DEP] sed
 [DEP] tar
 [DEP] util-linux

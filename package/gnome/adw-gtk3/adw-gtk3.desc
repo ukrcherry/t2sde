@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/adw-gtk3/adw-gtk3.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] The theme from libadwaita ported to GTK-3
+
+[T] The theme from libadwaita ported to GTK-3.
+
+[U] https://github.com/lassekongo83/adw-gtk3
+
+[A] Adw-gtk3 Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 6.5
+[L] LGPL
+
+[D] a767011076153e2a38eb1498bb3e5f198d3d02965d26a7c9d3967777 adw-gtk3-6.5.tar.gz https://github.com/lassekongo83/adw-gtk3/archive/refs/tags/v6.5/

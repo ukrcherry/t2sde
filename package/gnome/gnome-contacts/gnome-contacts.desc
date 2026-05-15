@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gnome-contacts/gnome-contacts.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,16 +11,14 @@
 [U] https://www.gnome.org
 
 [A] The GNOME Project <gnome-devel-list@gnome.org>
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/shell extra/desktop/gnome
 
 [L] LGPL
-[S] Stable
-[V] 48.0
-[P] X -----5---9 200.100
-
-[O] . $base/package/*/*/gnome-conf.in
+[V] 50.0
 
 [CV-URL] https://download.gnome.org/sources/gnome-contacts/cache.json
-[D] c54006776b83b2d27480cd1afe522585ad17441b429713df4c508440 gnome-contacts-48.0.tar.xz https://download.gnome.org/sources/gnome-contacts/48/
+[D] 1df65de71d8109fb87bf9690c4204adf5e20f187472206a0acc6e253 gnome-contacts-50.0.tar.xz https://download.gnome.org/sources/gnome-contacts/50/
+
+. $base/package/*/*/gnome-conf.in

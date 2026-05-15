@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gwenview/gwenview.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -13,17 +13,17 @@
 [U] https://apps.kde.org/gwenview/
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
+
 [E] opt kdoctools
 
 [L] GPL
-[S] Stable
-[V] 25.04.1
-[P] X -----5---9 162.420
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 26.04.1
 
 [CV-GROUP] kde-gear
-[D] ceaf6c3ebf1f87555874a55517660ea803a8e863ee2f28ee94a3f914 gwenview-25.04.1.tar.xz https://download.kde.org/stable/release-service/25.04.1/src/
+[D] bf53ddc6dbbeebbc6a446b04951c26badd777d4e96e62203a4944524 gwenview-26.04.1.tar.xz https://download.kde.org/stable/release-service/26.04.1/src/
+
+. $base/package/*/*/kde-conf.in

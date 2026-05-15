@@ -1,0 +1,45 @@
+[TIMESTAMP] 1751322046 Tue Jul  1 00:20:46 2025
+[BUILDTIME] 80 (9)
+[SIZE] 16.05 MB, 212 files
+
+[DEP] augeas
+[DEP] autoconf
+[DEP] automake
+[DEP] bash
+[DEP] binutils
+[DEP] cargo
+[DEP] coreutils
+[DEP] cpio
+[DEP] diffutils
+[DEP] findutils
+[DEP] gawk
+[DEP] glib
+[DEP] gobject-introspection
+[DEP] grep
+[DEP] gzip
+[DEP] hivex
+[DEP] json-c
+[DEP] libcap
+[DEP] libisoburn
+[DEP] libtirpc
+[DEP] libtool
+[DEP] libxml
+[DEP] linux-header
+[DEP] make
+[DEP] ncurses
+[DEP] ocaml
+[DEP] ocaml-augeas
+[DEP] ocaml-findlib
+[DEP] openssl
+[DEP] pcre2
+[DEP] perl
+[DEP] python
+[DEP] qemu
+[DEP] readline
+[DEP] rustc
+[DEP] sed
+[DEP] setuptools
+[OPT] supermin
+[DEP] tar
+[DEP] xz
+[DEP] zstd

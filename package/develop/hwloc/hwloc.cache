@@ -1,16 +1,16 @@
-[TIMESTAMP] 1746826044 Fri May  9 22:27:24 2025
-[BUILDTIME] 12 (9)
-[SIZE] 4.22 MB, 557 files
+[TIMESTAMP] 1758307808 Fri Sep 19 20:50:08 2025
+[BUILDTIME] 20 (9)
+[SIZE] 4.26 MB, 560 files
 
 [DEP] bash
 [DEP] binutils
+[DEP] bzip2
 [OPT] cairo
 [DEP] coreutils
 [DEP] diffutils
 [DEP] findutils
 [DEP] gawk
 [DEP] grep
-[DEP] gzip
 [DEP] libpciaccess
 [DEP] libxml
 [DEP] linux-header

@@ -1,0 +1,27 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/lager/lager.desc
+# Copyright (C) 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] C++ library for value-oriented design
+
+[T] C++ library for value-oriented design using the unidirectional data-flow
+[T] architecture — Redux for C++.
+
+[U] https://github.com/arximboldi/lager
+
+[A] arximboldi
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] MIT
+[V] 0.1.3
+[P] X -----5---9 200.000
+
+[D] eddcd3016bc9e9886836a502710f3d422ea17d4f03f3ab866aaa3460 lager-0.1.3.tar.gz https://github.com/arximboldi/lager/archive/v0.1.3/
+
+var_append cmakeopt ' ' '-Dlager_BUILD_TESTS=OFF -Dlager_BUILD_FAILURE_TESTS=OFF'
+var_append cmakeopt ' ' '-Dlager_BUILD_EXAMPLES=OFF -Dlager_BUILD_DEBUGGER_EXAMPLES=OFF'

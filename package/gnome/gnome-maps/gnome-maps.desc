@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gnome-maps/gnome-maps.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,16 +11,14 @@
 [U] https://www.gnome.org
 
 [A] The GNOME Project <gnome-devel-list@gnome.org>
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/shell extra/desktop/gnome
 
 [L] LGPL
-[S] Stable
-[V] 48.2
-[P] X -----5---9 177.200
-
-[O] . $base/package/*/*/gnome-conf.in
+[V] 50.1
 
 [CV-URL] https://download.gnome.org/sources/gnome-maps/cache.json
-[D] 61ba8c15153202a4e3153bed5432fc7ea45d7f88d908f5e727ef2116 gnome-maps-48.2.tar.xz https://download.gnome.org/sources/gnome-maps/48/
+[D] be166074658813da40fb1dce579d023b9efd9e6426b125a2ccc0dfef gnome-maps-50.1.tar.xz https://download.gnome.org/sources/gnome-maps/50/
+
+. $base/package/*/*/gnome-conf.in

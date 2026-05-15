@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/freeciv/freeciv.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -25,14 +25,35 @@
 [A] Peter Joachim Unold <pjunold@daimi.aau.dk>
 [A] Claus Leth Gregersen <leth@daimi.aau.dk>
 [A] Allan Ove Kjeldbjerg <allan@daimi.aau.dk>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/game
 #[C] extra/game/strategy
 
 [L] GPL
-[S] Stable
-[V] 3.1.5
-[P] X -----5---9 212.800
+[V] 3.2.4
 
-[D] 98ce02fdb7d53509e448c3c7bc74ca21c01a3a58598c3566d1815c7b freeciv-3.1.5.tar.xz http://dl.sourceforge.net/sourceforge/freeciv/
+[D] 8b4d7243df91a73b2f8acf7f2909027dc9d74fd2660262190bee84f5 freeciv-3.2.4.tar.xz https://prdownloads.sourceforge.net/sourceforge/freeciv/
+
+runmeson=0
+
+bindir=$root/$SDECFG_PKG_GAMES_BINDIR
+datadir=$root/$SDECFG_PKG_GAMES_DATADIR
+
+[ "$SDECFG_DISABLE_NLS" == "1" ] &&
+  var_append confopt ' ' --disable-nls
+[ "$SDECFG_PKG_FREECIV_ESD" == "0" ] &&
+  var_append confopt ' ' --disable-esd
+[ "$SDECFG_PKG_FREECIV_SDLMIX" == "0" ] &&
+  var_append confopt ' ' --disable-sdl-mixer
+[ "$SDECFG_PKG_FREECIV_READLINE" == "1" ] &&
+  var_append confopt ' ' --with-readline
+if [ "$SDECFG_PKG_FREECIV_XAW" == "xaw" ]; then
+  var_append confopt ' ' --with-xaw
+elif [ "$SDECFG_PKG_FREECIV_XAW" == "xaw3d" ]; then
+  var_append confopt ' ' --with-xaw3d
+fi
+[ "$SDECFG_PKG_FREECIV_ZLIB" == "1" ] &&
+  var_append confopt ' ' --with-zlib
+[ "$SDECFG_PKG_FREECIV_EFENCE" == "1" ] &&
+  var_append confopt ' ' --with-efence

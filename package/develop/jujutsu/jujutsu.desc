@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/jujutsu/jujutsu.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,15 +13,16 @@
 [U] https://jj-vcs.github.io/jj/
 
 [A] Google LLC
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
+[F] CROSS
 
 [L] APL
-[S] Stable
-[V] 0.29.0
+[V] 0.41.0
 
-[O] rungpepinstall=0 cargoinstopt=
-[O] hook_add postmake 5 'cp -vf target/release/jj $root$bindir/'
+[D] 075dfb26c4fd13a5b6a1a03d9c151d386c17c8ff8893d75a0e44cc8b jj-0.41.0.tar.gz https://github.com/jj-vcs/jj/archive/v0.41.0/
 
-[D] 6e3dfc473848436b1ba3cde23ddcc93990b38ea627dd264c4c81eb79 jj-0.29.0.tar.gz https://github.com/jj-vcs/jj/archive/v0.29.0/
+rungpepinstall=0 cargoinstopt=
+atstage cross && hook_add postmake 5 "cp -vf target/${arch_target}/*/jj $root$bindir/"
+atstage native && hook_add postmake 5 "cp -vf target/*/jj $root$bindir/"

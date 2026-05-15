@@ -1,0 +1,29 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/nemu/nemu.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Ncurses UI for QEMU
+
+[T] nEMU is a ncurses UI for QEMU. Features: Install/delete/clone/rename VM,
+[T] Show VM status, CPU usage, Start/stop/shutdown/reset VM, Connect to VM via
+[T] VNC or SPICE protocol, Full VM snapshots (since QEMU-6.0.0), Show/Edit VM
+[T] settings, USB support Network via tap/macvtap interfaces, VirtFS support
+[T] (Plan 9 host files sharing), Import OVA (OVF 1.0/2.0), D-Bus support,
+[T] Remote control API
+
+[U] https://github.com/nemuTUI/nemu
+
+[A] Pavel Balaev
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[E] add tightvnc virt-viewer
+
+[L] BSD
+[V] 3.4.0
+
+[D] 41d68daa2536955a858e08572eed5526109a2176b3fab993b6d444bb nemutui-3.4.0.tar.gz https://github.com/nemuTUI/nemu/archive/refs/tags/v3.4.0/

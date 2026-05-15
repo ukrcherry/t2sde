@@ -1,0 +1,39 @@
+[TIMESTAMP] 1759855879 Tue Oct  7 18:51:19 2025
+[BUILDTIME] 270 (9)
+[SIZE] 19.71 MB, 865 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] cmake
+[DEP] coreutils
+[DEP] diffutils
+[DEP] fontconfig
+[DEP] freetype
+[DEP] fribidi
+[DEP] gawk
+[DEP] grep
+[DEP] lcms2
+[DEP] libgphoto
+[DEP] libjpeg
+[DEP] libx11
+[DEP] libxft
+[DEP] libxml
+[DEP] libxrender
+[DEP] libxt
+[DEP] libxxf86vm
+[DEP] linux-header
+[DEP] make
+[DEP] perl
+[DEP] pkgconfig
+[DEP] sane-backends
+[DEP] sed
+[DEP] tar
+[DEP] tde-cmake
+[DEP] tde-libart-lgpl
+[DEP] tdelibs
+[DEP] tdemultimedia
+[DEP] tqt
+[DEP] tqtinterface
+[DEP] xorgproto
+[DEP] xz
+[DEP] zlib

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/wcp/wcp.desc
-[COPY] Copyright (C) 2021 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2021 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,17 +13,16 @@
 [U] https://wheybags.com/blog/wcp.html
 
 [A] Tom Mason
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/tool
 [F] CROSS
 [K] + linux
 
 [L] MIT
-[S] Beta
 [V] 57c5e64
 
-[O] makeinstopt=
-[O] hook_add postmake 5 "install wcp $root$bindir/"
-
 [D] 0eebab15a13897a9fa51bb774c50940ccf7d7693a2b3a85aa13d1661 wcp-57c5e64.tar.gz https://github.com/wheybags/wcp/archive/57c5e64/
+
+makeinstopt=
+hook_add postmake 5 "install wcp $root$bindir/"

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/pure-ftpd/pure-ftpd.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,13 +14,20 @@
 [U] http://www.pureftpd.org
 
 [A] Frank DENIS "Jedi/Sector One" <j@pureftpd.org>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 [F] CROSS
 
 [L] OpenSource
-[S] Stable
-[V] 1.0.52
+[V] 1.0.54
 
-[D] 6575e2ae7d1e9cb1a5150885fe2783d094f0280bf030b55a7e737c56 pure-ftpd-1.0.52.tar.gz http://download.pureftpd.org/pub/pure-ftpd/releases/
+[D] ddfc0331b4b47d49894df79ff81463c0bdc2a0dde7d5a525c9ccc754 pure-ftpd-1.0.54.tar.gz https://download.pureftpd.org/pub/pure-ftpd/releases/
+
+[ $prefix_auto = 1 ] && prefix="opt/pureftpd" && set_confopt
+
+# checking for LDAP support
+if pkginstalled openldap; then
+	pkgprefix -t openldap
+	var_append confopt ' ' "--with-ldap=$root/$(pkgprefix openldap)"
+fi

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/qt6grpc/qt6grpc.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,17 +11,16 @@
 [U] https://qt.io
 
 [A] Trolltech AS <www.trolltech.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
-[F] CROSS NO-LTO.gcc
+[F] CROSS OBJDIR
 
 [L] LGPL
-[S] Stable
-[V] 6.9.0
-[P] X -----5---9 127.000
-
-[O] [ $prefix_auto = 1 ] && prefix=$(pkgprefix qt6base) && set_confopt
+[V] 6.11.1
+[P] X -----5---9 140.000
 
 [CV-GROUP] qt6
-[D] 3cedadcd39e4a8707235233b8621c4cc2b96fe640ebf3151aa9747bc qtgrpc-everywhere-src-6.9.0.tar.xz http://download.qt.io/official_releases/qt/6.9/6.9.0/submodules/
+[D] 222d0aa08a13240d1c469b88b10db5354c38f8ff6da52d221b9456e5 qtgrpc-everywhere-src-6.11.1.tar.xz http://download.qt.io/official_releases/qt/6.11/6.11.1/submodules/
+
+. $base/package/*/*/qt6-conf.in

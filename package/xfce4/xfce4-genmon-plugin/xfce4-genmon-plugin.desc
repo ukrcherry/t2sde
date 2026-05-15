@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xfce4-genmon-plugin/xfce4-genmon-plugin.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,14 +14,13 @@
 [U] https://docs.xfce.org/panel-plugins/xfce4-genmon-plugin/start
 
 [A] Xfce Authors
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/desktop/xfce
 
 [L] GPL
-[S] Stable
-[V] 4.2.1
+[V] 4.3.0
 
-[O] . $base/package/xfce4/*/xfce4-conf.in
+[D] cfe73a2838b071ddf627439b44b79039e4e52cf3875717e61ddc32bd xfce4-genmon-plugin-4.3.0.tar.xz https://archive.xfce.org/src/panel-plugins/xfce4-genmon-plugin/4.3/
 
-[D] 1768a2fdb499c27c6f65e6d270fcf5b90f150438fc5a95771fc17739 xfce4-genmon-plugin-4.2.1.tar.bz2 https://archive.xfce.org/src/panel-plugins/xfce4-genmon-plugin/4.2/
+. $base/package/xfce4/*/xfce4-conf.in

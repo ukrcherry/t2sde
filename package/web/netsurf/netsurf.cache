@@ -1,0 +1,37 @@
+[TIMESTAMP] 1760035861 Thu Oct  9 20:51:01 2025
+[BUILDTIME] 80 (9)
+[SIZE] 6.19 MB, 83 files
+
+[DEP] at-spi2-core
+[DEP] bash
+[DEP] binutils
+[DEP] bison
+[DEP] cairo
+[DEP] coreutils
+[DEP] curl
+[DEP] diffutils
+[DEP] expat
+[DEP] flex
+[DEP] gawk
+[DEP] gdk-pixbuf
+[DEP] glib
+[DEP] gperf
+[DEP] grep
+[OPT] gtk+
+[DEP] gzip
+[DEP] harfbuzz
+[DEP] libjpeg
+[DEP] libjxl
+[DEP] libpng
+[DEP] librsvg
+[DEP] libwebp
+[DEP] linux-header
+[DEP] m4
+[DEP] make
+[DEP] openssl
+[DEP] pango
+[DEP] perl
+[DEP] pkgconfig
+[DEP] sed
+[DEP] tar
+[DEP] zlib

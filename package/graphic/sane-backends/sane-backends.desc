@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/sane-backends/sane-backends.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -16,18 +16,20 @@
 [A] Andreas Beck <becka@sunserver1.rz.uni-duesseldorf.de>
 [A] David Mosberger <david.mosberger@acm.org>
 [A] more than 60 other backend maintainers
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/library
 [F] CROSS
 
+[E] opt avahi
+[E] opt poppler
+
 [L] GPL
-[S] Stable
-[V] 1.2.1
+[V] 1.4.0
 [P] X -----5---9 166.600
 
-[O] var_append CC_WRAPPER_APPEND ' ' -std=gnu17
-[O] atstage cross && hook_add preconf 5 'echo ac_cv_func_mmap_fixed_mapped=yes >> config.cache'
-[O] pkginstalled libusb && var_append confopt ' ' --enable-libusb_1_0
+[D] 815e16711f6d340c7745197322a975d3bf35ad4f5b82a0384383f09d sane-backends-1.4.0.tar.gz https://gitlab.com/-/project/429008/uploads/843c156420e211859e974f78f64c3ea3/
 
-[D] cd5a59089207d7a75cf5bebd9903c30be64ef01667dc8ba8a3b1f4df sane-backends-1.2.1.tar.gz https://gitlab.com/sane-project/backends/uploads/110fc43336d0fb5e514f1fdc7360dd87/
+var_append CC_WRAPPER_APPEND ' ' -std=gnu17
+atstage cross && hook_add preconf 5 'echo ac_cv_func_mmap_fixed_mapped=yes >> config.cache'
+pkginstalled libusb && var_append confopt ' ' --enable-libusb_1_0

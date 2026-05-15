@@ -1,0 +1,13 @@
+
+[TIMESTAMP] 1671185025 Fri Dec 16 11:03:45 2022
+[BUILDTIME] 0 (2)
+[SIZE] 456.36 MB, 4308 files
+
+[DEP] 00-dirtree
+[DEP] ansible
+[DEP] gajim
+[DEP] gaupol
+[DEP] linux-header
+[DEP] meson
+[DEP] picard
+[DEP] razercfg

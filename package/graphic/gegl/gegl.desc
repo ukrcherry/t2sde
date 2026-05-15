@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gegl/gegl.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,23 +13,27 @@
 [U] https://gegl.org/
 
 [A] Øyvind Kolås
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/graphic
+[F] CROSS
 
+[E] opt gexiv2
+[E] opt gi-docgen
 [E] opt gobject-introspection
 [E] opt ilmbase openexr
 [E] opt jasper
 [E] opt librsvg
 [E] opt libwebp
+[E] opt poppler
 [E] opt vala
 
 [L] LGPL
-[S] Alpha
-[V] 0.4.58
+[V] 0.4.70
 [P] X -----5---9 155.100
 
-[O] hook_add preconf 1 "rm -rf subprojects/*.wrap"
-[O] var_append mesonopt ' ' -Ddocs=false
+[D] 964517fc9662a0dfcd6c4fa1c1a2f5f648465933b689a8c2e8e7e89c gegl-0.4.70.tar.xz https://download.gimp.org/pub/gegl/0.4/
 
-[D] ef53ca9a0da0f0ee07f061693017a239a38b28731263e1b1d9c54e39 gegl-0.4.58.tar.xz https://download.gimp.org/pub/gegl/0.4/
+hook_add preconf 1 "rm -rf subprojects/*.wrap"
+var_append mesonopt ' ' -Ddocs=false
+var_remove GCC_WRAPPER_APPEND ' ' -c?:-s

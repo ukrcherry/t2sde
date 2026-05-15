@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/sqlcipher/sqlcipher.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] SQLCipher is an SQLite extension that provides 256 bit AES encryption of database files
+
+[T] SQLCipher is an SQLite extension that provides 256 bit AES encryption of database files.
+
+[U] https://www.zetetic.net/sqlcipher/
+
+[A] Sqlcipher Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 4.16.0
+[L] BSD
+
+[D] c358b693e68cddd892cee816e24b4f498b27b9eebb6147e15862e29a sqlcipher-4.16.0.tar.gz https://github.com/sqlcipher/sqlcipher/archive/v4.16.0/

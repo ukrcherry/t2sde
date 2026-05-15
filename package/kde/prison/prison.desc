@@ -1,11 +1,11 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/prison/prison.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
-[I] KDE Frameworks 5 Tier 1 barcode library
+[I] KDE Frameworks barcode library
 
 [T] prison is a barcode api currently offering a nice Qt api to produce QRCode
 [T] barcodes and DataMatrix barcodes, and can easily be made support more.
@@ -13,16 +13,16 @@
 [U] https://invent.kde.org/frameworks/prison
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 6.14.0
-[P] X -----5---9 162.420
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 6.26.0
+[P] X -----5---9 192.420
 
 [CV-GROUP] kde-frameworks
-[D] dbfb48101717055bfa06aaaef6d4fd751dfb96e6f29091335d509bda prison-6.14.0.tar.xz https://download.kde.org/stable/frameworks/6.14/
+[D] 3a2ba08c5207ce22bb88d7e57bb21e4d7f35dcdd7ebab87ad4ffd2d1 prison-6.26.0.tar.xz https://download.kde.org/stable/frameworks/6.26/
+
+. $base/package/*/*/kde-conf.in

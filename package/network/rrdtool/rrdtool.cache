@@ -1,0 +1,30 @@
+[TIMESTAMP] 1760003167 Thu Oct  9 11:46:07 2025
+[BUILDTIME] 25 (9)
+[SIZE] 3.41 MB, 200 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] cairo
+[DEP] coreutils
+[DEP] diffutils
+[DEP] findutils
+[DEP] gawk
+[DEP] glib
+[DEP] grep
+[DEP] groff
+[DEP] gzip
+[DEP] harfbuzz
+[DEP] libdbi
+[DEP] libpng
+[DEP] libxml
+[DEP] linux-header
+[OPT] lua
+[DEP] make
+[DEP] openssl
+[DEP] pango
+[OPT] perl
+[DEP] perl-html-parser
+[OPT] python
+[DEP] sed
+[DEP] setuptools
+[DEP] tar

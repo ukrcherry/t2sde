@@ -1,0 +1,30 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/beep/beep.desc
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A console beep tool with precision control
+
+[T] Beep allows the user to control the pc-speaker with precision, allowing
+[T] different sounds to indicate different events. While it can be run quite
+[T] happily on the command line, it's intended place of residence is within
+[T] shell/perl scripts, notifying the user when something interesting occurs.
+[T] Of course, it has no notion of what's interesting, but it's real good
+[T] at that notifying part.
+
+[U] https://github.com/spkr-beep/beep/
+
+[A] Johnathan Nightingale <johnath@johnath.com>
+[M] Marian Aldenhövel <marian.aldenhoevel@mba-software.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] GPL
+[V] 1.4.12
+
+[D] 86f4a3864f54124b7561bf5a67e4cfea9b56cc35d4d3e8b8a8e74e74 beep-1.2.2.tar.gz http://www.johnath.com/beep/
+
+var_append makeopt ' ' "INSTALL_DIR=$root$bindir MAN_DIR=$root$mandir"
+var_append makeinstopt ' ' "INSTALL_DIR=$root$bindir MAN_DIR=$root$mandir"

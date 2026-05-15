@@ -1,0 +1,30 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/kphotoalbum/kphotoalbum.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Photo Album for easy organization of your images
+
+[T] If you have hundreds or even thousands of images on your hard drive, it
+[T] becomes impossible to remember the story behind every single image or the
+[T] names of the persons photographed. KPhotoAlbum was created to help you
+[T] describe your images and then search the big pile of pictures quickly and
+[T] efficiently.
+
+[U] https://www.kphotoalbum.org/
+
+[A] The KDE-Team
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
+
+[E] opt kdoctools docbook-xml
+
+[L] GPL
+[V] 6.2.0
+
+[D] 53d524f2988fee0304dcfcc45270c9b0d564ce17d8e610ba3d6d2464 kphotoalbum-6.2.0.tar.xz https://download.kde.org/stable/kphotoalbum/6.2.0/
+
+. $base/package/*/*/kde-conf.in

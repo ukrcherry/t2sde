@@ -1,17 +1,20 @@
-[TIMESTAMP] 1743332321 Sun Mar 30 12:58:41 2025
-[BUILDTIME] 300 (9)
-[SIZE] 5.54 MB, 738 files
+[TIMESTAMP] 1761816230 Thu Oct 30 10:23:50 2025
+[BUILDTIME] 430 (9)
+[SIZE] 28.65 MB, 813 files
 
 [DEP] bash
 [DEP] binutils
+[DEP] clang
 [DEP] cmake
 [DEP] coreutils
 [DEP] diffutils
 [DEP] fftw3
+[DEP] freetype
 [DEP] gawk
 [DEP] grep
 [DEP] gzip
 [DEP] libglvnd
+[DEP] libx11
 [DEP] linux-header
 [DEP] make
 [DEP] mlt
@@ -21,7 +24,8 @@
 [DEP] qt6declarative
 [DEP] qt6multimedia
 [DEP] qt6tools
+[DEP] qt6websockets
 [DEP] sed
 [DEP] tar
-[DEP] tbb
 [DEP] vulkan-headers
+[DEP] xorgproto

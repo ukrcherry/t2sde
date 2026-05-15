@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/picard/picard.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Official MusicBrainz tagger
+
+[T] Official MusicBrainz tagger.
+
+[U] https://picard.musicbrainz.org/
+
+[A] Picard Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 3.0.0b1
+[L] GPL
+[P] X -----5---9 700.000
+
+[D] c502b7c4c5ff7613d99bb30ca874117b8eb9c44386f1f7c5744a54fd picard-3.0.0b1.tar.gz https://github.com/metabrainz/picard/archive/release-3.0.0b1/

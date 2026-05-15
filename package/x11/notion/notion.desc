@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/notion/notion.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,15 +14,23 @@
 [A] Tuomo Valkonen (original author)
 [A] Arnout Engelen
 [A] Philipp Hartwig
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/windowmanager
 [F] NO-LTO.gcc
 
 [L] LGPL
-[S] Stable
-[V] 4.0.3
+[V] 4.0.5
 
-[O] hook_add postinstall 3 "register_wm notion Notion $bindir/notion"
+[D] a1be514f78a142811266dc9d68db9b72021b0fdba17de4e95481fe75 notion-4.0.5.tar.gz https://github.com/raboof/notion/archive/4.0.5/
 
-[D] bcf492f4bb32e02d0301e2e45e00230e2811d0254c67c527cfea1f8a notion-4.0.3.tar.gz https://github.com/raboof/notion/archive/4.0.3/
+hook_add postinstall 3 "register_wm notion Notion $bindir/notion"
+
+var_append makeopt ' ' ETCDIR=/etc/notion
+var_append makeopt ' ' LUA_VERSION=5.4
+var_append makeopt ' ' LUA=lua
+var_append makeopt ' ' LUAC=luac
+var_append makeopt ' ' 'LUA_INCLUDES="-DLUA_USE_POSIX -DLUA_USE_DLOPEN -DLUA_USE_READLINE"'
+var_append makeopt ' ' 'LUA_LIBS="-llua -lm -ldl -lreadline -lhistory -lncurses"'
+
+var_append makeinstopt ' ' ETCDIR=/etc/notion

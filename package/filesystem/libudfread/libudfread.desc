@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libudfread/libudfread.desc
+[COPY] Copyright (C) 2014 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Library for reading UDF from raw devices and image files
+
+[T] Library for reading UDF from raw devices and image file used by libbluray.
+
+[U] https://www.videolan.org/developers/
+
+[A] The VideoLAN Project
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/multimedia
+[F] CROSS NO-LTO.clang
+
+[L] LGPL
+[V] 1.2.0
+[P] X -----5---9 142.000
+
+[D] e36b44b47e95b0e685ed85aa6994975c566124edcce6b9e7d4e887ad libudfread-1.2.0.tar.xz https://download.videolan.org/pub/videolan/libudfread/

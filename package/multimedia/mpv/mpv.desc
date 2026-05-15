@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/mpv/mpv.desc
-[COPY] Copyright (C) 2021 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2021 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,14 +13,18 @@
 
 [U] https://mpv.io
 
-[A] Many - see the CREDITS file
+[A] The MPV devs
 [M] NoTag <notag@t2sde.org>
 
 [C] extra/multimedia
-
+[F] CROSS
 
 [E] opt alsa-lib
+[E] opt jack
 [E] opt libarchive
+[E] opt libbluray
+[E] opt libcdio
+[E] opt libcdio-paranoia
 [E] opt libxpresent
 [E] opt luajit
 [E] opt pulseaudio
@@ -30,11 +34,13 @@
 [E] opt libcaca
 
 [L] GPL
-[S] Stable
-[V] 0.40.0
-[P] X -----5---9 650.000
+[V] 0.41.0
+[P] X -----5---9 399.000
 
-[O] rungpepinstall=0
-[O] var_append mesonopt ' ' '-Dlibmpv=true -Djavascript=disabled'
+[D] 2284c5e78b6e61897e0fc95df45ba787cfa944dd04fe05dbeabde141 mpv-v0.41.0.tar.gz https://github.com/mpv-player/mpv/archive/v0.41.0/
 
-[D] c9a5a7aad5d76de7ac0db22edb017fb6ad5ddb719bcf382fa149fc1c mpv-v0.40.0.tar.gz https://github.com/mpv-player/mpv/archive/v0.40.0/
+rungpepinstall=0 runpipinstall=0 runpysetup=0
+
+var_append mesonopt ' ' '-Dlibmpv=true -Djavascript=disabled'
+pkginstalled libxpresent && var_append mesonopt ' ' -Dx11=enabled
+pkginstalled libdvdnav && var_append mesonopt ' ' "-Ddvdnav=enabled -Ddvbin=enabled"

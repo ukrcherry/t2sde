@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/stunnel/stunnel.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -20,14 +20,23 @@
 [U] http://stunnel.mirt.net/
 
 [A] Michal Trojnara <Michal.Trojnara@mirt.net>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 5.74
-[P] X -----5---9 203.600
+[V] 5.78
 
-[D] e09d4fca4c544bea2388e3e36de2d4fb8ab14ae962891eda8a99f27a stunnel-5.74.tar.gz https://www.stunnel.org/downloads/
+[D] 8ca6cec5c949f7f6e0460fe8ab6226dfa6a6bba7a52812dda6d2634c stunnel-5.78.tar.gz https://www.stunnel.org/downloads/
+
+var_append confopt ' ' "--with-ssl=$root/$(pkgprefix openssl)"
+
+stunnel_fill_cache() {
+	cat >> config.cache <<-EOT
+		ac_cv_file___dev_ptmx_=yes
+		ac_cv_file___dev_ptc_=no
+		ac_cv_file___dev_urandom_=no
+EOT
+}
+atstage native || hook_add preconf 5 stunnel_fill_cache

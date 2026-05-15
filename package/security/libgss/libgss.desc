@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libgss/libgss.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] An implementation of the Generic Security Service Application Program Interface
+
+[T] An implementation of the Generic Security Service Application Program Interface.
+
+[U] https://www.gnu.org/software/gss/
+
+[A] Libgss Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.0.4
+[L] GPL3
+
+[D] e400507710c9fecf27976028e087fa6dbf1e1cd62eaa2def2dec429a gss-1.0.4.tar.gz https://ftp.gnu.org/gnu/gss/

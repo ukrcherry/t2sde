@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/dkimproxy/dkimproxy.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] SMTP-proxy that signs and/or verifies emails, using the Mail::DKIM module
+
+[T] SMTP-proxy that signs and/or verifies emails, using the Mail::DKIM module.
+
+[U] https://dkimproxy.sourceforge.net/
+
+[A] Dkimproxy Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 1.4.1
+[L] GPL
+
+[D] 69f22711a3ceb7b6bec731633641b0588914c8d42866dae770cb3233 dkimproxy-1.4.1.tar.gz https://downloads.sourceforge.net/dkimproxy/

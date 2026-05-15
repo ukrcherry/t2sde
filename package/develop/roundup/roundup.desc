@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/roundup/roundup.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -22,15 +22,14 @@
 [U] https://roundup.sourceforge.net/
 
 [A] Richard Jones <richard@users.sourceforge.net>
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 [F] CROSS
 
 [L] OpenSource
-[S] Stable
-[V] 2.0.0
+[V] 2.5.0
 
-[O] [ $prefix_auto = 1 ] && prefix="opt/roundup" && set_confopt
+[ $prefix_auto = 1 ] && prefix="opt/roundup" && set_confopt
 
-[D] ddc44b5f48045689288659f4ca7e685f70adb43892f897b8d16e0f7c roundup-2.0.0.tar.gz http://cheeseshop.python.org/packages/source/r/roundup/
+[D] 990b04fce32eaabfc1e4dbbc3d4454a1a3cbdfad030d3943a6d93dc5 roundup-2.5.0.tar.gz http://cheeseshop.python.org/packages/source/r/roundup/

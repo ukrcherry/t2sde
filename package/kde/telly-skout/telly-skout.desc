@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/telly-skout/telly-skout.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,17 +12,15 @@
 [U] https://apps.kde.org/telly-skout/
 
 [A] The KDE-Team
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/desktop/kde
-[F] CROSS
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Beta
-[V] 25.04.1
-[P] X -----5---9 400.000
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 26.04.1
 
 [CV-GROUP] kde-gear
-[D] 9028c6da71d6c6137ba1e2f2771ddfceda01b352b280be5e50c208f0 telly-skout-25.04.1.tar.xz https://download.kde.org/stable/release-service/25.04.1/src/
+[D] afd7d6330a8fe6c482d1e30da9ce147958c17db8931d1f639a1a9e91 telly-skout-26.04.1.tar.xz https://download.kde.org/stable/release-service/26.04.1/src/
+
+. $base/package/*/*/kde-conf.in

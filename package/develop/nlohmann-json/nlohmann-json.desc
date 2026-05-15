@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/nlohmann-json/nlohmann-json.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] JSON for Modern C++
+
+[T] JSON for Modern C++.
+
+[U] https://github.com/nlohmann/json
+
+[A] Nlohmann-json Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS OBJDIR
+
+[V] 3.12.0
+[L] MIT
+[P] X -----5---9 700.000
+
+[D] f11e19b518a397f1025b429473308b4d30958ef3b8751258cdda693c nlohmann-json-3.12.0.tar.gz https://github.com/nlohmann/json/archive/v3.12.0/
+
+var_append cmakeopt ' ' -DJSON_BuildTests=OFF

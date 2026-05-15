@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/inotify-tools/inotify-tools.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,7 +12,7 @@
 [U] https://inotify-tools.sourceforge.net/
 
 [A] Rohan McGovern
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/system
 [F] CROSS
@@ -20,10 +20,9 @@
 [E] opt doxygen
 
 [L] GPL
-[S] Stable
-[V] 4.23.9.0
+[V] 4.25.9.0
 [P] X -----5---9 137.000
 
-[O] hook_add preconf 2 'autoreconf -vfi'
+[D] 9bf6ed270e41f45f8bf8ac98cb9bfa0a9ff44319debd2c9f878d9c0c inotify-tools-4.25.9.0.tar.gz https://github.com/rvoicilas/inotify-tools/archive/4.25.9.0/
 
-[D] c15cf4b310a39dd0f47ef91c81c68828ac9a8aca747c68d593faf105 inotify-tools-4.23.9.0.tar.gz https://github.com/rvoicilas/inotify-tools/archive/4.23.9.0/
+hook_add preconf 2 'autoreconf -vfi'

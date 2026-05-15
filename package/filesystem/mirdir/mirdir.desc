@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/mirdir/mirdir.desc
+[COPY] Copyright (C) 2014 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Compare two directory trees, copy differences
+
+[T] Mirdir allows to synchronize two directory trees in a fast way. Only the
+[T] differences between the two sets of files are copied while the excess
+[T] files/directories in the destination tree are removed (unless there was
+[T] an explicit request to keep them).
+
+[U] https://sourceforge.net/projects/mirdir/
+
+[A] Ruten Gurin
+[A] Carolina Roldan
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/graphic
+
+[L] GPL
+[V] 2.1
+
+[D] 32c0f6bb50e965198e7427891344a1b984b1ffe67ab424afef13a329 mirdir-2.1-Unix.tar.gz https://download.sourceforge.net/project/mirdir/mirdir/2.1/

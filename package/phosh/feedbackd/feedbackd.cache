@@ -1,0 +1,29 @@
+[TIMESTAMP] 1762938400 Wed Nov 12 11:06:40 2025
+[BUILDTIME] 14 (9)
+[SIZE] 0.67 MB, 30 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] coreutils
+[DEP] d-spy
+[DEP] diffutils
+[DEP] gawk
+[DEP] glib
+[DEP] gmobile
+[DEP] gobject-introspection
+[DEP] grep
+[DEP] gsound
+[DEP] gudev
+[DEP] gzip
+[DEP] json-glib
+[DEP] linux-header
+[DEP] meson
+[DEP] ninja
+[DEP] openssl
+[DEP] pkgconfig
+[DEP] python
+[DEP] sed
+[DEP] setuptools
+[DEP] tar
+[OPT] umockdev
+[DEP] vala

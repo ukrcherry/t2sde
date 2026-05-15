@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/b43-fwcutter/b43-fwcutter.desc
-[COPY] Copyright (C) 2015 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2015 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -9,16 +9,15 @@
 [T] This package contains a B43 firmware cutter.
 
 [A] Michael Büsch <m@bues.ch>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/system
 [F] CROSS
 
 [L] BSD
-[S] Stable
 [V] 019
 [P] X -----5---9 186.600
 
-[O] var_append makeinstopt ' ' PREFIX=$root/$prefix
+[D] 0e2b1feec3a8420ac80d4ba6a750b377dd58a28651e368e14835c9d1 b43-fwcutter-019.tar.bz2 https://bues.ch/b43/fwcutter/
 
-[D] 0e2b1feec3a8420ac80d4ba6a750b377dd58a28651e368e14835c9d1 b43-fwcutter-019.tar.bz2 http://bues.ch/b43/fwcutter/
+var_append makeinstopt ' ' PREFIX=$root/$prefix

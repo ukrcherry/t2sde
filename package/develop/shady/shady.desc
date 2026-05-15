@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/shady/shady.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,14 +14,13 @@
 [U] https://shady-gang.github.io/vcc/use/
 
 [A] University of Saarland
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [F] CROSS
-[R] - alpha arc avr32 alpha blackfin m68k microblaze nios2
+[R] - alpha arc avr32 alpha blackfin cris m68k microblaze nios2
 
 [L] BSD
-[S] Stable
-[V] 38c4678
+[V] dd2787a
 
-[D] 812dbbd7bf1e142dffe32227f103ccc165749f35f2cf3513ce19df55 shady-38c4678.tar.zst git+https://github.com/Hugobros3/shady 38c4678
+[D] faaf3b5531568a839a39eefe17615892b710bf3d3058b89813059867 shady-dd2787a.tar.zst git+https://github.com/Hugobros3/shady dd2787a

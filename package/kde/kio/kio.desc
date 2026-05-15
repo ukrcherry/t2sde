@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/kio/kio.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -20,19 +20,20 @@
 [U] https://www.kde.org
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [E] opt attr acl
 [E] opt kdoctools docbook-xml docbook-xsl
 
 [L] GPL
-[S] Stable
-[V] 6.14.0
-[P] X -----5---9 162.915
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 6.26.0
+[P] X ?----5---9 162.915
 
 [CV-GROUP] kde-frameworks
-[D] fd7230455bd396cfbe3b5d30466e976fff375dea63ac26eab8640cc1 kio-6.14.0.tar.xz https://download.kde.org/stable/frameworks/6.14/
+[D] c18398bd53cc40eb746ab401c6c5536538615ed7dda7bf07cbc988c1 kio-6.26.0.tar.xz https://download.kde.org/stable/frameworks/6.26/
+
+. $base/package/*/*/kde-conf.in
+atstage toolchain && var_append cmakeopt ' ' '-DKIOCORE_ONLY=ON -DUSE_DBUS=OFF'

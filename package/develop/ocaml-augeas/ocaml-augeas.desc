@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/ocaml-augeas/ocaml-augeas.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Ocaml bindings to the Augeas configuration editing tool
+
+[T] Ocaml bindings to the Augeas configuration editing tool.
+
+[U] https://augeas.net/
+
+[A] David Lutterkort
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/development
+[F] CROSS NO-LTO.gcc NOPARALLEL
+
+[L] LGPL
+[V] 0.7
+[P] X -----5---9 500.010
+
+[D] e46cf5a9d60f1d31b92c60784bdc78ed99238a17647eaeb7c7c2ae4c ocaml-augeas-0.7.tar.gz https://download.libguestfs.org/ocaml-augeas/
+
+var_append CC_WRAPPER_APPEND ' ' -std=gnu17

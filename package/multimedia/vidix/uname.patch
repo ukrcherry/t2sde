@@ -1,0 +1,38 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/vidix/uname.patch
+# Copyright (C) 2006 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0 or patched project license
+# --- T2-COPYRIGHT-END ---
+
+ignore uname stderr output
+  -- mtr
+
+--- vidix-0.9.9.2/configure.orig	2005-06-28 17:16:47.000000000 +0200
++++ vidix-0.9.9.2/configure	2006-10-09 16:32:56.000000000 +0200
+@@ -125,7 +125,7 @@
+ # checking for OS name
+ if test -z "$system_name" ; then
+   # OS name
+-  system_name=`( uname -s ) 2>&1`
++  system_name=`( uname -s ) 2>/dev/null`
+   case "$system_name" in
+   Linux|FreeBSD|NetBSD|BSD/OS|OpenBSD|SunOS|QNX)
+     ;;
+@@ -143,7 +143,7 @@
+ 
+ # host's CPU/instruction set
+ if test -z "$host_arch" ; then
+-host_arch=`( uname -p ) 2>&1`
++host_arch=`( uname -p ) 2>/dev/null`
+ case "$host_arch" in
+    i386|sparc|ppc|alpha|arm|mips)
+      ;;
+@@ -154,7 +154,7 @@
+       # Maybe uname -m (machine hardware name) returns something we
+       # recognize.
+ 
+-      case "`( uname -m ) 2>&1`" in
++      case "`( uname -m ) 2>/dev/null`" in
+       i*86|x86|x86pc) host_arch=i386 ;;
+       x86_64|amd64)
+         if [ "`$_cc -dumpmachine | grep x86_64 | cut -d- -f1`" = "x86_64" -a \

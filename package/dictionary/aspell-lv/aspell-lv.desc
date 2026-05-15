@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/aspell-lv/aspell-lv.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Latvian dictionary for aspell
+
+[T] The Latvian dictionary for aspell.
+
+[U] http://aspell.net
+
+[A] The Aspell project
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/office
+[F] CROSS
+
+[L] GPL
+[V] 0.9.3
+
+[D] baf8bb08ab089437944e5a170a57dd0b66414a5c7e80429061247959 aspell6-lv-0.9.3.tar.bz2 http://dict.dv.lv/download/
+
+confopt=

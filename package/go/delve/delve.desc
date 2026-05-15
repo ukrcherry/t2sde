@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/delve/delve.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,22 +11,20 @@
 [U] https://github.com/go-delve/delve
 
 [A] Derek Parker
-[M] Dash
+[M] Daniel Ashkenazi <daniel.ashkenazi@gmail.com>
 
 [C] extra/tool
 [F] CROSS
 
 [L] MIT
-[S] Stable
-[V] 1.24.2
+[V] 1.26.3
 
-[O] . $base/package/*/*/go-conf.in
+[D] 9c7797fb66b4b79d99eb374565eb15a9068faf16d708e5e0f598ef4c go-delve-v1.26.3.tar.gz https://github.com/go-delve/delve/archive/v1.26.3/
 
-[O] export CGO_ENABLED=1
-[O] GCC_WRAPPER_BYPASS=1
-[O] xsrcdir=delve-$ver
-[O] rungo=
-[O] var_append makeopt ' ' build
-[O] hook_add postmake 5 'install -Dvm 755 dlv $root$bindir/'
-
-[D] 63b51dc7015805a57f007d92b38e5920412dd72ea51ac89afd03b177 go-delve-v1.24.2.tar.gz https://github.com/go-delve/delve/archive/v1.24.2/
+. $base/package/*/*/go-conf.in
+export CGO_ENABLED=1
+GCC_WRAPPER_BYPASS=1
+xsrcdir=delve-$ver
+rungo=
+var_append makeopt ' ' build
+hook_add postmake 5 'install -Dvm 755 dlv $root$bindir/'

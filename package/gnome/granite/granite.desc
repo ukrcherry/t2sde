@@ -1,0 +1,22 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/granite/granite.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Library that extends GTK with common widgets and utilities
+
+[T] Library that extends GTK with common widgets and utilities
+
+[U] https://github.com/elementary/granite/
+
+[A] elementary
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/development
+[F] CROSS
+
+[L] LGPL3
+[V] 7.8.1
+
+[D] 53bedbd2c2dd3fc096496a71f2df406b69e70f45446e6026030455dd granite-7.8.1.tar.gz https://github.com/elementary/granite/archive/7.8.1/

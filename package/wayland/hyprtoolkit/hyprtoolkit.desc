@@ -1,0 +1,24 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/hyprtoolkit/hyprtoolkit.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] A modern C++ Wayland-native GUI toolkit
+
+[T] Hyprtoolkit is designed to be a small, simple, and modern C++ toolkit for
+[T] making wayland GUI apps.
+
+[U] https://github.com/hyprwm/hyprtoolkit
+
+[A] hyprwm
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/wayland
+[F] CROSS
+
+[L] BSD
+[V] 0.5.4
+[P] X -----5---9 400.000
+
+[D] 94cbc654273652704a7a50c0c9129ca8a538b05c2a2b36787f547f3a hyprtoolkit-0.5.4.tar.gz https://github.com/hyprwm/hyprtoolkit/archive/v0.5.4/

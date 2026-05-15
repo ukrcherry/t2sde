@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/picmi/picmi.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -14,20 +14,18 @@
 [U] https://apps.kde.org/picmi/
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
-[E] opt kdoctools
-[E] opt docbook-xml
-[E] opt docbook-xsl
+[F] CROSS OBJDIR
+
+[E] opt kdoctools docbook-xml docbook-xsl
 
 [L] GPL
-[S] Stable
-[V] 25.04.1
-[P] X -----5---9 200.300
-
-[O] . $base/package/*/*/kde-conf.in
-[O] hook_add preconf 5 "rm GNUmakefile"
+[V] 26.04.1
 
 [CV-GROUP] kde-gear
-[D] ab6711bcf63bb98acb8505fe00de2e0fe8b173f0cbd5da788e063489 picmi-25.04.1.tar.xz https://download.kde.org/stable/release-service/25.04.1/src/
+[D] 45b514d577ba3a3d238d923a5631d0ba7670b28e17ea4a2b915abfaa picmi-26.04.1.tar.xz https://download.kde.org/stable/release-service/26.04.1/src/
+
+. $base/package/*/*/kde-conf.in
+hook_add preconf 5 "rm GNUmakefile"

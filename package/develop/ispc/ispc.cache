@@ -1,0 +1,23 @@
+[TIMESTAMP] 1737631590 Thu Jan 23 12:26:30 2025
+[BUILDTIME] 270 (9)
+[SIZE] 95.49 MB, 27 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] bison
+[DEP] clang
+[DEP] cmake
+[DEP] coreutils
+[DEP] diffutils
+[DEP] flex
+[DEP] gawk
+[DEP] grep
+[DEP] gzip
+[DEP] linux-header
+[DEP] lld
+[DEP] llvm
+[DEP] m4
+[DEP] make
+[DEP] python
+[DEP] sed
+[DEP] tar

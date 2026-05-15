@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/hdf5/hdf5.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -18,18 +18,10 @@
 [M] Juergen "George" Sawinski <jsaw@gmx.net>
 
 [C] extra/scientific
+[F] OBJDIR
 
 [L] OpenSource
-[S] Stable
-[V] 1.14.6
+[V] 2.1.0
 [P] X -----5---9 176.800
 
-#please test octave before updating
-[O] confopt="$confopt --enable-stream-vfd --enable-gpfs --with-pthread"
-[O] var_remove_regex confopt ' ' '--disable-debug'
-[O] var_append confopt ' ' --enable-build-mode=production
-[O] pkginstalled openssl && confopt="$confopt --with-ssl"
-# TODO:
-# -config option for enable-cxx
-
-[D] 67dbd509852b084402cad6c65b76a8cfcc90ae247a9bc92396ea6d80 hdf5_1.14.6.tar.gz https://github.com/HDFGroup/hdf5/archive/refs/tags/
+[D] 53d0f3556dd25f45f6c9114dc371a0292f96caff87dcdc472bc05100 hdf5_2.1.0.tar.gz https://github.com/HDFGroup/hdf5/archive/refs/tags/

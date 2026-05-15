@@ -1,0 +1,241 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/linux/up-next-sparc64-s7.patch
+# Copyright (C) 2025 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0 or patched project license
+# --- T2-COPYRIGHT-END ---
+
+
+Correctly recognize sonoma cpu type Orabug: 23041920
+
+Add support for sonoma (s7) into perf to ensures that perf will now
+recognise that it is running on a sonoma device and will initialise
+correctly.  Orabug: 24931042
+
+Support for identifying Sonoma 2 systems. Orabug: 22960812
+
+Signed-off-by: Joe Moriarty <joe.moriarty@oracle.com>
+Signed-off-by: Dave Aldridge <david.j.aldridge@oracle.com>
+Signed-off-by: Allen Pais <allen.pais@oracle.com>
+[rebased and fix to niagara_tlb_fixup on s8, too]
+Signed-off-by: Rene Rebe <rene@exactco.de>
+
+diff --git a/arch/sparc/include/asm/spitfire.h b/arch/sparc/include/asm/spitfire.h
+index 79b9dd5e9ac6..c1bb0379d2ff 100644
+--- a/arch/sparc/include/asm/spitfire.h
++++ b/arch/sparc/include/asm/spitfire.h
+@@ -49,8 +49,9 @@
+ #define SUN4V_CHIP_SPARC_M6	0x06
+ #define SUN4V_CHIP_SPARC_M7	0x07
+ #define SUN4V_CHIP_SPARC_M8	0x08
++#define SUN4V_CHIP_SPARC_S7	0x7a
++#define SUN4V_CHIP_SPARC_S8	0x8b
+ #define SUN4V_CHIP_SPARC64X	0x8a
+-#define SUN4V_CHIP_SPARC_SN	0x8b
+ #define SUN4V_CHIP_UNKNOWN	0xff
+ 
+ /*
+diff --git a/arch/sparc/kernel/cpu.c b/arch/sparc/kernel/cpu.c
+index 79cd6ccfeac0..aa51a8cee84f 100644
+--- a/arch/sparc/kernel/cpu.c
++++ b/arch/sparc/kernel/cpu.c
+@@ -513,10 +513,16 @@ static void __init sun4v_cpu_probe(void)
+ 		sparc_pmu_type = "sparc-m8";
+ 		break;
+ 
+-	case SUN4V_CHIP_SPARC_SN:
+-		sparc_cpu_type = "SPARC-SN";
+-		sparc_fpu_type = "SPARC-SN integrated FPU";
+-		sparc_pmu_type = "sparc-sn";
++	case SUN4V_CHIP_SPARC_S7:
++		sparc_cpu_type = "SPARC-S7 (Sonoma)";
++		sparc_fpu_type = "SPARC-S7 integrated FPU";
++		sparc_pmu_type = "sparc-s7";
++		break;
++
++	case SUN4V_CHIP_SPARC_S8:
++		sparc_cpu_type = "SPARC-S8 (Sonoma 2)";
++		sparc_fpu_type = "SPARC-S8 integrated FPU";
++		sparc_pmu_type = "sparc-s8";
+ 		break;
+ 
+ 	case SUN4V_CHIP_SPARC64X:
+diff --git a/arch/sparc/kernel/head_64.S b/arch/sparc/kernel/head_64.S
+index cf0549134234..fc9a836b30e4 100644
+--- a/arch/sparc/kernel/head_64.S
++++ b/arch/sparc/kernel/head_64.S
+@@ -421,6 +421,7 @@ EXPORT_SYMBOL(sun4v_chip_type)
+ 	 cmp	%g2, 'M'
+ 	be,pt	%xcc, 70f
+ 	 cmp	%g2, 'S'
++       be,pt   %xcc, 71f
+ 	bne,pn	%xcc, 49f
+ 	 nop
+ 
+@@ -443,10 +444,17 @@ EXPORT_SYMBOL(sun4v_chip_type)
+ 	cmp	%g2, CPU_ID_M8
+ 	be,pt	%xcc, 5f
+ 	 mov	SUN4V_CHIP_SPARC_M8, %g4
+-	cmp	%g2, CPU_ID_SONOMA1
++	ba,pt	%xcc, 49f
++	 nop
++71:
++	ldub    [%g1 + 7], %g2
++	cmp     %g2, '7'
+ 	be,pt	%xcc, 5f
+-	 mov	SUN4V_CHIP_SPARC_SN, %g4
++	 mov	SUN4V_CHIP_SPARC_S7, %g4
+ 	ba,pt	%xcc, 49f
++	cmp	%g2, '8'
++	be,pt	%xcc, 5f
++	 mov	SUN4V_CHIP_SPARC_S8, %g4
+ 	 nop
+ 
+ 91:	sethi	%hi(prom_cpu_compatible), %g1
+@@ -609,7 +617,10 @@ niagara_tlb_fixup:
+ 	cmp	%g1, SUN4V_CHIP_SPARC_M8
+ 	be,pt	%xcc, sparc_m7_patch
+ 	 nop
+-	cmp	%g1, SUN4V_CHIP_SPARC_SN
+-	be,pt	%xcc, niagara4_patch
++	cmp	%g1, SUN4V_CHIP_SPARC_S7
++	be,pt	%xcc, sparc_m7_patch
++	 nop
++	cmp	%g1, SUN4V_CHIP_SPARC_S8
++	be,pt	%xcc, sparc_m7_patch
+ 	 nop
+ 
+diff --git a/arch/sparc/kernel/pcr.c b/arch/sparc/kernel/pcr.c
+index 2a12c86af956..72ef532c06aa 100644
+--- a/arch/sparc/kernel/pcr.c
++++ b/arch/sparc/kernel/pcr.c
+@@ -275,6 +275,7 @@ static int __init register_perf_hsvc(void)
+ 			break;
+ 
+ 		case SUN4V_CHIP_SPARC_M7:
++		case SUN4V_CHIP_SPARC_S7:
+ 			perf_hsvc_group = HV_GRP_M7_PERF;
+ 			break;
+ 
+@@ -324,6 +325,7 @@ static int __init setup_sun4v_pcr_ops(void)
+ 		break;
+ 
+ 	case SUN4V_CHIP_SPARC_M7:
++	case SUN4V_CHIP_SPARC_S7:
+ 		pcr_ops = &m7_pcr_ops;
+ 		break;
+ 
+diff --git a/arch/sparc/kernel/perf_event.c b/arch/sparc/kernel/perf_event.c
+index cae4d33002a5..0635ad46eee9 100644
+--- a/arch/sparc/kernel/perf_event.c
++++ b/arch/sparc/kernel/perf_event.c
+@@ -1701,7 +1701,9 @@ static bool __init supported_pmu(void)
+ 		return true;
+ 	}
+ 	if (!strcmp(sparc_pmu_type, "niagara4") ||
+-	    !strcmp(sparc_pmu_type, "niagara5")) {
++        !strcmp(sparc_pmu_type, "niagara5") ||
++        !strcmp(sparc_pmu_type, "sparc-m7") ||
++        !strcmp(sparc_pmu_type, "sparc-s7")) {
+ 		sparc_pmu = &niagara4_pmu;
+ 		return true;
+ 	}
+diff --git a/arch/sparc/kernel/setup_64.c b/arch/sparc/kernel/setup_64.c
+index 63615f5c99b4..54dc48cf39c9 100644
+--- a/arch/sparc/kernel/setup_64.c
++++ b/arch/sparc/kernel/setup_64.c
+@@ -278,7 +278,8 @@ static void __init sun4v_patch(void)
+ 	switch (sun4v_chip_type) {
+ 	case SUN4V_CHIP_SPARC_M7:
+ 	case SUN4V_CHIP_SPARC_M8:
+-	case SUN4V_CHIP_SPARC_SN:
++	case SUN4V_CHIP_SPARC_S7:
++	case SUN4V_CHIP_SPARC_S8:
+ 		sun4v_patch_1insn_range(&__sun_m7_1insn_patch,
+ 					&__sun_m7_1insn_patch_end);
+ 		sun_m7_patch_2insn_range(&__sun_m7_2insn_patch,
+@@ -531,7 +532,8 @@ static void __init init_sparc64_elf_hwcap(void)
+ 		    sun4v_chip_type == SUN4V_CHIP_SPARC_M6 ||
+ 		    sun4v_chip_type == SUN4V_CHIP_SPARC_M7 ||
+ 		    sun4v_chip_type == SUN4V_CHIP_SPARC_M8 ||
+-		    sun4v_chip_type == SUN4V_CHIP_SPARC_SN ||
++		    sun4v_chip_type == SUN4V_CHIP_SPARC_S7 ||
++		    sun4v_chip_type == SUN4V_CHIP_SPARC_S8 ||
+ 		    sun4v_chip_type == SUN4V_CHIP_SPARC64X)
+ 			cap |= HWCAP_SPARC_BLKINIT;
+ 		if (sun4v_chip_type == SUN4V_CHIP_NIAGARA2 ||
+@@ -541,7 +543,8 @@ static void __init init_sparc64_elf_hwcap(void)
+ 		    sun4v_chip_type == SUN4V_CHIP_SPARC_M6 ||
+ 		    sun4v_chip_type == SUN4V_CHIP_SPARC_M7 ||
+ 		    sun4v_chip_type == SUN4V_CHIP_SPARC_M8 ||
+-		    sun4v_chip_type == SUN4V_CHIP_SPARC_SN ||
++		    sun4v_chip_type == SUN4V_CHIP_SPARC_S7 ||
++		    sun4v_chip_type == SUN4V_CHIP_SPARC_S8 ||
+ 		    sun4v_chip_type == SUN4V_CHIP_SPARC64X)
+ 			cap |= HWCAP_SPARC_N2;
+ 	}
+@@ -572,7 +575,8 @@ static void __init init_sparc64_elf_hwcap(void)
+ 			    sun4v_chip_type == SUN4V_CHIP_SPARC_M6 ||
+ 			    sun4v_chip_type == SUN4V_CHIP_SPARC_M7 ||
+ 			    sun4v_chip_type == SUN4V_CHIP_SPARC_M8 ||
+-			    sun4v_chip_type == SUN4V_CHIP_SPARC_SN ||
++			    sun4v_chip_type == SUN4V_CHIP_SPARC_S7 ||
++			    sun4v_chip_type == SUN4V_CHIP_SPARC_S8 ||
+ 			    sun4v_chip_type == SUN4V_CHIP_SPARC64X)
+ 				cap |= (AV_SPARC_VIS | AV_SPARC_VIS2 |
+ 					AV_SPARC_ASI_BLK_INIT |
+@@ -583,7 +587,8 @@ static void __init init_sparc64_elf_hwcap(void)
+ 			    sun4v_chip_type == SUN4V_CHIP_SPARC_M6 ||
+ 			    sun4v_chip_type == SUN4V_CHIP_SPARC_M7 ||
+ 			    sun4v_chip_type == SUN4V_CHIP_SPARC_M8 ||
+-			    sun4v_chip_type == SUN4V_CHIP_SPARC_SN ||
++			    sun4v_chip_type == SUN4V_CHIP_SPARC_S7 ||
++			    sun4v_chip_type == SUN4V_CHIP_SPARC_S8 ||
+ 			    sun4v_chip_type == SUN4V_CHIP_SPARC64X)
+ 				cap |= (AV_SPARC_VIS3 | AV_SPARC_HPC |
+ 					AV_SPARC_FMAF);
+diff --git a/arch/sparc/mm/init_64.c b/arch/sparc/mm/init_64.c
+index df9f7c444c39..4ef9ef6cea7a 100644
+--- a/arch/sparc/mm/init_64.c
++++ b/arch/sparc/mm/init_64.c
+@@ -1989,7 +1989,8 @@ static void __init setup_page_offset(void)
+ 			max_phys_bits = 47;
+ 			break;
+ 		case SUN4V_CHIP_SPARC_M7:
+-		case SUN4V_CHIP_SPARC_SN:
++		case SUN4V_CHIP_SPARC_S7:
++		case SUN4V_CHIP_SPARC_S8:
+ 			/* M7 and later support 52-bit virtual addresses.  */
+ 			sparc64_va_hole_top =    0xfff8000000000000UL;
+ 			sparc64_va_hole_bottom = 0x0008000000000000UL;
+@@ -2218,7 +2219,8 @@ static void __init sun4v_linear_pte_xor_finalize(void)
+ 	switch (sun4v_chip_type) {
+ 	case SUN4V_CHIP_SPARC_M7:
+ 	case SUN4V_CHIP_SPARC_M8:
+-	case SUN4V_CHIP_SPARC_SN:
++	case SUN4V_CHIP_SPARC_S7:
++	case SUN4V_CHIP_SPARC_S8:
+ 		pagecv_flag = 0x00;
+ 		break;
+ 	default:
+@@ -2333,7 +2335,8 @@ void __init paging_init(void)
+ 	switch (sun4v_chip_type) {
+ 	case SUN4V_CHIP_SPARC_M7:
+ 	case SUN4V_CHIP_SPARC_M8:
+-	case SUN4V_CHIP_SPARC_SN:
++	case SUN4V_CHIP_SPARC_S7:
++	case SUN4V_CHIP_SPARC_S8:
+ 		page_cache4v_flag = _PAGE_CP_4V;
+ 		break;
+ 	default:
+--- a/arch/sparc/kernel/cpumap.c	2025-11-14 21:07:21.934446102 +0100
++++ b/arch/sparc/kernel/cpumap.c	2025-11-14 21:07:49.743207184 +0100
+@@ -329,7 +329,8 @@
+ 	case SUN4V_CHIP_SPARC_M6:
+ 	case SUN4V_CHIP_SPARC_M7:
+ 	case SUN4V_CHIP_SPARC_M8:
+-	case SUN4V_CHIP_SPARC_SN:
++	case SUN4V_CHIP_SPARC_S7:
++	case SUN4V_CHIP_SPARC_S8:
+ 	case SUN4V_CHIP_SPARC64X:
+ 		rover_inc_table = niagara_iterate_method;
+ 		break;

@@ -1,0 +1,29 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/fluidsynth/fluidsynth.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A real-time software synthesizer based on the SoundFont 2 specifications
+
+[T] FluidSynth is a cross-platform, real-time software synthesizer based on the
+[T] Soundfont 2 specification. FluidSynth generates audio by reading and
+[T] handling MIDI events from MIDI input devices by using a SoundFont.
+
+[U] https://www.fluidsynth.org/
+
+[A] Fluidsynth Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/audio
+[F] CROSS
+
+[E] opt doxygen
+[E] opt jack
+[E] opt libsdl3
+
+[L] LGPL
+[V] 2.5.4
+[P] X -----5---9 400.000
+
+[D] 6f9c8520821f01eeb6ec5eabc4a71055e3d683ee5857e3510ef37be4 fluidsynth-v2.5.4.tar.gz https://github.com/fluidsynth/fluidsynth/archive/v2.5.4/

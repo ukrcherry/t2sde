@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libmysofa/libmysofa.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Set of C functions to read AES SOFA files
+
+[T] This is a simple set of C functions to read AES SOFA files, if they
+[T] contain HRTFs stored according to the AES69-2015 standard.
+
+[U] https://github.com/hoene/libmysofa
+
+[A] Christian Hoene, Symonics GmbH
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.3.4
+[L] BSD
+[P] X -----5---9 179.000
+
+[D] 0f0bf4253dfd0053679e25fc6cc48af66998269ba90304dd5892d155 libmysofa-1.3.4.tar.gz https://github.com/hoene/libmysofa/archive/v1.3.4/
+
+var_append cmakeopt ' ' -DBUILD_TESTS=OFF

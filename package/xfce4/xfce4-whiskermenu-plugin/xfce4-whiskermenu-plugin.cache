@@ -1,6 +1,6 @@
-[TIMESTAMP] 1737826774 Sat Jan 25 18:39:34 2025
-[BUILDTIME] 8 (9)
-[SIZE] 0.83 MB, 81 files
+[TIMESTAMP] 1771784506 Sun Feb 22 19:21:46 2026
+[BUILDTIME] 14 (9)
+[SIZE] 0.88 MB, 87 files
 
 [OPT] accountsservice
 [DEP] at-spi2-core
@@ -10,11 +10,11 @@
 [DEP] cmake
 [DEP] coreutils
 [DEP] diffutils
+[DEP] findutils
 [DEP] garcon
 [DEP] gawk
 [DEP] gdk-pixbuf
 [DEP] gettext
-[DEP] git
 [DEP] glib
 [DEP] grep
 [DEP] gtk+
@@ -26,10 +26,14 @@
 [DEP] libxfce4util
 [DEP] linux-header
 [DEP] make
+[DEP] meson
+[DEP] ninja
+[DEP] openssl
 [DEP] pango
 [DEP] pkgconfig
+[DEP] python
 [DEP] sed
 [DEP] tar
-[DEP] tbb
+[DEP] util-linux
 [DEP] xfce4-panel
 [DEP] xfconf

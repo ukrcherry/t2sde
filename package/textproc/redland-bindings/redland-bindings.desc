@@ -1,0 +1,41 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/redland-bindings/redland-bindings.desc
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A set of Redland RDF (Resource Description Framework) C libraries
+
+[T] Redland is a set of C libraries providing a high-level API for
+[T] the Resource Description Framework (RDF), allowing it to be stored,
+[T] parsed, serialized, queried, and manipulated. It has an object-based,
+[T] modular design and comes with detailed reference documentation and
+[T] examples. APIs are provided in C#, C, Perl, Python, Ruby, PHP, Java,
+[T] and Tcl. Redland supports all RDF vocabularies such as FOAF, RSS 1.0,
+[T] Dublin Core, DOAP, and OWL, the query languages RDQL and SPARQL,
+[T] and all RDF syntaxes including Turtle, RDF/XML, RSS, Atom, and GRDDL.
+
+[U] https://librdf.org/
+
+[A] Dave Beckett <dave@dajobe.org>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/text
+
+[E] opt gtk-doc
+
+[L] GPL
+[V] 1.0.17.1
+
+[D] 786b1e90e479d5727adfb47e347bd597681bbc457efe3579ac9c3ebd redland-bindings-1.0.17.1.tar.gz https://download.librdf.org/source/
+
+pkginstalled raptor && var_append confopt ' ' '--with-raptor=system' ||
+	var_append confopt ' ' --with-raptor=internal
+
+pkginstalled rasqal && var_append confopt ' ' '--with-rasqal=system' ||
+	 var_append confopt ' ' --with-rasqal=internal
+
+pkginstalled perl   && var_append confopt ' ' --with-perl
+pkginstalled php    && var_append confopt ' ' --with-php
+pkginstalled python && var_append confopt ' ' --with-python
+pkginstalled ruby   && var_append confopt ' ' --with-ruby

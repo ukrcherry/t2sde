@@ -1,0 +1,23 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/gnome-manuals/gnome-manuals.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Install, Browse, and Search GNOME developer documentation
+
+[T] Manuals is an extraction of the Documentation component of GNOME Builder
+[T] into a standalone application.
+
+[U] https://gitlab.gnome.org/GNOME/manuals
+
+[A] The GNOME Project <gnome-devel-list@gnome.org>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/documentation extra/desktop/gnome
+[F] CROSS
+
+[L] GPL3
+[V] 50.1
+
+[D] fe42db6d8afc6d91ee32c119d21bdeec7d043c047434cefd2b0975d5 manuals-50.1.tar.gz https://gitlab.gnome.org/GNOME/manuals/-/archive/50.1/

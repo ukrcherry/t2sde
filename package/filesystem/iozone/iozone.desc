@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/iozone/iozone.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -13,17 +13,21 @@
 [U] https://www.iozone.org/
 
 [A] webmaster@iozone.org
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/tool
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 3_491
+[V] 3.510
 
-[O] srcdir="*/src/current"
-[O] var_append makeopt ' ' linux
-[O] makeinstopt=; hook_add postmake 5 "install iozone $root$bindir/"
+[CV-TR] s/\./_/
+[D] 896bda43cebea44584e067b484f88abb15efd5ff30e76235bf67b55a iozone3_510.tar https://www.iozone.org/src/current/
 
-[D] 5355b9d7e48cba27b68a42a3db29eda3f6b6401e76844a05751ebca6 iozone3_491.tgz http://www.iozone.org/src/current/
+srcdir="*/src/current"
+
+var_append makeopt ' ' linux
+var_append CC_WRAPPER_APPEND ' ' -DHAVE_ANSIC_C
+
+makeinstopt=
+hook_add postmake 5 "install iozone $root$bindir/"

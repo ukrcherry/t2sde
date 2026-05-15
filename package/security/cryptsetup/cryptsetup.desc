@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/cryptsetup/cryptsetup.desc
-[COPY] Copyright (C) 2009 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2009 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -20,15 +20,24 @@
 [U] https://gitlab.com/cryptsetup/cryptsetup
 
 [A] Clemens Fruhwirth <http://clemens.endorphin.org/>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 [F] CROSS
 [R] - microblaze
 
 [L] GPL
-[S] Stable
-[V] 2.7.5
-[P] X -----5---9 185.000
+[V] 2.8.6
+[P] X -----5---9 180.000
 
-[D] c2d90685db530696bf82bd0d349def245cd0f6ab626394f73a5161e0 cryptsetup-2.7.5.tar.xz https://www.kernel.org/pub/linux/utils/cryptsetup/v2.7/
+[D] 87fb8127c65ef57952a895f583ee3b38d4cd8a6f978ec05556317945 cryptsetup-2.8.6.tar.xz https://www.kernel.org/pub/linux/utils/cryptsetup/v2.8/
+
+runmeson=0
+
+[ "$SDECFG_LIBC" = musl ] && var_append GCC_WRAPPER_INSERT ' ' -D_LARGEFILE64_SOURCE=1
+
+pkginstalled libssh || var_append confopt ' ' --disable-ssh-token
+pkginstalled asciidoctor || var_append confopt ' ' --disable-asciidoc
+
+var_append confopt ' ' --with-luks2-lock-path=/var/run/cryptsetup
+atstage cross && var_append confopt ' ' --with-libgcrypt-prefix=$root/$prefix

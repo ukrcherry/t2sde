@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/ristretto/ristretto.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,15 +14,14 @@
 [U] https://docs.xfce.org/apps/ristretto/start
 
 [A] Xfce Authors
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/desktop/xfce
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 0.13.4
+[V] 0.14.0
 
-[O] . $base/package/xfce4/*/xfce4-conf.in
+[D] 83947d78723cd35ccf84f0fccb84619c73b88b3b909545530d3c8b0c ristretto-0.14.0.tar.xz https://archive.xfce.org/src/apps/ristretto/0.14/
 
-[D] 8c47b5b55104a06bd23fe38cedda1c396e585258e26d139f46c88bad ristretto-0.13.4.tar.xz https://archive.xfce.org/src/apps/ristretto/0.13/
+. $base/package/xfce4/*/xfce4-conf.in

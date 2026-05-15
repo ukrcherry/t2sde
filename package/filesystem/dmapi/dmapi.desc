@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/dmapi/dmapi.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,13 +14,12 @@
 [U] http://oss.sgi.com/projects/xfs/
 
 [A] SGI XFS development team <linux-xfs@oss.sgi.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/filesystem
 [F] CROSS
 
 [L] GPL
-[S] Stable
 [V] 2.2.12
 
 [D] 44191afc8110bc995a65ce692b5c79e30a11a2b2106f916cf4a3122b dmapi-2.2.12.tar.gz ftp://oss.sgi.com/projects/xfs/cmd_tars/

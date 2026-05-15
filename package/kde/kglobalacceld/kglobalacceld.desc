@@ -1,28 +1,28 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/kglobalacceld/kglobalacceld.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
-[I] KDE Frameworks 5 Tier 3 integration module for global shortcuts
+[I] KDE Frameworks integration module for global shortcuts
 
 [T] Daemon providing Global Keyboard Shortcut (Accelerator) functionality.
 
 [U] https://www.kde.org
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 6.3.5
-[P] X -----5---9 162.900
-
-[O] . $base/package/*/*/kde-conf.in
-[O] var_append CXX_WRAPPER_APPEND ' ' "-I$root/$(pkgprefix includedir libxcb)"
+[V] 6.6.5
+[P] X -----5---9 162.920
 
 [CV-GROUP] kde-plasma
-[D] 323df0d3b594b226d188a0a78195a611f5b55e45646944d3d81df8fc kglobalacceld-6.3.5.tar.xz https://download.kde.org/stable//plasma/6.3.5/
+[D] 23c07bc684b2655c0ee8bdb9610d0887f1286534db3cc3cf9e98a940 kglobalacceld-6.6.5.tar.xz https://download.kde.org/stable//plasma/6.6.5/
+
+. $base/package/*/*/kde-conf.in
+var_append CXX_WRAPPER_APPEND ' ' "-I$root/$(pkgprefix includedir libxcb)"

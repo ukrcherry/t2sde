@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/asunder/asunder.desc
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Asunder is a graphical CD ripper and encoder
+
+[T] Asunder support for WAV, MP3, Ogg Vorbis, and FLAC audio files,
+[T] uses CDDB to name and tag each track, encode to multiple formats
+[T] in one session, creates M3U playlists, allows for each track to
+[T] be by a different artist.
+
+[U] http://www.littlesvr.ca/asunder/
+
+[A] Eric <eric@ericlathrop.com>
+[M] Johan Boyé <linuxmasterjedi@free.fr>
+
+[C] extra/multimedia
+[F] CROSS
+
+[L] GPL
+[V] 3.0.2
+
+[D] ccfdfe0a50892f684f9a80d58bc359c3e2a238f6d4a47ce43076cb43 asunder-3.0.2.tar.bz2 http://www.littlesvr.ca/asunder/releases/

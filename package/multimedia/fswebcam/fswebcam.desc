@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/fswebcam/fswebcam.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A neat and simple webcam app
+
+[T] A neat and simple webcam app.
+
+[U] https://www.sanslogic.co.uk/fswebcam/
+
+[A] Fswebcam Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 20200725
+[L] GPL
+
+[D] 9bf34cc31a969a4df9d7af258611c22785ac39afefb1ab5ce0a630ed fswebcam-20200725.tar.gz https://github.com/fsphil/fswebcam/archive/20200725/

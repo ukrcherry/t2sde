@@ -1,0 +1,39 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/links/links.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A text and graphics mode portable WWW browser
+
+[T] Links is graphics and text mode WWW browser, similar to Lynx. It displays
+[T] tables, frames, downloads on background, uses HTTP/1.1 keepalive
+[T] connections, and features Javascript. In graphics mode it displays PNG,
+[T] JPEG, GIF, TIFF, and XBM pictures, runs external bindings on other types,
+[T] and features anti-aliased font, smooth image zooming, 48-bit dithering,
+[T] and gamma and aspect ratio correction.
+
+[U] http://links.twibright.com/
+
+[A] Twibright Labs <mikulas@twibright.com>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/network
+[F] CROSS
+
+[E] opt librsvg
+[E] opt libwebp
+
+[L] GPL
+[V] 2.30
+
+[D] 58e84f8c6b17b783908f3bf161fd2d8e38fe6490561d7f44d3f52b7c links-2.30.tar.bz2 http://links.twibright.com/download/
+
+# javascript was removed (in 07) and now breaks the build if enabled
+#var_append confopt ' ' --enable-javascript
+
+#pkginstalled directfb || pkginstalled svgalib || pkginstalled libx11 &&
+pkginstalled libpng && var_append confopt ' ' --enable-graphics
+
+var_append GCC_WRAPPER_APPEND ' ' -std=gnu11

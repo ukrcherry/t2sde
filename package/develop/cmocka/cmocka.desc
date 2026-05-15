@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/cmocka/cmocka.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,7 +14,7 @@
 
 [A] Andreas Schneider <asn@cryptomilk.org>
 [A] Jakub Hrozek <jakub.hrozek@posteo.se>
-[M] dash
+[M] Daniel Ashkenazi <daniel.ashkenazi@gmail.com>
 
 [C] extra/development
 [F] CROSS OBJDIR NO-LTO.gcc
@@ -22,7 +22,6 @@
 [E] opt doxygen
 
 [L] APL
-[S] Stable
-[V] 1.1.7
+[V] 2.0.2
 
-[D] c03b81a7aec93a477d83260e1c2060ab181d271a067dfd126c98a17c cmocka-1.1.7.tar.xz https://cmocka.org/files/1.1/
+[D] f128d05454870af68defc25acf705cfb6bdd094beceb91bcf805e96f cmocka-2.0.2.tar.xz https://cmocka.org/files/2.0/

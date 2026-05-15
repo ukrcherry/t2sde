@@ -1,11 +1,12 @@
-[TIMESTAMP] 1739209501 Mon Feb 10 18:45:01 2025
-[BUILDTIME] 160 (9)
-[SIZE] 8.02 MB, 137 files
+[TIMESTAMP] 1770465504 Sat Feb  7 12:58:24 2026
+[BUILDTIME] 140 (9)
+[SIZE] 8.93 MB, 160 files
 
 [DEP] bash
 [DEP] binutils
 [DEP] cmake
 [DEP] coreutils
+[DEP] cpuinfo
 [DEP] curl
 [DEP] diffutils
 [DEP] gawk
@@ -18,7 +19,9 @@
 [DEP] libdecor
 [DEP] libdisplay-info
 [DEP] libdrm
+[DEP] libei
 [DEP] libinput
+[DEP] libliftoff
 [DEP] libsdl2
 [DEP] libx11
 [DEP] libxcb
@@ -40,15 +43,17 @@
 [DEP] openssl
 [DEP] pipewire
 [DEP] pixman
+[DEP] python
 [DEP] seatd
 [DEP] sed
+[DEP] systemd
 [DEP] tar
-[DEP] tbb
 [DEP] udev
+[DEP] util-linux
 [DEP] vulkan-headers
 [DEP] wayland
 [DEP] wayland-protocols
-[DEP] wlroots
+[DEP] xcb-util-errors
 [DEP] xcb-util-wm
 [DEP] xkbcommon
 [DEP] xorgproto

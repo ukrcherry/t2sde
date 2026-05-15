@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/fabric/fabric.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Simple pythonic remote deployment tool
+
+[T] Simple pythonic remote deployment tool.
+
+[U] https://www.fabfile.org/
+
+[A] Fabric Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 3.2.3
+[L] BSD
+
+[D] a35eb5efc24d04463b4b27bfdb53c63875e19586e8ecaacf1914d9f9 fabric-3.2.3.tar.gz https://files.pythonhosted.org/packages/source/f/fabric/

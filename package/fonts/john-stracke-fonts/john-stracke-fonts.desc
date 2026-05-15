@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/john-stracke-fonts/john-stracke-fonts.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -13,15 +13,29 @@
 [U] https://www.thibault.org/fonts/
 
 [A] John Stracke
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] CROSS
 
 [L] LGPL
-[S] Stable
 [V] 2
 
 [D] 3934333204 Isabella.ttf.tar.gz http://www.thibault.org/fonts/isabella/
-[D] 4274601486 StayPuft.ttf.tar.gz http://www.thibault.org/fonts/staypuft/
+[D] 4274601486 StayPuft.ttf.tar.gz https://www.thibault.org/fonts/staypuft/
 [D] 2181829178 Essays1743-1.0-ttf.tar.gz http://www.thibault.org/fonts/essays/
+
+autoextract=0 runmake=0
+
+gpl_tt_inst() {
+	for x in `match_source_file -p .`; do
+		echo "${x##*/}"
+		case "$x" in
+			*.zip)	yes | unzip -LL $x ;;
+			*.tar*)	tar $taropt $x ;;
+			*)	abort "NYI archive format: $x" ;;
+		esac
+	done
+	cp -vf *.ttf */*.ttf $root$datadir/fonts/
+}
+hook_add inmake	5 gpl_tt_inst

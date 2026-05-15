@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/fdm/fdm.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A simple lightweight tool of fetching, filtering and delivering emails
+
+[T] A simple lightweight tool of fetching, filtering and delivering emails.
+
+[U] https://github.com/nicm/fdm
+
+[A] Fdm Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 2.2
+[L] ISC
+
+[D] 83fc9e925d93a8d7ae030d037c2acc532200499923390037f1ee43be fdm-2.2.tar.gz https://github.com/nicm/fdm/releases/download/2.2/

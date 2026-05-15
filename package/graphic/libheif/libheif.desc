@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libheif/libheif.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,19 +13,19 @@
 [U] https://www.libde265.org/
 
 [A] Struktur AG, Dirk Farin <farin@struktur.de>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] CROSS
 
 [E] opt doxygen
+[E] opt libde265
 [E] opt libwebp
 
 [L] LGPL
-[S] Stable
-[V] 1.19.7
-[P] X -----5---9 124.600
+[V] 1.21.2
+[P] X -----5---9 130.301
 
-[O] var_append confopt ' ' --disable-go
+[D] e9d7d120d672644e56fe74fba37d27c23f894c32e6419b39b241c22d libheif-1.21.2.tar.gz https://github.com/strukturag/libheif/releases/download/v1.21.2/
 
-[D] f0140d7538fa2f36a27f2cb1484309e7b89492a58835bb54811f3066 libheif-1.19.7.tar.gz https://github.com/strukturag/libheif/releases/download/v1.19.7/
+var_append confopt ' ' --disable-go

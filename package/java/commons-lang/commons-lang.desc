@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/commons-lang/commons-lang.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -18,14 +18,13 @@
 [U] https://jakarta.apache.org/commons/lang/
 
 [A] Apache Jakarta Commons team
-[M] Minto van der Sluis <Minto@MultiMach.com>
+[M] Minto van der Sluis <minto@multimach.com>
 
 [C] extra/development
 
 [L] OpenSource
-[S] Stable
-[V] 3.17.0
+[V] 3.20.0
 
-[O] . $base/package/*/*/java-conf.in BUILD_TYPE=ANT
+[D] c64d539695313bc6a502bae062498c4a3b5aa68487125f7b77943ec9 commons-lang3-3.20.0-src.tar.gz https://dlcdn.apache.org/commons/lang/source/
 
-[D] 01754660b8063d54301489ce349e7204b30549d6942ee284646c40c6 commons-lang3-3.17.0-src.tar.gz https://dlcdn.apache.org/commons/lang/source/
+. $base/package/*/*/java-conf.in BUILD_TYPE=ANT

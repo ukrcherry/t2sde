@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/toybox/toybox.desc
-[COPY] Copyright (C) 2020 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2020 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,16 +13,15 @@
 [U] http://landley.net/toybox/
 
 [A] Rob Landley <rob@landley.net>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/system
 [F] CROSS
 
 [L] BSD
-[S] Stable
-[V] 0.8.12
+[V] 0.8.13
 [P] O --2--5---9 163.500
 
-[O] hook_add premake 5 "make defconfig"
+[D] bea576e018b24ed661d47427f6c4a29589c3589d7d0d6a8d3ca308a0 toybox-0.8.13.tar.gz http://landley.net/toybox/downloads/
 
-[D] fbc7f301f772552ec88c0f424b57a1da2535a34c9664e5bb33516724 toybox-0.8.12.tar.gz http://landley.net/toybox/downloads/
+hook_add premake 5 "make defconfig"

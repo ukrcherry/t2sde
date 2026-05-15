@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/loksh/loksh.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,13 +14,12 @@
 [U] https://github.com/dimkr/loksh
 
 [A] Loksh Authors
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/base
 [F] CROSS
 
-[V] 7.6
+[V] 7.8
 [L] ISC
-[S] Stable
 
-[D] 0cf1c7cc2f8b9ceb5e642849e1f886793070b4c93cc331380d837595 loksh-7.6.tar.xz https://github.com/dimkr/loksh/releases/download/7.6/
+[D] 3760df05316ab3b67097562f6b07e62063d3de876d07271f60466c5f loksh-7.8.tar.xz https://github.com/dimkr/loksh/releases/download/7.8/

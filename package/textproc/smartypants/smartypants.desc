@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/smartypants/smartypants.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Translate ASCII punctuation characters into “smart” HTML entities
+
+[T] Translate plain ASCII punctuation characters into “smart” typographic
+[T] punctuation HTML entities.
+
+[U] https://github.com/leohemsted/smartypants.py
+
+[A] Smartypants Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 2.0.2
+[L] BSD
+[P] X -----5---9 109.100
+
+[D] dc1b99cec54745d64e9b1477c1b1db983b874bbca2d02357a2f3c983 smartypants-2.0.2.tar.gz https://github.com/leohemsted/smartypants.py/archive/v2.0.2/

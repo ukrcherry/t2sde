@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/python-jefferson/python-jefferson.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,13 +11,12 @@
 [U] https://pypi.org/project/jefferson/
 
 [A] ONKEY GmbH
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [L] MIT
-[S] Stable
-[V] 0.4.5
+[V] 0.4.7
 [P] X -----5---9 200.000
 
-[D] e935644352ee3130e540426c91faa7538487b2b113baabcaf529a765 jefferson-0.4.5.tar.gz https://files.pythonhosted.org/packages/ec/32/fd9132d16cbfff65fab899d354c7287d28798793c17ab4c7d2b9e2a0ffb1/
+[D] 31bf679711f2f1b0b9d16dbfb9d8740e156389a0e21ff256a15cd8ec jefferson-0.4.7.tar.gz https://files.pythonhosted.org/packages/source/j/jefferson/

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xmp/xmp.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -17,14 +17,12 @@
 
 [A] claudio@helllabs.org
 [A] hipolito@onda.com.br
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] FPIC
 
 [L] GPL
-[S] Stable
-[V] 4.2.0
-[P] X -----5---9 172.000
+[V] 4.3.0
 
-[D] 05c89d3b8f1914cf7bb00519d8fdd67ba9e3750751515fcccff8b110 xmp-4.2.0.tar.gz https://downloads.sourceforge.net/project/xmp/xmp/4.2.0/
+[D] 95d73aa7e2b0889083a39492727eaf31ec02d77e86d558a2ef816aaf xmp-4.3.0.tar.gz https://downloads.sourceforge.net/project/xmp/xmp/4.3.0/

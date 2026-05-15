@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/kcalendarcore/kcalendarcore.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,16 +12,16 @@
 [U] https://www.kde.org
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 6.14.0
+[V] 6.26.0
 [P] X -----5---9 162.420
 
-[O] . $base/package/*/*/kde-conf.in
-
 [CV-GROUP] kde-frameworks
-[D] 6849869e043db99f1338aebfc44cc23d4f5fe632e11bf87827b30c0c kcalendarcore-6.14.0.tar.xz https://download.kde.org/stable/frameworks/6.14/
+[D] 7df1d056b1afb48e6b3450c0db3187a10ba43d0bb581e67fdcee564b kcalendarcore-6.26.0.tar.xz https://download.kde.org/stable/frameworks/6.26/
+
+. $base/package/*/*/kde-conf.in

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/rygel/rygel.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,16 +11,14 @@
 [U] https://www.gnome.org
 
 [A] The GNOME Project <gnome-devel-list@gnome.org>
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/shell extra/desktop/gnome
 
 [L] LGPL
-[S] Stable
-[V] 0.44.2
-[P] X -----5---9 200.100
-
-[O] . $base/package/*/*/gnome-conf.in
+[V] 45.1
 
 [CV-URL] https://download.gnome.org/sources/rygel/cache.json
-[D] c53994c28dcd0fd9cb81b373f5d094df17042c9c72454159cda20b61 rygel-0.44.2.tar.xz https://download.gnome.org/sources/rygel/0.44/
+[D] ac9f9e5c8ef47cf622c70c56f49032418be2b968e9bff094d6446294 rygel-45.1.tar.xz https://download.gnome.org/sources/rygel/45/
+
+. $base/package/*/*/gnome-conf.in

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/helix/helix.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,13 +12,38 @@
 [U] https://helix-editor.com
 
 [A] Blaž Hrastnik <blaz@mxxn.io>
-[M] Dash
+[M] Daniel Ashkenazi <daniel.ashkenazi@gmail.com>
 
 [C] extra/editor
 [F] CROSS NO-LTO
 
 [L] MPL
-[S] Stable
-[V] 25.01.1
+[V] 25.07.1
 
-[D] 048187c46f64bf2c9fa1ce4da4bb08cfaeb61d7608631a74685ce913 helix-editor-25.01.1.tar.gz https://github.com/helix-editor/helix/archive/25.01.1/
+[D] 2d6128784a69ca0aa63fa5b58f572a2b50967e4d612b9c500546cd98 helix-editor-25.07.1.tar.gz https://github.com/helix-editor/helix/archive/25.07.1/
+
+cargoinstopt=
+
+HELIX_ENV="$datadir/share/helix"
+HELIX_RUNTIME="$HELIX_ENV/runtime"
+HELIX_GRAMMAR="$HELIX_RUNTIME/grammars"
+
+preinstall() {
+	echo "Deleting old install"
+	rm -rf $HELIX_ENV
+	mkdir -p $HELIX_ENV/bin
+	mkdir -p $HELIX_RUNTIME
+	mkdir -p $HELIX_GRAMMAR
+
+	echo "Copying to $HELIX_ENV"
+	install target/*/hx $HELIX_ENV/bin/
+	cp -r "runtime/themes" "$HELIX_RUNTIME"
+	cp -r "runtime/queries" "$HELIX_RUNTIME"
+	find "runtime/grammars" -name '*.so' -exec cp {} $HELIX_GRAMMAR/ \;
+	cp runtime/tutor $HELIX_RUNTIME
+
+	echo "Creating a runtime shim"
+	echo "HELIX_RUNTIME=$HELIX_RUNTIME $HELIX_ENV/bin/hx \"\${@}\"" > $root$bindir/hx
+	chmod +x $root$bindir/hx
+}
+hook_add postmake 2 preinstall

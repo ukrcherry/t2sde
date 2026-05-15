@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/kazehakase/kazehakase.desc
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] GTK+ web browser with Gecko engine
+
+[T] Kazehakase is a browser with gecko engine like Epiphany or
+[T] Galeon. Features: tabbed browsing, remote bookmark (e.g. RSS) in menu
+[T] or sidebar, variable UI on user level, customizable mouse
+[T] gestures, customizable key accelerator.
+
+[U] http://kazehakase.sourceforge.jp/
+
+[A] Hiroyuki Ikezoe <poincare@ikezoe.net>
+[A] Takuro Ashie <ashie@homa.ne.jp>
+[M] Johan Boyé <linuxmasterjedi@free.fr>
+
+[C] extra/network
+[F] CROSS
+
+[L] GPL
+[V] 0.5.8
+
+[D] 0 kazehakase-0.5.8.tar.gz http://dl.sourceforge.jp/kazehakase/25149/

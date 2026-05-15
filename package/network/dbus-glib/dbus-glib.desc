@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/dbus-glib/dbus-glib.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -24,9 +24,19 @@
 [C] extra/network
 [F] CROSS NO-AS-NEEDED NO-LTO
 
-[L] GPL
-[S] Beta
-[V] 0.114
-[P] X -----5---9 112.510
+[E] opt gtk-doc
 
-[D] 17ccba6763b5a37ce4e97831ca2170b8d4c362155afc5a232a22a60e dbus-glib-0.114.tar.gz http://dbus.freedesktop.org/releases/dbus-glib/
+[L] GPL
+[V] 0.114
+[P] X -----5---9 136.820
+
+[D] 17ccba6763b5a37ce4e97831ca2170b8d4c362155afc5a232a22a60e dbus-glib-0.114.tar.gz https://dbus.freedesktop.org/releases/dbus-glib/
+
+if atstage cross; then
+	hook_add preconf 5 "echo 'ac_cv_func_posix_getpwnam_r=yes' >> config.cache"
+	var_append makeopt ' ' DBUS_BINDING_TOOL=dbus-binding-tool
+fi
+
+pkginstalled pyrexc && var_append confopt ' ' --enable-python
+
+hook_add premake 5 'cp -v $confdir/dbus-bus-introspect.xml tools/'

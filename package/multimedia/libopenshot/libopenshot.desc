@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libopenshot/libopenshot.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,14 +13,14 @@
 [U] https://www.openshot.org/
 
 [A] Jonathan Thomas <jonathan@openshot.org>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 
 [E] opt doxygen
 
 [L] LGPL3
-[S] Stable
-[V] 0.4.0
+[V] 0.7.0
+[P] X -----5---9 300.100
 
-[D] 95cff849d7e94276c4425153ae8fc88a3a4d27517fb5555cee2a4967 libopenshot-0.4.0.tar.gz https://github.com/OpenShot/libopenshot/archive/v0.4.0/
+[D] 57cd2a054cbf5cad3363157abca495d57a413dc1a3e81312e09f1f4a libopenshot-0.7.0.tar.gz https://github.com/OpenShot/libopenshot/archive/v0.7.0/

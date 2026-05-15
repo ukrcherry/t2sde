@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/aumix/aumix.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -12,18 +12,18 @@
 [T] non-interactively, and can store all settings in a file. It works with
 [T] the OSS API.
 
-[U] http://jpj.net/~trevor/aumix.html
+[U] https://sourceforge.net/projects/aumix/
 
 [A] Trevor Johnson <trevor@jpj.net>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] CROSS
 
 [L] GPL
-[S] Stable
 [V] 2.9.1
 
-[O] confopt="$confopt --without-gtk1"
+[D] 0737d303363b02ae9db6e76a2b96827712da48281d77fd271188b064 aumix-2.9.1.tar.bz2 https://download.sourceforge.net/aumix/2.9.1/aumix-2.9.1.tar.bz2
 
-[D] 0737d303363b02ae9db6e76a2b96827712da48281d77fd271188b064 aumix-2.9.1.tar.bz2 http://www.jpj.net/~trevor/aumix/releases/
+confopt="$confopt --without-gtk1"
+pkginstalled gtk+ || var_append confopt ' ' --without-gtk

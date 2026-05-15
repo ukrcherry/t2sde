@@ -1,0 +1,22 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/verilator/verilator.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] SystemVerilog simulator and lint system
+
+[T] Verilator is a SystemVerilog simulator and lint system.
+
+[U] https://verilator.org/
+
+[A] Veripool Developers
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/development
+[F] CROSS
+
+[L] LGPL
+[V] 5.048
+
+[D] 58a5735edf57ccda27574b6f79b0b5845768cf21a35a6392dbc7e9f1 verilator-5.048.tar.gz https://github.com/verilator/verilator/archive/v5.048/

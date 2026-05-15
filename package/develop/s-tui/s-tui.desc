@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/s-tui/s-tui.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Terminal-based CPU stress and monitoring utility
+
+[T] Terminal-based CPU stress and monitoring utility.
+
+[U] https://amanusk.github.io/s-tui/
+
+[A] S-tui Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.4.0
+[L] GPL
+
+[D] e1fbe4ae2c32494be10219808a02ad9e5aa1020802b06f41a95235ed s-tui-1.4.0.tar.gz https://github.com/amanusk/s-tui/archive/v1.4.0/

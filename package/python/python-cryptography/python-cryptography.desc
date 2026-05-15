@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/python-cryptography/python-cryptography.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,15 +14,14 @@
 [U] https://cryptography.io/en/latest/
 
 [A] The cryptography developers <cryptography-dev@python.org>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [F] NO-LTO
 
 [L] BSD
-[S] Stable
-[V] 44.0.3
+[V] 48.0.0
 [P] X -----5---9 220.000
 
-[D] 8e78f7af4db8e4fdca4fc5b2db62e3663b172e19416794491d42c786 cryptography-44.0.3.tar.gz https://github.com/pyca/cryptography/archive/refs/tags/44.0.3/
+[D] 1750f7557578ed53b463b0542f6ae21083d411b5014a08bc9ef3a12c cryptography-48.0.0.tar.gz https://github.com/pyca/cryptography/archive/refs/tags/48.0.0/

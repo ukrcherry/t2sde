@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/openvswitch/openvswitch.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Production quality, multilayer virtual switch
+
+[T] Open vSwitch is a production quality, multilayer virtual switch. It is
+[T] designed to enable massive network automation through programmatic
+[T] extension, while still supporting standard management interfaces and
+[T] protocols (e.g. NetFlow, sFlow, IPFIX, RSPAN, CLI, LACP, 802.1ag).
+
+[U] https://www.openvswitch.org/
+
+[A] Openvswitch Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[L] APL
+[V] 3.7.1
+
+[D] bd2487f1ae0db7791660ed511f46567d58a19d98a80821b30ca77e1d openvswitch-3.7.1.tar.gz https://www.openvswitch.org/releases/

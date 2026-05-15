@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/mate-utils/mate-utils.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,16 +12,14 @@
 [U] https://mate-desktop.org/
 
 [A] MATE developer
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/desktop/mate
 
 [L] GPL
-[S] Stable
 [V] 1.28.0
-[P] X -----5---9 179.300
-
-[O] . $base/package/*/*/mate-conf.in NO_SANITY_CHECK
-[O] var_append GCC_WRAPPER_APPEND ' ' "$(pkg-config --libs x11 xext)"
 
 [D] bacaa9a1fe5d402a02291c68a387ae5d83674861d20183cde8de2cbb mate-utils-1.28.0.tar.xz https://pub.mate-desktop.org/releases/1.28/
+
+. $base/package/*/*/mate-conf.in NO_SANITY_CHECK
+var_append GCC_WRAPPER_APPEND ' ' "$(pkg-config --libs x11 xext)"

@@ -1,0 +1,19 @@
+[TIMESTAMP] 1753911861 Wed Jul 30 23:44:21 2025
+[BUILDTIME] 5 (9)
+[SIZE] 0.41 MB, 59 files
+
+[DEP] bash
+[DEP] coreutils
+[DEP] diffutils
+[DEP] gawk
+[DEP] gettext
+[DEP] glib
+[DEP] grep
+[DEP] gzip
+[DEP] libxml
+[DEP] meson
+[DEP] ninja
+[DEP] openssl
+[DEP] python
+[DEP] sed
+[DEP] tar

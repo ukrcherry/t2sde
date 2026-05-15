@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/vamp-sdk/vamp-sdk.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Framework for audio analysis and feature extraction
+
+[T] Framework for audio analysis and feature extraction.
+
+[U] https://code.soundsoftware.ac.uk/projects/vamp-plugin-sdk
+
+[A] Vamp-sdk Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 2.10.0
+[L] BSD
+[P] X -----5---9 700.000
+
+[D] 4c96d4bf2a733db8a90771731e95286f081662b0df0433acd7fd6e54 vamp-plugin-sdk-2.10.0.tar.gz https://code.soundsoftware.ac.uk/attachments/download/2691/

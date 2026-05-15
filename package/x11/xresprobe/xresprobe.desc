@@ -1,0 +1,42 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/xresprobe/xresprobe.desc
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Monitor resolution probe
+
+[T] xresprobe is a package that probes both laptop and DDC-compliant screens
+[T] for their standard resolutions, and returns a specifically-formatted,
+[T] easy-to-parse output.
+[T] It contains the 'ddcprobe' utility, which performs a DDC probe to the
+[T] monitor; however, ddcprobe only works on i386 and powerpc. The laptop
+[T] detection routines are, however, sufficiently generic to be useful to
+[T] other architectures.
+
+[U] https://packages.ubuntu.com/vivid/xresprobe
+
+[A] Ubuntu core team
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+
+[L] GPL
+[V] 0.4.24ubuntu9
+
+[D] 93de07aa7d8e0cc210fc84d67753180428217110ec48b10bc8eb6b89 xresprobe-0.4.24ubuntu9.tar.bz2 http://distro.ibiblio.org/quirky/quirky6/sources/t2/april/
+
+build_xresprobe() {
+    cd ddcprobe
+    #make
+    $CC -Wall -c vesamode.c
+    $CC -Wall -c common.c
+    $CC -Wall -c x86-common.c
+    $CC -Wall -c lrmi.c
+    $CC -Wall -c vbe.c
+    $CC -Wall -c ddcprobe.c
+    $CC -Wall -o ddcprobe vesamode.o common.o x86-common.o lrmi.o vbe.o ddcprobe.o
+    cp -a -f ddcprobe $root/usr/sbin/
+}
+runmake=0
+hook_add postmake 5 build_xresprobe

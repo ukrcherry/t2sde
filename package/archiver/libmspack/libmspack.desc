@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libmspack/libmspack.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -19,16 +19,16 @@
 [U] http://www.kyz.uklinux.net/libmspack/
 
 [A] Stuart Caie <kyzer@4u.net>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/archive
 [F] CROSS
 
 [L] LGPL
-[S] Alpha
-[V] 0.11
+[V] 1.11
 [P] X -----5---9 190.000
 
-[O] hook_add preconf 2 'autoreconf -i -W all'
+[D] ecb1b895b32922ca6984512adda2637e65a0ca1cf5de2ae4da138674 libmspack-v1.11.tar.gz https://github.com/kyz/libmspack/archive/v1.11/
 
-[D] f59e091ca5b27d7561f3087f892dd42fb472f65062f1932f0384684d libmspack-0.11alpha.tar.gz http://www.cabextract.org.uk/libmspack/
+srcdir=*/libmspack
+autogen=1

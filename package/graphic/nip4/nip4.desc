@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/nip4/nip4.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,12 +13,11 @@
 [U] https://github.com/jcupitt/nip4
 
 [A] John Cupitt
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 
 [L] GPL
-[S] Beta
-[V] 9.0.5
+[V] 9.1.2
 
-[D] 5e5a50c1ef613c9d2912d03a63957884a0316bd0f845c3e1a68e9e4a nip4-9.0.5.tar.gz https://github.com/jcupitt/nip4/archive/refs/tags/v9.0.5/
+[D] 9374e3fbad7fd95187a8ae501b7faa679e6301ccee415809c3b19c39 nip4-9.1.2.tar.gz https://github.com/jcupitt/nip4/archive/refs/tags/v9.1.2/

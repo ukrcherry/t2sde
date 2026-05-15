@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xfce4-cpugraph-plugin/xfce4-cpugraph-plugin.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,16 +13,14 @@
 [U] https://www.xfce.org/
 
 [A] Alexander Nordfelth
-[M] Johan <linuxmasterjedi@free.fr>
+[M] Johan Boyé <linuxmasterjedi@free.fr>
 
 [C] extra/desktop/xfce
 [F] CROSS
 
 [L] GPL
-[S] Beta
-[V] 1.2.11
-[P] X -----5---9 600.000
+[V] 1.3.0
 
-[O] . $base/package/xfce4/*/xfce4-conf.in
+[D] 86bcf51463c28c88cd0f3bfc8a1d5c6b2709d1eafa0b9bd56e90d5d9 xfce4-cpugraph-plugin-1.3.0.tar.xz https://archive.xfce.org/src/panel-plugins/xfce4-cpugraph-plugin/1.3/
 
-[D] 6291c85fe86a7bac65e3f9dc60f9e9bdc99047d2031129bb22625363 xfce4-cpugraph-plugin-1.2.11.tar.bz2 https://archive.xfce.org/src/panel-plugins/xfce4-cpugraph-plugin/1.2/
+. $base/package/xfce4/*/xfce4-conf.in

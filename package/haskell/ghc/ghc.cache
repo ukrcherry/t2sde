@@ -1,11 +1,46 @@
+[TIMESTAMP] 1768255551 Mon 12 Jan 2026 05:05:51 PM EST
+[BUILDTIME] 4600 (9)
+[SIZE] 1952.59 MB, 10078 files
 
-[TIMESTAMP] 1614281243 Thu Feb 25 19:27:23 2021
-[BUILDTIME] 0 (5) ERROR
-[SIZE] 0.01 MB, 6 files
-
+[DEP] alex
+[DEP] autoconf
+[DEP] automake
+[DEP] bash
+[DEP] binutils
+[DEP] cabal-install
 [DEP] coreutils
 [DEP] diffutils
+[DEP] findutils
 [DEP] gawk
-[DEP] gcc
+[DEP] gmp
 [DEP] grep
+[DEP] gzip
+[DEP] haskell-base16-bytestring
+[DEP] haskell-cabal
+[DEP] haskell-cabal-syntax
+[DEP] haskell-clock
+[DEP] haskell-cryptohash-sha256
+[DEP] haskell-extra
+[DEP] haskell-filepattern
+[DEP] haskell-hashable
+[DEP] haskell-heaps
+[DEP] haskell-js-dgtable
+[DEP] haskell-js-flot
+[DEP] haskell-js-jquery
+[DEP] haskell-primitive
+[DEP] haskell-random
+[DEP] haskell-shake
+[DEP] haskell-splitmix
+[DEP] haskell-unordered-containers
+[DEP] haskell-utf8-string
+[DEP] libbsd
+[DEP] linux-header
+[DEP] m4
+[DEP] make
+[DEP] ncurses
+[DEP] numactl
+[DEP] perl
+[DEP] python
 [DEP] sed
+[DEP] tar
+[DEP] xz

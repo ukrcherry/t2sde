@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/ts/ts.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Simple Unix batch system
+
+[T] Simple Unix batch system.
+
+[U] https://vicerveza.homeunix.net/~viric/soft/ts/
+
+[A] Ts Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.0.3
+[L] GPL
+
+[D] 50b7b97534a455f915964b2140defd80b721e0c34bddfd0fbd899b40 ts-1.0.3.tar.gz https://vicerveza.homeunix.net/~viric/soft/ts/

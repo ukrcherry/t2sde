@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/antiword/antiword.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -11,20 +11,19 @@
 [T] Antiword converts the binary files from Word 2, 6, 7, 97, 2000
 [T] and 2002 to plain text and to PostScript TM.
 
-[U] http://www.winfield.demon.nl/
+[U] https://web.archive.org/web/20220121050627/http://www.winfield.demon.nl
 
 [A] Adri van Os
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office
 
 [L] GPL
-[S] Stable
 [V] 0.37
 
-[O] var_remove makeinstopt ' ' install
-[O] var_append makeinstopt ' ' global_install
-[O] var_append makeinstopt ' ' GLOBAL_INSTALL_DIR=$bindir
-[O] var_append makeinstopt ' ' GLOBAL_RESOURCES_DIR=$datadir/antiword
+[D] 98ed236d167787de8bdc9c44e4ed63660e850d0b357ae1f2d20b1343 antiword-0.37.tar.gz https://web.archive.org/web/20221207132720/http://www.winfield.demon.nl/linux/
 
-[D] 98ed236d167787de8bdc9c44e4ed63660e850d0b357ae1f2d20b1343 antiword-0.37.tar.gz http://www.winfield.demon.nl/linux/
+var_remove makeinstopt ' ' install
+var_append makeinstopt ' ' global_install
+var_append makeinstopt ' ' GLOBAL_INSTALL_DIR=$bindir
+var_append makeinstopt ' ' GLOBAL_RESOURCES_DIR=$datadir/antiword

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/pcsx2/pcsx2.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,18 +12,26 @@
 [T] states and PS2 system memory. This allows you to play PS2 games on your PC,
 [T] with many additional features and benefits.
 
-[U] https://pcsx2.net/download.html
+[U] https://pcsx2.net/
 
 [A] PCSX2 Team
-[M] Dash
+[M] Daniel Ashkenazi <daniel.ashkenazi@gmail.com>
 
 [C] extra/emulator
 [F] OBJDIR NO-LTO
+[R] + arm64 x86 x86-64
 
 [E] opt jack
 
 [L] GPL
-[S] Beta
-[V] 2.2.0
+[V] 2.6.3
 
-[D] 8b9c34a09757c8082a33a34138450d24f0459151b397c8b2c361d738 pcsx2-2.2.0.tar.gz git+https://github.com/PCSX2/pcsx2 v2.2.0
+[D] 306ac7608f4399794878f5c98d404a9cde95f8f169be0ad83dfe9801 pcsx2-2.6.3.tar.gz git+https://github.com/PCSX2/pcsx2 v2.6.3
+
+var_append cmakeopt ' ' '-DPACKAGE_MODE=ON \
+			 -DCMAKE_INTERPROCEDURAL_OPTIMIZATION=ON \
+			 -DCMAKE_INSTALL_FULL_LIBDIR=$libdir \
+			 -DENABLE_TESTS=OFF'
+
+pkginstalled libbacktrace || var_append cmakeopt ' ' -DUSE_BACKTRACE=OFF
+pkginstalled wayland && var_append cmakeopt ' ' -DWAYLAND_API=ON

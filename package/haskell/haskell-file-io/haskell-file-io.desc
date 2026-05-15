@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/haskell-file-io/haskell-file-io.desc
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Basic file IO operations via OsPath
+
+[T] Basic file IO operations via OsPath.
+
+[U] https://github.com/hasufell/file-io
+
+[A] Julian Ospald
+[M] Riley Beckett <rbeckettvt@gmail.com>
+
+[C] extra/tool
+[F] CROSS
+
+[L] BSD
+[V] 0.2.0
+
+[D] 65c56ed9f57f2e78a9d0d02bf373aa84c997178132f825db2076fb60 haskell-file-io-0.2.0.tar.gz !https://hackage.haskell.org/package/file-io-0.2.0/file-io-0.2.0.tar.gz
+
+. $base/package/*/*/haskell-conf.in
+setuphsgen=1

@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/rabbitmq-c/rabbitmq-c.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] RabbitMQ C client
+
+[T] RabbitMQ C client.
+
+[U] https://github.com/alanxz/rabbitmq-c
+
+[A] Rabbitmq-c Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.15.0
+[L] MIT
+
+[D] e2e72c61430b605b45b4cc86824bcef0e78dc162c5e8d60d5164ed5f rabbitmq-c-0.15.0.tar.gz https://github.com/alanxz/rabbitmq-c/archive/v0.15.0/

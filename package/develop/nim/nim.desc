@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/nim/nim.desc
-[COPY] Copyright (C) 2021 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2021 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,17 +13,15 @@
 [U] https://nim-lang.org
 
 [A] Andreas Rumpf
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [L] MIT
-[S] Stable
-[V] 2.2.4
-[P] X -----5---9 109.300
+[V] 2.2.10
+
+[D] 51b00b7014a1dc5c931528045eb44db7f2732725e70f48470aa46c03 nim-2.2.10.tar.xz https://nim-lang.org/download/
 
 # TODO: make it honor $prefix
-[O] [ $prefix_auto = 1 ] && prefix=opt/nim && set_confopt
-[O] hook_add postmake 5 "./install $root/${prefix%/*}"
-
-[D] 091f2415d8005bf2569b516119b22451aa4c602e35e504f89a3edbc5 nim-2.2.4.tar.xz https://nim-lang.org/download/
+[ $prefix_auto = 1 ] && prefix=opt/nim && set_confopt
+hook_add postmake 5 "./install $root/${prefix%/*}"

@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/datefudge/datefudge.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Tool to fake the system date
+
+[T] This program (and preload library) fakes the system date so that programs
+[T] think the wall clock is different. The faking is not complete; timestamp on
+[T] files are not affected in any way.
+
+[U] https://packages.debian.org/sid/datefudge
+
+[A] Datefudge Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.27
+[L] GPL
+
+[D] b82ab5b7a43dce7d1ddcb92a911609aa2aa121b16cb0e5ce4f2f83ab datefudge_1.27.tar.xz https://deb.debian.org/debian/pool/main/d/datefudge/

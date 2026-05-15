@@ -1,6 +1,6 @@
-[TIMESTAMP] 1737995895 Mon Jan 27 17:38:15 2025
-[BUILDTIME] 4 (9)
-[SIZE] 0.17 MB, 16 files
+[TIMESTAMP] 1759508642 Fri Oct  3 18:24:02 2025
+[BUILDTIME] 35 (9)
+[SIZE] 0.44 MB, 24 files
 
 [DEP] bash
 [DEP] binutils
@@ -10,17 +10,22 @@
 [DEP] diffutils
 [DEP] file
 [DEP] gawk
+[DEP] gdk-pixbuf
+[DEP] glib
 [DEP] grep
 [DEP] gzip
+[DEP] harfbuzz
 [DEP] hyprutils
+[OPT] libheif
 [DEP] libjpeg
 [DEP] libjpeg-turbo
 [OPT] libjxl
-[DEP] libspng
+[DEP] libpng
+[DEP] librsvg
 [DEP] libwebp
 [DEP] linux-header
 [DEP] make
+[DEP] pango
 [DEP] pkgconfig
 [DEP] sed
 [DEP] tar
-[DEP] tbb

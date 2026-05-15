@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/dfbterm/dfbterm.desc
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A terminal emulation running natively on DirectFB
+
+[T] DFBTerm is a terminal emulation for DirectFB.
+
+[U] https://www.directfb.org/
+
+[A] DirectFB Team <dok@directfb.org>
+[M] Michael Tross <michael@tross.org>
+
+[C] extra/multimedia
+
+[L] GPL
+[V] 0.8.15
+
+[D] 2131042317 DFBTerm-0.8.15.tar.gz http://www.directfb.org/downloads/Programs/
+#[D] X DFBTerm-20070130.tar.bz2 cvs://:pserver:anonymous@cvs.directfb.org:/cvs/directfb DFBTerm -D 2007-01-30

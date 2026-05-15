@@ -1,0 +1,28 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/perl-prima-ipa/perl-prima-ipa.desc
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A Perl library of image processing algorithms
+
+[T] IPA stands for Image Processing Algorithms and is a Perl library of image
+[T] processing operators and functions. IPA is based on the Prima toolkit,
+[T] which in turn is a Perl-based graphic library. IPA is designed for
+[T] solving image analysis and object recognition tasks with Perl.
+
+[U] http://www.prima.eu.org/IPA/
+
+[A] Dmitry Karasik <dmitry@karasik.eu.org>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/graphic
+[F] NOPARALLEL
+
+[L] BSD
+[V] 1.09
+[P] X
+
+[D] d92b78c0f47f630cfdec1495dc4164ac65f1dada4db2a32b87807de0 Prima-IPA-1.09.tar.gz https://cpan.metacpan.org/authors/id/K/KA/KARASIK/
+
+plconfopt=

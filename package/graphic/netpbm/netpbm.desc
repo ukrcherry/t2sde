@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/netpbm/netpbm.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -15,14 +15,34 @@
 [U] https://sourceforge.net/projects/netpbm
 
 [A] Bryan Henderson <bryanh@giraffe-data.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] FPIC NO-LTO.gcc
 
 [L] OpenSource
-[S] Stable
-[V] 10.86.46
+[V] 10.86.48
 [P] X -----5---9 131.900
 
-[D] 1c97ddd331cfee64d24e3add0d4a915cb2291959c0b3fd780ded688f netpbm-10.86.46.tgz http://dl.sourceforge.net/sourceforge/netpbm/
+[D] 1ec2970a3e6f6ffe8da5efcf1782f5766f2d60f843ba4baf78c76d66 netpbm-10.86.48.tgz https://prdownloads.sourceforge.net/sourceforge/netpbm/
+
+runconf=0
+
+var_append CC_WRAPPER_APPEND ' ' -std=gnu17
+var_append GCC_WRAPPER_APPEND ' ' -flax-vector-conversions
+
+netpbm_main() {
+	{ echo -e "\ngnu\nregular\nshared\ny\n\n\n"
+	  echo -e "\n\n\n\n\n\n`pkgprefix libdir libx11`/libX11.so\n\nnone\n"; } | ./configure
+}
+hook_add preconf 5 netpbm_main
+
+makeinstopt="package pkgdir=$builddir/netpbm.bin"
+
+netpbm_install() {
+	{ echo -e "$builddir/netpbm.bin"
+	  echo -e "/$root/$prefix\n$root$bindir\n$root$libdir"
+	  echo -e "n"
+	  echo -e "$root$libdir\n$root$datadir\n\n\n\nn\n"; } | ./installnetpbm
+}
+hook_add postmake 5 netpbm_install

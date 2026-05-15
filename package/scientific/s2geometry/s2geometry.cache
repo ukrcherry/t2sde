@@ -1,0 +1,19 @@
+[TIMESTAMP] 1776980049 Thu Apr 23 23:34:09 2026
+[BUILDTIME] 100 (9)
+[SIZE] 4.43 MB, 193 files
+
+[DEP] abseil-cpp
+[DEP] bash
+[DEP] binutils
+[DEP] cmake
+[DEP] coreutils
+[DEP] diffutils
+[DEP] findutils
+[DEP] gawk
+[DEP] grep
+[DEP] gzip
+[DEP] linux-header
+[DEP] make
+[DEP] sed
+[DEP] tar
+[DEP] util-linux

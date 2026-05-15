@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gnome-user-docs/gnome-user-docs.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,16 +11,14 @@
 [U] https://www.gnome.org
 
 [A] The GNOME Project <gnome-devel-list@gnome.org>
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/shell extra/desktop/gnome
 
 [L] LGPL
-[S] Stable
-[V] 48.1
-[P] X -----5---9 177.200
-
-[O] . $base/package/*/*/gnome-conf.in
+[V] 50.0
 
 [CV-URL] https://download.gnome.org/sources/gnome-user-docs/cache.json
-[D] 18fa6ae3c93379c92a5956f36e8d7f73788e9eb28bee71e50f64fb8e gnome-user-docs-48.1.tar.xz https://download.gnome.org/sources/gnome-user-docs/48/
+[D] 071e16600d611b39326d06673d884277f118bb65a06e62ab868e03b0 gnome-user-docs-50.0.tar.xz https://download.gnome.org/sources/gnome-user-docs/50/
+
+. $base/package/*/*/gnome-conf.in

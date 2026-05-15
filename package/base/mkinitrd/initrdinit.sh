@@ -2,22 +2,60 @@
 
 PATH=/sbin:/bin:/usr/bin:/usr/sbin
 
-echo "T2 SDE early userspace (c)2005-2025 Rene Rebe, ExactCODE GmbH; Germany."
+echo "T2 SDE early userspace (c)2005-2026 Rene Rebe, ExactCODE GmbH; Germany."
 
-function mapper2lvm {
+getopt() {
+	_="$2 $1" _=${_##*$2} _=${_%% *}
+	echo "$_"
+	unset _
+}
+
+getdev() {
+	case "$1" in
+	PARTUUID=*) echo "/dev/disk/by-partuuid/${1#PARTUUID=}" ;;
+	UUID=*) echo "/dev/disk/by-uuid/${1#UUID=}" ;;
+	LABEL=*) echo "/dev/disk/by-label/${1#LABEL=}" ;;
+	*) echo "$1" ;;
+	esac
+}
+
+mapper2lvm() {
 	# support both, direct vg/lv or mapper/...
 	x=${1#mapper/}
 	if [ "$x" != "$1" -a "${x#*-}" != "$x" ]; then
-		x="${x//--/	}" x="${x/-//}" x="${x/	/-}"
+		x="${x//--/	}" x="${x/-//}" x="${x//	/-}"
 	fi
 	echo $x
 }
 
-function boot {
+boot() {
 	mount -t none -o move {,/mnt}/dev
 	mount -t none -o move {,/mnt}/proc
 	mount -t none -o move {,/mnt}/sys
 	exec switch_root /mnt "$@"
+}
+
+overlayfs() {
+	if [ ! -e $mnt/$overlay ]; then
+		echo "No $mnt/$overlay to overlay."
+		return 1
+	fi
+
+	mkdir -p /mnt/{mnt,overlay,work}
+	modprobe loop 2>/dev/null
+
+	if ! losetup /dev/loop0 $mnt/$overlay; then
+		echo "Failed to setup /dev/loop0"
+		return 1
+	fi
+
+	mount -t squashfs -o ro /dev/loop0 /mnt/mnt &&
+		mount -t overlay -o lowerdir=/mnt/mnt,upperdir=/mnt/overlay,workdir=/mnt/work \
+			none /mnt &&
+		return 0
+
+	echo "Failed to loop mount $overlay"
+	losetup -d /dev/loop0
 }
 
 mount -t proc proc /proc
@@ -26,10 +64,15 @@ mount -t proc proc /proc
 "mounting /dev, /proc, /sys and starting u/devd."
 mount -t devtmpfs -o mode=755 devtmpfs /dev
 mount -t sysfs sysfs /sys
-mkdir -p /tmp /mnt /run /var/run
+mkdir -p /tmp /run /var/run
 ln -sf /proc/self/fd /dev/fd
 
 udevd &
+
+[ -e /proc/cmdline ] && cmdline="$(< /proc/cmdline)"
+
+modules=$(getopt "$cmdline" rd.modprobe=)
+for m in ${modules//,/ }; do modprobe $m; done
 udevadm trigger --action=add
 udevadm settle
 
@@ -44,13 +87,15 @@ if [ -z "$(ls -A /sys/block | sed '/^loop/d; /^fd/d')" ]; then
 fi
 
 # get the root device, init, early swap
-[ -e /proc/cmdline ] && cmdline="$(< /proc/cmdline)"
-root="root= $cmdline" root=${root##*root=} root=${root%% *}
-init="init= $cmdline" init=${init##*init=} init=${init%% *}
-swap="swap= $cmdline" swap=${swap##*swap=} swap=${swap%% *}
-resume="resume= $cmdline" resume=${resume##*resume=} resume=${resume%% *}
-mountopt="rootflags= $cmdline" mountopt=${mountopt##*rootflags=} mountopt=${mountopt%% *}
+root=$(getdev $(getopt "$cmdline" root=))
+init=$(getdev $(getopt "$cmdline" init=))
+swap=$(getdev $(getopt "$cmdline" swap=))
+[[ "$cmdline" != *noresume* ]] &&
+	resume=$(getdev $(getopt "$cmdline" resume=))
+mountopt=$(getopt "$cmdline" mountopt=)
 mountopt="ro${mountopt:+,$mountopt}"
+[ "$overlay" ] && mnt=/mnt/media || mnt=/mnt
+mkdir -p $mnt
 
 # parse cmdline
 for v in $cmdline; do
@@ -100,37 +145,39 @@ while [[ -n "$root" && ($((i++)) -le 15 || "$cmdline" = *rootwait*) ]]; do
 
   # open luks for lvm2 and resume from disk early
   if [[ "${root}" = *,* ]]; then
-	toor="${root%,*}"
-	[[ "${toor}" = LABEL=* ]] && toor="/dev/disk/by-label/${root#LABEL=}"
-	[[ "${toor}" = UUID=* ]] && toor="/dev/disk/by-uuid/${root#UUID=}"
+	toor=${root%,*}
 	[ -e "$toor" ] || continue
 
 	echo -n "${n}"; n=
-	cryptsetup --disable-locks luksOpen $toor root && root="${root#*,}"
+	cryptsetup --disable-locks luksOpen $toor root && root=$(getdev ${root#*,})
   fi
 
-  [[ "${root}" = UUID=* ]] && root="/dev/disk/by-uuid/${root#UUID=}"
-  [[ "${root}" = LABEL=* ]] && root="/dev/disk/by-label/${root#LABEL=}"
-  [[ "${swap}" = UUID=* ]] && swap="/dev/disk/by-uuid/${swap#UUID=}"
-  [[ "${swap}" = LABEL=* ]] && swap="/dev/disk/by-label/${swap#LABEL=}"
-
+  
   # maybe resume from disk?
-  if [[ "$resume" && "$cmdline" != *noresume* ]]; then
+  if [ "$resume" ]; then
 	if [[ ! -e $resume && "${resume}" = /dev/*/* && -e /sbin/lvm ]]; then
-		lvs $(mapper2lvm ${resume#/dev/}) >/dev/null 2>&1 || continue
-		echo "${n}Activating LVM $resume"; n=
-		lvchange -a ay $(mapper2lvm ${resume#/dev/})
+		if lvs $(mapper2lvm ${resume#/dev/}) >/dev/null 2>&1; then
+			echo "${n}Activating LVM $resume"; n=
+			lvchange -a ay $(mapper2lvm ${resume#/dev/})
+		fi
 	fi
 	
 	# only try to resume if the device does not have a swap signature
-	if [ -e $resume -a -z "$(disktype $resume | sed  -n "/swap,/p")" ]; then
-		resume=`ls -lL $resume |
-		  sed 's/[^ ]* *[^ t]* *[^ ]* *[^ ]* *\([0-9]*\), *\([0-9]*\) .*/\1:\2/'`
+	if [ -e $resume ]; then
+		if [ -z "$(disktype $resume | sed -n "/swap,/p")" ]; then
+			resume=`ls -lL $resume |
+		  	sed 's/[^ ]* *[^ t]* *[^ ]* *[^ ]* *\([0-9]*\), *\([0-9]*\) .*/\1:\2/'`
 
-		echo "${n}Resuming from $resume"; n=
-		echo "$resume" > /sys/power/resume
-		echo "Warning: Resume failed. Please check the kernel log for details."
+			echo "${n}Resuming from $resume"; n=
+			echo "$resume" > /sys/power/resume
+			echo "Warning: Resume failed. Please check the kernel log for details."
+		fi
 		resume=
+	elif [ $i -ge 10 ]; then
+		echo "Warning: Timed out waiting for $resume to resume."
+		resume=
+	else
+		continue
 	fi
   fi
 
@@ -186,7 +233,9 @@ while [[ -n "$root" && ($((i++)) -le 15 || "$cmdline" = *rootwait*) ]]; do
 	fi
 
 	for fs in $filesystems; do
-	  if mount -t $fs -o $mountopt $root /mnt 2> /dev/null; then
+	  if mount -t $fs -o $mountopt $root $mnt 2>/dev/null; then
+		[ "$overlay" ] && overlayfs
+
 		# TODO: search other places if we want 100% backward compat?
 		init=${init:-/sbin/init}
 		if [ -f /mnt$init ]; then

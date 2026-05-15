@@ -1,0 +1,24 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/libmsym/libmsym.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] molecular point group symmetry lib
+
+[T] libmsym is a C library dealing with point group symmetry in molecules.
+
+[U] https://github.com/mcodev31/libmsym
+
+[A] mcodev31
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] MIT
+[V] 0.2.3-paper
+
+[D] 408041c55994f26c8b7cbdd2b94c7bfa9d926afd186e3e3d3c56ea41 libmsym-0.2.3-paper.tar.gz https://github.com/mcodev31/libmsym/archive/v0.2.3-paper/
+
+var_append cmakeopt ' ' -DCMAKE_POLICY_VERSION_MINIMUM=3.5

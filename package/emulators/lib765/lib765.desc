@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/lib765/lib765.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,15 +15,15 @@
 [U] http://www.seasip.demon.co.uk/Unix/LibDsk/#765
 
 [A] John Elliot <jce@seasip.demon.co.uk>
-[M] trb7 <trb7@megamail.pt>
+[M] luisf <trb7@megamail.pt>
 
 [C] extra/emulator
 [F] CROSS
 
 [L] GPL
-[S] Stable
 [V] 0.4.2
-
-[O] var_append GCC_WRAPPER ' ' -fpermissive
+[P] X -----5---9 200.000
 
 [D] c9b1ac9e5aad7ebdd1c221640250123564d3825e92643e27f32e0f7d lib765-0.4.2.tar.gz http://www.seasip.demon.co.uk/Unix/LibDsk/
+
+var_append GCC_WRAPPER ' ' -fpermissive

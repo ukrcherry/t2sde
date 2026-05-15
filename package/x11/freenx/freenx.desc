@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/freenx/freenx.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,13 +13,24 @@
 [U] http://freenx.berlios.de
 
 [A] Fabian Franz <FabianFranz@gmx.de>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network
 [F] CROSS
 
 [L] GPL
-[S] Stable
 [V] 0.7.1
 
-[D] 424a593e8c30209dda258ddfcdf8105cc17b065d20f71dd5301fd2eb freenx-0.7.1.tar.gz http://dl.sourceforge.net/sourceforge/freenx.berlios/
+[D] 424a593e8c30209dda258ddfcdf8105cc17b065d20f71dd5301fd2eb freenx-0.7.1.tar.gz https://download.sourceforge.net/project/freenx.berlios/
+
+freenx_install() {
+	for x in nxnode nxserver nxsetup nxkeygen nxnode-login nxloadconfig
+	do cp -fv $x $root$bindir/$x
+	done
+	mkdir -p $root/etc/nxserver
+	cp -fv node.conf.sample $root/etc/nxserver/
+}
+
+runmake=0
+
+hook_add postmake 5 freenx_install

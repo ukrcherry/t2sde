@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/avahi/avahi.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,21 +15,27 @@
 
 [U] https://avahi.org/
 
-[A] Mezcalero <mzserfuzrng [at] 0pointer [dot] de>
-[M] The T2 Project <t2@t2-project.org>
+[A] Mezcalero <mzserfuzrng@0pointer.de>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network
 [F] CROSS
 
+[E] opt gobject-intropsection
+
 [L] GPL
-[S] Beta
 [V] 0.8
 [P] X -----5---9 142.200
 
-[O] var_append confopt ' ' --with-distro=none
-[O] pkginstalled qt3 || var_append confopt ' ' --disable-qt3
-[O] pkginstalled qt4 || var_append confopt ' ' --disable-qt4
-[O] pkginstalled qt5base || var_append confopt ' ' --disable-qt5
-[O] pkginstalled mono || var_append confopt ' ' --disable-mono
-
 [D] 2db7dfdbd58467fc5987ad4886489c8dcd664e8380ec6124834bf764 avahi-0.8.tar.gz http://avahi.org/download/
+
+var_append confopt ' ' --with-distro=none
+pkginstalled gtk+2 || var_append confopt ' ' --disable-gtk
+pkginstalled gtk+ || var_append confopt ' ' --disable-gtk3
+pkginstalled qt3 || var_append confopt ' ' --disable-qt3
+pkginstalled qt4 || var_append confopt ' ' --disable-qt4
+pkginstalled qt5base || var_append confopt ' ' --disable-qt5
+pkginstalled libevent || var_append confopt ' ' --disable-libevent
+pkginstalled pygobject || var_append confopt ' ' --disable-pygobject
+pkginstalled pydbus || var_append confopt ' ' --disable-python-dbus
+pkginstalled mono || var_append confopt ' ' --disable-mono

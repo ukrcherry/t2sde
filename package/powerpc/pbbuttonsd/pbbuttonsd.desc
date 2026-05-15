@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/pbbuttonsd/pbbuttonsd.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -16,17 +16,16 @@
 [U] https://pbbuttons.sourceforge.net/
 
 [A] Matthias Grimm <joker@cymes.de>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/system
 [R] + powerpc powerpc64 x86 x86-64
 [F] FPIC
 
 [L] GPL
-[S] Beta
-[V] 0.8.1
+[V] 0.8.1a
 [P] X -----5---9 182.000
 
-[O] var_append GCC_WRAPPER_APPEND ' ' -c?:-lz
+[D] 7643815a805cd86bfa5568c289755fb61cca64a56175a1ddd63ea12a pbbuttonsd-0.8.1a.tar.gz https://prdownloads.sourceforge.net/sourceforge/pbbuttons/
 
-[D] da47a9a57c303cf59cdd7a0d1309e362f21b4bbb0049682ca57525b3 pbbuttonsd-0.8.1.tar.gz http://dl.sourceforge.net/sourceforge/pbbuttons/
+var_append GCC_WRAPPER_APPEND ' ' -c?:-lz

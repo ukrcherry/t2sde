@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libcoap/libcoap.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A CoAP implementation
+
+[T] A CoAP (RFC 7252) implementation.
+
+[U] https://libcoap.net/
+
+[A] Libcoap Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 4.3.5b
+[L] BSD
+
+[D] 52b53ce84d2b4757852c9f497b1a815cff26320574d9a619217a781d libcoap-4.3.5b.tar.gz https://github.com/obgm/libcoap/archive/v4.3.5b/

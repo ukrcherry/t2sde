@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/virtualbox/virtualbox.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,14 +14,21 @@
 
 [A] InnoTek
 [A] Sun Microsystems
-[M] Rene Rebe <rene@exactcode.de>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/emulator
-[R] + x86 x86-64
+[R] + arm64 x86-64
+
+[E] add qt6scxml
 
 [L] GPL
-[S] Stable
-[V] 7.1.8
+[V] 7.2.8
 
 [CV-URL] http://www.virtualbox.org/wiki/Downloads
-[D] 06480bf02be04151939d93e5a935b37b6f144ccf5465092f22739f82 VirtualBox-7.1.8.tar.bz2 http://download.virtualbox.org/virtualbox/7.1.8/
+[D] b523876b15a427c6795ab09a30ed3cfe947d07c0e0834e568b8120ee VirtualBox-7.2.8.tar.bz2 http://download.virtualbox.org/virtualbox/7.2.8/
+
+makeopt= makeinstopt= confopt=
+
+var_append confopt ' ' "--disable-hardening --disable-kmods --disable-java"
+
+hook_add inmake 5 "source env.sh; kmk -j$SDECFG_PARALLEL"

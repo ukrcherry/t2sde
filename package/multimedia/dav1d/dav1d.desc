@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/dav1d/dav1d.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,15 +13,14 @@
 [U] https://www.videolan.org/projects/dav1d.html
 
 [A] VideoLAN and FFmpeg communities.
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] CROSS NO-LTO.gcc
 
 [L] BSD
-[S] Stable
-[V] 1.5.1
+[V] 1.5.3
 [P] X -----5---9 124.600
 
 [CV-URL] https://downloads.videolan.org/pub/videolan/dav1d/last/
-[D] dc45c1be86fa022ca29d57d28a1c3e656fcf49753ac5fcc71761873d dav1d-1.5.1.tar.xz https://downloads.videolan.org/pub/videolan/dav1d/1.5.1/
+[D] 00fd42778d709216cae2d08cdd1a772df2feb174327f4a7569261923 dav1d-1.5.3.tar.xz https://downloads.videolan.org/pub/videolan/dav1d/1.5.3/

@@ -1,12 +1,14 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/cosmic-osd/cosmic-osd.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
-[I] cosmic-osd
+[I] OSD for the COSMIC desktop environment
 
-[T] cosmic-osd.
+[T] OSD for the COSMIC desktop environment responsible for handling visual
+[T] notifications and indicators like volume changes, brightness adjustments,
+[T] battery levels, and network status.
 
 [U] https://github.com/pop-os/cosmic-osd/
 
@@ -17,10 +19,9 @@
 [F] CROSS
 
 [L] GPL3
-[S] Alpha
-[V] epoch-1.0.0-alpha.7
-
-[O] . $base/package/cosmic/*/cosmic-conf.in
+[V] 1.0.13
 
 [CV-GROUP] cosmic-desktop
-[D] 6f384442d5426570d51b67f3bf972c449c1fcd4d67c6f73ae59029fe cosmic-osd-epoch-1.0.0-alpha.7.tar.gz https://github.com/pop-os/cosmic-osd/archive/epoch-1.0.0-alpha.7/
+[D] 8f2fcdd15af7c7060cb3d07d8b41b95bb7920317106a19b9561869a7 cosmic-osd-epoch-1.0.13.tar.gz https://github.com/pop-os/cosmic-osd/archive/epoch-1.0.13/
+
+. $base/package/cosmic/*/cosmic-conf.in

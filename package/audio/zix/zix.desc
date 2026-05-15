@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/zix/zix.desc
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Lightweight C99 portability and data structure library
+
+[T] Lightweight C99 portability and data structure library.
+
+[U] https://drobilla.net/
+
+[A] David Robillard <d@drobilla.net>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] ISC
+[V] 0.8.0
+[P] X -----5---9 179.449
+
+[D] 435765a9796fa8c6a3c0a9a0db5f22438cb26e8cc6d203b67929dbd8 zix-0.8.0.tar.xz https://download.drobilla.net/

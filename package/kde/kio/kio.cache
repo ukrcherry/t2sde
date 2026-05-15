@@ -1,6 +1,6 @@
-[TIMESTAMP] 1745783934 Sun Apr 27 22:58:54 2025
-[BUILDTIME] 660 (9)
-[SIZE] 18.42 MB, 553 files
+[TIMESTAMP] 1760262294 Sun Oct 12 11:44:54 2025
+[BUILDTIME] 1550 (9)
+[SIZE] 18.79 MB, 553 files
 
 [OPT] acl
 [OPT] attr
@@ -17,7 +17,6 @@
 [DEP] gawk
 [DEP] gettext
 [DEP] grep
-[DEP] kauth
 [DEP] kbookmarks
 [DEP] kcolorscheme
 [DEP] kcompletion
@@ -44,7 +43,6 @@
 [DEP] sed
 [DEP] solid
 [DEP] tar
-[DEP] tbb
 [DEP] util-linux
 [DEP] vulkan-headers
 [DEP] xz

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libgpiod/libgpiod.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,14 +13,13 @@
 [U] https://libgpiod.readthedocs.io/
 
 [A] Bartosz Golaszewski
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [F] CROSS
 
 [L] LGPL
-[S] Stable
-[V] 2.2.1
+[V] 2.2.4
 [P] X -----5---9 139.000
 
-[D] c338d7798a905824ff053c473b7fbb3612139ee14dbdb7ab2220a70f libgpiod-2.2.1.tar.xz https://mirrors.edge.kernel.org/pub/software/libs/libgpiod/
+[D] 2575aad7c9c70a379f47b483ceb379ef7a027b62cd8b4947f00fbe7f libgpiod-2.2.4.tar.xz https://mirrors.edge.kernel.org/pub/software/libs/libgpiod/

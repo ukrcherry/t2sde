@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/lxqt-menu-data/lxqt-menu-data.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,15 +11,14 @@
 [U] https://github.com/lxqt/lxqt-menu-data
 
 [A] Libqtxdg Authors
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/base
 [F] OBJDIR
 
-[V] 2.2.0
+[V] 2.4.0
 [L] LGPL
-[S] Stable
 [P] X -----5---9 700.000
 
 [CV-GROUP] lxqt
-[D] a4bda7958d60a811e30b2964e7f99fe045371ae1de0d2c6b5b8498ec lxqt-menu-data-2.2.0.tar.xz https://github.com/lxqt/lxqt-menu-data/releases/download/2.2.0/
+[D] 0d131d4592701d5667b22804a6198f14887dfd2738cbe9c315efa4d5 lxqt-menu-data-2.4.0.tar.xz https://github.com/lxqt/lxqt-menu-data/releases/download/2.4.0/

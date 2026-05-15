@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libqb/libqb.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Library providing high performance logging, tracing, ipc, and poll
+
+[T] Library providing high performance logging, tracing, ipc, and poll.
+
+[U] https://clusterlabs.github.io/libqb
+
+[A] Libqb Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[E] opt doxygen
+
+[L] LGPL
+[V] 2.0.9
+
+[D] a87e6acf1fd4f0088e8607568833f2dfe07b73662807b0cb42d58b11 libqb-2.0.9.tar.xz https://github.com/ClusterLabs/libqb/releases/download/v2.0.9/

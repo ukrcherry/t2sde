@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libinklevel/libinklevel.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,7 +12,7 @@
 [U] https://libinklevel.sourceforge.net
 
 [A] Markus Heinz <markus.heinz@uni-dortmund.de>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/printing
 [F] CROSS
@@ -21,8 +21,7 @@
 [R] + x86 x86-64
 
 [L] GPL
-[S] Beta
 [V] 0.9.7
 [P] X -----5---9 280.000
 
-[D] b4041d83c11a428986b0344c39aa4d5a2baa13b4115cbdffc406e318 libinklevel-0.9.7.tar.gz http://dl.sourceforge.net/sourceforge/libinklevel/
+[D] b4041d83c11a428986b0344c39aa4d5a2baa13b4115cbdffc406e318 libinklevel-0.9.7.tar.gz https://prdownloads.sourceforge.net/sourceforge/libinklevel/

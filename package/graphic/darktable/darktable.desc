@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/darktable/darktable.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,7 +15,7 @@
 [U] https://www.darktable.org/
 
 [A] Darktable.org
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia extra/desktop/gnome
 [F] OBJDIR
@@ -25,11 +25,10 @@
 [E] opt libwebp
 
 [L] GPL3
-[S] Stable
-[V] 5.0.0
-[P] X -----5---9 155.500
-
-[O] . $base/package/*/*/gnome-conf.in
+[V] 5.4.1
 
 [CV-URL] https://www.darktable.org/install/
-[D] 6ca9a8f71d51b05f91877c7d1d706caca7bb41bbaea7bc70cb69f992 darktable-5.0.0.tar.xz https://github.com/darktable-org/darktable/releases/download/release-5.0.0/
+[D] 79a4e5de6ede63fa6fbd17df5f0e42fade494e88f66c249d2816227e darktable-5.4.1.tar.xz https://github.com/darktable-org/darktable/releases/download/release-5.4.1/
+
+. $base/package/*/*/gnome-conf.in
+var_append GCC_WRAPPER_APPEND ' ' "-llua -L$root$(pkgprefix libdir glib)"

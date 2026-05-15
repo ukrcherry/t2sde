@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/ethtool/ethtool.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -15,13 +15,12 @@
 [A] David Miller <davem@redhat.com>
 [A] Jakub Jelinek <jj@ultra.linux.cz>
 [A] Jeff Garzik <jgarzik@mandrakesoft.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/system
-[F] CROSS
+[F] CROSS NO-PIE.superh
 
 [L] GPL
-[S] Stable
-[V] 6.14
+[V] 7.0
 
-[D] 14bfaeb4a72f476f584f2d49811c39dedc63de7f38d3f74028bdc61c ethtool-6.14.tar.xz https://www.kernel.org/pub/software/network/ethtool/
+[D] b459baf635e470556b0020673546ffde66e1712cd9f64b2db4f167bc ethtool-7.0.tar.xz https://www.kernel.org/pub/software/network/ethtool/

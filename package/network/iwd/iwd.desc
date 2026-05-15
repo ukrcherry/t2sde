@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/iwd/iwd.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,16 +11,14 @@
 [U] https://iwd.wiki.kernel.org
 
 [A] Marcel Holtmann <marcel@holtmann.org>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 3.8
-[P] X -----5---9 250.000
+[V] 3.12
 
-[O] var_append confopt ' ' --disable-systemd-service
+[D] ce89c9e8bd3d41d97e26820b702847d3a87e6fead6987d2780b83b23 iwd-3.12.tar.xz https://mirrors.edge.kernel.org/pub/linux/network/wireless/
 
-[D] 22cb83df0cc3a63935cac6fcd0ba628a9d86963ae2439adac3053281 iwd-3.8.tar.xz https://mirrors.edge.kernel.org/pub/linux/network/wireless/
+var_append confopt ' ' --disable-systemd-service

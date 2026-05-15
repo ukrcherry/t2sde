@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libzim/libzim.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Reference implementation of the ZIM file format
+
+[T] The Libzim is the reference implementation for the ZIM file format. It's a
+[T] software library to read and write ZIM files on many systems and
+[T] architectures.
+
+[U] https://openzim.org/
+
+[A] Libzim Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/development
+[F] CROSS
+
+[L] GPL
+[V] 9.7.0
+
+[D] c9f2b44de20ac1c37c9eccdc6b38bb0eca08bd585dfd08c9a9072e5b libzim-9.7.0.tar.gz https://github.com/openzim/libzim/archive/9.7.0/

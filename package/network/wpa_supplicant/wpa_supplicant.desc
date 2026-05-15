@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/wpa_supplicant/wpa_supplicant.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,13 +13,25 @@
 [U] https://w1.fi/wpa_supplicant/
 
 [A] Jouni Malinen <jkmaline@cc.hut.fi>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network
 [F] CROSS
 
 [L] GPL
-[S] Stable
 [V] 2.11
 
 [D] 1c50d708287dc76388b1377624559d930433adcfeebc49a02a19517f wpa_supplicant-2.11.tar.gz https://w1.fi/releases/
+
+var_append makeopt ' ' 'BINDIR=$sbindir LIBDIR=$libdir'
+var_append makeinstopt ' ' 'BINDIR=$sbindir LIBDIR=$libdir'
+
+hook_add preconf 3 'cd wpa_supplicant'
+hook_add premake 3 'cp -v ./defconfig .config'
+hook_add premake 5 'echo "CONFIG_LIBNL32=y" >> .config'
+pkginstalled dbus || hook_add premake 5 'sed -i "s/CONFIG_CTRL_IFACE_DBUS_NEW=y/#&/" .config'
+pkginstalled dbus && hook_add postmake 5 'cp -fv dbus/*.service $root/$prefix/share/dbus-1/system-services/'
+pkginstalled dbus && hook_add postmake 5 'cp -fv dbus/*.conf $root/$prefix/share/dbus-1/system.d/wpa_supplicant.conf'
+pkginstalled systemd && hook_add postmake 5 'cp -fv systemd/*.service $root/$prefix/lib/systemd/system/'
+
+hook_add postmake 3 'cp -fv examples/wpa-psk-tkip.conf $root$sysconfdir/wpa_supplicant.conf'

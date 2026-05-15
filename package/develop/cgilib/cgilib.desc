@@ -1,0 +1,27 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/cgilib/cgilib.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A CGI Library
+
+[T] This is quite a simple library that provides an easy interface to the
+[T] common gateway interface, known as CGI.
+
+[U] https://www.infodrom.org/projects/cgilib/
+
+[A] Martin Schulze <joey@infodrom.ffis.de>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[L] GPL
+[V] 0.7
+
+[D] 24f7be449dc93f507413db38ca9a7dc1264643a10778fb03fc6f1c19 cgilib-0.7.tar.gz https://www.infodrom.org/projects/cgilib/download/
+
+makeinstopt=
+hook_add postmake 3 "cp libcgi.a $root$libdir/; cp cgi.h $root$includedir/"
+hook_add postmake 5 "sde_substitute $confdir/cgilib.pc > $root$libdir/pkgconfig/cgilib.pc"

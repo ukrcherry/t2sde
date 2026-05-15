@@ -1,6 +1,6 @@
-[TIMESTAMP] 1737553128 Wed Jan 22 14:38:48 2025
-[BUILDTIME] 1 (9)
-[SIZE] 0.23 MB, 42 files
+[TIMESTAMP] 1770493356 Sat Feb  7 20:42:36 2026
+[BUILDTIME] 4 (9)
+[SIZE] 0.22 MB, 42 files
 
 [DEP] bash
 [DEP] binutils
@@ -12,6 +12,6 @@
 [DEP] grep
 [DEP] gzip
 [DEP] make
-[DEP] pkgconfig
 [DEP] sed
 [DEP] tar
+[DEP] util-linux

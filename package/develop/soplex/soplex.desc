@@ -1,0 +1,25 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/soplex/soplex.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Sequential object-oriented simPlex
+
+[T] SoPlex is an optimization package for solving linear programming problems
+[T] (LPs) based on an advanced implementation of the primal and dual revised
+[T] simplex algorithm.
+
+[U] https://soplex.zib.de/
+
+[A] SCIP Project
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/development
+[F] CROSS OBJDIR
+
+[L] APL
+[V] 8.0.2
+[P] X -----5---9 152.000
+
+[D] 2dc88308bc5818ce330c19ff854939894bb43833905b5ac8b19f8f42 soplex-8.0.2.tgz https://soplex.zib.de/download/release/

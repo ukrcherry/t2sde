@@ -1,0 +1,48 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/dfb-extra/libmpeg3-mpeg3_open.patch
+# Copyright (C) 2006 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0 or patched project license
+# --- T2-COPYRIGHT-END ---
+
+libmpeg3 API change since version 1.7
+
+--- DirectFB-extra-0.9.25/interfaces/IDirectFBVideoProvider/idirectfbvideoprovider_libmpeg3.c.orig	2006-02-26 22:38:13.000000000 +0100
++++ DirectFB-extra-0.9.25/interfaces/IDirectFBVideoProvider/idirectfbvideoprovider_libmpeg3.c	2006-09-14 14:03:25.000000000 +0200
+@@ -1051,6 +1051,7 @@
+ {
+      mpeg3_t *q;
+      char    *filename;
++     int     mpeg3_error;
+      
+      if (!ctx->filename)
+           return DFB_UNSUPPORTED;
+@@ -1062,8 +1063,9 @@
+           return DFB_UNSUPPORTED;
+      }
+ 
+-     q = mpeg3_open( filename );
+-     if (!q) {
++     q = mpeg3_open( filename, &mpeg3_error );
++     if (!q || mpeg3_error) {
++          D_ERROR( "Libmpeg3 Provider: Error opening the video file (%d)!\n", mpeg3_error );
+           D_FREE( filename );
+           return DFB_UNSUPPORTED;
+      }
+@@ -1084,7 +1086,7 @@
+ static DFBResult
+ Construct( IDirectFBVideoProvider *thiz, IDirectFBDataBuffer *buffer )
+ {
+-     int i;
++     int i, mpeg3_error;
+      IDirectFBDataBuffer_data *buffer_data;
+ 
+      DIRECT_ALLOCATE_INTERFACE_DATA(thiz, IDirectFBVideoProvider_Libmpeg3)
+@@ -1103,7 +1105,7 @@
+ 
+ 
+      /* open mpeg3 file */
+-     data->file          = mpeg3_open( data->filename );
++     data->file          = mpeg3_open( data->filename, &mpeg3_error );
+ 
+      /* fetch information about video */
+      data->video.width   = mpeg3_video_width( data->file, 0 );

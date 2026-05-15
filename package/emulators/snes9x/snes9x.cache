@@ -1,10 +1,11 @@
-[TIMESTAMP] 1738075759 Tue Jan 28 15:49:19 2025
-[BUILDTIME] 120 (9)
-[SIZE] 13.13 MB, 36 files
+[TIMESTAMP] 1775754648 Thu Apr  9 19:10:48 2026
+[BUILDTIME] 100 (9)
+[SIZE] 12.98 MB, 28 files
 
 [DEP] alsa-lib
 [OPT] at-spi2-core
 [OPT] atkmm1
+[DEP] automake
 [DEP] bash
 [DEP] binutils
 [OPT] cairo
@@ -12,6 +13,7 @@
 [DEP] cmake
 [DEP] coreutils
 [DEP] diffutils
+[DEP] findutils
 [DEP] fontconfig
 [DEP] freetype
 [DEP] gawk
@@ -42,7 +44,7 @@
 [DEP] python
 [DEP] sed
 [DEP] tar
-[DEP] tbb
+[DEP] util-linux
 [OPT] wayland
 [DEP] xorgproto
 [DEP] zlib

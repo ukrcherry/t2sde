@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/mapnik/mapnik.desc
-[COPY] Copyright (C) 2009 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2009 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -19,7 +19,6 @@
 [E] opt jasper
 
 [L] LGPL
-[S] Stable
-[V] 0.7.1
+[V] 4.2.2
 
-[D] 33e48c07a8618e883995df609eb7d8c4b307377b3d3cd7bc06f4e40b mapnik-0.7.1.tar.bz2 http://download.berlios.de/mapnik/
+[D] 87f78e0b44204ee8e23e86139811df32c44478c2f5ecbf59a253f8a8 mapnik-v4.2.2.tar.bz2 https://github.com/mapnik/mapnik/releases/download/v4.2.2/

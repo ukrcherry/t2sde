@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/babl/babl.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -16,7 +16,7 @@
 
 [A] Øyvind Kolås <pippin@gimp.org>
 [A] Babl contributors
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/graphic
 [F] CROSS
@@ -26,10 +26,10 @@
 [E] opt vala
 
 [L] LGPL
-[S] Alpha
-[V] 0.1.112
+[V] 0.1.126
 [P] X -----5---9 155.000
 
-[O] var_append mesonopt ' ' -Dwith-docs=false
+[D] c2187f74d5a4a02623a7e0aacc4a6db0803747aaa676da138954a1e3 babl-0.1.126.tar.xz https://download.gimp.org/pub/babl/0.1/
 
-[D] ab951f57f0ea0b887e19d4ff88ce8b37a1db6591c529968af5cb8944 babl-0.1.112.tar.xz https://download.gimp.org/pub/babl/0.1/
+var_append mesonopt ' ' -Dwith-docs=false
+var_remove GCC_WRAPPER_APPEND ' ' -c?:-s

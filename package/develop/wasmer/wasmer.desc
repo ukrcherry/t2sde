@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/wasmer/wasmer.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,17 +12,18 @@
 [U] https://wasmer.io
 
 [A] A Bytecode Alliance project
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/development
-[F] CROSS
+[F] CROSS NO-LTO
 
 [L] APL
-[S] Beta
-[V] 6.0.1
+[V] 7.1.0
 
-[O] var_append makeopt ' ' build-wasmer
-[O] makeinstopt=
-[O] hook_add postmake 5 "install target/*/wasmer $root$bindir/"
+[D] c9b505ae9cd426f7c64fec64b0bf91cb8c5d71228df6156fa74edad8 wasmer-7.1.0.tar.gz https://github.com/wasmerio/wasmer/archive/v7.1.0/
 
-[D] bfa937682faf331efac064d3f80ff47a07f98e981f3db54eb5d89ebd wasmer-6.0.1.tar.gz https://github.com/wasmerio/wasmer/archive/v6.0.1/
+var_append makeopt ' ' build-wasmer
+makeinstopt= runcargo=0
+atstage cross && var_append makeopt ' ' CARGO_TARGET=${arch_target}
+atstage cross && hook_add postmake 5 "install target/${arch_target}/*/wasmer $root$bindir"
+atstage native && hook_add postmake 5 "install target/*/wasmer $root$bindir"

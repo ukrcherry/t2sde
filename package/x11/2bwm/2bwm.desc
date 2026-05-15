@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/2bwm/2bwm.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Fast floating window manager
+
+[T] Fast floating window manager.
+
+[U] https://github.com/venam/2bwm
+
+[A] 2bwm Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.3
+[L] ISC
+
+[D] f50ec2911ad1c74990eb3489d2e810ea25b001038c187314dfeb5a97 2bwm-0.3.tar.gz https://github.com/venam/2bwm/archive/v0.3/
+
+var_append GCC_WRAPPER_INSERT ' ' "-I$root$(pkgprefix includedir libx11)"
+var_append GCC_WRAPPER_INSERT ' ' "-L$root$(pkgprefix libdir libx11)"

@@ -1,9 +1,8 @@
+[TIMESTAMP] 1777206236 Sun Apr 26 14:23:56 2026
+[BUILDTIME] 10 (9)
+[SIZE] 0.21 MB, 8 files
 
-[TIMESTAMP] 1690842169 Tue Aug  1 00:22:49 2023
-[BUILDTIME] 2 (9)
-[SIZE] 0.19 MB, 7 files
-
-[DEP] 00-dirtree
+[DEP] automake
 [DEP] bash
 [DEP] binutils
 [DEP] coreutils
@@ -12,11 +11,13 @@
 [DEP] gawk
 [DEP] grep
 [DEP] libpciaccess
-[DEP] libxau
 [DEP] linux-header
 [DEP] make
 [DEP] pixman
+[DEP] pkgconfig
 [DEP] sed
 [DEP] tar
+[DEP] util-linux
 [DEP] xorg-server
 [DEP] xorgproto
+[DEP] xz

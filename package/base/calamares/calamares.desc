@@ -1,0 +1,27 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/calamares/calamares.desc
+# Copyright (C) 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Distribution-independent installer framework
+
+[T] Calamares is a distribution-independent system installer, with an advanced
+[T] partitioning feature for both manual and automated partitioning operations.
+
+[U] https://calamares.io/
+
+[A] calamares
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[E] add polkit-qt-1
+
+[L] OpenSource
+[V] 3.4.2
+
+[D] 6894bf230fd15a8c99abc46afb3ba269d3f8a6a1827c1f313a242816 calamares-3.4.2.tar.gz !https://codeberg.org/Calamares/calamares/archive/v3.4.2.tar.gz
+
+var_append GCC_WRAPPER_APPEND ' ' -I$root$(pkgprefix includedir kpmcore)

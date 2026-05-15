@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/ivman/ivman.desc
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A generic handler for HAL events
+
+[T] A generic handler for HAL events. Originally for automounting, it can
+[T] now be used to run arbitrary commands when events or conditions occur or
+[T] properties are modified on your hardware (e.g., run a command when you
+[T] close your laptop's lid, run a command when a particular device is
+[T] attached or a particular CD is inserted, etc).
+
+[U] https://ivman.sourceforge.net/
+
+[A] Rohan <ro_han@users.sourceforge.net>
+[M] Koen Vervloesem <koen@vervloesem.eu>
+
+[C] extra/base
+
+[L] GPL
+[V] 0.6.14
+
+[D] 0be355d580c2ec50c03bf7cc110f5835b098ceb6c7ced04218991e63 ivman-0.6.14.tar.bz2 https://prdownloads.sourceforge.net/sourceforge/ivman/

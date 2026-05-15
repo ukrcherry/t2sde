@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/hyprpicker/hyprpicker.desc
-[COPY] Copyright (C) 2023 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2023 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,13 +11,12 @@
 [U] https://hyprland.org/
 
 [A] vaxerski
-[M] The T2 Project <t2@t2sde.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/x11
 [F] CROSS OBJDIR
 
 [L] BSD
-[S] Beta
-[V] 0.4.5
+[V] 0.4.7
 
-[D] 7ce5f70ea240c03b572a71d0737319e5158d87d37b14df00f77f5f81 hyprpicker-v0.4.5.tar.gz https://github.com/hyprwm/hyprpicker/archive/refs/tags/v0.4.5/
+[D] ea591c29b2344c9b586c7f5d4648c01c799943daa59b1b36beead30f hyprpicker-v0.4.7.tar.gz https://github.com/hyprwm/hyprpicker/archive/refs/tags/v0.4.7/

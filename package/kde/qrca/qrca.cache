@@ -1,0 +1,40 @@
+[TIMESTAMP] 1770548355 Sun Feb  8 11:59:15 2026
+[BUILDTIME] 30 (9)
+[SIZE] 0.37 MB, 51 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] cmake
+[DEP] coreutils
+[DEP] diffutils
+[DEP] extra-cmake-modules
+[DEP] freetype
+[DEP] gawk
+[DEP] gettext
+[DEP] glib
+[DEP] grep
+[DEP] kcontacts
+[DEP] kcoreaddons
+[DEP] kcrash
+[DEP] kdbusaddons
+[DEP] ki18n
+[DEP] kio
+[DEP] knotifications
+[DEP] kservice
+[DEP] linux-header
+[DEP] make
+[DEP] networkmanager
+[DEP] networkmanager-qt
+[DEP] pkgconfig
+[DEP] prison
+[DEP] procps
+[DEP] python
+[DEP] qt6base
+[DEP] qt6declarative
+[DEP] qt6multimedia
+[DEP] qt6svg
+[DEP] sed
+[DEP] tar
+[DEP] util-linux
+[DEP] vulkan-headers
+[DEP] xz

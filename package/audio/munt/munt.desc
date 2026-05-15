@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/munt/munt.desc
-[COPY] Copyright (C) 2017 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2017 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,13 +13,13 @@
 [U] https://www.github.com/munt/
 
 [A] Dean "Canadacow" Beeler
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] NO-LTO.gcc
 
 [L] GPL
-[S] Stable
-[V] 2.7.0
+[V] 2.7.3
 
-[D] 18ff2e081b51e4b437166a314571369192db7dbe5773488f18d672e3 munt-2.7.0.tar.gz http://dl.sourceforge.net/munt/
+[CV-TR] s/\./_/
+[D] 412a0d9062d960659b99cf9ebe6d976e97c5d3129d04375ed8f9c2fb munt-2_7_3.tar.gz https://github.com/munt/munt/archive/libmt32emu_2_7_3/

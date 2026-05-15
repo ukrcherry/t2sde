@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/dua-cli/dua-cli.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] View disk space usage and delete unwanted data, fast
+
+[T] dua (Disk Usage Analyzer) is a tool to conveniently learn about the usage
+[T] of disk space of a given directory. It's parallel by default and will max
+[T] out your SSD, providing relevant information as fast as possible.
+[T] Optionally delete superfluous data, and do so more quickly than rm.
+
+[U] https://github.com/Byron/dua-cli
+
+[A] Sebastian Thiel
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+
+[L] MIT
+[V] 2.34.0
+
+[D] 8b28004ecf34a87b2127e80e1f71c7502b7182dcd0fdf5256b4415db dua-cli-2.34.0.tar.gz https://github.com/Byron/dua-cli/archive/refs/tags/v2.34.0/

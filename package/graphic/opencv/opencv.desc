@@ -1,18 +1,18 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/opencv/opencv.desc
-[COPY] Copyright (C) 2014 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2014 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
 [I] The world's biggest computer vision library
 
-[T] The world's largest open source vision library, containing over 2500 
+[T] The world's largest open source vision library, containing over 2500
 [T] algorithms,
 
 [U] https://opencv.org
 
 [A] Open Source Vision Foundation
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] CROSS OBJDIR
@@ -25,8 +25,11 @@
 [E] opt vtk
 
 [L] GPL
-[S] Stable
-[V] 4.11.0
-[P] X -----5---9 128.500
+[V] 4.13.0
+[P] X -----5---9 150.010
 
-[D] 84e2d4a2ce940228b25bb1d8498d48b23631155056e8dad9940dea23 opencv-4.11.0.tar.gz https://github.com/opencv/opencv/archive/4.11.0/
+[D] 5ab8119006191ede081e99cfae53e3b56607875229c4308dad53528d opencv-4.13.0.tar.gz https://github.com/opencv/opencv/archive/4.13.0/
+
+var_append cmakeopt ' ' -DENABLE_CCACHE=OFF
+atstage cross && var_append cmakeopt ' ' -DWITH_OPENJPEG=OFF
+[ $arch = arm64 ] && var_remove_regex GCC_WRAPPER_REMOVE ' ' -march.*

@@ -1,0 +1,34 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/pybind11/pybind11.desc
+[COPY] Copyright (C) 2023 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Seamless operability between C++11 and Python
+
+[T] Pybind11 is a lightweight header-only library that exposes C++ types in
+[T] Python and vice versa, mainly to create Python bindings of existing C++
+[T] code. Its goals and syntax are similar to the excellent Boost.Python
+[T] library by David Abrahams: to minimize boilerplate code in
+[T] traditional extension modules by inferring type information
+[T] using compile-time introspection.
+
+[U] https://pybind11.readthedocs.io/en/stable/
+
+[A] Wenzel Jakob <wenzel@inf.ethz.ch>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/development
+[F] CROSS
+
+[E] opt boost
+[E] opt eigen
+
+[L] MIT
+[V] 2.13.6
+[P] X -----5---9 126.450
+
+[D] 734e6acf2dc5707dfca15273fcac662ab3df180d880231ea8d142e90 pybind-2.13.6.tar.gz https://github.com/pybind/pybind11/archive/v2.13.6/
+
+rungpepinstall=0
+hook_add postdoc 3 "cmake --install ."

@@ -1,0 +1,27 @@
+[TIMESTAMP] 1768843285 Mon Jan 19 18:21:25 2026
+[BUILDTIME] 165 (9)
+[SIZE] 28.22 MB, 50 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] coreutils
+[DEP] curl
+[DEP] diffutils
+[OPT] doxygen
+[DEP] file
+[DEP] findutils
+[DEP] gawk
+[DEP] gettext
+[DEP] gmp
+[DEP] grep
+[DEP] gzip
+[DEP] icu4c
+[DEP] libxml
+[DEP] linux-header
+[DEP] make
+[DEP] mpfr
+[DEP] pkgconfig
+[DEP] readline
+[DEP] sed
+[DEP] tar
+[DEP] util-linux

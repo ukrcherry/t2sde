@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/raspberry-pi-firmware/raspberry-pi-firmware.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,14 +12,24 @@
 
 [A] Raspberry Pi (Trading) Ltd
 [A] Broadcom Corporation
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/firmware
 [F] CROSS BINARY
 [K] + linux
 
 [L] Free-to-use
-[S] Stable
-[V] 1.20250430
+[V] 1.20260513
 
-[D] 676fb229e4136ec9c106970ec4be81bef2ad518b066121cc0fc49920 raspberry-pi-firmware-1.20250430.tar.gz https://github.com/raspberrypi/firmware/archive/refs/tags/1.20250430/
+[D] 8a91afa4468831d7c947b03871aa1b8d2dd8aa67023b3c805b530619 raspberry-pi-firmware-1.20260513.tar.gz https://github.com/raspberrypi/firmware/archive/refs/tags/1.20260513/
+
+autoextract=0
+runmake=0
+
+rp_install() {
+	tar xzf `match_source_file -p 'raspberry'`
+	mkdir -p $root/boot/firmware/
+	cp -vf firmware*/boot/{*.dat,start*.elf,LICENCE.*,bootcode.bin} $root/boot/firmware/
+	sed -i -e "s/BOOT_UART=0/BOOT_UART=1/" $root/boot/firmware/bootcode.bin
+}
+hook_add postmake 5 rp_install

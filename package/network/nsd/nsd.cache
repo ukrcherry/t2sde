@@ -1,0 +1,21 @@
+[TIMESTAMP] 1756916020 Wed Sep  3 18:13:40 2025
+[BUILDTIME] 20 (9)
+[SIZE] 3.24 MB, 19 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] coreutils
+[DEP] diffutils
+[DEP] findutils
+[DEP] fstrm
+[DEP] gawk
+[DEP] grep
+[DEP] gzip
+[DEP] libevent
+[DEP] linux-header
+[DEP] make
+[DEP] openssl
+[DEP] protobuf
+[DEP] protobuf-c
+[DEP] sed
+[DEP] tar

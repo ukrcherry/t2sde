@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/plasma-thunderbolt/plasma-thunderbolt.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,16 +11,15 @@
 [U] https://www.kde.org
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 6.3.5
-[P] X -----5---9 162.800
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 6.6.5
 
 [CV-GROUP] kde-plasma
-[D] 3cf6fedbf5f4651267c8363b9b06b78b3081322b90a751abec4fc0ff plasma-thunderbolt-6.3.5.tar.xz https://download.kde.org/stable/plasma/6.3.5/
+[D] f97e0a18f00f5bf5eee037fd73003bd9456bbe774d2b64f5dfd447a1 plasma-thunderbolt-6.6.5.tar.xz https://download.kde.org/stable/plasma/6.6.5/
+
+. $base/package/*/*/kde-conf.in

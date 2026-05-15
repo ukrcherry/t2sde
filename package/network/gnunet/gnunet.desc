@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gnunet/gnunet.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -21,12 +21,12 @@
 [C] extra/network
 [F] CROSS
 
+[E] opt jose
+[E] opt libopus
 [E] opt postgresql
 [E] opt pulseaudio
-[E] opt libopus
 
 [L] GPL
-[S] Beta
-[V] 0.24.1
+[V] 0.27.0
 
-[D] 89d39dfc2dcba3e8af307ee4350f6cd75ec41cf8eb2801ec8fc93206 gnunet-0.24.1.tar.gz http://ftpmirror.gnu.org/gnunet/
+[D] da059119512d4176aa862cbd0884ee9c8a107e20880fc743ed2ac551 gnunet-0.27.0.tar.gz http://ftpmirror.gnu.org/gnunet/

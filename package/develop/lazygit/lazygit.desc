@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/lazygit/lazygit.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Simple terminal UI for git commands
+
+[T] Lazygit is a lightweight, terminal-base git user interface designed to
+[T] simplify repository management. It provides an intuitive and visually
+[T] organized way to handle git operations, such as commits, branches and
+[T] merges.
+
+[U] https://github.com/jesseduffield/lazygit
+
+[A] Lazygit Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 0.61.1
+[L] MIT
+
+[D] c49bdce4c87e59cd07073b8301dca5a415245d2e4ee8b6d1105afe1b lazygit-0.61.1.tar.gz https://github.com/jesseduffield/lazygit/archive/v0.61.1/
+
+hook_add postmake 5 'install -m755 lazygit $root$bindir/lazygit'

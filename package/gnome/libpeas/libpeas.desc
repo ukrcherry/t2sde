@@ -1,26 +1,30 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libpeas/libpeas.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
-[I] Gnome libpeas package
+[I] A gobject-based plugins engine
 
-[T] Core Gnome libpeas package.
+[T] Libpeas is a gobject-based plugins engine, and is targetted at giving
+[T] every application the chance to assume its own extensibility.
 
 [U] https://www.gnome.org
 
 [A] The GNOME Project <gnome-devel-list@gnome.org>
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/shell extra/desktop/gnome
 
 [L] LGPL
-[S] Stable
-[V] 2.0.7
+[V] 2.2.1
 [P] X -----5---9 179.200
 
-[O] . $base/package/*/*/gnome-conf.in
-
 [CV-URL] https://download.gnome.org/sources/libpeas/cache.json
-[D] 387b3b2b1f6344561f3ba9bad109cca34264492826112abc9f29863e libpeas-2.0.7.tar.xz https://download.gnome.org/sources/libpeas/2.0/
+[D] d8eb6109ae43869f8113d5ffd867ab65c7604d4f1ac40c8e7f679b13 libpeas-2.2.1.tar.xz https://download.gnome.org/sources/libpeas/2.2/
+
+. $base/package/*/*/gnome-conf.in
+var_append mesonopt ' ' -Dlua51=false
+jsver=$(pkgprefix ver mozjs)
+var_append GCC_WRAPPER_APPEND ' ' -DXP_UNIX=1
+var_append GCC_WRAPPER_APPEND ' ' -I$root/$(pkgprefix includedir mozjs)/mozjs-${jsver%%.*}/js

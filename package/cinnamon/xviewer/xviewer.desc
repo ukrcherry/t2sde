@@ -1,0 +1,26 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/xviewer/xviewer.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] A generic Image viewer
+
+[T] Xviewer is a simple image viewer which uses the gdk-pixbuf library. It can
+[T] deal with large images, and zoom and scroll with constant memory usage. Its
+[T] goals are simplicity and standards compliance.
+
+[U] https://github.com/linuxmint/xviewer
+
+[A] xviewer Developers
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/graphic
+[F] CROSS
+
+[L] GPL
+[V] 3.4.16
+
+[D] 7a8b2e77ede631ef3e11c85beaddc33cbbef41cfdd0568b78e422268 xviewer-3.4.16.tar.gz https://github.com/linuxmint/xviewer/archive/3.4.16/
+
+var_append mesonopt ' ' -Ddocs=false

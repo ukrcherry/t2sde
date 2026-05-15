@@ -1,0 +1,19 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/webkit/icu.patch
+# Copyright (C) 2010 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0 or patched project license
+# --- T2-COPYRIGHT-END ---
+
+Index: WebCore/platform/text/TextBreakIterator.
+===================================================================
+--- ./WebCore/platform/text/TextBreakIterator.h.orig 2009-12-21 01:32:31.000000000 -0500
++++ ./WebCore/platform/text/TextBreakIterator.h 2009-12-21 01:32:22.000000000 -0500
+@@ -26,7 +26,7 @@
+ 
+ namespace WebCore {
+ 
+-    class TextBreakIterator;
++    typedef struct UBreakIterator TextBreakIterator;
+ 
+     // Note: The returned iterator is good only until you get another iterator.
+

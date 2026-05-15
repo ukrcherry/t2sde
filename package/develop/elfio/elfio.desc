@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/elfio/elfio.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] ELF reader and producer implemented as a header only C++ library
+
+[T] ELFIO is a lightweight, header-only C++ library designed for reading and
+[T] creating ELF binary files.
+
+[U] https://github.com/serge1/ELFIO
+
+[A] Serge Lamikhov-Center
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 3.12
+[L] MIT
+
+[D] 1a53788427dc33e00eb8b522da8850318034996953e4e499f7b66330 elfio-3.12.tar.gz https://github.com/serge1/ELFIO/releases/download/Release_3.12/
+
+var_append cmakeopt ' ' -DELFIO_BUILD_EXAMPLES=OFF

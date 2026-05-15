@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/perl-libintl/perl-libintl.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -16,8 +16,7 @@
 [C] extra/development
 
 [L] LGPL
-[S] Stable
-[V] 1.35
+[V] 1.37
 [P] X -----5---9 104.000
 
-[D] b0860b3fa4881bc69a4f1bdde2cb48361149b117f5df8344594f3572 libintl-perl-1.35.tar.gz http://www.cpan.org/authors/id/G/GU/GUIDO/
+[D] 4f52ff84b1bb6a3d0fc83a17e4be12b70ac7a399ad843e23535f3de0 libintl-perl-1.37.tar.gz http://www.cpan.org/authors/id/G/GU/GUIDO/

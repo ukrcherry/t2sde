@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/qqc2-breeze-style/qqc2-breeze-style.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,17 +11,16 @@
 [U] https://www.kde.org
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
-[F] OBJDIR
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 6.3.5
+[V] 6.6.5
 [P] X -----5---9 200.200
 
-[O] . $base/package/*/*/kde-conf.in
-
 [CV-GROUP] kde-plasma
-[D] ce221613ba7be64631cc72b927288d0f7ba33feea54d50d5b0a87404 qqc2-breeze-style-6.3.5.tar.xz https://download.kde.org/stable/plasma/6.3.5/
+[D] 1762dfa7842cffac746c6cb50ad2c7e85eb4e55ad5e4b9995ec26c5b qqc2-breeze-style-6.6.5.tar.xz https://download.kde.org/stable/plasma/6.6.5/
+
+. $base/package/*/*/kde-conf.in

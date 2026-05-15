@@ -1,61 +1,26 @@
+[TIMESTAMP] 1754503496 Wed Aug  6 20:04:56 2025
+[BUILDTIME] 35 (9) ERROR
+[SIZE] 0.00 MB, 6 files
 
-[TIMESTAMP] 1280319998 Wed Jul 28 12:26:38 2010
-[BUILDTIME] 225 (5)
-[SIZE] 7.78 MB, 243 files
-
-[DEP] 00-dirtree
-[DEP] at-spi2-core
+[DEP] bash
 [DEP] binutils
-[DEP] cairo
+[DEP] cmake
 [DEP] coreutils
 [DEP] diffutils
-[DEP] expat
-[DEP] file
-[DEP] findutils
-[DEP] flex
-[DEP] fontconfig
-[DEP] freeimage
-[DEP] freetype
+[DEP] doxygen
 [DEP] gawk
-[DEP] glib
-[DEP] glitz
 [DEP] grep
-[DEP] gtk+
-[DEP] xorgproto
-[DEP] libice
-[DEP] libpng
-[DEP] libpthread-stubs
-[DEP] libsm
-[DEP] libx11
-[DEP] libxau
-[DEP] libxaw
-[DEP] libxcb
-[DEP] libxcomposite
-[DEP] libxcursor
-[DEP] libxdamage
-[DEP] libxext
-[DEP] libxfixes
-[DEP] libxi
-[DEP] libxinerama
-[DEP] libxmu
-[DEP] libxpm
-[DEP] libxrandr
-[DEP] libxrender
-[DEP] libxt
-[DEP] libxxf86vm
+[DEP] gzip
 [DEP] linux-header
-[DEP] m4
 [DEP] make
-[DEP] mesa
-[DEP] pango
-[DEP] pixman
+[DEP] openssl
 [DEP] pkgconfig
-[DEP] xorgproto
+[DEP] procps
+[DEP] python
+[DEP] python-gpep517
 [DEP] sed
-[DEP] sysfiles
+[DEP] setuptools
+[DEP] swig
 [DEP] tar
-[DEP] util-linux
-[DEP] xcb-util
-[DEP] xorgproto
+[DEP] vulkan-headers
 [DEP] zlib
-[DEP] zziplib

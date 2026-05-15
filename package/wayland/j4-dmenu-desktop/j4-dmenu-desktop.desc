@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/j4-dmenu-desktop/j4-dmenu-desktop.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A fast desktop menu
+
+[T] A fast desktop menu.
+
+[U] https://github.com/enkore/j4-dmenu-desktop
+
+[A] J4-dmenu-desktop Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 3.2
+[L] GPL3
+
+[D] 9217e6eef9590462477436adc34aa04070b66be09c9973b10f8c09bb j4-dmenu-desktop-3.2.tar.gz https://github.com/enkore/j4-dmenu-desktop/archive/r3.2/

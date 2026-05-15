@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/dvbstream/dvbstream.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -10,19 +10,18 @@
 [T] Dvbstream can broadcast either a (subset of a) DVB transport stream
 [T] or a DVB program stream over a LAN using the rtp protocol.
 
-[U] http://freshmeat.net/projects/dvbtools/
+[U] https://www.orcas.net/dvbstream/
 
 [A] Dave Chapman <dave@dchapman.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] CROSS
 
 [L] GPL
-[S] Beta
-[V] 0.5
+[V] 0.8.2
 
-[O] makeinstopt=
-[O] hook_add postmake 5 "cp -fv dvbstream dumprtp rtpfeed $root$bindir/"
+[D] 201683532780e37595ad8ba3386301a25bbff14781641c66e83f2a22 dvbstream-0.8.2.tar.bz2 https://www.orcas.net/dvbstream/
 
-[D] d4b8c02ff1bbf77da4995b83206a9ad6cb152269a411f470fc1e960a dvbstream-0.5.tar.gz http://dl.sourceforge.net/sourceforge/dvbtools/
+makeinstopt=
+hook_add postmake 5 "install dvbstream dumprtp rtpfeed $root$bindir/"

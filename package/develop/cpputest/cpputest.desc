@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/cpputest/cpputest.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A unit testing and mocking framework for C/C++
+
+[T] A unit testing and mocking framework for C/C++.
+
+[U] https://cpputest.github.io/
+
+[A] Cpputest Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 4.0
+[L] BSD
+
+[D] 5e5e95de689c307f9a8b81649d9b9ecb94838cd8f960a02d5b99f10d cpputest-4.0.tar.gz https://github.com/cpputest/cpputest/releases/download/v4.0/

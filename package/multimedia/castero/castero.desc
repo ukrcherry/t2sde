@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/castero/castero.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] TUI podcast client for the terminal
+
+[T] castero is a TUI podcast client for the terminal.
+
+[U] https://github.com/xgi/castero
+
+[A] Jake Robertson
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/multimedia
+[F] CROSS
+
+[L] MIT
+[V] 0.9.5
+
+[D] ac292a394e74f76af4a6debfa6c4de1f5d036ba7a1520e3b0a2cbb8a castero-0.9.5.tar.gz https://github.com/xgi/castero/archive/v0.9.5/

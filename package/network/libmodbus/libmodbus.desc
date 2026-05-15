@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libmodbus/libmodbus.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] RTU communication over a serial line or a TCP link
+
+[T] Modbus library which supports RTU communication over a serial line or a TCP link.
+
+[U] https://libmodbus.org/
+
+[A] Stéphane Raimbault <stephane.raimbault@gmail.com>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 3.1.12
+[L] LGPL
+[P] X -----5---9 700.000
+
+[D] bc8ebb1643c0fcc204278aab73b3bf5c024f677626c01ee8b8746e9d libmodbus-3.1.12.tar.gz https://github.com/stephane/libmodbus/releases/download/v3.1.12/

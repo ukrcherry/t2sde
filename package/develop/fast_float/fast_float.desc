@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/fast_float/fast_float.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,15 +11,14 @@
 [U] https://github.com/fastfloat/fast_float
 
 [A] Fast_float Authors
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/base
 [F] CROSS
 
-[V] 8.0.2
+[V] 8.2.5
 [L] APL MIT
-[S] Stable
 
 [P] X -----5---9 100.000
 
-[D] 7b52ef010efe07772a073da9fc51d5aef254a57106b0ca022533d78e fast_float-8.0.2.tar.gz https://github.com/fastfloat/fast_float/archive/v8.0.2/
+[D] 145e0711fa59a89094a3e739c8829e90bedbcbf5e3c34c294082f6f2 fast_float-8.2.5.tar.gz https://github.com/fastfloat/fast_float/archive/v8.2.5/

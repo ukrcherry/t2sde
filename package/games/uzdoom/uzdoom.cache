@@ -1,0 +1,30 @@
+[TIMESTAMP] 1764810196 Thu Dec  4 01:03:16 2025
+[BUILDTIME] 640 (9)
+[SIZE] 28.62 MB, 46 files
+
+[DEP] at-spi2-core
+[DEP] bash
+[DEP] binutils
+[DEP] bzip2
+[DEP] cairo
+[DEP] cmake
+[DEP] coreutils
+[DEP] diffutils
+[DEP] gawk
+[DEP] gdk-pixbuf
+[DEP] glib
+[DEP] grep
+[DEP] gtk+
+[DEP] gzip
+[DEP] harfbuzz
+[DEP] libsdl2
+[DEP] libvpx
+[DEP] libx11
+[DEP] linux-header
+[DEP] make
+[DEP] pango
+[DEP] pkgconfig
+[DEP] sed
+[DEP] tar
+[DEP] xorgproto
+[DEP] zmusic

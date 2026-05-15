@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/mate-panel/mate-panel.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,16 +12,16 @@
 [U] https://mate-desktop.org/
 
 [A] MATE developer
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/desktop/mate
 
 [L] GPL
-[S] Stable
-[V] 1.28.4
+[V] 1.28.7
 [P] X -----5---9 600.200
 
-[O] . $base/package/*/*/mate-conf.in
-[O] var_append GCC_WRAPPER_APPEND ' ' "`pkg-config x11 --libs`"
+[D] 3129ea33165a942bae6e6b59c3b9cec9a2127a2393ee0ff75a9ceb2b mate-panel-1.28.7.tar.gz https://github.com/mate-desktop/mate-panel/archive/v1.28.7/
 
-[D] 04b4ae3794741b365f129fcbfc0dd0f9de015a69145bf997ddde3645 mate-panel-1.28.4.tar.xz https://pub.mate-desktop.org/releases/1.28/
+autogen=1
+. $base/package/*/*/mate-conf.in
+var_append GCC_WRAPPER_APPEND ' ' "`pkg-config x11 --libs`"

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gtksourceview/gtksourceview.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -19,19 +19,18 @@
 [A] Jeroen Zwartepoorte <jeroen@xs4all.nl>
 [A] Mikael Hermansson <mikeh@bahnhof.se>
 [A] Chris Phelps <chicane@reninet.com>
-[M] Susanne Klaus <susan@t2-project.org>
+[M] Susanne Klaus <vadja@gmx.de>
 
 [C] extra/development extra/desktop/gnome
 [F] CROSS
 
 [L] LGPL
-[S] Stable
-[V] 5.16.0
+[V] 5.20.0
 [P] X -----5---9 177.300
-
-[O] . $base/package/*/*/gnome-conf.in
-[O] var_remove GCC_WRAPPER_REMOVE ' ' "-Werror*" # gir fails with invalid cpp args otherwise
 
 [CV-FLAGS] ODD-UNSTABLE
 [CV-URL] https://download.gnome.org/sources/gtksourceview/cache.json
-[D] c4746893b857be452b12a5e88aa644c8f96c34417d56886784db2413 gtksourceview-5.16.0.tar.xz https://download.gnome.org/sources/gtksourceview/5.16/
+[D] 4982b83aa29a169c6bbe51ecc1db05e9629f845138259223eaa1e8a1 gtksourceview-5.20.0.tar.xz https://download.gnome.org/sources/gtksourceview/5.20/
+
+. $base/package/*/*/gnome-conf.in
+var_remove GCC_WRAPPER_REMOVE ' ' "-Werror*" # gir fails with invalid cpp args otherwise

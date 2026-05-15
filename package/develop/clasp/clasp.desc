@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/clasp/clasp.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Answer set solver for normal logic programs
+
+[T] Answer set solver for (extended) normal logic programs.
+
+[U] https://potassco.org/
+
+[A] Clasp Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[E] opt doxygen
+
+[L] MIT
+[V] 3.4.0
+
+[D] c509939900d0e877b1e9fcdff69c5647c6240c89094fd92303b46494 clasp-3.4.0-source.tar.gz https://github.com/potassco/clasp/releases/download/v3.4.0/

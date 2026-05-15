@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/vulkanscenegraph/vulkanscenegraph.desc
-[COPY] Copyright (C) 2010 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2010 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,15 +12,14 @@
 [U] https://www.vulkanscenegraph.org
 
 [A] Robert Osfield
-[M] Andy Malcolm <t2@tangie.fyi>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 
 [E] opt doxygen
+[E] opt spirv-tools
 
 [L] MIT
-[S] Stable
-[V] 1.1.10
-[P] X -----5---9 211.000
+[V] 1.1.15
 
-[D] e5e1f23d0bc39b1e2870d121bdb9f53e4b781f7c27a48e4db6a34ead vulkanscenegraph-1.1.10.tar.gz https://github.com/vsg-dev/VulkanSceneGraph/archive/refs/tags/v1.1.10/
+[D] 2677b50142c73adb02fe74b923c5279d1e7cb7e1165a7f33667d5eb0 vulkanscenegraph-1.1.15.tar.gz https://github.com/vsg-dev/VulkanSceneGraph/archive/refs/tags/v1.1.15/

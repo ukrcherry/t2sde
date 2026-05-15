@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/menumaker/menumaker.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Heuristics-driven menu generator for Deskmenu, FluxBox, IceWM, OpenBox, WindowMaker and XFCE
+
+[T] Heuristics-driven menu generator for Deskmenu, FluxBox, IceWM, OpenBox, WindowMaker and XFCE.
+
+[U] https://menumaker.sourceforge.net
+
+[A] Menumaker Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.99.14
+[L] BSD
+
+[D] cd245dba41c4938c9c27a9c145d754abe784d5a8df05224854f8de8d menumaker-0.99.14.tar.gz https://downloads.sourceforge.net/menumaker/

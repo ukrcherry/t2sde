@@ -1,0 +1,25 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/tqca/tqca.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] TQt crypto for Trinity Desktop Environment
+
+[T] The TQt Cryptographic Architecture.
+
+[U] https://www.trinitydesktop.org/
+
+[A] Trinity Desktop Developers
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/x11
+[F] OBJDIR
+
+[L] GPL
+[V] 14.1.6
+
+# prefix=.. # should not be in opt, as it results in ../usr/lib64 folder
+
+[CV-GROUP] tde
+[D] fe4dc72d2e9ff9ba5d17d01b51c4e877b3c703b5ee1a89e37951b368 tqca-trinity-14.1.6.tar.xz https://mirror.ppa.trinitydesktop.org/trinity/releases/R14.1.6/main/dependencies/

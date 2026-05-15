@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/coin/coin.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,12 +12,11 @@
 [U] https://github.com/coin3d/coin
 
 [A] Volker Enderlein
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [L] BSD
-[S] Stable
-[V] 4.0.3
+[V] 4.0.8
 
-[D] eab569f1e2940fcd81eb5357afb0ef4bf82ccfe8cffb72d5a5fa7228 coin-4.0.3-src.tar.gz https://github.com/coin3d/coin/releases/download/v4.0.3/
+[D] 2c57afa9630428e2bc718b7a50c3c35120ec17ad1efbec10163599d6 coin-4.0.8-src.tar.gz https://github.com/coin3d/coin/releases/download/v4.0.8/

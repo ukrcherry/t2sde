@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/commons-cli/commons-cli.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,14 +12,13 @@
 [U] https://jakarta.apache.org/commons/cli/
 
 [A] Apache Jakarta Commons team
-[M] Minto van der Sluis <Minto@MultiMach.com>
+[M] Minto van der Sluis <minto@multimach.com>
 
 [C] extra/development
 
 [L] APL
-[S] Stable
-[V] 1.0
+[V] 1.11.0
 
-[O] . $base/package/*/*/java-conf.in BUILD_TYPE=ANT
+[D] 039d617b0218f5762c9671789f74686f19fc918b4965a54d18fae977 commons-cli-1.11.0-src.tar.gz https://dlcdn.apache.org/commons/cli/source/
 
-[D] 272ef025728b70258c0343dfb1b564f0e1b0d99ecb82a1922a9ec277 cli-1.0-src.tar.gz http://www.eu.apache.org/dist/jakarta/commons/cli/source/
+. $base/package/*/*/java-conf.in BUILD_TYPE=ANT

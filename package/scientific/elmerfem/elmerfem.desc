@@ -1,0 +1,33 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/elmerfem/elmerfem.desc
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Finite Element Software for Multiphysical Problems
+
+[T] Elmer is a computational tool for multi-physics problems that has been
+[T] developed in collaboration with Finnish universities, research
+[T] laboratories and industry. It includes physical models of fluid
+[T] dynamics, structural mechanics, electromagnetics, and heat
+[T] transfer. These are described by partial differential equations which
+[T] are solved by the Finite Element Method (FEM). It comprises of several
+[T] different parts. The geometry, boundary conditions and physical models
+[T] are defined in ElmerFront. The resulting problem definition is solved
+[T] by ElmerSolver. Results are the visualized by ElmerPost. An ElmerGrid
+[T] utility may be used for simple mesh manipulation.
+
+[U] https://github.com/ElmerCSC/elmerfem/
+
+[A] CSC - Scientific Computing Ltd.
+[A] Mikko Lyly <Mikko.Lyly@csc.fi> (Project manager)
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/scientific
+
+[L] GPL
+[V] 26.2.1
+
+[D] 0bdaf9709d79e6fe160864a55ede8ee56f9dc6897fcf9b8e985c1597 elmerfem-26.2.1.tar.gz https://github.com/ElmerCSC/elmerfem/archive/release-26.2.1/
+
+var_append cmakeopt ' ' -DCMAKE_POLICY_VERSION_MINIMUM=3.5

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/unison/unison.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -14,13 +14,12 @@
 [U] https://www.cis.upenn.edu/~bcpierce/unison/
 
 [A] Benjamin Pierce <bcpierce@cis.upenn.edu>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/archive extra/filesystem
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 2.53.2
+[V] 2.54.0
 
-[D] 4086d537ec92df72180b5b7d1bf1ec49eafdfa41b1ee019abf8faf73 unison-2.53.2.tar.gz https://github.com/bcpierce00/unison/archive/v2.53.2/
+[D] 241711803c0cc4fe48594fc7114ac724f46965dafa6a9bf5c71d96d0 unison-2.54.0.tar.gz https://github.com/bcpierce00/unison/archive/v2.54.0/

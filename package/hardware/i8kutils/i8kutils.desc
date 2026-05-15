@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/i8kutils/i8kutils.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Tools for accessing the SMM BIOS of Dell Inspiron and Latitude laptops
+
+[T] This package contains the user-space programs for accessing the SMM BIOS of
+[T] Dell Inspiron and Latitude laptops. The SMM BIOS is used on many recent
+[T] laptops to implement APM functionalities and to access custom hardware, for
+[T] example the cooling fans and volume buttons of the I8000.
+
+[U] https://github.com/Wer-Wolf/i8kutils
+
+[A] Massimo Dal Zotto <dz@debian.org>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] GPL
+[V] 1.60
+
+[D] 8213e9159a174427f0ede21abf9c2a2ba4c0a58f1bab4c5f4b85ed7b i8kutils_1.60.tar.gz https://github.com/Wer-Wolf/i8kutils/archive/v1.60/

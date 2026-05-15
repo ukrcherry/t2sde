@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/zita-alsa-pcmi/zita-alsa-pcmi.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] C++ library for easy access to ALSA PCM devices
+
+[T] C++ library for easy access to ALSA PCM devices.
+
+[U] https://kokkinizita.linuxaudio.org/linuxaudio/
+
+[A] Kokkini Zita
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/multimedia
+[F] CROSS
+
+[L] GPL3
+[V] 0.6.1
+[P] X -----5---9 199.000
+
+[D] 99918eeb66adc7b245d69533d7a635ca0d8e9d516a1a6198fac82a79 zita-alsa-pcmi-0.6.1.tar.bz2 https://kokkinizita.linuxaudio.org/linuxaudio/downloads/
+
+srcdir=*/source

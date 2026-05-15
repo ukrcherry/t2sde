@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/lxqt-globalkeys/lxqt-globalkeys.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,15 +11,14 @@
 [U] https://github.com/lxqt/lxqt-globalkeys
 
 [A] Lxqt-globalkeys Authors
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/base
 [F] OBJDIR
 
-[V] 2.2.0
+[V] 2.4.0
 [L] LGPL
-[S] Stable
 [P] X -----5---9 700.000
 
 [CV-GROUP] lxqt
-[D] 344724bd874b39dcebd43f059d9588f2859bf0c64b88be655723a416 lxqt-globalkeys-2.2.0.tar.xz https://github.com/lxqt/lxqt-globalkeys/releases/download/2.2.0/
+[D] 1c985ff9b390408ba615f2c2131b33b8cf31135dbd662159f57b788b lxqt-globalkeys-2.4.0.tar.xz https://github.com/lxqt/lxqt-globalkeys/releases/download/2.4.0/

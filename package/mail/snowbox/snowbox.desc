@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/snowbox/snowbox.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,13 +13,12 @@
 [U] https://github.com/kouya/
 
 [A] Oliver Feiler <kiza@gmx.net>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network
 [F] CROSS
 
 [L] GPL
-[S] Stable
 [V] 2.0.2
 
 [D] 17b71f37f17e95fd6e518438cc892125d396d5057123d2534461474d snowbox-2.0.2.tar.gz https://github.com/kouya/snowbox/archive/refs/tags/v2.0.2/

@@ -1,6 +1,6 @@
-[TIMESTAMP] 1741290153 Thu Mar  6 20:42:33 2025
-[BUILDTIME] 12 (5)
-[SIZE] 0.71 MB, 144 files
+[TIMESTAMP] 1770547887 Sun Feb  8 11:51:27 2026
+[BUILDTIME] 18 (9)
+[SIZE] 0.65 MB, 145 files
 
 [DEP] bash
 [DEP] binutils
@@ -10,11 +10,9 @@
 [OPT] docbook-xml
 [OPT] docbook-xsl
 [DEP] extra-cmake-modules
-[DEP] findutils
 [DEP] freetype
 [DEP] gawk
 [DEP] gettext
-[DEP] git
 [DEP] grep
 [DEP] kconfig
 [DEP] kcoreaddons
@@ -39,7 +37,7 @@
 [DEP] qt6multimedia
 [DEP] sed
 [DEP] tar
-[DEP] tbb
+[DEP] util-linux
 [DEP] vulkan-headers
 [DEP] xorgproto
 [DEP] xz

@@ -1,0 +1,49 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/ncurses/hotfix-run_tic-cross.patch
+# Copyright (C) 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0 or patched project license
+# --- T2-COPYRIGHT-END ---
+
+--- ncurses-6.6/misc/run_tic.in.vanilla	2026-01-23 01:34:31.319033465 +0100
++++ ncurses-6.6/misc/run_tic.in	2026-01-23 01:41:25.966000000 +0100
+@@ -202,34 +202,11 @@
+ # of options for 'test'.
+ if test "$OLD_DIR" != "$TICDIR" ; then
+ 	( rm -f "$OLD_DIR" 2>/dev/null )
+-	if ( cd "$OLD_DIR" 2>/dev/null )
+-	then
+-		cd "$OLD_DIR" || exit
+-		OLD_DIR=`pwd`
+-		if test "$OLD_DIR " != "$TICDIR "; then
+-			# Well, we tried.  Some systems lie to us, so the
+-			# installer will have to double-check.
+-			echo "Verify if $OLD_DIR and $TICDIR are the same."
+-			echo "The new terminfo is in $TICDIR; the other should be a link to it."
+-			echo "Otherwise, remove $OLD_DIR and link it to $TICDIR."
+-		fi
+-	else
+-		cd "${INSTALL_PREFIX}" || exit
+-		# Construct a symbolic link that only assumes $ticdir has the
+-		# same $prefix as the other installed directories.
+-		SOURCE=`echo "$ticdir"|sed -e 's%^'"$prefix"'/%%'`
+-		if test "$SOURCE" != "$ticdir" ; then
+-			SOURCE=../`echo "$ticdir"|sed -e 's%^'"$prefix"'/%%' -e 's%^/%%'`
+-		fi
+-		test -d lib || mkdir lib
+-		cd lib || exit
+-		TARGET=`pwd`/terminfo
+-		if ( @LN_S@ "$SOURCE" terminfo )
+-		then
+-			echo "** sym-linked $TARGET for compatibility"
+-		else
+-			echo "** could not sym-link $TARGET for compatibility"
+-		fi
+-	fi
++               if ( @LN_S@ -r "$TICDIR" "$OLD_DIR" )
++                then
++                       echo "** sym-linked $TICDIR for compatibility"
++                else
++                       echo "** could not sym-link $TICDIR for compatibility"
++                fi
+ fi
+ # vile:shmode ts=4 sw=4

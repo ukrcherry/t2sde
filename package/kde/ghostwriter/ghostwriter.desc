@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/ghostwriter/ghostwriter.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,18 +12,16 @@
 [U] https://ghostwriter.kde.org/
 
 [A] The KDE-Team
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/desktop/kde
 [F] CROSS OBJDIR
 
 [L] GPL
-[S] Beta
-[V] 25.04.1
-[P] X -----5---9 400.000
-
-[O] . $base/package/*/*/kde-conf.in
-[O] var_append cmakeopt ' ' -DQT_MAJOR_VERSION=6
+[V] 26.04.1
 
 [CV-GROUP] kde-gear
-[D] 037c2d40a06794fe678128f470558058b7e319861fe8fa2eb8e5dec5 ghostwriter-25.04.1.tar.xz https://download.kde.org/stable/release-service/25.04.1/src/
+[D] fca49ff54411f8607c8adb807a983191e38053025165d58130fffa18 ghostwriter-26.04.1.tar.xz https://download.kde.org/stable/release-service/26.04.1/src/
+
+. $base/package/*/*/kde-conf.in
+var_append cmakeopt ' ' -DQT_MAJOR_VERSION=6

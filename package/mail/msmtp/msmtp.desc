@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/msmtp/msmtp.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -16,13 +16,20 @@
 [U] https://msmtp.sourceforge.net/
 
 [A] Martin Lambers <marlam@marlam.de>
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 1.8.27
+[V] 1.8.32
 
-[D] c855f86a1e81aaec15efb7dc828387b13bcb0a1a6fbc3e40d94503e4 msmtp-1.8.27.tar.xz https://marlam.de/msmtp/releases/
+[D] d63c0996b7fe24ff5eef95f31ed169128942764d224731395f9de67d msmtp-1.8.32.tar.xz https://marlam.de/msmtp/releases/
+
+if pkginstalled gnutls; then
+	var_append confopt ' ' --with-ssl=gnutls
+elif pkginstalled openssl; then
+	var_append confopt ' ' --with-ssl=openssl
+else
+	var_append confopt ' ' --with-ssl=no
+fi

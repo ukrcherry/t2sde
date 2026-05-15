@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/narwhals/narwhals.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,15 +11,14 @@
 [U] https://github.com/narwhals-dev/narwhals
 
 [A] Marco Gorelli <33491632+MarcoGorelli@users.noreply.github.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [E] add hatchling
 
 [L] MIT
-[S] Stable
-[V] 1.38.0
+[V] 2.21.0
 [P] X -----5---9 109.800
 
-[D] 59e15713689b0903a2c219062b94aa91025752543c138948d7279638 narwhals-1.38.0.tar.gz https://github.com/narwhals-dev/narwhals/archive/v1.38.0/
+[D] 10ce0559fd92e83017ef348c450b5be21320c56146dc5c70dc9b1908 narwhals-2.21.0.tar.gz https://github.com/narwhals-dev/narwhals/archive/v2.21.0/

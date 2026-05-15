@@ -1,15 +1,17 @@
-[TIMESTAMP] 1739132963 Sun Feb  9 21:29:23 2025
-[BUILDTIME] 6 (5)
-[SIZE] 0.71 MB, 44 files
+[TIMESTAMP] 1768852985 Mon Jan 19 21:03:05 2026
+[BUILDTIME] 10 (9)
+[SIZE] 0.74 MB, 43 files
 
 [DEP] bash
 [DEP] binutils
 [DEP] cairo
 [DEP] coreutils
 [DEP] diffutils
+[DEP] findutils
 [DEP] gawk
 [DEP] glib
 [DEP] grep
+[DEP] gzip
 [DEP] libffi
 [DEP] linux-header
 [DEP] meson
@@ -17,6 +19,7 @@
 [DEP] openssl
 [DEP] pycairo
 [DEP] python
+[DEP] pythoncapi-compat
 [DEP] sed
 [DEP] tar
-[DEP] xz
+[DEP] util-linux

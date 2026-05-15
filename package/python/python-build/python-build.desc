@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/python-build/python-build.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,13 +13,14 @@
 [U] https://github.com/pypa/build/
 
 [A] build.pypa.io authors
-[M] Andy Malcolm <t2@tangie.fyi>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/development
+[E] add python-gpep517
+[E] add python-flit-core
 
 [L] MIT
-[S] Stable
-[V] 1.2.2.post1
+[V] 1.5.0
 [P] X -----5---9 102.300
 
-[D] d51cfdc09609cecdf81ff68ef5d9c30c757b53fa4c2b7cbd2fb9bee9 build-1.2.2.post1.tar.gz https://github.com/pypa/build/archive/refs/tags/1.2.2.post1/
+[D] 1c40cd106786009e520b08481dc86ae529c79c7c0466bcca3d8a7916 build-1.5.0.tar.gz https://github.com/pypa/build/archive/refs/tags/1.5.0/

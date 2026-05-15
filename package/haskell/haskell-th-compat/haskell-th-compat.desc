@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/haskell-th-compat/haskell-th-compat.desc
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Backports the Quote and Code types
+
+[T] Backports the Quote and Code types to work across a wide range of
+[T] template-haskell versions.
+
+[U] https://github.com/haskell-compat/th-compat
+
+[A] Ryan Scott <ryan.gl.scott@gmail.com>
+[M] Riley Beckett <rbeckettvt@gmail.com>
+
+[C] extra/tool
+[F] CROSS
+
+[L] BSD
+[V] 0.1.7
+
+[D] dd8291730558c2eb68a42f7da8b4dd23da43d7d074d7edb5f13ddfa4 haskell-th-compat-0.1.7.tar.gz !https://hackage.haskell.org/package/th-compat-0.1.7/th-compat-0.1.7.tar.gz
+
+. $base/package/*/*/haskell-conf.in

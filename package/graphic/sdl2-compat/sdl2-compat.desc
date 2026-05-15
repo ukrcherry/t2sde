@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/sdl2-compat/sdl2-compat.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -16,16 +16,14 @@
 [U] https://github.com/libsdl-org/sdl2-compat
 
 [A] Sam Lantinga <slouken@libsdl.org>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/x11
 [F] CROSS
 
 [L] ZLIB
-[S] Stable
-[V] 2.32.56
-[P] X -----5---9 130.000
+[V] 2.32.68
 
-[O] var_append GCC_WRAPPER_INSERT ' ' "-c?:-L`pkgprefix libdir libx11` -lX11 -lXrender"
+[D] 6c38a02135ff8e22476c1668de08bd509dbc90fc581814925636b8b5 sdl2-compat-release-2.32.68.tar.gz https://github.com/libsdl-org/sdl2-compat/archive/release-2.32.68/
 
-[D] bd5cf4f9852a5f57ceda1a76a46a5bf4f33c4c4110660ba92a91a4ee sdl2-compat-release-2.32.56.tar.gz https://github.com/libsdl-org/sdl2-compat/archive/release-2.32.56/
+var_append GCC_WRAPPER_INSERT ' ' "-c?:-L`pkgprefix libdir libx11` -lX11 -lXrender"

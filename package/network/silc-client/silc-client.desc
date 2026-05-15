@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/silc-client/silc-client.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,15 +13,14 @@
 [U] http://silcnet.org
 
 [A] SILC Project
-[M] Alex Paes <t2@ponto-dot.com>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network
 
 [L] GPL
-[S] Stable
-[V] 1.1.8
+[V] 1.1.11
 
-[O] [ $prefix_auto = 1 ] && prefix="opt/silc" && set_confopt
-[O] [ $arch = x86-64 ] && hook_add preconf 5 "sed -ie s'/felf/felf64/g' configure"
+[D] 7fcc928dbcc1afaa140c958375a2010405c0d978106a41e74ec2c4c6 silc-client-1.1.11.tar.bz2 https://download.sourceforge.net/silc/
 
-[D] 1a960a5b975fac48045418e916c4387450287721696b7a3cbc41b474 silc-client-1.1.8.tar.bz2 http://silcnet.org/download/client/sources/
+[ $prefix_auto = 1 ] && prefix="opt/silc" && set_confopt
+var_append GCC_WRAPPER_APPEND ' ' -std=gnu11

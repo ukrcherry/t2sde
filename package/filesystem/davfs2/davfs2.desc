@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/davfs2/davfs2.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Linux FUSE driver that allows you to mount a WebDAV resource
+
+[T] Linux FUSE (or coda) driver that allows you to mount a WebDAV resource.
+
+[U] http://savannah.nongnu.org/projects/davfs2
+
+[A] Davfs2 Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 1.7.3
+[L] GPL3
+
+[D] 1e4128532eb54829cf84c483626547309be0e214fed92a78a64c29f0 davfs2-1.7.3.tar.gz https://download.savannah.gnu.org/releases/davfs2/

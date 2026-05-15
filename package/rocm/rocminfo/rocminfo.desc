@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/rocminfo/rocminfo.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,16 +11,15 @@
 [U] https://github.com/ROCm/rocminfo
 
 [A] Advanced Micro Devices, Inc.
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [F] CROSS
 [C] extra/development
 
 [L] MIT
-[S] Stable
-[V] 6.4.0
-
-[O] . $base/package/*/*/rocm-conf.in
+[V] 7.2.3
 
 [CV-GROUP] rocm
-[D] b629ad38dfe4a3d5191361cf124c75c0e665985a6abadd5c24bebc1d rocminfo-rocm-6.4.0.tar.gz https://github.com/ROCm/rocminfo/archive/rocm-6.4.0/
+[D] 5ad835fd8a45f83a348587e185939e1fc53c1e462b52fe482eefa814 rocminfo-rocm-7.2.3.tar.gz https://github.com/ROCm/rocminfo/archive/rocm-7.2.3/
+
+. $base/package/*/*/rocm-conf.in

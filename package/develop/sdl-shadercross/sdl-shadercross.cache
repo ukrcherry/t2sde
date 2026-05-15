@@ -1,0 +1,21 @@
+[TIMESTAMP] 1773052844 Mon Mar  9 11:40:44 2026
+[BUILDTIME] 2 (9)
+[SIZE] 3.21 MB, 20 files
+
+[DEP] automake
+[DEP] bash
+[DEP] binutils
+[DEP] cmake
+[DEP] coreutils
+[DEP] diffutils
+[DEP] findutils
+[DEP] gawk
+[DEP] grep
+[DEP] gzip
+[DEP] libsdl3
+[DEP] make
+[DEP] pkgconfig
+[DEP] sed
+[DEP] spirv-cross
+[DEP] tar
+[DEP] util-linux

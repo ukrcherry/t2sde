@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/pycurl/pycurl.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,12 +13,11 @@
 [U] http://pycurl.io/
 
 [A] kj <kjetilja@cs.uit.no>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [L] GPL
-[S] Stable
-[V] 7.45.4
+[V] 7.46.0
 
-[D] e91e85cd268a85f05b35591eb53b5912fa1d8493bbd63ef1ea64d680 pycurl-7.45.4.tar.gz https://files.pythonhosted.org/packages/source/p/pycurl/
+[D] a7d9b5ff1b9b32a5303a80da54dadc2c3d4860302e1a5dadd96cf400 pycurl-7.46.0.tar.gz https://files.pythonhosted.org/packages/source/p/pycurl/

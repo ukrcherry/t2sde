@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/lxqt-archiver/lxqt-archiver.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,13 +11,12 @@
 [U] https://github.com/lxqt/lxqt-archiver
 
 [A] Lxqt-archiver Authors
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/base
 [F] OBJDIR
 
-[V] 1.2.0
+[V] 1.4.0
 [L] LGPL
-[S] Stable
 
-[D] 613b7aec9310d887400535c68b89045b4ecb3c475cb1516bd241e5e4 lxqt-archiver-1.2.0.tar.xz https://github.com/lxqt/lxqt-archiver/releases/download/1.2.0/
+[D] 51dc02b091b9c4868c904986e8efefe6c45a2ba6766cc61d5073c65b lxqt-archiver-1.4.0.tar.xz https://github.com/lxqt/lxqt-archiver/releases/download/1.4.0/

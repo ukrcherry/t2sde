@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/vcstool/vcstool.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] A command line tool designed to make working with multiple repositories easier
+
+[T] A command line tool designed to make working with multiple repositories easier.
+
+[U] https://github.com/dirk-thomas/vcstool
+
+[A] Vcstool Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.3.0
+[L] APL
+
+[D] b577ae7686a70b21cde1003a274770f58c72332031e7034f1d408811 vcstool-0.3.0.tar.gz https://github.com/dirk-thomas/vcstool/archive/0.3.0/

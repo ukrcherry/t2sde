@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/sphinx-doc/sphinx-doc.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -21,8 +21,7 @@
 [E] add alabaster imagesize pyidna pyrequests roman-numerals-py snowballstemmer sphinxcontrib-applehelp sphinxcontrib-devhelp sphinxcontrib-htmlhelp sphinxcontrib-qthelp sphinxcontrib-serializinghtml
 
 [L] BSD
-[S] Stable
-[V] 8.2.3
+[V] 9.1.0
 [P] X -----5---9 400.000
 
-[D] 6034e212a6792d227ebab5220a15b65743e046af1ffade4ef98306e4 sphinx-doc-v8.2.3.tar.gz https://github.com/sphinx-doc/sphinx/archive/v8.2.3/
+[D] 2a301b8577fcedee8a693860866bdd214d88ca9e2707ddb94690ded6 sphinx-doc-v9.1.0.tar.gz https://github.com/sphinx-doc/sphinx/archive/v9.1.0/

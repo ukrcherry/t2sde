@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libxfce4ui/libxfce4ui.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -13,7 +13,7 @@
 
 [A] Olivier Fourdan <fourdan@xfce.org>
 [A] Jasper Huijsmans <huysmans@users.sourceforge.net>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/desktop/xfce
 [F] CROSS NO-LTO.clang
@@ -22,13 +22,13 @@
 [E] opt libgtop
 
 [L] LGPL
-[S] Stable
-[V] 4.20.0
+[V] 4.20.2
 [P] X -----5---9 222.600
 
-[O] . $base/package/xfce4/*/xfce4-conf.in
-[O] var_append GCC_WRAPPER_INSERT ' ' "-I$root$(pkgprefix includedir libx11)"
-[O] var_append GCC_WRAPPER_INSERT ' ' "-L$root$(pkgprefix libdir libx11)"
-[O] atstage cross && var_append confopt ' ' --enable-introspection=no
+[D] d1d508d1dbb7cb628338c50299d693409e1a07b9bab0cfe5f5a1c891 libxfce4ui-4.20.2.tar.bz2 https://archive.xfce.org/src/xfce/libxfce4ui/4.20/
 
-[D] 0336b897d874f1138a12bde25f7dcf56640066501e4aaf766eb17579 libxfce4ui-4.20.0.tar.bz2 https://archive.xfce.org/src/xfce/libxfce4ui/4.20/
+atstage cross && var_append confopt ' ' --enable-introspection=no
+
+. $base/package/xfce4/*/xfce4-conf.in
+var_append GCC_WRAPPER_INSERT ' ' "-I$root$(pkgprefix includedir libx11)"
+var_append GCC_WRAPPER_INSERT ' ' "-L$root$(pkgprefix libdir libx11)"

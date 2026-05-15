@@ -1,0 +1,34 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/avogadro/avogadro.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] A free and open source molecular editor and visualization tool
+
+[T] A free and open source molecular editor and visualization tool. Designed
+[T] for students and advanced researchers alike. Used in computational
+[T] chemistry, molecular modeling, chemistry education, bioinformatics,
+[T] materials science, and more.
+
+[U] https://two.avogadro.cc/
+
+[A] Avogadro
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] GPL
+[V] 2.0.0
+
+[SRC] .
+[D] 392d9cecd40b61f3a161652e776a98c3ee5378be93e0a6b6e6198d8a avogadrolibs-2.0.0.tar.gz https://github.com/OpenChemistry/avogadrolibs/archive/2.0.0/
+[D] b08f6fcc30033e1ff8e4fa3758e996c12fd624e0a261f8892ff6e6d6 avogadroapp-2.0.0.tar.gz https://github.com/OpenChemistry/avogadroapp/archive/2.0.0/
+
+rungpepinstall=0 runpysetup=0
+pkginstalled qt5base && var_append cmakeopt ' ' -DQT_VERSION=5
+pkginstalled qt6base && var_append cmakeopt ' ' -DQT_VERSION=6
+
+var_append GCC_WRAPPER_INSERT ' ' "-I$root`pkgprefix includedir glu`"
+var_append GCC_WRAPPER_INSERT ' ' "-L$root`pkgprefix libdir glu`"

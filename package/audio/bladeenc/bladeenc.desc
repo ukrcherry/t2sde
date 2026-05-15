@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/bladeenc/bladeenc.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -13,16 +13,15 @@
 [T] BladeEnc doesn't have a nice, user-friendly interface like mpegEnc, but it
 [T] is more than three times faster.
 
-[U] http://bladeenc.mp3.no/skeleton/news.html
+[U] https://web.archive.org/web/20061005064502/http://bladeenc.mp3.no:80/
 
 [A] Tord Jansson <tord.jansson@swipnet.se>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] CROSS
 
 [L] GPL
-[S] Stable
 [V] 0.94.2
 
 [CV-URL] http://bladeenc.mp3.no/skeleton/sourcearchive.html

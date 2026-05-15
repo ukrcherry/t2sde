@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gtkwave/gtkwave.desc
-[COPY] Copyright (C) 2018 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2018 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,12 +13,11 @@
 [U] https://gtkwave.sourceforge.net/
 
 [A] Anthony Bybell <bybell@rocketmail.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [L] GPL
-[S] Stable
-[V] 3.3.121
+[V] 3.3.127
 
-[D] 0dbdbe0e2867b6e14103a79b5238ba58fc1520237037aa128ff39543 gtkwave-3.3.121.tar.gz http://gtkwave.sourceforge.net/
+[D] bae4ecd632f8a70dd9be30bc241373a6142b0299d8915c842865de18 gtkwave-3.3.127.tar.gz https://gtkwave.sourceforge.net/

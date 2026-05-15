@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xf86-video-chips/xf86-video-chips.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,16 +15,15 @@
 [U] https://www.X.org
 
 [A] X.org Foundation {http://www.X.org}
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/x11
 [F] CROSS FCOMMON.mips FCOMMON.mips64
 [R] + x86 x86-64
 
 [L] OpenSource
-[S] Stable
 [V] 1.5.0
 
-[O] . package/*/*/modular-x-conf.in
-
 [D] 5f9d5455b5bfc83ce3ca114ed59264f29f268422021c6b8188eccb27 xf86-video-chips-1.5.0.tar.xz http://xorg.freedesktop.org/releases/individual/driver/
+
+. package/*/*/modular-x-conf.in

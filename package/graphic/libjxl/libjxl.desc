@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libjxl/libjxl.desc
-[COPY] Copyright (C) 2020 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2020 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,25 +14,26 @@
 [U] https://jpeg.org/jpegxl/
 
 [A] The Joint Photographic Experts Group (JPEG)
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] CROSS
 
 [E] opt asciidoc
 [E] opt brotli
-[E] opt doxygen docbook-xml docbook-xsl
+[E] opt doxygen
 [E] opt ilmbase openexr
 [E] opt openjdk
 
 [L] BSD
-[S] Beta
-[V] 0.11.1
-[P] X -----5---9 112.698
+[V] 0.11.2
+[P] X -----5---9 124.698
 
-[O] hook_add preconf 5 "./deps.sh"
-[O] var_append cmakeopt ' ' -DPROVISION_DEPENDENCIES=0
-[O] var_append cmakeopt ' ' '-DBUILD_TESTING=OFF -DJPEGXL_ENABLE_BENCHMARK=OFF'
-[O] var_append cmakeopt ' ' '-DJPEGXL_FORCE_SYSTEM_GTEST=ON -DJPEGXL_FORCE_SYSTEM_BROTLI=ON -DJPEGXL_FORCE_SYSTEM_HWY=ON'
+[D] bf58f42a45a831a305aa27d3620ddb76175efc5a916ca432e55b3014 libjxl-0.11.2.tar.gz https://github.com/libjxl/libjxl/archive/v0.11.2/
 
-[D] f02729827f21d0de88f29c46275130b3ead95c2af0c6315e28329b6a libjxl-0.11.1.tar.gz https://github.com/libjxl/libjxl/archive/v0.11.1/
+var_append cmakeopt ' ' -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+var_append cmakeopt ' ' -DPROVISION_DEPENDENCIES=0
+var_append cmakeopt ' ' '-DBUILD_TESTING=OFF -DJPEGXL_ENABLE_BENCHMARK=OFF'
+var_append cmakeopt ' ' '-DJPEGXL_FORCE_SYSTEM_GTEST=ON -DJPEGXL_FORCE_SYSTEM_BROTLI=ON -DJPEGXL_FORCE_SYSTEM_HWY=ON'
+var_append cmakeopt ' ' '-DJPEGXL_ENABLE_SKCMS=OFF -DJPEGXL_ENABLE_SJPEG=OFF'
+pkginstalled docbook-xml docbook-xsl libxml libxslt || var_append cmakeopt ' ' -DJPEGXL_ENABLE_MANPAGES=NO

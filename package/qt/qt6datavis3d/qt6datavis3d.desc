@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/qt6datavis3d/qt6datavis3d.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,17 +12,16 @@
 [U] https://qt.io
 
 [A] Trolltech AS <www.trolltech.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
-[F] CROSS NO-LTO.gcc
+[F] CROSS OBJDIR
 
 [L] LGPL
-[S] Stable
-[V] 6.9.0
-[P] X -----5---9 127.000
-
-[O] [ $prefix_auto = 1 ] && prefix=$(pkgprefix qt6base) && set_confopt
+[V] 6.11.1
+[P] X -----5---9 140.000
 
 [CV-GROUP] qt6
-[D] 5de0ddfd31dd90f7dd826f5d46534c0b752a0930a1dd64dce2e4494b qtdatavis3d-everywhere-src-6.9.0.tar.xz http://download.qt.io/official_releases/qt/6.9/6.9.0/submodules/
+[D] b7a89ae952ce094ae6ff8137e530cf61bd747cd71e7ff17ebf6a05b3 qtdatavis3d-everywhere-src-6.11.1.tar.xz http://download.qt.io/official_releases/qt/6.11/6.11.1/submodules/
+
+. $base/package/*/*/qt6-conf.in

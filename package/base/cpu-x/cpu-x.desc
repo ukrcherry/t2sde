@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/cpu-x/cpu-x.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A Free software that gathers information on CPU, motherboard and more
+
+[T] CPU-X is a Free software that gathers information on CPU, motherboard
+[T] and more. It does system profiling and monitoring (similar to CPU-Z)
+[T] but CPU-X for GNU/Linux and FreeBSD. It provides a GTK GUI as well as
+[T] a NCurses-based TUI.
+
+[U] https://thetumultuousunicornofdarkness.github.io/CPU-X/
+
+[A] X0rg <xorgbreaker@gmail.com>
+[M] NoTag <notag@t2sde.org>
+
+[C] extra/tool
+
+[L] GPL3
+[V] 5.4.0
+
+[D] 8347410f9008bbe77ef36885dd5ae5d1b88a2a29345755325c6883d1 cpu-x-5.4.0.tar.gz https://github.com/X0rg/CPU-X/archive/v5.4.0/
+
+. $base/package/*/*/gnome-conf.in

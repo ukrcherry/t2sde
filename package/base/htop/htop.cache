@@ -1,0 +1,27 @@
+[TIMESTAMP] 1775747979 Thu Apr  9 17:19:39 2026
+[BUILDTIME] 16 (9)
+[SIZE] 0.42 MB, 12 files
+
+[DEP] autoconf
+[DEP] automake
+[DEP] bash
+[DEP] binutils
+[DEP] coreutils
+[DEP] diffutils
+[DEP] findutils
+[DEP] gawk
+[DEP] grep
+[DEP] gzip
+[DEP] libcap
+[DEP] libnl
+[DEP] linux-header
+[OPT] lm_sensors
+[DEP] m4
+[DEP] make
+[DEP] ncurses
+[DEP] perl
+[DEP] pkgconfig
+[DEP] sed
+[DEP] tar
+[OPT] unwind
+[DEP] util-linux

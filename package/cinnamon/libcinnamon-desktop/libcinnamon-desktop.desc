@@ -1,24 +1,24 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libcinnamon-desktop/libcinnamon-desktop.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
-[I] The cinnamon-desktop library
+[I] The Cinnamon Desktop library
 
-[T] The Cinnamon desktop library.
+[T] The libcinnamon-desktop library provides API shared by several applications
+[T] on the desktop, but that cannot live in the platform for various reasons.
 
 [U] https://github.com/linuxmint/cinnamon-desktop
 
-[A] linuxmint
-[M] The T2 Project <t2@t2-project.org>
+[A] Linux Mint Team
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/desktop/cinnamon
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 6.4.1
+[V] 6.6.2
 [P] X -----5---9 400.000
 
-[D] 135d03fcb6ec1a6dacfa0aa35fa02971456f37a163d6280be7846a22 cinnamon-desktop-6.4.1.tar.gz https://github.com/linuxmint/cinnamon-desktop/archive/6.4.1/
+[D] d6e4857ffcbc28f572aa7cacf98368f6e21ef6d411416aa674130899 cinnamon-desktop-6.6.2.tar.gz https://github.com/linuxmint/cinnamon-desktop/archive/6.6.2/

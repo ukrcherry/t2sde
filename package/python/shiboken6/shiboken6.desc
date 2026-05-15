@@ -1,0 +1,27 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/shiboken6/shiboken6.desc
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Qt for Python - supporting module
+
+[T] shiboken6 is the supporting module for Qt For Python is the Python Qt
+[T] bindings project, providing access to the complete Qt framework as well as
+[T] to generator tools for rapidly generating bindings for any C++ libraries.
+
+[U] https://github.com/pyside/pyside-setup
+
+[A] PySide Developers
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/development
+
+[L] MIT
+[V] 6.11.1
+[P] X -----5---9 200.000
+
+[CV-GROUP] pyside
+[D] 393b0a8dc3e2929bea212f3c92ca7ea7f7a147b367d447ada3b715e8 shiboken6-6.11.1.tar.gz https://github.com/pyside/pyside-setup/archive/v6.11.1/
+
+srcdir=pyside*/sources/shiboken6

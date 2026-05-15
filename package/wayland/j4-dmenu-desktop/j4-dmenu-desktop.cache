@@ -1,0 +1,24 @@
+[TIMESTAMP] 1753633217 Sun Jul 27 18:20:17 2025
+[BUILDTIME] 10 (9)
+[SIZE] 0.65 MB, 10 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] cmake
+[DEP] coreutils
+[DEP] curl
+[DEP] diffutils
+[DEP] fmt
+[DEP] gawk
+[DEP] gettext
+[DEP] grep
+[DEP] gzip
+[DEP] linux-header
+[DEP] make
+[DEP] meson
+[DEP] ninja
+[DEP] openssl
+[DEP] patch
+[DEP] sed
+[DEP] spdlog
+[DEP] tar

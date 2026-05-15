@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/zope.interface/zope.interface.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Zope.interface package from Zope 3
+
+[T] This is a separate distribution of the zope.interface package used in
+[T] Zope 3, along with the packages it depends on.
+
+[U] https://zopeinterface.readthedocs.io/en/latest/
+
+[A] Zope Corporation <www.zope.com>
+[A] Zope Community <http://www.zope.org/>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/server
+
+[L] OpenSource
+[V] 8.4
+[P] X -----5---9 196.500
+
+[D] bb9981019ed46d204963e0d25f918e55a6567186f5a39c496c1a4d77 zope_interface-8.4.tar.gz https://pypi.python.org/packages/source/z/zope.interface/

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xmlsec/xmlsec.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,14 +13,13 @@
 [U] https://www.aleksey.com/xmlsec/
 
 [A] aleksey <aleksey@aleksey.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/library
 [F] CROSS
 
 [L] MIT
-[S] Stable
-[V] 1.3.7
+[V] 1.3.11
 [P] X -----5---9 250.000
 
-[D] c25d929fbc0f4d9e81793929f3dc2aeea06587805cd66fabb25e3d66 xmlsec1-1.3.7.tar.gz http://www.aleksey.com/xmlsec/download/
+[D] 59425e95708c968faf50cb860b2504d268650ef71479427b73fa6bf5 xmlsec1-1.3.11.tar.gz http://www.aleksey.com/xmlsec/download/

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/kitty/kitty.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,16 +11,18 @@
 [U] https://github.com/kovidgoyal/kitty
 
 [A] Kovid Goyal
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/shell
 
 [L] GPL3
-[S] Beta
-[V] 0.42.0
+[V] 0.46.2
 
-[O] runpysetup=0
-[O] makeinstopt=
-[O] hook_add postmake 5 "install ./kitty/launcher/kitty $root$bindir/"
+[D] e393e0425d3222af8e6b32711e011bc30951ac8d68d350856e9eca36 kitty-v0.46.2.tar.gz https://github.com/kovidgoyal/kitty/archive/v0.46.2/
 
-[D] c54a5af8ed2d86a6238bc5d0415788f875154fe4831ecf8d85fddcb6 kitty-v0.42.0.tar.gz https://github.com/kovidgoyal/kitty/archive/v0.42.0/
+rungpepinstall=0 rungo=0 runmake=0
+
+pyconfopt="build"
+
+makeinstopt=
+hook_add postmake 5 "install kitty/launcher/kitty $root$bindir/"

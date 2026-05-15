@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/svt-hevc/svt-hevc.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Scalable Vector Technology for HEVC encoder
+
+[T] Scalable Vector Technology for HEVC encoder (SVT-HEVC Encoder).
+
+[U] https://01.org/svt
+
+[A] Svt-hevc Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.5.1
+[L] BSD
+
+[D] 3dd8ed56335c5af8b9b5852dfef7b9582124890a9a5a9f314f38a976 svt-hevc-1.5.1.tar.gz https://github.com/OpenVisualCloud/SVT-HEVC/archive/v1.5.1/

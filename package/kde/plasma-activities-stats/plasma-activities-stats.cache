@@ -1,10 +1,9 @@
-[TIMESTAMP] 1739187606 Mon Feb 10 12:40:06 2025
-[BUILDTIME] 35 (5)
-[SIZE] 0.35 MB, 34 files
+[TIMESTAMP] 1770497116 Sat Feb  7 21:45:16 2026
+[BUILDTIME] 50 (9)
+[SIZE] 0.33 MB, 35 files
 
 [DEP] bash
 [DEP] binutils
-[DEP] boost
 [DEP] cmake
 [DEP] coreutils
 [DEP] diffutils
@@ -14,12 +13,9 @@
 [DEP] kconfig
 [DEP] linux-header
 [DEP] make
-[DEP] pkgconfig
 [DEP] plasma-activities
 [DEP] qt6base
-[DEP] qt6declarative
 [DEP] sed
 [DEP] tar
-[DEP] tbb
-[DEP] vulkan-headers
+[DEP] util-linux
 [DEP] xz

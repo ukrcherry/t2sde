@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libquotient/libquotient.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,18 +14,17 @@
 [U] https://github.com/quotient-im/libQuotient
 
 [A] Quotient
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [F] CROSS
 
 [L] LGPL
-[S] Beta
-[V] 0.9.3
-[P] X -----5---9 127.010
+[V] 0.9.6.1
+[P] X -----5---9 140.010
 
-[O] [ $prefix_auto = 1 ] && prefix=$(pkgprefix qt6base) && set_confopt
-[O] var_append cmakeopt ' ' -DBUILD_WITH_QT6=ON
-[O] var_append cmakeopt ' ' -DQuotient_ENABLE_E2EE=ON
+[D] 18118e2c629444d35b5fc8630289d11523a1b2918d162525a26c357f libQuotient-0.9.6.1.tar.gz https://github.com/quotient-im/libQuotient/archive/refs/tags/0.9.6.1/
 
-[D] bd9e0b52429cd2a2f5157d0da390d562efb2b1902231921c914b7ed5 libQuotient-0.9.3.tar.gz https://github.com/quotient-im/libQuotient/archive/refs/tags/0.9.3/
+. $base/package/*/*/qt6-conf.in
+var_append cmakeopt ' ' -DBUILD_WITH_QT6=ON
+var_append cmakeopt ' ' -DQuotient_ENABLE_E2EE=ON

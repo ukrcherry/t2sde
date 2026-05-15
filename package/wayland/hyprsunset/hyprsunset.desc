@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/hyprsunset/hyprsunset.desc
-[COPY] Copyright (C) 2023 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2023 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,13 +11,12 @@
 [U] https://hyprland.org/
 
 [A] vaxerski
-[M] The T2 Project <t2@t2sde.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/x11
 [F] CROSS OBJDIR
 
 [L] BSD
-[S] Beta
-[V] 0.2.0
+[V] 0.3.3
 
-[D] 3b1c4f87f75f4403022fe30c19a11ea5757eaa60940948fabb13b4ac hyprsunset-0.2.0.tar.gz https://github.com/hyprwm/hyprsunset/archive/v0.2.0/
+[D] 591b6d7a02b538519499bac49b43deb0ae07af7ebfa1753d6b04e820 hyprsunset-0.3.3.tar.gz https://github.com/hyprwm/hyprsunset/archive/v0.3.3/

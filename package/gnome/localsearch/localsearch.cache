@@ -1,40 +1,48 @@
+[TIMESTAMP] 1777313473 Mon Apr 27 20:11:13 2026
+[BUILDTIME] 30 (9)
+[SIZE] 2.94 MB, 176 files
 
-[TIMESTAMP] 1732311823 Fri Nov 22 22:43:43 2024
-[BUILDTIME] 20 (9)
-[SIZE] 3.26 MB, 157 files
-
-[DEP] 00-dirtree
 [DEP] asciidoc
 [DEP] bash
 [DEP] binutils
+[DEP] cairo
 [DEP] cmake
 [DEP] coreutils
 [DEP] diffutils
 [DEP] docbook-xml
 [DEP] docbook-xsl
+[DEP] exempi
+[DEP] ffmpeg
 [DEP] gawk
 [DEP] gettext
-[DEP] gexiv2
+[DEP] gexiv2-014
 [OPT] glib
 [DEP] grep
 [DEP] gst-plugins-base
 [DEP] gstreamer
-[DEP] gudev
+[DEP] gupnp-dlna
 [DEP] icu4c
 [DEP] libgif
+[DEP] libgsf
+[DEP] libgxps
 [DEP] libjpeg
 [DEP] libpng
 [DEP] libseccomp
 [DEP] libtiff
+[DEP] libwebp
 [DEP] libxml
 [DEP] libxslt
 [DEP] linux-header
 [DEP] meson
 [DEP] ninja
 [DEP] openssl
+[DEP] poppler
+[DEP] python
 [DEP] sed
 [OPT] systemd
 [DEP] tar
 [DEP] tinysparql
+[DEP] totem-pl-parser
 [OPT] upower
+[DEP] util-linux
 [DEP] xz

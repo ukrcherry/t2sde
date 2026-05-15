@@ -1,0 +1,17 @@
+[TIMESTAMP] 1768675530 Sat Jan 17 19:45:30 2026
+[BUILDTIME] 3 (9)
+[SIZE] 0.43 MB, 82 files
+
+[DEP] bash
+[DEP] coreutils
+[DEP] diffutils
+[DEP] gawk
+[DEP] grep
+[DEP] meson
+[DEP] ninja
+[DEP] openssl
+[DEP] python
+[DEP] sed
+[DEP] tar
+[DEP] util-linux
+[DEP] xz

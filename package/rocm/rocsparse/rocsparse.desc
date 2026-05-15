@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/rocsparse/rocsparse.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,21 +13,20 @@
 [U] https://github.com/ROCm/rocSPARSE
 
 [A] Advanced Micro Devices, Inc.
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [F] CROSS
 [C] extra/development
 
 [L] MIT
-[S] Stable
-[V] 6.4.0
+[V] 7.2.3
 [P] X -----5---9 300.200
 
-[O] . $base/package/*/*/rocm-conf.in
-[O] var_append cmakeopt ' ' -DCMAKE_C_COMPILER=/$prefix/bin/clang
-[O] var_append cmakeopt ' ' -DCMAKE_CXX_COMPILER=/$prefix/bin/clang++
-[O] var_append cmakeopt ' ' "-DHIP_PLATFORM=amd -DHIP_COMPILER=clang"
-[O] var_append cmakeopt ' ' "-DAMDGPU_TARGETS='$SDECFG_PKG_ROCM_ARCHS'"
-
 [CV-GROUP] rocm
-[D] 2167d0b785d075c7dc8e56529521b8599f69014605af222ead65fe60 rocSPARSE-rocm-6.4.0.tar.gz https://github.com/ROCm/rocSPARSE/archive/rocm-6.4.0/
+[D] 43882287e8f0a0c52d4bbb7a57a9e3ca8421f4b05a7a5987ba292a86 rocSPARSE-rocm-7.2.3.tar.gz https://github.com/ROCm/rocSPARSE/archive/rocm-7.2.3/
+
+. $base/package/*/*/rocm-conf.in
+var_append cmakeopt ' ' -DCMAKE_C_COMPILER=/$prefix/bin/clang
+var_append cmakeopt ' ' -DCMAKE_CXX_COMPILER=/$prefix/bin/clang++
+var_append cmakeopt ' ' "-DHIP_PLATFORM=amd -DHIP_COMPILER=clang"
+var_append cmakeopt ' ' "-DAMDGPU_TARGETS='$SDECFG_PKG_ROCM_ARCHS'"

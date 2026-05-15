@@ -1,0 +1,22 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/fbterm/no-terminfo.patch.cross
+# Copyright (C) 2009 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0 or patched project license
+# --- T2-COPYRIGHT-END ---
+
+tic installs files into the host system we need to teach tic to
+install into the new sysroot.
+
+  - Rene Rebe <rene@exactcode.de>
+
+--- fbterm-1.4/Makefile.in.vanilla	2009-03-15 13:52:55.000000000 +0100
++++ fbterm-1.4/Makefile.in	2009-03-15 13:57:43.000000000 +0100
+@@ -166,7 +166,7 @@
+ target_alias = @target_alias@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-SUBDIRS = src im terminfo doc
++SUBDIRS = src im doc
+ all: config.h
+ 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
+ 

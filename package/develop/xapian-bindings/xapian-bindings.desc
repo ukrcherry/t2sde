@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xapian-bindings/xapian-bindings.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,15 +14,20 @@
 [U] https://www.xapian.org/
 
 [A] Olly Betts <olly@survex.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 [F] CROSS
 
+[E] opt luajit
+[E] opt openjdk
+[E] opt perl
+[E] opt ruby
+[E] opt tcl
+
 [L] GPL
-[S] Stable
-[V] 1.4.25
+[V] 2.0.0
 
-[O] var_remove confopt ' ' '--disable-debug' # unsupported
+[D] 62100783a995fccd4c90f4f79b30141a7883ac104acf4958e8780751 xapian-bindings-2.0.0.tar.xz https://oligarchy.co.uk/xapian/2.0.0/
 
-[D] 80ff5abe01fb8a6428921507da168dcc6e93feaabfd0d6bed7d9a437 xapian-bindings-1.4.25.tar.xz https://oligarchy.co.uk/xapian/1.4.25/
+var_remove confopt ' ' '--disable-debug' # unsupported

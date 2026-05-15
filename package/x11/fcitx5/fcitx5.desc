@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/fcitx5/fcitx5.desc
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Next generation of fcitx
+
+[T] Fcitx 5 is a next generation input method framework.
+
+[U] https://github.com/fcitx/fcitx5
+
+[A] CSSlayer <wengxt@gmail.com>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/library
+[F] CROSS
+
+[E] opt systemd
+
+[L] LGPL
+[V] 5.1.19
+
+[D] 38521e75355b846d014d2f236daa8d6278ea80e276bd788cb9d2bbf9 fcitx5-5.1.19.tar.gz git+https://github.com/fcitx/fcitx5 5.1.19
+
+var_append GCC_WRAPPER_APPEND ' ' -I$(pkgprefix includedir libxcb)

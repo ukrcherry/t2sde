@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/rocthrust/rocthrust.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,21 +11,20 @@
 [U] https://github.com/ROCm/rocThrust
 
 [A] Advanced Micro Devices, Inc.
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [F] CROSS
 [C] extra/development
 
 [L] MIT
-[S] Stable
-[V] 6.4.0
+[V] 7.2.3
 [P] X -----5---9 300.825
 
-[O] . $base/package/*/*/rocm-conf.in
-[O] var_append cmakeopt ' ' -DCMAKE_C_COMPILER=/$prefix/bin/clang
-[O] var_append cmakeopt ' ' -DCMAKE_CXX_COMPILER=/$prefix/bin/clang++
-[O] var_append cmakeopt ' ' "-DHIP_PLATFORM=amd -DHIP_COMPILER=clang"
-[O] var_append cmakeopt ' ' "-DAMDGPU_TARGETS='$SDECFG_PKG_ROCM_ARCHS'"
-
 [CV-GROUP] rocm
-[D] 29bace7b66903e15b89587bd12562e9751f8823bc015ec344728cd88 rocThrust-rocm-6.4.0.tar.gz https://github.com/ROCm/rocThrust/archive/rocm-6.4.0/
+[D] 831eec7f1fa09543cfaec5fe66ccf24f29dcf92b27fcbaae8f9a8444 rocThrust-rocm-7.2.3.tar.gz https://github.com/ROCm/rocThrust/archive/rocm-7.2.3/
+
+. $base/package/*/*/rocm-conf.in
+var_append cmakeopt ' ' -DCMAKE_C_COMPILER=/$prefix/bin/clang
+var_append cmakeopt ' ' -DCMAKE_CXX_COMPILER=/$prefix/bin/clang++
+var_append cmakeopt ' ' "-DHIP_PLATFORM=amd -DHIP_COMPILER=clang"
+var_append cmakeopt ' ' "-DAMDGPU_TARGETS='$SDECFG_PKG_ROCM_ARCHS'"

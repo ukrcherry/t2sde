@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/patchutils/patchutils.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -19,13 +19,12 @@
 [U] https://github.com/twaugh/patchutils
 
 [A] Tim Waugh <twaugh@redhat.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/development
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 0.4.2
+[V] 0.4.5
 
-[D] 7a9ada99dc2d7c7d329a5248c87f5501f21b9a7ff02b669d18b6cfef patchutils-0.4.2.tar.xz http://cyberelk.net/tim/data/patchutils/stable/
+[D] b00b7c4051c993f7c3b3fc2d9bc025b6cc92d8e466f1a73dd40bfe19 patchutils-0.4.5.tar.xz https://github.com/twaugh/patchutils/releases/download/0.4.5/

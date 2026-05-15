@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/rfc/rfc.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -17,14 +17,13 @@
 [U] https://www.ietf.org/
 
 [A] Various People
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/documentation
 [F] CROSS
 
 [L] Unknown
-[S] Stable
-[V] 20221011
+[V] 20250911
 
 [CV-FLAGS] NO-AUTO
 [D] X RFCs0001-0500.tar.gz http://ftp.rfc-editor.org/in-notes/tar/
@@ -45,3 +44,16 @@
 [D] X RFCs7501-8000.tar.gz http://ftp.rfc-editor.org/in-notes/tar/
 [D] X RFCs8001-8500.tar.gz http://ftp.rfc-editor.org/in-notes/tar/
 [D] X RFCs8501-latest.tar.gz http://ftp.rfc-editor.org/in-notes/tar/
+
+rfc_main() {
+	cd $root/usr/share/doc; mkdir -p RFC; cd RFC
+	for x in `match_source_file -p RFC`; do
+		echo "Extracting ${x##*/} ..."
+		tar --no-same-owner $taropt $x
+	done
+	rm -rf nfs/ tar/ readme-rfc-all-tar.txt
+	ver=`ls rfc[0-9]*.txt | cut -f1 -d. | cut -c4- | sort -n | tail -n 1`
+}
+autoextract=0
+runmake=0
+hook_add postmake 5 rfc_main

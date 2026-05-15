@@ -1,6 +1,6 @@
-[TIMESTAMP] 1737643619 Thu Jan 23 15:46:59 2025
-[BUILDTIME] 90 (9)
-[SIZE] 2.36 MB, 63 files
+[TIMESTAMP] 1759857775 Tue Oct  7 19:22:55 2025
+[BUILDTIME] 110 (9)
+[SIZE] 2.04 MB, 59 files
 
 [DEP] alsa-lib
 [DEP] bash
@@ -17,10 +17,10 @@
 [DEP] linux-header
 [DEP] make
 [DEP] pkgconfig
+[DEP] portaudio
 [DEP] pulseaudio
 [DEP] qt6base
 [DEP] qt6multimedia
 [DEP] sed
 [DEP] tar
-[DEP] tbb
 [DEP] vulkan-headers

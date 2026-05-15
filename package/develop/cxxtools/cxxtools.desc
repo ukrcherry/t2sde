@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/cxxtools/cxxtools.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,16 +14,18 @@
 [T] query_params, and a class for easy parsing of CGI parameters (GET and
 [T] POST) in a CGI program.
 
-[U] http://www.tntnet.org
+[U] https://github.com/maekitalo/cxxtools/
 
 [A] Tommi Mäkitalo <tommi@tntnet.org>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 2.2.1
+[V] 3.0
 
-[D] 655124d0bc36186b42ccf354a6c51e591fc355c5f7131588a104bf6d cxxtools-2.2.1.tar.gz http://www.tntnet.org/download/
+[D] cfb69c4be110a2edde3a075dcc43aa61025040a51470fd3145ac8fe0 cxxtools-3.0.tar.gz https://github.com/maekitalo/cxxtools/archive/refs/tags/V3.0/
+
+hook_add preconf 5 'autoreconf -fi'
+var_append GCC_WRAPPER_APPEND ' ' -std=gnu++11

@@ -1,0 +1,17 @@
+[TIMESTAMP] 1761674449 Tue Oct 28 19:00:49 2025
+[BUILDTIME] 3 (9)
+[SIZE] 15.44 MB, 34 files
+
+[DEP] bash
+[DEP] coreutils
+[DEP] diffutils
+[DEP] gawk
+[DEP] go
+[DEP] grep
+[DEP] gtk4-layer-shell
+[DEP] gzip
+[DEP] meson
+[DEP] ninja
+[DEP] openssl
+[DEP] sed
+[DEP] tar

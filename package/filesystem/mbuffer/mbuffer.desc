@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/mbuffer/mbuffer.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Tool for measuring and buffering data streams
+
+[T] mbuffer is a tool for buffering data streams with a large set of unique
+[T] features.
+
+[U] https://www.maier-komor.de/mbuffer.html
+
+[A] Mbuffer Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[L] GPL3
+[V] 20260301
+
+[D] 655e2d724901228bc4b37e7b53726b75b53a71a176dae732ad913c43 mbuffer-20260301.tgz https://www.maier-komor.de/software/mbuffer/

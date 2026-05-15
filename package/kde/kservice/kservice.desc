@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/kservice/kservice.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -12,17 +12,16 @@
 [U] https://www.kde.org
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
-[F] OBJDIR
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 6.14.0
-[P] X -----5---9 162.890
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 6.26.0
+[P] X ?----5---9 162.890
 
 [CV-GROUP] kde-frameworks
-[D] 0774002d55d8beb054502b1cd09cf5854d69a369fd2c8915df597e6d kservice-6.14.0.tar.xz https://download.kde.org/stable/frameworks/6.14/
+[D] c58a1cfb6c278bfa7134ea285fabc461d318f5099cfd66f0e1aadf17 kservice-6.26.0.tar.xz https://download.kde.org/stable/frameworks/6.26/
+
+. $base/package/*/*/kde-conf.in

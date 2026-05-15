@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libxfce4util/libxfce4util.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -12,17 +12,16 @@
 [U] https://www.xfce.org/
 
 [A] Benedikt Meurer <benedikt.meurer@unix-ag.uni-siegen.de>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/desktop/xfce
 [F] CROSS NO-LTO.clang
 
 [L] BSD
-[S] Stable
 [V] 4.20.1
-[P] X -----5---9 222.300
-
-[O] . $base/package/xfce4/*/xfce4-conf.in NO_SANITY_CHECK
-[O] runmeson=0
+[P] X -----5---9 222.199
 
 [D] 73852078be91983399b4e99499c85350be669938214437a47b6a7a95 libxfce4util-4.20.1.tar.bz2 https://archive.xfce.org/src/xfce/libxfce4util/4.20/
+
+. $base/package/xfce4/*/xfce4-conf.in NO_SANITY_CHECK
+runmeson=0

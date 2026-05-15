@@ -1,0 +1,26 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/highs/highs.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Linear optimization software
+
+[T] HiGHS is a high performance serial and parallel solver for certain large
+[T] scale sparse linear optimization problems. HiGHS can solve linear
+[T] programming (LP) problems, convex quadratic programming (QP) problems, and
+[T] mixed integer programming (MIP) problems.
+
+[U] https://github.com/ERGO-Code/HiGHS/
+
+[A] HiGHS Project
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/development
+[F] CROSS OBJDIR
+
+[L] MIT
+[V] 1.14.0
+[P] X -----5---9 150.000
+
+[D] 2b0040b8f121a70d11984c8480a7af1798b37b4ae7f2b8e8e411cc0d HiGHS-1.14.0.tar.gz https://github.com/ERGO-Code/HiGHS/archive/v1.14.0/

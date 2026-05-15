@@ -1,0 +1,34 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/elinks/hotfix-no_nls.patch
+# Copyright (C) 2004 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0 or patched project license
+# --- T2-COPYRIGHT-END ---
+
+2006-04-02: we have to compile elinks without NLS support because of conflicts with glibc
+
+--- elinks-0.11.1/src/intl/gettext/Makefile.orig	2006-04-02 11:33:24.000000000 +0200
++++ elinks-0.11.1/src/intl/gettext/Makefile	2006-04-02 11:36:39.000000000 +0200
+@@ -26,9 +26,9 @@
+ 
+ 
+ # $(builddir)/charset.alias: $(srcdir)config.charset
+-$(builddir)/charset.alias: $(srcdir)config.charset
+-	$(SHELL) $(srcdir)config.charset '$(host)' > $@.new
+-	mv $@.new $@
++#$(builddir)/charset.alias: $(srcdir)config.charset
++#	$(SHELL) $(srcdir)config.charset '$(host)' > $@.new
++#	mv $@.new $@
+ 
+ # FIXME: Building plural.c from plural.y on the fly doesn't work
+ 
+@@ -40,8 +40,8 @@
+ 	$(YACC) $(YFLAGS) --output $@ $<
+ 	rm -f $*.h
+ 
+-install-local: $(builddir)/charset.alias all
+-	@if test '$(CONFIG_NLS)' = yes; then \
++install-local: all
++	@if test '$(CONFIG_NLS)' = no; then \
+ 	  temp=$(DESTDIR)$(libdir)/t-charset.alias; \
+ 	  dest=$(DESTDIR)$(libdir)/charset.alias; \
+ 	  if test -f $(DESTDIR)$(libdir)/charset.alias; then \

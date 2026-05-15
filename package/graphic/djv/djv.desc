@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/djv/djv.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -10,16 +10,14 @@
 [T] calibration. Features include support for extended range images, industry
 [T] standard file formats and batch image conversion.
 
-[U] https://djv.sourceforge.net/
+[U] https://grizzlypeak3d.github.io/DJV/
 
 [A] Darby Johnston
 [M] Sebastian Czech <t2_@arcor.de>
 
 [C] extra/multimedia
-[F] NOPARALLEL
 
 [L] OpenSource
-[S] Beta
-[V] 0.8.1
+[V] 3.3.4
 
-[D] 81198e5a8229633c139283a6cfc30453086d19ce6dafd7451cd7dbe0 djv-0.8.1.tar.gz http://dl.sourceforge.net/sourceforge/djv/
+[D] a633c478496fd3e98331df9ac8bce2c7768c9200514ea456561555d7 DJV-3.3.4.tar.gz https://github.com/darbyjohnston/DJV/archive/refs/tags/3.3.4/

@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/recordmydesktop/recordmydesktop.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Produces a OGG encapsulated Theora/Vorbis recording of your desktop
+
+[T] recordMyDesktop is a desktop session recorder that attemps to be easy to
+[T] use, yet also effective at it's primary task.
+
+[U] https://enselic.github.io/recordmydesktop/
+
+[A] Recordmydesktop Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[E] opt libtheora
+
+[L] GPL
+[V] 0.4.0
+
+[D] c0f2cf8cf0fa1d4c54c6579c91637c5081d4daa506e8937c643a2f75 recordmydesktop-0.4.0.tar.gz https://github.com/Enselic/recordmydesktop/releases/download/v0.4.0/
+
+var_append GCC_WRAPPER_APPEND ' ' -L$root$(pkgprefix libdir libice)

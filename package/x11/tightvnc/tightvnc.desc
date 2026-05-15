@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/tightvnc/tightvnc.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -22,10 +22,47 @@
 [F] NOPARALLEL FCOMMON
 
 [L] GPL
-[S] Beta
 [V] 1.3.10
 
 [SRC] .
 
-[D] 284718876 tightvnc-1.3.10_unixsrc.tar.bz2 http://dl.sourceforge.net/sourceforge/vnc-tight/
-[D] 3220439048 tightvnc-1.3.10_javasrc.tar.gz http://dl.sourceforge.net/sourceforge/vnc-tight/
+[D] 284718876 tightvnc-1.3.10_unixsrc.tar.bz2 https://prdownloads.sourceforge.net/sourceforge/vnc-tight/
+[D] 3220439048 tightvnc-1.3.10_javasrc.tar.gz https://prdownloads.sourceforge.net/sourceforge/vnc-tight/
+
+[ $prefix_auto = 1 ] && prefix="usr/X11" && set_confopt
+
+var_append GCC_WRAPPER_APPEND ' ' -std=gnu11
+makeinstopt=
+
+[ "$JAVA_HOME" ] || desc_SRC=
+
+patch_vnc_server() {
+	local x=${x//*_/} x=${x//.tar.*/}
+	var_append patchfiles ' ' "`ls $confdir/*.patch.$x 2>/dev/null`"
+}
+hook_add prepatch 3 patch_vnc_server
+
+build_vnc_server() {
+	if [ -d Xvnc ]; then
+		cd Xvnc
+		./configure
+		eval $MAKE $makeopt AR="'$AR cq'"
+		cd ..
+	fi
+}
+hook_add postmake 5 build_vnc_server
+
+install_vnc_tight() {
+	if [ -f vncserver ]; then
+		sed -e 's,/usr/local/vnc/classes,$root$datadir/vnc/classes,' -i vncserver
+
+		./vncinstall $root$bindir $root$mandir
+		mkdir -p $root$datadir/vnc/classes
+		cp -av classes/* $root$datadir/vnc/classes
+	fi
+
+	if [ -f index.vnc ]; then
+		cp -av *.class *.jar *.vnc $root$datadir/vnc/classes
+	fi
+}
+hook_add postmake 8 install_vnc_tight

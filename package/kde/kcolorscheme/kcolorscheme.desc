@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/kcolorscheme/kcolorscheme.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -12,16 +12,16 @@
 [U] https://www.kde.org
 
 [A] The KDE-Team
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 6.14.0
+[V] 6.26.0
 [P] X -----5---9 162.889
 
-[O] . $base/package/*/*/kde-conf.in
-
 [CV-GROUP] kde-frameworks
-[D] 5c91bb3be3649a4608cf9d8f154da5680c3ad08863a10734aed42829 kcolorscheme-v6.14.0.tar.gz https://github.com/KDE/kcolorscheme/archive/refs/tags/v6.14.0/
+[D] cf40090ff472f21495ef8a499c84381801f9ec0af4397adc9b722e1a kcolorscheme-v6.26.0.tar.gz https://github.com/KDE/kcolorscheme/archive/refs/tags/v6.26.0/
+
+. $base/package/*/*/kde-conf.in

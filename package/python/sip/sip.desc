@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/sip/sip.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,16 +14,16 @@
 [U] http://www.riverbankcomputing.co.uk/sip/
 
 [A] Riverbank Computing Ltd. <http://www.riverbankcomputing.co.uk>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
-[E] add python
+[E] add packaging python
+[E] add setuptools-scm
 
 [L] OpenSource
 
-[S] Stable
-[V] 6.10.0
+[V] 6.15.3
 [P] X -----5---9 200.500
 
-[D] 44afd865f82546aefca01dfd4a11b0548bb7f814411eca8a7e0fd275 sip-6.10.0.tar.gz https://github.com/Python-SIP/sip/archive/6.10.0/
+[D] 386320e7b75429a40ce4ca92aa9aef67ff1485980354ee4dcd8f4fc2 sip-6.15.3.tar.gz https://github.com/Python-SIP/sip/archive/6.15.3/

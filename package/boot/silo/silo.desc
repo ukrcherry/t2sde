@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/silo/silo.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -20,8 +20,8 @@
 
 [A] Ben Collins <bcollins@debian.org>
 [A] Jakub Jelinek <jakub@redhat.com>
-[M] The T2 Project <t2@t2-project.org>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/boot
 [F] CROSS NOPARALLEL NO-LTO.gcc
@@ -29,12 +29,11 @@
 [R] + sparc
 
 [L] GPL
-[S] Stable
 [V] 9277bfd
 
-[O] var_append makeopt ' ' 'USELIB="-L $root/lib"'
-[O] var_append makeopt ' ' "CC='$CC -m32'"
-[O] var_append makeopt ' ' "LD='$LD -m elf32_sparc'"
-[O] CC_WRAPPER_BYPASS=1
-
 [D] 31f4817835aa0ed5f208b7526b862127d291663193629f65082cf556 silo-9277bfd.tar.gz https://git.kernel.org/pub/scm/linux/kernel/git/davem/silo.git/snapshot/
+
+var_append makeopt ' ' 'USELIB="-L $root/lib"'
+var_append makeopt ' ' "CC='$CC -m32'"
+var_append makeopt ' ' "LD='$LD -m elf32_sparc'"
+CC_WRAPPER_BYPASS=1

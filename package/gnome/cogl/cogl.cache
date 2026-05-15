@@ -1,20 +1,22 @@
+[TIMESTAMP] 1778633353 Wed May 13 03:49:13 2026
+[BUILDTIME] 45 (9)
+[SIZE] 4.45 MB, 212 files
 
-[TIMESTAMP] 1713944080 Wed Apr 24 09:34:40 2024
-[BUILDTIME] 35 (9)
-[SIZE] 4.37 MB, 195 files
-
-[DEP] 00-dirtree
 [DEP] bash
 [DEP] binutils
 [DEP] cairo
 [DEP] coreutils
 [DEP] diffutils
+[DEP] file
 [DEP] findutils
 [DEP] gawk
 [DEP] gdk-pixbuf
+[DEP] gettext
 [OPT] glib
 [DEP] gobject-introspection
 [DEP] grep
+[OPT] gst-plugins-base
+[OPT] gstreamer
 [DEP] harfbuzz
 [DEP] libglvnd
 [DEP] libx11
@@ -26,11 +28,15 @@
 [DEP] libxrender
 [DEP] linux-header
 [DEP] make
+[DEP] mesa
 [DEP] openssl
 [DEP] pango
 [DEP] pkgconfig
 [DEP] python
 [DEP] sed
+[DEP] setuptools
 [DEP] tar
+[DEP] util-linux
+[DEP] wayland
 [DEP] xorgproto
 [DEP] xz

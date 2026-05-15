@@ -1,28 +1,28 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/kpeople/kpeople.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
-[I] KDE Frameworks 5 Tier 3 library for contact and people aggregation
+[I] KDE Frameworks library for contact and people aggregation
 
-[T] KPeople offers unified access to our contacts from different sources, 
+[T] KPeople offers unified access to our contacts from different sources,
 [T] grouping them by person while still exposing all the data.
 
 [U] https://www.kde.org
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 6.14.0
+[V] 6.26.0
 [P] X -----5---9 162.900
 
-[O] . $base/package/*/*/kde-conf.in
-
 [CV-GROUP] kde-frameworks
-[D] 6d90ef79615a646b5a7945a9ff763c724070b2b072edc3d6665b6d8f kpeople-6.14.0.tar.xz https://download.kde.org/stable/frameworks/6.14/
+[D] 28ce4118af770ac70d2a1cdea44f870517da2f38f964e48df855d24c kpeople-6.26.0.tar.xz https://download.kde.org/stable/frameworks/6.26/
+
+. $base/package/*/*/kde-conf.in

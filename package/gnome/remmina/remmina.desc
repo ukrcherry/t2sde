@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/remmina/remmina.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -19,22 +19,21 @@
 [A] Giovanni Panozzo <giovanni@panozzo.it>
 [A] Johannes Weberhofer <jweberhofer@weberhofer.at>
 [A] Matteo F. Vescovi <mfv@debian.org>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 1.4.39
+[V] 1.4.43
 
-[O] . $base/package/*/*/gnome-conf.in
+[D] cf621edc51e722f85b9da2e5b84aa72f0add2bf1aae0774b38c7b269 Remmina-v1.4.43.tar.bz2 https://gitlab.com/Remmina/Remmina/-/archive/v1.4.43/
 
-[O] atstage cross && var_append cmakeopt ' ' -DWITH_PYTHONLIBS=OFF
-[O] var_append cmakeopt ' ' -DHAVE_LIBAPPINDICATOR=OFF
-[O] pkginstalled vte || var_append cmakeopt ' ' -DWITH_VTE=OFF
-[O] pkginstalled libvncserver || var_append cmakeopt ' ' -DWITH_LIBVNCSERVER=OFF
-[O] pkginstalled webkitgtk || var_append cmakeopt ' ' -DWITH_WEBKIT2GTK=OFF
-[O] pkginstalled freerdp && var_append cmakeopt ' ' -DWITH_FREERDP3=ON
+. $base/package/*/*/gnome-conf.in
 
-[D] 0f1d3da3d98e1943e3b61cfc444065d15b98510a66a14a4ba52af2e7 Remmina-v1.4.39.tar.bz2 https://gitlab.com/Remmina/Remmina/-/archive/v1.4.39/
+atstage cross && var_append cmakeopt ' ' -DWITH_PYTHONLIBS=OFF
+var_append cmakeopt ' ' -DHAVE_LIBAPPINDICATOR=OFF
+pkginstalled vte || var_append cmakeopt ' ' -DWITH_VTE=OFF
+pkginstalled libvncserver || var_append cmakeopt ' ' -DWITH_LIBVNCSERVER=OFF
+pkginstalled webkitgtk || var_append cmakeopt ' ' -DWITH_WEBKIT2GTK=OFF
+pkginstalled freerdp && var_append cmakeopt ' ' -DWITH_FREERDP3=ON

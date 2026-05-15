@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/prima/prima.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -16,7 +16,7 @@
 [U] http://www.prima.eu.org
 
 [A] Dmitry Karasik <dmitry@karasik.eu.org>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/graphic
 [F] FPIC
@@ -25,9 +25,8 @@
 [E] opt libwebp
 
 [L] BSD
-[S] Stable
-[V] 1.75
+[V] 1.77
 
-[O] plconfopt="X11BASE=/`pkgprefix libx11`"
+[D] df9ca50a95811965d363def584e8aa063995d11410c149ce90ca9154 Prima-1.77.tar.gz https://cpan.metacpan.org/authors/id/K/KA/KARASIK/
 
-[D] 5994d11a03e9537bcec5330cd789969e05cc15accaa4599b07e2a22c Prima-1.75.tar.gz http://www.prima.eu.org/download/
+plconfopt="X11BASE=/`pkgprefix libx11`"

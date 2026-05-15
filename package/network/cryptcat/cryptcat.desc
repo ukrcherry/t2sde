@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/cryptcat/cryptcat.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -20,17 +20,16 @@
 [U] https://farm9.org/Cryptcat/
 
 [A] Farm9 <info@farm9.org>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 [F] CROSS
 
 [L] GPL
-[S] Stable
 [V] 1.2.1
 
-[O] var_append makeopt ' ' 'LD=$CC linux'
-[O] makeinstopt=
-[O] hook_add postmake 5 'install -m 755 cryptcat $root$bindir/'
+[D] aa55964f08b786f7e2611e7476485f8226d0d220e97b240a84f61007 cryptcat-unix-1.2.1.tar https://prdownloads.sourceforge.net/sourceforge/cryptcat/
 
-[D] aa55964f08b786f7e2611e7476485f8226d0d220e97b240a84f61007 cryptcat-unix-1.2.1.tar http://dl.sourceforge.net/sourceforge/cryptcat/
+var_append makeopt ' ' 'LD=$CC linux'
+makeinstopt=
+hook_add postmake 5 'install -m 755 cryptcat $root$bindir/'

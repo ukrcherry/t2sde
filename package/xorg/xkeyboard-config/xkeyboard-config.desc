@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xkeyboard-config/xkeyboard-config.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,18 +11,20 @@
 [U] https://www.freedesktop.org/wiki/Software/XKeyboardConfig
 
 [A] X.org Foundation {http://www.X.org}
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/x11
 [F] CROSS
 
 [L] OpenSource
-[S] Stable
-[V] 2.44
+[V] 2.47
 [P] X -----5---9 120.500
 
-[O] var_append confopt ' ' --with-xkb-rules-symlink=xorg
-[O] var_append confopt ' ' --enable-compat-rules
-[O] . package/*/*/modular-x-conf.in
+[D] 5090f7a8a782842f78bdf26d3831bf67644420c4a4f661b28a4a6762 xkeyboard-config-2.47.tar.bz2 https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config/-/archive/xkeyboard-config-2.47/
 
-[D] d0cbbf3ccf52d12edcc88eb21b4953096acb98626aab48e40d8b4416 xkeyboard-config-2.44.tar.xz http://www.x.org/releases/individual/data/xkeyboard-config/
+. package/*/*/modular-x-conf.in
+var_append mesonopt ' ' -Dcompat-rules=true
+var_append mesonopt ' ' -Dxorg-rules-symlinks=true
+
+# hotfix relative for cross builds
+hook_add postmake 5 "mkdir -pv $root$datadir/X11; ln -snfv ../xkeyboard-config-2 $root$datadir/X11/xkb"

@@ -1,14 +1,18 @@
-[TIMESTAMP] 1738858432 Thu Feb  6 17:13:52 2025
-[BUILDTIME] 165 (9)
-[SIZE] 15.48 MB, 14 files
+[TIMESTAMP] 1772570074 Tue Mar  3 21:34:34 2026
+[BUILDTIME] 135 (9)
+[SIZE] 16.21 MB, 60 files
 
 [DEP] bash
+[DEP] bzip2
 [DEP] cargo
 [DEP] coreutils
+[DEP] cython
 [DEP] diffutils
+[DEP] findutils
 [DEP] gawk
 [DEP] grep
 [DEP] gzip
+[DEP] linux-header
 [DEP] openssl
 [DEP] python
 [DEP] python-gpep517
@@ -18,3 +22,4 @@
 [DEP] setuptools
 [DEP] setuptools-rust
 [DEP] tar
+[DEP] util-linux

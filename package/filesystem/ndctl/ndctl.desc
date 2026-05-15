@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/ndctl/ndctl.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,17 +12,19 @@
 [U] https://github.com/pmem/ndctl
 
 [A] Dan Williams <dan.j.williams@intel.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/filesystem
 [F] CROSS NO-LTO.gcc
 
 [L] LGPL
-[S] Stable
-[V] 81
-[P] X -----5---9 400.000
+[V] 84
+[P] X -----5---9 180.010
 
-[O] pkginstalled systemd || var_append mesonopt ' ' -Dsystemd=disabled
-[O] pkginstalled asciidoctor || var_append mesonopt ' ' -Ddocs=disabled
+[D] 9bea6d5e3206adbc5cb06a68d41e916d1836b7b44a989c063e138925 ndctl-84.tar.gz https://github.com/pmem/ndctl/archive/v84/
 
-[D] 64563acdc2ef3555c806e048a186a69cde6780f5a4efd9f49ad365f6 ndctl-81.tar.gz https://github.com/pmem/ndctl/archive/v81/
+var_append mesonopt ' ' -Diniparserdir=$root$(pkgprefix includedir iniparser)/iniparser
+
+pkginstalled asciidoctor || var_append mesonopt ' ' -Ddocs=disabled
+pkginstalled libtracefs || var_append mesonopt ' ' -Dlibtracefs=disabled
+pkginstalled systemd || var_append mesonopt ' ' -Dsystemd=disabled

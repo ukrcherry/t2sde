@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/glaze/glaze.desc
+[COPY] Copyright (C) 2023 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Extremely fast, in memory, JSON and interface library for modern C++
+
+[T] One of the fastest JSON libraries in the world. Glaze reads and writes from
+[T] object memory, simplifying interfaces and offering incredible performance.
+
+[U] https://github.com/stephenberry/glaze
+
+[A] stephenberry
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/library
+[F] CROSS OBJDIR
+
+[L] MIT
+[V] 7.6.0
+[P] X -----5---9 200.000
+
+[D] c27fd90654babf127af022261ecfbabbc9786e996ee3f5ecede708e6 glaze-7.6.0.tar.gz https://github.com/stephenberry/glaze/archive/refs/tags/v7.6.0/
+
+var_append cmakeopt ' ' '-Dglaze_DEVELOPER_MODE=OFF -DBUILD_TESTING=OFF'

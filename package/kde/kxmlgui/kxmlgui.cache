@@ -1,17 +1,17 @@
-[TIMESTAMP] 1743118075 Fri Mar 28 00:27:55 2025
-[BUILDTIME] 100 (9)
-[SIZE] 3.18 MB, 166 files
+[TIMESTAMP] 1770493519 Sat Feb  7 20:45:19 2026
+[BUILDTIME] 95 (9)
+[SIZE] 3.23 MB, 167 files
 
 [DEP] bash
 [DEP] binutils
 [DEP] cmake
 [DEP] coreutils
+[OPT] cups
 [DEP] diffutils
 [DEP] extra-cmake-modules
 [DEP] gawk
 [DEP] gettext
 [DEP] grep
-[DEP] kcolorscheme
 [DEP] kconfig
 [DEP] kconfigwidgets
 [DEP] kcoreaddons
@@ -23,13 +23,11 @@
 [DEP] kwidgetsaddons
 [DEP] linux-header
 [DEP] make
-[DEP] pkgconfig
 [DEP] procps
-[DEP] python
 [DEP] qt6base
 [DEP] qt6tools
 [DEP] sed
 [DEP] tar
-[DEP] tbb
+[DEP] util-linux
 [DEP] vulkan-headers
 [DEP] xz

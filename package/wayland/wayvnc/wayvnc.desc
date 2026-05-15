@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/wayvnc/wayvnc.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,13 +15,12 @@
 [U] https://github.com/any1/wayvnc
 
 [A] Andri Yngvason
-[M] The T2 Project <t2@t2sde.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/graphic
 [F] CROSS
 
 [L] MIT
-[S] Gamma
-[V] 0.9.1
+[V] 0.10.0
 
-[D] 4ace2e45193f064d9a2e925c336a02e8e1ce77f306b04dd604989973 wayvnc-0.9.1.tar.gz https://github.com/any1/wayvnc/archive/refs/tags/v0.9.1/
+[D] 249e9edecd3d3c4f288d9a2755143a1f0bca58ad18b652dcef027d12 wayvnc-0.10.0.tar.gz https://github.com/any1/wayvnc/archive/refs/tags/v0.10.0/

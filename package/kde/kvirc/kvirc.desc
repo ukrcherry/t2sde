@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/kvirc/kvirc.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -17,14 +17,13 @@
 [M] Aldas Nabazas <baldzius@gmail.com>
 
 [C] extra/network
+[F] CROSS OBJDIR
 
 [E] opt doxygen
 
 [L] GPL
-[S] Stable
-[V] 5.2.6
-[P] X -----5---9 184.600
+[V] 5.2.10
 
-[O] . $base/package/*/*/kde-conf.in
+[D] 37e6194b0fd3f79c78e87f86707c18254f188a54d214e1da55af0aa4 KVIrc-5.2.10.tar.gz https://github.com/kvirc/KVIrc/archive/refs/tags/5.2.10/
 
-[D] 76d0faa98bd9fc7fa26190fa714a29dc6f88fda8292607a5c60b153e KVIrc-5.2.6.tar.gz https://github.com/kvirc/KVIrc/archive/refs/tags/5.2.6/
+. $base/package/*/*/kde-conf.in

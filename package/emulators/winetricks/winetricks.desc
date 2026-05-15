@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/winetricks/winetricks.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Winetricks is an easy way to work around problems in Wine
+
+[T] Winetricks is an easy way to work around problems in Wine.
+
+[U] https://github.com/Winetricks/winetricks
+
+[A] Winetricks Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 20260125
+[L] LGPL
+
+[D] da8944539d2a19d6c3fee383c2177d64b4ebc122969a4e38ae21b4b5 winetricks-20260125.tar.gz https://github.com/Winetricks/winetricks/archive/20260125/

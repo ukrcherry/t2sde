@@ -1,8 +1,7 @@
-[TIMESTAMP] 1743590802 Wed Apr  2 12:46:42 2025
-[BUILDTIME] 140 (9)
-[SIZE] 2.90 MB, 120 files
+[TIMESTAMP] 1770549169 Sun Feb  8 12:12:49 2026
+[BUILDTIME] 200 (9)
+[SIZE] 3.46 MB, 143 files
 
-[DEP] asciidoctor
 [DEP] bash
 [DEP] binutils
 [DEP] bzip2
@@ -13,6 +12,7 @@
 [DEP] extra-cmake-modules
 [DEP] freetype
 [DEP] gawk
+[DEP] gdb
 [DEP] gettext
 [DEP] grep
 [DEP] kconfig
@@ -24,22 +24,24 @@
 [DEP] kirigami
 [DEP] kitemmodels
 [DEP] knotifications
+[DEP] kservice
 [DEP] kstatusnotifieritem
 [DEP] kwallet
 [DEP] kwidgetsaddons
 [DEP] kwindowsystem
 [DEP] linux-header
 [DEP] make
+[DEP] ncurses
 [DEP] pkgconfig
+[DEP] polkit-qt-1
 [DEP] procps
 [DEP] pygdbmi
 [DEP] python
 [DEP] qt6base
 [DEP] qt6declarative
-[DEP] ruby
 [DEP] sed
 [DEP] syntax-highlighting
 [OPT] systemd
 [DEP] tar
-[DEP] tbb
+[DEP] util-linux
 [DEP] vulkan-headers

@@ -1,11 +1,12 @@
-[TIMESTAMP] 1737655835 Thu Jan 23 19:10:35 2025
-[BUILDTIME] 40 (9)
-[SIZE] 9.32 MB, 525 files
+[TIMESTAMP] 1753650946 Sun Jul 27 23:15:46 2025
+[BUILDTIME] 60 (9)
+[SIZE] 15.85 MB, 576 files
 
 [DEP] at-spi2-core
+[DEP] autoconf
+[DEP] automake
 [DEP] bash
 [DEP] binutils
-[DEP] bzip2
 [DEP] cairo
 [DEP] coreutils
 [DEP] diffutils
@@ -15,16 +16,21 @@
 [DEP] gettext
 [DEP] glib
 [DEP] grep
-[DEP] gtk+2
+[DEP] gtk+
+[DEP] gzip
 [DEP] harfbuzz
 [DEP] intltool
+[DEP] libgsf
 [OPT] libofx
+[DEP] libtool
 [DEP] libxml
 [DEP] linux-header
+[DEP] m4
 [DEP] make
 [DEP] openssl
 [DEP] pango
 [DEP] perl
+[DEP] perl-xml-parser
 [DEP] sed
 [DEP] tar
 [DEP] zlib

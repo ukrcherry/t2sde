@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/mate-media/mate-media.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,16 +11,15 @@
 [U] https://mate-desktop.org/
 
 [A] MATE developer
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/desktop/mate
 
 [L] GPL
-[S] Stable
 [V] 1.28.1
-[P] X -----5---9 179.400
-
-[O] . $base/package/*/*/mate-conf.in
-[O] var_append GCC_WRAPPER_APPEND ' ' "$(pkg-config --libs x11)"
+[P] X -----5---9 700.000
 
 [D] 534a22c51bf2ac07ec692f3d997ef3d120e8543f53ad6701d34a94d2 mate-media-1.28.1.tar.xz https://pub.mate-desktop.org/releases/1.28/
+
+. $base/package/*/*/mate-conf.in
+var_append GCC_WRAPPER_APPEND ' ' "$(pkg-config --libs x11)"

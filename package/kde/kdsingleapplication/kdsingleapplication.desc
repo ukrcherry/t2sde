@@ -1,0 +1,23 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/kdsingleapplication/kdsingleapplication.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] KDAB's helper class for single-instance policy applications
+
+[T] KDSingleApplication is a helper class for single-instance policy
+[T] applications written by KDAB.
+
+[U] https://github.com/KDAB/KDSingleApplication
+
+[A] KDAB
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/library
+[F] CROSS OBJDIR
+
+[L] OpenSource
+[V] 1.2.1
+
+[D] 891c598b09d8ce88855aad32b6b2a7bb684b83b3791b8746aee118f1 KDSingleApplication-1.2.1.tar.gz https://github.com/KDAB/KDSingleApplication/archive/v1.2.1/

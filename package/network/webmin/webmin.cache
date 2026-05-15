@@ -1,17 +1,21 @@
+[TIMESTAMP] 1778672112 Wed May 13 13:35:12 2026
+[BUILDTIME] 6 (9)
+[SIZE] 98.15 MB, 23820 files
 
-[TIMESTAMP] 1134156337 Fri Dec  9 20:25:37 2005
-[BUILDTIME] 10 (9)
-[SIZE] 32.76 MB, 12520 files
-
-[DEP] 00-dirtree
+[DEP] bash
 [DEP] coreutils
+[DEP] cron
 [DEP] diffutils
+[DEP] e2fsprogs
 [DEP] findutils
 [DEP] gawk
 [DEP] grep
+[DEP] gzip
 [DEP] m4
 [DEP] perl
+[DEP] perl-dbi
+[DEP] perl-net-ssleay
+[DEP] procps
 [DEP] sed
-[DEP] sysfiles
 [DEP] tar
-[DEP] xscreensaver
+[DEP] util-linux

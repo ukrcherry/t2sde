@@ -1,0 +1,29 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/python-httpx/python-httpx.desc
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] The next generation HTTP client
+
+[T] HTTPX is a fully featured HTTP client library for Python 3. It includes an
+[T] integrated command line client, has support for both HTTP/1.1 and HTTP/2,
+[T] and provides both sync and async APIs.
+
+[U] https://github.com/encode/httpx
+
+[A] Tom Christie <tom@tomchristie.com>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/development
+
+[E] add anyio
+[E] add hatchling
+[E] add python-httpcore
+[E] add python-certifi
+
+[L] BSD
+[V] 0.28.1
+[P] X -----5---9 110.010
+
+[D] fbec4856c6455d78dc74c0d16800262b20e6af0cf32929e945e1b34b httpx-0.28.1.tar.gz https://github.com/encode/httpx/archive/0.28.1/

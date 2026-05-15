@@ -1,6 +1,6 @@
-[TIMESTAMP] 1739124771 Sun Feb  9 19:12:51 2025
+[TIMESTAMP] 1776187752 Tue Apr 14 19:29:12 2026
 [BUILDTIME] 3 (9)
-[SIZE] 0.12 MB, 15 files
+[SIZE] 0.10 MB, 16 files
 
 [DEP] bash
 [DEP] bzip2
@@ -9,7 +9,9 @@
 [DEP] findutils
 [DEP] gawk
 [DEP] grep
-[DEP] libxml
 [DEP] make
+[DEP] python
+[DEP] python-libxml
 [DEP] sed
 [DEP] tar
+[DEP] util-linux

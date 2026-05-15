@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libtraceevent/libtraceevent.desc
-[COPY] Copyright (C) 2021 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2021 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,17 +12,17 @@
 [U] https://www.trace-cmd.org
 
 [A] Steven Rostedt <srostedt@redhat.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/tool
-[E] opt asciidoc
+[F] CROSS
+
 [E] opt cunit
 
 [L] GPL
-[S] Stable
-[V] 1.8.4
-[P] X -----5---9 200.500
+[V] 1.9.0
+[P] X -----5---9 150.500
 
-[O] pkginstalled xmlto || var_append mesonopt ' ' -Ddoc=false
+[D] 8487812d483f572c991994e93e53becea661efaf685ca6b0b7bdd5b2 libtraceevent-1.9.0.tar.gz https://git.kernel.org/pub/scm/libs/libtrace/libtraceevent.git/snapshot/
 
-[D] 3a624a4fa31fa616980f34585a6afa59c99f7d9ec23de9ac967a562f libtraceevent-1.8.4.tar.gz https://git.kernel.org/pub/scm/libs/libtrace/libtraceevent.git/snapshot/
+pkginstalled xmlto asciidoc || var_append mesonopt ' ' -Ddoc=false

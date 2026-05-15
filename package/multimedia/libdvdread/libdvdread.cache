@@ -1,11 +1,7 @@
+[TIMESTAMP] 1768854160 Mon Jan 19 21:22:40 2026
+[BUILDTIME] 6 (9)
+[SIZE] 0.48 MB, 29 files
 
-[TIMESTAMP] 1703633883 Tue Dec 26 23:38:03 2023
-[BUILDTIME] 4 (9)
-[SIZE] 0.74 MB, 28 files
-
-[DEP] 00-dirtree
-[DEP] autoconf
-[DEP] automake
 [DEP] bash
 [DEP] binutils
 [DEP] bzip2
@@ -14,10 +10,12 @@
 [DEP] findutils
 [DEP] gawk
 [DEP] grep
-[DEP] libtool
+[DEP] libdvdcss
 [DEP] linux-header
-[DEP] m4
-[DEP] make
-[DEP] perl
+[DEP] meson
+[DEP] ninja
+[DEP] openssl
+[DEP] python
 [DEP] sed
 [DEP] tar
+[DEP] util-linux

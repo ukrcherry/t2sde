@@ -1,0 +1,22 @@
+[TIMESTAMP] 1762251083 Tue Nov  4 11:11:23 2025
+[BUILDTIME] 2150 (9)
+[SIZE] 384.43 MB, 193 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] blosc
+[DEP] boost
+[DEP] cmake
+[DEP] coreutils
+[DEP] diffutils
+[DEP] gawk
+[OPT] graphviz
+[DEP] grep
+[DEP] gzip
+[DEP] linux-header
+[DEP] make
+[DEP] pkgconfig
+[DEP] sed
+[DEP] tar
+[DEP] tbb
+[DEP] zlib

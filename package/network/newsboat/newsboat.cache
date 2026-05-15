@@ -1,0 +1,29 @@
+[TIMESTAMP] 1766943797 Sun Dec 28 18:43:17 2025
+[BUILDTIME] 280 (9)
+[SIZE] 13.05 MB, 33 files
+
+[OPT] asciidoctor
+[DEP] bash
+[DEP] binutils
+[DEP] cargo
+[DEP] coreutils
+[DEP] curl
+[DEP] diffutils
+[DEP] findutils
+[DEP] gawk
+[DEP] gettext
+[DEP] grep
+[DEP] json-c
+[DEP] libxml
+[DEP] linux-header
+[DEP] make
+[DEP] ncurses
+[DEP] openssl
+[DEP] pkgconfig
+[DEP] rustc
+[DEP] sed
+[DEP] sqlite
+[DEP] stfl
+[DEP] tar
+[DEP] xz
+[DEP] zlib

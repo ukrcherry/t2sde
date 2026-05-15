@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/skopeo/skopeo.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,19 +13,18 @@
 
 [A] Antonio Murdaca <runcom@redhat.com>
 [A] Miloslav Trmač <mitr@redhat.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 [F] CROSS NO-LTO
 
 [L] APL
-[S] Stable
-[V] 1.18.0
+[V] 1.22.2
 
-[O] . $base/package/*/*/go-conf.in
-[O] export CGO_ENABLED=1
-[O] var_remove GCC_WRAPPER_REMOVE ' ' '-gdwarf*'
-[O] var_append goconfopt ' ' "-o bin/$pkg ./cmd/$pkg"
-[O] hook_add postmake 5 "cp bin/$pkg $root$bindir"
+[D] 9e26d71f9082ef79f84c105e212e3daf0089085157af6d510ba9c31f skopeo-1.22.2.tar.gz https://github.com/containers/skopeo/archive/v1.22.2/
 
-[D] e6f5f8c73e5f5baa8e5d4fabb90370a9b23052a54b83319fdffdec91 skopeo-1.18.0.tar.gz https://github.com/containers/skopeo/archive/v1.18.0/
+. $base/package/*/*/go-conf.in
+export CGO_ENABLED=1
+var_remove GCC_WRAPPER_REMOVE ' ' '-gdwarf*'
+var_append goconfopt ' ' "-o bin/$pkg ./cmd/$pkg"
+hook_add postmake 5 "cp bin/$pkg $root$bindir"

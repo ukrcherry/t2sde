@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/neatvnc/neatvnc.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A liberally licensed VNC server library with a clean interface
+
+[T] A liberally licensed VNC server library with a clean interface.
+
+[U] https://github.com/any1/neatvnc
+
+[A] Neatvnc Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[E] opt ffmpeg
+
+[V] 1.0.0
+[L] ISC
+
+[P] X -----5---9 400.000
+
+[D] dbeb71bded335a0dcf8484750b1ac5366f8c0b3403fb1c35e6630289 neatvnc-1.0.0.tar.gz https://github.com/any1/neatvnc/archive/v1.0.0/

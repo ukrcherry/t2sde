@@ -1,25 +1,26 @@
+[TIMESTAMP] 1760307122 Mon Oct 13 00:12:02 2025
+[BUILDTIME] 8 (9)
+[SIZE] 0.34 MB, 8 files
 
-[TIMESTAMP] 1280298151 Wed Jul 28 06:22:31 2010
-[BUILDTIME] 5 (5)
-[SIZE] 0.22 MB, 7 files
-
-[DEP] 00-dirtree
-[DEP] binutils
+[DEP] autoconf
+[DEP] automake
+[DEP] bash
 [DEP] coreutils
 [DEP] diffutils
 [DEP] findutils
 [DEP] gawk
 [DEP] grep
+[DEP] gzip
 [DEP] libavc1394
 [DEP] libdv
 [DEP] libiec61883
 [DEP] libjpeg
-[DEP] libquicktime
+[OPT] libquicktime
 [DEP] libraw1394
+[DEP] libtool
 [DEP] linux-header
+[DEP] m4
 [DEP] make
-[DEP] pkgconfig
+[DEP] perl
 [DEP] sed
-[DEP] sysfiles
 [DEP] tar
-[DEP] zlib

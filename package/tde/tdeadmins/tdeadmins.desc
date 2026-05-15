@@ -1,0 +1,26 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/tdeadmins/tdeadmins.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Admin programs for the Trinity Desktop Environment
+
+[T] The tdeadmin package contains packages that usually only a system
+[T] administrator might need.
+
+[U] https://www.trinitydesktop.org/
+
+[A] Trinity Desktop Developers
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/x11
+[F] OBJDIR
+
+[L] GPL
+[V] 14.1.6
+
+[CV-GROUP] tde
+[D] 05c20dc8ed27a558e628b505238495150c5efed8ebff3f857cfab33f tdeadmin-trinity-14.1.6.tar.xz https://mirror.ppa.trinitydesktop.org/trinity/releases/R14.1.6/main/core/
+
+. $base/package/*/*/tde-conf.in

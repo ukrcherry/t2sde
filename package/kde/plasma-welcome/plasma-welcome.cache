@@ -1,6 +1,6 @@
-[TIMESTAMP] 1739219868 Mon Feb 10 21:37:48 2025
-[BUILDTIME] 90 (5)
-[SIZE] 2.45 MB, 54 files
+[TIMESTAMP] 1770553491 Sun Feb  8 13:24:51 2026
+[BUILDTIME] 140 (9)
+[SIZE] 3.67 MB, 70 files
 
 [DEP] bash
 [DEP] binutils
@@ -21,16 +21,16 @@
 [DEP] kjobwidgets
 [DEP] kservice
 [DEP] kwindowsystem
+[DEP] libplasma
 [DEP] linux-header
 [DEP] make
 [DEP] pkgconfig
 [DEP] procps
-[DEP] qt65compat
 [DEP] qt6base
 [DEP] qt6declarative
 [DEP] qt6svg
 [DEP] sed
 [DEP] tar
-[DEP] tbb
+[DEP] util-linux
 [DEP] vulkan-headers
 [DEP] xz

@@ -1,21 +1,23 @@
-[TIMESTAMP] 1737708921 Fri Jan 24 09:55:21 2025
-[BUILDTIME] 35 (9)
-[SIZE] 4.80 MB, 531 files
+[TIMESTAMP] 1752658004 Wed Jul 16 11:26:44 2025
+[BUILDTIME] 60 (5)
+[SIZE] 4.72 MB, 540 files
 
 [DEP] bash
 [DEP] binutils
-[DEP] brotli
+[OPT] brotli
 [DEP] coreutils
 [DEP] diffutils
 [DEP] findutils
 [DEP] gawk
 [DEP] grep
-[DEP] libgsasl
+[OPT] libgsasl
+[OPT] libidn
 [DEP] libidn2
 [OPT] libpsl
 [DEP] linux-header
 [DEP] make
 [OPT] nghttp2
+[OPT] nghttp3
 [OPT] openssl
 [DEP] perl
 [DEP] sed

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/fwbuilder/fwbuilder.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,17 +13,14 @@
 [T] drag-and-drop operations.
 [T] It currently supports iptables, ipfilter, OpenBSD PF and Cisco PIX.
 
-[U] http://www.fwbuilder.org
+[U] https://fwbuilder.sourceforge.net/
 
 [A] Vadim Kurland <vadim@fwbuilder.org>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/security
-[E] add qt3 libfwbuilder
 
 [L] OpenSource
+[V] 5.3.7
 
-[S] Stable
-[V] 4.1.0
-
-[D] e33833b5bfd5bce06fdfea396cc25a5a6634b3680bc1eb9e0b222033 fwbuilder-4.1.0.tar.gz http://dl.sourceforge.net/fwbuilder/
+[D] 1eb2fd7530c641ed9d80ec15841039a4a0baaa9f68c8de325c61144d fwbuilder-5.3.7.tar.gz https://github.com/fwbuilder/fwbuilder/archive/v5.3.7/

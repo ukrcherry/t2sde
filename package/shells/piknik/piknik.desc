@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/piknik/piknik.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Copy/paste anything over the network
+
+[T] Copy/paste anything over the network.
+
+[U] https://github.com/jedisct1/piknik
+
+[A] Piknik Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 0.10.2
+[L] BSD
+
+[D] ca2864c23ac2888fa045e017ea1f06ff3d4e75fe1bb76da288c581c8 piknik-0.10.2.tar.gz https://github.com/jedisct1/piknik/archive/0.10.2/

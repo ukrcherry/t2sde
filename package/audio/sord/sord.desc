@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/sord/sord.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] C library for storing RDF data in memory
+
+[T] C library for storing RDF data in memory.
+
+[U] https://drobilla.net/software/sord
+
+[A] Sord Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[E] opt doxygen
+
+[V] 0.16.22
+[L] ISC
+[P] X -----5---9 179.450
+
+[D] abc851ecc17d371d1beabe06f0de924535b98dd68aa3074de339b1da sord-0.16.22.tar.xz https://download.drobilla.net/

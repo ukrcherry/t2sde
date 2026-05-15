@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/dfb++/dfb++.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] This is a C++ binding for DirectFB providing a much easier usage
+
+[T] DFB++ is a C++ binding for DirectFB.
+
+[U] https://www.directfb.org/
+
+[A] DirectFB Team <dok@directfb.org>
+[M] Michael Tross <michael@tross.org>
+
+[C] extra/multimedia
+
+[L] GPL
+[V] 1.2.0
+[P] X -----5---9 218.700
+
+[D] 193211726 DFB++-1.2.0.tar.gz http://www.directfb.org/downloads/Extras/
+#[D] X DFB++-20070130.tar.bz2 cvs://:pserver:anonymous@cvs.directfb.org:/cvs/directfb DFB++ -D 2007-01-30

@@ -1,6 +1,6 @@
-[TIMESTAMP] 1745518418 Thu Apr 24 20:13:38 2025
-[BUILDTIME] 1950 (9)
-[SIZE] 102.32 MB, 1243 files
+[TIMESTAMP] 1774208271 Sun Mar 22 20:37:51 2026
+[BUILDTIME] 1900 (9)
+[SIZE] 109.27 MB, 1275 files
 
 [DEP] alsa-lib
 [DEP] aubio
@@ -24,10 +24,9 @@
 [DEP] glibmm2
 [DEP] grep
 [DEP] harfbuzz
-[DEP] jack
+[OPT] jack
 [DEP] libarchive
 [DEP] liblo
-[DEP] liblrdf
 [DEP] libpng
 [DEP] libsamplerate
 [DEP] libsigc++2
@@ -35,6 +34,8 @@
 [DEP] libusb
 [DEP] libx11
 [DEP] libxext
+[DEP] libxfixes
+[DEP] libxi
 [DEP] libxinerama
 [DEP] libxml
 [DEP] libxrandr
@@ -48,13 +49,15 @@
 [DEP] perl
 [DEP] pulseaudio
 [DEP] python
-[DEP] raptor
 [DEP] readline
 [DEP] rubberband
 [DEP] sed
+[DEP] serd
+[DEP] sord
+[DEP] sratom
 [DEP] taglib
 [DEP] tar
-[DEP] tbb
 [DEP] udev
+[DEP] util-linux
 [DEP] vamp-sdk
 [DEP] xorgproto

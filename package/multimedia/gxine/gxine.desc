@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gxine/gxine.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -16,9 +16,8 @@
 [C] extra/desktop/gnome extra/multimedia
 
 [L] GPL
-[S] Alpha
-[V] 0.5.11
+[V] 0.5.910
 
-[O] . $base/package/*/*/gnome-conf.in
+[D] 679f57d7fc7cd648362fe1ad878407bd341ae69e9e78b3d0ef00e033 gxine-0.5.910.tar.xz https://prdownloads.sourceforge.net/sourceforge/xine/
 
-[D] e09b7f54079bda4fd5077e5e269bd789639eeba7ae90df091d593b4c gxine-0.5.11.tar.bz2 http://dl.sourceforge.net/sourceforge/xine/
+. $base/package/*/*/gnome-conf.in

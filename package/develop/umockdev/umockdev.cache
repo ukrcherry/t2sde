@@ -1,0 +1,24 @@
+[TIMESTAMP] 1756648812 Sun Aug 31 16:00:12 2025
+[BUILDTIME] 6 (9)
+[SIZE] 0.51 MB, 21 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] coreutils
+[DEP] diffutils
+[DEP] gawk
+[DEP] glib
+[DEP] gobject-introspection
+[DEP] grep
+[DEP] gudev
+[DEP] libpcap
+[DEP] linux-header
+[DEP] meson
+[DEP] ninja
+[DEP] openssl
+[DEP] pkgconfig
+[DEP] sed
+[DEP] tar
+[DEP] udev
+[DEP] vala
+[DEP] xz

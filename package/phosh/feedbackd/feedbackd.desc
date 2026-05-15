@@ -1,0 +1,26 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/feedbackd/feedbackd.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] A daemon to provide haptic, led and audio feedback
+
+[T] A daemon to provide haptic, led and audio feedback triggered by application
+[T] events.
+
+[U] https://gitlab.freedesktop.org/agx/feedbackd
+
+[A] Purism SPC
+[A] The Phosh Developers
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] GPL3 LGPL
+[V] 0.8.9
+
+[D] 8671f2433ea82dbeeb75ff22300b5d7f45bc5e3e8090c8c12c3346a3 feedbackd-v0.8.9.tar.gz https://gitlab.freedesktop.org/agx/feedbackd/-/archive/v0.8.9/
+
+pkginstalled umockdev || var_append mesonopt ' ' -Dtests=false

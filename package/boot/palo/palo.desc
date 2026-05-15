@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/palo/palo.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,26 +11,23 @@
 [U] https://git.kernel.org/pub/scm/linux/kernel/git/deller/palo.git/
 
 [A] Helge Deller <deller@gmx.de>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/boot
 [F] CROSS DIETLIBC NO-LTO
 [R] + hppa hppa64
 
 [L] GPL
-[S] Stable
-[V] 2.27
+[V] 2.29
 
 [P] X ?----5---9
 
-[O] var_append CC_WRAPPER_APPEND ' ' -std=gnu17
+[D] 829e8ecd21e97835bd73477bd3a0179602cc26d03438e18ebf17cfbc palo-2.29.tar.gz https://git.kernel.org/pub/scm/linux/kernel/git/deller/palo.git/snapshot/
 
-[O] atstage toolchain || hook_add premake 1 'rm -vf iplboot' # build iplboot!
-[O] [ $stagelevel = 2 ] && hook_add premake 5 '(cd palo; $MAKE $makeopt CC=cc mkbootable; mv mkbootable ..; rm *.o)'
-[O] atstage toolchain || hook_add inmake 5 'eval $MAKE $makeopt -j1 iplboot'
+atstage toolchain || hook_add premake 1 'rm -vf iplboot' # build iplboot!
+[ $stagelevel = 2 ] && hook_add premake 5 '(cd palo; $MAKE $makeopt CC=cc mkbootable; mv mkbootable ..; rm *.o)'
+atstage toolchain || hook_add inmake 5 'eval $MAKE $makeopt -j1 iplboot'
 
-[O] var_append makeinstopt ' ' DESTDIR=$root
-[O] atstage cross && var_append makeinstopt ' ' HELP2MAN=
-[O] pkginstalled perl || var_append makeinstopt ' ' HELP2MAN=
-
-[D] 4963bfece6c3ff325b8fd12601da42f594827e7827217b5e57260f2e palo-2.27.tar.gz https://git.kernel.org/pub/scm/linux/kernel/git/deller/palo.git/snapshot/
+var_append makeinstopt ' ' DESTDIR=$root
+atstage cross && var_append makeinstopt ' ' HELP2MAN=
+pkginstalled perl || var_append makeinstopt ' ' HELP2MAN=

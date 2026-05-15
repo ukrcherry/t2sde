@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/kbd/kbd.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -14,20 +14,20 @@
 [U] https://kbd-project.org
 
 [A] Andries Brouwer <aeb@cwi.nl>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/system
 [F] CROSS
 [R] - avr32 openrisc
 
 [L] GPL
-[S] Stable
-[V] 2.7.1
-[P] X -----5---9 119.500
+[V] 2.9.0
 
-[O] [ $arch = "xtensa" ] && var_append GCC_WRAPPER_APPEND ' ' -c?:-lintl
-[O] atstage cross && hook_add preconf 5 "echo -e 'ac_cv_func_malloc_0_nonnull=yes\nac_cv_func_realloc_0_nonnull=yes' >> config.cache"
-[O] hook_add premake 5 "rm -f data/keymaps/i386/qwerty/{bg-cp1251.map,*.orig}"
-[O] datadir="$datadir/$pkg"
+[D] 9b002da5d7fd22a30525e6cde942572f6679e0b130d85dd3ab9738fb kbd-2.9.0.tar.gz https://cdn.kernel.org/pub/linux/utils/kbd/
 
-[D] 90a0b1b891f2cd3c070c5357d799de4ca5e975fe588b579e0bc1f519 kbd-2.7.1.tar.gz https://cdn.kernel.org/pub/linux/utils/kbd/
+datadir="$datadir/$pkg"
+
+atstage cross && hook_add preconf 5 "echo -e 'ac_cv_func_malloc_0_nonnull=yes\nac_cv_func_realloc_0_nonnull=yes' >> config.cache"
+[ $arch = xtensa ] && var_append GCC_WRAPPER_APPEND ' ' -c?:-lintl
+
+hook_add premake 5 "rm -f data/keymaps/i386/qwerty/{bg-cp1251.map,*.orig}"

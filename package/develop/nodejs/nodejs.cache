@@ -1,24 +1,30 @@
+[TIMESTAMP] 1759851335 Tue Oct  7 17:35:35 2025
+[BUILDTIME] 9000 (9)
+[SIZE] 80.39 MB, 2982 files
 
-[TIMESTAMP] 1709651714 Tue Mar  5 16:15:14 2024
-[BUILDTIME] 3550 (9)
-[SIZE] 61.18 MB, 2802 files
-
-[DEP] 00-dirtree
+[OPT] ada-url
 [DEP] bash
 [DEP] binutils
+[OPT] brotli
+[OPT] c-ares
 [DEP] coreutils
 [DEP] diffutils
 [DEP] findutils
 [DEP] gawk
 [DEP] grep
 [OPT] icu4c
+[OPT] libuv
 [DEP] linux-header
 [DEP] make
+[OPT] nghttp2
+[OPT] nghttp3
+[DEP] ninja
 [OPT] openssl
 [DEP] pkgconfig
 [DEP] python
 [DEP] sed
+[OPT] simdjson
 [DEP] tar
-[DEP] tbb
 [DEP] xz
 [OPT] zlib
+[OPT] zstd

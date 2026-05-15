@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/astguiclient/astguiclient.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -23,12 +23,21 @@
 [U] https://astguiclient.sourceforge.net/
 
 [A] eflonet <vicidial@gmail.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 
 [L] GPL
-[S] Stable
 [V] 2.2.1
 
-[D] 53b03f16756d19ee2c4234ab46f066894cdbc3f041d5255abcb7a90f astguiclient_2.2.1.zip http://dl.sourceforge.net/sourceforge/astguiclient/
+[D] 53b03f16756d19ee2c4234ab46f066894cdbc3f041d5255abcb7a90f astguiclient_2.2.1.zip https://download.sourceforge.net/project/astguiclient/
+
+pkgprefix -t asterisk
+prefix=$(pkgprefix asterisk)
+
+set_confopt
+var_append zipopt ' ' "-d $pkg-$ver"
+
+runmake=0
+
+hook_add postmake 5 'perl install.pl'

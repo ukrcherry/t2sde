@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/robin-map/robin-map.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] C++ implementation of a fast hash map
+
+[T] The robin-map library is a C++ implementation of a fast hash map and hash
+[T] set using open-addressing and linear robin hood hashing with backward shift
+[T] deletion to resolve collisions.
+
+[U] https://github.com/Tessil/robin-map
+
+[A] Thibaut Goetghebuer-Planchon <tessil@gmx.com>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[L] MIT
+[V] 1.4.1
+[P] X -----5---9 200.000
+
+[D] 027e25355428118daa032e74cb6d7ab0774437ff74bdc58654d178cc robin-map-1.4.1.tar.gz https://github.com/Tessil/robin-map/archive/v1.4.1/

@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libspnav/libspnav.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Library for communicating with spacenavd or 3dxsrv
+
+[T] Library for communicating with spacenavd or 3dxsrv.
+
+[U] https://spacenav.sourceforge.net/
+
+[A] Libspnav Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.2
+[L] BSD
+
+[D] 57115070d1c341469ade21188193234db023d1b32bd461bd74974636 libspnav-1.2.tar.gz https://github.com/FreeSpacenav/libspnav/releases/download/v1.2/

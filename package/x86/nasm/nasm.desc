@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/nasm/nasm.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -18,17 +18,16 @@
 [U] https://nasm.sourceforge.net/
 
 [A] H. Peter Anvin <hpa@zytor.com> {Current Maintainer}
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/development
 [F] CROSS DIETLIBC
 
 [L] GPL
-[S] Stable
-[V] 2.16.03
+[V] 3.01
 [P] X 0----5---9 103.200
 
-[O] atstage cross && var_append makeinstopt ' ' INSTALLROOT=$root
-
 [CV-URL] https://www.nasm.us/pub/nasm/snapshots/latest/
-[D] 0923899ae9fb25b0eaf5d4b9d8c36e24277fe7ba2aa9966ea551c279 nasm-2.16.03.tar.xz http://www.nasm.us/pub/nasm/releasebuilds/2.16.03/
+[D] ce824fb3ee71e2f83ed464087720144a334bb88aa6404f412d950bc2 nasm-3.01.tar.xz https://www.nasm.us/pub/nasm/releasebuilds/3.01/
+
+atstage cross && var_append makeinstopt ' ' INSTALLROOT=$root

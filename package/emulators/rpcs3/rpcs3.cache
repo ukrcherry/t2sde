@@ -1,9 +1,8 @@
+[TIMESTAMP] 1773346865 Thu Mar 12 21:21:05 2026
+[BUILDTIME] 2250 (9)
+[SIZE] 27.44 MB, 157 files
 
-[TIMESTAMP] 1708786273 Sat Feb 24 14:51:13 2024
-[BUILDTIME] 1300 (9)
-[SIZE] 26.53 MB, 70 files
-
-[DEP] 00-dirtree
+[DEP] abseil-cpp
 [DEP] alsa-lib
 [DEP] bash
 [DEP] binutils
@@ -11,26 +10,28 @@
 [DEP] coreutils
 [DEP] curl
 [DEP] diffutils
-[DEP] findutils
-[DEP] flatbuffers
+[OPT] doxygen
+[DEP] ffmpeg
 [DEP] freetype
 [DEP] gawk
-[DEP] git
 [DEP] glew
 [DEP] glu
 [DEP] grep
 [DEP] gzip
+[OPT] jack
 [DEP] libedit
 [DEP] libevdev
+[DEP] libglvnd
 [DEP] libpng
-[DEP] libsdl2
+[DEP] libsdl3
 [DEP] libusb
 [DEP] libx11
 [DEP] libxml
 [DEP] linux-header
 [DEP] llvm
 [DEP] make
-[DEP] mesa
+[DEP] openal
+[OPT] opencv
 [DEP] pkgconfig
 [DEP] pugixml
 [DEP] pulseaudio
@@ -39,8 +40,8 @@
 [DEP] qt6svg
 [DEP] sed
 [DEP] tar
-[DEP] tbb
 [DEP] udev
+[DEP] util-linux
 [DEP] vulkan-headers
 [DEP] wayland
 [DEP] xorgproto

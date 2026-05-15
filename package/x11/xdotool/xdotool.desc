@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xdotool/xdotool.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,14 +13,13 @@
 [U] https://github.com/jordansissel/xdotool
 
 [A] Jordan Sissel
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/x11
 [F] CROSS
 
 [L] OpenSource
-[S] Stable
-[V] 3.20211022.1
+[V] 4.20251130.1
 [P] X -----5---9 113.600
 
-[D] cbfcc17a56c77c0421fec9bf165395d5632b02f048af8e1f881eb274 xdotool-3.20211022.1.tar.gz https://github.com/jordansissel/xdotool/releases/download/v3.20211022.1/
+[D] 8d799f7b2108199d853c34bc6a38b339bd25355730257e7d2d12fd79 xdotool-4.20251130.1.tar.gz https://github.com/jordansissel/xdotool/releases/download/v4.20251130.1/

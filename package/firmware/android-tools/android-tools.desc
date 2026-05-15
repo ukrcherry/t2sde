@@ -1,0 +1,28 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/android-tools/android-tools.desc
+[COPY] Copyright (C) 2023 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Android platform tools
+
+[T] Tools for managing and debugging on the android platform such as: adb,
+[T] append2simg, avbtool, e2fsdroid, ext2simg, fastboot, img2simg, lpadd,
+[T] lpdump, lpflash, lpmake, lpunpack, make_f2fs, mkbootimg, mkdtboimg,
+[T] mke2fs.android, repack_bootimg, simg2img, sload_f2fs, unpack_bootimg.
+
+[U] https://github.com/nmeum/android-tools
+
+[A] Google Inc
+[M] NoTag <notag@t2sde.org>
+
+[C] base/x11
+[F] CROSS OBJDIR
+
+[L] APL
+[V] 35.0.2
+
+[CV-FLAGS] NO-PREFIX
+[D] 2edcd6eb5b054a7876b54dd9de62dfb7e505f5e95a84c39b1093b984 android-tools-35.0.2.tar.xz https://github.com/nmeum/android-tools/releases/download/35.0.2/
+
+var_append cmakeopt ' ' -DOPENSSL_NO_ASM=TRUE

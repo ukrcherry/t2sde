@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/valkey/valkey.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,14 +13,13 @@
 [U] https://valkey.io
 
 [A] Valkey contributors
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/database
 
 [L] BSD
-[S] Stable
-[V] 8.1.1
+[V] 9.0.4
 
-[O] [ $prefix_auto = 1 ] && prefix=opt/valkey && set_confopt
+[D] bdfaa6f796d9d5ef789f4c39f9ddb99fce74b1416d41cc4e514ce120 valkey-9.0.4.tar.gz https://github.com/valkey-io/valkey/archive/refs/tags/9.0.4/
 
-[D] b7afac6011131ff911b91c1b1b33f28f3062658b1b83531c04b2b33d valkey-8.1.1.tar.gz https://github.com/valkey-io/valkey/archive/refs/tags/8.1.1/
+[ $prefix_auto = 1 ] && prefix=opt/valkey && set_confopt

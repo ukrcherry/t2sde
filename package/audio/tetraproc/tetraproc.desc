@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/tetraproc/tetraproc.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Converts the A-format signals into B-format signals ready for recording
+
+[T] TetraProc converts the A-format signals from a tetrahedral Ambisonic
+[T] microphone into B-format signals ready for recording.
+
+[U] https://kokkinizita.linuxaudio.org/linuxaudio/
+
+[A] Kokkini Zita
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/multimedia
+[F] CROSS
+
+[L] GPL3
+[V] 0.10.0
+
+[D] 7ed562d4a6382102eea87d9aef96dfade91b99600180e8908b971166 tetraproc-0.10.0.tar.bz2 https://kokkinizita.linuxaudio.org/linuxaudio/downloads/
+
+srcdir=*/source
+var_append GCC_WRAPPER_APPEND ' ' -c?:-L$root$(pkgprefix libdir libxft)

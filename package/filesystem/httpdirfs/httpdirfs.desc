@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/httpdirfs/httpdirfs.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,14 +12,13 @@
 [U] https://github.com/fangfufu/httpdirfs
 
 [A] Fufu Fang
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/filesystem
 
 [E] opt help2man perl perl-gettext
 
 [L] GPL
-[S] Stable
-[V] 1.2.7
+[V] 1.2.9
 
-[D] 79ab4a61d54e4ac97d6bce3072ff3c742953217cf34dd52c25df2526 httpdirfs-1.2.7.tar.gz https://github.com/fangfufu/httpdirfs/archive/1.2.7/
+[D] ed7e16edc0664fe2174e4194d21466c2c8472f1ad3dc37c34f2e52d6 httpdirfs-1.2.9.tar.gz https://github.com/fangfufu/httpdirfs/archive/1.2.9/

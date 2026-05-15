@@ -1,0 +1,30 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/amaya/amaya.desc
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] The browser/authoring tool of the W3C
+
+[T] Amaya is a complete web browsing and authoring environment and comes
+[T] equipped with a WYSIWYG style of interface. It lets users both browse and
+[T] author valid Web pages, with standards including (X)HTML, native MathML,
+[T] and SVG documents. It also includes a collaborative annotation application
+[T] (RDF).
+
+[U] https://www.w3.org/Amaya/
+
+[A] Irene <Irene. Vatton@inrialpes.fr>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/network
+[F] OBJDIR
+
+# W3C License
+[L] OpenSource
+[V] 11.4.7
+
+[D] 1c87a8718a24ff73094244dbd0c088c490f9743bbf48cb0b6a84eeed amaya-11.4.7.tar.gz https://github.com/w3c/Amaya-Editor/archive/refs/tags/Amaya-11-4-7/
+
+srcdir='Amaya'
+var_append confopt ' ' --with-gtk

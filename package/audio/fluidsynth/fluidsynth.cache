@@ -1,0 +1,29 @@
+[TIMESTAMP] 1759696702 Sun Oct  5 22:38:22 2025
+[BUILDTIME] 30 (9)
+[SIZE] 0.81 MB, 35 files
+
+[DEP] alsa-lib
+[DEP] bash
+[DEP] binutils
+[DEP] cmake
+[DEP] coreutils
+[DEP] dbus
+[DEP] diffutils
+[OPT] doxygen
+[DEP] gawk
+[DEP] glib
+[DEP] grep
+[DEP] gzip
+[OPT] jack
+[DEP] ladspa
+[OPT] libsdl3
+[DEP] libsndfile
+[DEP] linux-header
+[DEP] make
+[DEP] openssl
+[DEP] pipewire
+[DEP] pkgconfig
+[DEP] pulseaudio
+[DEP] readline
+[DEP] sed
+[DEP] tar

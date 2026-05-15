@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/font-bh-lucidatypewriter/font-bh-lucidatypewriter.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,18 +11,17 @@
 [U] https://www.X.org
 
 [A] X.org Foundation {http://www.X.org}
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/x11
 [F] CROSS
 
 [L] OpenSource
-[S] Stable
 [V] 1.0.4
 
 [SRC] .
 
-[O] . package/*/*/modular-x-conf.in
-
 [D] 3b832f5c72a838d777d51ad5e1af37185c8ee41bd4bfd97562ba121b font-bh-lucidatypewriter-75dpi-1.0.4.tar.xz http://xorg.freedesktop.org/releases/individual/font/
 [D] 0ad09cb5daac7a7a015b3ce3668566adf9880b0dc1eef751127ff71b font-bh-lucidatypewriter-100dpi-1.0.4.tar.xz http://xorg.freedesktop.org/releases/individual/font/
+
+. package/*/*/modular-x-conf.in

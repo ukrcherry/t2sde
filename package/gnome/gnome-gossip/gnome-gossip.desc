@@ -1,0 +1,30 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/gnome-gossip/gnome-gossip.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A GNOME Jabber client
+
+[T] Gossip aims at making Instant Messaging with Jabber as easy as possible,
+[T] while giving users of the GNOME desktop a user-friendly way of keeping
+[T] in touch with their friends.
+
+[U] https://wiki.gnome.org/Attic(2f)Gossip.html
+
+[A] Mikael Hallendal <micke@imendio.com>
+[A] Richard Hult <richard@imendio.com>
+
+[M] Juergen "George" Sawinski <jsaw@gmx.net>
+
+[C] extra/network extra/office extra/desktop/gnome
+
+[L] GPL
+[V] 0.31
+[P] X -----5---9 150.900
+
+[CV-URL] https://download.gnome.org/sources/gossip/cache.json
+[D] 995118bdadb6c877f0b24befce1ef92be9d37015d148ab09d7a06393 gossip-0.31.tar.bz2 https://download.gnome.org/sources/gossip/0.31/
+
+. $base/package/*/*/gnome-conf.in

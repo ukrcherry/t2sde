@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libndp/libndp.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,15 +13,15 @@
 [U] http://libndp.org
 
 [A] Jiri Pirko <jiri@resnulli.us>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network
+[F] CROSS
 
 [L] LGPL
-[S] Stable
 [V] 1.9
 [P] X -----5---9 115.500
 
-[O] autogen=1
-
 [D] 2ce695ee75ff500b9190784ee210950ef4d43a15ce0ca0c2babe121e libndp-1.9.tar.gz https://github.com/jpirko/libndp/archive/refs/tags/v1.9/
+
+autogen=1

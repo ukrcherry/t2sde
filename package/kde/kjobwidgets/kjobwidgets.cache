@@ -1,6 +1,6 @@
-[TIMESTAMP] 1737559065 Wed Jan 22 16:17:45 2025
-[BUILDTIME] 25 (9)
-[SIZE] 0.58 MB, 138 files
+[TIMESTAMP] 1760655242 Fri Oct 17 00:54:02 2025
+[BUILDTIME] 50 (9)
+[SIZE] 0.58 MB, 140 files
 
 [DEP] bash
 [DEP] binutils
@@ -19,8 +19,8 @@
 [DEP] pkgconfig
 [DEP] qt6base
 [DEP] qt6tools
+[DEP] qt6translations
 [DEP] sed
 [DEP] tar
-[DEP] tbb
 [DEP] vulkan-headers
 [DEP] xz

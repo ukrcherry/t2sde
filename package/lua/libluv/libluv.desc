@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libluv/libluv.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,12 +11,11 @@
 [U] https://github.com/luvit/luv
 
 [A] Libluv Authors
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/base
 
-[V] 1.44.2.0
+[V] 1.51.0-2
 [L] APL
-[S] Stable
 
-[D] 0f88281556abf071e74e6e72642418748267daf3dc1f0baa9fba822b luv-1.44.2-0.tar.gz https://github.com/luvit/luv/releases/download/1.44.2-0/
+[D] e4995186af91f79bd77cc1274943552b04ff94b75214bbb1956297be luv-1.51.0-2.tar.gz https://github.com/luvit/luv/releases/download/1.51.0-2/

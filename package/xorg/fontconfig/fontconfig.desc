@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/fontconfig/fontconfig.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,17 +11,33 @@
 [U] https://www.fontconfig.org
 
 [A] Keith Packard
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/x11
 [F] CROSS
 
+[E] add xorgproto
+
 [L] OpenSource
-[S] Stable
-[V] 2.16.0
+[V] 2.17.1
 [P] X -----5---9 112.401
 
-[O] runmeson=0
-[O] atstage cross && var_append confopt ' ' --disable-docs
+[D] 16c93cb7c94bee590a39329dfc535c47403f7f4f7e23023aa1aa36bb fontconfig-2.17.1.tar.xz https://gitlab.freedesktop.org/api/v4/projects/890/packages/generic/fontconfig/2.17.1/
 
-[D] 555e15c9b5a4718af42cb7290d37b1155b39c53acb0bd4a129c5a556 fontconfig-2.16.0.tar.xz http://www.fontconfig.org/release/
+runmeson=0 runcargo=0
+
+if ! atstage native; then
+	var_append confopt ' ' "--with-arch=`echo $arch | arch2uname`"
+	var_append confopt ' ' --disable-docs
+
+	var_append makeopt ' ' 'man_MANS= DOCSRC='
+	var_append makeinstopt ' ' 'man_MANS= DOCSRC='
+fi
+
+pkgprefix -t xorgproto
+fontdir="`pkgprefix datadir xorgproto`/fonts"
+fontdir="${fontdir/X11R7/X11}"
+var_append confopt ' ' "--with-x-fonts=$fontdir --with-add-fonts=$fontdir"
+
+export GPERF=gperf # hotfix execution via missing results in empty file
+var_append makeinstopt ' ' RUN_FC_CACHE_TEST=false

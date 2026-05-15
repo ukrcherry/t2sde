@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/openseachest/openseachest.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,15 +13,14 @@
 [U] https://github.com/Seagate/openSeaChest
 
 [A] Seagate Technology LLC
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/system
 [F] CROSS
 
 [L] MPL
-[S] Stable
-[V] 23.03.1
+[V] 26.03.1
 
-[O] bindir=$sbindir
+[D] 1698248223c81aadcbe314dbd2cf29099d7c07bd1813ce4b53c6e149 openSeaChest-26.03.1.tar.xz !https://github.com/Seagate/openSeaChest/releases/download/v26.03.1/SourceCode_With_Submodules.tar.xz
 
-[D] 9b4d1da5de37868b0e1930e3845acc91c82ee9ab108471f3e402c8c8 openSeaChest-23.03.1.tar.xz !https://github.com/Seagate/openSeaChest/releases/download/v23.03.1/SourceCode_With_Submodules.tar.xz
+bindir=$sbindir

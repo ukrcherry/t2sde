@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/thunderbird/thunderbird.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -14,18 +14,101 @@
 [U] https://www.mozilla.org/products/thunderbird/
 
 [A] The Mozilla Community <http://www.mozilla.org/about.html>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office
-[F] CROSS CUSTOM-LTO LATOMIC.x86
-[R] - alpha hppa hppa64 ia64 riscv
+[F] CROSS CUSTOM-LTO LATOMIC.x86 LATOMIC.sparc
+[R] - alpha hppa hppa64 ia64 m68k riscv
 
 [L] MPL
-[S] Stable
-[V] 138.0
-[P] X -----5---9 202.000
-
-[O] . $base/package/*/*/mozilla-conf.in
+[V] 150.0.1
 
 #[CV-URL] https://download.mozilla.org/?product=thunderbird-latest&os=linux&lang=en-US
-[D] cc271403aeb541812da4af27f199bf05d0218ab87ddb78bf404b870c thunderbird-138.0.source.tar.xz https://ftp.mozilla.org/pub/thunderbird/releases/138.0/source/
+[D] ff3ca7c46e131a0adb7f5bd1716c93dc30e79a1ae7ae891879d32414 thunderbird-150.0.1.source.tar.xz https://ftp.mozilla.org/pub/thunderbird/releases/150.0.1/source/
+
+. $base/package/*/*/mozilla-conf.in
+
+[ $prefix_auto = 1 ] && prefix=$mozilla_prefix && set_confopt
+
+export MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=system
+export HOME=$sysroot/root
+[ "$SDECFG_LIBC" = musl ] && export LDFLAGS="-Wl,-rpath=$libdir/firefox"
+
+hook_add inmake 5 "./mach build"
+hook_add postmake 5 "./mach install"
+
+thunderbird_config() {
+cat <<-EOT >> .mozconfig
+export MOZ_PHOENIX=1
+mk_add_options MOZ_PHOENIX=1
+mk_add_options MOZ_OBJDIR=$PWD/objs
+
+ac_add_options --enable-application=comm/mail
+ac_add_options --enable-default-toolkit=cairo-gtk3
+ac_add_options --without-system-png
+#ac_add_options --disable-profilesharing
+ac_add_options --enable-official-branding
+ac_add_options --disable-updater
+#ac_add_options --disable-ldap
+ac_add_options --without-wasm-sandboxed-libraries
+ac_add_options --enable-release # more secure build? see config/makefiles/rust.mk
+EOT
+
+#if pkginstalled gstreamer; then echo "ac_add_options --enable-gstreamer=1.0" >> .mozconfig
+#else echo "ac_add_options --disable-gstreamer" >> .mozconfig #fi
+
+pkginstalled libjpeg-turbo && echo "ac_add_options --with-system-jpeg" >> .mozconfig
+pkginstalled icu4c && echo "ac_add_options --with-system-icu" >> .mozconfig
+pkginstalled pulseaudio || echo "ac_add_options --disable-pulseaudio" >> .mozconfig
+pkginstalled alsa-lib && echo "ac_add_options --enable-alsa" >> .mozconfig
+
+	# jit and sandbox?
+	case "$arch" in
+	x86)
+		# jit needs sse on x86
+		if ! $CC -E -dM -x c /dev/null | grep -iq _sse; then
+			var_append patchfiles ' ' $confdir/no-jit.diff
+			echo "ac_add_options --disable-jit" >> .mozconfig
+		fi
+		;;
+	arm)
+		echo "ac_add_options --disable-elf-hack" >> .mozconfig
+		var_remove_regex GCC_WRAPPER_INSERT ' ' '-mfpu=.*'
+		[[ $arch_machine = armv[678]* ]] || echo "ac_add_options --disable-jit" >> .mozconfig
+		;;
+	arm64|loongarch64|riscv64|x86-64)
+		# no jit yet for x32 ABI variants
+		if [ "$SDECFG_X8664_X32" = 1 -o "$SDECFG_MIPS64_N32" = 1 ]; then
+			echo "ac_add_options --disable-jit" >> .mozconfig
+		fi
+		;;
+	*)
+		echo "ac_add_options --disable-jit" >> .mozconfig ;;
+	esac
+
+	[ "$SDECFG_POWERPC64_ENDIANESS" = 'le' ] ||
+		var_append patchfiles ' ' $confdir/hotfix-ppc-not-power8.diff
+}
+
+# disable legacy component registration
+mozilla_register() {
+	:
+}
+
+# don't pass CPU optimizations to clang w/ wasi
+GCC_WRAPPER_INSERT="${GCC_WRAPPER_INSERT/-march=/--target=wasm32-wasi?:-march=}"
+GCC_WRAPPER_INSERT="${GCC_WRAPPER_INSERT/-mcpu=/--target=wasm32-wasi?:-mcpu=}"
+GCC_WRAPPER_INSERT="${GCC_WRAPPER_INSERT/-mtune=/--target=wasm32-wasi?:-mtune=}"
+GCC_WRAPPER_INSERT="${GCC_WRAPPER_INSERT/-mfpu=/--target=wasm32-wasi?:-mfpu=}"
+GCC_WRAPPER_INSERT="${GCC_WRAPPER_INSERT/-c?:-pie/--target=wasm32-wasi?:-c?:-pie}"
+
+hook_add prepatch 2 "cargo_clear_cksum {,comm/}third_party/rust/*/.cargo-checksum.json"
+hook_add prepatch 4 thunderbird_config
+
+thunderbird_postmake() {
+    for size in 16 22 24 32 48 64 128 256; do
+	install comm/mail/branding/thunderbird/default$size.png -t \
+		$root/usr/share/icons/hicolor/${size}x$size/apps/thunderbird.png
+    done
+}
+hook_add postmake 6 thunderbird_postmake

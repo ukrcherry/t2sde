@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/dejavu-ttf-fonts/dejavu-ttf-fonts.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -20,11 +20,10 @@
 [F] CROSS
 
 [L] OpenSource
-[S] Stable
 [V] 2.37
-
-[O] runmake=0
-[O] hook_add inmake 5 'mkdir -p $root/usr/X11/lib/X11/fonts/TTF/'
-[O] hook_add postmake 5 'cp -vf ttf/*.ttf $root/usr/X11/lib/X11/fonts/TTF/'
+[P] X -----5---9 200.000
 
 [D] 03e7e5148fd84d234ae3b9c96ad9e62a285a67fa702795495798abae dejavu-fonts-ttf-2.37.tar.bz2 https://github.com/dejavu-fonts/dejavu-fonts/releases/download/version_2_37/
+
+runmake=0
+hook_add postmake 5 'cp -vf ttf/*.ttf $root$datadir/fonts/'

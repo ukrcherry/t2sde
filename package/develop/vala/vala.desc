@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/vala/vala.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,18 +14,17 @@
 [U] https://live.gnome.org/Vala
 
 [A] Jürg Billeter <j@bitron.ch>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [E] opt docbook-xml
 
 [L] LGPL
-[S] Beta
-[V] 0.56.18
+[V] 0.56.19
 [P] X -----5---9 154.790
 
-[O] pkginstalled graphviz || var_append confopt ' ' --disable-valadoc
-
 [CV-URL] https://download.gnome.org/sources/vala/cache.json
-[D] c03e3125691d6c825ce38ca517b203717393c5d3b1829394d7b0dbb9 vala-0.56.18.tar.xz https://download.gnome.org/sources/vala/0.56/
+[D] 4819377b71bb4470ee8ba83c56f8d4b28d8101495874a4d9904ff33c vala-0.56.19.tar.xz https://download.gnome.org/sources/vala/0.56/
+
+pkginstalled graphviz || var_append confopt ' ' --disable-valadoc

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/ocean-sound-theme/ocean-sound-theme.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,16 +11,15 @@
 [U] https://invent.kde.org/plasma/ocean-sound-theme
 
 [A] The KDE-Team
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/audio
+[F] CROSS OBJDIR
 
 [L] BSD
-[S] Stable
-[V] 6.3.5
-[P] X -----5---9 300.000
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 6.6.5
 
 [CV-GROUP] kde-plasma
-[D] 4a84a52fea8690e4661a5139d2f5baddd66675431139e1f8919162b2 ocean-sound-theme-6.3.5.tar.xz https://download.kde.org/stable/plasma/6.3.5/
+[D] a8f9f3898c017b8d81504105d8035b9da6459d67ae542f0306f26ac7 ocean-sound-theme-6.6.5.tar.xz https://download.kde.org/stable/plasma/6.6.5/
+
+. $base/package/*/*/kde-conf.in

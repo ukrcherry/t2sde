@@ -1,0 +1,27 @@
+[TIMESTAMP] 1762949860 Wed Nov 12 14:17:40 2025
+[BUILDTIME] 3 (9)
+[SIZE] 0.11 MB, 28 files
+
+[DEP] bash
+[DEP] clthreads
+[DEP] clxclient
+[DEP] coreutils
+[DEP] diffutils
+[DEP] fontconfig
+[DEP] freetype
+[DEP] gawk
+[DEP] grep
+[DEP] jack
+[DEP] libpng
+[DEP] libsndfile
+[DEP] libx11
+[DEP] libxft
+[DEP] libxrender
+[DEP] lima
+[DEP] linux-header
+[DEP] make
+[DEP] sed
+[DEP] tar
+[DEP] xorgproto
+[DEP] xz
+[DEP] zita-resampler

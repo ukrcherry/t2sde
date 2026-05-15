@@ -1,0 +1,24 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/hyprwire/hyprwire.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] A fast and consistent wire protocol for IPC
+
+[T] Hyprwire is a fast and consistent wire protocol, and its implementation.
+[T] This is essentially a method for processes to talk to each other.
+
+[U] https://github.com/hyprwm/hyprwire
+
+[A] hyprwm
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/wayland
+[F] CROSS
+
+[L] BSD
+[V] 0.3.1
+[P] X -----5---9 400.000
+
+[D] 4937420f3581a02b681dd4c7f0117caf42992e8b0a28341540bc878a hyprwire-0.3.1.tar.gz https://github.com/hyprwm/hyprwire/archive/v0.3.1/

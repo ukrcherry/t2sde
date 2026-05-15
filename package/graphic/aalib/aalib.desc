@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/aalib/aalib.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -18,7 +18,7 @@
 [U] https://aa-project.sourceforge.net/aalib/
 
 [A] Jan Hubicka
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/library
 [F] CROSS
@@ -28,8 +28,7 @@
 #[E] opt slang
 
 [L] LGPL
-[S] Stable
 [V] 1.4rc5
 [P] X -----5---9 127.900
 
-[D] 87387eed0db18c9affc9f0d15628d3b6c21846088c1bacfeb50238d7 aalib-1.4rc5.tar.gz http://dl.sourceforge.net/sourceforge/aa-project/
+[D] 87387eed0db18c9affc9f0d15628d3b6c21846088c1bacfeb50238d7 aalib-1.4rc5.tar.gz https://sourceforge.net/projects/aa-project/files/aa-lib/1.4rc5/

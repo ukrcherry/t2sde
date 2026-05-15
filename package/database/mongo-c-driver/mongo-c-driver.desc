@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/mongo-c-driver/mongo-c-driver.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Client library written in C for MongoDB
+
+[T] Client library written in C for MongoDB.
+
+[U] https://github.com/mongodb/mongo-c-driver
+
+[A] Mongo-c-driver Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS OBJDIR
+
+[V] 2.3.0
+[L] APL
+
+[D] f92add49ed16dfc272e29843e06b7c9132bba670ff8a9d1784030bd2 mongo-c-driver-2.3.0.tar.gz https://github.com/mongodb/mongo-c-driver/releases/download/2.3.0/

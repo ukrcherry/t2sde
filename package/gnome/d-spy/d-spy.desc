@@ -1,0 +1,22 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/d-spy/d-spy.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Inspect peers on a D-Bus connection
+
+[T] Inspect peers on a D-Bus connection
+
+[U] https://gitlab.gnome.org/GNOME/d-spy
+
+[A] The GNOME Project
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] GPL3
+[V] 50.0
+
+[D] 0811fe878becb8ae14210aac24468490de31bace7230353632839abd d-spy-50.0.tar.gz https://gitlab.gnome.org/GNOME/d-spy/-/archive/50.0/

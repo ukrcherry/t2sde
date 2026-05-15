@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/pgbouncer/pgbouncer.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] A lightweight connection pooler for PostgreSQL
+
+[T] pgbouncer is a lightweight connection pooler for PostgreSQL.
+
+[U] https://www.pgbouncer.org/
+
+[A] Pgbouncer Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/database
+[F] CROSS
+
+[L] ISC
+[V] 1.25.2
+
+[D] bebf10ea78cbaa7101dcae65ac07540426644a73d6ef4a35b3f7befd pgbouncer-1.25.2.tar.gz https://pgbouncer.github.io/downloads/files/1.25.2/

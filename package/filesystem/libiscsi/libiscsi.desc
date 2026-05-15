@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libiscsi/libiscsi.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---\
 
@@ -25,10 +25,9 @@
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 1.20.2
+[V] 1.20.3
 [P] X -----5---9 136.500
 
-[O] hook_add preconf 5 "./autogen.sh"
+[D] 8b5cc8e0c0cbc9e76734bbf987b9738a7fac7473372f2d798cc5e1c2 libiscsi-1.20.3.tar.gz https://github.com/sahlberg/libiscsi/archive/1.20.3/
 
-[D] 6d1a2aac6512766fd6711b36154e734376997a58ef79c194f6875cc0 libiscsi-1.20.2.tar.gz https://github.com/sahlberg/libiscsi/archive/1.20.2/
+autogen=1

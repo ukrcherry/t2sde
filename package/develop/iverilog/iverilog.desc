@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/iverilog/iverilog.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,15 +13,15 @@
 [U] http://iverilog.icarus.com/
 
 [A] David Evans yevans@virginia.edu>
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [F] CROSS
 
 [L] GPL
-[S] Beta
-[V] 11.0
+[V] 13.0
 
-[O] var_append makeinstopt ' ' -j1
+[CV-TR] s/\./_/
+[D] f23ae26d1f2601695869c7eb449b8fd291d10bf78999667fd42d708d iverilog-13_0.tar.gz https://download.sourceforge.net/iverilog/
 
-[D] 21f95132f2c3ff2652ed931193d29c974c6adfac5c96a9f7c3949f3d verilog-11.0.tar.gz http://dl.sourceforge.net/iverilog/
+var_append makeinstopt ' ' -j1

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xmlrpc-c/xmlrpc-c.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -17,16 +17,14 @@
 [U] https://xmlrpc-c.sourceforge.net/
 
 [A] Eric Kidd <eric.kidd@pobox.com>
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/base
-[F] FPIC CROSS
+[F] FPIC CROSS NOPARALLEL
 
 [L] BSD
-[S] Alpha
-[V] 1-51.06
+[V] 1.64.03
 
-[O] hook_add premake 5 '$MAKE $makeopt transport_config.h'
+[D] 67d68ca8000128523d12fc3afb9e43222c27610ba2c933181b0cc938 xmlrpc-1.64.03.tgz https://prdownloads.sourceforge.net/sourceforge/xmlrpc-c/
 
-# 1.06.x is stable tree, check it before updating
-[D] 1aafa7a20e7e79a45520e130d3926722187883d3ac53f8e792180c0c xmlrpc-c-1-51.06.tgz http://dl.sourceforge.net/sourceforge/xmlrpc-c/
+var_append CC_WRAPPER_APPEND ' ' -std=gnu17

@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/cachefilesd-inotify/cachefilesd-inotify.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Userspace daemon acting as a backend for FS-Cache
+
+[T] Userspace daemon acting as a backend for FS-Cache (uses INOTIFY instead of DNOTIFY).
+
+[U] https://gitlab.com/tomalok/cachefilesd-inotify
+
+[A] Cachefilesd-inotify Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.11.0
+[L] GPL
+
+[D] bd54e27d320002737c7676c878c545ca782d1fc751471dfe356acc54 cachefilesd-inotify-0.11.0.tar.bz2 https://gitlab.com/tomalok/cachefilesd-inotify/-/archive/0.11.0/

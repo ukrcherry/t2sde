@@ -1,12 +1,9 @@
+[TIMESTAMP] 1768853967 Mon Jan 19 21:19:27 2026
+[BUILDTIME] 10 (9)
+[SIZE] 1.18 MB, 24 files
 
-[TIMESTAMP] 1703634013 Tue Dec 26 23:40:13 2023
-[BUILDTIME] 8 (9)
-[SIZE] 2.23 MB, 24 files
-
-[DEP] 00-dirtree
 [DEP] bash
 [DEP] binutils
-[DEP] bzip2
 [DEP] coreutils
 [DEP] diffutils
 [DEP] findutils
@@ -14,8 +11,16 @@
 [DEP] freetype
 [DEP] gawk
 [DEP] grep
+[OPT] libaacs
+[OPT] libbdplus
+[DEP] libudfread
 [DEP] libxml
 [DEP] linux-header
-[DEP] make
+[DEP] meson
+[DEP] ninja
+[DEP] openssl
+[DEP] python
 [DEP] sed
 [DEP] tar
+[DEP] util-linux
+[DEP] xz

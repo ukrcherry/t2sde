@@ -1,0 +1,23 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/keyd/keyd.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] A key remapping daemon for linux
+
+[T] keyd provides a flexible, system wide daemon which remaps keys using kernel
+[T] level input primitives (evdev, uinput).
+
+[U] https://github.com/rvaiya/keyd
+
+[A] Raheman Vaiya <r.vaiya@gmail.com>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] MIT
+[V] 2.6.0
+
+[D] e67506bfd70ec3d1faaabf12cbc4ea286dfd0576d66c8b122d7a4609 keyd-v2.6.0.tar.gz https://github.com/rvaiya/keyd/archive/v2.6.0/

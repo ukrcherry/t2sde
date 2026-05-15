@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/digikam/digikam.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -14,10 +14,10 @@
 [U] https://www.digikam.org
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia extra/desktop/kde
-[F] OBJDIR
+[F] CROSS OBJDIR
 
 [E] opt exiftool
 [E] opt libheif
@@ -25,15 +25,13 @@
 [E] opt jasper
 
 [L] GPL
-[S] Beta
-[V] 8.6.0
-[P] X -----5---9 600.302
+[V] 9.0.0
 
-[O] . $base/package/*/*/kde-conf.in
-[O] var_append cmakeopt ' ' -DBUILD_WITH_QT6=1
-[O] var_append cmakeopt ' ' -GNinja
-[O] var_append GCC_WRAPPER_APPEND ' ' -Wno-error=undef
-[O] var_append GCC_WRAPPER_APPEND ' ' "-c?-I$(pkgprefix includedir libx11):-L$(pkgprefix libdir libx11)"
-[O] var_append GCC_WRAPPER_APPEND ' ' -I$root/usr/include/opencv4
+[D] 41c46ea349d57f728007a1a3712a6ebb193a89ffc36f8b03154133c5 digiKam-9.0.0.tar.xz https://download.kde.org/stable/digikam/9.0.0/
 
-[D] 2d5f876b65d7416441ea5eaab17d6bf41f1ee66d9b78a9774ed08576 digiKam-8.6.0.tar.xz https://download.kde.org/stable/digikam/8.6.0/
+. $base/package/*/*/kde-conf.in
+var_append cmakeopt ' ' -DBUILD_WITH_QT6=ON
+var_append cmakeopt ' ' -GNinja
+var_append GCC_WRAPPER_APPEND ' ' -Wno-error=undef
+var_append GCC_WRAPPER_APPEND ' ' "-c?-I$(pkgprefix includedir libx11):-L$(pkgprefix libdir libx11)"
+var_append GCC_WRAPPER_APPEND ' ' -I$root/usr/include/opencv4

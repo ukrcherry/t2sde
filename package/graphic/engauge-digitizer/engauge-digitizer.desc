@@ -1,0 +1,32 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/engauge-digitizer/engauge-digitizer.desc
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Convert graph and map images into numbers
+
+[T] Engauge Digitizer is digitizing software that converts an image showing a
+[T] graph or map into numbers. The image file can come from a scanner, digital
+[T] camera, or screenshot. The numbers can be read on the screen, and written
+[T] or copied to a spreadsheet. Highlights for beginners include an intuitive
+[T] interface and extensive context-sensitive documentation. Highlights for
+[T] experts include compensation for image distortion, cartesian and polar
+[T] coordinates, linear and logarithmic coordinates, automatic scanning,
+[T] graphical previews, and browser help.
+
+[U] https://github.com/akhuettel/engauge-digitizer
+
+[A] markmitch <markmitch@users.sourceforge.net>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/multimedia
+
+[L] GPL
+[V] 12.9.1
+
+[D] a0d34f836525c68cc2ba810d3e1a77ffedc8efe6376e4e942364115e engauge-digitizer-12.9.1.tar.gz https://github.com/akhuettel/engauge-digitizer/archive/v12.9.1/
+
+hook_add premake 5 qmake
+makeinstopt=
+hook_add postmake 5 'cp -vf bin/* $root$bindir/'

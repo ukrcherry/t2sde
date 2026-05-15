@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/usbutils/usbutils.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -15,20 +15,17 @@
 [U] http://www.linux-usb.org/
 
 [A] Thomas Sailer <sailer@ife.ee.ethz.ch>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/system
 
 [F] CROSS AUTOMAKE-QUIRK LATOMIC.sparc
 
 [L] GPL
-[S] Stable
-[V] 007
-[P] X -----5---9 126.000
+[V] 019
 
-[O] atstage native || hook_add preconf 5 "echo 'ac_cv_func_malloc_0_nonnull=yes' >> config.cache"
-[O] var_append confopt ' ' --disable-usbids
-[O] hook_add postmake 5 "ln -sfv hwdata/usb.ids $root$datadir/"
+[D] c036653653ea067ba429cfa278f12e3b9dd6a6bec82a4f2814c6fc48 usbutils-019.tar.xz https://www.kernel.org/pub/linux/utils/usb/usbutils/
 
-[CV-FLAGS] NO-AUTO
-[D] 4491138d703b3114a4d2baf3d596c21c15e826668dc73cec1e5bcd02 usbutils-007.tar.xz http://www.kernel.org/pub/linux/utils/usb/usbutils/
+atstage native || hook_add preconf 5 "echo 'ac_cv_func_malloc_0_nonnull=yes' >> config.cache"
+var_append confopt ' ' --disable-usbids
+hook_add postmake 5 "ln -sfv hwdata/usb.ids $root$datadir/"

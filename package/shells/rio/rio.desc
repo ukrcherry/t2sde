@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/rio/rio.desc
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A hardware-accelerated GPU terminal emulator
+
+[T] Rio is a modern hardware-accelerated GPU terminal emulator focusing to run
+[T] in desktops and browsers.
+
+[U] https://rioterm.com/
+
+[A] Raphael Amorim
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/shell
+
+[L] MIT
+[V] 0.4.4
+
+[D] 0a07675d3dc2246f08cf70894d5360ff8d2b1f632af50d6fa974472b rio-0.4.4.tar.gz https://github.com/raphamorim/rio/archive/refs/tags/v0.4.4/
+
+cargoinstopt=
+hook_add postmake 5 "cp -vf target/release/rio $root$bindir"

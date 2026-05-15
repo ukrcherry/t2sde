@@ -1,0 +1,20 @@
+[TIMESTAMP] 1759868699 Tue Oct  7 22:24:59 2025
+[BUILDTIME] 55 (9)
+[SIZE] 3.00 MB, 171 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] cairo
+[DEP] cmake
+[DEP] coreutils
+[DEP] diffutils
+[DEP] freetype
+[DEP] gawk
+[DEP] grep
+[DEP] gzip
+[DEP] linux-header
+[DEP] make
+[DEP] opencv
+[DEP] pkgconfig
+[DEP] sed
+[DEP] tar

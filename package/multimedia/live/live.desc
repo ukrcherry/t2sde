@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/live/live.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -16,13 +16,30 @@
 [U] http://www.live555.com/liveMedia/
 
 [A] Developers at live.com
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
-[F] NOPARALLEL FPIC
 [C] extra/multimedia
+[F] NOPARALLEL FPIC
 
 [L] LGPL
-[S] Stable
-[V] 2025.05.08
+[V] 2026.04.22
 
-[D] dee813b773cde467cd7d59ab4327d1f8d84a9dcf7617f1025b0e7373 live.2025.05.08.tar.gz http://www.live555.com/liveMedia/public/
+[D] 121c6dd0f7526d67acbfdaac7964fd2a4b657fec528d5031b2226571 live.2026.04.22.tar.gz https://download.live555.com/
+
+rtsp_pm() {
+	echo "Manually installing files ..."
+	find . -name '*.hh' -o -name '*.h' | while read file; do
+		mkdir -p $includedir/`dirname $file | sed s,include/,,`
+		cp -r $file $includedir/`echo $file | sed s,include/,,`
+	done
+	find . -name '*.so' -o -name '*.a' | while read file; do
+		cp -r $file $libdir/
+	done
+}
+
+# no ./configure and no make install ...
+runconf=0
+makeinstopt=
+
+hook_add premake 3 "./genMakefiles linux"
+hook_add postmake 3 rtsp_pm

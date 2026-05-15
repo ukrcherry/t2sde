@@ -1,0 +1,24 @@
+[TIMESTAMP] 1770547246 Sun Feb  8 11:40:46 2026
+[BUILDTIME] 30 (9)
+[SIZE] 0.35 MB, 23 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] cmake
+[DEP] coreutils
+[DEP] diffutils
+[DEP] extra-cmake-modules
+[DEP] gawk
+[DEP] grep
+[DEP] gzip
+[DEP] kconfig
+[DEP] kirigami
+[DEP] linux-header
+[DEP] make
+[DEP] python
+[DEP] qt6base
+[DEP] qt6declarative
+[DEP] sed
+[DEP] tar
+[DEP] util-linux
+[DEP] vulkan-headers

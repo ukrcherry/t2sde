@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/btop/btop.desc
+[COPY] Copyright (C) 2020 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Yet another resource monitor
+
+[T] Resource monitor that shows usage and stats for processor, memory, disks,
+[T] network and processes.
+
+[U] https://github.com/aristocratos/btop
+
+[A] Aristocratos <jakob@qvantnet.com>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS NO-LTO.ia64
+
+[L] APL
+[V] 1.4.7
+
+[D] 767f975239d7ac58c4d24b29b6a81bf2f38de51be7efcc94fb4254c9 btop-v1.4.7.tar.gz https://github.com/aristocratos/btop/archive/v1.4.7/

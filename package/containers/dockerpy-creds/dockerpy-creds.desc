@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/dockerpy-creds/dockerpy-creds.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Python bindings for the docker credentials store API
+
+[T] Python bindings for the docker credentials store API.
+
+[U] https://github.com/shin-/dockerpy-creds
+
+[A] Dockerpy-creds Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.4.0
+[L] APL
+
+[D] f253bcb52bfdae036156e8ca19e6d8c0d9ecaa2d0de92ee4c0490a36 dockerpy-creds-0.4.0.tar.gz https://github.com/shin-/dockerpy-creds/archive/0.4.0/

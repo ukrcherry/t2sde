@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/foot/foot.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -18,13 +18,16 @@
 [M] NoTag <notag@t2sde.org>
 
 [C] extra/x11
-[F] CROSS
+[F] CROSS CUSTOM-LTO
 
 [L] MIT
-[S] Stable
-[V] 1.22.0
-[P] X -----5---9 160.000
+[V] 1.27.0
 
-[O] var_append mesonopt ' ' '--buildtype=release -Dterminfo=disabled -Db_lto=false'
+[D] be6d41364f8121307c763d44b562758c7f0d2d8f2e584dd43d50cfd5 foot-1.27.0.tar.gz https://codeberg.org/dnkl/foot/releases/download/1.27.0/
 
-[D] b4a9cebf6001d5a3443b83955560a07f03e77b73af7b1a63406d5ed9 foot-1.22.0.tar.gz !https://codeberg.org/dnkl/foot/archive/1.22.0.tar.gz
+rungpepinstall=0
+
+var_append mesonopt ' ' -Dtests=false
+var_append mesonopt ' ' -Dterminfo=disabled
+[ "$SDECFG_DEBUG" = 1 ] || var_append mesonopt ' ' --buildtype=release
+[ "$SDECFG_LTO" = 1 ] || var_append mesonopt ' ' -Db_lto=false

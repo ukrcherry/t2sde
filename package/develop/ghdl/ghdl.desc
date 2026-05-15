@@ -1,0 +1,27 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/ghdl/ghdl.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] VHDL 2008/93/87 simulator
+
+[T] GHDL is an analyzer, compiler, simulator and (experimental) synthesizer for
+[T] VHDL, a Hardware Description Language (HDL). GHDL is not an interpreter: it
+[T] allows you to analyse and elaborate sources for generating machine code
+[T] from your design.
+
+[U] https://github.com/ghdl/ghdl
+
+[A] ghdl Developers
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/development
+[F] CROSS
+
+[L] GPL
+[V] 6.0.0
+
+[D] ac57763059756e2b041e1b6c774de287b78fc0b46d4676db5efcfa01 ghdl-6.0.0.tar.gz https://github.com/ghdl/ghdl/archive/v6.0.0/
+
+rungpepinstall=0 runpysetup=0 runcargo=0

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/curl/curl.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -16,17 +16,44 @@
 [U] https://curl.haxx.se/
 
 [A] Daniel Stenberg <daniel@haxx.se>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/tool
 [F] CROSS DIETLIBC LATOMIC.riscv NO-LTO.clang
 
+[E] opt brotli
 [E] opt nghttp2
+[E] opt nghttp3
+[E] opt libidn
+[E] opt libgsasl
 
 [L] MIT
-[S] Stable
-[V] 8.13.0
+[V] 8.20.0
 [P] X -----5---9 127.300
 
-[D] a9c3a415089abc5a8667950c2c921064c3e72448cb9daa0316c05c91 curl-8.13.0.tar.xz http://curl.haxx.se/download/
-[D] c813bedd1564971de17f955bbfe5465232109cf064b085652648a665 cacert-2017-09-20.pem https://curl.haxx.se/ca/
+[D] 1d869b758800a0e8a16a53077a635f012ef40811bdb9f42364f994a0 curl-8.20.0.tar.xz http://curl.haxx.se/download/
+[D] 2330bc98a22098d0411b0f97295d9ec463ddba5f03cebee1f0e13638 cacert-2025-12-02.pem https://curl.haxx.se/ca/
+
+pkginstalled libpsl || var_append confopt ' ' --without-libpsl
+
+if ! atstage native; then
+	# work arround configure mess
+	hook_add preconf 5 "$preconf echo ac_cv_path_PKGCONFIG=/tmp/nothing >> \
+		config.cache"
+fi
+
+if [ "$SDECFG_STATIC" = "1" ]; then
+	var_insert confopt ' ' --disable-shared
+fi
+
+install_cacert() {
+	if cfile="`match_source_file -p cacert curl`"; then
+		mkdir -p $root$sysconfdir/curl
+		cat < $cfile > $root$sysconfdir/curl/cacert.pem
+	fi
+}
+
+if pkginstalled openssl; then
+	var_append confopt ' ' "--with-openssl --with-ca-bundle=$sysconfdir/curl/cacert.pem"
+	hook_add postmake 3 install_cacert
+fi

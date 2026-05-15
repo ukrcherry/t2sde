@@ -1,11 +1,11 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/kidletime/kidletime.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
-[I] KDE Frameworks 5 Tier 1 integration module for idle time detection
+[I] KDE Frameworks integration module for idle time detection
 
 [T] KIdleTime is a singleton reporting information on idle time. It is useful
 [T] not only for finding out about the current idle time of the PC, but also
@@ -15,17 +15,17 @@
 [U] https://www.kde.org
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 6.14.0
+[V] 6.26.0
 [P] X -----5---9 162.800
 
-[O] . $base/package/*/*/kde-conf.in
-[O] var_append CXX_WRAPPER_APPEND ' ' "-I$root/$(pkgprefix includedir libxcb)"
-
 [CV-GROUP] kde-frameworks
-[D] 38efa03984ae92de87742533e032ae6d69d9e45f8bc3472bc0387765 kidletime-6.14.0.tar.xz https://download.kde.org/stable/frameworks/6.14/
+[D] 919d65c365b8ca85ead6842e422743089f589231ab2e4cae1a5c0003 kidletime-6.26.0.tar.xz https://download.kde.org/stable/frameworks/6.26/
+
+. $base/package/*/*/kde-conf.in
+var_append GCC_WRAPPER_APPEND ' ' "-I$root/$(pkgprefix includedir libxcb)"

@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/ebusd/ebusd.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Daemon for communication with eBUS heating systems
+
+[T] Daemon for communication with eBUS heating systems.
+
+[U] https://github.com/john30/ebusd
+
+[A] Ebusd Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 26.1
+[L] GPL3
+
+[D] 7380ccfb7a32a827230ad335148a848d5fdff288836fde62f88a6a31 ebusd-26.1.tar.gz https://github.com/john30/ebusd/archive/refs/tags/26.1/

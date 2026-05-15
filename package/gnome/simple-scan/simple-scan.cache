@@ -1,36 +1,23 @@
+[TIMESTAMP] 1760713819 Fri Oct 17 17:10:19 2025
+[BUILDTIME] 10 (9)
+[SIZE] 5.73 MB, 782 files
 
-[TIMESTAMP] 1714050454 Thu Apr 25 15:07:34 2024
-[BUILDTIME] 6 (9)
-[SIZE] 5.85 MB, 784 files
-
-[DEP] 00-dirtree
-[DEP] baobab
+[DEP] appstream-glib
 [DEP] bash
 [DEP] binutils
+[DEP] bzip2
 [DEP] cairo
 [DEP] cmake
+[DEP] colord
 [DEP] coreutils
 [DEP] diffutils
-[DEP] file-roller
-[DEP] findutils
-[DEP] fontconfig
 [DEP] gawk
-[DEP] gcalctool
 [DEP] gdk-pixbuf
 [DEP] gettext
-[DEP] ghex
-[DEP] gjs
 [OPT] glib
-[DEP] gnome-characters
-[DEP] gnome-commander
-[DEP] gnome-shell-extensions
-[DEP] gobject-introspection
+[DEP] graphene
 [DEP] grep
-[DEP] gsettings-desktop-schemas
-[DEP] gst-plugins-base
-[DEP] gthumb
 [DEP] gtk
-[DEP] gtk+
 [DEP] harfbuzz
 [DEP] itstool
 [DEP] json-glib
@@ -39,20 +26,13 @@
 [OPT] libwebp
 [DEP] libxml
 [DEP] linux-header
-[DEP] make
 [DEP] meson
-[DEP] nautilus
 [DEP] ninja
 [DEP] openssl
 [DEP] pango
 [DEP] pkgconfig
-[DEP] polkit
-[DEP] python
 [DEP] sane-backends
 [DEP] sed
-[DEP] shared-mime-info
 [DEP] tar
 [DEP] vala
-[DEP] vino
-[DEP] xz
 [DEP] zlib

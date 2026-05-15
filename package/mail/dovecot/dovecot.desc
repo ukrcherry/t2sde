@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/dovecot/dovecot.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -17,16 +17,35 @@
 [U] https://www.dovecot.org/
 
 [A] Timo Sirainen <tss@iki.fi>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network
-
 [F] CROSS
+
+[E] opt libstemmer
+[E] opt pcre2
+[E] opt systemd
+
 [L] GPL
-[S] Stable
-[V] 2.4.0
-[P] X -----5---9 194.300
+[V] 2.4.4
 
 [CV-URL] https://www.dovecot.org/download.html
+[D] 86c06fbbe99969357a42dd0e6e24fa8b6425b714a52e2871d0a2d9c9 dovecot-2.4.4.tar.gz https://www.dovecot.org/releases/2.4/
 
-[D] fda685da12ec7d85ae4a0b97c007a18d9eab22a8122db623c67d4e84 dovecot-2.4.0.tar.gz https://www.dovecot.org/releases/2.4/
+if atstage cross; then
+    hook_add preconf 5 "echo 'i_cv_epoll_works=yes
+	i_cv_inotify_works=yes
+	i_cv_posix_fallocate_works=yes
+	i_cv_signed_size_t=no
+	i_cv_gmtime_max_time_t=32
+	i_cv_signed_time_t=yes
+	i_cv_mmap_plays_with_write=yes
+	i_cv_fd_passing=yes
+	i_cv_c99_vsnprintf=yes
+	i_cv_gssapi_spnego=yes
+	lib_cv_va_copy=yes
+	lib_cv___va_copy=yes
+	lib_cv_va_val_copy=yes' >> config.cache"
+fi
+
+pkginstalled openldap && var_append confopt ' ' --with-ldap

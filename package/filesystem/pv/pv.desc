@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/pv/pv.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -16,13 +16,12 @@
 [U] https://www.ivarch.com/programs/pv.shtml
 
 [A] Andrew Wood <andrew.wood@ivarch.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/shell
 [F] CROSS
 
 [L] OpenSource
-[S] Stable
-[V] 1.9.31
+[V] 1.10.5
 
-[D] 1a3b4ae036f502de1e29f1728463d1e4c3f850343b1707df2fce287e pv-1.9.31.tar.gz https://www.ivarch.com/programs/sources/
+[D] 22dbd9bad491df8c1518c2be7783479f64b97842fa0bf64404259787 pv-1.10.5.tar.gz https://www.ivarch.com/programs/sources/

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/python-click/python-click.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,14 +14,13 @@
 [U] https://click.palletsprojects.com/en/stable/
 
 [A] click Contributors
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [E] add python-flit-core
 
 [L] BSD
-[S] Stable
-[V] 8.1.8
+[V] 8.3.1
 [P] X -----5---9 109.005
 
-[D] 1397eb486206a835a84afbc4efa02beb3c4d1ab9305c458ed2de2c9c click-8.1.8.tar.gz https://files.pythonhosted.org/packages/b9/2e/0090cbf739cee7d23781ad4b89a9894a41538e4fcf4c31dcdd705b78eb8b/
+[D] abe170ae6c3346471b558ef01b297fea9337ae5cc546770c3c5f5ea4 click-8.3.1.tar.gz https://files.pythonhosted.org/packages/source/c/click/

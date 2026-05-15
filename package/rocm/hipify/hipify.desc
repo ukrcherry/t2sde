@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/hipify/hipify.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,18 +12,17 @@
 [U] https://github.com/ROCm/HIPIFY
 
 [A] Advanced Micro Devices, Inc.
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [F] CROSS
 [C] extra/development
 
 [L] MIT
-[S] Stable
-[V] 6.4.0
+[V] 7.2.2
 [P] X -----5---9 300.255
 
-[O] . $base/package/*/*/rocm-conf.in
-[O] hook_add postmake 5 "chmod +x $root$bindir/hipify-perl"
-
 [CV-GROUP] rocm
-[D] c42d93c455a2c70c4f59e7256daa2f0847161f42d7b2f721e67d4196 HIPIFY-rocm-6.4.0.tar.gz https://github.com/ROCm/HIPIFY/archive/rocm-6.4.0/
+[D] bb09326eb34dd00d5c9101cd0b69d1d7b9a7d305d1a008bc884312c1 HIPIFY-rocm-7.2.2.tar.gz https://github.com/ROCm/HIPIFY/archive/rocm-7.2.2/
+
+. $base/package/*/*/rocm-conf.in
+hook_add postmake 5 "chmod +x $root$bindir/hipify-perl"

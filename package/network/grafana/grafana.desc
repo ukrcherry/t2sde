@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/grafana/grafana.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Open source, feature rich metrics dashboard and graph editor
+
+[T] Open source, feature rich metrics dashboard and graph editor.
+
+[U] https://grafana.com
+
+[A] Grafana Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 13.0.1
+[L] AGPL3
+
+[D] 56239609302e5288780f8ff92f414c3af0ce4cb7ad1857e80b7be2a4 grafana-13.0.1.tar.gz https://github.com/grafana/grafana/archive/v13.0.1/

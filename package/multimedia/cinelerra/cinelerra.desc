@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/cinelerra/cinelerra.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -16,12 +16,11 @@
 [U] http://heroinewarrior.com/cinelerra.php3
 
 [A] heroinewarrior.com
-[M] Leonel Ivan Saafigueroa <leonel@saafigueroa.com.ar>
+[M] Leonel Iván Saafigueroa <leonel@saafigueroa.com.ar>
 
 [C] extra/multimedia
 
 [L] GPL
-[S] Stable
-[V] 4.1
+[V] 10
 
-[D] 38328dace2d725baa931c6022ca1616871a479101cbfc4158c7533bf cinelerra-4.1-src.tar.bz2 http://dl.sourceforge.net/sourceforge/heroines/
+[D] c9b2d2c0ef8db08a668d64c87c734ed5187073e21d383ba08fd510fb cinelerra-10-src.tar.xz https://download.sourceforge.net/heroines/files/

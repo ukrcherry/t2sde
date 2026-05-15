@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/weechat-matrix/weechat-matrix.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] WeeChat Matrix protocol script
+
+[T] WeeChat Matrix protocol script.
+
+[U] https://github.com/poljar/weechat-matrix
+
+[A] Weechat-matrix Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.3.0 feae9fd
+[L] MIT
+
+[D] 279ab9e19226ce7753df1bd2f7bc162bf71f8a1fcbf5a9d321e168da weechat-matrix-feae9fd.tar.gz https://github.com/poljar/weechat-matrix/archive/feae9fd/

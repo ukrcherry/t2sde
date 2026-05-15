@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/hwdata/hwdata.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,16 +12,15 @@
 [U] https://github.com/vcrhonek/hwdata
 
 [A] Vitezslav Crhonek <vcrhonek@redhat.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/system
 [F] CROSS
 
 [L] GPL
-[S] Beta
-[V] 0.391
+[V] 0.406
 [P] X -----5---9 125.000
 
-[O] var_append confopt ' ' --disable-blacklist
+[D] 7d2dc699193894e26ce8499deb770502771ca8f24abc6575f2646d9c hwdata-0.406.tar.gz https://github.com/vcrhonek/hwdata/archive/v0.406/
 
-[D] 27541964d89be18fdf57c5fc4f5c8457c9415a1b43e0a85e6965d91b hwdata-0.391.tar.gz https://github.com/vcrhonek/hwdata/archive/v0.391/
+var_append confopt ' ' --disable-blacklist

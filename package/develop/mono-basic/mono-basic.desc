@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/mono-basic/mono-basic.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,15 +11,13 @@
 [U] https://www.mono-project.com/
 
 [A] Rolf Bjarne Kvinge <RKvinge@novell.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [L] GPL
-[S] Stable
-[V] 2.10
+[V] 4.8
 
-[O] . $base/package/*/mono/mono.in
+[D] 3d4ce37c148599d20502897b8e58ea41cd4caf84311c72fd116202c5 mono-basic-4.8.tar.gz https://github.com/mono/mono-basic/archive/4.8/
 
-[CV-URL] http://go-mono.com/sources-stable/
-[D] 5033ced4ec1adc44c1124f3cd8cb1e40263c7734ccd6dc5866644304 mono-basic-2.10.tar.bz2 http://go-mono.com/sources/mono-basic/
+. $base/package/*/mono/mono.in

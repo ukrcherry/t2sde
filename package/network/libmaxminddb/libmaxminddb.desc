@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libmaxminddb/libmaxminddb.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Maxmind GeoIP2 database library
+
+[T] Maxmind GeoIP2 database library.
+
+[U] https://github.com/maxmind/libmaxminddb
+
+[A] Libmaxminddb Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS NO-LTO.clang
+
+[V] 1.13.3
+[L] APL
+[P] X -----5---9 700.000
+
+[D] 3f45ce3cec8c442ca8038a8442b17e118a5ba854d30f284763311f79 libmaxminddb-1.13.3.tar.gz https://github.com/maxmind/libmaxminddb/releases/download/1.13.3/

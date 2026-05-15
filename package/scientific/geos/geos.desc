@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/geos/geos.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A library providing OpenGIS and JTS spatial operations
+
+[T] GEOS is a library providing OpenGIS and JTS spatial operations in C++.
+
+[U] https://libgeos.org/
+
+[A] Geos Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 3.14.1
+[L] LGPL
+
+[D] db1da1f6dcec532a3fe0f6f5432c94b406dd3d53423fc84350286131 geos-3.14.1.tar.bz2 https://download.osgeo.org/geos/

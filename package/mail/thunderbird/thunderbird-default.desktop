@@ -1,0 +1,24 @@
+[Desktop Entry]
+Version=1.0
+Name=Thunderbird
+GenericName=Mail Client
+Comment=Send and receive mail
+Keywords=Email;E-mail;Newsgroup;Feed;RSS
+Exec=D_bindir/thunderbird %u
+Icon=thunderbird
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+MimeType=x-scheme-handler/mailto;
+StartupNotify=true
+StartupWMClass=thunderbird-default
+Categories=Application;Network;Email;
+Actions=Compose;Contacts
+
+[Desktop Action Compose]
+Name=Compose New Message
+Exec=D_bindir/thunderbird -compose
+
+[Desktop Action Contacts]
+Name=Contacts
+Exec=D_bindir/thunderbird -addressbook

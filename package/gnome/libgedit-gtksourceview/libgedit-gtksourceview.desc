@@ -1,0 +1,27 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libgedit-gtksourceview/libgedit-gtksourceview.desc
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A small wrapper library around GtkSourceView for gedit
+
+[T] libgedit-gtksourceview is a small wrapper library around GtkSourceView used
+[T] by gedit and related GNOME text editors to provide editing capabilities
+[T] with syntax highlighting.
+
+[U] https://gitlab.gnome.org/World/gedit/libgedit-gtksourceview
+
+[A] Sébastien Wilmet <swilmet@gnome.org>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/development extra/desktop/gnome
+[F] CROSS
+
+[L] LGPL
+[V] 299.7.0
+[P] X -----5---9 177.301
+
+[D] ee7204fa8efe95ab2418b5a066b0f3712d40b2421e5faaa197cf571d libgedit-gtksourceview-299.7.0.tar.gz https://gitlab.gnome.org/World/gedit/libgedit-gtksourceview/-/archive/299.7.0/
+
+. $base/package/*/*/gnome-conf.in

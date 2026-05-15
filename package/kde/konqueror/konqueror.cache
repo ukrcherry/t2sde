@@ -1,6 +1,6 @@
-[TIMESTAMP] 1744739857 Tue Apr 15 19:57:37 2025
-[BUILDTIME] 490 (9)
-[SIZE] 30.27 MB, 2764 files
+[TIMESTAMP] 1770544653 Sun Feb  8 10:57:33 2026
+[BUILDTIME] 350 (9)
+[SIZE] 22.05 MB, 2108 files
 
 [DEP] bash
 [DEP] binutils
@@ -44,20 +44,18 @@
 [DEP] kwindowsystem
 [DEP] kxmlgui
 [DEP] libxcb
-[DEP] libxml
 [DEP] linux-header
 [DEP] make
 [DEP] pkgconfig
 [DEP] plasma-activities
 [DEP] procps
 [DEP] qt6base
-[DEP] qt6declarative
 [DEP] qt6webengine
 [DEP] sed
 [DEP] solid
 [DEP] sonnet
 [DEP] tar
-[DEP] tbb
+[DEP] util-linux
 [DEP] vulkan-headers
 [DEP] xz
 [DEP] zlib

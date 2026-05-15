@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gst-plugins-base/gst-plugins-base.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -18,14 +18,29 @@
 [F] CROSS NO-LTO.clang LATOMIC.arch32
 
 [E] opt cdparanoia
+[E] opt graphene
 [E] opt libtheora
-[E] opt orc
 [E] opt libopus
+[E] opt orc
+[E] del valgrind
 
 [L] LGPL
-[S] Stable
-[V] 1.26.1
+[V] 1.28.3
 [P] X -----5---9 127.150
 
 [CV-GROUP] gst
-[D] 456af53034bc0243c3aa418cc850bb400599d0874a5e72793dfc9f07 gst-plugins-base-1.26.1.tar.xz http://gstreamer.freedesktop.org/src/gst-plugins-base/
+[CV-FLAGS] ODD-UNSTABLE
+[D] 93812b9b83dc3ce4531d16e57f41676991a8c5b4c3a4267991e1a90d gst-plugins-base-1.28.3.tar.xz https://gstreamer.freedesktop.org/src/gst-plugins-base/
+
+export GI_SCANNER_DISABLE_CACHE=1
+
+var_append mesonopt ' ' -Dgl_winsys=x11 # ,gbm'
+pkginstalled wayland wayland-protocols &&
+	 var_append mesonopt ',' wayland
+
+var_append mesonopt ' ' '-Dpackage-name="GStreamer base plug-ins (T2)" \
+	-Dpackage-origin="https://t2sde.org" \
+	-Dtests=disabled -Dexamples=disabled'
+
+pkginstalled alsa-lib && var_append mesonopt ' ' -Dalsa=enabled
+pkginstalled gobject-introspection && var_append mesonopt ' ' -Dintrospection=disabled

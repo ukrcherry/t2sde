@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/gum/gum.desc
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A tool for glamorous shell scripts
+
+[T] Gum provides highly configurable, ready-to-use utilities to help you write
+[T] useful shell scripts and dotfiles aliases with just a few lines of code.
+
+[U] https://github.com/charmbracelet/gum
+
+[A] Charmbracelet, Inc
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/shell
+
+[L] MIT
+[V] 0.17.0
+
+[D] 6748afcc1ad6d96514c632c4055f8d8e5907b472341cd5d1c1f350e2 gum-0.17.0.tar.gz https://github.com/charmbracelet/gum/archive/refs/tags/v0.17.0/
+
+hook_add postmake 5 "cp -vf gum $root$bindir"
+hook_add postmake 5 "mkdir -p $root$datadir/gum/; cp -rvf examples $root$datadir/gum/"

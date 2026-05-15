@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/spectacle/spectacle.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -12,19 +12,18 @@
 [U] https://apps.kde.org/spectacle/
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
-[E] opt kdoctools
-[E] opt docbook-xml
+[F] CROSS OBJDIR
+
+[E] opt kdoctools docbook-xml docbook-xsl
 
 [L] GPL
-[S] Stable
-[V] 24.12.3
-[P] X -----5---9 200.300
+[V] 6.6.5
 
-[O] . $base/package/*/*/kde-conf.in
-[O] var_append GCC_WRAPPER_APPEND ' ' "-I$root$(pkgprefix includedir opencv)/opencv4"
+[CV-GROUP] kde-plasma
+[D] d16c1a2216532621674b4f69429dd4085ecb8b52fc6c4baf4fddc096 spectacle-6.6.5.tar.xz https://download.kde.org/stable/plasma/6.6.5/
 
-[CV-GROUP] kde-gear
-[D] 78e67b7c255f9e1047514526815b1e1545a99a4e059740950191947e spectacle-24.12.3.tar.xz https://download.kde.org/stable/release-service/24.12.3/src/
+. $base/package/*/*/kde-conf.in
+var_append GCC_WRAPPER_APPEND ' ' -I$root/usr/include/opencv4

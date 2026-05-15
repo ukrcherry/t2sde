@@ -1,6 +1,6 @@
-[TIMESTAMP] 1737554650 Wed Jan 22 15:04:10 2025
+[TIMESTAMP] 1768849836 Mon Jan 19 20:10:36 2026
 [BUILDTIME] 20 (9)
-[SIZE] 64.42 MB, 28541 files
+[SIZE] 74.39 MB, 39954 files
 
 [DEP] bash
 [DEP] binutils
@@ -8,15 +8,17 @@
 [DEP] coreutils
 [DEP] diffutils
 [DEP] extra-cmake-modules
+[DEP] findutils
 [DEP] gawk
 [DEP] grep
+[DEP] kiconthemes
 [DEP] linux-header
 [DEP] make
-[DEP] pkgconfig
 [DEP] python
+[DEP] python-lxml
 [DEP] qt6base
 [DEP] sed
 [DEP] tar
-[DEP] tbb
+[DEP] util-linux
 [DEP] vulkan-headers
 [DEP] xz

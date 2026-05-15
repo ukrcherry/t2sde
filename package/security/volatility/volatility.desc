@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/volatility/volatility.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Volatile memory forensics toolkit
+
+[T] Volatile memory forensics toolkit.
+
+[U] https://volatilityfoundation.org/
+
+[A] Volatility Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 2.6.1
+[L] GPL
+
+[D] 26999be5f43ae14694307028283d408d42b53657fce6cfc4eac86495 volatility-2.6.1.tar.gz https://github.com/volatilityfoundation/volatility/archive/2.6.1/

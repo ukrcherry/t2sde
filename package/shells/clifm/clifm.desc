@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/clifm/clifm.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] CLI file manager
+
+[T] CLI file manager.
+
+[U] https://github.com/leo-arch/clifm
+
+[A] Clifm Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 1.27.1
+[L] GPL
+
+[D] e5b64a054b6a7fb0f35fba5f8f45d43e40328e0d575f6558b9c18bc8 clifm-1.27.1.tar.gz https://github.com/leo-arch/clifm/releases/download/v1.27.1/

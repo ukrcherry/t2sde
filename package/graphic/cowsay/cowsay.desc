@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/cowsay/cowsay.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,20 +12,15 @@
 [T] creatures that can be bent to your sick and twisted will. New "cows" can be
 [T] easily bred by those versed in the appropriate dark arts.
 
-[U] http://www.nog.net/~tony/warez/cowsay.shtml
+[U] https://cowsay.diamonds/
 
 [A] Tony Monroe <tone@nog.net>
-[M] Miguel Bolanos <codetux@codetux.com>
+[M] Miguel Bolanos <miguel@geekpreview.org>
 
 [C] extra/tool
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 3.04
+[V] 3.8.4
 
-[CV-URL] http://www.nog.net/~tony/warez/cowsay.shtml
-
-[O] runmake=0
-[O] hook_add postmake 5 "sh install.sh $root/$prefix"
-[D] 70d3bbfb36b98fa4dd543620562fd79dee5c9b6c78fd85427c4a724c cowsay-3.04.tar.gz https://github.com/tnalpgge/rank-amateur-cowsay/archive/
+[D] 41bf1d773f092f83ef8b7ff05ef39a316bde1e2318ebb4980f59a56a cowsay-3.8.4.tar.gz https://github.com/cowsay-org/cowsay/archive/refs/tags/v3.8.4/

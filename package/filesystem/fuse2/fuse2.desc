@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/fuse2/fuse2.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -21,10 +21,10 @@
 [F] CROSS
 
 [L] GPL
-[S] Stable
 [V] 2.9.9
 [P] X -----5---9 136.500
 
-[O] var_append confopt ' ' --disable-kernel-module
-
+[CV-FLAGS] NO-MAJOR
 [D] 57fce92fbc7893f527e10017699d3911c7e0ef200714f007e1067ddc fuse-2.9.9.tar.gz https://github.com/libfuse/libfuse/releases/download/fuse-2.9.9/
+
+var_append confopt ' ' --disable-kernel-module

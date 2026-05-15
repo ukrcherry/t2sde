@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/psycopg2/psycopg2.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -20,13 +20,12 @@
 [U] https://pypi.org/project/psycopg2
 
 [A] Federico Di Gregorio <fog@initd.org>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [L] GPL
-[S] Stable
-[V] 2.9.10
+[V] 2.9.12
 [P] X -----5---9 700.000
 
-[D] d3dd51b923a8b94a5996d799b1a4201147c9354333af9db23d4923ca psycopg2-2.9.10.tar.gz https://files.pythonhosted.org/packages/62/51/2007ea29e605957a17ac6357115d0c1a1b60c8c984951c19419b3474cdfd/
+[D] abbb107f7b53c47c2e94253fed8b1906b816e7b39706801b7541cc68 psycopg2-2.9.12.tar.gz https://files.pythonhosted.org/packages/source/p/psycopg2/

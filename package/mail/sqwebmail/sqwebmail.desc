@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/sqwebmail/sqwebmail.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,16 +14,17 @@
 
 [U] http://www.courier-mta.org/sqwebmail/main.html
 
-[A] Mr. Sam <mrsam (at) courier (dash) mta (dot) com>
-[M] The T2 Project <t2@t2-project.org>
+[A] Mr. Sam <mrsam@courier-mta.com>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network
 
 [L] GPL
-[S] Stable
-[V] 6.0.10
+[V] 6.3.1
 
-[O] var_append confopt ' ' --enable-imagedir=$datadir/$pkg/images
-[O] pkginstalled courier-imap && var_append patchfiles ' ' $confdir/cimap-sharedfiles.diff
+[D] 49acb7aab8ebbc09dcd242db89c510d99fa0f0595e7220cd4ec60361 sqwebmail-6.3.1.tar.bz2 https://prdownloads.sourceforge.net/sourceforge/courier/
 
-[D] 0bcd93c1a4837b8cbd25a4b873244ca15b90ea686b372bf58ebd3570 sqwebmail-6.0.10.tar.bz2 http://dl.sourceforge.net/sourceforge/courier/
+var_append confopt ' ' --enable-imagedir=$datadir/$pkg/images
+var_append confopt ' ' --with-notice=unicode
+var_append confopt ' ' --enable-cgibindir=$datadir/$pkg/cgi-bin
+pkginstalled courier-imap && var_append patchfiles ' ' $confdir/cimap-sharedfiles.diff

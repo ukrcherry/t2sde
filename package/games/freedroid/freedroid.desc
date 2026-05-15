@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/freedroid/freedroid.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -25,16 +25,17 @@
 [A] Johannes Prix <johannesprix@users.sourceforge.net>
 [A] Reinhard Prix <rprix@users.sourceforge.net>
 
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/game
 #[C] extra/game/rpg
 
 [L] GPL
-[S] Stable
-[V] 1.0.2
+[V] 1.9.0
 
-[O] bindir=$root/$SDECFG_PKG_GAMES_BINDIR
-[O] datadir=$root/$SDECFG_PKG_GAMES_DATADIR
+[D] 608276afebacbe659ef99aed84b37916c8e69475af223c2a3e3671bd freedroid-1.9.0.tar.gz https://github.com/ReinhardPrix/FreedroidClassic/archive/refs/tags/freedroid-1.9.0-sdl2-port/
 
-[D] a0d8f2ea8ea6e4e8e34e1a8bb9dc75b7a2e094ceaa03635c3c0bb742 freedroid-1.0.2.tar.gz http://dl.sourceforge.net/sourceforge/freedroid/
+bindir=$root/$SDECFG_PKG_GAMES_BINDIR
+datadir=$root/$SDECFG_PKG_GAMES_DATADIR
+autogen=2
+var_append GCC_WRAPPER_APPEND ' ' -std=gnu11

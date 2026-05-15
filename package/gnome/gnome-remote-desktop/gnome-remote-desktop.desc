@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gnome-remote-desktop/gnome-remote-desktop.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,16 +11,14 @@
 [U] https://www.gnome.org
 
 [A] The GNOME Project <gnome-devel-list@gnome.org>
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/shell extra/desktop/gnome
 
 [L] LGPL
-[S] Stable
-[V] 48.1
-[P] X -----5---9 180.100
-
-[O] . $base/package/*/*/gnome-conf.in
+[V] 50.1
 
 [CV-URL] https://download.gnome.org/sources/gnome-remote-desktop/cache.json
-[D] 38c767d814bc67067b9f7be1912e1fff92ee0295d370e6aa67f8c5a3 gnome-remote-desktop-48.1.tar.xz https://download.gnome.org/sources/gnome-remote-desktop/48/
+[D] 2875bc52e8ff1d9f1ab6e1b36ce2cbda00778e76999cd2fbad8ba694 gnome-remote-desktop-50.1.tar.xz https://download.gnome.org/sources/gnome-remote-desktop/50/
+
+. $base/package/*/*/gnome-conf.in

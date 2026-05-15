@@ -1,0 +1,28 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/rpm-sequoia/rpm-sequoia.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] An OpenPGP backend for rpm using Sequoia PGP
+
+[T] This library provides an implementation of the rpm's pgp interface using
+[T] Sequoia.
+
+[U] https://github.com/rpm-software-management/rpm-sequoia
+
+[A] rpm-software-management
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/archive
+[F] CROSS
+
+[L] GPL
+[V] 1.10.2
+[P] X -----5---9 138.000
+
+[D] 1102323da1f15dfd495379dd0f1542465df0e2fea037a78d2d843ff0 rpm-sequoia-1.10.2.tar.gz https://github.com/rpm-software-management/rpm-sequoia/archive/v1.10.2/
+
+cargoinstopt=
+hook_add postmake 5 'cp -vf target/*/librpm* $root$libdir/'
+hook_add postmake 5 'cp -vf target/*/$pkg.pc $root$libdir/pkgconfig'

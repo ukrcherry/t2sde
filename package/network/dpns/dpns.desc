@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/dpns/dpns.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Docker pull & save
+
+[T] Docker pull & save.
+
+[U] https://github.com/liske/dpns
+
+[A] Dpns Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.4
+[L] GPL
+
+[D] f60b4996a62c89760bf8cf24b64c51965b61c01105bc63d2f60da05a dpns-0.4.tar.gz https://github.com/liske/dpns/archive/0.4/

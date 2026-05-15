@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xarchiver/xarchiver.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,15 +12,14 @@
 [U] https://github.com/ib/xarchiver
 
 [A] <gt67@users.sourgeforce.net>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/desktop/xfce
 [F] CROSS
 
 [L] GPL
-[S] Beta
-[V] 0.5.4.25
+[V] 0.5.4.26
 
-[O] . $base/package/xfce4/*/xfce4-conf.in
+[D] bc78bac9ac7a0ecf0dd5a0652d7b29b5c7039c3ea010f1d2fbec5873 xarchiver-0.5.4.26.tar.gz !https://github.com/ib/xarchiver/archive/refs/tags/0.5.4.26.tar.gz
 
-[D] 61763be3efd737f802511a4172ee12cc34acc2d6bdcc353e41c69f5b xarchiver-0.5.4.25.tar.gz !https://github.com/ib/xarchiver/archive/refs/tags/0.5.4.25.tar.gz
+. $base/package/xfce4/*/xfce4-conf.in

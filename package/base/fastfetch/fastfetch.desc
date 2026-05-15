@@ -1,0 +1,32 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/fastfetch/fastfetch.desc
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Like neofetch, but much faster
+
+[T] Fastfetch is a neofetch-like tool for fetching system information and
+[T] displaying them in a pretty way. It is written mainly in C, with
+[T] performance and customizability in mind.
+
+[U] https://github.com/fastfetch-cli/fastfetch/
+
+[A] Linus Dierheimer <Linus@Dierheimer.de>
+[M] NoTag <notag@t2sde.org>
+
+[C] extra/tool
+[F] CROSS
+
+[E] del rpm
+[E] opt chafa dconf imagemagick opencl-headers pulseaudio python
+[E] opt libdrm libglvnd libx11 libxcb libxrandr libxrender mesa
+[E] opt vulkan-headers wayland xfconf xorgproto libxfce4util gtkmm
+[E] opt dbus
+
+[L] MIT
+[V] 2.63.1
+
+[D] 7930e7659378630a577506589cd98840df58f034bf5b8217605dfc82 fastfetch-2.63.1.tar.gz https://github.com/fastfetch-cli/fastfetch/archive/2.63.1/
+
+pkginstalled directx-headers && var_append GCC_WRAPPER_APPEND ' ' -I$root$includedir/wsl/stubs

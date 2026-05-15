@@ -1,0 +1,22 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/clucene/hotfix-gcc-ver.patch
+# Copyright (C) 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0 or patched project license
+# --- T2-COPYRIGHT-END ---
+
+--- clucene-core-2.3.3.4/src/shared/cmake/MacroCheckGccVisibility.cmake.vanilla	2026-05-15 18:55:44.129394011 +0200
++++ clucene-core-2.3.3.4/src/shared/cmake/MacroCheckGccVisibility.cmake	2026-05-15 18:57:03.153910293 +0200
+@@ -32,10 +32,11 @@
+    
+    
+ 
+-   macro_ensure_version("4.1.0" "${_gcc_version}" GCC_IS_NEWER_THAN_4_1)
+-   macro_ensure_version("4.2.0" "${_gcc_version}" GCC_IS_NEWER_THAN_4_2)
++   #macro_ensure_version("4.1.0" "${_gcc_version}" GCC_IS_NEWER_THAN_4_1)
++   #macro_ensure_version("4.2.0" "${_gcc_version}" GCC_IS_NEWER_THAN_4_2)
+ 
+    set(_GCC_COMPILED_WITH_BAD_ALLOCATOR FALSE)
++   set(GCC_IS_NEWER_THAN_4_1 TRUE)
+    if (GCC_IS_NEWER_THAN_4_1)
+       exec_program(${CMAKE_C_COMPILER} ARGS -v OUTPUT_VARIABLE _gcc_alloc_info)
+       string(REGEX MATCH "(--enable-libstdcxx-allocator=mt)" _GCC_COMPILED_WITH_BAD_ALLOCATOR "${_gcc_alloc_info}")

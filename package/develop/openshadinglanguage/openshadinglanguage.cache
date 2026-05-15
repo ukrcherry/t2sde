@@ -1,13 +1,10 @@
+[TIMESTAMP] 1774014568 Fri Mar 20 14:49:28 2026
+[BUILDTIME] 340 (9)
+[SIZE] 101.83 MB, 129 files
 
-[TIMESTAMP] 1723477931 Mon Aug 12 18:52:11 2024
-[BUILDTIME] 115 (9)
-[SIZE] 7.31 MB, 132 files
-
-[DEP] 00-dirtree
 [DEP] bash
 [DEP] binutils
 [DEP] bison
-[DEP] boost
 [DEP] clang
 [DEP] cmake
 [DEP] coreutils
@@ -16,18 +13,20 @@
 [DEP] gawk
 [DEP] grep
 [DEP] gzip
+[DEP] ilmbase
 [DEP] libglvnd
-[DEP] libxml
 [DEP] linux-header
 [DEP] llvm
 [DEP] m4
 [DEP] make
-[DEP] openexr
 [DEP] openimageio
 [DEP] pugixml
-[DEP] pybind
+[DEP] pybind11
 [DEP] python
+[OPT] qt6base
+[DEP] robin-map
 [DEP] sed
 [DEP] tar
-[DEP] tbb
+[DEP] util-linux
+[DEP] vulkan-headers
 [DEP] zlib

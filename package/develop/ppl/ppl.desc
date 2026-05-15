@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/ppl/ppl.desc
-[COPY] Copyright (C) 2009 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2009 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,14 +13,26 @@
 [U] https://bugseng.com/products/ppl/
 
 [A] Roberto Bagnara <http://www.cs.unipr.it/~bagnara>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/development
 [F] NO-LTO.gcc
 
 [L] GPL
-[S] Stable
 [V] 1.2
 
 [CV-URL] http://bugseng.com/products/ppl/download
 [D] 1aef8db1cf2774bdbedc751cf9f9c6199e802682515895f8005ebd9e ppl-1.2.tar.xz http://bugseng.com/products/ppl/download/ftp/releases/1.2/
+
+if atstage toolchain; then
+	# use the host g++ for toolchain stage
+	export CXX=g++
+	# via LDFLAGS for libtool
+	export LDFLAGS="-L$root$libdir -Wl,-rpath,${root}${libdir}"
+	var_append SYSGCC_WRAPPER_INSERT ' ' -I$root$includedir
+
+	# guide to pick up the right libs in cross
+	var_append confopt ' ' '--with-libgmp-prefix=$root --with-libgmpxx-prefix=$root'
+fi
+
+atstage cross && var_append confopt ' ' '--enable-interfaces='c' --disable-optimization'

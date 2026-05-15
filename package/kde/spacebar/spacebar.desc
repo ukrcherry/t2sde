@@ -1,0 +1,25 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/spacebar/spacebar.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] SMS/MMS application for Plasma Mobile
+
+[T] SMS/MMS application for Plasma Mobile.
+
+[U] https://www.kde.org
+
+[A] The KDE-Team
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
+
+[L] GPL
+[V] 6.6.5
+
+[CV-GROUP] kde-plasma
+[D] 1065430f25857e624472677430f3c65d85010a0470b5795ae5b8bd3e spacebar-6.6.5.tar.xz https://download.kde.org/stable/plasma/6.6.5/
+
+. $base/package/*/*/kde-conf.in

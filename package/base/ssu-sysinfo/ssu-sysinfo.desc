@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/ssu-sysinfo/ssu-sysinfo.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Mer's ssu-sysinfo
+
+[T] Mer's ssu-sysinfo.
+
+[U] https://github.com/sailfishos/ssu-sysinfo
+
+[A] Ssu-sysinfo Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.5.0
+[L] LGPL BSD
+
+[D] 22e465541a7678115788ab05e5ab08998372fc052babd6e2db971c90 ssu-sysinfo-1.5.0.tar.gz https://github.com/sailfishos/ssu-sysinfo/archive/1.5.0/

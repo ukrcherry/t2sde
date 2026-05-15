@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/zig/zig.desc
-[COPY] Copyright (C) 2020 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2020 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -9,17 +9,28 @@
 [T] General-purpose programming language and toolchain for maintaining
 [T] robust, optimal, and reusable software.
 
-[U] https://github.com/ziglang/zig
+[U] https://ziglang.org
 
 [A] Andrew Kelley
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [F] CROSS OBJDIR NO-LTO
 
 [L] MIT
-[S] Beta
-[V] 0.14.0
+[V] 0.17.0-dev.251+0db721ec2
 [P] X ?----5---9 109.300
 
-[D] 7e20d0132b51c84c472a8e2c58cff4d8b59839418f5e47f13b779e4c zig-0.14.0.tar.xz https://ziglang.org/builds/
+[D] 4ab051e0e5ef075ffded1084f4f51187408bbc7fba7238b7f7ff189c zig-0.17.0-dev.251+0db721ec2.tar.xz https://ziglang.org/builds/
+
+export ZIG_LOCAL_CACHE_DIR=$builddir/$pkg-$ver/.cache
+export ZIG_GLOBAL_CACHE_DIR=$builddir/$pkg-$ver/.cache
+
+var_append cmakeopt ' ' "-DCMAKE_PREFIX_PATH=/$prefix -DCMAKE_BUILD_TYPE=None"
+
+var_append cmakeopt ' ' -DZIG_VERSION=$ver
+[ "$SDECFG_STATIC" = 1 ] || var_append cmakeopt ' ' -DZIG_SHARED_LLVM=ON
+var_append cmakeopt ' ' "-DZIG_STATIC=OFF -DZIG_STATIC_ZLIB=OFF -DZIG_STATIC_LLVM=OFF"
+
+var_append cmakeopt ' ' -DZIG_HOST_TARGET_TRIPLE=${arch_build/-t2-/-}
+var_append cmakeopt ' ' -DZIG_TARGET_MCPU=baseline

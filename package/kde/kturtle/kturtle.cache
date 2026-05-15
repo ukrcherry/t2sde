@@ -1,6 +1,6 @@
-[TIMESTAMP] 1739187757 Mon Feb 10 12:42:37 2025
-[BUILDTIME] 35 (5)
-[SIZE] 5.73 MB, 245 files
+[TIMESTAMP] 1770547661 Sun Feb  8 11:47:41 2026
+[BUILDTIME] 55 (9)
+[SIZE] 5.71 MB, 246 files
 
 [DEP] bash
 [DEP] binutils
@@ -28,7 +28,6 @@
 [DEP] kxmlgui
 [DEP] libxml
 [DEP] linux-header
-[DEP] lokalize
 [DEP] make
 [DEP] pkgconfig
 [DEP] procps
@@ -36,6 +35,6 @@
 [DEP] qt6svg
 [DEP] sed
 [DEP] tar
-[DEP] tbb
+[DEP] util-linux
 [DEP] vulkan-headers
 [DEP] xz

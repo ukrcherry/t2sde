@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/worker/worker.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -15,15 +15,16 @@
 [U] http://www.boomerangsworld.de/worker
 
 [A] Ralf Hoffmann <ralf.hoffmann@epost.de>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 2.19.4
+[V] 5.4.0
 
 [CV-URL] http://www.boomerangsworld.de/cms/worker/download
+[D] 75accded08070a87023e2e62be5523d8159b0dc33c396bf241daef00 worker-5.4.0.tar.bz2 http://www.boomerangsworld.de/cms/worker/downloads/
 
-[D] 6e13f9329be7850ab910e626e5a3b2ab63a0505418f7f739f0a321c8 worker-2.19.4.tar.bz2 http://www.boomerangsworld.de/worker/downloads/
+var_append GCC_WRAPPER_APPEND ' ' -L$root$(pkgprefix libdir libx11)
+var_append GCC_WRAPPER_APPEND ' ' -llua

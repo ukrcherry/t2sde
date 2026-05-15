@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/tanidvr/tanidvr.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] A CLI tool for accessing DVRs and IP cameras based on the proprietary DVR-IP protocol
+
+[T] A CLI tool for accessing DVRs and IP cameras based on the proprietary DVR-IP protocol (port 37777/TCP).
+
+[U] https://tanidvr.sourceforge.net
+
+[A] Tanidvr Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 1.4.1
+[L] GPL3
+
+[D] 61b7a29f87713c44ab97e60820c9719d9e0b171d98067ba3cb0901cf tanidvr-1.4.1.tar.xz https://downloads.sourceforge.net/project/tanidvr/TaniDVR/tanidvr-1.4.1/.

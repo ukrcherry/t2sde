@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/dolphin-emu/dolphin-emu.desc
-[COPY] Copyright (C) 2017 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2017 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,18 +12,15 @@
 [U] https://dolphin-emu.org
 
 [A] Dolphin Emulator Project
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 # at least cd emulation code contains x86 only assembly :-(
-[R] + x86 x86-64
+[R] + arm arm64 x86 x86-64
 
 [C] extra/game
 
 [L] GPL
-[S] Stable
-[V] 5.0
-
-[O] [ $arch == "x86-64" -o $arch == "arm" ] || var_append cmakeopt ' ' -DENABLE_GENERIC=true
+[V] 2603a
 
 [CV-FLAGS] NO-PREFIX
-[D] 01ccdf92efc69fe8cdfba6d786ec8d27737c143f99e89da2faf43d20 dolphin-5.0.tar.gz https://github.com/dolphin-emu/dolphin/archive/5.0/
+[D] ff56953ddfe10ce1ea4397d6185883ae152bfa04a79e820fb11336fc dolphin-emu-2603a.tar.gz git+https://github.com/dolphin-emu/dolphin 2603a

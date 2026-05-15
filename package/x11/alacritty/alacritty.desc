@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/alacritty/alacritty.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,24 +13,24 @@
 [T] always expect Alacritty to be blazingly fast.
 
 [A] The Alacritty Project
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [U] https://alacritty.org
 
 [C] extra/shell
-[F] CROSS LATOMIC.x86
-[R] - alpha arc avr32 blackfin ia64 hppa hppa64 m68k microblaze nios2 openrisc sparc superh
+[F] CROSS LATOMIC.sparc LATOMIC.x86
+[R] - alpha arc avr32 blackfin cris ia64 hppa hppa64 m68k microblaze nios2 openrisc superh
 
 [L] APL
-[S] Beta
-[V] 0.15.1
+[V] 0.17.0
 
-[O] cargoinstopt=
-[O] atstage cross && export PKG_CONFIG_SYSROOT_DIR=$root
-[O] atstage cross && hook_add postmake 5 "install target/${arch_target}/*/alacritty $root$bindir"
-[O] atstage native && hook_add postmake 5 "install target/*/alacritty $root$bindir"
-[O] mkdir -p $root$datadir/pixmaps/
-[O] hook_add postmake 5 "install extra/logo/alacritty-term.svg $root$datadir/pixmaps/Alacritty.svg"
-[O] hook_add postmake 5 "install extra/linux/Alacritty.desktop $root$datadir/applications/"
+[D] 22bb488cb26d8e0b4a27c5f6c601ba9c754a4f7b982fd577180d7dae alacritty-0.17.0.tar.gz !https://github.com/alacritty/alacritty/archive/refs/tags/v0.17.0.tar.gz
 
-[D] cc45260847cb577ea5aabb89112f4517622ae7417fccd131661e9b43 alacritty-0.15.1.tar.gz !https://github.com/alacritty/alacritty/archive/refs/tags/v0.15.1.tar.gz
+cargoinstopt=
+[ "$arch" = arm ] && hook_add prepatch 5 cargo_vendor
+atstage cross && export PKG_CONFIG_SYSROOT_DIR=$root
+atstage cross && hook_add postmake 5 "install target/${arch_target}/*/alacritty $root$bindir"
+atstage native && hook_add postmake 5 "install target/*/alacritty $root$bindir"
+mkdir -p $root$datadir/pixmaps/
+hook_add postmake 5 "install extra/logo/alacritty-term.svg $root$datadir/pixmaps/Alacritty.svg"
+hook_add postmake 5 "install extra/linux/Alacritty.desktop $root$datadir/applications/"

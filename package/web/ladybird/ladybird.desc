@@ -1,0 +1,34 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/ladybird/ladybird.desc
+[COPY] Copyright (C) 2023 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A web browser built on the LibWeb and LibJS engines
+
+[T] Ladybird is a web browser built on the LibWeb and LibJS engines.
+[T] The Browser UI has a cross-platform GUI in Qt6 and a macOS-specific GUI in AppKit.
+
+[U] https://github.com/LadybirdBrowser/ladybird
+
+[A] SerenityOS Devs
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/office
+[F] CROSS NO-LTO OBJDIR
+
+[E] opt libjxl
+[E] add liberation-fonts
+[E] opt libwebp
+
+[L] BSD
+[V] 8738987
+
+[D] b8c72005ae0c75d667dc04c6156fc1fc1f90d15fa5c5c402f010bbc5 ladybird-8738987.tar.zst git+https://github.com/LadybirdBrowser/ladybird 8738987
+
+var_append GCC_WRAPPER_APPEND ' ' "-L`pkgprefix libdir libwebp`"
+pkginstalled qt6base || var_append cmakeopt ' ' -DENABLE_QT=OFF
+var_append cmakeopt ' ' -GNinja
+# TODO: this is a hack for minimum O2, fails inlining w/ less
+var_append GCC_WRAPPER_APPEND ' ' '*Normalize.cpp*?-O2'
+var_append GCC_WRAPPER_APPEND ' ' "-I$root/$(pkgprefix includedir skia)"

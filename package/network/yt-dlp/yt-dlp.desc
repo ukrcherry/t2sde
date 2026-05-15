@@ -1,0 +1,31 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/yt-dlp/yt-dlp.desc
+[COPY] Copyright (C) 2021 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Cli program to dowload videos from youtube.com and other sites
+
+[T] YOUTUBE-DL is a command-line program to download videos from YouTube.com
+[T] and a few more sites. It requires the Python interpreter, version 2.6,
+[T] 2.7, or 3.2+, and it is not platform specific. It should work on your
+[T] Unix box, on Windows or on macOS. It is released to the public domain,
+[T] which means you can modify it, redistribute it or use it however you
+[T] like.
+
+[U] https://github.com/yt-dlp/yt-dlp
+
+[A] Sergey M. <dstftw@gmail.com>
+[M] NoTag <notag@t2sde.org>
+
+[C] base/tool
+[F] CROSS
+
+[E] add hatchling
+
+[L] PublicDomain
+[V] 2026.03.17
+
+[D] c56e203c251cbc7dc07282ab54af1d3b35b7287f4fb8620dce104c13 yt-dlp-2026.03.17.tar.gz https://github.com/yt-dlp/yt-dlp/archive/2026.03.17/
+
+hook_add postmake 5 "ln -svf $root$bindir/{yt-dlp,youtube-dl}"

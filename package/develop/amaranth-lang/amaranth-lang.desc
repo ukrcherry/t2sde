@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/amaranth-lang/amaranth-lang.desc
-[COPY] Copyright (C) 2018 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2018 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,12 +13,11 @@
 [U] https://amaranth-lang.org/
 
 [A] Amaranth HDL contributors
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [L] BSD
-[S] Beta
-[V] 0.5.4
+[V] 0.5.8
 
-[D] ee97028bd4b5940ac0014b9dce5640f2781cd95847de193bafc40ed1 amaranth-lang-0.5.4.tar.gz https://github.com/amaranth-lang/amaranth/archive/refs/tags/v0.5.4/
+[D] ffe5fc7f4d2bb14a8ea8309ca8a4ff7ffa75a4b29677635a35044629 amaranth-lang-0.5.8.tar.gz https://github.com/amaranth-lang/amaranth/archive/refs/tags/v0.5.8/

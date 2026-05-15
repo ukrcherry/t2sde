@@ -1,0 +1,21 @@
+[TIMESTAMP] 1739139110 Sun Feb  9 23:11:50 2025
+[BUILDTIME] 30 (5)
+[SIZE] 2.74 MB, 184 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] cmake
+[DEP] coreutils
+[DEP] diffutils
+[OPT] doxygen
+[DEP] freetype
+[DEP] gawk
+[DEP] grep
+[DEP] gzip
+[DEP] libsdl2
+[DEP] linux-header
+[DEP] make
+[DEP] pkgconfig
+[DEP] sed
+[DEP] tar
+[DEP] zlib

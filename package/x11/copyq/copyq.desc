@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/copyq/copyq.desc
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Clipboard manager with advanced features
+
+[T] CopyQ is an advanced clipboard manager with powerful editing and scripting
+[T] features.
+
+[U] https://github.com/hluk/CopyQ
+
+[A] Lukas Holecek
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+
+[V] 15.0.0
+[L] GPL3
+
+[D] e5fd8fda520bf3995f54ddb44afe867faceb2e9de8ae76e0b9b3e9b2 copyq-15.0.0.tar.gz https://github.com/hluk/CopyQ/archive/refs/tags/v15.0.0/
+
+var_append cmakeopt ' ' -DWITH_QT6=ON

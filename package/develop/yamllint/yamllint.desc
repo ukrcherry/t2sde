@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/yamllint/yamllint.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] A linter for YAML files
+
+[T] A linter for YAML files.
+
+[U] https://github.com/adrienverge/yamllint
+
+[A] Yamllint Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.38.0
+[L] GPL3
+
+[D] 6f25cd60cbb5ee915cbe5b91795a0af5c823b7a6b5204fde7d9eb2eb yamllint-1.38.0.tar.gz https://github.com/adrienverge/yamllint/archive/v1.38.0/

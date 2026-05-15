@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libksane/libksane.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -12,16 +12,16 @@
 [U] https://www.kde.org
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 25.04.1
+[V] 26.04.1
 [P] X -----5---9 201.000
 
-[O] . $base/package/*/*/kde-conf.in
-
 [CV-GROUP] kde-gear
-[D] 4508aaec43216fa0e3390dc8b1fcb98572c514332af1430dc0ff21c5 libksane-25.04.1.tar.xz https://download.kde.org/stable/release-service/25.04.1/src/
+[D] fe2271326b8315453f1062b177077956479bae18bec8410d2a016688 libksane-26.04.1.tar.xz https://download.kde.org/stable/release-service/26.04.1/src/
+
+. $base/package/*/*/kde-conf.in

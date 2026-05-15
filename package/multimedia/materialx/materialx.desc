@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/materialx/materialx.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,21 +14,20 @@
 [U] https://materialx.org/
 
 [A] MaterialX Authors
-[M] The T2-Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 
-[E] opt doxygen
-
 [L] APL
-[S] Stable
-[V] 1.39.1
-[P] X -----5---9 152.700
+[V] 1.39.4
 
-[O] runpysetup=0 rungpepinstall=0
-[O] prefix=/opt/materialx
-[O] var_append GCC_WRAPPER_INSERT ' ' "-L$root$(pkgprefix libdir libx11)"
-[O] var_append cmakeopt ' ' '-DMATERIALX_BUILD_PYTHON=ON -DMATERIALX_BUILD_VIEWER=ON -DBUILD_SHARED_LIBS=ON'
-[O] var_append cmakeopt ' ' '-DMATERIALX_BUILD_GRAPH_EDITOR=ON -DMATERIALX_BUILD_DOCS=ON'
+[D] 3df1745042333c7316accedd10389a182bebb0dba2e4d5719a5a07a0 materialx-1.39.4.tar.gz git+https://github.com/AcademySoftwareFoundation/MaterialX.git v1.39.4
 
-[D] 7f86083fcd6269a693b3120628ffce41c53c352ed1cac9faa760595d materialx-1.39.1.tar.gz git+https://github.com/AcademySoftwareFoundation/MaterialX.git v1.39.1
+runpysetup=0 rungpepinstall=0
+prefix=/opt/materialx
+
+var_append GCC_WRAPPER_INSERT ' ' "-L$root$(pkgprefix libdir libx11)"
+[ "$SDECFG_STATIC" = 1 ] || var_append cmakeopt ' ' -DBUILD_SHARED_LIBS=ON
+var_append cmakeopt ' ' '-DMATERIALX_BUILD_VIEWER=ON -DMATERIALX_BUILD_GRAPH_EDITOR=ON'
+pkginstalled python && var_append cmakeopt ' ' -DMATERIALX_BUILD_PYTHON=ON
+pkginstalled doxygen && var_append cmakeopt ' ' -DMATERIALX_BUILD_DOCS=ON

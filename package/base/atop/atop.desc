@@ -1,0 +1,31 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/atop/atop.desc
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A monitor for system resources and process activity
+
+[T] Atop is an ASCII full-screen performance monitor, similar to the top
+[T] command. At regular intervals, it shows system-level activity related to
+[T] the CPU, memory, swap, disks and network layers, and it shows for every
+[T] active process the CPU utilization in system and user mode, the virtual
+[T] and resident memory growth, priority, username, state, and exit code. The
+[T] process level activity is also shown for processes which finished during
+[T] the last interval, to get a complete overview about the consumers of
+[T] things such as CPU time. Atop only shows the active system-resources
+[T] and processes, and only shows the deviations since the previous interval.
+
+[U] https://www.atoptool.nl/
+
+[A] Gerlof Langeveld <gerlof@ATComputing.nl>
+[M] René Rebe <rene@exactco.de>
+
+[C] base/tool
+[F] CROSS
+
+[L] GPL
+[V] 2.12.1
+
+[CV-URL] https://www.atoptool.nl/downloadatop.php
+[D] abe15556f251edbd8240aad694e929bb8268f79b48ec65623a700021 atop-2.12.1.tar.gz https://www.atoptool.nl/download/

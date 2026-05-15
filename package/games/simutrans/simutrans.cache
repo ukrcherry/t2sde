@@ -1,15 +1,28 @@
-
-[TIMESTAMP] 1690851703 Tue Aug  1 03:01:43 2023
-[BUILDTIME] 1 (9)
-[SIZE] 1.79 MB, 740 files
+[TIMESTAMP] 1759926447 Wed Oct  8 14:27:27 2025
+[BUILDTIME] 165 (9)
+[SIZE] 13.87 MB, 848 files
 
 [DEP] 00-dirtree
 [DEP] bash
+[DEP] binutils
+[DEP] bzip2
+[DEP] cmake
 [DEP] coreutils
 [DEP] diffutils
-[DEP] findutils
+[DEP] doxygen
+[DEP] fluidsynth
+[DEP] fontconfig
+[DEP] freetype
 [DEP] gawk
 [DEP] grep
+[DEP] gzip
+[DEP] libpng
+[DEP] libsdl2
+[DEP] linux-header
+[DEP] make
+[DEP] miniupnpc
+[DEP] pkgconfig
 [DEP] sed
 [DEP] tar
-[DEP] unzip
+[DEP] zlib
+[DEP] zstd

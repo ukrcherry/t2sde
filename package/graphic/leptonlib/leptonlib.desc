@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/leptonlib/leptonlib.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,7 +15,7 @@
 [U] http://www.leptonica.com/
 
 [A] Dan Bloomberg
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/graphic
 [F] CROSS
@@ -23,8 +23,7 @@
 [E] opt libwebp
 
 [L] APL
-[S] Stable
-[V] 1.85.0
+[V] 1.87.0
 [P] X -----5---9 112.700
 
-[D] 91c62ecca8b5279966a7697451923b459387c7400d0f7bd0d3bc62f1 leptonica-1.85.0.tar.gz http://www.leptonica.org/source/
+[D] e5e3bc15044c778ec1cde3b1fef09961ebc5b0627c0ee64e5c46708f leptonica-1.87.0.tar.gz http://www.leptonica.org/source/

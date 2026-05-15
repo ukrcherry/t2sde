@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/cpd/cpd.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] C++ implementation of the Coherent Point Drift point set registration algorithm
+
+[T] C++ implementation of the Coherent Point Drift point set registration algorithm.
+
+[U] https://github.com/gadomski/cpd
+
+[A] Cpd Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[E] opt doxygen
+
+[L] GPL
+[V] 0.5.5
+
+[D] 04af2aac78e971ce9187eff2634308887d296ab68d846e09d9c60449 cpd-v0.5.5.tar.gz https://github.com/gadomski/cpd/archive/v0.5.5/

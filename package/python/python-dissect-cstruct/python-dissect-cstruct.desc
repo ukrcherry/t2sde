@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/python-dissect-cstruct/python-dissect-cstruct.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,15 +13,14 @@
 [U] https://github.com/fox-it/dissect.cstruct
 
 [A] Erik Schamper
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [E] add setuptools-scm
 
 [L] APL
-[S] Stable
-[V] 4.3
+[V] 4.7
 [P] X -----5---9 200.000
 
-[D] 5f54780028a356200eb749bab914aa18b5b6e57033cf3bb81dbe4cf5 dissect_cstruct-4.3.tar.gz https://files.pythonhosted.org/packages/92/52/a7ec78e05fd19b33b32222ee0c9093cf172feeba9235e97bc6647021a82f/
+[D] 9414928fd9f3b6968df647abbbb154aa8ed426be8132288983b8e03f dissect_cstruct-4.7.tar.gz https://files.pythonhosted.org/packages/source/d/dissect.cstruct/

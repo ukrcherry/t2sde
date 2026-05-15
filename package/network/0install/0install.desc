@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/0install/0install.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] The Zero Install system
+
+[T] The Zero Install system makes software installation not merely easy,
+[T] but unnecessary. Users run their applications directly from the
+[T] Internet from the software author's pages.
+[T] Caching makes this as fast as running a normal application after
+[T] the first time, and allows off-line use.
+
+[U] https://0install.net/
+
+[A] Thomas Leonard
+[M] Omer James Hickman <james_hickman@email.com>
+
+[C] base/system
+
+[L] GPL
+[V] 2.18
+
+[D] 0a0c2c0bbebb31c849aa6e187d3cb5b368dbd3e51edcac5476d3331d 0install-2.18.tbz https://github.com/0install/0install/releases/download/v2.18/

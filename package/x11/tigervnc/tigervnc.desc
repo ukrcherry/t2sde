@@ -1,0 +1,22 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/tigervnc/tigervnc.desc
+# Copyright (C) 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] High performance, multi-platform VNC client and server
+
+[T] High performance, multi-platform VNC client and server.
+
+[U] https://github.com/tigervnc/tigervnc
+
+[A] TigerVNC
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] GPL
+[V] 1.16.2
+
+[D] 61f8d207268ac25e9e4f42be15dcd7d066e28240dbb1b0a0161f805b tigervnc-1.16.2.tar.gz https://github.com/tigervnc/tigervnc/archive/v1.16.2/

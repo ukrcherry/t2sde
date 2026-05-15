@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/lazydocker/lazydocker.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,15 +12,14 @@
 [U] https://github.com/jesseduffield/lazydocker
 
 [A] Jesse Duffield
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 
 [L] MIT
-[S] Stable
-[V] 0.24.1
+[V] 0.25.2
 
-[O] var_append goconfopt ' ' '-ldflags "-X main.version=$ver"'
-[O] hook_add postmake 5 'cp -vf lazydocker $root$bindir/'
+[D] 45e6a0bdd8bcd52bb9eb54269e3ee88425d14e87b8ff58237702e1d9 lazydocker-0.25.2.tar.gz https://github.com/jesseduffield/lazydocker/archive/v0.25.2/
 
-[D] 8b6926fe06e7e37913618865386af0823616c48a957bd9a92efe610d lazydocker-0.24.1.tar.gz https://github.com/jesseduffield/lazydocker/archive/v0.24.1/
+var_append goconfopt ' ' '-ldflags "-X main.version=$ver"'
+hook_add postmake 5 'install lazydocker $root$bindir/'

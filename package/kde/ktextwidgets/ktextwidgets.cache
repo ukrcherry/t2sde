@@ -1,6 +1,6 @@
-[TIMESTAMP] 1737559516 Wed Jan 22 16:25:16 2025
-[BUILDTIME] 20 (9)
-[SIZE] 1.50 MB, 134 files
+[TIMESTAMP] 1770493455 Sat Feb  7 20:44:15 2026
+[BUILDTIME] 30 (9)
+[SIZE] 1.45 MB, 136 files
 
 [DEP] bash
 [DEP] binutils
@@ -11,14 +11,12 @@
 [DEP] gawk
 [DEP] gettext
 [DEP] grep
-[DEP] kcolorscheme
 [DEP] kcompletion
 [DEP] kconfig
 [DEP] ki18n
 [DEP] kwidgetsaddons
 [DEP] linux-header
 [DEP] make
-[DEP] pkgconfig
 [DEP] procps
 [DEP] qt6base
 [DEP] qt6speech
@@ -26,6 +24,6 @@
 [DEP] sed
 [DEP] sonnet
 [DEP] tar
-[DEP] tbb
+[DEP] util-linux
 [DEP] vulkan-headers
 [DEP] xz

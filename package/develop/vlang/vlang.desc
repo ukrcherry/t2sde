@@ -1,7 +1,7 @@
 
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/vlang/vlang.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,19 +15,17 @@
 [M] Alexander Nutz <alexandernutz68@gmail.com>
 
 [C] extra/base
+[F] NO-LTO
 
 [E] add boehm-gc
 
 [L] MIT
-[S] Beta
-[V] 0.4.9-36154b8
-[P] X -----5---9 700.000
+[V] 0.5.1
 
-[O] runmake=0
-[O] hook_add inmake 5 "tar xvf $(match_source_file -p vc)"
-[O] hook_add inmake 5 "cp vc-*/v.c ."
-[O] hook_add inmake 5 "./build.sh install"
+[D] cfc5fcca677dbce70b0192f98c8afef9a50cbc48a205e16e8830c82e vlang-0.5.1.tar.gz https://github.com/vlang/v/archive/0.5.1/
+[D] 8742c49cc0629084012bc45944647b4e1d8180f2f8aaab26346b0222 vc-a17f1105.tar.gz https://github.com/vlang/vc/archive/a17f1105/
 
-[D] 959712370209083a92450d4acd3ae343aac4a9ab07f0cf794a49eb09 vlang-36154b8.tar.gz https://github.com/vlang/v/archive/36154b8/
-[D] 816811d7cc04044d9e1fa271c70bd7fcc8ef3b5c48cf2069c049b5ff vc-4d3de44.tar.gz https://github.com/vlang/vc/archive/4d3de44/
-
+runmake=0
+hook_add inmake 5 "tar xvf $(match_source_file -p vc)"
+hook_add inmake 5 "cp vc-*/v.c ."
+hook_add inmake 5 "./build.sh install"

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/sway/sway.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,17 +11,16 @@
 [U] https://swaywm.org/
 
 [A] Drew DeVault
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/x11
 [F] CROSS
 
 [L] MIT
-[S] Stable
-[V] 1.10.1
+[V] 1.12-rc1
 [P] X -----5---9 160.000
 
-#[O] pkginstalled xwayland && var_append mesonopt ' ' -Dxwayland=enabled
-[O] hook_add postmake 5 "install $base/misc/artwork/t2sde.svg $root$datadir/backgrounds/sway/"
+[D] 90f03fc654bd87833c3d79b384f7b8454b252304af99aa0054709284 sway-1.12-rc1.tar.gz https://github.com/swaywm/sway/archive/1.12-rc1/
 
-[D] 02f6cafe22ddaf870f1b9c306df0328fa290a8d69c2959fafe691a01 sway-1.10.1.tar.gz https://github.com/swaywm/sway/archive/1.10.1/
+#pkginstalled xwayland && var_append mesonopt ' ' -Dxwayland=enabled
+hook_add postmake 5 "install $base/misc/artwork/t2sde.svg $root$datadir/backgrounds/sway/"

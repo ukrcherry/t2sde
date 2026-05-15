@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/tmux/tmux.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,16 +14,15 @@
 [U] https://github.com/tmux/tmux/
 
 [A] Nicholas Marriott <nicm@users.sourceforge.net>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 [F] CROSS
 
 [L] BSD
-[S] Stable
-[V] 3.5a
+[V] 3.6a
 
-[O] var_append confopt ' ' --with-TERM=tmux-256color
-[O] atstage cross && hook_add preconf 5 "echo ac_cv_func_strtonum=no >> config.cache"
+[D] 27fddb055c5da7e1f3d55aaa4f3f99e180778a802edd89c74f5b3faa tmux-3.6a.tar.gz https://github.com/tmux/tmux/releases/download/3.6a/
 
-[D] 96d8a666584b7811aa26d03de9d508a257f6d7340517201a942d7fa5 tmux-3.5a.tar.gz https://github.com/tmux/tmux/releases/download/3.5a/
+var_append confopt ' ' --with-TERM=tmux-256color
+atstage cross && hook_add preconf 5 "echo ac_cv_func_strtonum=no >> config.cache"

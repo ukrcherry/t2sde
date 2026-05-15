@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/pam/pam.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -16,15 +16,59 @@
 [U] https://www.kernel.org/pub/linux/libs/pam/
 
 [A] Andrew Morgan <morgan@kernel.org>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
-[F] CROSS
 [C] base/library
+[F] CROSS NO-LTO.clang
 
 [L] GPL
-[S] Stable
-[V] 1.5.2
+[V] 1.7.2
 [P] X --2--5---9 114.000
 
-[D] ddfaabc801adebf6dc30d07d143703438060f41cd8bc6715ef2f72fd Linux-PAM-1.5.2.tar.xz https://github.com/linux-pam/linux-pam/releases/download/v1.5.2/
-[D] fe68f22b957e4ed21679984081f779e099569e86821b28492ba8b610 Linux-PAM-1.5.2-docs.tar.xz https://github.com/linux-pam/linux-pam/releases/download/v1.5.2/
+[D] 26dacee88f309c02ecf9feabd3cfd7aa49e747d0beb95306da75efa5 Linux-PAM-1.7.2.tar.xz https://github.com/linux-pam/linux-pam/releases/download/v1.7.2/
+
+# pam/w3c needs temporary disc space
+atstage native || export HOME=/tmp
+
+# Install PAM libs in /lib so they are, also available if /usr is not mounted.
+libdir="/${libdir##*/}"
+
+var_append mesonopt ' ' -Dexamples=false
+
+var_append confopt ' ' --enable-dbm
+var_remove confopt ' ' --disable-debug # --disable-debug enables debugging?
+var_append mesonopt ' ' -Dexamples=false
+
+# checking for prelude support, pam is able to act as prelude sensor since version 0.79
+if [ $stagelevel -ge 5 ] && pkginstalled libprelude; then
+	pkgprefix -t libprelude
+	var_append confopt ' ' --enable-prelude
+	var_append CFLAGS   ' ' "-I$(pkgprefix includedir libprelude)"
+	var_append LDFLAGS  ' ' "-L$(pkgprefix libdir libprelude)"
+	export CFLAGS LDFLAGS
+else
+	var_append confopt ' ' --disable-prelude
+fi
+
+[ "$arch" = microblaze ] && var_append GCC_WRAPPER_REMOVE ' ' --eh-frame-hdr
+
+# Install default pam.d/* files (without them, nobody can log in on the system ...)
+install_pam_configs() {
+	mkdir -p $root/etc/pam.d
+	local pat=$confdir/etc_pamd_*.txt
+	[ "$SDECFG_INIT" = 'systemd' ] && pat="$pat $confdir/etc_pamd_*.sysd"
+
+	for x in $pat; do
+		file=${x/*etc_pamd_//etc/pam.d/}
+		file=${file%.*}
+		cp -vf $x $root$file
+	done
+}
+hook_add postmake 5 install_pam_configs
+
+pam_postmake() {
+	# Allow unprivileged processes to check against passwords e.g. screen lockers
+	chgrp shadow $root$sbindir/unix_chkpwd &&
+		chmod g+s $root$sbindir/unix_chkpwd
+}
+hook_add postmake 5 pam_postmake

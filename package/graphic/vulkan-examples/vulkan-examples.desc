@@ -1,0 +1,27 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/vulkan-examples/vulkan-examples.desc
+# Copyright (C) 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] C++ examples for the Vulkan graphics API
+
+[T] C++ examples for the Vulkan graphics API.
+
+[U] https://github.com/SaschaWillems/vulkan
+
+[A] SaschaWillems
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS OBJDIR
+
+[L] MIT
+[V] a43cfe3
+
+[D] 0d04b5605a4d7d3d4f0c3ed8b50ebe638145a2e4eb725a31c9ca8b07 vulkan-a43cfe3.tar.gz git+https://github.com/SaschaWillems/vulkan a43cfe3
+
+var_append GCC_WRAPPER_APPEND ' ' "-I$root$(pkgprefix includedir libxcb) -L$root$(pkgprefix libdir libxcb)"
+
+makeinstopt=
+hook_add postmake 5 "install bin/* $root$bindir/"

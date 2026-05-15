@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/mdadm/mdadm.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -12,23 +12,16 @@
 [T] known as Software RAID arrays
 
 [A] Neil Brown
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/filesystem
 [F] CROSS DIETLIBC
 
 [L] GPL
-[S] Stable
-[V] 4.3
-[P] X -----5---9 194.000
+[V] 4.6
 
-# STRIP is used inside the Makefile to pass the '-s' option to the
-# install command (while it should be the name of the strip binary,
-# actually...)
-[O] unset STRIP
-# breaking strict aliasing rules..
-[O] var_append GCC_WRAPPER_APPEND ' ' -fno-strict-aliasing
-[O] var_append makeopt ' ' RUN_DIR=/var/run/mdadm
-[O] var_append makeinstopt ' ' RUN_DIR=/var/run/mdadm
+[D] 4a0facc6f3af4faa3a95e7dc4e57aea17fdd4b7b54860c3ef165a85b mdadm-4.6.tar.gz https://github.com/md-raid-utilities/mdadm/archive/
 
-[D] a334ca0654f691764459fa36a0e62488019af05a066c29ac46fb4f20 mdadm-4.3.tar.xz http://www.kernel.org/pub/linux/utils/raid/mdadm/
+unset STRIP # used in Makefile for install -s
+var_append makeopt ' ' RUN_DIR=/var/run/mdadm
+var_append makeinstopt ' ' RUN_DIR=/var/run/mdadm

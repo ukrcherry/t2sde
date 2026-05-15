@@ -1,0 +1,25 @@
+[TIMESTAMP] 1759859091 Tue Oct  7 19:44:51 2025
+[BUILDTIME] 640 (9)
+[SIZE] 8.56 MB, 10 files
+
+[DEP] 00-dirtree
+[DEP] bash
+[DEP] binutils
+[DEP] coreutils
+[DEP] cups
+[DEP] diffutils
+[DEP] findutils
+[DEP] gawk
+[DEP] grep
+[DEP] gzip
+[DEP] hidapi
+[DEP] libusb
+[DEP] linux-header
+[DEP] make
+[DEP] mbedtls
+[DEP] pkgconfig
+[DEP] qt5base
+[DEP] qt5tools
+[DEP] sed
+[DEP] tar
+[DEP] udev

@@ -1,0 +1,25 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/python-aiohttp/python-aiohttp.desc
+# Copyright (C) 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Asynchronous HTTP client/server framework for asyncio and Python
+
+[T] Async http client/server framework
+
+[U] https://docs.aiohttp.org/en/stable/
+
+[A] Aio-libs contributors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/development
+[F] CROSS
+
+[E] add python-pathspec
+
+[L] MIT
+[V] 3.13.5
+[P] X -----5---9 300.000
+
+[D] 6d53f3232b4191fbf0ee331e498095d3798b1d25b5088b3706250768 aiohttp-3.13.5.tar.gz https://files.pythonhosted.org/packages/source/a/aiohttp/

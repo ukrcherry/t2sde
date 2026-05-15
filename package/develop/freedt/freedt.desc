@@ -1,0 +1,31 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/freedt/freedt.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Reimplementation of Dan Bernstein's daemontools
+
+[T] freedt is a reimplementation of Dan Bernstein's daemontools under
+[T] the GNU GPL, sharing no code with the original implementation.
+[T] It currently includes feature-equivalent replacements for argv0,
+[T] envdir, envuidgid, setlock, setuidgid, softlimit, supervise, svc,
+[T] svok, svscan, svstat and recordio. It also includes dumblog (a
+[T] simple multilog replacement), mkservice (a script for automatically
+[T] creating service directories), anonidentd (an anonimising identd
+[T] implementation) and ratelimit (a bandwidth-limiting filter along
+[T] the lines of recordio). All the tools include usage messages; for
+[T] instance, do "ratelimit -h" for a brief rundown of the options
+
+[U] https://offog.org/code/freedt.html
+
+[A] Adam Sampson <ats@offog.org>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+
+[L] GPL
+[V] 24
+[P] O
+
+[D] 4d728379267cf6661a7e9a1df11a869efb5e6ffd4c6cee3615327827 freedt-24.tar.gz http://offog.org/files/

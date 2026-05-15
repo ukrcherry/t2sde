@@ -1,0 +1,22 @@
+[TIMESTAMP] 1778698854 Wed May 13 21:00:54 2026
+[BUILDTIME] 12 (9)
+[SIZE] 0.45 MB, 9 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] cmake
+[DEP] coreutils
+[DEP] diffutils
+[DEP] findutils
+[DEP] gawk
+[DEP] grep
+[DEP] gzip
+[DEP] linux-header
+[DEP] make
+[DEP] opencl-clhpp
+[DEP] opencl-headers
+[DEP] sed
+[DEP] shaderc
+[DEP] tar
+[DEP] util-linux
+[DEP] vulkan-headers

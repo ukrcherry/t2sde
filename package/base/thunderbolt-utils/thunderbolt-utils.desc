@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/thunderbolt-utils/thunderbolt-utils.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,18 +13,17 @@
 [U] https://github.com/intel/thunderbolt-utils
 
 [A] Intel
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [F] CROSS
 [C] base/system
 
 [L] GPL LGPL
-[S] Alpha
 [V] 0.1-rc1
 
-[O] hook_add postpatch 5 "cd lib"
-[O] var_append makeopt ' ' LIBTBT_EXEC=lstbt
-[O] makeinstopt=
-[O] hook_add postmake 5 'install lstbt $root$sbindir/'
-
 [D] 973faddc11bf58411d42dbc285b6323c6f041f15232038b9e944ff7d thunderbolt-utils-v0.1-rc1.tar.gz https://github.com/intel/thunderbolt-utils/archive/v0.1-rc1/
+
+hook_add postpatch 5 "cd lib"
+var_append makeopt ' ' LIBTBT_EXEC=lstbt
+makeinstopt=
+hook_add postmake 5 'install lstbt $root$sbindir/'

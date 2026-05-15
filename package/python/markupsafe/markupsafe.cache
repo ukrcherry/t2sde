@@ -1,6 +1,6 @@
-[TIMESTAMP] 1737564823 Wed Jan 22 17:53:43 2025
-[BUILDTIME] 1 (9)
-[SIZE] 0.06 MB, 21 files
+[TIMESTAMP] 1757948762 Mon Sep 15 17:06:02 2025
+[BUILDTIME] 2 (9)
+[SIZE] 0.04 MB, 19 files
 
 [DEP] bash
 [DEP] coreutils
@@ -11,6 +11,7 @@
 [DEP] linux-header
 [DEP] openssl
 [DEP] python
+[DEP] python-gpep517
 [DEP] sed
 [DEP] setuptools
 [DEP] tar

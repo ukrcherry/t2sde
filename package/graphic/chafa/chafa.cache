@@ -1,0 +1,35 @@
+[TIMESTAMP] 1777557838 Thu Apr 30 16:03:58 2026
+[BUILDTIME] 18 (9)
+[SIZE] 2.43 MB, 67 files
+
+[DEP] automake
+[DEP] bash
+[DEP] binutils
+[DEP] cairo
+[DEP] coreutils
+[DEP] diffutils
+[OPT] docbook-xml
+[OPT] docbook-xsl
+[DEP] findutils
+[DEP] freetype
+[DEP] gawk
+[DEP] gdk-pixbuf
+[DEP] glib
+[DEP] grep
+[OPT] gtk-doc
+[DEP] libavif
+[DEP] libheif
+[DEP] libjpeg
+[OPT] libjxl
+[DEP] librsvg
+[DEP] libtiff
+[OPT] libwebp
+[DEP] libxml
+[DEP] linux-header
+[DEP] make
+[DEP] ncurses
+[DEP] pkgconfig
+[DEP] sed
+[DEP] tar
+[DEP] util-linux
+[DEP] xz

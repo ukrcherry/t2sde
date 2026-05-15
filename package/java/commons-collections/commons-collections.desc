@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/commons-collections/commons-collections.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -17,17 +17,16 @@
 [U] https://jakarta.apache.org/commons/collections/
 
 [A] Apache Jakarta Commons team
-[M] Minto van der Sluis <Minto@MultiMach.com>
+[M] Minto van der Sluis <minto@multimach.com>
 
 [C] extra/development
 
 [L] OpenSource
-[S] Stable
-[V] 3.2.1
+[V] 4.5.0
 
-[O] . $base/package/*/*/java-conf.in BUILD_TYPE=ANT
-[O] buildtarget="jar javadoc"
-[O] buildjardir=build
-[O] builddocdir=build/docs
+[D] 846cfb5b318e2bda161d3ab05cbbec89fe91858444d3edfc265bf5a5 commons-collections4-4.5.0-src.tar.gz https://dlcdn.apache.org//commons/collections/source/
 
-[D] fccba72dbc3119c39e7cb93213da37fa0ea5d12e5ab103ce90e4976d commons-collections-3.2.1-src.tar.gz http://www.eu.apache.org/dist/jakarta/commons/collections/source/
+. $base/package/*/*/java-conf.in BUILD_TYPE=ANT
+buildtarget="jar javadoc"
+buildjardir=build
+builddocdir=build/docs

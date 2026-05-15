@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/rdfind/rdfind.desc
+[COPY] Copyright (C) 2023 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A tool to find duplicate files
+
+[T] Redundant data find is a program that find duplicate files.
+
+[U] https://rdfind.pauldreik.se/
+
+[A] Paul Dreik <rdfind@pauldreik.se>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] GPL
+[V] 1.8.0
+
+[D] d7c618f5faa8bf046f094f41c782d507c98c0553880e7698e0b0b163 rdfind-1.8.0.tar.gz https://rdfind.pauldreik.se/
+
+autogen=1

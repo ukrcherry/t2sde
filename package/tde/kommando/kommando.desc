@@ -1,0 +1,25 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/kommando/kommando.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Wheelmenu for the Trinity Desktop Environment
+
+[T] A "Neverwinter Nights"-like wheelmenu for TDE.
+
+[U] https://www.trinitydesktop.org/
+
+[A] Trinity Desktop Developers
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/x11
+[F] OBJDIR
+
+[L] GPL
+[V] 14.1.6
+
+[CV-GROUP] tde
+[D] cbe12083f9e001004c3effe727187ad277d0933ab8a949234decaabb kommando-trinity-14.1.6.tar.xz https://mirror.ppa.trinitydesktop.org/trinity/releases/R14.1.6/main/applications/utilities/
+
+. $base/package/*/*/tde-conf.in

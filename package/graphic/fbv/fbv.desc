@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/fbv/fbv.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,15 +14,14 @@
 [U] http://s-tech.elsat.net.pl/fbv/
 
 [A] Tomasz Sterna <tomek@xiaoka.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/graphic
 [F] CROSS
 
 [L] GPL
-[S] Beta
 [V] 1.0b
 
-[O] var_append confopt ' ' --cc=$CC
-
 [D] 35f911ee52cacc6dbe734c3052f2e743edbc2c6a6b2882e4ffc2d120 fbv-1.0b.tar.gz http://s-tech.elsat.net.pl/fbv/
+
+var_append confopt ' ' --cc=$CC

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/doxygen/doxygen.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -28,7 +28,7 @@
 [U] https://www.doxygen.org/
 
 [A] Dimitri van Heesch <dimitri@stack.nl>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [U] https://doxygen.nl/
 
@@ -36,13 +36,12 @@
 [F] CROSS NO-LTO.gcc
 
 [L] GPL
-[S] Stable
-[V] 1.13.2
-[P] X -----5---9 127.100
-
-[O] confopt= cleanconfopt=0
-[O] var_append confopt ' ' "--prefix $root/$prefix"
-[O] [[ $libdir = *lib64 ]] && var_append GCC_WRAPPER_INSERT ' ' "-L/opt/qt4/lib64 -L/usr/X11/lib64"
+[V] 1.17.0
+[P] X -----5---9 102.390
 
 [CV-URL] http://www.doxygen.nl/download.html
-[D] ee6165c4fce9283fa5906f4f68a02c758486fb4b1d2b287fc8206bf4 doxygen-1.13.2.src.tar.gz https://doxygen.nl/files/
+[D] d3bb86d0bdfb9461bd9da174246575785d1064bef48263f6cf21d231 doxygen-1.17.0.src.tar.gz https://doxygen.nl/files/
+
+confopt= cleanconfopt=0
+var_append confopt ' ' "--prefix $root/$prefix"
+[[ $libdir = *lib64 ]] && var_append GCC_WRAPPER_INSERT ' ' "-L/opt/qt4/lib64 -L/usr/X11/lib64"

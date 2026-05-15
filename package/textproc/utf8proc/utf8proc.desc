@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/utf8proc/utf8proc.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,20 +14,19 @@
 [T] there is an extension providing a function for preparing strings in case
 [T] insensitive indices. The currently supported Unicode version is 5. 0. 0.
 
-[U] https://www.public-software-group.org/utf8proc
+[U] https://juliastrings.github.io/utf8proc/
 
 [A] Jan Behrens <jan.behrens@flexidesk.de>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/library
 [F] CROSS FPIC
 
 [L] BSD
-[S] Beta
-[V] 2.7.0
+[V] 2.11.3
 [P] X -----5---9 200.000
 
-[O] var_append makeopt ' ' 'cc=$CC ar=$AR'
-[O] var_append makeinstopt ' ' libdir=$libdir
+[D] af372b59d7fcb915c2f6fc905e88afae3c019bfd3ee1c6a6c764a6e4 utf8proc-v2.11.3.tar.gz https://github.com/JuliaLang/utf8proc/archive/v2.11.3/
 
-[D] a82110956c8afc978d4dbb343388f7d734f594751333941e3843fc6f utf8proc-v2.7.0.tar.gz https://github.com/JuliaLang/utf8proc/archive/v2.7.0/
+var_append makeopt ' ' 'cc=$CC ar=$AR'
+var_append makeinstopt ' ' libdir=$libdir

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/phpldapadmin/phpldapadmin.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,12 +14,37 @@
 [U] https://phpldapadmin.sourceforge.net/
 
 [A] David Smith <davidsmith@byu.edu>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 
 [L] GPL
-[S] Stable
-[V] 1.1.0.7
+[V] 2.3.10
 
-[D] 07c47d0c0a848b01cc199d367c36d1ad33ea3fe55cacfc2e83ee29d5 phpldapadmin-1.1.0.7.tar.gz http://dl.sourceforge.net/sourceforge/phpldapadmin/
+[D] 0404871aa655a22cf5e82425273aab9617bda70c8b59c4af7e36174d phpldapadmin-2.3.10.tar.gz https://github.com/leenooks/phpLDAPadmin/archive/2.3.10/
+
+# use the apache prefix
+. $base/package/*/apache/apache.conf
+
+phpldapadmin_main() {
+	local x="phpLDAPadmin"
+
+	mkdir -vp $datadir/$x
+	mkdir -vp $sysconfdir/$x
+	
+	mv -vf config/config.php.example $sysconfdir/$x/config.php-dist
+	ln -svnf $sysconfdir/$x/config.php $datadir/$x/
+
+	tar -cof - * | tar -C $datadir/$x -xvf -
+
+	cat <<- EOT > $sysconfdir/$x.conf-dist
+		Alias /$x $datadir/$x
+		<Directory $datadir/$x>
+			DirectoryIndex index.php
+		</Directory>
+	EOT
+
+}
+runmake=0
+hook_add postmake 5 phpldapadmin_main
+createdoc=0

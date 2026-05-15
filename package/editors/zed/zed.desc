@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/zed/zed.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -10,21 +10,23 @@
 [T] and Tree-sitter.
 
 [A] Zed Industries
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [U] https://zed.dev/
 
 [C] extra/editor
 [F] CROSS
-[R] - alpha arc avr32 blackfin hppa hppa64 m68k microblaze nios2 openrisc sparc superh
+[R] - alpha arc avr32 blackfin cris hppa hppa64 m68k microblaze nios2 openrisc superh
 
 [L] AGPL GPL3
-[S] Beta
-[V] 0.185.16
+[V] 1.2.6
 
-[O] cargoinstopt=
-[O] var_append GCC_WRAPPER_APPEND ' ' "-c?:-L$root`pkgprefix libdir libxcb`"
-[O] atstage cross && hook_add postmake 5 "install target/${arch_target}/*/zed $root$bindir"
-[O] atstage native && hook_add postmake 5 "install target/*/zed $root$bindir"
+[D] 98d5ce2bca9d1e4177dc83090d16c1c400af8422b02b1de13518ab58 zed-1.2.6.tar.gz https://github.com/zed-industries/zed/archive/refs/tags/v1.2.6/
 
-[D] d5b57b117ee949b3cf8809a15c27fd1f6aeb038f7daff10b08ba0481 zed-0.185.16.tar.gz https://github.com/zed-industries/zed/archive/refs/tags/v0.185.16/
+cargoinstopt=
+
+var_append GCC_WRAPPER_APPEND ' ' "-c?:-L$root`pkgprefix libdir libxcb`"
+var_append GCC_WRAPPER_APPEND ' ' */jitterentropy-base.c?-O0:
+
+atstage cross && hook_add postmake 5 "install target/${arch_target}/*/zed $root$bindir"
+atstage native && hook_add postmake 5 "install target/*/zed $root$bindir"

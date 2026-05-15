@@ -1,6 +1,6 @@
-[TIMESTAMP] 1746964664 Sun May 11 13:57:44 2025
-[BUILDTIME] 20 (9)
-[SIZE] 1.63 MB, 29 files
+[TIMESTAMP] 1760710458 Fri Oct 17 16:14:18 2025
+[BUILDTIME] 45 (9)
+[SIZE] 1.77 MB, 30 files
 
 [DEP] bash
 [DEP] binutils
@@ -21,12 +21,10 @@
 [DEP] mozjs
 [DEP] ninja
 [DEP] openssl
-[DEP] pkgconfig
 [DEP] python
 [DEP] readline
 [DEP] sed
 [DEP] setuptools
 [DEP] tar
-[DEP] tbb
 [DEP] xorgproto
 [DEP] xz

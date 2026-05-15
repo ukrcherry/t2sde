@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/slint/slint.desc
-[COPY] Copyright (C) 2017 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2017 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,17 +14,16 @@
 [U] https://slint-ui.com/
 
 [A] SixtyFPS GmbH
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/tool
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 1.11.0
-
-[O] cargoinstopt=
-[O] hook_add postmake 5 "install target/*/bindgen $root$bindir/"
+[V] 1.16.1
 
 [CV-FLAGS] NO-PREFIX
-[D] cb6a02b3bc98f917790da059f603a3daa15334151da8f401f3e8ee2e slint-ui-1.11.0.tar.gz https://github.com/slint-ui/slint/archive/v1.11.0/
+[D] c1974300e6051001b8da0cca40cc674d44e75089cf57efa9cac0aa12 slint-ui-1.16.1.tar.gz https://github.com/slint-ui/slint/archive/v1.16.1/
+
+cargoinstopt=
+hook_add postmake 5 "install target/*/bindgen $root$bindir/"

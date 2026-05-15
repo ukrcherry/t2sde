@@ -1,8 +1,9 @@
-[TIMESTAMP] 1745878992 Tue Apr 29 01:23:12 2025
-[BUILDTIME] 155 (9)
-[SIZE] 51.63 MB, 1200 files
+[TIMESTAMP] 1770719202 Tue Feb 10 11:26:42 2026
+[BUILDTIME] 220 (9)
+[SIZE] 52.80 MB, 1202 files
 
 [DEP] at-spi2-core
+[DEP] automake
 [DEP] bash
 [DEP] binutils
 [DEP] cairo
@@ -14,9 +15,10 @@
 [DEP] freetype
 [DEP] gawk
 [DEP] gdk-pixbuf
+[DEP] gettext
 [OPT] glib
 [OPT] glitz
-[DEP] gobject-introspection
+[OPT] gobject-introspection
 [DEP] grep
 [OPT] gtk-doc
 [DEP] harfbuzz
@@ -42,6 +44,6 @@
 [DEP] sed
 [DEP] setuptools
 [DEP] tar
-[DEP] tbb
+[DEP] util-linux
 [DEP] xorgproto
 [DEP] xz

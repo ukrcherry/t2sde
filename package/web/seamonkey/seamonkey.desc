@@ -1,0 +1,102 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/seamonkey/seamonkey.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] The most full-featured and standard compliant web browser
+
+[T] Mozilla is one of the most exciting WWW developments at this point.
+[T] While Mozilla is standard compliant and has an excellent rendering
+[T] engine, it's default XUL-based interface is considered to be over-
+[T] crowded and bloated. On slower processors even trivial tasks such
+[T] as pulling down a menu might be less than responsive.
+[T]
+[T] There are project which provides a native GUI for the excellent
+[T] Mozilla HTML rendering engine called Gecko.
+
+[U] https://www.seamonkey-project.org/
+[U] https://www.mozilla.org/
+
+[A] Netscape
+[A] The Mozilla Community <http://www.mozilla.org/about.html>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/office
+
+[L] MPL
+[V] 2.53.23
+[P] X -----5---9 500.000
+
+[CV-URL] http://www.seamonkey-project.org/releases/
+[D] fb95df422cedb251b84ef2c19a2a5fbb056c878cbde47ed64e15a05e seamonkey-2.53.23.source.tar.xz https://archive.seamonkey-project.org/releases/2.53.23/source/
+
+. $base/package/*/*/mozilla-conf.in
+
+export MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=system
+
+[ $prefix_auto = 1 ] && prefix=$mozilla_prefix && set_confopt
+
+hook_add inmake 5 "./mach build"
+hook_add postmake 5 "./mach install"
+
+mozilla_config() {
+	cat >> .mozconfig <<-EOT
+mk_add_options MOZ_OBJDIR=$PWD/objs
+
+ac_add_options --enable-application=suite
+ac_add_options --with-extensions
+ac_add_options --enable-extensions=default,inspector
+ac_add_options --enable-jsd
+ac_add_options --enable-mathml
+ac_add_options --enable-module=psm
+ac_add_options --enable-default-toolkit=cairo-gtk2
+ac_add_options --without-system-jpeg
+ac_add_options --without-system-png
+#ac_add_options --disable-ldap
+EOT
+
+if pkginstalled gstreamer; then
+	echo "ac_add_options --enable-gstreamer=1.0" >> .mozconfig
+else
+	echo "ac_add_options --disable-gstreamer" >> .mozconfig
+fi
+
+pkginstalled icu4c && echo "ac_add_options --with-system-icu" >> .mozconfig
+cat .mozconfig
+}
+	
+mozilla_postinstall() {
+	echo "Copy all mozilla include files" \
+	     "(required for building galeon, evolution, etc.) ..."
+	mkdir -p $includedir/$pkg-$ver/xpcom
+	cp -v mozilla/xpcom/base/nscore.h  $includedir/$pkg-$ver/xpcom/
+	cp -v mozilla/xpcom/glue/nsDebug.h $includedir/$pkg-$ver/xpcom/
+	cp -rL mozilla/dist/include/*      $includedir/$pkg-$ver/
+	cp -rL mozilla/dist/public/*       $includedir/$pkg-$ver/
+
+	echo "Creating /etc/profile.d/$pkg ..."
+	cat <<- EOT > $root/etc/profile.d/$pkg
+		export MOZILLA_FIVE_HOME=$MOZILLA_FIVE_HOME
+	EOT
+
+	echo "Creating library symlinks ..."
+	cd $libdir
+	for i in ldap50 nspr4 nss3 plc4 plds4 prldap50 smime3 softokn3 ssl3; do
+		ln -sf $libdir/$pkg-$ver/lib${i}.so $libdir/lib${i}.so
+	done
+}
+
+hook_add preconf  4 mozilla_config
+#hook_add postmake 8 mozilla_postinstall
+
+# disable ver and libdir hacks
+mozilla_ver() {
+    :
+}
+
+# disable legacy component registration
+mozilla_register() {
+    :
+}

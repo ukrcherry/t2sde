@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/lua-system/lua-system.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -8,15 +8,14 @@
 
 [T] Platform independent system calls for Lua.
 
-[U] https://github.com/o-lim/luasystem/
+[U] https://github.com/lunarmodules/luasystem/
 
 [A] Lua-system Authors
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/base
 
-[V] 0.2.1
 [L] MIT
-[S] Stable
+[V] 0.7.1
 
-[D] c85a393386c2b54d40dd988a49858e289f3d3c19af93db8bd6069ed7 lua-system-0.2.1.tar.gz https://github.com/o-lim/luasystem/archive/v0.2.1/
+[D] 28f35488020815ff41e6b072f6d270804ad658222b6027f8644493ac lua-system-0.7.1.tar.gz https://github.com/lunarmodules/luasystem/archive/v0.7.1/

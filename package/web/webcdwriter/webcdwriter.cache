@@ -1,0 +1,22 @@
+[TIMESTAMP] 1737846328 Sun Jan 26 00:05:28 2025
+[BUILDTIME] 5 (9)
+[SIZE] 3.32 MB, 241 files
+
+[DEP] 00-dirtree
+[DEP] bash
+[DEP] bzip2
+[DEP] cdrdao
+[DEP] cdrkit
+[DEP] coreutils
+[DEP] diffutils
+[DEP] findutils
+[DEP] gawk
+[DEP] grep
+[DEP] libxcrypt
+[DEP] linux-header
+[DEP] m4
+[DEP] make
+[DEP] pam
+[DEP] sed
+[DEP] shadow
+[DEP] tar

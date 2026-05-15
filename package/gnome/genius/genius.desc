@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/genius/genius.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -17,13 +17,14 @@
 [U] https://www.jirka.org/genius.html
 
 [A] Jiri (George) Lebl <jirka@5z.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/scientific
 
 [L] GPL
-[S] Stable
-[V] 1.0.27
+[V] 1.0.29
 
 [CV-URL] https://download.gnome.org/sources/genius/cache.json
-[D] 44e3784897da03224c4964b642b3747327857adc28588675b5d26089 genius-1.0.27.tar.xz http://ftp.5z.com/pub/genius/
+[D] 617a3f28d911c8704aed78c4ebf224249ec9e55186dd98bf0c8be4d2 genius-1.0.29.tar.xz http://ftp.5z.com/pub/genius/
+
+var_append confopt ' ' --disable-update-mimedb

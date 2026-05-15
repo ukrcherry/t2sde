@@ -2,7 +2,7 @@
 #
 # --- T2-COPYRIGHT-BEGIN ---
 # t2/scripts/Download
-# Copyright (C) 2004 - 2025 The T2 SDE Project
+# Copyright (C) 2004 - 2026 The T2 SDE Project
 # Copyright (C) 1998 - 2003 ROCK Linux Project
 # SPDX-License-Identifier: GPL-2.0
 # --- T2-COPYRIGHT-END ---
@@ -199,8 +199,11 @@ elif [ $notimeout -eq 1 ]; then
 	curl_options="$curl_options -Y 1 -y 60 --connect-timeout 60"
 fi
 
-# Disable checking for certificates on https downloads
-curl_options="$curl_options -k"
+if [ "$verbose" = 1 ]; then
+	curl_options="$curl_options --progress-bar"
+else
+	curl_options="$curl_options -s"
+fi
 
 # cksum_chk filename cksum origfile
 #
@@ -245,15 +248,13 @@ cksum_chk() {
 # output (multiline) message only if we are not in quiet mode
 #
 echo_info() {
-	if [ "$verbose" == 1 ]; then
-		echo "$@" | sed -e 's,^,INFO: ,'
-	fi
+	[ "$verbose" == 1 ] && echo "$@"
 }
 		
 # output (multiline) message always
 #
 echo_warn() {
-	echo "$@" | sed -e 's,^,INFO: ,'
+	echo "$@"
 }
 
 # Autodetect best Mirror and safe url in $mirror
@@ -291,7 +292,7 @@ detect_mirror() {
 
 		case "$mirror_name" in ($me) continue ;; esac
 
-		echo -n "INFO: Testing <$mirror_name> ..."
+		echo -n "Testing <$mirror_name> ..."
 		val="$(curl -s $curl_options -m 20 "${mirror_url%/}/DOWNTEST" \
 			-w "ok %{speed_download}" -o /dev/null)"
 		if [ "$val" = "${val#ok }" -o "$val" = "ok 0.000" ]; then
@@ -361,7 +362,7 @@ download_file() {
 
 	else
 		[ "$info" ] && echo_info "$info" && info=
-		echo; echo "Downloading $pkg:$gzfile"
+		echo "Downloading $gzfile"
 
 		# Existing *.cksum-err
 		#
@@ -435,7 +436,7 @@ download_file() {
 		    if [ -n "$mirror" -a "$mirror" != "none" -a -z "${gzfile##download/mirror/*}" ]; then
 			# try to use mirror
 			if ! download_file_now "!$mirror/${gzfile#download/mirror/}" $gzfile; then
-				echo "INFO: Download from mirror failed, trying original URL."
+				echo_warn "Download from mirror failed, trying original URL."
 				download_file_now "$location" $gzfile || downloaderror=1
 			fi
 		    else
@@ -462,7 +463,7 @@ download_file() {
 		fi
 	fi
 
-	echo "Checksum testing: $gzfile"
+	#echo "Checksum testing: $gzfile"
 	local compressor="$(get_compressor "$gzfile")"
 	if [ "$compressor" ]; then
 		# TODO: w/o temp file
@@ -522,7 +523,7 @@ download_file_now() {
 		;;
 	http://*|https://*|ftp://*|file://*)
 		if [ -s "$gzfile.incomplete" ]; then
-		    echo "INFO: Trying to resume previous download .."
+		    echo_info "Trying to resume previous download .."
 		    resume="-C -"
 		else
 		    resume=""
@@ -531,19 +532,19 @@ download_file_now() {
 		[ -s download/Translations ] && trfile=download/Translations || trfile=misc/share/DownloadTranslations
 		trurl="$(echo "$url" | sed -f $trfile)"
 		if [ -n "$trurl" -a "$trurl" != "$url" ]; then
-			echo "INFO: URL translated."
+			echo_info "URL translated: $trurl"
 			url="$trurl"
 		fi
 		unset trurl trfile
 
-		curl --progress-bar $resume $curl_options "$url" -o "$gzfile.incomplete"
+		curl $resume $curl_options "$url" -o "$gzfile.incomplete"
 		curlret="$?"
 
 		if [ "$resume" ] &&
 		   [ $curlret -eq 33 -o $curlret -eq 36 ]; then
-		    echo "INFO: Resuming download not possible. -> Overwriting old file."
+		    echo_warn "Resuming download not possible. -> Overwriting old file."
 		    rm -f "$gzfile.incomplete"
-		    curl --progress-bar $curl_options "$url" -o "$gzfile.incomplete"
+		    curl $curl_options "$url" -o "$gzfile.incomplete"
 		    curlret="$?"
 		fi
 
@@ -723,10 +724,8 @@ download_file_now() {
 
 list_dtags() {
 	{
-		grep -aH '^\[D\] ' package/*/*/*.desc
-		grep -aH '^\[D\] ' {architecture,target}/*/package/*/*.desc
-		grep -aH '^[X0-9a-z]' target/*/download.txt 2> /dev/null |
-			sed 's,:,:[D] ,'
+		grep -aH '^\[D\] ' package/*/*/*.desc {architecture,target}/*/package/*/*.desc 2>/dev/null
+		grep -aH '^[X0-9a-z]' target/*/download.txt 2>/dev/null | sed 's,:,:[D] ,'
 	} | column_clean
 }
 
@@ -877,7 +876,7 @@ if [ "${1:0:5}" != "-list" -a $checkonly = 0 ]; then
 		if [ "$proxy" ]; then
 			curl_options="$curl_options --proxy $proxy"
 		else
-			echo "INFO: No proxy information, removing: download/Proxy"
+			echo_warn "No proxy information, removing: download/Proxy"
 			rm download/Proxy
 		fi
 	fi
@@ -887,7 +886,7 @@ if [ "${1:0:5}" != "-list" -a $checkonly = 0 ]; then
 			curl_options="$curl_options --proxy-user $proxyauth"
 			git_options="-c http.proxy=http://$proxyauth@$proxy"
 		else
-			echo "INFO: No proxy-auth information, removing: download/Proxy-auth"
+			echo_warn "No proxy-auth information, removing: download/Proxy-auth"
 			rm download/Proxy-auth
  		fi
  	fi
@@ -903,10 +902,10 @@ if [ "${1:0:5}" != "-list" -a $checkonly = 0 ]; then
 	if [ $this_is_the_2nd_run = 0 ]; then
 		# am i using a proxy?
 		if [ "$proxy" ]; then
-			echo "INFO: Setting proxy to: $proxy"
+			echo_info "Setting proxy to: $proxy"
 		fi
 		if [ "$proxyauth" ]; then
-			echo "INFO: Setting proxy authentication information."
+			echo_info "Setting proxy authentication information."
 		fi
 
 		# do mirror detection

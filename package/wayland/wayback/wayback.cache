@@ -1,0 +1,23 @@
+[TIMESTAMP] 1753457638 Fri Jul 25 18:33:58 2025
+[BUILDTIME] 1 (9)
+[SIZE] 0.07 MB, 10 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] bzip2
+[DEP] coreutils
+[DEP] diffutils
+[DEP] gawk
+[DEP] grep
+[DEP] linux-header
+[DEP] meson
+[DEP] ninja
+[DEP] openssl
+[DEP] pixman
+[DEP] scdoc
+[DEP] sed
+[DEP] tar
+[DEP] wayland
+[DEP] wayland-protocols
+[DEP] wlroots
+[DEP] xkbcommon

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/ocaml/ocaml.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -18,16 +18,23 @@
 [U] https://ocaml.org/
 
 [A] INRIA <caml@inria.fr>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
-[F] NOPARALLEL NO-AS-NEEDED
+[F] NO-LTO
 
 [L] LGPL
-[S] Stable
-[V] 5.3.0
+[V] 5.4.1
 [P] X -----5---9 191.900
 
-[O] var_append makeopt ' ' world.opt
+[D] 2bc7ec0cb79796bacc52624d32b6bc9e21acaf72b6272db99d2ecc40 ocaml-5.4.1.tar.gz https://github.com/ocaml/ocaml/archive/5.4.1/
 
-[D] 1a59f33e3f64003d55a04a8ccb26380579666a41fd40f59fc5024151 ocaml-5.3.0.tar.gz https://github.com/ocaml/ocaml/archive/5.3.0/
+case "$arch" in
+arm64|x86-64|powerpc64|riscv64|s390x)
+	make_target=world.opt
+	;;
+*)
+	make_target=world
+	;;
+esac
+var_append makeopt ' ' $make_target

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/rpcbind/rpcbind.desc
-[COPY] Copyright (C) 2011 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2011 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,17 +12,15 @@
 
 [A] Gilles Quillard <gilles.quillard@bull.net>
 [A] Vincent ROQUETA <vincent.roqueta@ext.bull.net>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/system
 [F] CROSS
 
 [L] BSD
-[S] Beta
-[V] 1.2.5
-[P] X -----5---9 189.400
+[V] 1.2.8
 
-[O] var_append confopt ' ' --with-systemdsystemunitdir=no
-[O] hook_add preconf 5 "echo 'ac_cv_header_rpcsvc_mount_h=no' >> config.cache"
+[D] d4fa87dd37dea2111a0b23aef130fd3582127e5fdff1bc81a9898eb7 rpcbind-1.2.8.tar.bz2 http://downloads.sourceforge.net/project/rpcbind/rpcbind/1.2.8/
 
-[D] f5a7c38276347ff010ec46b01120679ba3b70f94dea0e2537c6e9dbc rpcbind-1.2.5.tar.bz2 http://downloads.sourceforge.net/project/rpcbind/rpcbind/1.2.5/
+var_append confopt ' ' --with-systemdsystemunitdir=no
+hook_add preconf 5 "echo 'ac_cv_header_rpcsvc_mount_h=no' >> config.cache"

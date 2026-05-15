@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/pssh/pssh.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] PSSH provides parallel versions of OpenSSH and related tools: pssh, pscp, prsync, pnuke, and pslurp
+
+[T] PSSH provides parallel versions of OpenSSH and related tools: pssh, pscp, prsync, pnuke, and pslurp.
+
+[U] https://github.com/lilydjwg/pssh
+
+[A] Pssh Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 2.3.6
+[L] BSD
+
+[D] f28c66b1ea4f8f4ce017174daf14489f577fabc2b2e9f35e46b1a26f pssh-2.3.6.tar.gz https://github.com/lilydjwg/pssh/archive/v2.3.6/

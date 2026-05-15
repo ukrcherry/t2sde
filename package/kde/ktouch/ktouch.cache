@@ -1,19 +1,42 @@
+[TIMESTAMP] 1760525115 Wed Oct 15 12:45:15 2025
+[BUILDTIME] 55 (9)
+[SIZE] 4.45 MB, 190 files
 
-[TIMESTAMP] 1714259732 Sun Apr 28 01:15:32 2024
-[BUILDTIME] 2 (9) ERROR
-[SIZE] 0.01 MB, 6 files
-
-[DEP] 00-dirtree
 [DEP] bash
 [DEP] binutils
 [DEP] cmake
 [DEP] coreutils
 [DEP] diffutils
-[DEP] findutils
-[DEP] gawk
-[DEP] grep
 [DEP] extra-cmake-modules
+[DEP] freetype
+[DEP] gawk
+[DEP] gettext
+[DEP] grep
+[DEP] kcmutils
+[DEP] kcolorscheme
+[DEP] kcompletion
+[DEP] kconfig
+[DEP] kconfigwidgets
+[DEP] kcoreaddons
+[DEP] ki18n
+[DEP] kitemviews
+[DEP] ktextwidgets
+[DEP] kwidgetsaddons
+[DEP] kwindowsystem
+[DEP] kxmlgui
+[DEP] libx11
+[DEP] libxcb
+[DEP] libxkbfile
+[DEP] libxml
+[DEP] linux-header
 [DEP] make
+[DEP] pkgconfig
+[DEP] procps
+[DEP] qt6base
+[DEP] qt6declarative
 [DEP] sed
+[DEP] sonnet
 [DEP] tar
+[DEP] vulkan-headers
+[DEP] xorgproto
 [DEP] xz

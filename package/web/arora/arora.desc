@@ -1,0 +1,30 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/arora/arora.desc
+[COPY] Copyright (C) 2010 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Web browser
+
+[T] Arora is a lightweight cross-platform web browser. It's free (as in
+[T] free speech and free beer). Arora runs on Linux, embedded Linux,
+[T] FreeBSD, Mac OS X, Windows, Haiku, and any other platforms supported
+[T] by the Qt toolkit.
+
+[T] Arora uses the QtWebKit port of the fully standards-compliant WebKit
+[T] layout engine. It features fast rendering, powerful JavaScript engine
+[T] and supports Netscape plugins.
+
+[U] https://github.com/arora/arora
+
+[A] See http://code.google.com/p/arora/people/list
+[M] Roger Mason <rmason@mun.ca>
+
+[C] extra/office
+
+[L] GPL
+[V] 0.11.0
+
+[D] 59c9f52451d102b15fd069cfbcaac1891d93c0ebe9d5887c94d9ae02 arora-0.11.0.tar.gz https://github.com/Arora/arora/archive/refs/tags/0.11.0/
+
+hook_add premake 5 "qmake PREFIX=/$prefix"

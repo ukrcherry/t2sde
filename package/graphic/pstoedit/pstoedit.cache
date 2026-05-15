@@ -1,25 +1,27 @@
+[TIMESTAMP] 1770203546 Wed Feb  4 12:12:26 2026
+[BUILDTIME] 35 (9)
+[SIZE] 2.56 MB, 57 files
 
-[TIMESTAMP] 1733930650 Wed Dec 11 16:24:10 2024
-[BUILDTIME] 20 (9)
-[SIZE] 2.64 MB, 51 files
-
-[DEP] 00-dirtree
+[DEP] autoconf
+[DEP] automake
 [DEP] bash
+[DEP] binutils
+[DEP] bzip2
 [DEP] coreutils
-[DEP] cups
 [DEP] diffutils
+[DEP] file
 [DEP] findutils
 [DEP] gawk
 [DEP] grep
 [DEP] gzip
 [OPT] imagemagick
-[DEP] libgd
-[DEP] libxml
-[DEP] libzip
+[DEP] libtool
 [DEP] linux-header
+[DEP] m4
 [DEP] make
-[DEP] qt65compat
-[DEP] qt6base
+[DEP] perl
+[DEP] pkgconfig
+[OPT] qt6base
 [DEP] sed
 [DEP] tar
-[DEP] tbb
+[OPT] texlive

@@ -1,8 +1,7 @@
-[TIMESTAMP] 1737459104 Tue Jan 21 12:31:44 2025
-[BUILDTIME] 8 (9)
-[SIZE] 0.94 MB, 53 files
+[TIMESTAMP] 1759944743 Wed Oct  8 19:32:23 2025
+[BUILDTIME] 14 (9)
+[SIZE] 0.92 MB, 53 files
 
-[DEP] 00-dirtree
 [DEP] bash
 [DEP] binutils
 [DEP] cmake
@@ -15,7 +14,6 @@
 [OPT] glib
 [DEP] gobject-introspection
 [DEP] grep
-[DEP] libcanberra
 [DEP] libsoup3
 [DEP] libxml
 [DEP] libxslt
@@ -26,6 +24,7 @@
 [DEP] pkgconfig
 [DEP] python
 [DEP] sed
+[DEP] setuptools
 [DEP] tar
 [DEP] vala
 [DEP] xz

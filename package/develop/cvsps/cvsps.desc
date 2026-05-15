@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/cvsps/cvsps.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,15 +14,14 @@
 [T] of committed patchsets, restrict by author, date range, files affected,
 [T] branches affected. CVSps can generate a diff of a given patchset.
 
-[U] http://www.cobite.com/cvsps/
+[U] https://github.com/andreyvit/cvsps
 
 [A] David Mansfield <fm@dm.cobite.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/development
 
 [L] GPL
-[S] Stable
 [V] 3.13
 
 [D] 58934eea29f1bd9b4cbb59baafe6462955bf6d34aa5d80f6af2cca21 cvsps-3.13.tar.gz http://www.catb.org/~esr/cvsps/

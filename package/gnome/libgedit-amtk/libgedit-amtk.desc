@@ -1,0 +1,27 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libgedit-amtk/libgedit-amtk.desc
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A wrapper around Amtk for GNOME-style text editors like gedit
+
+[T] libgedit-amtk is a wrapper around the Amtk library, used by gedit and
+[T] similar GNOME text editors to simplify application menu and toolbar
+[T] handling.
+
+[U] https://gitlab.gnome.org/World/gedit/libgedit-amtk
+
+[A] Sébastien Wilmet <swilmet@gnome.org>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/development extra/desktop/gnome
+[F] CROSS
+
+[L] LGPL
+[V] 5.10.0
+[P] X -----5---9 177.103
+
+[D] a531e950e65810494ad83924c706ae0a51309c1658ebd7b84b9f938d libgedit-amtk-5.10.0.tar.gz https://gitlab.gnome.org/World/gedit/libgedit-amtk/-/archive/5.10.0/
+
+. $base/package/*/*/gnome-conf.in

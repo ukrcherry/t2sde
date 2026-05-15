@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/cdi2iso/cdi2iso.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -9,20 +9,19 @@
 [T] The command line program cdi2iso converts DiscJuggler image to the
 [T] standard ISO-9660 format.
 
-[U] http://developer.berlios.de/projects/cdi2iso/
+[U] https://sourceforge.net/projects/cdi2iso.berlios/
 
 [A] Salvatore Santagati <salsan@users.berlios.de>
-[M] Nagy Karoly Gabriel <nagy.karoly@x5.ro>
+[M] Nagy Karoly Gabriel <karasz@x5.ro>
 
 [C] extra/tool
 [F] CROSS
 
 [L] GPL
-[S] Stable
 [V] 0.1
 
-[O] var_append makeopt ' ' all
-[O] makeinstopt=
-[O] hook_add postmake 4 'cp -vf cdi2iso $root$bindir'
+[D] b10e71cd12a7008b4ca1d587ff07e5ae9b20be1602a24d21d4d9e1e6 cdi2iso-0.1-src.tar.bz2 https://download.sourceforge.net/project/cdi2iso.berlios/
 
-[D] b10e71cd12a7008b4ca1d587ff07e5ae9b20be1602a24d21d4d9e1e6 cdi2iso-0.1-src.tar.bz2 http://dl.sourceforge.net/sourceforge/cdi2iso.berlios/
+var_append makeopt ' ' all
+makeinstopt=
+hook_add postmake 4 'cp -vf cdi2iso $root$bindir'

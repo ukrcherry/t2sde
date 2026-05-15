@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libuv/libuv.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -14,15 +14,14 @@
 [U] https://libuv.org
 
 [A] libuv Team
-[M] The T2 Project <t2e@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/system
 [F] CROSS NO-LTO.gcc
 
 [L] Free-to-use
-[S] Stable
-[V] 1.50.0
+[V] 1.52.1
 [P] X -----5---9 186.800
 
 [CV-URL] https://dist.libuv.org/dist/
-[D] 5ee015cfebe66d4ff3525d34826f11126e7edb678578d85661177e6c libuv-v1.50.0.tar.gz https://dist.libuv.org/dist/v1.50.0/
+[D] 6807ed67ebc2d0c0211d0a49368b1b145bc28bc1352426ed52a5dd88 libuv-v1.52.1.tar.gz https://dist.libuv.org/dist/v1.52.1/

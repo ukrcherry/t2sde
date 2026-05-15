@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---.
 [COPY] t2/package/*/zopfli/zopfli.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---.
 
@@ -11,13 +11,14 @@
 [U] https://github.com/google/zopfli
 
 [A] Zopfli Authors
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/base
 [F] OBJDIR CROSS
 
 [V] 1.0.3
 [L] APL
-[S] Stable
 
 [D] be1a8678ef965105395fbc719e5833a6d937b3411e3a9aeed3c1948c zopfli-1.0.3.tar.gz https://github.com/google/zopfli/archive/
+
+var_append cmakeopt ' ' -DCMAKE_POLICY_VERSION_MINIMUM=3.5

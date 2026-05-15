@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---.
 [COPY] t2/package/*/solaar/solaar.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---.
 
@@ -11,7 +11,7 @@
 [U] https://pwr-solaar.github.io/Solaar/
 
 [A] Solaar Authors
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/base
 [F] CROSS
@@ -21,8 +21,7 @@
 [E] add pydbus
 [E] add python-evdev
 
-[V] 1.1.14
+[V] 1.1.19
 [L] GPL
-[S] Stable
 
-[D] 12087e6951c91c7dbe02cc7b75cc64b1605adf92f208c55d7e228092 solaar-1.1.14.tar.gz https://github.com/pwr-Solaar/Solaar/archive/1.1.14/
+[D] a38aa0de4934fc725a5cb26650494819a71c03dcd946a2d2f7cb0e74 solaar-1.1.19.tar.gz https://github.com/pwr-Solaar/Solaar/archive/1.1.19/

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/openscenegraph/openscenegraph.desc
-[COPY] Copyright (C) 2010 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2010 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -17,14 +17,18 @@
 
 [C] extra/multimedia
 
+[E] opt cyrus-sasl2
 [E] opt jasper
+[E] opt libvncserver
+[E] opt librvg
+[E] opt poppler
 
 [L] LGPL
-[S] Stable
 [V] 3.6.5
 [P] X -----5---9 211.000
 
-[O] var_append GCC_WRAPPER_INSERT ' ' "-I$root$(pkgprefix includedir glib)"
-[O] var_append GCC_WRAPPER_INSERT ' ' "-L$root$(pkgprefix libdir glib)"
-
 [D] c308219400a14b1544ed46eadf2bbbc3aabf93ca5e0acb0c9f3bf0f8 OpenSceneGraph-3.6.5.tar.gz https://github.com/openscenegraph/OpenSceneGraph/archive/refs/tags/
+
+var_append GCC_WRAPPER_INSERT ' ' "-I$root$(pkgprefix includedir glib)"
+var_append GCC_WRAPPER_INSERT ' ' "-L$root$(pkgprefix libdir glib)"
+var_append cmakeopt ' ' -DCMAKE_POLICY_VERSION_MINIMUM=3.5

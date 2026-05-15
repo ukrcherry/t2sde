@@ -1,0 +1,41 @@
+[TIMESTAMP] 1759858626 Tue Oct  7 19:37:06 2025
+[BUILDTIME] 30 (9)
+[SIZE] 9.22 MB, 194 files
+
+[DEP] appstream-glib
+[DEP] at-spi2-core
+[DEP] bash
+[DEP] binutils
+[DEP] cairo
+[DEP] cmake
+[DEP] coreutils
+[DEP] diffutils
+[DEP] gawk
+[DEP] gdk-pixbuf
+[DEP] gettext
+[DEP] glib
+[DEP] glslang
+[DEP] grep
+[DEP] gtk+
+[DEP] gzip
+[DEP] harfbuzz
+[DEP] json-glib
+[DEP] libdecor
+[DEP] libglvnd
+[OPT] libsoup3
+[DEP] libx11
+[DEP] libxcb
+[DEP] linux-header
+[DEP] lm_sensors
+[DEP] make
+[DEP] openssl
+[DEP] pango
+[DEP] pkgconfig
+[OPT] qt5base
+[DEP] sed
+[DEP] sysfiles
+[DEP] tar
+[DEP] vulkan-headers
+[DEP] wayland
+[DEP] xorgproto
+[DEP] zlib

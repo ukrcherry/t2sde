@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gsm/gsm.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -16,18 +16,17 @@
 
 [A] Jutta Degener <jutta@cs.tu-berlin.de>
 [T] Carsten Bormann <cabo@cs.tu-berlin.de>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] FPIC CROSS NO-LTO.gcc
 
 [L] OpenSource
-[S] Stable
-[V] 1.0.22
+[V] 1.0.24
 [P] X -----5---9 136.700
 
-# fix linking on e.g. arm/uclibc
-[O] var_append makeopt ' ' LD=$CC
-[O] var_append makeinstopt ' ' 'INSTALL_ROOT=$root/$prefix GSM_INSTALL_INC=$root$includedir'
+[D] 5410e47b3886fba0e80f32afbd0fbeb62b3ce96c481a07f60c709c88 gsm-1.0.24.tar.gz https://www.quut.com/gsm/
 
-[D] de9e8c38fdf4f236814a1bd1d1c281eafaea7f4e6902af829db77b73 gsm-1.0.22.tar.gz http://www.quut.com/gsm/
+# fix linking on e.g. arm/uclibc
+var_append makeopt ' ' LD=$CC
+var_append makeinstopt ' ' 'INSTALL_ROOT=$root/$prefix GSM_INSTALL_INC=$root$includedir'

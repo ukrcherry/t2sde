@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/fonttools/fonttools.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,14 +15,13 @@
 [U] https://pypi.org/project/fonttools/
 
 [A] Just van Rossum <just@letterror.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/x11
 [F] CROSS
 
 [L] MIT
-[S] Stable
-[V] 4.55.6
+[V] 4.63.0
 [P] X -----5---9 400.750
 
-[D] c1a8c97e3ef9670b39bdfac8d32aedaaa98e78264cfe7e313ac14914 fonttools-4.55.6.tar.gz https://files.pythonhosted.org/packages/49/2e/0b11e907b90665253dbad425479e874e38a9e81ced397a4e3312b9116935/
+[D] e98ddd3b242f9c713c9e05137885c73fb168449f5e12908dfccfe2bc fonttools-4.63.0.tar.gz https://files.pythonhosted.org/packages/source/f/fonttools/

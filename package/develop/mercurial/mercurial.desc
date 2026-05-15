@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/mercurial/mercurial.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,14 +13,12 @@
 
 [A] Matt Mackall <mpm@selenic.com>
 [A] Bryan O'Sullivan <bos@serpentine.com>
-[M] Rene Rebe <rene@exactcode.de>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [F] CROSS
 
 [L] GPL
-[S] Beta
-[V] 7.0.2
-[P] X -----5---9 209.700
+[V] 7.2.2
 
-[D] 9dd071ed7b0dd24af7b07a753eaf3a3b999a75b2173da91bed20dc4c mercurial-7.0.2.tar.gz https://www.mercurial-scm.org/release/
+[D] 7f1f4cae4db043674578a26ebca26558ebedf8d8397305ef2764402f mercurial-7.2.2.tar.gz https://www.mercurial-scm.org/release/

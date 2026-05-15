@@ -15,7 +15,6 @@
 [DEP] freetype
 [DEP] gawk
 [DEP] gdk-pixbuf
-[DEP] git
 [DEP] glew
 [DEP] glib
 [DEP] glslang
@@ -40,7 +39,6 @@
 [DEP] spirv-tools
 [DEP] sqlite
 [DEP] tar
-[DEP] tbb
 [DEP] vulkan-headers
 [DEP] xorgproto
 [DEP] zlib

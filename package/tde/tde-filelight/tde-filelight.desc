@@ -1,0 +1,27 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/tde-filelight/tde-filelight.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Disk usage analyzer for the Trinity Desktop Environment
+
+[T] Filelight allows you to understand how your diskspace is being used by
+[T] graphically representating your filesystem as a set of concentric
+[T] segmented-rings.
+
+[U] https://www.trinitydesktop.org/
+
+[A] Trinity Desktop Developers
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/x11
+[F] OBJDIR
+
+[L] GPL
+[V] 14.1.6
+
+[CV-GROUP] tde
+[D] 272403ddcf66a46c835cd34fcac9445f0b10d15fb62c824c3705498e filelight-trinity-14.1.6.tar.xz https://mirror.ppa.trinitydesktop.org/trinity/releases/R14.1.6/main/applications/utilities/
+
+. $base/package/*/*/tde-conf.in

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libtiff/libtiff.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -16,7 +16,7 @@
 [U] http://www.simplesystems.org/libtiff/
 
 [A] Sam Leffler <sam@engr.sgi.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] CROSS
@@ -25,8 +25,7 @@
 [E] opt libwebp
 
 [L] OpenSource
-[S] Beta
-[V] 4.7.0
+[V] 4.7.1
 [P] X -----5---9 112.699
 
-[D] 203fe15ad55ffd67f8a8a3f053499717896b47a810c7b345043e3850 tiff-4.7.0.tar.xz http://download.osgeo.org/libtiff/
+[D] d00ca1a2873a71dcd0ab8b35b85dce96f22f00184d52a0d7843a51ee tiff-4.7.1.tar.xz http://download.osgeo.org/libtiff/

@@ -1,0 +1,29 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/modemmanager/modemmanager.desc
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] D-Bus daemon to control broadband devices
+
+[T] ModemManager (mm-glib) is a DBus-activated daemon which controls mobile broadband
+[T] (2G/3G/4G) devices and connections.
+
+[U] https://modemmanager.org/
+
+[A] ModemManager Developers
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/network
+[F] CROSS NO-LTO
+
+[L] LGPL
+[V] 1.24.2
+[P] X -----5---9 157.000
+
+[D] 92d6c8ad9cdb79ec1bd85fe49438282d4d84a96f354eb57b1e9589bf ModemManager-1.24.2.tar.bz2 https://gitlab.freedesktop.org/mobile-broadband/ModemManager/-/archive/1.24.2/
+
+var_append mesonopt ' ' -Dtests=false
+pkginstalled bash-completion || var_append mesonopt ' ' -Dbash_completion=false
+pkginstalled gobject-introspection || var_append mesonopt ' ' -Dintrospection=false
+pkginstalled systemd || var_append mesonopt ' ' '-Dsystemdsystemunitdir=no -Dsystemd_journal=false -Dsystemd_suspend_resume=false'

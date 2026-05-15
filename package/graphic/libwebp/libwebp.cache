@@ -1,17 +1,20 @@
-[TIMESTAMP] 1738863974 Thu Feb  6 18:46:14 2025
-[BUILDTIME] 10 (9)
-[SIZE] 1.14 MB, 52 files
+[TIMESTAMP] 1768852988 Mon Jan 19 21:03:08 2026
+[BUILDTIME] 20 (9)
+[SIZE] 1.39 MB, 56 files
 
 [DEP] bash
 [DEP] binutils
 [DEP] cmake
 [DEP] coreutils
 [DEP] diffutils
+[DEP] findutils
 [OPT] freeglut
 [DEP] gawk
+[OPT] glu
 [DEP] grep
 [DEP] gzip
 [OPT] libgif
+[OPT] libglvnd
 [OPT] libjpeg
 [OPT] libpng
 [OPT] libsdl2
@@ -21,4 +24,5 @@
 [DEP] pkgconfig
 [DEP] sed
 [DEP] tar
+[DEP] util-linux
 [DEP] zlib

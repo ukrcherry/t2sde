@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/ser2net/ser2net.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -16,13 +16,12 @@
 [U] https://ser2net.sourceforge.net/
 
 [A] Corey Minyard <cminyard@users.sourceforge.net>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 4.3.11
+[V] 4.6.7
 
-[D] c7f365fd53ee56269364329bf7bb4c6a0ae52e700e7495ac2e49e343 ser2net-4.3.11.tar.gz http://dl.sourceforge.net/sourceforge/ser2net/
+[D] 06412329cec1c75882f779b841c6b997fe600c30f25baf9fdadcb679 ser2net-4.6.7.tar.gz https://prdownloads.sourceforge.net/sourceforge/ser2net/

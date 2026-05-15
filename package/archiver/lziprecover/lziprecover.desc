@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/lziprecover/lziprecover.desc
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Recovery tool and decompressor for lzip
+
+[T] Lziprecover is a data recovery tool and decompressor for files in the lzip
+[T] compressed data format (.lz). Lziprecover also provides Forward Error
+[T] Correction (FEC) able to repair any kind of file.
+
+[U] https://www.nongnu.org/lzip/lziprecover.html
+
+[A] Antonio Diaz Diaz
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+
+[L] GPL
+[V] 1.26
+[P] X -----5---9 700.000
+
+[D] 922ec57a91f90f8141ba198ee984a746209d8ce850f0de12920f527f lziprecover-1.26.tar.gz http://download.savannah.gnu.org/releases/lzip/lziprecover/

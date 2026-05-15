@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/lxqt-runner/lxqt-runner.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,17 +11,16 @@
 [U] https://github.com/lxqt/lxqt-runner
 
 [A] Lxqt-runner Authors
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/base
 [F] OBJDIR
 
-[V] 2.2.0
+[V] 2.4.0
 [L] LGPL
-[S] Stable
-
-[O] var_append GCC_WRAPPER_APPEND ' ' -I$(pkgprefix includedir layer-shell-qt)
-[O] var_append GCC_WRAPPER_APPEND ' ' -L$(pkgprefix libdir layer-shell-qt)
 
 [CV-GROUP] lxqt
-[D] b684def8d2f569b659e844fe607b045b22c10fd6c7596345a67b2591 lxqt-runner-2.2.0.tar.xz https://github.com/lxqt/lxqt-runner/releases/download/2.2.0/
+[D] 20a56dce82579ea29a5a7abe1543688e7dff985eb126685d0015b2d6 lxqt-runner-2.4.0.tar.xz https://github.com/lxqt/lxqt-runner/releases/download/2.4.0/
+
+var_append GCC_WRAPPER_APPEND ' ' -I$(pkgprefix includedir layer-shell-qt)
+var_append GCC_WRAPPER_APPEND ' ' -L$(pkgprefix libdir layer-shell-qt)

@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/minissdpd/minissdpd.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] MiniSSDP Daemon
+
+[T] MiniSSDP Daemon.
+
+[U] http://miniupnp.free.fr/minissdpd.html
+
+[A] Minissdpd Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.6.0
+[L] BSD
+
+[D] b4ff5a2d3573731d3c686414a29c74a65fd26dde7851798052451ce5 download.php?file=minissdpd-1.6.0.tar.gz http://miniupnp.free.fr/files/

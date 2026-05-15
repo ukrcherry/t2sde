@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/flatpak/flatpak.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,18 +12,18 @@
 [U] https://flatpak.org
 
 [A] The Flatpak developers
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/emulator
 [F] CROSS
 
 [L] LGPL
-[S] Stable
-[V] 1.16.1
+[V] 1.16.6
 [P] X -----5---9 500.000
 
-[O] var_append mesonopt ' ' -Dtests=false
-[O] pkginstalled bubblewrap && var_append mesonopt ' ' -Dsystem_bubblewrap=bwrap
-[O] pkginstalled polkit || var_append mesonopt ' ' -Dsystem_helper=disabled
+[CV-FLAGS] ODD-UNSTABLE
+[D] cc061df0a698d79a9545267a8a113c571f8ce1152dd983cd5f30ddeb flatpak-1.16.6.tar.gz https://github.com/flatpak/flatpak/archive/refs/tags/1.16.6/
 
-[D] 3c4423d995b4a33ec96b97d0c92d1e304a0cf32703095550e76e8677 flatpak-1.16.1.tar.gz https://github.com/flatpak/flatpak/archive/refs/tags/1.16.1/
+var_append mesonopt ' ' -Dtests=false
+pkginstalled bubblewrap && var_append mesonopt ' ' -Dsystem_bubblewrap=bwrap
+pkginstalled polkit || var_append mesonopt ' ' -Dsystem_helper=disabled

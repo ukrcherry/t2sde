@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/httrack/httrack.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Website Copier - Free Software Offline Browser
+
+[T] Website Copier - Free Software Offline Browser.
+
+[U] https://www.httrack.com/
+
+[A] Httrack Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 3.49.6
+[L] GPL3
+
+[D] 9ee252785cc0ceffeaa24556ee0ee1ff87cdad4f27454ccdec6686db httrack-3.49.6-git.tar.gz git+https://github.com/xroche/httrack.git 748c35d

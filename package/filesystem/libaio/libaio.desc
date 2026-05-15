@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libaio/libaio.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,20 +15,19 @@
 [U] https://lse.sourceforge.net/io/aio.html
 
 [A] Benjamin LaHaise <bcrl@redhat.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [F] CROSS NO-LTO.gcc
 [C] base/development
 [R] - blackfin
 
 [L] LGPL
-[S] Beta
 [V] 0.3.113
 [P] X --2--5---9 104.300
 
-# guide cross compiling
-[O] LIBAIO_ARCH="`echo $arch | arch2uname`"
-[O] var_append makeopt ' ' ARCH=$LIBAIO_ARCH
-[O] var_append makeinstopt ' ' 'prefix=/$prefix libdir=$libdir'
-
 [D] 3f42948c054c6ff68d8f57cd1c3821609b1e1654c0feb511b7ec39e7 libaio-0.3.113.tar.gz https://releases.pagure.org/libaio/
+
+# guide cross compiling
+LIBAIO_ARCH="`echo $arch | arch2uname`"
+var_append makeopt ' ' ARCH=$LIBAIO_ARCH
+var_append makeinstopt ' ' 'prefix=/$prefix libdir=$libdir'

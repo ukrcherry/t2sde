@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/wayfire-plugins-extra/wayfire-plugins-extra.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,12 +12,12 @@
 [U] https://wayfire.org/
 
 [A] Iliya Bozhinov
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/x11
 
 [L] MIT
-[S] Beta
-[V] 0.9.0
+[V] 0.10.1
 
-[D] 7f979ef68b6ee336704aa356c9ee8d508f0e01be6c1965ff493dc2ea wayfire-plugins-extra-0.9.0.tar.gz git+https://github.com/WayfireWM/wayfire-plugins-extra.git v0.9.0
+[CV-GROUP] wayfire
+[D] 51680ffcd441c4d0a69236cb39d39f3bc3aadf8ce1a990f407e84fcd wayfire-plugins-extra-0.10.1.tar.gz git+https://github.com/WayfireWM/wayfire-plugins-extra.git v0.10.1

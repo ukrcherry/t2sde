@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/recutils/recutils.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Set of tools and libraries to access plain text databases called recfiles
+
+[T] Set of tools and libraries to access plain text databases called recfiles.
+
+[U] https://www.gnu.org/software/recutils/
+
+[A] Recutils Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.9
+[L] GPL3
+
+[D] c9cf4b20166421b8b6c82034fc4b679b558940eebb1d352bccff72e9 recutils-1.9.tar.gz https://ftp.gnu.org/gnu/recutils/

@@ -1,0 +1,29 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/github-mcp-server/github-mcp-server.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] GitHub's official MCP Server
+
+[T] The GitHub MCP Server connects AI tools directly to GitHub's platform. This
+[T] gives AI agents, assistants, and chatbots the ability to read repositories
+[T] and code files, manage issues and PRs, analyze code, and automate
+[T] workflows. All through natural language interactions.
+
+[U] https://github.com/github/github-mcp-server
+
+[A] GitHub
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/ai
+[F] CROSS
+
+[L] MIT
+[V] 1.0.4
+
+[D] 3ae64093e3185679b3f4d72cb5aba39770650e9765a18a1a3ad82e12 github-mcp-server-1.0.4.tar.gz https://github.com/github/github-mcp-server/archive/v1.0.4/
+
+. $base/package/*/*/go-conf.in
+var_append goconfopt ' ' '-o build/ ./cmd/github-mcp-server ./cmd/mcpcurl'
+hook_add postmake 5 'cp -vf build/* $root$bindir/'

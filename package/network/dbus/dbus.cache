@@ -1,22 +1,35 @@
-[TIMESTAMP] 1739036694 Sat Feb  8 18:44:54 2025
-[BUILDTIME] 14 (5)
-[SIZE] 1.67 MB, 81 files
+[TIMESTAMP] 1760530399 Wed Oct 15 14:13:19 2025
+[BUILDTIME] 16 (9)
+[SIZE] 22.49 MB, 490 files
 
+[DEP] audit
 [DEP] bash
 [DEP] binutils
+[DEP] cmake
 [DEP] coreutils
 [DEP] diffutils
+[OPT] docbook-xml
+[OPT] docbook-xsl
+[DEP] doxygen
 [DEP] expat
+[DEP] freetype
 [DEP] gawk
+[DEP] glib
 [DEP] grep
-[OPT] gtk-sharp
-[OPT] libx11
+[DEP] libcap-ng
+[DEP] libx11
+[OPT] libxslt
 [DEP] linux-header
 [DEP] m4
 [DEP] make
-[OPT] mono
-[OPT] pyrexc
+[DEP] meson
+[DEP] ninja
+[DEP] openssl
+[DEP] pkgconfig
+[DEP] python
 [DEP] sed
 [DEP] sysfiles
+[OPT] systemd
 [DEP] tar
+[DEP] xorgproto
 [DEP] xz

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libunwind/libunwind.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -17,16 +17,34 @@
 
 [A] University of Illinois/NCSA
 [A] Chris Lattner <clattner@apple.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [F] OBJDIR CROSS
 
 [L] BSD
-[S] Stable
-[V] 20.1.4
+[V] 22.1.5
 [P] O -1---5---9 102.350
 
-[CV-GROUP] llvmorg
-[D] ad4ffce3b65cb80a00cb50b885a9b5f6afd8b24750507d13b3bc7efa libunwind-20.1.4.src.tar.xz https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.4/
-[D] a9713c0e19a33e061a143e6c6a7cd5c3d5706a8796c5507caa26469f llvm-cmake-20.1.4.src.tar.xz !https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.4/cmake-20.1.4.src.tar.xz
+[CV-GROUP] llvm-project
+[D] 539b0fa857272b2b18ad9b9e58e11d4e48e0f1c807ec375d5ca91913 llvm-project-22.1.5.src.tar.xz https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.5/
+
+srcdir=*/libunwind
+
+cmake_mod() {
+	tar $taropt `match_source_file -p cmake` -C ..
+	mv -vf ../cmake-*src ../../cmake
+}
+hook_add preconf 5 cmake_mod
+
+var_append cmakeopt ' ' -DLIBCXX_USE_COMPILER_RT=YES
+
+if atstage cross; then
+	var_append GCC_WRAPPER_APPEND ' ' '-nodefaultlibs -lc -stdlib=libc++'
+fi
+
+[ "${libdir##*/lib}" ] && var_append cmakeopt ' ' "-DLLVM_LIBDIR_SUFFIX=${libdir##*/lib}"
+#var_append cmakeopt ' ' -DLLVM_BUILD_LLVM_DYLIB=ON
+[ "$SDECFG_STATIC" = 1 ] || var_append cmakeopt ' ' -DBUILD_SHARED_LIBS=ON
+
+#var_append confopt ' ' '--disable-bindings' # TODO: config option

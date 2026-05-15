@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/fltk/fltk.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -23,18 +23,16 @@
 [U] https://www.fltk.org/
 
 [A] Bill Spitzak and others
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/x11
 [F] CROSS
 
 [L] LGPL
-[S] Stable
-[V] 1.4.0
+[V] 1.4.5
 [P] X -----5---9 128.300
 
-[O] [ "$SDECFG_STATIC" == 0 ] && var_append confopt ' ' --enable-shared
-[O] [[ $libdir == *lib64 ]] && hook_add premake 5 'mkdir lib64; sed -i -e "s/\.\.\/lib/..\/lib64/g" makeinclude'
+[D] aae39a8d3dcb922ade5feb64e992e787f4cf7a9d7431bda5b80964d2 fltk-1.4.5-source.tar.gz https://github.com/fltk/fltk/releases/download/release-1.4.5/
 
-[CV-URL] https://www.fltk.org/software.php
-[D] fe06837f9ab3dfdca413a1c611ca5db36a83e98598d0a549d6b56696 fltk-1.4.0-source.tar.bz2 https://www.fltk.org/pub/fltk/1.4.0/
+[ "$SDECFG_STATIC" == 0 ] && var_append confopt ' ' --enable-shared
+[[ $libdir == *lib64 ]] && hook_add premake 5 'mkdir lib64; sed -i -e "s/\.\.\/lib/..\/lib64/g" makeinclude'

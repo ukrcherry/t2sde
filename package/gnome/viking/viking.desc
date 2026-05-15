@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/viking/viking.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,14 +15,22 @@
 [U] https://viking.sf.net/
 
 [A] kavli <gtoevan@gmx.net>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
-[F] NOPARALLEL
+
+[E] opt docbook-xml docbook-xsl
 
 [L] GPL
-[S] Alpha
-[V] 1.8
+[V] 1.11
 
 [CV-URL] https://download.gnome.org/sources/viking/cache.json
-[D] eb70109a59aa700d18d152dc30cceef800cfe26272fad15c5371593a viking-1.8.tar.gz http://dl.sourceforge.net/sourceforge/viking/
+[D] 04ad3fbb64d194b4b8fe73ad03f703fe62171aba36ab676d30ae505f viking-1.11.tar.gz https://download.sourceforge.net/project/viking/
+
+var_append GCC_WRAPPER_APPEND ' ' -L$root$(pkgprefix libdir geoclue)
+var_append GCC_WRAPPER_APPEND ' ' -L$root$(pkgprefix libdir libx11)
+var_append GCC_WRAPPER_APPEND ' ' -std=gnu11
+
+var_append confopt ' ' --disable-oauth
+var_append confopt ' ' --disable-realtime-gps-tracking
+pkginstalled mapnik || var_append confopt ' ' --disable-mapnik

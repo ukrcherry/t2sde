@@ -1,0 +1,29 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/plasma-login-manager/plasma-login-manager.desc
+# Copyright (C) 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Plasma Login Manager
+
+[T] Plasma Login provides a display manager for KDE Plasma, forked from SDDM
+[T] and with an new frontend providing a greeter, wallpaper plugin integration
+[T] and System Settings module (KCM).
+
+[U] https://invent.kde.org/plasma/plasma-login-manager
+
+[A] KDE
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS OBJDIR
+
+[L] GPL
+[V] 6.6.5
+
+[CV-GROUP] kde-plasma
+[D] 16f1ef9ced47085acaea48acfc72240a37709f67f67c827092e83498 plasma-login-manager-6.6.5.tar.xz https://download.kde.org/stable/plasma/6.6.5/
+
+. $base/package/*/*/kde-conf.in
+
+var_append cmakeopt ' ' -DPAM_OS_CONFIGURATION=arch

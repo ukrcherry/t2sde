@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/certbot/certbot.desc
-[COPY] Copyright (C) 2015 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2015 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,16 +13,26 @@
 [U] https://letsencrypt.org
 
 [A] Internet Security Research Group
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/security
 
+[E] add acme
+[E] add parsedatetime
+[E] add python-configobj
+[E] add python-cryptography
+[E] add python-josepy
+[E] add pyrequests
+[E] add pyidna
+[E] add python-pyopenssl
+[E] add pyrfc3339
+[E] add python-configargparse
+[E] add pydistro
+
 [L] APL
-[S] Stable
-[V] 4.0.0
-[P] X -----5---9 104.600
+[V] 5.6.0
 
-[O] runmake=0
-[O] hook_add preconf 5 "cd $pkg"
+[D] ff1396fdf3ba97e0ffced89902c2841fa1e99f5e6fca23278dbbd79c certbot-5.6.0.tar.gz https://github.com/certbot/certbot/archive/v5.6.0/
 
-[D] f0f8e6c6265d2425844f5598cafed5de8f3403b9a533e24de447a29d certbot-4.0.0.tar.gz https://github.com/certbot/certbot/archive/v4.0.0/
+runmake=0
+hook_add preconf 5 "cd $pkg"

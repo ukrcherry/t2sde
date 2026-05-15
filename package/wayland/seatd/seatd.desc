@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/seatd/seatd.desc
-[COPY] Copyright (C) 2021 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2021 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,19 +11,22 @@
 [U] https://sr.ht/~kennylevinsen/seatd/
 
 [A] Kenny Levinsen
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/x11
 [F] CROSS
 
 [L] MIT
-[S] Beta
-[V] 0.9.1
+[V] 0.9.3
 [P] X -----5---9 148.000
-
-[O] var_append mesonopt ' ' -Ddefaultpath=/var/run/seatd.sock
-[O] var_append mesonopt ' ' --bindir=$sbindir
 
 [CV-FLAGS] NO-PREFIX
 [CV-URL] https://git.sr.ht/~kennylevinsen/seatd/refs
-[D] fd75a0113c27e91b61c5901bde9018f888d8f136f52523c20da5ec6f seatd-0.9.1.tar.gz !https://git.sr.ht/~kennylevinsen/seatd/archive/0.9.1.tar.gz
+[D] 3bdc38d1343d0df5911d02735671516aec2b10072db2477e399a7d54 seatd-0.9.3.tar.gz !https://git.sr.ht/~kennylevinsen/seatd/archive/0.9.3.tar.gz
+
+var_append mesonopt ' ' -Ddefaultpath=/var/run/seatd.sock
+var_append mesonopt ' ' --bindir=$sbindir
+
+pkginstalled systemd &&
+  hook_add postmake 5 "install contrib/systemd/seatd.service \
+	$root/$(pkgprefix systemd)/lib/systemd/system/seatd.service"

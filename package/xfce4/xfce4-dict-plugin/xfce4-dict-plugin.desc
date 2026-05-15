@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xfce4-dict-plugin/xfce4-dict-plugin.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,15 +13,14 @@
 [U] http://xfce-goodies.berlios.de/
 
 [A] Enrico Tröger
-[M] Johan <linuxmasterjedi@free.fr>
+[M] Johan Boyé <linuxmasterjedi@free.fr>
 
 [C] extra/desktop/xfce
 [F] CROSS
 
 [L] BSD
-[S] Beta
-[V] 0.8.8
+[V] 0.8.9
 
-[O] . $base/package/xfce4/*/xfce4-conf.in
+[D] ebbff50e767101bead34af2e68098290b0a8e7a6ef7bb85ec4273d38 xfce4-dict-0.8.9.tar.xz https://archive.xfce.org/src/apps/xfce4-dict/0.8/
 
-[D] 6cae979b077cf7cb043712eea96a9871c0686d2f992f7acbccdb5524 xfce4-dict-0.8.8.tar.bz2 https://archive.xfce.org/src/apps/xfce4-dict/0.8/
+. $base/package/xfce4/*/xfce4-conf.in

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/openjdk/openjdk.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -16,15 +16,97 @@
 [A] Oracle Corporation
 [M] Tomas Glozar <tglozar@gmail.com>
 
-[C] extra/emulator
+[C] base/development
 [F] CROSS NO-LTO LATOMIC.sparc
 # alpha and loongarch64 "only" ICEs, ia64 needs more stack glue code
 [R] - alpha ia64 loongarch64 riscv
 
 [L] GPL
-[S] Stable
-[V] 21.0.8+2
-[P] X -----5---9 150.000
+[V] 25-ga
+[P] X -----5---9 145.000
 
-[CV-URL] https://github.com/openjdk/jdk21u/tags
-[D] c159b1ab44701e0ae37150080b9674c786fc8a0f0528de698e5a7cb9 jdk-21.0.8+2.tar.gz https://github.com/openjdk/jdk21u/archive/
+[CV-FLAGS] NO-MAJOR
+[D] cc4b3203957917972fa1581ca0cc27f5c56847c5c1a23e2602977513 jdk-25-ga.tar.gz https://github.com/openjdk/jdk/archive/refs/tags/
+
+. $base/package/*/*/java-common-conf.in
+
+makeinstopt=
+cleanconfopt=0
+
+hook_add preconf 2 "chmod +x configure"
+
+case $arch_machine in
+	armv*eb)
+		var_append confopt ' ' --with-jvm-variants=zero ;;
+	arm*|aarch*|powerpc64*|riscv64|s390x|i?86|x86_64)
+		# TODO: SDECFG desktop?
+		var_append confopt ' ' --with-jvm-variants=server ;;
+	*)
+		var_append confopt ' ' --with-jvm-variants=zero ;;
+esac
+
+case $arch_machine in
+	i?86*)
+		var_append confopt ' ' --enable-deprecated-ports
+		;;
+	ia64|riscv*|sparc64)
+		CC_WRAPPER_INSERT="${CC_WRAPPER_INSERT/-O1/-Os}"
+		#CXX_WRAPPER_INSERT="${CXX_WRAPPER_INSERT/-O1/-O2}"
+		;;
+esac
+
+if atstage cross; then
+	var_remove_regex confopt " " "--build=.*"
+	var_remove_regex confopt " " "--host=.*"
+	var_append confopt ' ' --build=\$arch_build
+	var_append confopt ' ' --openjdk-target=$arch_target
+
+	# they have their own build and target vars
+	unset AS LD
+	unset HOST_CC HOSTCC HOST_CXX HOSTCXX
+	unset BUILD_CC BUILDCC CC_FOR_BUILD
+	makeopt=
+
+	var_append GCC_WRAPPER_INSERT ' ' "-c?:-L$root`pkgprefix libdir libxcb`"
+else
+	var_remove_regex confopt " " "--build=.*"
+	var_remove_regex confopt " " "--host=.*"
+fi
+
+# Additional configure options
+var_append confopt ' ' --enable-unlimited-crypto
+var_append confopt ' ' --disable-warnings-as-errors
+var_append confopt ' ' --with-stdc++lib=dynamic
+var_append confopt ' ' --disable-precompiled-headers
+
+for lib in giflib lcms libjpeg libpng zlib; do
+	var_append confopt ' ' --with-$lib=system
+done
+
+var_append confopt ' ' "--with-x=$root/$(pkgprefix libx11)"
+var_append confopt ' ' "--with-version-pre= --with-version-opt="
+#var_append confopt ' ' "--with-version-build=${ver##*+}"
+var_append confopt ' ' "--with-fontconfig=$root/$(pkgprefix fontconfig)"
+
+#var_append confopt ' ' --with-toolchain-type=$SDECFG_DEFAULT_CC
+if [ "$SDECFG_DEFAULT_CC" != gcc ]; then
+	var_append GCC_WRAPPER_REMOVE ' ' -fno-var-tracking-assignments
+	var_append GCC_WRAPPER_REMOVE ' ' -fno-lifetime-dse
+fi
+
+# Do confopt cleaning manually, since automatic cleaning is broken
+var_remove confopt ' ' --with-pam
+var_remove confopt ' ' --with-libpam
+var_remove confopt ' ' --enable-pam
+var_remove confopt ' ' --enable-libpam
+
+# Replace -jN with JOBS=N and add images target
+var_remove makeopt ' ' -j$SDECFG_PARALLEL
+var_append makeopt ' ' "JOBS=$SDECFG_PARALLEL images"
+
+# Don't break the build with slightly different bootstrap jdk
+var_append makeopt ' ' JAVA_WARNINGS_ARE_ERRORS=
+
+[ "$SDECFG_POWERPC64_ELF_ABI" = elfv2 ] && var_append GCC_WRAPPER_APPEND ' ' -DABI_ELFv2
+
+hook_add postmake 2 "cp -Rfv build/*/images/jdk/* $root/$prefix/"

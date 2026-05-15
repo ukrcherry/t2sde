@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libxmlb/libxmlb.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,19 +11,16 @@
 [U] https://github.com/hughsie/libxmlb/
 
 [A] Richard Hughes <richard@hughsie.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/library
 [F] CROSS
 
-[E] opt gtk-doc docbook-xml docbook-xsl
-
 [L] LGPL
-[S] Stable
-[V] 0.3.22
-[P] X -----5---9 200.000
+[V] 0.3.26
+[P] X -----5---9 161.645
 
-[O] var_append mesonopt ' ' -Dintrospection=false
-[O] pkginstalled gtk-doc || var_append mesonopt ' ' -Dgtkdoc=false
+[D] edbba886d40449533215b05ceef9709a445d58ef34f4ed07f9661acd libxmlb-0.3.26.tar.gz https://github.com/hughsie/libxmlb/archive/0.3.26/
 
-[D] 74d11d05bb996185366c7b7e24127e81efe3edd0c93bdfb728cac3c7 libxmlb-0.3.22.tar.gz https://github.com/hughsie/libxmlb/archive/0.3.22/
+pkginstalled gobject-introspection || var_append mesonopt ' ' -Dintrospection=false
+pkginstalled gtk-doc docbook-xml docbook-xsl || var_append mesonopt ' ' -Dgtkdoc=false

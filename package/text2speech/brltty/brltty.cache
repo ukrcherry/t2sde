@@ -1,0 +1,45 @@
+
+[TIMESTAMP] 1703961165 Sat Dec 30 19:32:45 2023
+[BUILDTIME] 20 (9)
+[SIZE] 7.71 MB, 1013 files
+
+[DEP] 00-dirtree
+[DEP] alsa-lib
+[DEP] alsa-utils
+[DEP] at-spi2-core
+[DEP] bash
+[DEP] binutils
+[DEP] bluez
+[DEP] coreutils
+[DEP] dbus
+[DEP] diffutils
+[OPT] doxygen
+[DEP] expat
+[DEP] findutils
+[DEP] gawk
+[DEP] gettext
+[DEP] glib
+[DEP] gpm
+[DEP] grep
+[DEP] icu4c
+[DEP] libcap
+[DEP] libice
+[DEP] libsm
+[DEP] libx11
+[DEP] libxaw
+[DEP] libxfixes
+[DEP] libxi
+[DEP] libxmu
+[DEP] libxt
+[DEP] libxtst
+[DEP] linux-header
+[DEP] lua
+[DEP] make
+[DEP] ncurses
+[DEP] sed
+[DEP] tar
+[DEP] tcl
+[DEP] udev
+[DEP] util-linux
+[DEP] xorgproto
+[DEP] xz

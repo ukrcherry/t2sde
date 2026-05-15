@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/moarvm/moarvm.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -19,8 +19,29 @@
 [F] CROSS
 
 [L] Artistic
-[S] Stable
-[V] 2025.04
+[V] 2026.04
 [P] X -----5---9 209.701
 
-[D] d390db5e0abfc0d8c382a17daa2c65d10e934a0a075d08b51c164484 MoarVM-2025.04.tar.gz https://www.moarvm.org/releases/
+[D] 75ff8a64bac991ffae3b5c19bea4fab1299a57ebb2eb265ca725e489 MoarVM-2026.04.tar.gz https://www.moarvm.org/releases/
+
+# Raku toolchain doesn't use autotools, therefore the configure stage has to
+# be modified to support its Configure.pl script
+
+# Note: The libraries specified in confopt are required for building MoarVM; if
+# they are not present, MoarVM will build and statically link them to itself,
+# in some cases alongside installing their headers globally, which is not good.
+#
+# (libsha1 is excluded, because it doesn't have a T2 package.)
+
+confopt="--prefix=$root/$prefix --has-libtommath --has-libuv --has-libatomic_ops --has-dyncall"
+
+# Optional dependencies
+pkginstalled libffi && var_append confopt ' ' --has-libffi
+
+if [ "$arch_build" != "$arch_target" ]
+then
+  var_append confopt ' ' --build=$arch_build
+  var_append confopt ' ' --host=$arch_target
+fi
+
+hook_add preconf 2 "perl Configure.pl $confopt"

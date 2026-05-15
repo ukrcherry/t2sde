@@ -1,9 +1,7 @@
+[TIMESTAMP] 1753709734 Mon Jul 28 16:35:34 2025
+[BUILDTIME] 75 (9)
+[SIZE] 8.67 MB, 6 files
 
-[TIMESTAMP] 1728041970 Fri Oct  4 14:39:30 2024
-[BUILDTIME] 70 (9)
-[SIZE] 5.40 MB, 7 files
-
-[DEP] 00-dirtree
 [DEP] bash
 [DEP] cargo
 [DEP] coreutils
@@ -12,7 +10,6 @@
 [DEP] gawk
 [DEP] grep
 [DEP] gzip
-[DEP] libusb
 [DEP] openssl
 [DEP] rustc
 [DEP] sed

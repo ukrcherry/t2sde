@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libdecor/libdecor.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -17,10 +17,9 @@
 [F] CROSS
 
 [L] MIT
-[S] Beta
-[V] 0.2.2
+[V] 0.2.5
 [P] X -----5---9 202.000
 
-[O] var_append mesonopt ' ' -Ddemo=false
+[D] 56102c04e0a92b9b9ae38a639842ed0996cb0217db20d4022ce37d74 libdecor-0.2.5.tar.gz https://gitlab.freedesktop.org/libdecor/libdecor/-/archive/0.2.5/
 
-[D] 7ed59fbfe06e8ce061266e894d4c579b7eb22fc507d35724dcd2e1f4 libdecor-0.2.2.tar.gz https://gitlab.freedesktop.org/libdecor/libdecor/-/archive/0.2.2/
+var_append mesonopt ' ' -Ddemo=false

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/vdr-pin/vdr-pin.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -17,7 +17,16 @@
 [F] FPIC
 
 [L] GPL
-[S] Beta
-[V] 0.1.13
+[V] 0.1.18
 
-[D] 69216e9a1ddbc650f73f5e6208a84d5bebc1e3647d50c18a57c72f11 vdr-pin-0.1.13.tgz http://www.jwendel.de/vdr/
+[D] 508015bf07b5d177fd921de726b05bd59ce25f453d08270d18306ed1 vdr-pin-0.1.18.tar.gz https://github.com/vdr-projects/vdr-plugin-pin/archive/0.1.18/
+
+. $base/package/vdr/*/vdr-plugin-conf.in
+
+vdr_plugin_pm() {
+	plugin_register "pin"
+
+	cp -p ./scripts/*.sh $root$bindir
+	echo 'FSK Schutz hinzufügen: $root$bindir/fskprotect.sh' >> $root$sysconfdir/reccmds.conf
+}
+hook_add postmake 5 vdr_plugin_pm

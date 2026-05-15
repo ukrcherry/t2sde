@@ -1,0 +1,24 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/mosquitto/mosquitto.desc
+# Copyright (C) 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] A MQTT broker
+
+[T] Mosquitto is an open source implementation of a server for version 5.0,
+[T] 3.1.1, and 3.1 of the MQTT protocol.
+
+[U] https://mosquitto.org/
+
+[A] Eclipse Mosquitto Developers
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/network
+[F] CROSS
+
+[L] OpenSource
+[V] 2.1.2
+[P] X -----5---9 400.000
+
+[D] a944a137a2c104504d9bfaef1677c122ccbdeb4d22cf1bd2d8794c03 mosquitto-2.1.2.tar.gz https://github.com/eclipse-mosquitto/mosquitto/archive/v2.1.2/

@@ -1,25 +1,39 @@
+[TIMESTAMP] 1775584586 Tue Apr  7 19:56:26 2026
+[BUILDTIME] 85 (9)
+[SIZE] 20.60 MB, 220 files
 
-[TIMESTAMP] 1279642116 Tue Jul 20 18:08:36 2010
-[BUILDTIME] 50 (5)
-[SIZE] 7.82 MB, 294 files
-
-[DEP] 00-dirtree
+[DEP] asciidoc
+[OPT] aspell
+[DEP] automake
+[DEP] avahi
+[DEP] bash
 [DEP] binutils
 [DEP] coreutils
+[DEP] cppunit
 [DEP] diffutils
+[DEP] docbook-xml
+[DEP] file
 [DEP] findutils
+[OPT] freeipmi
 [DEP] gawk
+[DEP] glib
 [DEP] grep
-[DEP] libcap
+[DEP] gzip
+[DEP] libmodbus
+[DEP] libtool
+[DEP] libusb
+[OPT] libusb-compat
+[DEP] libxml
+[DEP] libxslt
 [DEP] linux-header
 [DEP] m4
 [DEP] make
+[DEP] neon
 [DEP] openssl
-[DEP] pam
 [DEP] pkgconfig
+[DEP] python
 [DEP] sed
 [DEP] sysfiles
 [DEP] tar
+[DEP] tcp_wrappers
 [DEP] util-linux
-[DEP] xfsprogs
-[DEP] zlib

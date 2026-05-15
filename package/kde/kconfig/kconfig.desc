@@ -1,27 +1,27 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/kconfig/kconfig.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
-[I] KDE Frameworks 5 Tier 1 addon with advanced configuration system
+[I] KDE Frameworks addon with advanced configuration system
 
 [T] KConfig provides an advanced configuration system. It is made of two parts: KConfigCore and KConfigGui.
 
 [U] https://www.kde.org
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR NO-LTO.ia64
 
 [L] GPL
-[S] Stable
-[V] 6.14.0
-[P] X -----5---9 162.790
-
-[O] . $base/package/*/*/kde-conf.in NO_SANITY_CHECK
+[V] 6.26.0
+[P] X ?----5---9 162.790
 
 [CV-GROUP] kde-frameworks
-[D] 0b16c2db3e03f5d9a5a6887c3160538fe99851b7da9838de11276d50 kconfig-6.14.0.tar.xz https://download.kde.org/stable/frameworks/6.14/
+[D] 7aa558eb944bc2012ae97735ee3f076f1b35bc4240eb77c10dd83831 kconfig-6.26.0.tar.xz https://download.kde.org/stable/frameworks/6.26/
+
+. $base/package/*/*/kde-conf.in

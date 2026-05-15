@@ -1,0 +1,23 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/phosh-mobile-settings/phosh-mobile-settings.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] A settings app for mobile specific things
+
+[T] A settings app for mobile specific things that don't fit into GNOME
+[T] Settings (yet).
+
+[U] https://gitlab.gnome.org/World/Phosh/phosh-mobile-settings
+
+[A] Phosh devs
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] GPL3
+[V] 0.54.0
+
+[D] 4304baf3075877e0ab52c3546aa43ecedd67ff048dc894aa681fe891 phosh-mobile-settings-v0.54.0.tar.gz https://gitlab.gnome.org/World/Phosh/phosh-mobile-settings/-/archive/v0.54.0/

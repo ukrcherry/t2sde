@@ -1,0 +1,16 @@
+
+[TIMESTAMP] 1279731128 Wed Jul 21 18:52:08 2010
+[BUILDTIME] 5 (5) ERROR
+[SIZE] 0.01 MB, 6 files
+
+[DEP] 00-dirtree
+[DEP] binutils
+[DEP] coreutils
+[DEP] diffutils
+[DEP] findutils
+[DEP] grep
+[DEP] pillow
+[DEP] python
+[DEP] sed
+[DEP] sysfiles
+[DEP] tar

@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/enjoy/enjoy.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Daemon to map joystick events to mouse/key events
+
+[T] Daemon to map joystick events to mouse/key events.
+
+[U] https://github.com/cjacker/enjoy
+
+[A] Enjoy Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.3
+[L] MIT
+
+[D] b3c396e01ddae9fc79c716bbc644b78c5304b9af54097b1f792242f6 enjoy-0.3.tar.gz https://github.com/cjacker/enjoy/archive/refs/tags/v0.3/

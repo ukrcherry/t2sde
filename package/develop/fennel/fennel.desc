@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/fennel/fennel.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A Lua Lisp Language
+
+[T] Fennel is a programming language that brings together the simplicity,
+[T] speed, and reach of Lua with the flexibility of a lisp syntax and macro
+[T] system.
+
+[U] https://fennel-lang.org
+
+[A] Fennel Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 1.6.1
+[L] MIT
+
+[D] 949a7f814910b22af95a48212131759015c0c7bfc6a01755761ea8ff fennel-1.6.1.tar.gz !https://git.sr.ht/~technomancy/fennel/archive/1.6.1.tar.gz

@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/mods/mods.desc
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] AI on the command line
+
+[T] Mods is a tool to add a sprinkle of AI in your command line and make your
+[T] pipelines artificially intelligent. It can use local AI instances or cloud
+[T] services, when provided with the matching API keys.
+
+[U] https://github.com/charmbracelet/mods
+
+[A] Charmbracelet, Inc
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+
+[L] MIT
+[V] 1.8.1
+
+[D] 5c73ace24b0475c2ca973dda8274dd7c4a3f41c4bdbd2eeac80918d5 mods-1.8.1.tar.gz https://github.com/charmbracelet/mods/archive/refs/tags/v1.8.1/
+
+hook_add postmake 5 "cp -vf mods $root$bindir"

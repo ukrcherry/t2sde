@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/fsspec/fsspec.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,7 +14,7 @@
 [U] https://github.com/fsspec/filesystem_spec
 
 [A] Martin Durant <mdurant@anaconda.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
@@ -22,8 +22,7 @@
 [E] add hatchling
 
 [L] BSD
-[S] Stable
-[V] 2024.12.0
+[V] 2025.12.0
 [P] X -----5---9 110.000
 
-[D] a5d35d0ec0b13e1afec36f50c0161def20959aa87cd8bb5644c5e5cb fsspec-2024.12.0.tar.gz https://files.pythonhosted.org/packages/ee/11/de70dee31455c546fbc88301971ec03c328f3d1138cfba14263f651e9551/
+[D] ce7a4e7526ce7410f3f69fd5cc025be0212fb7f0b522d6ca8e83c004 fsspec-2025.12.0.tar.gz https://files.pythonhosted.org/packages/source/f/fsspec/

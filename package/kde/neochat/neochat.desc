@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/neochat/neochat.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,17 +11,17 @@
 [U] https://apps.kde.org/neochat/
 
 [A] The KDE-Team
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
+
 [E] opt kdoctools
 
 [L] GPL
-[S] Stable
-[V] 25.04.1
-[P] X -----5---9 210.000
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 26.04.1
 
 [CV-GROUP] kde-gear
-[D] 61c11b9cef3992bea121a377ced63a82b017d97d9d32e623cc5df119 neochat-25.04.1.tar.xz https://download.kde.org/stable/release-service/25.04.1/src/
+[D] a669707f89ba3468e0d9e973479b90a3b0d16c7c10d3413b63dfc976 neochat-26.04.1.tar.xz https://download.kde.org/stable/release-service/26.04.1/src/
+
+. $base/package/*/*/kde-conf.in

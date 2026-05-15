@@ -1,25 +1,23 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/tea/tea.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
 [I] Powerful but extremely small text editor for GTK+2
 
-[T] TEA is the powerful text editor for GNU/Linux and *BSD. It depends
-[T] on GTK+2 only (and GNU Aspell optionally). With an ultimate small
-[T] size TEA provides you hundreds of functions. Want some tea?
+[T] TEA is the powerful text editor for GNU/Linux and *BSD. With an ultimate
+[T] small size TEA provides you hundreds of functions. Want some tea?
 
-[U] https://tea-editor.sourceforge.net/
+[U] https://tea.ourproject.org/
 
 [A] Peter 'Roxton' Semiletov <roxton@ua.fm>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/editor
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 17.6.6
+[V] 63.3.1
 
-[D] c22ffb1a58a1dc6118ab28a8de64bbfe0a03de9a1ff017d43f3253ff teagtk-17.6.6.tar.bz2 http://dl.sourceforge.net/sourceforge/tea-editor/
+[D] 1ee9e42226fc8822caece79e1e6e44b0cd99355a3ee82873da4f5545 tea-63.3.1.tar.gz https://github.com/psemiletov/tea-qt/archive/63.3.1/

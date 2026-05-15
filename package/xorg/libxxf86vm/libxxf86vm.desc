@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libxxf86vm/libxxf86vm.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,16 +13,15 @@
 [U] https://www.X.org
 
 [A] X.org Foundation {http://www.X.org}
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/x11
 [F] CROSS
 
 [L] OpenSource
-[S] Stable
-[V] 1.1.6
-[P] X -----5---9 112.441
+[V] 1.1.7
+[P] X ?----5---9 112.441
 
-[O] . package/*/*/modular-x-conf.in
+[D] efc6747ca2d2db53e9ed6fc2e1e0a29d62262d5d7109ff3d68f7efd9 libXxf86vm-1.1.7.tar.xz http://xorg.freedesktop.org/releases/individual/lib/
 
-[D] 2e0d1d2fed73252ac3f9e4c715d368cd6a90d0a25127167b983c3fe8 libXxf86vm-1.1.6.tar.xz http://xorg.freedesktop.org/releases/individual/lib/
+. package/*/*/modular-x-conf.in

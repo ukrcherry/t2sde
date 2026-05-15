@@ -1,0 +1,47 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/cinelerra-gg/cinelerra-gg.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Movie studio for a Linux Box
+
+[T] Cinelerra does primarily 3 main things: capturing, compositing, and editing
+[T] audio and video with sample level accuracy. It's a seemless integration of
+[T] audio, video, and still photos rarely experienced on a web server.
+[T] If you want to make movies, you just want to defy the establishment, you
+[T] want the same kind of compositing and editing suite that the big boys use,
+[T] on the world's most efficient UNIX operating system, it's time for Cinelerra.
+
+[U] http://heroinewarrior.com/cinelerra.php3
+
+[A] Cinerella GG Fork
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/multimedia
+
+[E] opt gtk+2 lv2
+[E] opt libvpx
+[E] opt x265 x264
+[E] opt libplacebo dav1d
+[E] opt zimg
+[E] opt jbigkit
+
+[L] GPL
+[V] 5.1.20260202
+
+[D] 0850b9a6e29faae24a6cede8e68071b0047b8c6bf97a70a04529b474 cin_5.1.20260202-src.tgz https://download.cinelerra-gg.org/download.php?file=src/
+
+autogen=1
+export CONFIG_SHELL=/bin/bash
+
+var_append confopt ' ' --without-thirdparty
+var_append confopt ' ' --without-cuda
+var_append confopt ' ' --without-libdpx
+var_append confopt ' ' --without-libplacebo
+
+pkginstalled esound && var_append confopt ' ' --with-esound
+var_append confopt ' ' --with-onevpl
+pkginstalled lv2 gtk+2 && var_append confopt ' ' --with-lv2 || var_append confopt ' ' --without-lv2
+
+var_append GCC_WRAPPER_INSERT ' ' "-c?:-L$root$(pkgprefix libdir libx11)"

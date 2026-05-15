@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xz/xz.desc
-[COPY] Copyright (C) 2010 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2010 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -27,12 +27,11 @@
 [R] - microblaze
 
 [L] OpenSource
-[S] Beta
-[V] 5.8.1
+[V] 5.8.3
 [P] X 0-2--5---9 108.600
 
-[O] var_append confopt ' ' ' --disable-lzmadec --disable-lzmainfo --disable-lzma-links'
-[O] var_append GCC_WRAPPER_APPEND ' ' -std=gnu99
-[O] var_append SYSGCC_WRAPPER_APPEND ' ' -std=gnu99
+[D] b8427696e607ea0e6d20d49cf0f650a9c6cd3a2fff38d7548ccaf22f xz-5.8.3.tar.gz https://tukaani.org/xz/
 
-[D] a5ed5422134a14bd9dea1d2c05d31bb7650e5ca27ded2fc7848710f0 xz-5.8.1.tar.gz http://tukaani.org/xz/
+var_append confopt ' ' ' --disable-lzmadec --disable-lzmainfo --disable-lzma-links'
+var_append GCC_WRAPPER_APPEND ' ' -std=gnu99
+var_append SYSGCC_WRAPPER_APPEND ' ' -std=gnu99

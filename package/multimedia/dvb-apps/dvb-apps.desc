@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/dvb-apps/dvb-apps.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -12,13 +12,12 @@
 [U] https://www.linuxtv.org/
 
 [A] Johannes Stezenbach <js@convergence.de>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] CROSS
 
 [L] GPL
-[S] Stable
 [V] be76da69f250
 
 [D] 32d635d05c5edff234833b5a4c0652d7bbe9a2db0a0e7fa407bf8012 linuxtv-dvb-apps-be76da69f250.tar.bz2 !http://linuxtv.org/hg/dvb-apps/archive/be76da69f250.tar.bz2

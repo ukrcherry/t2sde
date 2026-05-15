@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libxfce4windowing/libxfce4windowing.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,17 +13,16 @@
 [U] https://docs.xfce.org/xfce/libxfce4windowing/start
 
 [A] Xfce4 Authors
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/desktop/xfce
 [F] CROSS NO-LTO.clang
 
 [L] LGPL
-[S] Stable
-[V] 4.20.2
+[V] 4.20.5
 [P] X -----5---9 222.355
 
-[O] . $base/package/xfce4/*/xfce4-conf.in
-[O] runmeson=0
+[D] 233181fe364a8bdecfcf25ace45994d10d8defd6e5560127a20887f2 libxfce4windowing-4.20.5.tar.bz2 https://archive.xfce.org/src/xfce/libxfce4windowing/4.20/
 
-[D] c6c8525ba996f76933558c1d40b9e422e792c0286d271bbf8d091d7f libxfce4windowing-4.20.2.tar.bz2 https://archive.xfce.org/src/xfce/libxfce4windowing/4.20/
+. $base/package/xfce4/*/xfce4-conf.in
+runmeson=0

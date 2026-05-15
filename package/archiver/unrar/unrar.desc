@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/unrar/unrar.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -17,17 +17,16 @@
 [U] https://www.rarlab.com
 
 [A] Eugene Roshal <roshal@rarlab.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/tool
 [F] CROSS
 
 [L] Free-to-use
-[S] Stable
-[V] 7.1.6
+[V] 7.2.6
 [P] X -----5---9 162.000
 
-[O] var_append makeinstopt ' ' DESTDIR=$root/$prefix
+[CV-URL] https://www.rarlab.com/rar_add.htm
+[D] f62cf62a4ae4770bfaff3dc0471b9d2bf19bc64f1823f80654cf4299 unrarsrc-7.2.6.tar.gz https://www.rarlab.com/rar/
 
-[CV-URL] http://www.rarlab.com/rar_add.htm
-[D] b9a50e4d7d85d073b5ca49fd33c3aedd1cd1b87c56c47a8adb87edac unrarsrc-7.1.6.tar.gz http://www.rarlab.com/rar/
+var_append makeinstopt ' ' DESTDIR=$root/$prefix

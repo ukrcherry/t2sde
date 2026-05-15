@@ -1,6 +1,6 @@
-[TIMESTAMP] 1739219687 Mon Feb 10 21:34:47 2025
-[BUILDTIME] 60 (5)
-[SIZE] 1.04 MB, 111 files
+[TIMESTAMP] 1770547598 Sun Feb  8 11:46:38 2026
+[BUILDTIME] 180 (9)
+[SIZE] 2.59 MB, 119 files
 
 [DEP] bash
 [DEP] binutils
@@ -17,9 +17,13 @@
 [DEP] kcrash
 [DEP] kdbusaddons
 [DEP] ki18n
+[DEP] kio
+[DEP] kjobwidgets
 [DEP] knotifications
-[DEP] kpackage
+[DEP] kservice
 [DEP] kstatusnotifieritem
+[DEP] ksvg
+[DEP] libglvnd
 [DEP] libplasma
 [DEP] linux-header
 [DEP] make
@@ -28,9 +32,11 @@
 [DEP] qt6base
 [DEP] qt6declarative
 [DEP] qt6multimedia
-[DEP] qt6translations
 [DEP] sed
 [DEP] tar
-[DEP] tbb
+[DEP] util-linux
 [DEP] vulkan-headers
+[DEP] wayland
+[DEP] wayland-protocols
+[DEP] xkbcommon
 [DEP] xz

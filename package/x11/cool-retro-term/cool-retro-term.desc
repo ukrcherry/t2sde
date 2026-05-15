@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/cool-retro-term/cool-retro-term.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,7 +11,7 @@
 [T] customizable, and reasonably lightweight.
 
 [A] Filippo Scognamiglio <flscogna@gmail.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [U] https://github.com/Swordfish90/cool-retro-term/
 
@@ -19,12 +19,11 @@
 [F] CROSS
 
 [L] GPL
-[S] Stable
 [V] 1.2.0
-
-# this probably only works with GNU/tar
-[O] hook_add prepatch 5 'tar -C qmltermwidget --strip-components=1 $taropt `match_source_file -p qml`'
-[O] hook_add preconf 5 'qmake'
 
 [D] 940d751ad93d16a03c8421b75cb542928cb2b75344e3b03ee56d2b2b cool-retro-term-1.2.0.tar.gz https://github.com/Swordfish90/cool-retro-term/archive/1.2.0/
 [D] 2be661a89b84434339885761ba22a9716a0c7836b0c3beac03bf0e5b qmltermwidget-0.2.0.tar.gz https://github.com/Swordfish90/qmltermwidget/archive/0.2.0/
+
+# this probably only works with GNU/tar
+hook_add prepatch 5 'tar -C qmltermwidget --strip-components=1 $taropt `match_source_file -p qml`'
+hook_add preconf 5 qmake

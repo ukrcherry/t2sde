@@ -1,10 +1,10 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/cosmic-bg/cosmic-bg.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
-[I] Service which applies backgrounds to displays
+[I] Background for the COSMIC desktop environment.
 
 [T] COSMIC session service which applies backgrounds to displays.
 
@@ -17,10 +17,9 @@
 [F] CROSS
 
 [L] MPL
-[S] Alpha
-[V] epoch-1.0.0-alpha.7
-
-[O] . $base/package/cosmic/*/cosmic-conf.in
+[V] 1.0.13
 
 [CV-GROUP] cosmic-desktop
-[D] c7e7c36bbf44a78dfffb1b677af8b55d6e08bba95441c697ee95966b cosmic-bg-epoch-1.0.0-alpha.7.tar.gz https://github.com/pop-os/cosmic-bg/archive/epoch-1.0.0-alpha.7/
+[D] 373fd660d33339dcdec92714173cd85157b9f5ff286e51ff74e8c53e cosmic-bg-epoch-1.0.13.tar.gz https://github.com/pop-os/cosmic-bg/archive/epoch-1.0.13/
+
+. $base/package/cosmic/*/cosmic-conf.in

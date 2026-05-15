@@ -1,14 +1,15 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/freerdp/freerdp.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
 [I] A Remote Desktop Protocol library and clients
 
 [T] FreeRDP is a free implementation of the Remote Desktop Protocol (RDP),
-[T] released under the Apache license. Enjoy the freedom of using your
-[T] software wherever you want, the way you want it, in a world where interoperability can finally liberate your computing experience.
+[T] released under the Apache license. Enjoy the freedom of using your software
+[T] wherever you want, the way you want it, in a world where interoperability
+[T] can finally liberate your computing experience.
 
 [A] Jente Hidskes <hjdskes@gmail.com>
 [M] NoTag <notag@t2sde.org>
@@ -17,15 +18,27 @@
 [F] CROSS OBJDIR
 
 [E] opt fuse
-[E] opt libsdl2
-[E] opt libsdl3
+[E] opt libsdl2 libsdl2_ttf
+[E] opt libsdl3 libsdl3_ttf
+[E] opt systemd
 
 [L] APL
-[S] Stable
-[V] 3.15.0
-[P] X -----5---9 194.000
+[V] 3.26.0
+[P] X -----5---9 200.901
 
-[O] pkginstalled krb5 || var_append cmakeopt ' ' -DWITH_KRB5=OFF
-[O] atstage cross && hook_add postmake 5 "rm -rfv $HOME/.cmake/packages"
+[D] cccf56886a8eb3d367f88251d54d9ff308d1ead123e963527bdc11fb freerdp-3.26.0.tar.gz https://github.com/FreeRDP/FreeRDP/archive/3.26.0/
 
-[D] d246fea7151c3a90976cfc8cce224968142ff317dffeee3eb1da7e59 freerdp-3.15.0.tar.gz https://github.com/FreeRDP/FreeRDP/archive/3.15.0/
+var_append cmakeopt ' ' -DWITH_CCACHE=OFF
+pkginstalled krb5 || var_append cmakeopt ' ' -DWITH_KRB5=OFF
+pkginstalled fuse || var_append cmakeopt ' ' -DWITH_FUSE=OFF
+pkginstalled libsdl2 libsdl2_ttf || var_append cmakeopt ' ' -DWITH_CLIENT_SDL2=OFF
+pkginstalled libsdl3 libsdl3_ttf || var_append cmakeopt ' ' -DWITH_CLIENT_SDL3=OFF
+
+[ $arch = ia64 -o $arch = x86 ] && var_append cmakeopt ' ' -DWITH_SIMD=OFF
+
+atstage cross &&
+	var_append cmakeopt ' ' -DWITH_MANPAGES=OFF &&
+	var_append cmakeopt ' ' -DWAYLAND_SCANNER=$root/TOOLCHAIN/cross/bin/wayland-scanner &&
+	var_append GCC_WRAPPER_FILTER '|' "sed 's,/.*TOOLCHAIN/.*lib.*/lib\(.*\).so.*,-l\1,'" &&
+	var_append GCC_WRAPPER_APPEND ' ' "-L$root/$(pkgprefix libdir libxcb)" &&
+	hook_add postmake 5 "rm -rfv $HOME/.cmake/packages"

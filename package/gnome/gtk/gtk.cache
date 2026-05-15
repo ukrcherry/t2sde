@@ -1,6 +1,6 @@
-[TIMESTAMP] 1745785727 Sun Apr 27 23:28:47 2025
-[BUILDTIME] 240 (9)
-[SIZE] 62.73 MB, 633 files
+[TIMESTAMP] 1772837014 Fri Mar  6 23:43:34 2026
+[BUILDTIME] 250 (9)
+[SIZE] 90.95 MB, 695 files
 
 [DEP] bash
 [DEP] binutils
@@ -10,6 +10,7 @@
 [OPT] cups
 [DEP] diffutils
 [DEP] epoxy
+[DEP] findutils
 [DEP] fontconfig
 [DEP] freetype
 [DEP] fribidi
@@ -20,18 +21,18 @@
 [OPT] gobject-introspection
 [DEP] graphene
 [DEP] grep
-[DEP] gsettings-desktop-schemas
 [OPT] gst-plugins-bad
 [OPT] gst-plugins-base
 [OPT] gstreamer
+[OPT] gstreamer-vaapi
 [DEP] harfbuzz
 [DEP] libdrm
 [DEP] libglvnd
 [DEP] libjpeg
 [DEP] libpng
-[OPT] librsvg
 [DEP] libtiff
 [DEP] libx11
+[DEP] libxcb
 [DEP] libxcursor
 [DEP] libxdamage
 [DEP] libxext
@@ -46,14 +47,14 @@
 [DEP] ninja
 [DEP] openssl
 [DEP] pango
-[DEP] pkgconfig
 [DEP] python
 [DEP] sed
 [DEP] setuptools
 [DEP] shaderc
+[DEP] shared-mime-info
 [DEP] tar
-[DEP] tbb
-[DEP] vulkan-headers
+[DEP] util-linux
+[OPT] vulkan-headers
 [DEP] wayland
 [DEP] wayland-protocols
 [DEP] xkbcommon

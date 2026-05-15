@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/budgie-control-center/budgie-control-center.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,12 +11,11 @@
 [U] https://buddiesofbudgie.org/
 
 [A] Budgie Desktop Developers
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/desktop/gnome
 
 [L] GPL
-[S] Stable
-[V] 1.4.0
+[V] 2.1.1
 
-[D] 7439d64b712a2f7e3fc86492d8e7b11e9bb1c7f156db4d9359153ef4 budgie-control-center-1.4.0.tar.gz git+https://github.com/BuddiesOfBudgie/budgie-control-center.git v1.4.0
+[D] a818ed3495cd5bb61fb2e62c9fbb065f8e7bffad2cbef2977bb0cf36 budgie-control-center-2.1.1.tar.gz git+https://github.com/BuddiesOfBudgie/budgie-control-center.git v2.1.1

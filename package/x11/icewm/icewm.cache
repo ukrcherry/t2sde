@@ -1,10 +1,11 @@
-[TIMESTAMP] 1745878887 Tue Apr 29 01:21:27 2025
-[BUILDTIME] 20 (9)
-[SIZE] 6.03 MB, 675 files
+[TIMESTAMP] 1760897081 Sun Oct 19 20:04:41 2025
+[BUILDTIME] 35 (9)
+[SIZE] 6.15 MB, 676 files
 
 [OPT] alsa-lib
 [DEP] bash
 [DEP] binutils
+[DEP] cairo
 [DEP] cmake
 [DEP] coreutils
 [DEP] diffutils
@@ -12,32 +13,35 @@
 [DEP] freetype
 [DEP] fribidi
 [DEP] gawk
+[DEP] gdk-pixbuf
 [DEP] gettext
-[DEP] git
+[DEP] glib
 [DEP] grep
 [DEP] gzip
-[OPT] imlib2
+[DEP] imlib2
 [OPT] libao
 [DEP] libice
-[DEP] libjpeg
+[OPT] libjpeg
 [OPT] libpng
 [OPT] librsvg
 [DEP] libsm
 [OPT] libsndfile
 [DEP] libx11
 [DEP] libxcomposite
+[DEP] libxcursor
 [DEP] libxdamage
 [DEP] libxext
 [DEP] libxfixes
 [DEP] libxft
 [DEP] libxinerama
-[DEP] libxpm
 [DEP] libxrandr
 [DEP] libxrender
 [DEP] libxres
 [DEP] linux-header
 [DEP] make
+[DEP] markdown
 [DEP] perl
+[DEP] perl-html-parser
 [DEP] pkgconfig
 [DEP] sed
 [DEP] tar

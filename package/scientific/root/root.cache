@@ -1,7 +1,8 @@
-[TIMESTAMP] 1737730121 Fri Jan 24 15:48:41 2025
-[BUILDTIME] 5100 (9)
-[SIZE] 588.99 MB, 7531 files
+[TIMESTAMP] 1773398227 Fri Mar 13 11:37:07 2026
+[BUILDTIME] 6350 (9)
+[SIZE] 679.78 MB, 8151 files
 
+[DEP] automake
 [DEP] bash
 [DEP] binutils
 [DEP] cmake
@@ -9,16 +10,22 @@
 [DEP] curl
 [DEP] diffutils
 [DEP] e2fsprogs
+[DEP] findutils
 [DEP] fontconfig
 [DEP] freetype
+[OPT] ftgl
 [DEP] gawk
 [DEP] gettext
 [DEP] git
+[OPT] glew
+[OPT] glu
 [DEP] grep
 [DEP] groff
+[DEP] gsl
 [DEP] gzip
 [DEP] libedit
 [DEP] libgif
+[OPT] libglvnd
 [DEP] libidn2
 [DEP] libjpeg
 [DEP] libpng
@@ -33,13 +40,12 @@
 [DEP] linux-header
 [DEP] lz4
 [DEP] make
-[DEP] mariadb
+[DEP] nlohmann-json
 [DEP] openssl
 [DEP] pcre2
 [DEP] perl
 [DEP] pkgconfig
 [DEP] python
-[DEP] rapidjson
 [DEP] readline
 [DEP] sed
 [DEP] sqlite

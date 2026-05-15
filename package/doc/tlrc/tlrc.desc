@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/tlrc/tlrc.desc
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Collaborative cheatsheets for console commands
+
+[T] The tldr-pages project is a collection of community-maintained help pages
+[T] for command-line tools, that aims to be a simpler, more approachable
+[T] complement to traditional man pages.
+
+[U] https://tldr.sh/
+
+[A] tldr Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/documentation
+
+[L] MIT
+[V] 1.13.0
+
+[D] 31e387aa87d14e8d8ca3a59195c39d6ad121272ee310f0fe8619698e tlrc-v1.13.0.tar.gz https://github.com/tldr-pages/tlrc/archive/refs/tags/v1.13.0/
+
+hook_add postmake 5 "cp tldr.1 $root$mandir/man1/"

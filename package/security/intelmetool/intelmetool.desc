@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/intelmetool/intelmetool.desc
-[COPY] Copyright (C) 2010 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2010 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -9,15 +9,14 @@
 [T] A tool for working with Intel Management Engine.
 
 [A] Damien Zammit <damien@zamaudio.com>
-[M] T2-Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 [F] CROSS
 
 [L] GPL
-[S] Alpha
-[V] 25.03
+[V] 26.03
 
-[O] srcdir="*/util/intelmetool"
+[D] 2fb51653633e2d4ec8fede9774b2886a3c7ccfdbf20cbfa631257685 coreboot-26.03.tar.xz https://coreboot.org/releases/
 
-[D] 0e15180322fee07fce17a776ae0dd4ce3c47bd6b699f9a2106088f24 coreboot-25.03.tar.xz https://coreboot.org/releases/
+srcdir="*/util/intelmetool"

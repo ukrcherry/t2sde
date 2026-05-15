@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/haskell-shake/haskell-shake.desc
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Build system library, like Make, but more accurate dependencies
+
+[T] Shake is a Haskell library for writing build systems - designed as a
+[T] replacement for make.
+
+[U] https://shakebuild.com/
+
+[A] Neil Mitchell <ndmitchell@gmail.com>
+[M] Riley Beckett <rbeckettvt@gmail.com>
+
+[C] extra/tool
+[F] CROSS
+
+[L] BSD
+[V] 0.19.9
+
+[D] 37af9beca353b5eddb064e7ecb2bd1141b1fd1c3b073250d3f6a1244 haskell-shake-0.19.9.tar.gz !https://hackage.haskell.org/package/shake-0.19.9/shake-0.19.9.tar.gz
+
+. $base/package/*/*/haskell-conf.in

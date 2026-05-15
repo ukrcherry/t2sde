@@ -1,0 +1,28 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/libpaper/libpaper.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Library and command-line tools for configuring and getting information on paper sizes
+
+[T] The libpaper package enables users to indicate their preferred paper size,
+[T] provides the paper utility to find the user's preferred default paper size
+[T] and give information about known sizes, and specifies system-wide and
+[T] per-user paper size catalogues.
+
+[U] https://github.com/rrthomas/libpaper
+
+[A] Reuben Thomas <rrt@sc3d.org>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/graphic
+[F] CROSS
+
+[L] LGPL
+[V] 2.2.7
+[P] X -----5---9 400.000
+
+[D] 2f5070b3199f3892783e0d8ef1de23ff418aba27e075599ee227ad1e libpaper-2.2.7.tar.gz https://github.com/rrthomas/libpaper/archive/v2.2.7/
+
+hook_add preconf 5 ./bootstrap

@@ -1,0 +1,25 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/detect-it-easy/detect-it-easy.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] A powerful tool for file type identification
+
+[T] Supporting both signature-based and heuristic analysis, DiE enables
+[T] efficient file inspections accross a broad range of platforms, including
+[T] Windows, Linux and MacOS. It's adaptable, script-driven detection
+[T] architecture makes it one of the most versatile tools in the field.
+
+[U] https://github.com/horsicq/Detect-It-Easy/
+
+[A] horsicq <horsicq@gmail.com>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/security
+[F] CROSS
+
+[L] MIT
+[V] 3.21
+
+[D] 864196a12c196ad2fb312628d577c84bf4cb3860defddf4c49e416c4 die_sourcecode_3.21.tar.gz https://github.com/horsicq/DIE-Engine/releases/download/3.21/

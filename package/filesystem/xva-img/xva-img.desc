@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/xva-img/xva-img.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Tool for converting XVA images
+
+[T] Tool for converting XVA images.
+
+[U] https://github.com/eriklax/xva-img
+
+[A] Xva-img Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.5
+[L] GPL
+
+[D] fa1a78d2196dd9abef1dbb94e5399863733a83e9810b54dc1d9942f4 xva-img-1.5.tar.gz https://github.com/eriklax/xva-img/archive/1.5/

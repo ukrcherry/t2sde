@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/pcsc-lite/pcsc-lite.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -13,19 +13,18 @@
 [T] cryptographic tokens. Tested under Redhat, Suse, Solaris 2.8, Open
 [T] BSD, OS X v10.1, and HPUX.
 
-[U] http://pcsclite.alioth.debian.org/
+[U] https://pcsclite.apdu.fr
 
 [A] David Corcoran <corcoran@linuxnet.com>
-[M] Marian Aldenhoevel <Marian.Aldenhoevel@mba-software.de>
+[M] Marian Aldenhövel <marian.aldenhoevel@mba-software.de>
 
 [C] extra/crypto
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 2.3.3
+[V] 2.4.1
 [P] X -----5---9 118.000
 
-[O] pkginstalled systemd || var_append mesonopt ' ' -Dlibsystemd=false
+[D] 5fb583807800915885d0215ff67434350bf385b623c6ee3436e1a07f pcsc-lite-2.4.1.tar.xz https://pcsclite.apdu.fr/files/
 
-[D] ac811244dbda6818b46edd83bf273dba015e5b9126dcbf7c4d4f1cec pcsc-lite-2.3.3.tar.xz https://pcsclite.apdu.fr/files/
+pkginstalled systemd || var_append mesonopt ' ' -Dlibsystemd=false

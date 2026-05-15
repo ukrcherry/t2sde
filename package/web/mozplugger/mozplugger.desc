@@ -1,0 +1,27 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/mozplugger/mozplugger.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Streaming Multimedia Plugin for Unix Mozilla
+
+[T] Plugger is a multimedia plugin for Unix Mozilla, Opera or Netscape that
+[T] handles Quicktime, MPEG, MP2, AVI, SGI-movie, Tiff, DL, IFF-anim, MIDI,
+[T] Soundtracker, AU, WAV, Commodore 64 audio files, PEG audio and video
+[T] can be played streaming. No more waiting!
+[T] Plugger is a very small plugin, because Plugger uses external programs to
+[T] show/play the different formats.
+
+[U] https://github.com/unix-junkie/mozplugger/
+
+[A] Fredrik Hübinette
+[A] Louis Bavoil
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/office
+
+[L] GPL
+[V] 2.1.6
+
+[D] 983fadc7a8949026a963ed1907f90a8610a4cc7396f864395450133f mozplugger-2.1.6.tar.gz https://github.com/unix-junkie/mozplugger/archive/refs/tags/v2.1.6/

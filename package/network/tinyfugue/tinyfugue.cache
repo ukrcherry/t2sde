@@ -1,0 +1,21 @@
+[TIMESTAMP] 1754760479 Sat Aug  9 19:27:59 2025
+[BUILDTIME] 5 (5)
+[SIZE] 1.10 MB, 64 files
+
+[DEP] 00-dirtree
+[DEP] bash
+[DEP] binutils
+[DEP] coreutils
+[DEP] diffutils
+[DEP] findutils
+[DEP] gawk
+[DEP] grep
+[DEP] gzip
+[DEP] icu4c
+[DEP] linux-header
+[DEP] make
+[DEP] openssl
+[DEP] pcre2
+[DEP] sed
+[DEP] tar
+[DEP] zlib

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/exiv2/exiv2.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -18,12 +18,12 @@
 [M] Gerhard Weis <gweis@gmx.at>
 
 [C] extra/multimedia
-[F] CROSS
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 0.27.7
+[V] 0.28.8
 [P] X -----5---9 118.500
 
-[CV-FLAGS] NO-MAJOR
-[D] 5f8b9527dda2ddc67ed3c379a21ee93ff1a2aee6decc988e6dc7ea7a exiv2-0.27.7.tar.gz https://github.com/Exiv2/exiv2/archive/v0.27.7/
+[D] 2818e4d1b7e247484ec5aa631fc0d27ac0fc1569f12282b9a0918247 exiv2-0.28.8.tar.gz https://github.com/Exiv2/exiv2/archive/v0.28.8/
+
+runmeson=0

@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/bootterm/bootterm.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Simple, reliable and powerful terminal
+
+[T] Simple, reliable and powerful terminal designed to ease connection to
+[T] ephemeral serial ports.
+
+[U] https://github.com/wtarreau/bootterm
+
+[A] Bootterm Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 0.5
+[L] MIT
+
+[D] 7ea0009cc921e048905a6b97a5c259b8e7dd0298963e92a6f74476e1 bootterm-0.5.tar.gz https://github.com/wtarreau/bootterm/archive/v0.5/

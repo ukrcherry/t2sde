@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/lxqt-policykit/lxqt-policykit.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,14 +11,13 @@
 [U] https://github.com/lxqt/lxqt-policykit
 
 [A] Lxqt-policykit Authors
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/base
 [F] OBJDIR
 
-[V] 2.2.0
+[V] 2.4.0
 [L] LGPL
-[S] Stable
 
 [CV-GROUP] lxqt
-[D] 10df3c860e64fa0605cc4c86d1944442c2b5ad98789a6e80b45b8ff3 lxqt-policykit-2.2.0.tar.xz https://github.com/lxqt/lxqt-policykit/releases/download/2.2.0/
+[D] c4f17d7c03fc492135a5dc1d796956dba7a417a21563af61eb88c6a1 lxqt-policykit-2.4.0.tar.xz https://github.com/lxqt/lxqt-policykit/releases/download/2.4.0/

@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/nzbget/nzbget.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Usenet downloader
+
+[T] Usenet downloader.
+
+[U] https://nzbget.net
+
+[A] Nzbget Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 26.1
+[L] GPL
+
+[D] 8fccae9092fd32225c226db843c9bde88b9931da13980ebb423137af nzbget-26.1.tar.gz https://github.com/nzbgetcom/nzbget/archive/refs/tags/v26.1/

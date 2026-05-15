@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/avdl/avdl.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Abstract video-game development language compiler
+
+[T] Abstract video-game development language compiler.
+
+[U] https://afloof.dev/avdl/
+
+[A] Avdl Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.22.9
+[L] GPL3
+
+[D] fd24fa18a2a34f9ed7306e0ff2e2b69217362eb16b5ab1b81db2d156 avdl-0.22.9.tar.gz https://github.com/tomtsagk/avdl/archive/refs/tags/v0.22.9/

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/avant-window-navigator/avant-window-navigator.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,16 +11,14 @@
 [T] be used to keep track of open windows and behaves like a normal window
 [T] list.
 
-[U] https://awn-project.org/
-[U] http://wiki.awn-project.org/
+[U] https://launchpad.net/awn/
 
 [A] Neil Jagdish Patel <njpatel@gmail.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/x11
 
 [L] GPL
-[S] Stable
 [V] 0.4.2
 
-[D] 1842290440fc18a75bc55cd97d5fa144886450a6ca2642a8ee8e5ff8 avant-window-navigator-0.4.2.tar.gz http://launchpad.net/awn/0.4/0.4.2/+download/
+[D] 1842290440fc18a75bc55cd97d5fa144886450a6ca2642a8ee8e5ff8 avant-window-navigator-0.4.2.tar.gz https://launchpad.net/awn/0.4/0.4.2/+download/

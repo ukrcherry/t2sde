@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/w32codec/w32codec.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -12,16 +12,30 @@
 [T] Video formats.
 
 [A] Various Vendors
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [U] http://www.mplayerhq.hu/design7/codecs.html
 
 [C] extra/multimedia
 
 [L] Commercial
-[S] Alpha
 [V] 20071007
 
 [R] + x86 x86-64
 
 [D] a1b2b5cd758e0f775cb26da607fd218a86afc925078cd61190dd5026 essential-20071007.tar.bz2 http://www1.mplayerhq.hu/MPlayer/releases/codecs/
+
+runmake=0
+
+w32codec_install() {
+	echo "Creating folder..."
+	mkdir -p $libdir/win32/
+
+	echo "Moving documentation..."
+	mv -v README $docdir/
+
+	echo "and finally moving codecs..."
+	mv -v * $libdir/win32/
+}
+hook_add premake  5 'chown 0:0 *'
+hook_add postmake 5 w32codec_install

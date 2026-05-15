@@ -1,10 +1,12 @@
-[TIMESTAMP] 1739110519 Sun Feb  9 15:15:19 2025
-[BUILDTIME] 1700 (9)
-[SIZE] 662.16 MB, 124 files
+[TIMESTAMP] 1774556435 Thu Mar 26 21:20:35 2026
+[BUILDTIME] 3250 (9)
+[SIZE] 756.19 MB, 203 files
 
 [DEP] bash
+[DEP] binutils
 [DEP] cargo
 [DEP] coreutils
+[DEP] curl
 [DEP] diffutils
 [DEP] findutils
 [DEP] gawk
@@ -14,6 +16,7 @@
 [DEP] openssl
 [DEP] python
 [DEP] sed
+[DEP] sysfiles
 [DEP] tar
-[DEP] tbb
+[DEP] util-linux
 [DEP] xz

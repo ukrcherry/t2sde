@@ -1,0 +1,31 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/pyside6/pyside6.desc
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Qt for Python
+
+[T] Qt For Python is the Python Qt bindings project, providing access to the
+[T] complete Qt framework as well as to generator tools for rapidly generating
+[T] bindings for any C++ libraries.
+
+[U] https://github.com/pyside/pyside-setup
+
+[A] PySide Developers
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/development
+
+[E] opt qt63d qt6charts qt6connectivity qt6datavis3d qt6graphs qt6shadertools
+[E] opt qt6httpserver qt6location qt6multimedia qt6networkauth qt6webview
+[E] opt qt6positioning qt6quick3d qt6remoteobjects qt6scxml qt6sensors
+[E] opt qt6speech qt6svg qt6tools qt6webchannel qt6webengine qt6websockets
+
+[L] MIT
+[V] 6.11.1
+
+[CV-GROUP] pyside
+[D] 393b0a8dc3e2929bea212f3c92ca7ea7f7a147b367d447ada3b715e8 pyside-6.11.1.tar.gz https://github.com/pyside/pyside-setup/archive/v6.11.1/
+
+srcdir=pyside*/sources/pyside6

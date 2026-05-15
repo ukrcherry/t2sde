@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libproxy/libproxy.desc
-[COPY] Copyright (C) 2009 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2009 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,20 +13,20 @@
 [A] Nathaniel McCallum <nathaniel@natemccallum.com>
 [A] Alex Panait <kippled@gmail.com>
 [A] Dominique Leuenberger <dominique-libproxy@leuenberger.net>
-[M] Aldas Nabazas <aldas@t2-project.org>
+[M] Aldas Nabazas <baldzius@gmail.com>
 
 [C] extra/development
 [F] CROSS
 
 [E] add smartypants
+[E] opt gi-docgen
 
 [L] LGPL
-[S] Stable
-[V] 0.5.9
+[V] 0.5.12
 [P] X -----5---9 127.390
 
-[O] var_append mesonopt ' ' -Dtests=false
-[O] pkginstalled vala || var_append mesonopt ' ' -Dvapi=false
-[O] pkginstalled gobject-introspection || var_append mesonopt ' ' '-Dintrospection=false -Ddocs=false'
+[D] 482cc9973ac7083be1da49d4e71f4838921de0900db3adfec3713bdf libproxy-0.5.12.tar.gz https://github.com/libproxy/libproxy/archive/refs/tags/0.5.12/
 
-[D] a4404a793a3b756dbd4a8b0d202a2c3a35ebd5a6c5518290dbd52d8f libproxy-0.5.9.tar.gz https://github.com/libproxy/libproxy/archive/refs/tags/0.5.9/
+var_append mesonopt ' ' -Dtests=false
+pkginstalled vala || var_append mesonopt ' ' -Dvapi=false
+pkginstalled gobject-introspection || var_append mesonopt ' ' '-Dintrospection=false -Ddocs=false'

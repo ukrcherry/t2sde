@@ -1,0 +1,24 @@
+[TIMESTAMP] 1770206293 Wed Feb  4 12:58:13 2026
+[BUILDTIME] 115 (9)
+[SIZE] 6.88 MB, 225 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] boost
+[DEP] coreutils
+[DEP] diffutils
+[DEP] file
+[DEP] findutils
+[DEP] gawk
+[DEP] grep
+[DEP] libixion
+[DEP] linux-header
+[DEP] make
+[DEP] mdds
+[DEP] pkgconfig
+[OPT] python
+[DEP] sed
+[DEP] tar
+[DEP] util-linux
+[DEP] xz
+[DEP] zlib

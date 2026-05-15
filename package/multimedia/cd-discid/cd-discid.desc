@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/cd-discid/cd-discid.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A backend utility to get CDDB discid information from a CD-ROM disc
+
+[T] A backend utility to get CDDB discid information from a CD-ROM disc.
+
+[U] https://github.com/taem/cd-discid/
+
+[A] Cd-discid Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[L] GPL GPL Artistic
+[V] 1.4
+
+[D] ab35bd83a64018f1c461e899d01e3439e0fb25d2e95eb3a03bb01a2e cd-discid-1.4.tar.gz https://github.com/taem/cd-discid/archive/1.4/

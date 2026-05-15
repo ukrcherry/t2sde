@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xfce4-fsguard-plugin/xfce4-fsguard-plugin.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,15 +13,14 @@
 [U] http://xfce-goodies.berlios.de/
 
 [A] Andre Lerche
-[M] Johan <linuxmasterjedi@free.fr>
+[M] Johan Boyé <linuxmasterjedi@free.fr>
 
 [C] extra/desktop/xfce
 [F] CROSS
 
 [L] BSD
-[S] Beta
-[V] 1.1.4
+[V] 1.2.0
 
-[O] . $base/package/xfce4/*/xfce4-conf.in
+[D] 60174eb07b9b0045ed171237d8874272e92a11ec4a172ff2b1b55973 xfce4-fsguard-plugin-1.2.0.tar.xz https://archive.xfce.org/src/panel-plugins/xfce4-fsguard-plugin/1.2/
 
-[D] 7e584a756ea604625d0830c1f3c14419de3d8bfb9a9e2b1a3b38309e xfce4-fsguard-plugin-1.1.4.tar.bz2 https://archive.xfce.org/src/panel-plugins/xfce4-fsguard-plugin/1.1/
+. $base/package/xfce4/*/xfce4-conf.in

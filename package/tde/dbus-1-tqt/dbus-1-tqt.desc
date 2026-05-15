@@ -1,0 +1,26 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/dbus-1-tqt/dbus-1-tqt.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] DBus bindings for TQt of the Trinity Desktop Environment
+
+[T] Backported Qt4 DBUS bindings for TQt.
+
+[U] https://www.trinitydesktop.org/
+
+[A] Trinity Desktop Developers
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/x11
+[F] OBJDIR
+
+[L] GPL
+[V] 14.1.6
+[P] X -----5---9 200.500
+
+[CV-GROUP] tde
+[D] 5e4a62c72e69ee595401e4a31ad04d7a8ddc303ae08870f3141289be dbus-1-tqt-trinity-14.1.6.tar.xz https://mirror.ppa.trinitydesktop.org/trinity/releases/R14.1.6/main/dependencies/
+
+. $base/package/*/*/tde-conf.in

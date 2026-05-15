@@ -1,31 +1,34 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/konsole/konsole.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
 [I] KDE Terminal emulator
 
-[T] Konsole is a terminal to run a command shell. It provides a command line 
+[T] Konsole is a terminal to run a command shell. It provides a command line
 [T] interface for directly controlling your computer.
 
 [U] https://apps.kde.org/konsole/
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
-[E] opt kdoctools
-[E] opt docbook-xml
-[E] opt docbook-xsl
+[F] CROSS OBJDIR
+
+[E] opt kdoctools docbook-xml docbook-xsl
 
 [L] GPL
-[S] Stable
-[V] 25.04.1
-[P] X -----5---9 200.300
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 26.04.1
 
 [CV-GROUP] kde-gear
-[D] 31857725dbbb71da86000dceaed1202e123ac99211cd5b374a760bd3 konsole-25.04.1.tar.xz https://download.kde.org/stable/release-service/25.04.1/src/
+[D] 595d7d769c4cd21f79fc7f85fdc9c0bf098ccd72d5770a61a83b63af konsole-26.04.1.tar.xz https://download.kde.org/stable/release-service/26.04.1/src/
+
+. $base/package/*/*/kde-conf.in
+
+if pkginstalled xkbcommon; then
+	# konsole links xkbcommon if present, but cannot pkgconfig properly
+	var_append GCC_WRAPPER_APPEND ' ' "-c?-I$(pkgprefix includedir xkbcommon):-L$(pkgprefix libdir xkbcommon)"
+fi

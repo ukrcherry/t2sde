@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/stellarium/stellarium.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,7 +14,7 @@
 [U] https://www.stellarium.org/
 
 [A] Fabien Chereau <xalioth@users.sourceforge.net>
-[M] Valentin Ziegler <valentin@t2-project.org>
+[M] Valentin Ziegler <valentin.ziegler@googlemail.com>
 
 [C] extra/graphic
 
@@ -22,7 +22,6 @@
 [E] opt doxygen
 
 [L] GPL
-[S] Stable
-[V] 23.2
+[V] 26.1
 
-[D] 31b5bdcd62f6c48bee392a8ffb59cda038328600429bcfb950722991 stellarium-23.2.tar.gz https://github.com/Stellarium/stellarium/releases/download/v23.2/
+[D] a6f56506e56d9b6c31d3737ed4599580122981fa3b6fa15ddfde3312 stellarium-26.1.tar.gz https://github.com/Stellarium/stellarium/releases/download/v26.1/

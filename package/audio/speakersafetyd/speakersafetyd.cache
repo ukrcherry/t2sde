@@ -1,7 +1,18 @@
+[TIMESTAMP] 1777119114 Sat Apr 25 14:11:54 2026
+[BUILDTIME] 30 (9)
+[SIZE] 1.42 MB, 7 files
 
-[TIMESTAMP] 1701005505 Sun Nov 26 14:31:45 2023
-[BUILDTIME] 14 (2)
-[SIZE] 1.08 MB, 7 files
-
-[DEP] 00-dirtree
-[DEP] alsa-lib
+[DEP] bash
+[DEP] cargo
+[DEP] coreutils
+[DEP] curl
+[DEP] diffutils
+[DEP] findutils
+[DEP] gawk
+[DEP] grep
+[DEP] gzip
+[DEP] openssl
+[DEP] rustc
+[DEP] sed
+[DEP] tar
+[DEP] util-linux

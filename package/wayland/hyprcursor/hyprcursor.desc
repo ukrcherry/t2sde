@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/hyprcursor/hyprcursor.desc
-[COPY] Copyright (C) 2023 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2023 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,14 +11,13 @@
 [U] https://hyprland.org/
 
 [A] vaxerski
-[M] The T2 Project <t2@t2sde.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/x11
 [F] CROSS OBJDIR
 
 [L] BSD
-[S] Beta
-[V] 0.1.12
+[V] 0.1.13
 [P] X -----5---9 200.010
 
-[D] 4f8d2043fa839378d5c9425c202e6859a38d77f9ea5bb6537062fa27 hyprcursor-v0.1.12.tar.gz https://github.com/hyprwm/hyprcursor/archive/refs/tags/v0.1.12/
+[D] f1e17a70ca054b8058c2b9fb130d7cf0531139a90166f685fa98735d hyprcursor-v0.1.13.tar.gz https://github.com/hyprwm/hyprcursor/archive/refs/tags/v0.1.13/

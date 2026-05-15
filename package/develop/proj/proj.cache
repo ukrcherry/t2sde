@@ -1,6 +1,6 @@
-[TIMESTAMP] 1742040211 Sat Mar 15 13:03:31 2025
-[BUILDTIME] 180 (5)
-[SIZE] 18.29 MB, 78 files
+[TIMESTAMP] 1759850512 Tue Oct  7 17:21:52 2025
+[BUILDTIME] 250 (9)
+[SIZE] 14.78 MB, 77 files
 
 [DEP] bash
 [DEP] binutils
@@ -8,10 +8,8 @@
 [DEP] coreutils
 [DEP] curl
 [DEP] diffutils
-[DEP] findutils
 [DEP] gawk
 [DEP] grep
-[DEP] gtest
 [DEP] gzip
 [DEP] libtiff
 [DEP] linux-header
@@ -22,4 +20,3 @@
 [DEP] sed
 [DEP] sqlite
 [DEP] tar
-[DEP] tbb

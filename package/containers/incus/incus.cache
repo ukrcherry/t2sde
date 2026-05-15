@@ -1,23 +1,23 @@
+[TIMESTAMP] 1768669578 Sat Jan 17 18:06:18 2026
+[BUILDTIME] 155 (9)
+[SIZE] 246.03 MB, 23 files
 
-[TIMESTAMP] 1706533821 Mon Jan 29 14:10:21 2024
-[BUILDTIME] 25 (9) ERROR
-[SIZE] 0.01 MB, 6 files
-
-[DEP] 00-dirtree
 [DEP] acl
+[DEP] bash
 [DEP] coreutils
 [DEP] cowsql
 [DEP] diffutils
-[DEP] findutils
 [DEP] gawk
 [DEP] go
 [DEP] grep
+[DEP] gzip
 [DEP] libcap
 [DEP] linux-header
+[DEP] lxc
 [DEP] make
 [DEP] raft
 [DEP] sed
 [DEP] sqlite
 [DEP] tar
 [DEP] udev
-[DEP] xz
+[DEP] util-linux

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/mono-xsp/mono-xsp.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -21,16 +21,14 @@
 [U] https://www.mono-project.com/
 
 [A] Gonzalo Paniagua Javier <gonzalo@ximian.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/server
 [F] NOPARALLEL
 
 [L] GPL
-[S] Stable
-[V] 2.10.2
+[V] 4.7.1
 
-[O] . $base/package/*/mono/mono.in
+[D] 3479e982b7d2d3489b436bafe623d91fc826bc5259b74898bd74eae8 xsp-4.7.1.tar.gz https://github.com/mono/xsp/archive/4.7.1/
 
-[CV-URL] http://go-mono.com/sources-stable/
-[D] 18c65c76793dc2fad70fd4fd77a49f1bec9a18349238d86f7dddf4b6 xsp-2.10.2.tar.bz2 http://go-mono.com/sources/xsp/
+. $base/package/*/mono/mono.in

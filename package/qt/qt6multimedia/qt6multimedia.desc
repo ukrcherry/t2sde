@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/qt6multimedia/qt6multimedia.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,20 +11,31 @@
 [U] https://qt.io
 
 [A] Trolltech AS <www.trolltech.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
-[F] CROSS NO-LTO.gcc
+[F] CROSS OBJDIR
 
 [L] LGPL
-[S] Stable
-[V] 6.9.0
-[P] X -----5---9 127.100
-
-[O] [ $prefix_auto = 1 ] && prefix=$(pkgprefix qt6base) && set_confopt
-[O] pkginstalled libxext && var_append GCC_WRAPPER_APPEND ' ' "`pkg-config x11 --libs-only-L`"
-# for x86-64 avx2
-[O] var_remove_regex GCC_WRAPPER_REMOVE ' ' '-march.*' # TODO: more fine grained
+[V] 6.11.1
+[P] X -----5---9 180.100
 
 [CV-GROUP] qt6
-[D] bdc516e4c1cda1f32ddb51e9b8beffa7f449025dbbc4b78413df9f7c qtmultimedia-everywhere-src-6.9.0.tar.xz http://download.qt.io/official_releases/qt/6.9/6.9.0/submodules/
+[D] b3d90e1a771634a3091ec23d989802afedba6832988129de52acbad4 qtmultimedia-everywhere-src-6.11.1.tar.xz http://download.qt.io/official_releases/qt/6.11/6.11.1/submodules/
+
+. $base/package/*/*/qt6-conf.in
+
+# Force gstreamer plugin for the time being, since ffmpeg plugin is bad,
+# e.g. doesn't work with Jabra Evolve2 65 Bluetooth headset:
+#
+# qt.multimedia.pipewire.devicemonitor: Could not resolve audio format for 54
+# qt.multimedia.pipewire.devicemonitor: Could not resolve audio format for 57
+#
+# TODO: Remove once ffmpeg backend is mature enough.
+var_append cmakeopt ' ' -DFEATURE_ffmpeg=OFF
+var_append cmakeopt ' ' -DFEATURE_gstreamer=ON
+
+pkginstalled libxext && var_append GCC_WRAPPER_APPEND ' ' "`pkg-config x11 --libs-only-L`"
+var_remove_regex GCC_WRAPPER_REMOVE ' ' '-march.*' # for x86-64 avx2, TODO: more fine grained
+[ $arch = x86 ] && var_append cmakeopt ' ' -DQT_FEATURE_spatialaudio=OFF
+[ $arch = powerpc64 ] && var_append GCC_WRAPPER_APPEND ' ' -mvsx # hotfix

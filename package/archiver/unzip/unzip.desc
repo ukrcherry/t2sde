@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/unzip/unzip.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -15,22 +15,22 @@
 [U] http://www.info-zip.org/pub/infozip/
 
 [A] Info-ZIP <info-zip@lists.wku.edu>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/tool
 [F] CROSS
 
 [L] OpenSource
-[S] Stable
-[V] 60
+[V] 6.0
 [P] X 0----5---9 110.600
 
-[O] var_append CC_WRAPPER_APPEND ' ' -std=gnu17
-[O] var_append SYSCC_WRAPPER_APPEND ' ' -std=gnu17
-[O] var_append makeopt ' ' '-f unix/Makefile generic LD=${CC}'
-[O] var_insert makeinstopt ' ' '-f unix/Makefile'
-[O] var_append makeinstopt ' ' "BINDIR=$root$bindir MANDIR=$root$mandir"
-[O] var_append SYSGCC_WRAPPER_INSERT ' ' '-include dirent.h -include string.h'
-[O] var_append GCC_WRAPPER_INSERT ' ' '-include dirent.h -include string.h'
+[CV-TR] s/\.//
+[D] 1ba5a9884dc47fbd67de9f70c294e87e44fe9de7354cfa64355c2915 unzip60.tar.gz https://prdownloads.sourceforge.net/sourceforge/infozip/
 
-[D] 1ba5a9884dc47fbd67de9f70c294e87e44fe9de7354cfa64355c2915 unzip60.tar.gz http://dl.sourceforge.net/sourceforge/infozip/
+var_append CC_WRAPPER_APPEND ' ' -std=gnu17
+var_append SYSCC_WRAPPER_APPEND ' ' -std=gnu17
+var_append makeopt ' ' '-f unix/Makefile generic LD=${CC}'
+var_insert makeinstopt ' ' '-f unix/Makefile'
+var_append makeinstopt ' ' "BINDIR=$root$bindir MANDIR=$root$mandir"
+var_append SYSGCC_WRAPPER_INSERT ' ' '-include dirent.h -include string.h'
+var_append GCC_WRAPPER_INSERT ' ' '-include dirent.h -include string.h'

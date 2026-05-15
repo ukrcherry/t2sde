@@ -1,0 +1,27 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/wine-mono/wine-mono.desc
+[COPY] Copyright (C) 2023 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A .NET replacement for use by Wine
+
+[T] Wine Mono is a package containing Mono and other projects, intended
+[T] as a replacement for the .NET Framework (4.8 and earlier) in Wine.
+
+[U] https://wiki.winehq.org/Mono/
+
+[A] WineHQ contributors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/emulator
+[F] CROSS
+
+[L] OpenSource
+[V] 11.0.0
+
+[D] 7c11bf613b657724da5db1b1c5fe95906a19e8f58ad57cee82ad1da7 wine-mono-11.0.0-x86.msi https://github.com/madewokherd/wine-mono/releases/download/wine-mono-11.0.0/
+
+srctar= runmake=0
+hook_add inmake 4 "mkdir -v $root/$prefix/share/wine/mono/"
+hook_add inmake 5 "install -Dm644 $(match_source_file -p) $root/$prefix/share/wine/mono/"

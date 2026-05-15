@@ -1,0 +1,26 @@
+[TIMESTAMP] 1770577950 Sun Feb  8 20:12:30 2026
+[BUILDTIME] 12 (9)
+[SIZE] 1.47 MB, 84 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] cmake
+[DEP] coreutils
+[DEP] diffutils
+[DEP] gawk
+[DEP] gperf
+[DEP] grep
+[DEP] linux-header
+[DEP] make
+[DEP] perl
+[DEP] perl-moo
+[DEP] perl-path-tiny
+[DEP] perl-sub-quote
+[DEP] perl-template-toolkit
+[DEP] python
+[DEP] python-pysol-cards
+[DEP] rinutils
+[DEP] sed
+[DEP] tar
+[DEP] util-linux
+[DEP] xz

@@ -1,0 +1,26 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/pymupdf/pymupdf.desc
+# Copyright (C) 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] A high performance Python library for PDF (and other) documents
+
+[T] PyMuPDF is a high performance Python library for data extraction, analysis,
+[T] conversion & manipulation of PDF (and other) documents.
+
+[U] https://github.com/pymupdf/PyMuPDF
+
+[A] pymupdf
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] AGPL3
+[V] 1.27.2.3
+
+[D] 4d815ec7981e7da665dfc8277cd2ff519a6455fe1ec8dacb9d28a6ee PyMuPDF-1.27.2.3.tar.gz https://github.com/pymupdf/PyMuPDF/archive/1.27.2.3/
+
+runpipinstall=1
+export PYMUPDF_SETUP_MUPDF_BUILD=

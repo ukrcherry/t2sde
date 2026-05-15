@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gnome-shell/gnome-shell.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -18,11 +18,10 @@
 [C] extra/shell extra/desktop/gnome
 
 [L] LGPL
-[S] Stable
-[V] 48.1
-[P] X -----5---9 377.200
-
-[O] . $base/package/*/*/gnome-conf.in
+[V] 50.1
 
 [CV-URL] https://download.gnome.org/sources/gnome-shell/cache.json
-[D] a5f36dc14cec8fd29970cee2441d373b174e6a6c683bb7735b7fa224 gnome-shell-48.1.tar.xz https://download.gnome.org/sources/gnome-shell/48/
+[D] 1394f55e9fce9d3f13eb9eff268657e469f77ea63d4fd00ff1b3de25 gnome-shell-50.1.tar.xz https://download.gnome.org/sources/gnome-shell/50/
+
+. $base/package/*/*/gnome-conf.in
+var_append mesonopt ' ' -Dtests=false

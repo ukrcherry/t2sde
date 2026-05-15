@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/cbindgen/cbindgen.desc
-[COPY] Copyright (C) 2017 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2017 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,14 +13,14 @@
 [U] https://github.com/eqrion/cbindgen
 
 [A] Ryan Hunt
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/tool
+[R] - alpha hppa hppa64 ia64
 
 [L] GPL
-[S] Stable
-[V] 0.28.0
+[V] 0.29.2
 [P] X ?----5---9 127.400
 
 [CV-FLAGS] NO-PREFIX
-[D] f8e12ee31f4eb4d8d1deae95381071bc96edfcfde2d616326a96313f cbindgen-0.28.0.tar.gz https://github.com/eqrion/cbindgen/archive/v0.28.0/
+[D] 44dacdc1eea8e2b0cf2aaccbb0c06b534b0fb62f30fa24249f26f67a cbindgen-0.29.2.tar.gz https://github.com/eqrion/cbindgen/archive/v0.29.2/

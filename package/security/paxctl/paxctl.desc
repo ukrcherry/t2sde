@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/paxctl/paxctl.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Manage PaX related program header flags
+
+[T] Manage PaX related program header flags.
+
+[U] https://pax.grsecurity.net
+
+[A] Paxctl Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.9
+[L] GPL
+
+[D] 1f27ce0bbcb8bf0ea7250abf0d65b9c3da8fb7adb9e26fab2fada001 paxctl-0.9.tar.gz https://pax.grsecurity.net/

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/luasec/luasec.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,21 +11,20 @@
 [T] between the client and server, and, since the connection is performed,
 [T] it is used to start a secure TLS/SSL session.
 
-[U] http://www.inf.puc-rio.br/~brunoos/luasec/
+[U] https://github.com/lunarmodules/luasec/
 
 [A] Bruno Silvestre <brunoos@inf.puc-rio.br>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/tool
 [F] CROSS
 
 [L] OpenSource
-[S] Beta
-[V] 0.4.1
+[V] 1.3.2
+
+[D] c69bef12bb3b2dc420b9f02533322843763040e3ca6fcb5763673de8 luasec-1.3.2.tar.gz https://github.com/lunarmodules/luasec/archive/v1.3.2/
 
 # inherit $pkglibdir
-[O] . $base/package/*/*/lua-conf.in
-[O] var_append makeopt ' ' 'LD=$CC linux'
-[O] var_append makeinstopt ' ' "LUAPATH=$root$pkgdatadir LUACPATH=$root$pkglibdir"
-
-[D] 08d38ed00e6230044262f8770c63b55ac7f69771ec34969507b6ab2b luasec-0.4.1.tar.gz http://www.inf.puc-rio.br/~brunoos/luasec/download/
+. $base/package/*/*/lua-conf.in
+var_append makeopt ' ' 'LD=$CC linux'
+var_append makeinstopt ' ' "LUAPATH=$root$pkgdatadir LUACPATH=$root$pkglibdir"

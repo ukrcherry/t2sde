@@ -1,0 +1,26 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/zpaqfranz/zpaqfranz.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Deduplicating archiver with encryption and paranoid-level tests
+
+[T] zpaqfranz is a deduplicating archiver with encryption and paranoid-level
+[T] tests. Swiss army knife for the serious backup and disaster recovery
+[T] manager.
+
+[U] https://github.com/fcorbelli/zpaqfranz
+
+[A] Franco Corbelli
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/archive
+[F] CROSS
+
+[L] MIT
+[V] 64.7
+
+[D] 5d9d360a402a983907edb0a2aea37d5279d07ab92617a14dd01fd865 zpaqfranz-64.7.tar.gz https://github.com/fcorbelli/zpaqfranz/archive/64.7/
+
+hook_add postmake 5 'cp -vf man/zpaqfranz.1 $root$mandir/man1/'

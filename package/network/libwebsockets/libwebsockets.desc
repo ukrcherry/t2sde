@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libwebsockets/libwebsockets.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] C library for lightweight websocket clients and servers
+
+[T] C library for lightweight websocket clients and servers.
+
+[U] https://libwebsockets.org/
+
+[A] Libwebsockets Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 4.5.8
+[L] MIT
+
+[D] b7950816c22fd1ec0134371d86f17a305a28cfa2e5c0edac58726517 libwebsockets-4.5.8.tar.gz https://github.com/warmcat/libwebsockets/archive/v4.5.8/
+
+pkginstalled libuv && var_append cmakeopt ' ' -DLWS_WITH_LIBUV=ON

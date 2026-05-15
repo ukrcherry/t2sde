@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/cups/cups.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -27,16 +27,38 @@
 
 [A] Easy Software Products
 [A] Apple Inc.
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/server extra/printing
 [F] PRINTER CROSS LATOMIC.sparc
 
 [E] opt acl
+[E] opt avahi
 
 [L] GPL
-[S] Stable
-[V] 2.4.12
+[V] 2.4.19
 [P] X -----5---9 122.900
 
-[D] 5b0b5f2d993a94da752e984d27d1ce3c4c4aef2ee073e5dfb95bc30c cups-2.4.12-source.tar.gz https://github.com/OpenPrinting/cups/releases/download/v2.4.12/
+[D] 02a43f32894fc3b830c2e7a4090c87ec6ec0fbb7700bc3977be2cbfb cups-2.4.19-source.tar.gz https://github.com/OpenPrinting/cups/releases/download/v2.4.19/
+
+cups_pm(){
+	install_setprinter cups
+
+	# cups is too stupid to create the ../tmp dir itself - only
+	# needed for some ipp transfers (...?) -ReneR
+	mkdir -p $root/var/spool/cups/tmp
+	chown daemon:daemon $root/var/spool/cups/tmp
+
+	mkdir -p $root$datadir/cups/drivers
+}
+hook_add postmake 5 cups_pm
+
+# shared file transformation
+var_append INSTALL_WRAPPER_FILTER '|' \
+	   "sed -e 's,bin/\(disable\|enable\|cancel\|lp\|lpq\|lpr\|lpc\|lprm\|lpstat\)$,bin/\1_cups,g'"
+
+var_append confopt ' ' --with-logdir=/var/cups/log
+pkginstalled krb5 || var_append confopt ' ' --disable-gssapi
+pkginstalled systemd && var_append confopt ' '--with-systemd --with-ondemand=systemd'
+var_append makeopt ' ' "INITDIR= INITDDIR=''"
+var_append makeinstopt ' ' "INITDIR= INITDDIR='' STRIPPROG=$STRIP"

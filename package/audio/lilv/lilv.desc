@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/lilv/lilv.desc
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] C library for simpler use of LV2 plugins
+
+[T] Lilv is a C library (with Python bindings) for simple use of LV2 plugins in
+[T] applications, which includes utilities for investigating installed LV2
+[T] plugins. Lilv is the successor to SLV2, rewritten to be significantly
+[T] faster and have minimal dependencies.
+
+[U] https://drobilla.net/software/lilv.html
+
+[A] David Robillard <d@drobilla.net>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] ISC
+[V] 0.26.4
+[P] X -----5---9 179.500
+
+[D] 6b463d4de3c075ec8a07ef2bcbd20d9c130618b1a6ba0b26e06e49f3 lilv-0.26.4.tar.xz https://download.drobilla.net/

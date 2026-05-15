@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xfce4-whiskermenu-plugin/xfce4-whiskermenu-plugin.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,16 +12,15 @@
 [U] https://docs.xfce.org/panel-plugins/xfce4-whiskermenu-plugin/start
 
 [A] Xfce Authors
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/desktop/xfce
 
 [L] GPL
-[S] Stable
-[V] 2.9.2
+[V] 2.10.1
 
-[O] . $base/package/xfce4/*/xfce4-conf.in
-[O] pkginstalled accountsservice || var_append cmakeopt ' ' -DENABLE_ACCOUNTS_SERVICE=OFF
-[O] pkginstalled gtk-layer-shell || var_append cmakeopt ' ' -DENABLE_GTK_LAYER_SHELL=OFF
+[D] 65cb21872ac2887cf8516172d8a21c565d3a6ff1631c0d2116e03299 xfce4-whiskermenu-plugin-v2.10.1.tar.gz https://github.com/gottcode/xfce4-whiskermenu-plugin/archive/refs/tags/v2.10.1/
 
-[D] e21d949fec119e6b19c7db41b3ba5f6bf4fdd6e0478b4cffffc56968 xfce4-whiskermenu-plugin-v2.9.2.tar.gz https://github.com/gottcode/xfce4-whiskermenu-plugin/archive/refs/tags/v2.9.2/
+. $base/package/xfce4/*/xfce4-conf.in
+pkginstalled accountsservice || var_append cmakeopt ' ' -DENABLE_ACCOUNTS_SERVICE=OFF
+pkginstalled gtk-layer-shell || var_append cmakeopt ' ' -DENABLE_GTK_LAYER_SHELL=OFF

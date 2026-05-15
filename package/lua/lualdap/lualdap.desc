@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/lualdap/lualdap.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,18 +13,33 @@
 [T] and rename)
 [T] - Retrieve entries and references of the search result.
 
-[U] https://www.keplerproject.org/lualdap/
+[U] https://github.com/lualdap/lualdap/
 
 [A] Roberto Ierusalimschy
 [A] André Carregal
 [A] Tomás Guisasola
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
+
 [L] OpenSource
+[V] 1.4.0
 
-[S] Stable
-[V] 1.1
+[D] d0277ea6d9680e44af3f5b2a1fca731a057fa974aaad5c8aaf42b9df lualdap-1.4.0.tar.gz https://github.com/lualdap/lualdap/archive/v1.4.0/
 
-[CV-URL] http://luaforge.net/frs/?group_id=14
-[D] a88e7f4c0b14094377817bbb889c089b09f230c3a6064df65d63c141 lualdap-1.1.tar.gz http://luaforge.net/frs/download.php/933/
+# inherit some stuff like myCFLAGS, myLIBS
+. $base/package/*/*/lua-conf.in
+
+pkgprefix -t openldap
+
+OPENLDAP_INC=$(pkgprefix includedir openldap)
+OPENLDAP_LIB=$(pkgprefix libdir openldap)
+
+LUA_INC=$(pkgprefix includedir lua)
+
+var_append makeopt ' ' "LIB_OPTION='$myLIBS -lldap -shared'"
+
+WARN="-O2 -Wall -fpic -fPIC -W -Waggregate-return -Wcast-align -Wmissing-prototypes -Wnested-externs -Wshadow -Wwrite-strings -ansi"
+var_append GCC_WRAPPER_APPEND ' ' "$WARN -I$root/$LUA_INC -I$root/$OPENLDAP_INC -L$root/$OPENLDAP_LIB"
+
+var_append makeinstopt ' ' LUA_LIBDIR=$root$pkglibdir

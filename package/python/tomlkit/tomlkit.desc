@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/tomlkit/tomlkit.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,13 +15,12 @@
 [U] https://github.com/python-poetry/tomlkit
 
 [A] Sébastien Eustace <sebastien@eustace.io>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [L] MIT
-[S] Stable
-[V] 0.13.2
+[V] 1.5.0
 [P] X -----5---9 137.000
 
-[D] c6e794d8aef171c3d36bf91c48a25639880f95dfcbaeb8903bededa8 tomlkit-0.13.2.tar.gz https://github.com/python-poetry/tomlkit/archive/0.13.2/
+[D] 72a3ec454adc635cd18721142d5c6d849f9484309a6ae5ac1adca428 tomlkit-1.5.0.tar.gz https://github.com/python-poetry/tomlkit/archive/1.5.0/

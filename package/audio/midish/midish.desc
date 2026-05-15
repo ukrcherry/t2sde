@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/midish/midish.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,17 +14,16 @@
 [U] https://www.midish.org/
 
 [A] Alexandre Ratchov <alex@caoua.org>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] CROSS
 
 [L] BSD
-[S] Stable
-[V] 1.3.3
-
-[O] cleanconfopt=0 confopt="--prefix=/$prefix"
+[V] 1.4.1
 
 [CV-URL] http://www.midish.org/
 [CV-FLAGS] ODD_STABLE
-[D] 5fcc071eb346a72670c3f51a7f4a720f713cdbd7eaddbe3ef78b0dfc midish-1.3.3.tar.gz http://www.midish.org/
+[D] b30764e80dca35b1447bc26d4b9fe9e3225d4fa09713ab60e8372c97 midish-1.4.1.tar.gz http://www.midish.org/
+
+cleanconfopt=0 confopt="--prefix=/$prefix"

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/platinum/platinum.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,12 +12,21 @@
 [U] https://pt-framework.sourceforge.net/
 
 [A] Marc Dürner <Marc.Duerner@ptv.de>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [L] LGPL
-[S] Alpha
-[V] r178
+[V] 1.0.2
 
-[D] X platinum-r178.tar.bz2 svn+https://svn.sourceforge.net/svnroot/pt-framework/trunk platinum -r 178
+[D] 7ac30ce7eb55da72e4b58c28b06c992bff5b543ae4e79e9a45a3c0ca Pt-1.0.2.tar.bz2 svn+https://svn.code.sf.net/p/pt-framework/svn/tags/Pt-1.0.2
+
+runmake=0
+
+var_append GCC_WRAPPER_APPEND ' ' -I/usr/X11/include
+var_append AR ' ' rc
+
+# we really should start thinking about generic jam support :-) -ReneR
+hook_add inmake 2 "pushd jam/src && make -f Makefile.unix && popd"
+hook_add inmake 5 "./jam/src/jam.bin -sCONFIG=release -q -j$SDECFG_PARALLEL"
+hook_add inmake 7 "./jam/src/jam.bin -sINCLUDEDIR=$root$includedir -sLIBDIR=$root$libdir install"

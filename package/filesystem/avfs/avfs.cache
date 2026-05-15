@@ -1,0 +1,25 @@
+[TIMESTAMP] 1772441589 Mon Mar  2 09:53:09 2026
+[BUILDTIME] 18 (9)
+[SIZE] 1.24 MB, 59 files
+
+[DEP] automake
+[DEP] bash
+[DEP] binutils
+[DEP] bzip2
+[DEP] coreutils
+[DEP] diffutils
+[DEP] findutils
+[DEP] fuse
+[DEP] gawk
+[DEP] grep
+[DEP] linux-header
+[DEP] make
+[DEP] neon
+[DEP] pkgconfig
+[DEP] sed
+[DEP] tar
+[DEP] unzip
+[DEP] util-linux
+[DEP] xz
+[DEP] zlib
+[DEP] zstd

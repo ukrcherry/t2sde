@@ -1,0 +1,23 @@
+[TIMESTAMP] 1778697124 Wed May 13 20:32:04 2026
+[BUILDTIME] 10 (9)
+[SIZE] 0.22 MB, 14 files
+
+[DEP] automake
+[DEP] bash
+[DEP] binutils
+[DEP] coreutils
+[DEP] diffutils
+[DEP] findutils
+[DEP] gawk
+[DEP] grep
+[DEP] gzip
+[DEP] libpcap
+[DEP] linux-header
+[DEP] meson
+[DEP] ninja
+[DEP] openssl
+[DEP] pkgconfig
+[DEP] python
+[DEP] sed
+[DEP] tar
+[DEP] util-linux

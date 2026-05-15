@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/coeurl/coeurl.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Asynchronous wrapper around libcurl
+
+[T] Asynchronous wrapper around libcurl.
+
+[U] https://nheko.im/nheko-reborn/coeurl
+
+[A] Coeurl Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 0.3.2
+[L] MIT
+
+[D] ee53ff02eaf5e972f737adb73439237e25662a37b9abceae7d5e1037 coeurl-v0.3.2.tar.bz2 https://nheko.im/nheko-reborn/coeurl/-/archive/v0.3.2/

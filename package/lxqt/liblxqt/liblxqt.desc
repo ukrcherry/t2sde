@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/liblxqt/liblxqt.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,15 +11,14 @@
 [U] https://github.com/lxqt/liblxqt
 
 [A] Liblxqt Authors
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/base
 [F] OBJDIR
 
-[V] 2.2.0
+[V] 2.4.0
 [L] LGPL
-[S] Stable
 [P] X -----5---9 700.000
 
 [CV-GROUP] lxqt
-[D] 748974fc53eef794adb4eaee3cbe04bd1244ba837c621a307c97102c liblxqt-2.2.0.tar.xz https://github.com/lxqt/liblxqt/releases/download/2.2.0/
+[D] 72ce089c9cc24bd8551434ce1a4aca8da5b5e8f2934aa752eef30f20 liblxqt-2.4.0.tar.xz https://github.com/lxqt/liblxqt/releases/download/2.4.0/

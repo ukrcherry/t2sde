@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/nautilus/nautilus.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -20,12 +20,14 @@
 [C] extra/office extra/shell extra/desktop/gnome
 
 [L] GPL
-[S] Stable
-[V] 48.1
+[V] 50.1
 [P] X -----5---9 300.210
 
-[O] . $base/package/*/*/gnome-conf.in
-[O] pkginstalled libcloudproviders || var_append mesonopt ' ' -Dcloudproviders=false
-
 [CV-URL] https://download.gnome.org/sources/nautilus/cache.json
-[D] 0b6157b614ea59c212aebea86cacedff4162f6afd4fecd8f1226d563 nautilus-48.1.tar.xz https://download.gnome.org/sources/nautilus/48/
+[D] 98377ee8091a8754a80564d8d0743571f1966587fe6a9edd9a004db3 nautilus-50.1.tar.xz https://download.gnome.org/sources/nautilus/50/
+
+. $base/package/*/*/gnome-conf.in
+
+var_append mesonopt ' ' -Dtests=none
+pkginstalled libcloudproviders || var_append mesonopt ' ' -Dcloudproviders=false
+pkginstalled libselinux || var_append mesonopt ' ' -Dselinux=disabled

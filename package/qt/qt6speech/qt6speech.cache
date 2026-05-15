@@ -1,8 +1,7 @@
-[TIMESTAMP] 1737557407 Wed Jan 22 15:50:07 2025
-[BUILDTIME] 10 (9)
-[SIZE] 0.44 MB, 68 files
+[TIMESTAMP] 1765303678 Tue Dec  9 19:07:58 2025
+[BUILDTIME] 20 (9)
+[SIZE] 0.42 MB, 77 files
 
-[DEP] alsa-lib
 [DEP] bash
 [DEP] binutils
 [DEP] cmake
@@ -20,6 +19,5 @@
 [DEP] qt6multimedia
 [DEP] sed
 [DEP] tar
-[DEP] tbb
 [DEP] vulkan-headers
 [DEP] xz

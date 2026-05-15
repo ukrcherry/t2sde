@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/0install-python/0install-python.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] The Zero Install system
+
+[T] The Zero Install system makes software installation not merely easy,
+[T] but unnecessary. Users run their applications directly from the
+[T] Internet from the software author's pages.
+[T] Caching makes this as fast as running a normal application after
+[T] the first time, and allows off-line use.
+
+[U] https://0install.net/
+
+[A] Thomas Leonard
+[M] Omer James Hickman <james_hickman@email.com>
+
+[C] base/system
+
+[L] GPL
+[V] 2.3.17
+
+[D] 4adb7e456710cf398d850c48043c161c6824e54605bcab9a09d5460b 0install-python-2.3.17.tar.bz2 https://github.com/0install/0install/releases/download/v2.3.17/

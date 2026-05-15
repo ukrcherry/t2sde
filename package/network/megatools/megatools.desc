@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/megatools/megatools.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Collection of programs for accessing Mega.nz service
+
+[T] Collection of programs for accessing Mega.nz service.
+
+[U] https://megatools.megous.com
+
+[A] Megatools Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 1.11.5.20250706
+[L] GPL
+
+[D] 38a8f2e7df187e29aa6fa1d29b0adceeab5ef42b133106d583b52d07 megatools-1.11.5.20250706.tar.gz https://xff.cz/megatools/builds/

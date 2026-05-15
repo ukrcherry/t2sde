@@ -9,6 +9,9 @@
 # - check error, esp. of cryptsetup and lvm commands and display red alert on error
 # - avoid all direct user input, so the installer works in GUI variants
 
+. /etc/os-release
+vg0=$(printf t2-$VERSION_ID-%x $RANDOM)
+
 # detect platform once
 platform=$(uname -m)
 platform2=$(grep '\(platform\|type\)' /proc/cpuinfo) platform2=${platform2##*: }
@@ -26,7 +29,7 @@ case $platform in
 	ppc*)
 		# TODO: prep, ps3, opal, ...
 		case "$platform2" in
-		    CHRP|PowerMac|PS3)
+		    CHRP|PowerMac|pSeries|PS3)
 				platform="$platform-$platform2" ;;
 		    *)		platform= ;;
 		esac
@@ -176,8 +179,8 @@ part_crypt() {
 }
 
 vg_add_pv() {
-	vg="$2"
-	[ "$vg" ] || gui_input "Add physical volume $1 to logical volume group:" "vg0" vg
+	local vg="$2"
+	[ "$vg" ] || gui_input "Add physical volume $1 to logical volume group:" $vg vg
 	if [ "$vg" ]; then
 	    if vgs $vg 2>/dev/null; then
 		vgextend $vg $1
@@ -275,7 +278,7 @@ part_add() {
 	cmd="$cmd '`printf "%-6s %-24s %-10s" $dev "$location" "$size"` ${type//_/ }' 'part_${action}_action $1 $2'"
 }
 
-function join() {
+join() {
 	local IFS="$1"; shift
 	echo "$*"
 }
@@ -285,48 +288,55 @@ disk_partition() {
 	local typ=$2
 
 	# sizes in MB
-	local size=$(($(blockdev --getsz $dev) / 2 / 1024))
-	si=0
-	for p in $dev[0-9]*; do
-		[ -e $p ] || continue
-		size=$((size - $(blockdev --getsz $p) / 2 / 1024))
-		# determine last used partition, too
-		local i=${p#$dev}
-		[ $i -gt $si ] && si=$i
-	done
+	local size=$(($(blockdev --getsz $dev) / 2048))
+	local si=0 # start-index
+
+	# free space, index and size, extract si from prev part, as parted prints 1 for all free
+	local fsize=$(parted -sm $dev "unit s print free" | grep '^[0-9]' | grep free -B 1 | tail -2)
+	if [ ! "$fsize" ]; then
+		fsize=0
+	else
+		si=${fsize%%:*} fsize=${fsize%s:*} # split
+		fsize=$((${fsize##*:} / 2048))
+	fi
 
 	local cmd="gui_menu part 'Partition $dev bootable for this platform?'"
-
 	cmd="$cmd 'Erasing all data' 'si=0'"
-	# TODO: check patform is efi and type is GPT?
-	[ $si -gt 0 -a $size -gt 4096 ] &&
-		cmd="$cmd 'Adding partitions in free space' si=$si"
+	# TODO: check platform is efi and type is GPT?
+	[ $si -gt 0 -a $fsize -gt 4096 ] &&
+		cmd="$cmd 'Adding partitions in free space' 'si=$si; size=$fsize'"
 
 	eval $cmd || return
 
 	# if re-partition: reset size to all
-	[ "$si" = 0 ] && size=$(($(blockdev --getsz $dev) / 2 / 1024))
-	local swap=$((size / 20)) # TODO: better
-	local boot=512
+	[ "$si" = 0 ] && size=$(($(blockdev --getsz $dev) / 2048))
 
+	# how much of free space to use?
+	gui_input "How many megabytes to allocate for the installation:" "$size" _size
+	[ "$_size" -lt "$size" ] && size=$_size
+
+	# swap based on RAM for suspend-to-disk
+	local swap=$(($(sed -n 's/MemTotal: *\([0-9]*\).*/\1/p' /proc/meminfo) / 1024 * 3 / 4))
+	[ $swap -lt 128 ] && swap=128
+	[ $swap -gt $((size / 16)) ] && swap=$((size / 16))
+
+	local boot=512
 	local fdisk="sfdisk -W always"
 	local script=()
 	local postscript=()
 	local fs=()
 	local any=any
 
-	[ $swap -gt 1024 ] && swap=1024
 	# dedicated swap partition or lvm?
 	local _swap=$swap
 	[[ "$typ" = *lvm* ]] && _swap=0 && any=lvm
 
 	case $platform in
 	    alpha)
-		fdisk="parted -f"
+		fdisk="parted -sf"
 		fs+=("${dev}2 $any /")
 		fs+=("${dev}1 ext3 /boot")
 		script+=("mklabel bsd
-y
 mkpart 2048s ${boot}m
 mkpart ${boot}m $(($size - $boot - $_swap))m")
 
@@ -376,40 +386,53 @@ size=$((size - _swap))m, type=83")
 		# TODO: typ, luks, lvm, ...
 		fs+=("${dev}2 $any /")
 		script+=("label:dos
-size=4m, type=41
+size=4m, type=41, bootable
 size=$((size - _swap))m, type=83")
 
 		[ $_swap != 0 ] &&
 		    script+=("type=82") fs+=("${dev}3 swap")
 		;;
 	    ppc*PowerMac)
-		fdisk=mac-fdisk
-		fs+=("${dev}3 $any /")
-		script+=("i
+		fdisk="parted -sf"
+		# precisely partition in sectors
+		local lasts
+		# reformat with fresh Apple partition?
+		if [ $si = 0 ]; then
+			si=1 # Apple partition
+			lasts=64
+			script+=("mklabel mac")
+		else
+			lasts=$(parted -ms $dev "unit s print free" | cut -d : -f 2 | tail -1)
+			lasts=${lasts%s} 
+		fi
 
-b 2p
-c 3p $((size - _swap))m linux")
+		local ends=$((lasts + 4096*2 - 1))
+		script+=("mkpart bootstrap ${lasts}s ${ends}s")
+		script+=("toggle $((++si)) boot")
+		lasts=$((++ends))
+	
+		ends=$((lasts + (size - 4 - _swap) * 2048 - 1))
+		script+=("mkpart linux ${lasts}s ${ends}s") fs+=("${dev}$((++si)) $any /")
+		lasts=$((++ends))
 
 		[ $_swap != 0 ] &&
-		    script+=("c 4p 4p swap") fs+=("${dev}4 swap")
-
-		script+=("w
-y
-q
-")
+		    ends=$((lasts + _swap * 2048 - 1))  &&
+		    script+=("mkpart swap ${lasts}s ${ends}s") fs+=("${dev}$((++si)) swap")
+set +x
 		;;
-	    sparc*-gpt)
+	    sparc*-gpt|ppc*pSeries)
 		script+=("label:gpt")
-		script+=("size=2m, type=biosboot")
+		[[ $platform = sparc* ]] &&
+		  script+=("size=2m, type=biosboot, bootable") ||
+		  script+=("size=4m, type=PowerPCPRePboot, bootable")
 		script+=("size=$((size - _swap))m, type=linux")
-		fs+=("${dev}$((si + 1)) $any /")
+		fs+=("${dev}$((si + 2)) $any /")
 
 		[ $_swap != 0 ] &&
-		    script+=("type=swap") fs+=("${dev}$((si + 2)) swap")
+		    script+=("type=swap") fs+=("${dev}$((si + 3)) swap")
 		;;
 	    sparc*)
 		# TODO: silo vs grub2 have different requirements
-		# TODO: support sun4v-gpt
 		script+=("label:sun
 size=$((boot))m, type=83
 type=82
@@ -450,11 +473,17 @@ start=0, type=W")
 		wipefs --all $dev
 		dd if=/dev/zero of=$dev seek=1 count=1 # mostly for Apple PowerPac parts
 	else
-		fdisk="$fdisk -a"
-		script=("${script[@]:1}") # removed 1st "label:*"
+		if [[ "$fdisk" != parted* ]]; then
+			fdisk="$fdisk -a"
+			script=("${script[@]:1}") # removed 1st "label:*"
+		fi
 	fi
 
-	join $'\n' "${script[@]}" | $fdisk $dev
+	if [[ "$fdisk" != parted* ]]; then
+		join $'\n' "${script[@]}" | $fdisk $dev
+	else
+		$fdisk $dev -- $(join ' ' "${script[@]}")
+	fi
 
 	# postscript fixup, due less than stellar sfdisk
 	for cmd in "${postscript[@]}"; do
@@ -479,11 +508,11 @@ start=0, type=W")
 	    fi
 
 	    case $fs in
-		lvm)	part_pvcreate $d vg0
-			lv_create vg0 linear ${swap}m swap
-			lv_create vg0 linear 100%FREE root
-			part_mkswap /dev/vg0/swap
-			part_mkfs /dev/vg0/root any /
+		lvm)	part_pvcreate $d $vg0
+			lv_create $vg0 linear ${swap}m swap
+			lv_create $vg0 linear 100%FREE root
+			part_mkswap /dev/$vg0/swap
+			part_mkfs /dev/$vg0/root any /
 			;;
 		swap)	part_mkswap $d
 			;;
@@ -608,7 +637,7 @@ disk_add() {
 		cmd="$cmd 'Warning: formated w/ unsupported sector size ($lbs)!' ''"
 
 	# TODO: maybe better /sys/block/$1/$1* ?
-	for x in $(cd /dev; ls $1[0-9p]* 2> /dev/null); do
+	for x in $(cd /dev; ls -v $1[0-9p]* 2> /dev/null); do
 		part_add $x
 		found=1
 	done
@@ -639,7 +668,7 @@ vg_add() {
 }
 
 main() {
-	$STONE general set_keymap
+	[[ $(tty) = /dev/tty[0-9] ]] && $STONE general set_keymap
 
 	local install_now=0
 	while [ $install_now = 0 ]; do
@@ -724,8 +753,9 @@ EOT
 		    echo "$dev $x"
 		done > /mnt/etc/mtab
 
-		cd /mnt; chroot . ./tmp/stone_postinst.sh
-		rm -fv ./tmp/stone_postinst.sh
+		cp -f /etc/default.keymap /mnt/etc/ 2>/dev/null
+		chroot /mnt /tmp/stone_postinst.sh
+		rm -fv /mnt/tmp/stone_postinst.sh
 
 		kexec=$(type -p kexec)
 

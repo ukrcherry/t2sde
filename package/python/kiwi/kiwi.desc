@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/kiwi/kiwi.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -17,13 +17,12 @@
 [U] http://www.async.com.br/projects/kiwi/
 
 [A] Christian Reis <kiko@async.com.br>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 
 [L] GPL
-[S] Beta
 [V] 1.9.29
 [P] X -----5---9 145.000
 
-[D] c36746e252fd32ce5c07aaf1255f65348f47ef0deaedf45523eb8f1c kiwi-1.9.29.tar.xz http://download.gnome.org/sources/kiwi/1.9/
+[D] c36746e252fd32ce5c07aaf1255f65348f47ef0deaedf45523eb8f1c kiwi-1.9.29.tar.xz https://download.gnome.org/sources/kiwi/1.9/

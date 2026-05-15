@@ -1,11 +1,12 @@
-[TIMESTAMP] 1737708393 Fri Jan 24 09:46:33 2025
-[BUILDTIME] 4 (9)
-[SIZE] 0.16 MB, 26 files
+[TIMESTAMP] 1769424665 Mon Jan 26 11:51:05 2026
+[BUILDTIME] 10 (9)
+[SIZE] 0.36 MB, 27 files
 
 [DEP] bash
 [DEP] binutils
 [DEP] coreutils
 [DEP] diffutils
+[DEP] file
 [DEP] findutils
 [DEP] gawk
 [DEP] grep
@@ -14,7 +15,12 @@
 [DEP] libxrender
 [DEP] linux-header
 [DEP] make
+[DEP] meson
+[DEP] ninja
+[DEP] openssl
+[DEP] pkgconfig
 [DEP] sed
 [DEP] tar
+[DEP] util-linux
 [DEP] xorgproto
 [DEP] xz

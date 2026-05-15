@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gdm/gdm.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -13,21 +13,30 @@
 [T] Put your (jpg, gif, png, xpm) picture in ~/.gnome/photo to make it
 [T] appear in the face browser.
 
-[U] https://www.gnome.org/projects/gdm/
+[U] https://wiki.gnome.org/Projects/GDM/
 
 [A] Martin K. Petersen <mkp@mkp.net>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 [M] Susanne Klaus <vadja@gmx.de>
 
 [C] extra/login extra/desktop/gnome
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 48.0
+[V] 50.0
 [P] X -----5---9 152.200
 
-[O] . $base/package/*/*/gnome-conf.in
-
 [CV-URL] https://download.gnome.org/sources/gdm/cache.json
-[D] 3f4b0cc60723e514110a63689d5b4dcb03a3e638c214fec30cf9b697 gdm-48.0.tar.xz https://download.gnome.org/sources/gdm/48/
+[D] 44598964963c3d1ea79f5d697e08ad6757fa58a32f87aefcdabdeb1e gdm-50.0.tar.xz https://download.gnome.org/sources/gdm/50/
+
+. $base/package/*/*/gnome-conf.in
+
+var_append GCC_WRAPPER_INSERT ' ' "`pkg-config libxklavier --cflags`"
+
+gdm_pm() {
+	# correct permissions
+	chown -R gdm:gdm $localstatedir/gdm
+	
+	register_xdm gdm 'GNOME display manager' "$bindir/gdm -nodaemon"
+}
+hook_add postinstall 3 gdm_pm

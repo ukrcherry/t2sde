@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/imx_loader/imx_loader.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Serial loader for i.MX5/6/7/8 series
+
+[T] Serial loader for i.MX5/6/7/8 series.
+
+[U] https://github.com/boundarydevices/imx_usb_loader
+
+[A] Imx_loader Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0_git20201102
+[L] LGPL
+
+[D] 6bce8490f682e5a6f0e740139a8cf0223dd118b038471739775912b4 imx_loader-0_git20201102.tar.gz https://github.com/boundarydevices/imx_usb_loader/archive/30b43d69770cd69e84c045dc9dcabb1f3e9d975a/

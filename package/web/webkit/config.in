@@ -1,0 +1,14 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/webkit/config.in
+# Copyright (C) 2007 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+if pkgcheck webkit X; then
+	menu_begin MENU_PKG_WEBKIT 'WebKit Package Options'
+		choice SDECFG_PKG_WEBKIT_LIB gtk \
+			gtk "Build gtk+ library" \
+			qt4 "Build Qt4 library" \
+			qtcore "Build QtCore library"
+	menu_end
+fi

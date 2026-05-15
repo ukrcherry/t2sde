@@ -1,38 +1,40 @@
+[TIMESTAMP] 1758099623 Wed Sep 17 11:00:23 2025
+[BUILDTIME] 660 (9)
+[SIZE] 16.86 MB, 114 files
 
-[TIMESTAMP] 1722816251 Mon Aug  5 03:04:11 2024
-[BUILDTIME] 1600 (9)
-[SIZE] 24.39 MB, 112 files
-
-[DEP] 00-dirtree
 [DEP] bash
 [DEP] binutils
-[DEP] boost
 [DEP] bzip2
 [DEP] cmake
 [DEP] coreutils
 [DEP] curl
 [DEP] diffutils
 [DEP] ffmpeg
+[DEP] fmt
 [DEP] freetype
 [DEP] gawk
 [DEP] grep
 [DEP] gzip
+[DEP] ilmbase
 [DEP] libgif
 [DEP] libglvnd
 [OPT] libheif
 [DEP] libjpeg
 [DEP] libpng
-[DEP] libraw
+[OPT] libraw
 [DEP] libtiff
 [OPT] libwebp
 [DEP] linux-header
 [DEP] make
-[DEP] opencv
-[DEP] openexr
+[DEP] opencolorio
+[OPT] openexr
 [DEP] openjpeg
 [DEP] openssl
 [DEP] pkgconfig
+[DEP] pybind11
+[DEP] python
+[DEP] qt6base
 [DEP] sed
 [DEP] tar
-[DEP] tbb
+[DEP] vulkan-headers
 [DEP] zlib

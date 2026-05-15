@@ -1,0 +1,27 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/owb/owb.desc
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Origyn Web Browser designed for CE devices
+
+[T] OWB is a web browser designed for CE devices such as mobile phones,
+[T] portable media players, Set Top Boxes and TV decoders, and any other
+[T] consumer electronic product (GPS, home-gateways, Web-radios, PVR, DVD
+[T] recorders, wireless devices etc.).
+
+[U] http://www.sand-labs.org/owb/
+
+[A] Jean-Charles Verdiť, Pleyo
+[M] Susanne Klaus <vadja@gmx.de>
+
+[C] extra/network
+
+[L] GPL
+[V] 1.0
+[P] X -----5---9 199.000
+
+[D] 48106b5214c8d4670ce5c18ac7f51e312df690caa5225790ba375d4e OWB_sources.tar.bz2 http://www.sand-labs.org/downloads/sources/
+
+var_remove GCC_WRAPPER_INSERT ' ' "`pkgprefix libdir heimdal`"

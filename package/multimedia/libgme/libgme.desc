@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libgme/libgme.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Video game music file emulation/playback library
+
+[T] libgme is a video game music emulation library, which allows audio
+[T] applications to easily add playback support for the music of many classic
+[T] video game consoles.
+
+[U] https://github.com/libgme/game-music-emu/
+
+[A] Libgme Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 0.6.5
+[L] LGPL
+
+[D] eabec1eb760169ae2969a5148d0161a088603c80120dc14a0dd8ca58 libgme-0.6.5-src.tar.gz https://github.com/libgme/game-music-emu/releases/download/0.6.5/

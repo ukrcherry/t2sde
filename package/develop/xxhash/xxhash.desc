@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xxhash/xxhash.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,17 +12,16 @@
 [U] https://www.xxhash.com/
 
 [A] Yann Collet
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/system
 [F] CROSS
 
 [L] BSD
-[S] Beta
 [V] 0.8.3
 [P] X -----5---9 109.300
 
-[O] var_append makeinstopt ' ' LIBDIR=$libdir
-
 [CV-FLAGS] NO-PREFIX
 [D] 439066b6730b8afd1423c622be7b9889af2bf5776ad5054d8b829467 xxHash-0.8.3.tar.gz https://github.com/Cyan4973/xxHash/archive/v0.8.3/
+
+var_append makeinstopt ' ' LIBDIR=$libdir

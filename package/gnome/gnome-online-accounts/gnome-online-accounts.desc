@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gnome-online-accounts/gnome-online-accounts.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -18,11 +18,12 @@
 [C] extra/shell extra/desktop/gnome
 
 [L] LGPL
-[S] Stable
-[V] 3.54.2
+[V] 3.58.1
 [P] X -----5---9 200.100
 
-[O] . $base/package/*/*/gnome-conf.in
-
 [CV-URL] https://download.gnome.org/sources/gnome-online-accounts/cache.json
-[D] 33ef09d1eab8960b4fa0155e17143f6ac211a9645f99b913f98fd307 gnome-online-accounts-3.54.2.tar.xz https://download.gnome.org/sources/gnome-online-accounts/3.54/
+[D] 08eaf00dc3a221f6c93402b6aab1771740b22ddc6bf3e13f49ee92ec gnome-online-accounts-3.58.1.tar.xz https://download.gnome.org/sources/gnome-online-accounts/3.58/
+
+. $base/package/*/*/gnome-conf.in
+
+pkginstalled krb5 || var_append mesonopt ' ' -Dkerberos=false

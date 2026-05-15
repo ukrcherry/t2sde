@@ -1,6 +1,6 @@
 # --- T2-COPYRIGHT-BEGIN ---
 # t2/target/generic/pkgsel/20-base.in
-# Copyright (C) 2004 - 2025 The T2 SDE Project
+# Copyright (C) 2004 - 2026 The T2 SDE Project
 # SPDX-License-Identifier: GPL-2.0
 # --- T2-COPYRIGHT-END ---
 
@@ -9,25 +9,15 @@
 # reuse the bootstrap
 include target/generic/pkgsel/10-bootstrap.in
 
-X tzdata
-X dhcp
-X dialog
 X bzip2
 X xz
 X lzo
 X lzip
 X cron
-X disktype
-X embutils
-X expat
-X fget
-X ipconfig
 X gdb
 X groff
-X iproute2
 X iptables
-X dosfstools
-X reiserfsprogs
+#X reiserfsprogs
 X ntfsprogs
 X btrfs-progs
 X squashfs-tools
@@ -42,12 +32,12 @@ X json-c
 X libgcrypt
 X cryptsetup
 X iw
+X wireless-regdb
 X wpa_supplicant
 X libnl
 X kbd
 X less
 X libelf
-X linux
 X linux-firmware
 X intel-microcode
 X memtest86
@@ -55,12 +45,10 @@ X gdbm
 X libpipeline
 X man
 X man-pages
-X minised
-X kmod
 X nghttp2
-X netkit-base
-X netkit-telnet
-X netcat
+X iputils
+#X netkit-telnet
+#X netcat
 X net-tools
 X tcp_wrappers
 X rpcbind
@@ -69,76 +57,38 @@ X libtirpc
 X nfs-utils
 X vim
 X openssh
-X wireguard
-X ca-certificates
+X wireguard-tools
 X xxhash
 X rsync
-X pam
 X libpcap
 X ppp
-X procps
 X sysstat
-X psmisc
 X hwdata
 X pciutils
+X sharutils
 X libusb
 X usbutils
 X pcmciautils
 X libevent
-X shadow
 X strace
 X sysfsutils
-X sysklogd
-X sysvinit
-X udev
+
+X watchdog
 #X perl-gettext
 X help2man
 X libatomic_ops
 
-# Subversion, to let people get T2 source
-X apr
-X apr-util
-X serf
-#X scons
-X sqlite
-X utf8proc
-X subversion
-
 # and let people create T2 ISOs and LiveCD/DVDs
 X cmake
-X libcap
 X libisofs
 X libburn
 X libisoburn
 X popt
 
-# Add architecture-specific-packages for booting
-= u-boot
-X aboot
-X mac-fdisk
 X numactl
 X powerpc-utils
-X hfsutils
-X milo
-X grub2
-X elftoaout
-X silo
-X arcload
-X dvhtool
-X kboot
-X kexec-tools
-X dtc
-X m1n1
-X efivar
-X efibootmgr
-X palo
-#X elftoaout
-#X silo
-X emile
 
-# sysfiles split
-X mkinitrd
-
+X parted
 # nice to have
 X libmnl
 X ethtool
@@ -153,11 +103,10 @@ X tmux
 
 X llvm
 X clang
+X lld
 X cargo
 X rustc
 X rust-src
 = thin-provisioning-tools
 
 X go
-
-X t2-src

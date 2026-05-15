@@ -1,14 +1,17 @@
-[TIMESTAMP] 1737729564 Fri Jan 24 15:39:24 2025
-[BUILDTIME] 18 (9)
-[SIZE] 10.14 MB, 484 files
+[TIMESTAMP] 1775234851 Fri Apr  3 18:47:31 2026
+[BUILDTIME] 30 (9)
+[SIZE] 10.66 MB, 443 files
 
+[DEP] appstream
 [DEP] at-spi2-core
+[DEP] automake
 [DEP] bash
+[DEP] binutils
 [DEP] bzip2
 [DEP] cairo
-[DEP] caja
 [DEP] coreutils
 [DEP] diffutils
+[DEP] enchant
 [DEP] findutils
 [DEP] gawk
 [DEP] gdk-pixbuf
@@ -18,12 +21,12 @@
 [DEP] gtk+
 [DEP] gzip
 [DEP] harfbuzz
-[DEP] libadwaita
 [DEP] libxml
 [DEP] linux-header
 [DEP] make
 [DEP] pango
+[DEP] pkgconfig
 [DEP] python
 [DEP] sed
-[DEP] subversion
 [DEP] tar
+[DEP] util-linux

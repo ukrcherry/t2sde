@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/freeradius/freeradius.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,15 +15,39 @@
 [U] https://www.freeradius.org
 
 [A] The FreeRADIUS Project
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network
 [F] NOPARALLEL
 
 [L] GPL
 
-[S] Stable
-[V] 3.2.7
-[P] X -----5---9 200.500
+[V] 3.2.8
 
-[D] 81c6c8f651481c681f74518fcc22cdb60b5048d78c98829bcade74e8 freeradius-server-3.2.7.tar.bz2 ftp://ftp.freeradius.org/pub/radius/
+[D] dc04364c79cd492f3e228596089d834d12150d2acc3bfd5e5ba463db freeradius-server-3.2.8.tar.bz2 https://www.freeradius.org/ftp/pub/freeradius/
+
+if [ $prefix_auto = 1 ]; then
+	if [ "$SDECFG_PKG_FREERADIUS_PREFIX" ]; then
+	  prefix="$SDECFG_PKG_FREERADIUS_PREFIX"
+	else
+	  prefix="opt/freeradius"
+	fi
+	set_confopt
+fi
+
+var_append LDFLAGS ' ' -L/lib
+export LDFLAGS
+
+# disabling rlm_unix module atm because we've some problem to detect libshadow.so
+# 2005-09-20 morfoh
+var_append confopt ' ' --without-rlm_unix
+
+var_append confopt ' ' "--with-system-libtool --with-large-files --disable-ltdl-install --disable-static"
+
+if pkginstalled openldap; then
+	pkgprefix -t openldap
+	var_append confopt ' ' "--with-rlm-ldap-lib-dir=$(pkgprefix libdir openldap)"
+	var_append confopt ' ' "--with-rlm-ldap-include-dir=$(pkgprefix includedir openldap)"
+else
+	var_append confopt ' ' --without-rlm-ldap
+fi

@@ -1,0 +1,24 @@
+[TIMESTAMP] 1770892660 Thu Feb 12 11:37:40 2026
+[BUILDTIME] 45 (9)
+[SIZE] 0.79 MB, 15 files
+
+[DEP] alsa-lib
+[DEP] bash
+[DEP] binutils
+[DEP] bzip2
+[DEP] cmake
+[DEP] coreutils
+[DEP] diffutils
+[DEP] findutils
+[DEP] gawk
+[DEP] git
+[DEP] grep
+[DEP] linux-header
+[DEP] make
+[DEP] pipewire
+[DEP] pkgconfig
+[DEP] qt6base
+[DEP] sed
+[DEP] tar
+[DEP] util-linux
+[DEP] vulkan-headers

@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/b3sum/b3sum.desc
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] CLI to print the BLAKE3 hashes
+
+[T] The b3sum command line utility prints the BLAKE3 hashes of files or of
+[T] standard input.
+
+[U] https://github.com/BLAKE3-team/BLAKE3/
+
+[A] BLAKE3 Team
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/development
+
+[L] APL
+[V] 1.8.5
+
+[D] ddb554a86d6b1dfba2e42cfad00931065ca56d63e72cd9d87b031402 blake3-1.8.5.tar.gz https://github.com/BLAKE3-team/BLAKE3/archive/refs/tags/1.8.5/
+
+srcdir=BLAKE*/b3sum

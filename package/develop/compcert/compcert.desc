@@ -1,0 +1,27 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/compcert/compcert.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Compiler you can formally trust
+
+[T] The CompCert C verified compiler is a high-assurance compiler for almost all
+[T] of the C language (ISO C 2011), generating efficient code for the ARM,
+[T] PowerPC, RISC-V and x86 processors.
+
+[U] https://compcert.org/
+
+[A] INRIA, AbsInt
+[M] Tomas Glozar <tglozar@gmail.com>
+
+[C] extra/development
+[R] + x86-64
+
+[L] Restricted
+[V] 3.17
+
+[D] e2ce5f87913ebb7c5ff403500afb7165c579f73e9b51b509e9b2c0ce CompCert-3.17.tar.gz https://github.com/AbsInt/CompCert/archive/refs/tags/v3.17/
+
+var_append confopt ' ' 'x86_64-linux' # TODO: Support other architectures
+var_append confopt ' ' '-ignore-coq-version -ignore-ocaml-version'

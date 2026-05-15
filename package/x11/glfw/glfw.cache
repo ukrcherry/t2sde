@@ -1,7 +1,8 @@
-[TIMESTAMP] 1737674167 Fri Jan 24 00:16:07 2025
-[BUILDTIME] 10 (9)
-[SIZE] 16.74 MB, 251 files
+[TIMESTAMP] 1754764981 Sat Aug  9 20:43:01 2025
+[BUILDTIME] 20 (9)
+[SIZE] 13.72 MB, 46 files
 
+[DEP] 00-dirtree
 [DEP] bash
 [DEP] binutils
 [DEP] cmake
@@ -23,6 +24,7 @@
 [DEP] libxrender
 [DEP] linux-header
 [DEP] make
+[DEP] mtdev
 [DEP] pkgconfig
 [DEP] sed
 [DEP] tar

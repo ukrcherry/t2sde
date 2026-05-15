@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/devil/devil.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -17,14 +17,17 @@
 
 [A] Denton Woods <denton@imagelib.org>
 [A] Nicolas Weber <thakis@users.sourceforge.net>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/graphic
 
 [E] opt jasper
 
 [L] LGPL
-[S] Stable
-[V] 1.7.7
+[V] 1.8.0
 
-[D] c137f80a87d4aefa36309387c4469f76ca8a29775dc2b44340169154 devil-1.7.7.tar.gz http://dl.sourceforge.net/sourceforge/openil/
+[D] a1bf1a8f098f448245f7c7bcef6a434dc01164bc67901c6dd111c0c7 DevIL-1.8.0.tar.gz https://prdownloads.sourceforge.net/sourceforge/openil/
+
+srcdir=DevIL/DevIL
+var_append cmakeopt ' ' -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+var_append GCC_WRAPPER_APPEND ' ' -fpermissive

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/swift/swift.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,15 +13,14 @@
 
 [A] Apple Inc.
 [A] Swift Authors
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 6.1
+[V] 6.3.1
 
-[O] var_append cmakeopt ' ' -DSWIFT_INCLUDE_TOOLS=NO
+[D] 659e76852fb9daabf94f856b38dd1495218f8678c8d2e0b6467820c6 swift-6.3.1-RELEASE.tar.gz https://github.com/swiftlang/swift/archive/swift-6.3.1-RELEASE/
 
-[D] 11f0fa8ff83c364ac3aa7618a5f8605b9d6548f48b999f3eb9cc1d57 swift-6.1-RELEASE.tar.gz https://github.com/swiftlang/swift/archive/refs/tags/
+var_append cmakeopt ' ' -DSWIFT_INCLUDE_TOOLS=NO

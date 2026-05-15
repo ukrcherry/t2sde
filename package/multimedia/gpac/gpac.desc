@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gpac/gpac.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,7 +12,7 @@
 [T] many audio/video codecs and formats, and RTP/RTSP streaming, and features
 [T] basic SVG and Macromedia Flash support.
 
-[U] https://github.com/gpac/gpac/archive/v1.0.1.tar.gz
+[U] https://github.com/gpac/gpac/
 
 [A] jeanlf <jeanlf@users.sourceforge.net>
 [M] Michael Tross <michael@tross.org>
@@ -20,14 +20,41 @@
 [C] extra/multimedia
 [F] CROSS NOPARALLEL
 
-
+[E] opt jack
 [E] opt libcaca
 [E] opt libsdl2
-[E] opt libcaca
 
 [L] GPL
-[S] Beta
-[V] 2.4.0
+[V] 26.02.0
 [P] X -----5---9 142.100
 
-[D] 05ae122f6b081e452005c7f4194eee0d6244a7db0c81fa2303869ccb gpac-2.4.0.tar.gz https://github.com/gpac/gpac/archive/v2.4.0/
+[D] 22c9ee2f88fcfad5c4e03452f83f3d4d3dce34f41920f4d966e05f14 gpac-26.02.0.tar.gz https://github.com/gpac/gpac/archive/v26.02.0/
+
+configscript="sh ./configure"
+
+var_append confopt ' ' '--cc=$CC --cpu=$arch'
+
+pkginstalled libx11 &&
+	var_append confopt ' ' "--X11-path=$root/`pkgprefix libx11`" ||
+	var_append confopt ' ' "--disable-x11-shm"
+
+# guide while cross compiling
+if ! pkginstalled firefox && ! pkginstalled seamonkey; then
+	var_append patchfiles ' ' $confdir/no-mozilla.diff
+fi
+pkginstalled mesa || var_append confopt ' ' --disable-opengl
+
+if [ $SDECFG_DEBUG -ne 0 ]; then
+	var_append confopt ' ' --enable-debug
+fi
+
+# install development header files
+var_append makeinstopt ' ' install-lib
+
+# not supported on all arch's
+var_append GCC_WRAPPER_REMOVE ' ' -Wno-pointer-sign
+
+if [[ $libdir == *lib64 ]]; then
+  var_append confopt ' ' --enable-pic
+  var_append GCC_WRAPPER_INSERT ' ' "-fPIC -L/usr/X11R7/lib64 -D__ia64__"
+fi

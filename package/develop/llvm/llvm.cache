@@ -1,12 +1,14 @@
-[TIMESTAMP] 1737658095 Thu Jan 23 19:48:15 2025
-[BUILDTIME] 4700 (9)
-[SIZE] 550.21 MB, 2449 files
+[TIMESTAMP] 1768842456 Mon Jan 19 18:07:36 2026
+[BUILDTIME] 4800 (9)
+[SIZE] 721.72 MB, 2696 files
 
+[DEP] automake
 [DEP] bash
 [OPT] binutils
 [DEP] cmake
 [DEP] coreutils
 [DEP] diffutils
+[DEP] findutils
 [DEP] gawk
 [DEP] grep
 [DEP] libedit
@@ -17,6 +19,6 @@
 [DEP] python
 [DEP] sed
 [DEP] tar
-[DEP] tbb
+[DEP] util-linux
 [DEP] xz
 [DEP] zlib

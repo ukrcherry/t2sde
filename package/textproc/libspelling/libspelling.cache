@@ -1,0 +1,38 @@
+[TIMESTAMP] 1778601564 Tue May 12 17:59:24 2026
+[BUILDTIME] 18 (9)
+[SIZE] 1.85 MB, 189 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] cairo
+[DEP] coreutils
+[DEP] diffutils
+[DEP] enchant
+[DEP] gawk
+[DEP] gdk-pixbuf
+[DEP] gettext
+[DEP] gi-docgen
+[DEP] glib
+[DEP] gobject-introspection
+[DEP] graphene
+[DEP] graphviz
+[DEP] grep
+[DEP] gtk
+[DEP] gtksourceview
+[DEP] gzip
+[DEP] harfbuzz
+[DEP] icu4c
+[DEP] linux-header
+[DEP] meson
+[DEP] ninja
+[DEP] openssl
+[DEP] pango
+[DEP] pkgconfig
+[DEP] python
+[DEP] sed
+[DEP] setuptools
+[DEP] smartypants
+[DEP] sysprof
+[DEP] tar
+[DEP] util-linux
+[DEP] vala

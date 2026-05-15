@@ -1,0 +1,37 @@
+[TIMESTAMP] 1743815823 Sat Apr  5 02:17:03 2025
+[BUILDTIME] 380 (9) ERROR
+[SIZE] 0.00 MB, 6 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] cmake
+[DEP] coreutils
+[DEP] curl
+[DEP] diffutils
+[DEP] fontconfig
+[DEP] gawk
+[DEP] grep
+[DEP] harfbuzz
+[DEP] icu4c
+[DEP] libavif
+[DEP] liberation-fonts
+[DEP] libjpeg
+[OPT] libjxl
+[DEP] libpng
+[OPT] libwebp
+[DEP] linux-header
+[DEP] lld
+[DEP] ninja
+[DEP] openssl
+[DEP] pkgconfig
+[DEP] python
+[OPT] qt6base
+[DEP] sed
+[DEP] simdutf
+[DEP] skia
+[DEP] sqlite
+[DEP] tar
+[DEP] vulkan-headers
+[DEP] woff2
+[DEP] zlib
+[DEP] zstd

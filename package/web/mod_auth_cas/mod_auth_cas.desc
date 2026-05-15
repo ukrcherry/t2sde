@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/mod_auth_cas/mod_auth_cas.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] An Apache httpd module for integrating with Apereo CAS Server project
+
+[T] An Apache httpd module for integrating with Apereo (JASIG) CAS Server project.
+
+[U] https://www.apereo.org/projects/cas
+
+[A] Mod_auth_cas Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 1.2
+[L] APL
+
+[D] 8a54d4ee7abc08099ec9c25e343c167b48e3dbb650d4dc7a4a02076d mod_auth_cas-1.2.tar.gz https://github.com/Jasig/mod_auth_cas/archive/v1.2/

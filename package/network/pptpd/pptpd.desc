@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/pptpd/pptpd.desc
+[COPY] Copyright (C) 2016 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] An open source PPTP server
+
+[T] Poptop is an open source implementation of a PPTP server.
+[T] Poptop provides full interoperability with the Microsoft PPTP VPN client.
+
+[U] https://www.samba.org/ppp/
+
+[A] Matthew Ramsay and others
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/network
+[F] CROSS
+
+[L] OpenSource
+[V] 1.5.0
+
+[D] d2caaeab45b0bb721e0fda5e780b1bde3e334f0d7f9ce3de43cd3bba pptpd-1.5.0.tar.gz https://downloads.sourceforge.net/project/poptop/pptpd/pptpd-1.5.0/

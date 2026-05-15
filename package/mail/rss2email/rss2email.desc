@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/rss2email/rss2email.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Forward RSS feeds to your email address, community maintained
+
+[T] Forward RSS feeds to your email address, community maintained.
+
+[U] https://github.com/rss2email/rss2email
+
+[A] Rss2email Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 3.14
+[L] GPL
+
+[D] 884a4e38f9346e239d190f4cbe5771a90902e9d68b0abfc4f5274d67 rss2email-3.14.tar.gz https://files.pythonhosted.org/packages/source/r/rss2email/

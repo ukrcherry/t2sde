@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/emacs/emacs.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -15,10 +15,11 @@
 [U] https://www.gnu.org/software/emacs/
 
 [A] Emacs Authors <bug-gnu-emacs@gnu.org>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/editor
 
+[E] del openssh
 [E] opt acl
 [E] opt attr
 [E] opt alsa-lib
@@ -28,14 +29,31 @@
 [E] opt gpm
 [E] opt harfbuzz
 [E] opt lcms2
+[E] opt libseccomp
 [E] opt libwebp
 [E] opt sqlite
+[E] opt systemd
 [E] opt tree-sitter
 [E] opt openssh
 
 [L] GPL
-[S] Stable
-[V] 30.1
-[P] X -----5---9 160.100
+[V] 30.2
+[P] X -----5---9 250.100
 
-[D] 84d508c28984149796df9963dc210b47cdd0741de91c93a45fb1cdf1 emacs-30.1.tar.xz http://ftp.gnu.org/pub/gnu/emacs/
+[D] 1edcfc58e281f2560a33d0bbea9182f79edcd6237e01c79766e1a2b7 emacs-30.2.tar.xz http://ftp.gnu.org/pub/gnu/emacs/
+
+pkginstalled libgif || var_append confopt ' ' --with-gif=no
+pkginstalled libpng || var_append confopt ' ' --with-png=no
+pkginstalled libtiff || var_append confopt ' ' --with-tiff=no
+if ! pkginstalled libjpeg && ! pkginstalled -n libjpeg-turbo; then
+	var_append confopt ' ' --with-jpeg=no
+fi
+pkginstalled gnutls || var_append confopt ' ' --with-gnutls=no
+pkginstalled gconf || var_append confopt ' ' --without-gconf
+pkginstalled glib || var_append confopt ' ' --without-gsettings
+pkginstalled cairo || var_append confopt ' ' --without-cairo
+pkginstalled gtk+ wayland && var_append confopt ' ' --with-pgtk
+pkginstalled libx11 || var_append confopt ' ' --without-x
+
+var_append GCC_WRAPPER_INSERT ' ' "-I$root$(pkgprefix includedir libx11)"
+var_append GCC_WRAPPER_INSERT ' ' "-L$root$(pkgprefix libdir libx11)"

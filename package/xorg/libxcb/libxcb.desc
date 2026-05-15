@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libxcb/libxcb.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,7 +11,7 @@
 [U] https://xcb.freedesktop.org/
 
 [A] The XCB developers
-[M] Aldas Nabazas <aldas@t2-project.org>
+[M] Aldas Nabazas <baldzius@gmail.com>
 
 [C] base/x11
 [F] CROSS
@@ -19,13 +19,12 @@
 [E] opt graphviz
 
 [L] OpenSource
-[S] Stable
 [V] 1.17.0
-[P] X -----5---9 112.402
-
-[O] . package/*/*/modular-x-conf.in
-
-[O] atstage cross && var_append makeopt ' ' "XCBPROTO_XCBINCLUDEDIR=$root/`pkg-config --variable=xcbincludedir xcb-proto` XCBPROTO_XCBPYTHONDIR=$root/`pkg-config --variable=pythondir xcb-proto`"
-[O] atstage cross && var_append makeinstopt ' ' "XCBPROTO_XCBINCLUDEDIR=$root/`pkg-config --variable=xcbincludedir xcb-proto` XCBPROTO_XCBPYTHONDIR=$root/`pkg-config --variable=pythondir xcb-proto`"
+[P] X ?----5---9 112.402
 
 [D] cf01568bdffe9ac4f970cb96413493beb3dfab61c1d3590b49686e43 libxcb-1.17.0.tar.xz https://xorg.freedesktop.org/archive/individual/lib/
+
+. package/*/*/modular-x-conf.in
+
+atstage cross && var_append makeopt ' ' "XCBPROTO_XCBINCLUDEDIR=$root/`pkg-config --variable=xcbincludedir xcb-proto` XCBPROTO_XCBPYTHONDIR=$root/`pkg-config --variable=pythondir xcb-proto`"
+atstage cross && var_append makeinstopt ' ' "XCBPROTO_XCBINCLUDEDIR=$root/`pkg-config --variable=xcbincludedir xcb-proto` XCBPROTO_XCBPYTHONDIR=$root/`pkg-config --variable=pythondir xcb-proto`"

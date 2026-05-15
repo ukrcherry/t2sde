@@ -1,34 +1,35 @@
-[TIMESTAMP] 1737630833 Thu Jan 23 12:13:53 2025
-[BUILDTIME] 350 (9)
-[SIZE] 12.56 MB, 24 files
+[TIMESTAMP] 1768852367 Mon Jan 19 20:52:47 2026
+[BUILDTIME] 500 (9)
+[SIZE] 10.69 MB, 20 files
 
 [DEP] bash
 [DEP] binutils
 [DEP] cairo
 [DEP] cargo
 [DEP] cargo-c
+[DEP] cmake
 [DEP] coreutils
-[DEP] curl
 [DEP] diffutils
 [OPT] docutils
+[DEP] findutils
 [DEP] freetype
 [DEP] gawk
 [DEP] gdk-pixbuf
+[OPT] gi-docgen
 [OPT] glib
 [OPT] gobject-introspection
 [DEP] grep
 [DEP] harfbuzz
 [DEP] linux-header
-[DEP] llvm
 [DEP] meson
 [DEP] ninja
 [DEP] openssl
 [DEP] pango
-[DEP] pkgconfig
 [DEP] python
 [DEP] rustc
 [DEP] sed
-[DEP] setuptools
+[DEP] smartypants
 [DEP] tar
+[DEP] util-linux
 [OPT] vala
 [DEP] xz

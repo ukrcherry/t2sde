@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/ccbench/ccbench.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -12,13 +12,20 @@
 [T] which result in the best performance on your system.
 
 [A] Claire Xenia Wolf <claire@clairexen.net>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/development
 [F] CROSS
 
 [L] GPL
-[S] Stable
 [V] 0.2
 
 [D] 41a42c20b0e7df7c590f78321e24112d20625662dc71687de0111a17 ccbench-0.2.tar.bz2 http://www.rocklinux.net/people/clifford/ccbench/
+
+ccbench_install() {
+	rm -rf $root/usr/src/ccbench-$ver/
+	mkdir -p $root/usr/src/ccbench-$ver/
+	cp -rv * $root/usr/src/ccbench-$ver/
+}
+runmake=0
+hook_add postmake 5 ccbench_install

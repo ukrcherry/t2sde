@@ -1,0 +1,43 @@
+
+[TIMESTAMP] 1280257721 Tue Jul 27 19:08:41 2010
+[BUILDTIME] 30 (5)
+[SIZE] 3.01 MB, 169 files
+
+[DEP] 00-dirtree
+[DEP] autoconf
+[DEP] automake
+[DEP] bdb
+[DEP] binutils
+[DEP] coreutils
+[DEP] curl
+[DEP] diffutils
+[DEP] dmalloc
+[DEP] file
+[DEP] findutils
+[DEP] gawk
+[DEP] glib
+[DEP] gmp
+[DEP] grep
+[OPT] gtk-doc
+[DEP] libidn
+[DEP] libtool
+[DEP] libxml
+[DEP] libxslt
+[DEP] linux-header
+[DEP] m4
+[DEP] make
+[DEP] mpfr
+[OPT] mysql
+[DEP] openssl
+[OPT] perl
+[DEP] pkgconfig
+[OPT] postgresql
+[OPT] python
+[OPT] raptor
+[OPT] rasqal
+[OPT] ruby
+[DEP] sed
+[DEP] sqlite
+[DEP] sysfiles
+[DEP] tar
+[DEP] zlib

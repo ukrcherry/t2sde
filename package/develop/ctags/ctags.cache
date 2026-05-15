@@ -1,16 +1,27 @@
+[TIMESTAMP] 1778189828 Thu May  7 23:37:08 2026
+[BUILDTIME] 30 (9)
+[SIZE] 4.20 MB, 53 files
 
-[TIMESTAMP] 1279533289 Mon Jul 19 11:54:49 2010
-[BUILDTIME] 10 (5)
-[SIZE] 0.24 MB, 7 files
-
-[DEP] 00-dirtree
+[DEP] automake
+[DEP] bash
 [DEP] binutils
 [DEP] coreutils
 [DEP] diffutils
+[DEP] docutils
+[OPT] emacs
 [DEP] findutils
+[DEP] gawk
 [DEP] grep
+[DEP] gzip
+[DEP] jansson
+[DEP] libseccomp
+[DEP] libxml
+[DEP] libyaml
 [DEP] linux-header
 [DEP] make
+[DEP] pcre2
+[DEP] perl
+[DEP] pkgconfig
 [DEP] sed
-[DEP] sysfiles
 [DEP] tar
+[DEP] util-linux

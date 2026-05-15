@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gsmlib/gsmlib.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -17,12 +17,11 @@
 [U] http://www.pxh.de/fs/gsmlib/index.html
 
 [A] Peter Hofmann <software@pxh.de>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/filesystem
 
 [L] LGPL
-[S] Stable
 [V] 1.10
 
 [CV-URL] http://www.pxh.de/fs/gsmlib/download/index.html

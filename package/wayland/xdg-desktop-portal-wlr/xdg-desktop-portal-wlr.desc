@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xdg-desktop-portal-wlr/xdg-desktop-portal-wlr.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,13 +11,12 @@
 [U] https://github.com/emersion/xdg-desktop-portal-wlr
 
 [A] Simon Ser
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/x11
 [F] CROSS
 
 [L] MIT
-[S] Beta
-[V] 0.7.1
+[V] 0.8.2
 
-[D] 1df9083fb93f92de045dd350f3444d9e36f5f2b687dc60c46a7e943c xdg-desktop-portal-wlr-0.7.1.tar.gz https://github.com/emersion/xdg-desktop-portal-wlr/releases/download/v0.7.1/
+[D] 22f7abfb4f1abcf179419bfbff52d1b6954f3f79d6ddb1a29ceb3e2b xdg-desktop-portal-wlr-0.8.2.tar.gz https://github.com/emersion/xdg-desktop-portal-wlr/releases/download/v0.8.2/

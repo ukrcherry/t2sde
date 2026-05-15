@@ -1,25 +1,24 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/link-grammar/link-grammar.desc
-[COPY] Copyright (C) 2014 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2014 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
 [I] Grammar checking for abiword
 
-[T] grammar checking for abiword.
+[T] Grammar checking for abiword.
 
 [U] http://www.abiword.org/projects/link-grammar/
 
 [A] Dom Lachowicz
-[M] Linas Vepstas - <linasvepstas@gmail.com>
+[M] Linas Vepstas <linasvepstas@gmail.com>
 
 [C] base/library
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 5.9.1
+[V] 5.13.0
 
-[O] var_append confopt ' ' '--with-pcre --disable-python-bindings --disable-java-bindings --enable-pthreads --disable-debug'
+[D] cc1bce1681090f0df02099fead36952700b70f36a495a2f371c550d0 link-grammar-5.13.0.tar.gz https://www.gnucash.org/link-grammar/downloads/5.13.0/
 
-[D] 472ec0f5e7b85b709ce2ffb36eac014c919ea59d65123903f9c69f56 link-grammar-5.9.1.tar.gz http://www.abisource.com/downloads/link-grammar/5.9.1/
+var_append confopt ' ' '--with-pcre --disable-python-bindings --disable-java-bindings --enable-pthreads --disable-debug'

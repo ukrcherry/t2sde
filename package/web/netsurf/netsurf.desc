@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/netsurf/netsurf.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A multi-platform web browser
+
+[T] NetSurf is a multi-platform web browser for RISC OS, UNIX-like platforms
+[T] (including Linux), Mac OS X, and more.
+
+[U] https://www.netsurf-browser.org/
+
+[A] Michael Drake
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/network
+[F] CROSS
+
+[L] GPL
+[V] 3.11
+
+[D] 9a0ed95a17514ebd3145894254039bbbac3097710db9fafe66190f90 netsurf-all-3.11.tar.gz https://download.netsurf-browser.org/netsurf/releases/source-full/
+
+var_append makeinstopt ' ' PREFIX=$root/$prefix
+pkginstalled gtk+ && var_append makeopt ' ' "TARGET=gtk3" && var_append makeinstopt " " TARGET=gtk3

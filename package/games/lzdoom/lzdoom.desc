@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/lzdoom/lzdoom.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,15 +11,15 @@
 [U] https://www.zdoom.org/
 
 [A] Lzdoom Authors
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
-[C] extra/base
-
-[V] 3.88a
+[C] extra/game
 
 [E] opt libwebp
 
 [L] GPL3
-[S] Stable
+[V] 4.14.3a
 
-[D] a60f6d1b590c03409de6563a07644bfc34e0ed3a93297536a52a33a8 lzdoom-3.88a.tar.gz https://github.com/drfrag666/gzdoom/archive/refs/tags/3.88a/
+[D] 4b7890badead561e26bb5fdba6011d2de8a1f2f44f5c27d45b52f452 lzdoom-4.14.3a.tar.gz https://github.com/drfrag666/gzdoom/archive/refs/tags/l4.14.3a/
+
+var_append CC_WRAPPER_APPEND ' ' -std=gnu17

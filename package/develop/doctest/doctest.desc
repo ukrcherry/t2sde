@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/doctest/doctest.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Fast header-only C++ unit testing
+
+[T] Fast header-only C++ unit testing.
+
+[U] https://github.com/doctest/doctest
+
+[A] Doctest Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 2.5.2
+[L] MIT
+[P] X -----5---9 700.000
+
+[D] 66cb144cdd282f5bb07ac5f1c735a4d0a8e4007c33c6e4b63859bfff doctest-2.5.2.tar.gz https://github.com/doctest/doctest/archive/refs/tags/v2.5.2/

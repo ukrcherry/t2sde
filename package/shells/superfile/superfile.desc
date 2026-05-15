@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/superfile/superfile.desc
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Pretty fancy and modern terminal file manager
+
+[T] superfile is a very fancy and modern terminal file manager that can
+[T] complete the file operations you need.
+
+[U] https://superfile.netlify.app/
+
+[A] yorukot
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+
+[E] opt hack-nerd-fonts
+
+[L] MIT
+[V] 1.5.0
+
+[D] 5ad12846cf69e81bd2aad9bee2f41d47600ada9fa04d164f2a07aa14 superfile-1.5.0.tar.gz https://github.com/yorukot/superfile/archive/v1.5.0/
+
+hook_add postmake 5 "cp -vf superfile $root$bindir"

@@ -1,0 +1,22 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/bluetui/bluetui.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] TUI for managing bluetooth on Linux
+
+[T] TUI for managing bluetooth on Linux.
+
+[U] https://github.com/pythops/bluetui
+
+[A] pythops
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] GPL3
+[V] 0.8.1
+
+[D] 9f7b680bc6c7999711fa917c7314e15f52f1c8827687b1fd832f6d59 bluetui-0.8.1.tar.gz https://github.com/pythops/bluetui/archive/v0.8.1/

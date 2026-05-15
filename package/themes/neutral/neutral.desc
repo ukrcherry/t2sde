@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/neutral/neutral.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,13 +12,21 @@
 [U] http://www.kde-look.org/content/show.php?content=28310
 
 [A] Alexey Nikitine
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/theme
 [F] CROSS
 
 [L] Artistic
-[S] Stable
 [V] 1.13a
 
 [D] 4404a1c5f35086dea0a57f90a3233752432f32d2567eb8a0e8030660 28310-neutral-1.13a.tar.gz http://www.kde-look.org/content/files/
+
+runmake=0
+
+neutral_install() {
+	dir=$root/`pkgprefix libx11`/share/icons/neutral/cursors
+	mkdir -p $dir
+	cp cursors/* $dir/
+}
+hook_add postmake 5 neutral_install

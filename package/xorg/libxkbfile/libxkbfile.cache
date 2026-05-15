@@ -1,12 +1,11 @@
-[TIMESTAMP] 1737708379 Fri Jan 24 09:46:19 2025
-[BUILDTIME] 4 (9)
-[SIZE] 0.20 MB, 15 files
+[TIMESTAMP] 1769424659 Mon Jan 26 11:50:59 2026
+[BUILDTIME] 6 (9)
+[SIZE] 0.19 MB, 16 files
 
 [DEP] bash
 [DEP] binutils
 [DEP] coreutils
 [DEP] diffutils
-[DEP] findutils
 [DEP] gawk
 [DEP] grep
 [DEP] libx11
@@ -16,5 +15,6 @@
 [DEP] openssl
 [DEP] sed
 [DEP] tar
+[DEP] util-linux
 [DEP] xorgproto
 [DEP] xz

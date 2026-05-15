@@ -1,0 +1,28 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libqalculate/libqalculate.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Library implementing a multi-purpose desktop calculator
+
+[T] Qalculate! is a multi-purpose cross-platform desktop calculator. It is
+[T] simple to use but provides power and versatility normally reserved for
+[T] complicated math packages, as well as useful tools for everyday needs (such
+[T] as currency conversion and percent calculation).
+
+[U] https://qalculate.github.io/
+
+[A] Libqalculate Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[E] opt doxygen
+
+[L] GPL
+[V] 5.10.0
+[P] X -----5---9 128.300
+
+[D] 835b7dae5c9b2db426a02fbba6fbfcb631a1057e9abc3573a3a2cfe3 libqalculate-5.10.0.tar.gz https://github.com/Qalculate/libqalculate/releases/download/v5.10.0/

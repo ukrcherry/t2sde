@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/qt5quicktimeline/qt5quicktimeline.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,18 +11,15 @@
 [U] https://qt.io
 
 [A] Trolltech AS <www.trolltech.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
-[F] CROSS NO-LTO.gcc
+[F] CROSS
 
 [L] LGPL
-[S] Stable
 [V] 5.15.14
-
-[O] hook_add preconf 5 qmake
-[O] var_append GCC_WRAPPER_APPEND ' ' "-I$root/$(pkgprefix includedir libxcb)"
-[O] var_append GCC_WRAPPER_APPEND ' ' "-L$root/$(pkgprefix libdir libxcb)"
 
 [CV-GROUP] qt5
 [D] 5a50919a998f91fa89d5e83629d59ad1da11e43766fb314b0fda1d8c qtquicktimeline-everywhere-opensource-src-5.15.14.tar.xz http://download.qt.io/official_releases/qt/5.15/5.15.14/submodules/
+
+. $base/package/*/*/qt5-conf.in

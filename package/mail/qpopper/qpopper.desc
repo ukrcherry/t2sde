@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/qpopper/qpopper.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,12 +14,11 @@
 [U] https://www.eudora.com/products/unsupported/qpopper/
 
 [A] Randy <randy+freshmeat@qualcomm.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network
 
 [L] OpenSource
-[S] Stable
 [V] 4.1.0
 
 [D] ceee9fa82adc8943a381dd869505ad9c9a463cccfc83aad67351c3dc qpopper4.1.0.tar.gz ftp://ftp.qualcomm.com/eudora/servers/unix/popper/

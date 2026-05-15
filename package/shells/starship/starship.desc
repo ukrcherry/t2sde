@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/starship/starship.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Minimal, blazing-fast and infinitely customizable prompt for any shell
+
+[T] Minimal, blazing-fast and infinitely customizable prompt for any shell.
+
+[U] https://starship.rs
+
+[A] Starship Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] NO-LTO.gcc
+
+[V] 1.25.1
+[L] ISC
+
+[D] 3d1e34cab687c2fb29b3a94f5008e13f8cc78a6e12e0e98e6c021189 starship-1.25.1.tar.gz https://github.com/starship/starship/archive/v1.25.1/

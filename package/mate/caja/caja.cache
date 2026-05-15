@@ -1,6 +1,6 @@
-[TIMESTAMP] 1745224700 Mon Apr 21 10:38:20 2025
+[TIMESTAMP] 1760539553 Wed Oct 15 16:45:53 2025
 [BUILDTIME] 35 (9)
-[SIZE] 17.23 MB, 307 files
+[SIZE] 17.21 MB, 293 files
 
 [DEP] appstream-glib
 [DEP] at-spi2-core
@@ -9,6 +9,7 @@
 [DEP] cairo
 [DEP] coreutils
 [DEP] diffutils
+[DEP] exempi
 [DEP] findutils
 [DEP] gawk
 [DEP] gdk-pixbuf
@@ -18,7 +19,6 @@
 [DEP] grep
 [DEP] gtk+
 [DEP] gtk-doc
-[DEP] gtk-layer-shell
 [DEP] harfbuzz
 [DEP] libexif
 [DEP] libice
@@ -32,12 +32,10 @@
 [DEP] mate-wayland-session
 [DEP] openssl
 [DEP] pango
-[DEP] pkgconfig
 [DEP] python
 [DEP] sed
 [DEP] setuptools
 [DEP] shared-mime-info
 [DEP] tar
-[DEP] wayland
 [DEP] xorgproto
 [DEP] xz

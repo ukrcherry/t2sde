@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xfce4-dev-tools/xfce4-dev-tools.desc
-[COPY] Copyright (C) 2021 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2021 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -19,11 +19,12 @@
 
 [C] extra/desktop/xfce
 
+[E] add libxfce4util
+
 [L] GPL
-[S] Stable
 [V] 4.20.0
 [P] X ?----5---9 222.350
 
-[O] atstage toolchain || . $base/package/xfce4/*/xfce4-conf.in
-
 [D] dc0c51fe56d23bab765b074dee81f7a10576a6a1e5c1f5f3f3f99ec3 xfce4-dev-tools-4.20.0.tar.bz2 https://archive.xfce.org/src/xfce/xfce4-dev-tools/4.20/
+
+atstage toolchain || . $base/package/xfce4/*/xfce4-conf.in

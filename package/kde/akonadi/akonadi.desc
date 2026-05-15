@@ -1,29 +1,29 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/akonadi/akonadi.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
 [I] PIM layer, which provides an asynchronous API to access all kind of PIM data
 
-[T] The Akonadi framework is responsible for providing applications with a 
-[T] centralized database to store, index and retrieve the user's personal 
-[T] information. This includes the user's emails, contacts, calendars, events, 
+[T] The Akonadi framework is responsible for providing applications with a
+[T] centralized database to store, index and retrieve the user's personal
+[T] information. This includes the user's emails, contacts, calendars, events,
 [T] journals, alarms, notes, etc.
 
 [U] https://userbase.kde.org/Akonadi/
 
 [A] The KDE-Team
-[M] Aldas Nabazas <aldas@t2-project.org>
+[M] Aldas Nabazas <baldzius@gmail.com>
 
 [C] extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 25.04.1
-[P] X -----5---9 162.000
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 26.04.1
+[P] X -----5---9 162.960
 
 [CV-GROUP] kde-gear
-[D] 2245ab6234e6df67b3fd1dd3d904797c47280b48b9ac513432c73f1d akonadi-25.04.1.tar.xz https://download.kde.org/stable/release-service/25.04.1/src/
+[D] 395e9bdab8f8d07b3c9c8c9a26656f1bdd393252db8f3179142e00ab akonadi-26.04.1.tar.xz https://download.kde.org/stable/release-service/26.04.1/src/
+
+. $base/package/*/*/kde-conf.in

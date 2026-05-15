@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/ipset/ipset.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Manage Linux IP sets
+
+[T] Manage Linux IP sets.
+
+[U] https://ipset.netfilter.org/
+
+[A] Ipset Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 7.24
+[L] GPL
+
+[D] 65b396f760c8235d294e40cdabd2e2f4838f4e7202bfa13e529f2d1e ipset-7.24.tar.bz2 https://ipset.netfilter.org/

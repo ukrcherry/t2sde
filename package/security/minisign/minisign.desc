@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/minisign/minisign.desc
-[COPY] Copyright (C) 2023 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2023 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,16 +11,15 @@
 [U] https://jedisct1.github.io/minisign/
 
 [A] Frank Denis <j@pureftpd.org>
-[M] The T2 Project <t2@t2sde.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/security
 [F] CROSS
 
 [L] ISC
-[S] Stable
-[V] 0.11
+[V] 0.12
 
-[O] runzig=0
-[O] var_insert taropt ' ' --one-top-level
+[D] 008b0b63cdd2d5f249b75973c12e92327d17d20f9c01ef8d8c43b1f7 minisign-0.12.tar.gz https://github.com/jedisct1/minisign/releases/download/0.12/
 
-[D] 2ab9e0e46ad897c97e83e732c1ab8d92de5c5b9c5c4c9fa553973ebf minisign-0.11.tar.gz https://github.com/jedisct1/minisign/releases/download/0.11/
+runzig=0
+var_insert taropt ' ' --one-top-level

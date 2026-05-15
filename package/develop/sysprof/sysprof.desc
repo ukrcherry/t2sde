@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/sysprof/sysprof.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -23,9 +23,8 @@
 [R] + x86 x86-64
 
 [L] GPL
-[S] Stable
-[V] 48.0
+[V] 49.0
 
-[O] pkginstalled systemd || var_append mesonopt ' ' -Dsystemdunitdir=disabled
+[D] 8573e91bf6575c6796a443179308cc8c8b53e8364ef63a6b9d8e8c2a sysprof-49.0.tar.xz https://download.gnome.org/sources/sysprof/49/
 
-[D] 19eac211f8f2a2f66d15210c90e3a660df7cdb37d829960d07a6343c sysprof-48.0.tar.xz https://download.gnome.org/sources/sysprof/48/
+pkginstalled systemd || var_append mesonopt ' ' -Dsystemdunitdir=disabled

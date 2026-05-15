@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/grzip/grzip.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,16 +15,15 @@
 [T] filters. This is essentially an adaptation/extension of GRZipII by
 [T] Ilya Grebnov.
 
-[U] http://magicssoft.ru/?folder=projects&page=GRZipII
+[U] https://codeberg.org/BSDforge/grzip
 
 [A] Jean-Pierre Demailly <demailly@fourier.ujf-grenoble.fr>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/tool
 [F] FPIC
 
 [L] LGPL
-[S] Beta
-[V] 0.3.0
+[V] 0.3.1
 
-[D] 8af405de824c771b485fb2a7a4f43efe5daa251922334455bbb4ca20 grzip-0.3.0.tar.bz2 ftp://ftp.ac-grenoble.fr/ge/compression/
+[D] d83e16eb0a8168d76dbcc0ec6fa823279059d513ae5913717354ec43 grzip-0.3.1.tar.gz !https://codeberg.org/BSDforge/grzip/archive/0.3.1.tar.gz

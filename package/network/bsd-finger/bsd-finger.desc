@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/bsd-finger/bsd-finger.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -10,14 +10,13 @@
 [T] This is the BSD finger client and daemon from the Linux netkit.
 
 [A] NetKit maintainers <netbug@ftp.uk.linux.org> {we are not the authors}
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network
 
 [L] BSD
-[S] Stable
 [V] 0.17
 
-[O] confopt="--prefix=/$prefix"
-
 [D] e1f548b8677552714d340d048f61d294219bb7cb0cce969e0b5df202 bsd-finger-0.17.tar.gz ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/
+
+confopt="--prefix=/$prefix"

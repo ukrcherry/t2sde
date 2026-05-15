@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/cxxopts/cxxopts.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Lightweight C++ command line option parser as a header only library
+
+[T] Lightweight C++ command line option parser as a header only library.
+
+[U] https://github.com/jarro2783/cxxopts
+
+[A] Cxxopts Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 3.3.1
+[L] MIT
+
+[D] 94ee6ddd8ddb965c5d9e03aa55a3660d33f20a1a8ec3801a9e8a0f1d cxxopts-3.3.1.tar.gz https://github.com/jarro2783/cxxopts/archive/v3.3.1/

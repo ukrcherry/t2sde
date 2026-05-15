@@ -1,6 +1,6 @@
-[TIMESTAMP] 1743178572 Fri Mar 28 17:16:12 2025
-[BUILDTIME] 30 (9)
-[SIZE] 2.82 MB, 39 files
+[TIMESTAMP] 1758128807 Wed Sep 17 19:06:47 2025
+[BUILDTIME] 115 (9)
+[SIZE] 2.40 MB, 55 files
 
 [DEP] bash
 [DEP] binutils
@@ -14,9 +14,10 @@
 [DEP] grep
 [DEP] gzip
 [DEP] libaom
-[DEP] libde265
+[OPT] libde265
 [DEP] libjpeg
 [DEP] libpng
+[DEP] libsdl2
 [DEP] libtiff
 [OPT] libwebp
 [DEP] linux-header
@@ -24,5 +25,4 @@
 [DEP] pkgconfig
 [DEP] sed
 [DEP] tar
-[DEP] tbb
 [DEP] zlib

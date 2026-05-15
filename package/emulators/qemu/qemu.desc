@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/qemu/qemu.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -14,30 +14,78 @@
 [U] https://www.qemu.org/
 
 [A] Fabrice Bellard <fabrice@bellard.org>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/emulator
 [F] NO-SSP CROSS NO-LTO.gcc LATOMIC.sparc
 [R] - alpha ia64 riscv
 
 [L] GPL
-[S] Stable
-[V] 10.0.0
+[V] 11.0.0
 
 [E] add packaging
+[E] opt capstone
 [E] opt jack
 [E] opt fuse
+[E] opt glusterfs
+[E] opt libbpf
+[E] opt libcap-ng
 [E] opt libsdl2
 [E] opt liburing
 [E] opt libnfs
 [E] opt libiscsi
+[E] opt libseccomp
 [E] opt libslirp
 [E] opt numactl
+[E] opt ndctl
 [E] opt pipewire
 [E] opt pulseaudio
 [E] opt spice-protocol libspice
 [E] opt libssh
 [E] opt cyrus-sasl2
+[E] opt vte
+[E] opt snappy
 
 [CV-URL] http://www.qemu.org/
-[D] bccfd168b66137a22c4657615072d81d471b27ced5d4553633c0e1cf qemu-10.0.0.tar.xz https://wiki.qemu.org/download/
+[D] d602413af11622f8e6adba6c7e4f415acceeadb553b26a64c6b02c9a qemu-11.0.0.tar.xz https://wiki.qemu.org/download/
+
+runmeson=0
+
+var_remove confopt ' ' --disable-debug
+
+var_remove_regex confopt ' ' '--host=.*'
+var_remove_regex makeopt ' ' 'CPP=.*'; unset CPP
+
+if atstage cross; then
+	export PKG_CONFIG=pkg-config
+	var_append confopt ' ' --cross-prefix=$arch_target-
+	var_append SYSCC_WRAPPER_APPEND ' ' "$(PKG_CONFIG_PATH=$SYSPKG_CONFIG_PATH /usr/bin/pkg-config glib-2.0 --cflags --libs-only-L)"
+fi
+
+if [ "$SDECFG_PKG_QEMU_ALL" = 0 ]; then
+	qemu_arch=$(echo $arch_machine | arch2uname)
+	qemu_arch=${qemu_arch/i?86/i386}
+	var_append confopt ' ' \
+		"--target-list=$qemu_arch-softmmu,$qemu_arch-linux-user"
+else
+	# does not build due to *64 variants
+	[ "$SDECFG_LIBC" = musl ] && var_append confopt ' ' --target-list-exclude=linux-user
+fi
+
+case $arch_machine in
+	alpha|armv*eb|hppa*|ia64|m68k|sparc|sparcv*|sh[0-9])
+		var_append confopt ' ' --enable-tcg-interpreter ;;
+	powerpc)
+		# undefined reference to `_restgpr_29_x'
+		var_append GCC_WRAPPER_APPEND ' ' '*/pc-bios/*?-O2:' ;;
+esac
+[ "$SDECFG_X8664_X32" = 1 ] && var_append confopt ' ' --enable-tcg-interpreter
+
+var_append GCC_WRAPPER_INSERT ' ' "-c?:-L`pkgprefix libdir glib`"
+# does not correctly locate libX11 itself
+pkginstalled libx11 && var_append GCC_WRAPPER_INSERT ' ' "-c?:-L`pkgprefix libdir libx11`"
+pkginstalled virglrenderer && var_append GCC_WRAPPER_INSERT ' ' "-I`pkgprefix includedir virglrenderer`"
+pkginstalled alsa-lib && var_append confopt ' ' --audio-drv-list=alsa
+
+# Allow vm networking with "-nic user"
+var_append confopt ' ' --enable-slirp

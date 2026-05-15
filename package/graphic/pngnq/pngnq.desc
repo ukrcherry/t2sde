@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/pngnq/pngnq.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,15 +11,14 @@
 [U] https://pngnq.sourceforge.net/
 
 [A] Chris Pearson
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] CROSS
 
 [L] BSD
-[S] Beta
 [V] 1.1
 
-[O] var_append makeinstopt ' ' 'BINDIR=$root$bindir MANDIR=$root$mandir/man1 DOCDIR=$root$docdir'
+[D] 5b1ce58f0778ee8ce3a822e764ba154ed490200f80b02a57dabb34d2 pngnq-1.1.tar.gz https://prdownloads.sourceforge.net/sourceforge/pngnq/
 
-[D] 5b1ce58f0778ee8ce3a822e764ba154ed490200f80b02a57dabb34d2 pngnq-1.1.tar.gz http://dl.sourceforge.net/sourceforge/pngnq/
+var_append makeinstopt ' ' 'BINDIR=$root$bindir MANDIR=$root$mandir/man1 DOCDIR=$root$docdir'

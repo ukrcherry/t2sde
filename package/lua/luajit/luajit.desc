@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/luajit/luajit.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -19,21 +19,20 @@
 [U] https://luajit.org/
 
 [A] Mike Pall <mikelu-1105@mike.de>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
-[F] CROSS DIETLIBC NO-LTO.gcc
+[F] CROSS DIETLIBC NO-LTO
 
 [R] + arm arm64 x86 x86-64 ppc mips
 
 [L] MIT
-[S] Beta
-[V] 2.1-a4f56a4
+[V] 2.1 a4f56a4
 [P] X -----5---9 149.800
 
-[O] . $base/package/*/*/lua-conf.in
-[O] var_append AR ' ' rc
-[O] var_append makeopt ' ' "MYCFLAGS=\"$myCFLAGS\""
-[O] var_append makeopt ' ' "MYLIBS=\"-Wl,-E $myLIBS\""
-
 [D] 279598f7f9fa3f6cdae3ea0c28d37d5fea3cee04aff6b41cf5b563a9 luajit-2.1-a4f56a4.tar.gz !https://repo.or.cz/luajit-2.0.git/snapshot/a4f56a459a588ae768801074b46ba0adcfb49eb1.tar.gz
+
+. $base/package/*/*/lua-conf.in
+var_append AR ' ' rc
+var_append makeopt ' ' "MYCFLAGS=\"$myCFLAGS\""
+var_append makeopt ' ' "MYLIBS=\"-Wl,-E $myLIBS\""

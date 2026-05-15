@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/bird/bird.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] BIRD Internet Routing Daemon
+
+[T] BIRD is a dynamic IP routing daemon with full support of most modern
+[T] routing protocols, easy to use configuration interface and powerful route
+[T] filtering language.
+
+[U] https://bird.nic.cz/
+
+[A] Bird Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/network
+[F] CROSS
+
+[L] GPL
+[V] 3.2.1
+
+[D] 62c1cc94fc3fc8b4fe802cdc9d49982f0f31470a4a4ac6d9e957ccc1 bird-3.2.1.tar.gz https://bird.nic.cz/download/

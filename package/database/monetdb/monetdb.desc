@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/monetdb/monetdb.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Column-oriented database management system
+
+[T] Column-oriented database management system.
+
+[U] https://www.monetdb.org/Home
+
+[A] Monetdb Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 11.55.5
+[L] MPL
+
+[D] 6240668e6872e7df58aaa0d48e7e38efcbc0eff06ffdeef00970ed76 MonetDB-11.55.5.tar.xz https://www.monetdb.org/downloads/sources/archive/

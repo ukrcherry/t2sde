@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/mupdf/mupdf.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -17,8 +17,17 @@
 [F] CROSS
 
 [L] AGPL
-[S] Beta
-[V] 1.25.2
+[V] 1.27.2
 [P] X -----5---9 400.000
 
-[D] 86f4efc75ef0efdce314432bc3ccf7525c1344d1d93ae1d8f3607e19 mupdf-1.25.2-source.tar.gz https://mupdf.com/downloads/archive/
+[D] 18edec5bb2676517ca85d73572e4c6dd0eff9e9cabb66469aeb8c791 mupdf-1.27.2-source.tar.gz https://mupdf.com/downloads/archive/
+
+rungpepinstall=0 runpysetup=0 runpipinstall=0
+
+var_append makeopt ' ' USE_SYSTEM_LIBS=yes
+pkginstalled leptonlib && var_append makeopt ' ' HAVE_LEPTONICA=
+pkginstalled tesseract && var_append makeopt ' ' HAVE_TESSERACT=yes
+makeinstopt="$makeopt install"
+pkginstalled python && var_append makeinstopt ' ' install-shared-python
+
+hook_add postmake 7 "ln -sfv mupdf-gl $root$bindir/mupdf"

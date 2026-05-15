@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/vulkan-headers/vulkan-headers.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -10,7 +10,7 @@
 [T] work. No (or very little) validation or error checking is done inside a Vulkan driver.
 
 [A] Khronos Group
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [U] https://www.khronos.org/vulkan/
 
@@ -18,12 +18,11 @@
 [F] CROSS
 
 [L] OpenSource
-[S] Stable
-[V] 1.4.309.0
+[V] 1.4.351
 [P] X -----5---9 127.400
-
-[O] var_append cmakeopt ' ' -GNinja
 
 [CV-FLAGS] NO-PREFIX
 [CV-GROUP] vulkan
-[D] bf96e2ad29563f803abef73b6ca25ea1e78dfe7f544cb6918be2f99c Vulkan-Headers-1.4.309.0.tar.gz https://github.com/KhronosGroup/Vulkan-Headers/archive/refs/tags/vulkan-sdk-1.4.309.0/
+[D] 6e260b304d0a080b01ab84076ec0354299b1f06558fbd13e4c09f47a Vulkan-Headers-1.4.351.tar.gz https://github.com/KhronosGroup/Vulkan-Headers/archive/v1.4.351/
+
+var_append cmakeopt ' ' -GNinja

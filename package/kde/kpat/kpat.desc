@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/kpat/kpat.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -14,17 +14,19 @@
 [U] https://apps.kde.org/kpat/
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
-[E] opt kdoctools
+[F] CROSS OBJDIR
+
+[E] add six
 
 [L] GPL
-[S] Stable
-[V] 25.04.1
-[P] X -----5---9 162.420
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 26.04.1
 
 [CV-GROUP] kde-gear
-[D] 108beaac9daaf0bfea97571582ad8a0d0ea1a366c7307d7af4cdbd08 kpat-25.04.1.tar.xz https://download.kde.org/stable/release-service/25.04.1/src/
+[D] 639fe6c961f5cc5859e66f8020b8dcd27d1d914ffae20dc532965394 kpat-26.04.1.tar.xz https://download.kde.org/stable/release-service/26.04.1/src/
+
+. $base/package/*/*/kde-conf.in
+
+pkginstalled kdoctools docbook-xml docbook-xsl || var_append cmakeopt ' ' -DBUILD_DOC=OFF

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/cyme/cyme.desc
-[COPY] Copyright (C) 2014 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2014 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,13 +12,12 @@
 [U] https://github.com/tuna-f1sh/cyme
 
 [A] John Whittington <git@jbrengineering.co.uk>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/system
 [F] CROSS
 
 [L] GPL3
-[S] Stable
-[V] 1.8.4
+[V] 2.3.0
 
-[D] 88c545f6462cbf39e0fa0117fc21c69e7feddfb50f9e391f9f188599 cyme-1.8.4.tar.gz https://github.com/tuna-f1sh/cyme/archive/refs/tags/v1.8.4/
+[D] 86c3fcb96f869629389e63df6e12a7c5c903c44dbb361e132f269443 cyme-2.3.0.tar.gz https://github.com/tuna-f1sh/cyme/archive/refs/tags/v2.3.0/

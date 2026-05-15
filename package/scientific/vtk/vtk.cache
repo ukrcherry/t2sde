@@ -1,6 +1,6 @@
-[TIMESTAMP] 1739133639 Sun Feb  9 21:40:39 2025
-[BUILDTIME] 2400 (5)
-[SIZE] 180.37 MB, 5085 files
+[TIMESTAMP] 1759842502 Tue Oct  7 15:08:22 2025
+[BUILDTIME] 3650 (9)
+[SIZE] 187.95 MB, 5203 files
 
 [DEP] bash
 [DEP] binutils
@@ -9,9 +9,9 @@
 [DEP] diffutils
 [DEP] freetype
 [DEP] gawk
-[DEP] git
 [DEP] grep
 [DEP] gzip
+[OPT] hdf5
 [DEP] libx11
 [DEP] libxcursor
 [DEP] linux-header

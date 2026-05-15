@@ -1,6 +1,6 @@
-[TIMESTAMP] 1744906795 Thu Apr 17 18:19:55 2025
-[BUILDTIME] 740 (5)
-[SIZE] 38.64 MB, 2175 files
+[TIMESTAMP] 1770493609 Sat Feb  7 20:46:49 2026
+[BUILDTIME] 410 (9)
+[SIZE] 22.28 MB, 1829 files
 
 [DEP] bash
 [DEP] binutils
@@ -10,7 +10,6 @@
 [OPT] docbook-xml
 [OPT] docbook-xsl
 [DEP] extra-cmake-modules
-[DEP] findutils
 [DEP] freetype
 [DEP] gawk
 [DEP] gettext
@@ -39,17 +38,17 @@
 [DEP] kwindowsystem
 [DEP] kxmlgui
 [DEP] libxcb
-[DEP] libxml
 [DEP] linux-header
 [DEP] make
 [DEP] pkgconfig
 [DEP] procps
 [DEP] qt6base
 [DEP] qt6declarative
+[DEP] qtkeychain
 [DEP] sed
 [DEP] solid
 [DEP] syntax-highlighting
 [DEP] tar
-[DEP] tbb
+[DEP] util-linux
 [DEP] vulkan-headers
 [DEP] xz

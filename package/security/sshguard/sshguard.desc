@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/sshguard/sshguard.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Protects hosts from brute-force attacks against SSH and other services
+
+[T] Protects hosts from brute-force attacks against SSH and other services.
+
+[U] https://www.sshguard.net/
+
+[A] Sshguard Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 2.5.1
+[L] ISC
+
+[D] d829075e9ce50bfae8795bd439d784f3273f1263feea1130514e6825 sshguard-2.5.1.tar.gz https://downloads.sourceforge.net/project/sshguard/sshguard/2.5.1/

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/junit/junit.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,14 +12,13 @@
 [U] https://www.junit.org/
 
 [A] JUnit.org team
-[M] Minto van der Sluis <Minto@MultiMach.com>
+[M] Minto van der Sluis <minto@multimach.com>
 
 [C] extra/development
 
 [L] OpenSource
-[S] Stable
-[V] 4.4
+[V] 6.1.0-M1
 
-[O] . $base/package/*/*/java-conf.in
+[D] c1307f6d035849f60ba760a46bc0a33edbe66088018b4552c1fea9c4 junit-r6.1.0-M1.tar.gz https://github.com/junit-team/junit-framework/archive/refs/tags/r6.1.0-M1/
 
-[D] bc662769fe8c89b0f6c16074d99bf7e873b58ee29f6dd031a39600cf junit4.4.zip http://dl.sourceforge.net/sourceforge/junit/
+#. $base/package/*/*/java-conf.in

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/wayfire/wayfire.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,15 +13,15 @@
 [U] https://wayfire.org/
 
 [A] Iliya Bozhinov
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/x11
 
 [L] MIT
-[S] Beta
-[V] 0.9.0
+[V] 0.10.1
 [P] X -----5---9 700.000
 
-[O] var_append mesonopt ' ' "-Duse_system_wlroots=enabled -Duse_system_wfconfig=enabled"
+[CV-GROUP] wayfire
+[D] e8333868191cfc932b46a10903c434f40414273c6d6a803094b548b5 wayfire-0.10.1.tar.gz git+https://github.com/WayfireWM/wayfire.git v0.10.1
 
-[D] b9b4c5c1952c648533c6d8804642fb25953bc1cad12be7ed2aacf581 wayfire-0.9.0.tar.gz git+https://github.com/WayfireWM/wayfire.git v0.9.0
+var_append mesonopt ' ' "-Duse_system_wlroots=enabled -Duse_system_wfconfig=enabled"

@@ -1,9 +1,7 @@
+[TIMESTAMP] 1773053795 Mon Mar  9 11:56:35 2026
+[BUILDTIME] 175 (9)
+[SIZE] 5.38 MB, 8 files
 
-[TIMESTAMP] 1732198365 Thu Nov 21 15:12:45 2024
-[BUILDTIME] 80 (9) ERROR
-[SIZE] 0.01 MB, 6 files
-
-[DEP] 00-dirtree
 [DEP] 7zip
 [DEP] bash
 [DEP] binutils
@@ -11,13 +9,20 @@
 [DEP] cmake
 [DEP] coreutils
 [DEP] diffutils
+[OPT] fmod
 [DEP] gawk
 [DEP] grep
+[OPT] gtk+2
+[OPT] libgme
 [DEP] libjpeg
 [DEP] libsdl2
+[DEP] libsndfile
 [DEP] linux-header
 [DEP] make
+[DEP] mpg123
+[OPT] openal
 [DEP] pkgconfig
 [DEP] sed
-[DEP] tbb
+[DEP] util-linux
+[OPT] valgrind
 [DEP] zlib

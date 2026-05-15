@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/flite/flite.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,17 +14,12 @@
 [U] http://cmuflite.org
 
 [A] Alan W Black <awb@cs.cmu.edu>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
-[F] CROSS
+[F] CROSS NOPARALLEL
 
 [L] OpenSource
-[S] Stable
-[V] 2.1
+[V] 2.2
 
-[O] var_append confopt ' ' '--bindir=\${prefix}/bin --libdir=\${prefix}/'${libdir##*/}
-[O] var_append confopt ' ' --includedir=\${prefix}/include
-[O] var_append makeinstopt ' ' prefix=$root/$prefix
-
-[D] f858a24d22442ae7a45a4f1399a86b8d2292e1373e7122e374d2fc9a flite-2.1-release.tar.bz2 http://cmuflite.org/packed/flite-2.1/
+[D] 163a534a9a4d9e74008a5759555ce54f4e2c6b33fae9a3ac5bc6ddde flite-2.2-release.tar.gz https://github.com/festvox/flite/archive/v2.2/

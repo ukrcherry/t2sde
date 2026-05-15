@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/ccid/ccid.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,14 +12,15 @@
 
 [U] https://ccid.apdu.fr/
 
-[A] Ludovic Rousseau <ludovic.rousseau@free.fr>.
-[M] Marian Aldenhoevel <Marian.Aldenhoevel@mba-software.de>
+[A] Ludovic Rousseau <ludovic.rousseau@free.fr>
+[M] Marian Aldenhövel <marian.aldenhoevel@mba-software.de>
 
 [C] extra/tool
 [F] CROSS
 
 [L] LGPL
-[S] Stable
-[V] 1.6.2
+[V] 1.7.1
 
-[D] 983a6e47bf399533019ef79661d547c4aeb6f08cd9dc1e9ce2d185af ccid-1.6.2.tar.gz https://github.com/LudovicRousseau/CCID/archive/refs/tags/1.6.2/
+[D] 3ebc2125f144bf55f4754f53451d4cc7ca423a9b61ffea90051d2bdd ccid-1.7.1.tar.gz https://github.com/LudovicRousseau/CCID/archive/refs/tags/1.7.1/
+
+var_append mesonopt ' ' -Dpcsclite=false

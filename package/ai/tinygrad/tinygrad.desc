@@ -1,0 +1,24 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/tinygrad/tinygrad.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Something between PyTorch and karpathy/micrograd
+
+[T] Despite tinygrad's size, it is a fully featured deep learning framework.
+[T] Due to its extreme simplicity, it is the easiest framework to add new
+[T] accelerators to, with support for both inference and training. If XLA is
+[T] CISC, tinygrad is RISC.
+
+[U] https://tinygrad.org/
+
+[A] tinygrad
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/development
+
+[L] MIT
+[V] 0.12.0
+
+[D] 4a76a159b2018af3a6dba199e1a789e99604ad4855a9f71125884761 tinygrad-0.12.0.tar.gz https://github.com/tinygrad/tinygrad/archive/v0.12.0/

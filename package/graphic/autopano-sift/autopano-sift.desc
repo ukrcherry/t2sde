@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/autopano-sift/autopano-sift.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -18,7 +18,19 @@
 [C] extra/multimedia
 
 [L] GPL
-[S] Stable
 [V] 2.4
 
 [D] 19f443d419fe7e892bc0ede1e1025777b12f967da799b5c94d2eec16 autopano-sift-2.4.tar.gz https://www.nowozin.net/sebastian/tu-berlin-2006/autopano-sift/
+
+. $base/package/*/mono/mono.in
+
+atps_main() {
+    make clean all
+    rm -f bin/*win32.exe
+    cp -vf bin/*.exe $root$bindir/
+    cp -vf bin/*.dll $root$libdir/
+}
+
+srcdir="autopano-sift-$ver/src"
+runmake=0
+hook_add postmake 5 atps_main

@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/dnsrecon/dnsrecon.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] DNS Enumeration Script
+
+[T] DNS Enumeration Script.
+
+[U] https://github.com/darkoperator/dnsrecon
+
+[A] Dnsrecon Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 1.6.0
+[L] GPL
+
+[D] 5aa961de720397c62cc503b71b8a656eeb285130e600d8808156a9d6 dnsrecon-1.6.0.tar.gz https://github.com/darkoperator/dnsrecon/archive/1.6.0/

@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/toot/toot.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Mastodon cli & tui
+
+[T] Toot is a CLI and TUI tool for interacting with Mastodon instances from the
+[T] command line.
+
+[U] https://github.com/ihabunek/toot
+
+[A] Toot Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[L] GPL3
+[V] 0.52.1
+
+[D] dbcd38849b5525be22dbe77f33cd25627449177c12c8885e3c77696b toot-0.52.1.tar.gz https://files.pythonhosted.org/packages/source/t/toot/

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/soundtracker/soundtracker.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -17,12 +17,13 @@
 [U] http://www.soundtracker.org/
 
 [A] Michael Krause <m.krause@tu-harburg.de>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 
 [L] GPL
-[S] Stable
-[V] 0.6.8
+[V] 1.0.5.1
 
-[D] a9365bc04b80a603857a53ec11c7d45d85bee3e7ada626fd138dbf13 soundtracker-0.6.8.tar.gz http://www.soundtracker.org/dl/v0.6/
+[D] 19bd9328b4ee25f3c4c4573d81d6e3fa03051ccf28da046b590e2442 soundtracker-1.0.5.1.tar.xz https://download.sourceforge.net/project/soundtracker/
+
+var_append CC_WRAPPER_APPEND ' ' -std=gnu11

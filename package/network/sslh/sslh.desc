@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/sslh/sslh.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Applicative Protocol Multiplexer
+
+[T] Applicative Protocol Multiplexer (e.g. share SSH and HTTPS on the same port).
+
+[U] https://www.rutschle.net/tech/sslh/README.html
+
+[A] Sslh Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 2.3.1
+[L] GPL
+
+[D] aa8485b0ee128eac14aa4189d95a1538c79d27bf5705477be7f93f43 sslh-v2.3.1.tar.gz https://www.rutschle.net/tech/sslh/

@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/tinyproxy/tinyproxy.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Lightweight HTTP proxy
+
+[T] Lightweight HTTP proxy.
+
+[U] https://tinyproxy.github.io/
+
+[A] Tinyproxy Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.11.3
+[L] GPL
+
+[D] b4cfaf3d76168659006d1c8bd7f80252819b4275ea2f98c03cf8cd39 tinyproxy-1.11.3.tar.xz https://github.com/tinyproxy/tinyproxy/releases/download/1.11.3/

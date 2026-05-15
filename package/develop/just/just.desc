@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/just/just.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,16 +11,15 @@
 [U] https://just.systems/
 
 [A] Casey Rodarmor
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/development
 [F] CROSS
 
 [L] CC0
-[S] Stable
-[V] 1.40.0
+[V] 1.51.0
 [P] X ?----5---9 200.700
 
-[O] runjust=0
+[D] e81d0beda117fe2bab4a99c7e8ce25d258bc5d79d762af4100d6f02f just-1.51.0.tar.gz https://github.com/casey/just/archive/refs/tags/1.51.0/
 
-[D] 20e8b78d3116fc3cc394be61e4f00889eb2d06ca0eb3db9e96c1af8f just-1.40.0.tar.gz https://github.com/casey/just/archive/refs/tags/1.40.0/
+runjust=0

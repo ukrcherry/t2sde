@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/poweralertd/poweralertd.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] UPower-powered power alerter
+
+[T] UPower-powered power alerter.
+
+[U] https://git.sr.ht/~kennylevinsen/poweralertd
+
+[A] Poweralertd Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.3.0
+[L] GPL3
+
+[D] e31ea01cbc7ee88797015cd2d73816742f3e83c095b0b0a6ec056c98 poweralertd-0.3.0.tar.gz !https://git.sr.ht/~kennylevinsen/poweralertd/archive/0.3.0.tar.gz

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libburn/libburn.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -16,16 +16,15 @@
 [A] Thomas Schmitt
 [A] Dana Jansens {Original author}
 [A] Derek Foreman {Original author}
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/filesystem
 [F] CROSS
 
 [L] GPL
-[S] Gamma
-[V] 1.5.6
+[V] 1.5.8
 [P] X -----5---9 400.000
 
-[O] var_append confopt ' ' --disable-ldconfig-at-install
+[D] f6390dd71bf1cd139e3b420a664cf15835565bc8699faee792c55990 libburn-1.5.8.tar.gz https://files.libburnia-project.org/releases/
 
-[D] e919e0eec76e7f7056cba9136f056bfda7460c1d17cf5429c0c601ad libburn-1.5.6.tar.gz http://files.libburnia-project.org/releases/
+var_append confopt ' ' --disable-ldconfig-at-install

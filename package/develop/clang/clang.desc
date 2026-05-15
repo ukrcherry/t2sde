@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/clang/clang.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -8,25 +8,100 @@
 
 [T] The Clang project provides a language front-end and tooling infrastructure
 [T] for languages in the C language family (C, C++, Objective C/C++, OpenCL,
-[T] CUDA, and RenderScript) for the LLVM project. 
+[T] CUDA, and RenderScript) for the LLVM project.
 
 [U] https://clang.llvm.org/
 
 [A] University of Illinois/NCSA
 [A] Chris Lattner <clattner@apple.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/system
 [F] OBJDIR CROSS CC CXX KCC NO-LTO.gcc LATOMIC.arch32
 # sparc(32) (Threading.cpp.o): undefined reference to symbol 'pthread_create@@GLIBC_2.1'
-[R] - alpha arc avr32 blackfin ia64 m68k microblaze nios2 openrisc sparc
+[R] - alpha arc avr32 blackfin cris m68k microblaze nios2 openrisc
 
 [L] BSD
-[S] Stable
-[V] 20.1.4
+[V] 22.1.5
 [P] X 01---5---9 105.000
 
-[CV-GROUP] llvmorg
-[D] e2f1c99ca1f758004beca58eeb5f610d90cfc449556712986302d557 clang-20.1.4.src.tar.xz https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.4/
-[D] 2ed8262ff2b476d457d658228165a0260ce5b82e0953ba91c5852332 clang-tools-extra-20.1.4.src.tar.xz https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.4/
-[D] a9713c0e19a33e061a143e6c6a7cd5c3d5706a8796c5507caa26469f llvm-cmake-20.1.4.src.tar.xz !https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.4/cmake-20.1.4.src.tar.xz
+[CV-GROUP] llvm-project
+[D] 539b0fa857272b2b18ad9b9e58e11d4e48e0f1c807ec375d5ca91913 llvm-project-22.1.5.src.tar.xz https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.5/
+
+#var_append cmakeopt -DPACKAGE_VENDOR=T2
+#var_append cmakeopt -DCLANG_VENDOR=T2
+
+srcdir=*/clang
+
+extra_tools() {
+	#tar $taropt `match_source_file -p extra`
+	#ln -s clang-tools-extra{-*,}
+	mv ../clang-tools-extra .
+}
+hook_add prepatch 5 extra_tools
+
+[ $arch = powerpc -o "$SDECFG_POWERPC64_32" = 1 ] &&
+	var_append patchfiles ' ' $confdir/no-clang-tidy.diff
+
+# currently clang uses the default target from llvm
+#var_append cmakeopt ' ' -DCLANG_DEFAULT_TARGET_TRIPLE=$arch_target
+
+[ $SDECFG_DEFAULT_CC = 'clang' ] && ! pkginstalled gcc &&
+	var_append cmakeopt ' ' \
+	"-DCLANG_DEFAULT_CXX_STDLIB=libc++ \
+	-DCLANG_DEFAULT_RTLIB=compiler-rt \
+	-DCLANG_DEFAULT_UNWINDLIB=libunwind"
+
+clang_postmake() {
+	# force a tools rebuild
+	rm -fv $base/build/$SDECFG_ID/TOOLCHAIN/$toolsdir/.lastupdate
+
+	# create various symlinks for cc, c++, cpp and f77
+	if atstage toolchain; then
+		# TODO: or probably better program name transform?
+		ln -sfv clang $root/$prefix/bin/${arch_target}-clang
+		ln -sfv clang++ $root/$prefix/bin/${arch_target}-clang++
+
+		for x in $([ "$SDECFG_DEFAULT_CC" = clang ] && echo cc
+			[ "$SDECFG_DEFAULT_CXX" = clang ] && echo c++
+			[ "$SDECFG_DEFAULT_KCC" = clang ] && echo kcc); do
+			[ $x != c++ ] &&
+				ln -svf ${arch_target}-clang $root/$prefix/bin/${arch_target}-$x ||
+				ln -svf ${arch_target}-clang++ $root/$prefix/bin/${arch_target}-$x
+		done
+
+		# install some internal helper tools for cross bootstrap
+		[ -e bin/clang-tidy-confusable-chars-gen ] &&
+			install bin/clang-tidy-confusable-chars-gen $root$bindir/
+		install bin/clang-tblgen $root$bindir/
+
+		return
+	fi
+
+	# TODO: cpp?
+	for x in $([ "$SDECFG_DEFAULT_CC" = clang ] && echo cc
+		[ "$SDECFG_DEFAULT_CXX" = clang ] && echo c++
+		[ "$SDECFG_DEFAULT_KCC" = clang ] && echo kcc); do
+		[ $x != c++ ] && ln -svf clang $root/$prefix/bin/$x || ln -svf clang++ $root/$prefix/bin/$x
+	done
+}
+hook_add postmake 5 clang_postmake
+
+if atstage toolchain; then
+	var_append cmakeopt ' ' -DDEFAULT_SYSROOT=$sysroot
+elif atstage cross; then
+	var_append cmakeopt ' ' -DCLANG_TABLEGEN=$root/TOOLCHAIN/$toolsdir/bin/clang-tblgen
+	var_append cmakeopt ' ' -DCLANG_TIDY_CONFUSABLE_CHARS_GEN=$root/TOOLCHAIN/$toolsdir/bin/clang-tidy-confusable-chars-gen
+	var_append cmakeopt ' ' -DCLANG_PSEUDO_GEN=$root/TOOLCHAIN/$toolsdir/bin/clang-pseudo-gen
+
+	var_append cmakeopt ' ' -DLLVM_MAIN_INCLUDE_DIR=$root$includedir
+	#var_append cmakeopt ' ' -DLLVM_LIBRARY_DIR=$root$libdir
+	var_append GCC_WRAPPER_REMOVE ' ' -L$sysroot/TOOLCHAIN/cross/lib
+	var_append GCC_WRAPPER_FILTER '|' "sed 's,$root/TOOLCHAIN.*libLLVM\(.*\)\.[as].*,-lLLVM\1,g'"
+	var_append GCC_WRAPPER_FILTER '|' "sed 's,^/lib64/libcurses.so,-lcurses,'"
+	var_append GCC_WRAPPER_FILTER '|' "sed 's,$root/lib64/libcurses.so,-lcurses,'"
+fi
+
+# rencent clang uses llvm-config suffix, but we need it for cross builds anyway
+[ "${libdir##*/lib}" ] && var_append cmakeopt ' ' "-DLLVM_LIBDIR_SUFFIX=${libdir##*/lib}"
+var_append cmakeopt ' ' "-DLIBCLANG_BUILD_STATIC=OFF -DBUILD_SHARED_LIBS=ON -DLLVM_INCLUDE_TESTS=OFF"

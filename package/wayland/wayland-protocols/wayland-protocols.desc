@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/wayland-protocols/wayland-protocols.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -17,17 +17,16 @@
 [U] https://wayland.freedesktop.org
 
 [A] X.org Foundation {http://www.X.org}
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/x11
 [F] CROSS
 
 [L] OpenSource
-[S] Beta
-[V] 1.44
-[P] X -----5---9 112.500
-
-[O] var_append mesonopt ' ' -Dtests=false
+[V] 1.48
+[P] X ?----5---9 112.500
 
 [CV-URL] https://wayland.freedesktop.org/releases.html
-[D] ad7bf873784dd878fa44b31715614d3c4ddc26434b7a0f65aa213856 wayland-protocols-1.44.tar.xz https://gitlab.freedesktop.org/wayland/wayland-protocols/-/releases/1.44/downloads/
+[D] 209e7bdd917fb371d428d831d12b622ed6aa9d496f4ba18a56cb6ac0 wayland-protocols-1.48.tar.xz https://gitlab.freedesktop.org/wayland/wayland-protocols/-/releases/1.48/downloads/
+
+var_append mesonopt ' ' -Dtests=false

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/rock-kernel-driver/rock-kernel-driver.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,14 +11,14 @@
 [U] https://github.com/ROCm/ROCK-Kernel-Driver
 
 [A] Advanced Micro Devices, Inc.
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [F] CROSS
 [C] extra/development
 
 [L] MIT
-[S] Stable
-[V] 6.4.0
+[V] 7.2.2
+[P] O
 
 [CV-GROUP] rocm
-[D] 44a8372a9440070944524d94894cbad15eb32f4ae7d4523d26a56284 ROCK-Kernel-Driver-rocm-6.4.0.tar.gz https://github.com/ROCm/ROCK-Kernel-Driver/archive/rocm-6.4.0/
+[D] 90158da6034984a84de26ece7282c645ad25acd92d0445d057313508 ROCK-Kernel-Driver-rocm-7.2.2.tar.gz https://github.com/ROCm/ROCK-Kernel-Driver/archive/rocm-7.2.2/

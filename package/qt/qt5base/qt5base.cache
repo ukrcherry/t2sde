@@ -1,6 +1,6 @@
-[TIMESTAMP] 1746022729 Wed Apr 30 17:18:49 2025
-[BUILDTIME] 1000 (9)
-[SIZE] 64.21 MB, 3825 files
+[TIMESTAMP] 1760532012 Wed Oct 15 14:40:12 2025
+[BUILDTIME] 920 (9)
+[SIZE] 66.11 MB, 3813 files
 
 [DEP] at-spi2-core
 [DEP] bash
@@ -44,14 +44,13 @@
 [DEP] sed
 [OPT] sqlite2
 [DEP] tar
-[DEP] tbb
 [DEP] tslib
 [DEP] udev
 [OPT] unixodbc
 [DEP] vulkan-headers
 [DEP] xcb-util-image
 [DEP] xcb-util-keysyms
-[DEP] xcb-util-renderutils
+[DEP] xcb-util-renderutil
 [DEP] xcb-util-wm
 [DEP] xkbcommon
 [DEP] xorgproto

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/transmission/transmission.desc
-[COPY] Copyright (C) 2014 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2014 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,13 +15,34 @@
 
 [A] Jordan Lee, Mnemosyne LLC <jordan@transmissionbt.com>
 [A] Mitchell Livingston, Digital Ignition LLC <livings124@transmissionbt.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network
 [F] OBJDIR CROSS
 
-[L] MIT
-[S] Stable
-[V] 4.0.6
+[E] opt gtkmm3 atkmm1 cairomm1 glibmm2 pangomm1 glib pango at-spi2-core
+[E] opt qt6base qt6tools
+[E] opt xfsprogs
 
-[D] 1f9201b0b79c7e3434ae103747e9eaf69d96f647a9cd24746850d4a9 transmission-4.0.6.tar.xz https://github.com/transmission/transmission/releases/download/4.0.6/
+[L] MIT
+[V] 4.1.1
+
+[D] 842256cd4bcec314fc45bb1275220010b1e30f43eb56d2b2f2c739d2 transmission-4.1.1.tar.xz https://github.com/transmission/transmission/releases/download/4.1.1/
+
+var_append cmakeopt ' ' "-DENABLE_CLI=ON \
+			 -DENABLE_NLS=ON \
+			 -DENABLE_WEB=OFF \
+			 -DWITH_CRYPTO=openssl \
+			 -DENABLE_TESTS=OFF \
+			 -DUSE_SYSTEM_DEFLATE=ON \
+			 -DINSTALL_LIB=ON \
+			 -DRUN_CLANG_TIDY=OFF \
+			 -DWITH_INOTIFY=ON \
+			 -DUSE_SYSTEM_MINIUPNPC=ON \
+			 -DUSE_SYSTEM_DEFLATE=ON \
+			 -DUSE_SYSTEM_EVENT2=ON \
+			 -DUSE_SYSTEM_NATPMP=OFF"
+
+pkginstalled qt6base && var_append cmakeopt ' ' -DENABLE_QT=ON
+pkginstalled gtkmm && var_append cmakeopt ' ' -DENABLE_GTK=ON
+pkginstalled systemd || var_append confopt ' ' -DWITH_SYSTEMD=OFF

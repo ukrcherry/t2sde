@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/utfcpp/utfcpp.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,14 +13,13 @@
 [U] https://github.com/nemtrif/utfcpp
 
 [A] Nemanja Trifunovic
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [F] CROSS
 
 [L] BSL
-[S] Stable
-[V] 4.0.6
+[V] 4.0.9
 [P] X 0----5---9 112.200
 
-[D] b7dfe33bacb513fc01c1eda94a4f88b9a5174590513a60ad1cb037af utfcpp-4.0.6.tar.gz https://github.com/nemtrif/utfcpp/archive/refs/tags/v4.0.6/
+[D] 832c23c8aa46c9cb34278bf382ef02828cc946dfb5e1900eac528dc4 utfcpp-4.0.9.tar.gz https://github.com/nemtrif/utfcpp/archive/refs/tags/v4.0.9/

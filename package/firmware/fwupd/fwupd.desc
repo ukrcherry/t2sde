@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/fwupd/fwupd.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,17 +11,24 @@
 [U] https://fwupd.org
 
 [A] LVFS by Richard Hughes
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/tool
 [F] CROSS
-[E] add vala
+
+[E] add jinja2
+[E] opt vala
+[E] opt flashrom
+[E] opt gi-docgen graphviz
+[E] opt libftdi1
+[E] opt openimageio
+[E] opt systemd
 
 [L] LGPL
-[S] Stable
-[V] 2.0.9
+[V] 2.1.3
 
-[O] var_append mesonopt ' ' '-Defi_binary=false -Dplugin_uefi_capsule_splash=false'
-[O] var_append mesonopt ' ' -Ddocs=disabled
+[D] 0c55a91b8feee50166af607e6de213cc39798eaac81f46a02f36492c fwupd-2.1.3.tar.xz https://github.com/fwupd/fwupd/releases/download/2.1.3/
 
-[D] b0525a00df8011b934d3a0e3893b2ce81c131b98c45d69c4e2d84cf9 fwupd-2.0.9.tar.xz https://github.com/fwupd/fwupd/releases/download/2.0.9/
+pkginstalled gobject-introspection || var_append mesonopt ' ' -Dintrospection=disabled
+var_append mesonopt ' ' '-Defi_binary=false -Dplugin_uefi_capsule_splash=false'
+var_append mesonopt ' ' -Dtests=false

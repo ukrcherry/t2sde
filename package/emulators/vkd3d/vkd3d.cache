@@ -1,0 +1,23 @@
+
+[TIMESTAMP] 1690878096 Tue Aug  1 10:21:36 2023
+[BUILDTIME] 5 (9)
+[SIZE] 5.98 MB, 35 files
+
+[DEP] 00-dirtree
+[DEP] bash
+[DEP] binutils
+[DEP] bison
+[DEP] coreutils
+[DEP] diffutils
+[DEP] findutils
+[DEP] flex
+[DEP] gawk
+[DEP] grep
+[DEP] linux-header
+[DEP] m4
+[DEP] make
+[DEP] ncurses
+[DEP] sed
+[DEP] spirv-headers
+[DEP] tar
+[DEP] vulkan-headers

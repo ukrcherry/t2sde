@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/cesnet-tcs-cli/cesnet-tcs-cli.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Client utility for CESNET TCS API
+
+[T] Client utility for CESNET TCS API.
+
+[U] https://github.com/jirutka/cesnet-tcs-cli
+
+[A] Cesnet-tcs-cli Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.4.0
+[L] MIT
+
+[D] 3d9727a03fe70ed581b7f6e11ec59a1627ed6e89d0346bd3be906fb6 cesnet-tcs-cli-0.4.0.tar.gz https://github.com/jirutka/cesnet-tcs-cli/archive/v0.4.0/

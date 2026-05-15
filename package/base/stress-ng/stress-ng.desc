@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/stress-ng/stress-ng.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Stress-ng will stress test a computer system in various selectable ways
+
+[T] Stress-ng will stress test a computer system in various selectable ways.
+
+[U] https://github.com/ColinIanKing/stress-ng
+
+[A] Stress-ng Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS NO-LTO
+
+[V] 0.21.01
+[L] GPL
+
+[D] 2ad7236d90035c5252613b994debc33a6331091becc59600a19dd215 stress-ng-0.21.01.tar.gz https://github.com/ColinIanKing/stress-ng/archive/refs/tags/V0.21.01/

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/ifplugd/ifplugd.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -16,16 +16,14 @@
 [U] https://0pointer.de/lennart/projects/ifplugd/
 
 [A] Lennart Poettering <mzvscyhtq@0pointer.de>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/system
 [F] FCOMMON
 
 [L] GPL
-[S] Stable
 [V] 0.28
-[P] X -----5---9 123.000
-
-[O] pkginstalled lynx || var_append confopt ' ' --disable-lynx
 
 [D] e61263cb2d35c57a964d162bb5cf5ec1d800bd5094734a54b9a4fec5 ifplugd-0.28.tar.gz http://0pointer.de/lennart/projects/ifplugd/
+
+pkginstalled lynx || var_append confopt ' ' --disable-lynx

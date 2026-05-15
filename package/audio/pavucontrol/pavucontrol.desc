@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/pavucontrol/pavucontrol.desc
-[COPY] Copyright (C) 2023 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2023 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,15 +14,15 @@
 [U] https://freedesktop.org/software/pulseaudio/pavucontrol/
 
 [A] Lennart Poettering
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 6.1
+[V] 6.2
 
-[O] var_append GCC_WRAPPER_INSERT ' ' "$(pkg-config x11 --cflags --libs-only-L)"
+[D] 379a8f62fd6043904aa24e79d6d22c46ba41032fb61a4d2fe4a7ba37 pavucontrol-6.2.tar.xz https://freedesktop.org/software/pulseaudio/pavucontrol/
 
-[D] 12e3e0362c63f220a77caf97c8bc86f80778595d01137986a916507c pavucontrol-6.1.tar.xz https://freedesktop.org/software/pulseaudio/pavucontrol/
+var_append GCC_WRAPPER_INSERT ' ' "$(pkg-config x11 --cflags --libs-only-L)"
+pkginstalled lynx || var_append mesonopt ' ' -Dlynx=disabled

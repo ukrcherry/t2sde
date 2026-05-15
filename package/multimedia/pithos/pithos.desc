@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/pithos/pithos.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] GTK+ player for pandora web radio
+
+[T] Pithos is a native Pandora Radio client for Linux. It’s much more
+[T] lightweight than the Pandora.com web client, and integrates with desktop
+[T] features such as media keys, notifications, and the sound menu.
+
+[U] https://pithos.github.io/
+
+[A] Pithos Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.6.2
+[L] GPL3
+
+[D] bad131f969a5af280ddcd0e9fe3e677dbae2140eaed7e47f39edfa16 pithos-1.6.2.tar.gz https://github.com/pithos/pithos/archive/1.6.2/

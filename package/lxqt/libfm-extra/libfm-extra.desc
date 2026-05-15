@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libfm-extra/libfm-extra.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Core library of PCManFM file manager
+
+[T] Core library of PCManFM file manager.
+
+[U] https://github.com/lxde/libfm
+
+[A] Libfm Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 1.4.1
+[L] LGPL
+[P] X -----5---9 220.000
+
+[D] 9c30dcf2ba3a1a17c37bba2f250492936173c6a3bbc8b010635f316c libfm-1.4.1.tar.gz https://github.com/lxde/libfm/archive/1.4.1/
+
+autogen=1
+var_append confopt ' ' '--with-extra-only --with-gtk=no'

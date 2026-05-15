@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/opencl-clhpp/opencl-clhpp.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,18 +12,17 @@
 [U] https://github.com/KhronosGroup/OpenCL-SDK
 
 [A] OpenCL developers
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [F] CROSS
 
 [L] APL
 
-[S] Stable
-[V] 2024.10.24
+[V] 2025.07.22
 [P] X -----5---9 109.425
 
-[O] var_append cmakeopt ' ' '-DCLHPP_BUILD_TESTS=OFF -DBUILD_TESTING=OFF'
-[O] var_append cmakeopt ' ' '-DBUILD_DOCS=OFF -DBUILD_EXAMPLES=OFF'
+[D] 92aa9fb0981d8588433f0e65ad4b84932685b3af84d5b6380f72cc37 OpenCL-CLHPP-v2025.07.22.tar.gz https://github.com/KhronosGroup/OpenCL-CLHPP/archive/v2025.07.22/
 
-[D] 4885bc9fb621127d0a135d08268158143b7d3a7933299338b5c2e9a1 OpenCL-CLHPP-v2024.10.24.tar.gz https://github.com/KhronosGroup/OpenCL-CLHPP/archive/v2024.10.24/
+var_append cmakeopt ' ' '-DCLHPP_BUILD_TESTS=OFF -DBUILD_TESTING=OFF'
+var_append cmakeopt ' ' '-DBUILD_DOCS=OFF -DBUILD_EXAMPLES=OFF'

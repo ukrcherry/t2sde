@@ -10,7 +10,6 @@
 [DEP] diffutils
 [DEP] findutils
 [DEP] gawk
-[DEP] git
 [DEP] grep
 [DEP] gzip
 [DEP] hyprutils
@@ -20,7 +19,6 @@
 [DEP] pkgconfig
 [DEP] sed
 [DEP] tar
-[DEP] tbb
 [DEP] wayland
 [DEP] wayland-protocols
 [DEP] xkbcommon

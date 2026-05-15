@@ -1,0 +1,28 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libass/libass.desc
+[COPY] Copyright (C) 2021 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A portable library for SSA/ASS subtitles rendering
+
+[T] Libass is a portable subtitle renderer for the ASS/SSA (Advanced
+[T] Substation Alpha/Substation Alpha) subtitle format.
+
+[U] https://github.com/libass/libass
+
+[A] libass contributors - see the Copyright headers through code
+[M] NoTag <notag@t2sde.org>
+
+[C] extra/x11
+[F] CROSS
+
+[L] ISC
+[V] 0.17.4
+[P] X -----5---9 127.301
+
+[CV-URL] https://github.com/libass/libass/tags/
+[D] 44bd1d46aa272684a4698940e0047da29d139c7a3e284ed73540a26d libass-0.17.4.tar.xz https://github.com/libass/libass/releases/download/0.17.4/
+
+runconf=0
+[ "$SDECFG_X8664_X32" = 1 ] && var_append mesonopt ' ' -Dasm=disabled

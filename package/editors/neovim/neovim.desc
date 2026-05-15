@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/neovim/neovim.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -12,7 +12,7 @@
 [U] https://neovim.io/
 
 [A] Neovim project
-[M] Dash <daniel.ashkenazi@gmail.com>
+[M] Daniel Ashkenazi <daniel.ashkenazi@gmail.com>
 
 [C] extra/editor
 [F] CROSS NO-LTO
@@ -20,11 +20,10 @@
 [E] opt doxygen
 
 [L] APL
-[S] Stable
-[V] 0.11.1
+[V] 0.12.2
 
-[O] runcmake=0
-[O] var_append makeopt ' ' CMAKE_BUILD_TYPE=Release
-[O] var_append makeopt ' ' "CMAKE_INSTALL_PREFIX=/usr USE_BUNDLED=ON"
+[D] 05d43632eb2194cae37f338c74f67be9dead676d7186bc40c14e81a0 neovim-v0.12.2.tar.gz https://github.com/neovim/neovim/archive/v0.12.2/
 
-[D] c9743926d2003bd1ff9bd65be0f54ed77ab878f1e14749b148dd8033 neovim-v0.11.1.tar.gz https://github.com/neovim/neovim/archive/v0.11.1/
+runcmake=0 runzig=0
+var_append makeopt ' ' "CMAKE_INSTALL_PREFIX=/$prefix USE_BUNDLED=ON"
+[ $SDECFG_DEBUG = 1 ] || var_append makeopt ' ' CMAKE_BUILD_TYPE=Release

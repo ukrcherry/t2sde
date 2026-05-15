@@ -1,0 +1,29 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/flying-toasters-xscreensaver/flying-toasters-xscreensaver.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Classic flying toasters 2D screensaver for XScreensaver
+
+[T] flying-toasters is a classic flying toasters 2D screensaver recreation for
+[T] XScreensaver.
+
+[U] https://github.com/torunar/flying-toasters-xscreensaver
+
+[A] Mikhail Shchekotov
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/x11 extra/screensaver
+[F] CROSS
+
+[E] add xscreensaver
+
+[L] MIT
+[V] 1.3.1
+
+[D] 48f629d8a0a33fa7a11e6df055600d1a92856442c591af1a53dd5720 flying-toasters-xscreensaver-1.3.1.tar.gz https://github.com/torunar/flying-toasters-xscreensaver/archive/v1.3.1/
+
+makeinstopt=
+var_append GCC_WRAPPER_APPEND ' ' -L$root$(pkgprefix libdir libx11)
+hook_add postmake 5 'cp -vf bin/flying-toasters $root$bindir/'

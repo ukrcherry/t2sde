@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/kopeninghours/kopeninghours.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,18 +12,18 @@
 [U] https://www.kde.org
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 25.04.1
+[V] 26.04.1
 [P] X -----5---9 162.900
 
-[O] . $base/package/*/*/kde-conf.in
-[O] runpysetup=0 runpipinstall=0
-[O] var_append cmakeopt ' ' -DQT_MAJOR_VERSION=6
-
 [CV-GROUP] kde-gear
-[D] d0b8f9140f1985836e113093fdee139719cc229a9b9c1f59541d9e55 kopeninghours-25.04.1.tar.xz https://download.kde.org/stable/release-service/25.04.1/src/
+[D] f28954a5c891ed0e191038e439e7918a0d758253e36964a0156d98e7 kopeninghours-26.04.1.tar.xz https://download.kde.org/stable/release-service/26.04.1/src/
+
+. $base/package/*/*/kde-conf.in
+runpysetup=0 runpipinstall=0
+var_append cmakeopt ' ' -DQT_MAJOR_VERSION=6

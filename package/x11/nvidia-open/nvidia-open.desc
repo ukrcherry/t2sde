@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/nvidia-open/nvidia-open.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,15 +11,14 @@
 [U] https://www.nvidia.com
 
 [A] Nvidia Corp.
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/system
 [F] CROSS
 [R] + x86 x86-64 arm64
 
 [L] GPL MIT
-[S] Beta
-[V] 570.144
+[V] 595.71.05
 [P] O -----5---9 131.300
 
-[D] c1a8d5added2fa4cce27488c4e0a9ea6aaebcb13f07b315785f1d961 nvidia-open-kernel-modules-570.144.tar.gz https://github.com/NVIDIA/open-gpu-kernel-modules/archive/570.144/
+[D] 0a764d82b115cb6b6e3136586a627badd1250fe9c94637c808cb52e4 nvidia-open-kernel-modules-595.71.05.tar.gz https://github.com/NVIDIA/open-gpu-kernel-modules/archive/595.71.05/

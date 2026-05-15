@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xfce4-weather-plugin/xfce4-weather-plugin.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,15 +12,14 @@
 [U] http://xfce-goodies.berlios.de/
 
 [A] Bob Schlärmann
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/desktop/xfce
 [F] CROSS
 
 [L] BSD
-[S] Stable
-[V] 0.11.3
+[V] 0.12.0
 
-[O] . $base/package/xfce4/*/xfce4-conf.in
+[D] db9a6eca2e472789941a268128637f76bceeaf0903829932b47c775d xfce4-weather-plugin-0.12.0.tar.xz https://archive.xfce.org/src/panel-plugins/xfce4-weather-plugin/0.12/
 
-[D] 893e1e859f7c28d65ff0bdaf525fa5f64b7a78cdb8025c4c6208b9ce xfce4-weather-plugin-0.11.3.tar.bz2 https://archive.xfce.org/src/panel-plugins/xfce4-weather-plugin/0.11/
+. $base/package/xfce4/*/xfce4-conf.in

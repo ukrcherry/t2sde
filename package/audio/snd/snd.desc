@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/snd/snd.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,13 +13,14 @@
 [U] https://snd.sourceforge.net
 
 [A] Bill Schottstaedt <bil@ccrma.stanford.edu>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] CROSS
 
-[L] GPL
-[S] Stable
-[V] 21.0
+[E] opt fftw3
 
-[D] ffd03f481761c5e95d51fce6f2485b2a0f808dc523a14cfb5e931ad4 snd-21.0.tar.gz http://dl.sourceforge.net/project/snd/snd/21.0/
+[L] GPL
+[V] 26.3
+
+[D] f01dffead1b8cb03320a520f7299719c87062ee683dbd3a9efe4c9bc snd-26.3.tar.gz https://download.sourceforge.net/project/snd/snd/26.3/

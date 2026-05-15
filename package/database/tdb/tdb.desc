@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/tdb/tdb.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -16,7 +16,7 @@
 
 [A] Anton Blanchard <antonb@users.sourceforge.net>
 [A] Samba Team & Andrew Tridgell <tridge@linuxcare.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/database
 [F] CROSS
@@ -25,11 +25,10 @@
 [E] opt libbsd
 
 [L] LGPL
-[S] Stable
-[V] 1.4.13
+[V] 1.4.15
 [P] X -----5---9 152.500
 
-[O] cleanconfopt=0 confopt="--prefix=/$prefix"
-[O] atstage cross && var_append confopt ' ' --disable-python
+[D] 7bba0f53493fa59966823b86b02be5858425e954c3a77723dffe6bca tdb-1.4.15.tar.gz http://samba.org/ftp/tdb/
 
-[D] e56d1ff11940f69cc3790dcb6661a7ce6abd53563c4c2e18d86fdfaa tdb-1.4.13.tar.gz http://samba.org/ftp/tdb/
+cleanconfopt=0 confopt="--prefix=/$prefix"
+atstage cross && var_append confopt ' ' --disable-python

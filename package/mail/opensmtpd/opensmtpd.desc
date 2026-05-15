@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/opensmtpd/opensmtpd.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Secure, reliable, lean, and easy-to configure SMTP server
+
+[T] Secure, reliable, lean, and easy-to configure SMTP server.
+
+[U] https://www.opensmtpd.org/
+
+[A] Opensmtpd Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 7.8.0p1
+[L] ISC
+
+[D] 0b16432003dc54d10d98e21066c07abd72d1536711e8c2c2663a960a opensmtpd-7.8.0p1.tar.gz https://www.opensmtpd.org/archives/

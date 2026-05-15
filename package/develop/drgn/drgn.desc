@@ -1,0 +1,22 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/drgn/drgn.desc
+# Copyright (C) 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Programmable debugger
+
+[T] Programmable debugger.
+
+[U] https://github.com/osandov/drgn
+
+[A] osandov
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] LGPL
+[V] 0.2.0
+
+[D] e6ea1d0022e68ee60b070c9107f2e3d0cbdae5174508a7c573fa0a4b drgn-0.2.0.tar.gz https://github.com/osandov/drgn/archive/v0.2.0/

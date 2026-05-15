@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gdb/gdb.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -15,15 +15,31 @@
 [U] https://www.gnu.org/software/gdb/
 
 [A] The GNU Project / FSF
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/development
 [F] OBJDIR CROSS NO-LTO.gcc LATOMIC.sparc
 [R] - avr32 microblaze
 
+[E] opt guile
+[E] opt python
+
 [L] GPL
-[S] Stable
-[V] 16.3
+[V] 17.2
 [P] X ?----5---9 500.500
 
-[D] 2c00d3d6f243d17ff436291fb51e62b21aff1fb101d1d21eccdfe108 gdb-16.3.tar.xz http://ftp.gnu.org/gnu/gdb/
+[D] 244c2ed00ed6b87b65f92077644a084cc1da0bc97366355ca6378e40 gdb-17.2.tar.xz http://ftp.gnu.org/gnu/gdb/
+
+export CONFIG_SHELL=/bin/bash
+
+var_remove confopt ' ' --enable-shared
+var_remove confopt ' ' --disable-static
+var_append confopt ' ' --disable-install-libbfd
+
+ [ $stagelevel = 2 ] && confopt="${confopt/--with-sysroot/--with-libtool-sysroot}"
+
+# error: initializer element is not constant: SIGSTKSZ
+[ "$SDECFG_LIBC" = "glibc" ] && var_append confopt ' ' --disable-sim
+
+pkginstalled expat || var_append confopt ' ' --with-expat=no
+hook_add inmake 5 "eval $MAKE -C gdb/doc DESTDIR=$root install-info"

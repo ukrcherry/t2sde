@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gens/gens.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -21,12 +21,11 @@
 [T] - Configurations files support
 [T] - ZIP support
 [T] - And a lot of others nice features...
- 
 
-[U] http://gens.consolemul.com
+[U] http://www.gens.me/index.shtml
 
 [A] Stèphane Dallongeville
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 # at least cd emulation code contains x86 only assembly :-(
 [R] + x86
@@ -34,9 +33,8 @@
 [C] extra/game
 
 [L] GPL
-[S] Stable
-[V] 2.12a-rc3
+[V] 2.15.5
 
-[O] var_append GCC_WRAPPER_REMOVE ' ' -DGTK_DISABLE_DEPRECATED
+[D] 7bfe5a01e460ce6c43e439e5c08c5f0dfc74ebdcf44fca754c8112f6 gens-2.15.5.tar.gz https://prdownloads.sourceforge.net/sourceforge/gens/
 
-[D] cadbbfac6d99f063760413431d2107c25bef97582cc9909151b13b67 gens-rc3.tar.gz http://dl.sourceforge.net/sourceforge/gens/
+var_append GCC_WRAPPER_REMOVE ' ' -DGTK_DISABLE_DEPRECATED

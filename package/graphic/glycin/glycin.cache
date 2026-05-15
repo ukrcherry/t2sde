@@ -1,0 +1,37 @@
+[TIMESTAMP] 1773418857 Fri Mar 13 17:20:57 2026
+[BUILDTIME] 460 (9)
+[SIZE] 17.15 MB, 43 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] bzip2
+[DEP] cairo
+[DEP] cargo
+[DEP] coreutils
+[DEP] curl
+[DEP] diffutils
+[DEP] findutils
+[DEP] gawk
+[DEP] gdk-pixbuf
+[DEP] glib
+[DEP] gobject-introspection
+[DEP] graphene
+[DEP] grep
+[DEP] gtk
+[DEP] harfbuzz
+[DEP] libheif
+[DEP] libjxl
+[DEP] linux-header
+[DEP] meson
+[DEP] ninja
+[DEP] openssl
+[DEP] pango
+[DEP] pkgconfig
+[DEP] python
+[DEP] rustc
+[DEP] sed
+[DEP] setuptools
+[DEP] sysfiles
+[DEP] tar
+[DEP] util-linux
+[DEP] vala

@@ -1,0 +1,31 @@
+[TIMESTAMP] 1750936242 Thu Jun 26 13:10:42 2025
+[BUILDTIME] 4 (9)
+[SIZE] 0.68 MB, 92 files
+
+[DEP] at-spi2-core
+[DEP] bash
+[DEP] binutils
+[DEP] cairo
+[DEP] coreutils
+[DEP] diffutils
+[DEP] docbook-xml
+[DEP] docbook-xsl
+[DEP] gawk
+[DEP] gdk-pixbuf
+[DEP] gettext
+[OPT] glib
+[DEP] gobject-introspection
+[DEP] grep
+[DEP] gtk+
+[DEP] gtk-doc
+[DEP] harfbuzz
+[DEP] linux-header
+[DEP] meson
+[DEP] ninja
+[DEP] openssl
+[DEP] pango
+[DEP] python
+[DEP] sed
+[DEP] setuptools
+[DEP] tar
+[DEP] xz

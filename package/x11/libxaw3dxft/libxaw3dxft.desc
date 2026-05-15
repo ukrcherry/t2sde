@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libxaw3dxft/libxaw3dxft.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] XPaint version of libxaw3d library
+
+[T] XPaint version of libxaw3d library.
+
+[U] https://sourceforge.net/projects/sf-xpaint/files/libxaw3dxft
+
+[A] Libxaw3dxft Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.6.4
+[L] MIT
+
+[D] 1e7c9c5b48abff1f49e82ab6de9efc7388a66a6282878ccb0e8019d4 libxaw3dxft-1.6.4.tar.xz https://github.com/DaveFlater/libXaw3dXft/releases/download/v1.6.4/

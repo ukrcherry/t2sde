@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/duma/duma.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -16,13 +16,21 @@
 
 [A] Hayati Ayguen <h_ayguen@web.de>
 [A] Bruce Perens <bruce@perens.com> {Original Author}
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/development
 [F] CROSS NOPARALLEL
 
 [L] GPL
-[S] Stable
 [V] 2_5_21
 
 [D] 447a77fd41beec5bed371046c66ff1a0ab2c8946e3f6f84cf03f68b9 duma_2_5_21.tar.gz https://github.com/johnsonjh/duma/archive/refs/tags/VERSION_2_5_21/
+
+duma_install_headers() {
+	local x
+	for x in duma.h noduma.h dumapp.h duma_config.h; do
+		sed -e 's,\r,,g' $x > $root$includedir/$x
+	done
+}
+
+hook_add postmake 5 duma_install_headers

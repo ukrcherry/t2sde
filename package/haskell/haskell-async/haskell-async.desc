@@ -1,0 +1,27 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/haskell-async/haskell-async.desc
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Run IO operations asynchronously and wait for their results
+
+[T] Provides a higher-level interface over threads, in which an Async a is a
+[T] concurrent thread that will eventually deliver a value of type a. The package
+[T] provides ways to create Async computations, wait for their results, and cancel
+[T] them.
+
+[U] https://github.com/simonmar/async
+
+[A] Simon Marlow <marlowsd@gmail.com>
+[M] Riley Beckett <rbeckettvt@gmail.com>
+
+[C] extra/tool
+[F] CROSS
+
+[L] BSD
+[V] 2.2.6
+
+[D] 3d63fd97ae95414035ebb7e301ff292226b5a28bf872894b34e9a424 haskell-async-2.2.6.tar.gz !https://hackage.haskell.org/package/async-2.2.6/async-2.2.6.tar.gz
+
+. $base/package/*/*/haskell-conf.in

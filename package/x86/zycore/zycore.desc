@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/zycore/zycore.desc
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Fast and lightweight x86/x86-64 disassembler and code generation library
+
+[T] Fast and lightweight x86/x86-64 disassembler and code generation library.
+
+[U] https://github.com/zyantific/zycore-c
+
+[A] Joel Höner <joel@zyantific.com>
+[A] Florian Bernd <flobernd@zyantific.com>
+[M] andrei32
+
+[C] extra/development
+
+[E] opt doxygen graphviz
+
+[L] MIT
+[V] 1.5.2
+[P] X -----5---9 200.000
+
+[D] fc4111b6bf9d5c7687418b4d9a7dc83d8231b76e433a6103ec7a7b22 zycore-1.5.2.tar.gz https://github.com/zyantific/zycore-c/archive/v1.5.2/

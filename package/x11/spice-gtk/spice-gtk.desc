@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/spice-gtk/spice-gtk.desc
-[COPY] Copyright (C) 2015 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2015 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,15 +13,17 @@
 [U] https://www.spice-space.org/download.html
 
 [A] Yaniv Kamay <ykamay@redhat.com> {Original project author}
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/x11
 
-[E] opt gtk-doc
+[E] add six
+[E] add vala
+[E] opt asciidoc gtk-doc docbook-xml docbook-xsl
+[E] opt cyrus-sasl2
 [E] opt libopus
 
 [L] LGPL
-[S] Stable
 [V] 0.42
 [P] X -----5---9 400.440
 

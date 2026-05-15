@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/amdmigraphx/amdmigraphx.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,17 +12,16 @@
 [U] https://github.com/ROCm/AMDMIGraphX
 
 [A] Advanced Micro Devices, Inc.
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [F] CROSS OBJDIR
 [C] extra/development
 
 [L] MIT
-[S] Stable
-[V] 6.4.0
+[V] 7.2.3
 [P] X -----5---9 300.075
 
-[O] . $base/package/*/*/rocm-conf.in
-
 [CV-GROUP] rocm
-[D] 09c48e0fe4ddc87a7d315626c575ced47bf7ab547f0767aa8d973596 AMDMIGraphX-rocm-6.4.0.tar.gz https://github.com/ROCm/AMDMIGraphX/archive/rocm-6.4.0/
+[D] c83801d9b89d9a104975d141c10272a69182a3f4f0c48de608d7f800 AMDMIGraphX-rocm-7.2.3.tar.gz https://github.com/ROCm/AMDMIGraphX/archive/rocm-7.2.3/
+
+. $base/package/*/*/rocm-conf.in

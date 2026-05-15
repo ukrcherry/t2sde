@@ -1,0 +1,28 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/surfraw/surfraw.desc
+[COPY] Copyright (C) 2010 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A unix command line interface to various search engines
+
+[T] Surfraw abstracts the browser away from input. Doing so lets it get on
+[T] with what it is good at. Browsing. Interpretation of linguistic forms
+[T] is handed back to the shell, which is what it, and human beings are good
+[T] at. Combined with netscape-remote or incremental text browsers, such as
+[T] lynx, links or w3m, along with screen a Surfraw liberateur is capable of
+[T] navigating speeds that leave GUI tainted idolaters agape with fear and
+[T] wonder.
+
+[U] http://surfraw.alioth.debian.org/
+
+[A] The Surfraw-Devel Team <surfraw-devel@lists.alioth.debian.org>
+[M] Roger Mason <rmason@mun.ca>
+
+[C] extra/network
+[F] CROSS
+
+[L] OpenSource
+[V] 2.3.0
+
+[D] c0c28a9dab799df7243f4a7d14e62f4129c12ad7ce650291fe3067a6 surfraw-2.3.0.tar.gz https://gitlab.com/surfraw/Surfraw/-/archive/surfraw-2.3.0/

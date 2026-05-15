@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/mkcomposecache/mkcomposecache.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,15 +15,14 @@
 [U] https://www.X.org
 
 [A] X.org Foundation {http://www.X.org}
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/x11
 [F] CROSS
 
 [L] OpenSource
-[S] Stable
-[V] 1.2.2
+[V] 1.2.3
 
-[O] . package/*/*/modular-x-conf.in
+[D] ae0648764b29da9a8d173e8415e45bf79a75a67c279b7f45d3a341f6 mkcomposecache-1.2.3.tar.xz http://xorg.freedesktop.org/releases/individual/app/
 
-[D] 8988306c9b001b5369144833eac5904fdb3beb21951b4edd5e887b53 mkcomposecache-1.2.2.tar.xz http://xorg.freedesktop.org/releases/individual/app/
+. package/*/*/modular-x-conf.in

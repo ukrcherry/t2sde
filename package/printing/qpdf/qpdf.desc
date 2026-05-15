@@ -13,14 +13,13 @@
 [U] https://qpdf.sourceforge.net/
 
 [A] Jay Berkenbilt
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/printing
 [F] CROSS OBJDIR
 
 [L] Artistic
-[S] Stable
-[V] 11.10.1
+[V] 12.3.2
 [P] X -----5---9 142.810
 
-[D] 220a57647f3a28505bb7b93e4c0078433337f6bc5dca361f78bf3ab1 qpdf-11.10.1.tar.gz https://github.com/qpdf/qpdf/releases/download/v11.10.1/
+[D] 3269b67e799406cd7c8ac1aca5d138b07cb935caaea7dd61329d1d5f qpdf-12.3.2.tar.gz https://github.com/qpdf/qpdf/releases/download/v12.3.2/

@@ -1,0 +1,29 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/deskflow/deskflow.desc
+# Copyright (C) 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Share a single keyboard and mouse between multiple computers
+
+[T] Deskflow is a keyboard and mouse sharing app. Use the keyboard, mouse, or
+[T] trackpad of one computer to control nearby computers, and work seamlessly
+[T] between them. It's like a software KVM (but without the video). TLS
+[T] encryption is enabled by default. Wayland is supported. Clipboard sharing
+[T] is supported.
+
+[U] https://github.com/deskflow/deskflow
+
+[A] Deskflow Developers
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/multimedia
+[F] CROSS
+
+[L] GPL
+[V] 1.26.0
+
+[D] 55f6612c74dbe29cb16c05e623c41f0f834bdc02ff7417e684128204 deskflow-1.26.0.tar.gz https://github.com/deskflow/deskflow/archive/v1.26.0/
+
+var_append GCC_WRAPPER_APPEND ' ' -L$root$(pkgprefix libdir libxtst)
+var_append GCC_WRAPPER_APPEND ' ' -I$root$(pkgprefix includedir libxtst)

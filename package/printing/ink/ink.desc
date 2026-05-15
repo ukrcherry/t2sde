@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/ink/ink.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,7 +12,7 @@
 [U] https://ink.sourceforge.net
 
 [A] Markus Heinz <markus.heinz@uni-dortmund.de>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/printing
 [F] CROSS
@@ -21,10 +21,9 @@
 [R] + x86 x86-64
 
 [L] GPL
-[S] Beta
 [V] 0.5.3
 
-[O] var_append makeopt ' ' DESTDIR=$root/$prefix
-[O] var_append makeinstopt ' ' DESTDIR=$root/$prefix
+[D] 156b44e61baa34275ffd6be2373d1f09804f970f589668ce94a1a39c ink-0.5.3.tar.gz https://prdownloads.sourceforge.net/sourceforge/ink/
 
-[D] 156b44e61baa34275ffd6be2373d1f09804f970f589668ce94a1a39c ink-0.5.3.tar.gz http://dl.sourceforge.net/sourceforge/ink/
+var_append makeopt ' ' DESTDIR=$root/$prefix
+var_append makeinstopt ' ' DESTDIR=$root/$prefix

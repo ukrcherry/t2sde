@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/one-dnn/one-dnn.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] OneAPI Deep Neural Network Library
+
+[T] OneAPI Deep Neural Network Library.
+
+[U] https://01.org/oneDNN
+
+[A] One-dnn Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[E] opt doxygen
+
+[L] APL
+[V] 3.12-pc
+
+[D] a35cfb9b3c703e1066af48b64ea047c0dee738f2f4b2eec718c5d9c5 oneDNN-3.12-pc.tar.gz https://github.com/oneapi-src/oneDNN/archive/v3.12-pc/

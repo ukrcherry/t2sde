@@ -1,0 +1,24 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/openfpgaloader/openfpgaloader.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Universal utility for programming FPGA
+
+[T] OpenFPGALoader is an Universal utility for programming FPGAs. Compatible
+[T] with many boards, cables and FPGA from major manufacturers (Xilinx,
+[T] Altera/Intel, Lattice, Gowin, Efinix, Anlogic, Cologne Chip).
+
+[U] https://github.com/trabucayre/openFPGALoader
+
+[A] Gwenhael Goavec-Merou
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/development
+[F] CROSS
+
+[L] APL
+[V] 1.1.1
+
+[D] 4daba40ea80ad50b40c4918a0d2f7a1edfd749499b5cfb993fe5bb7e openFPGALoader-1.1.1.tar.gz https://github.com/trabucayre/openFPGALoader/archive/v1.1.1/

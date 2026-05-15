@@ -1,6 +1,6 @@
-[TIMESTAMP] 1737673916 Fri Jan 24 00:11:56 2025
-[BUILDTIME] 1600 (9)
-[SIZE] 39.31 MB, 22 files
+[TIMESTAMP] 1768921000 Tue Jan 20 15:56:40 2026
+[BUILDTIME] 1650 (9)
+[SIZE] 43.71 MB, 24 files
 
 [DEP] bash
 [DEP] binutils
@@ -9,11 +9,9 @@
 [DEP] diffutils
 [DEP] freetype
 [DEP] gawk
-[DEP] git
 [DEP] grep
 [DEP] gzip
 [DEP] intel-gmmlib
-[DEP] libpciaccess
 [DEP] libva
 [DEP] libx11
 [DEP] linux-header
@@ -22,4 +20,5 @@
 [DEP] sed
 [DEP] sysfiles
 [DEP] tar
+[DEP] util-linux
 [DEP] xorgproto

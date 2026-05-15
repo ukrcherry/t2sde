@@ -1,9 +1,7 @@
+[TIMESTAMP] 1759872096 Tue Oct  7 23:21:36 2025
+[BUILDTIME] 680 (9)
+[SIZE] 3.49 MB, 472 files
 
-[TIMESTAMP] 1718820908 Wed Jun 19 20:15:08 2024
-[BUILDTIME] 310 (9)
-[SIZE] 3.61 MB, 470 files
-
-[DEP] 00-dirtree
 [DEP] bash
 [DEP] binutils
 [DEP] cmake
@@ -15,17 +13,15 @@
 [DEP] gettext
 [DEP] grep
 [DEP] kcalendarcore
-[DEP] kconfig
 [DEP] kcontacts
-[DEP] kmime
 [DEP] kwallet
 [DEP] linux-header
 [DEP] make
 [DEP] pkgconfig
 [DEP] qt6base
 [DEP] qt6tools
+[DEP] qt6translations
 [DEP] sed
 [DEP] tar
-[DEP] tbb
 [DEP] vulkan-headers
 [DEP] xz

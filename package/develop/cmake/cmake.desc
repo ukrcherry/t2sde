@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/cmake/cmake.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -17,7 +17,7 @@
 [U] https://www.cmake.org/
 
 [A] Kitware, Inc., Insight Consortium
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/development
 [F] CROSS NO-LTO.gcc LATOMIC.arch32
@@ -25,20 +25,21 @@
 [E] opt acl
 
 [L] BSD
-[S] Stable
-[V] 3.31.7
+[V] 4.3.2
 [P] X ?--3-5---9 102.200
-
-# the configure script is rather strange - we can not detect the options
-[O] cleanconfopt=0
-# and strange config options it has, datadir and docdir are relative to $prefix
-[O] confopt="--prefix=$root/$prefix --datadir=/share/$pkg --docdir=/doc/$pkg"
-# only bootstrap cmake we don't have it yet
-[O] type -p cmake >/dev/null && runconf=0
-# don't complex, Qt et al. cmake extras during bootstrap
-[O] atstage native || var_remove_regex PATH ":" ".*opt.*"
-[O] [ "$SDECFG_PARALLEL" ] && var_append confopt ' ' --parallel=$SDECFG_PARALLEL
 
 [CV-FLAGS] NO-MAJOR
 [CV-URL] https://www.cmake.org/download/
-[D] 11bfe227f4d94c246354452e8661cfc4db7c7ecd0b5a686883d4940a cmake-3.31.7.tar.gz https://github.com/Kitware/CMake/releases/download/v3.31.7/
+[D] 3fe4c54c018a410b1c6613ca90951ab3d2827d6e2bba96ac908d6f0f cmake-4.3.2.tar.gz https://github.com/Kitware/CMake/releases/download/v4.3.2/
+
+# the configure script is rather strange - we can not detect the options
+cleanconfopt=0
+# and strange config options it has, datadir and docdir are relative to $prefix
+confopt="--prefix=$root/$prefix --datadir=/share/$pkg --docdir=/doc/$pkg"
+# only bootstrap cmake we don't have it yet
+type -p cmake >/dev/null && runconf=0
+# don't complex, Qt et al. cmake extras during bootstrap
+atstage native || var_remove_regex PATH ":" ".*opt.*"
+[ "$SDECFG_PARALLEL" ] && var_append confopt ' ' --parallel=$SDECFG_PARALLEL
+
+var_append cmakeopt ' ' -DBUILD_TESTING=OFF

@@ -1,0 +1,28 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/runit-logacct/runit-logacct.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Runit companion for user related tasks
+
+[T] set of replacement tools included on sysvinit, but needed for runit
+[T] user related tasks, like message users and manage login accounting.
+[T]
+[T] this package include replacements for:
+[T] * last
+[T] * lastb
+[T] * sulogin
+[T] * mesg
+[T] * wall
+
+[A] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+
+[L] GPL
+[V] 0.0
+[P] O
+
+[D] c1ac3696449441b88480ea02ddaa96ca77b0927596860d438cea3b35 runit-logacct-0.0.tar.bz2 http://dl.geeks.cl/oss/runit-logacct/

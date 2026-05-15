@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/thunar-shares-plugin/thunar-shares-plugin.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,14 +13,13 @@
 [U] https://docs.xfce.org/xfce/thunar/thunar-shares-plugin
 
 [A] Daniel Morales <daniel@daniel.com.uy>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/desktop/xfce
 
 [L] GPL
-[S] Alpha
-[V] 0.4.0
+[V] 0.5.0
 
-[O] . $base/package/xfce4/*/xfce4-conf.in
+[D] 3818e0b568b4e8c840fd99c9316ab15a4b7b11283ddec31181a560fa thunar-shares-plugin-0.5.0.tar.xz https://archive.xfce.org/src/thunar-plugins/thunar-shares-plugin/0.5/
 
-[D] 5b4672b838fb3de3039288bc49f98fc7e7e982bfe8280bc36a781ccc thunar-shares-plugin-0.4.0.tar.bz2 https://archive.xfce.org/src/thunar-plugins/thunar-shares-plugin/0.4/
+. $base/package/xfce4/*/xfce4-conf.in

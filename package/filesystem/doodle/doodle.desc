@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/doodle/doodle.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,16 +14,15 @@
 [T] possible to do full-text indexing using the appropriate libextractor
 [T] plugins. It also supports using FAM to keep the database up-to-date.
 
-[U] https://gnunet.org/doodle/
+[U] https://grothoff.org/christian/doodle/
 
 [A] Christian Grothoff <Christian@Grothoff.org>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [F] NOPARALLEL
 [C] extra/filesystem
 
 [L] GPL
-[S] Beta
-[V] 0.6.7
+[V] 0.7.3
 
-[D] 626e35b9e48bef735291a8a294ab7c3914c3dacff1f336bc261857a1 doodle-0.6.7.tar.bz2 http://gnunet.org/doodle/download/
+[D] 34bbf24389c180d304d0b1da2632e520abd997f6105c9f64ebcc56b3 doodle_0.7.3.orig.tar.gz http://deb.debian.org/debian/pool/main/d/doodle/

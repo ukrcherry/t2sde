@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---.
 [COPY] t2/package/*/wireplumber/wireplumber.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---.
 
@@ -11,20 +11,19 @@
 [U] https://pipewire.org/
 
 [A] Wireplumber Authors
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/base
 [F] CROSS
 
 [E] opt doxygen
+[E] opt systemd
 
-[V] 0.5.8
+[V] 0.5.14
 [L] LGPL
-[S] Stable
 [P] X -----5---9 700.000
 
-[O] pkginstalled lua && var_append mesonopt ' ' -Dsystem-lua=true
-[O] pkginstalled lua && var_append GCC_WRAPPER_APPEND ' ' -c?:-llua
-[O] pkginstalled gobject-introspection || var_append mesonopt ' ' -Dintrospection=disabled
+[D] ff256609509d5896d588475ba4461c17a5d2aebe833a7653a9729fcb wireplumber-0.5.14.tar.gz https://gitlab.freedesktop.org/PipeWire/wireplumber/-/archive/0.5.14/
 
-[D] 066a376b8109fe9438e2955afde6d2f9a1f33094ffcd658ad5356d74 wireplumber-0.5.8.tar.gz https://gitlab.freedesktop.org/PipeWire/wireplumber/-/archive/0.5.8/
+pkginstalled lua && var_append mesonopt ' ' -Dsystem-lua=true
+pkginstalled gobject-introspection || var_append mesonopt ' ' -Dintrospection=disabled

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/cemu/cemu.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,15 +11,14 @@
 [U] https://cemu.info/
 
 [A] Cemu Project
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/emulator
 [F] OBJDIR
 
 [L] MPL
-[S] Stable
-[V] 2.2.0
+[V] 2.6
 
-[O] var_append cmakeopt ' ' '-G Ninja'
+[D] f2183fc4c52e195a8ae949f683ae43ccaf72b19a76f87d8048154223 cemu-2.6.tar.gz git+https://github.com/cemu-project/Cemu tags/v2.6
 
-[D] 0095e643359be6605c584ae8007c5b3894d1e4247ed0ebe61bbce4c9 cemu-2.2.0.tar.gz git+https://github.com/cemu-project/Cemu tags/v2.2.0
+var_append cmakeopt ' ' '-G Ninja'

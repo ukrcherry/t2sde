@@ -1,0 +1,28 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/buildkit/buildkit.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Concurrent, cache-efficient, and Dockerfile-agnostic builder toolkit
+
+[T] BuildKit is a toolkit for converting source code to build artifacts in an
+[T] efficient, expressive and repeatable manner.
+
+[U] https://github.com/moby/buildkit
+
+[A] Buildkit Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[L] APL
+[V] 0.30.0
+
+[D] ab551e5033ebf32ff97aabdf4d070af9a071c2d28e512d4f56ceddb1 buildkit-0.30.0.tar.gz https://github.com/moby/buildkit/archive/refs/tags/v0.30.0/
+
+. $base/package/*/*/go-conf.in
+
+hook_add premake 5 'mkdir -p objs'
+var_append goconfopt ' ' '-o objs ./cmd/buildctl ./cmd/buildkitd'
+hook_add postmake 5 'cp -vf objs/* $root$bindir/'

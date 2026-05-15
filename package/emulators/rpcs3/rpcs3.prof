@@ -1,0 +1,9 @@
+279034 SPUThread.cpp
+4657 SPUCommonRecompiler.cpp
+1806 vm.cpp
+796 PPUTranslator.cpp
+578 aesni.cpp
+442 PPUAnalyser.cpp
+405 lv2.cpp
+378 VKQueryPool.cpp
+12 RSXFIFO.cpp

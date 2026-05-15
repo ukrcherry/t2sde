@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/curtail/curtail.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Simple & useful image compressor
+
+[T] Simple & useful image compressor.
+
+[U] https://github.com/Huluti/Curtail
+
+[A] Curtail Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.15.1
+[L] GPL3
+
+[D] 0925e390813055d40b347082b8cf648c756942c68ea1340612364c3c curtail-1.15.1.tar.gz https://github.com/Huluti/Curtail/archive/1.15.1/

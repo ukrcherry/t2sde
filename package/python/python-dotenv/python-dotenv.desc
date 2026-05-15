@@ -1,0 +1,23 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/python-dotenv/python-dotenv.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Read env vars from dotfiles for Python
+
+[T] Reads key-value pairs from a .env file and can set them as environment variables.
+[T] It helps in developing applications following the 12-factor principles.
+
+[U] https://github.com/theskumar/python-dotenv
+
+[A] theskumar
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] BSD
+[V] 1.2.2
+
+[D] 833e2b96a34cb5593aaeab6c5058dbafc22bb122e10abea19493f00e python-dotenv-1.2.2.tar.gz https://github.com/theskumar/python-dotenv/archive/v1.2.2/

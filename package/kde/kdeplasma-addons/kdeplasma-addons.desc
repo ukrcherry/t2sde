@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/kdeplasma-addons/kdeplasma-addons.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -18,14 +18,13 @@
 [M] Gerhard Weis <gweis@gmx.at>
 
 [C] extra/desktop/kde
-[F] OBJDIR
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 6.3.5
+[V] 6.6.5
 [P] X -----5---9 700.000
 
-[O] . $base/package/*/*/kde-conf.in
-
 [CV-GROUP] kde-plasma
-[D] 778969855a429b21104340ed851fe9342645665f5f514513c957d49b kdeplasma-addons-6.3.5.tar.xz https://download.kde.org/stable/plasma/6.3.5/
+[D] cb8e6cc086e2923e7a1cdd6bd9bbec634d4f6f757095b2195f69007a kdeplasma-addons-6.6.5.tar.xz https://download.kde.org/stable/plasma/6.6.5/
+
+. $base/package/*/*/kde-conf.in

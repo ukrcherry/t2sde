@@ -1,0 +1,24 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/gnome-console/gnome-console.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] A simple user-friendly terminal emulator for GNOME
+
+[T] A simple user-friendly terminal emulator for the GNOME desktop. Console
+[T] aims to be a simple terminal emulator for the average user to carry out
+[T] casual cli tasks.
+
+[U] https://gitlab.gnome.org/GNOME/console
+
+[A] The GNOME Project <gnome-devel-list@gnome.org>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool extra/desktop/gnome
+[F] CROSS
+
+[L] GPL3
+[V] 50.0
+
+[D] bf96033d9a0dd81624c7f0f44ef3a55238f6442a42022cc6e66be665 console-50.0.tar.gz https://gitlab.gnome.org/GNOME/console/-/archive/50.0/

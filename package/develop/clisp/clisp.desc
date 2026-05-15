@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/clisp/clisp.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -10,16 +10,31 @@
 [T] compiler, debugger, object system (CLOS), sockets, and foreign
 [T] language interface which runs on most UNIXes and Win32.
 
-[U] https://clisp.cons.org/
+[U] https://sourceforge.net/projects/clisp/
 
 [A] Bruno Haible <haible@users.sourceforge.net>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [F] NOPARALLEL
 
 [L] GPL
-[S] Stable
 [V] 2.49
 
-[D] 46f74430bda29e5661e790b087d0fb1f14797b21ee2a536ae2f725d0 clisp-2.49.tar.bz2 http://dl.sourceforge.net/sourceforge/clisp/
+[D] 46f74430bda29e5661e790b087d0fb1f14797b21ee2a536ae2f725d0 clisp-2.49.tar.bz2 https://prdownloads.sourceforge.net/sourceforge/clisp/
+
+# just basic clisp to bootstrap sbcl... (or build maxima)
+# you really want sbcl, no reason to produce a really ugly .conf with 500 cases
+
+badopts="sbindir infodir sysconfdir localstatedir build"
+for opt in $badopts; do var_remove_regex confopt ' ' "--$opt=.*"; done
+
+cl_pre_make() {
+    cd src
+    ./makemake --prefix=$root/$prefix > Makefile
+    rm config.cache
+}
+hook_add premake 5 cl_pre_make
+
+# by default the documentation is installed into the top-level docdir ...
+var_append makeinstopt ' ' docdir=$docdir

@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/xfdiff/xfdiff.desc
+[COPY] Copyright (C) 2014 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Graphical diff
+
+[T] Graphical diff
+
+[U] https://sourceforge.net/projects/xffm/files/4.5.0/xfdiff
+
+[A] edscott@xfce.org
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/graphic
+[F] CROSS
+
+[L] GPL
+[V] 4.5.0
+# needs to be after libtubo:
+
+[D] 3853757866 xfdiff-4.5.0.tar.gz https://sourceforge.net/projects/xffm/files/4.5.0/xfdiff/4.5.0/

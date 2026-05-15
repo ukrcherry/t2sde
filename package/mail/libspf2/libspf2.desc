@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libspf2/libspf2.desc
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Implements the Sender Policy Framework
+
+[T] libspf2 implements the Sender Policy Framework, a part of the SPF/SRS
+[T] protocol pair. libspf2 is a library which allows email systems such as
+[T] Sendmail, Postfix, Exim, Zmailer and MS Exchange to check SPF records and
+[T] make sure that the email is authorized by the domain name that it is coming
+[T] from. This prevents email forgery, commonly used by spammers, scammers and
+[T] email viruses/worms.
+
+[U] https://www.libspf2.net
+
+[A] Wayne Schlitt, Shevek
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/server
+
+[L] LGPL
+[V] 1.2.11
+
+[D] 85978082e8e2bfe056fa05c62073621c4bca8a1f24911c5accc582e9 libspf2-1.2.11.tar.gz !https://github.com/shevek/libspf2/archive/8131fe14.tar.gz

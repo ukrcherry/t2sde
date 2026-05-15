@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/hare/hare.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -22,13 +22,12 @@
 [R] + arm64 riscv64 x86-64
 
 [L] GPL3
-[S] Alpha
-[V] 0.24.0
-[P] X -??--5---9 800.002
+[V] 0.26.0.1
+[P] X -??--5---9 200.050
 
-[O] export XDG_CACHE_HOME="$builddir"/hare-cache
-[O] hook_add preconf 5 "cp configs/linux.mk config.mk"
-[O] var_append makeopt ' ' VERSION=${ver}-t2sde
-[O] var_append makeinstopt ' ' LOCALSRCDIR=$root/$prefix/src/$pkg
+[D] 6a5bd84d47765ae319e33296da3e979a1f66de47ac88ca5ac833b840 hare-0.26.0.1.tar.gz !https://git.sr.ht/~sircmpwn/hare/archive/0.26.0.1.tar.gz
 
-[D] 2a5541d3b162fa530f51f3319b342bafe74e09f76b551f744bb7f567 hare-0.24.0.tar.gz !https://git.sr.ht/~sircmpwn/hare/archive/0.24.0.tar.gz
+export XDG_CACHE_HOME="$builddir"/hare-cache
+hook_add preconf 5 "cp configs/linux.mk config.mk"
+var_append makeopt ' ' VERSION=${ver}-t2sde
+var_append makeinstopt ' ' LOCALSRCDIR=$root/$prefix/src/$pkg

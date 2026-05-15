@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/helvum/helvum.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,13 +12,12 @@
 [U] https://gitlab.freedesktop.org/pipewire/helvum/
 
 [A] Copyright 2021 Tom A. Wagner <tom.a.wagner@protonmail.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] CROSS
 
 [L] GPL
-[S] Beta
-[V] 0.5.1
+[V] 0.6.1
 
-[D] fadbb23d6032753639abc20c70bb955373f567dc4595f0423990d62a helvum-0.5.1.tar.gz https://gitlab.freedesktop.org/pipewire/helvum/-/archive/0.5.1/
+[D] 5693cd391d956cee520de0bdf35681b3773731641a9569748fa5c492 helvum-0.6.1.tar.gz https://gitlab.freedesktop.org/pipewire/helvum/-/archive/0.6.1/

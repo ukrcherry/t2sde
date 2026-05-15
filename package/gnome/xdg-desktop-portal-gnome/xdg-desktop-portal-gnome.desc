@@ -1,0 +1,23 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/xdg-desktop-portal-gnome/xdg-desktop-portal-gnome.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] A xdg-desktop-portal backend implementation for GNOME
+
+[T] A backend implementation for xdg-desktop-portal for the GNOME desktop
+[T] environment.
+
+[U] https://gitlab.gnome.org/GNOME/xdg-desktop-portal-gnome
+
+[A] The GNOME Project <gnome-devel-list@gnome.org>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base extra/desktop/gnome
+[F] CROSS
+
+[L] LGPL
+[V] 50.0
+
+[D] 9b04f47dd544e1fb758a2d0d7fcbb9850fa30afaba10155ef278b335 xdg-desktop-portal-gnome-50.0.tar.gz https://gitlab.gnome.org/GNOME/xdg-desktop-portal-gnome/-/archive/50.0/

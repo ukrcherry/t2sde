@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libvncserver/libvncserver.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,14 +11,18 @@
 [U] https://libvncserver.sourceforge.net/
 
 [A] Johannes E. Schindelin
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network
+[F] CROSS
+
+[E] opt gtk+2
 
 [L] GPL
-[S] Stable
 [V] 0.9.15
 [P] X -----5---9 171.900
 
-[O] var_append confopt ' ' --enable-shared
 [D] cbedb5bf505116b4dc09c806186be90386c4e74b745c1b4e5364f804 LibVNCServer-0.9.14.tar.gz https://github.com/LibVNC/libvncserver/archive/refs/tags/
+
+var_append cmakeopt ' ' -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+var_append cmakeopt ' ' '-DWITH_TESTS=OFF -DWITH_EXAMPLES=OFF'

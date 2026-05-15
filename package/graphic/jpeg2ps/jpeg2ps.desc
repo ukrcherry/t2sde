@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/jpeg2ps/jpeg2ps.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,16 +15,15 @@
 [U] http://www.pdflib.com/products/more/jpeg2ps.html
 
 [A] Thomas Merz <tm@pdflib.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/printing
 [F] CROSS
 
 [L] OpenSource
-[S] Stable
 [V] 1.9
 
-[O] var_append makeopt ' ' LD=$CC
-[O] var_append makeinstopt ' ' "BINDIR=$root$bindir MANDIR=$root$mandir/man1"
-
 [D] 44cca38494a74a59380803275ba8dba8c58cb2e48e5a9d34806443ac jpeg2ps-1.9.tar.gz http://www.pdflib.com/products/more/jpeg2ps/
+
+var_append makeopt ' ' LD=$CC
+var_append makeinstopt ' ' "BINDIR=$root$bindir MANDIR=$root$mandir/man1"

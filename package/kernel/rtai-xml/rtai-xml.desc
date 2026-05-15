@@ -1,0 +1,28 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/rtai-xml/rtai-xml.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] It is a server component of the Real Time Application Interface (RTAI)
+
+[T] RTAI-XML is a server component of the Real Time Application
+[T] Interface (RTAI) project, implementing a service oriented way to
+[T] design and develop Real Time (RT) control applications.
+
+[U] http://artist.dsi.unifi.it/rtaixml/
+
+[A] Michele Basso <basso@dsi.unifi.it>
+[A] Marco Romagnoli <romagnoli@dsi.unifi.it>
+[A] Massimo Vassalli <massimo.vassalli@isc.cnr.it>
+
+[M] Deniss Kulandin <denisk@t2-project.org>
+
+[C] extra/scientific
+
+[L] LGPL
+[V] 0.8.2
+[P] O
+[SRC] rtaixml
+
+[D] 6a28f79b5f81f791a8e4aa199bb01b0962450e6571f12dfc9c8f561d rtaixml-0.8.2.tar.gz http://artist.dsi.unifi.it/rtaixml/repository/0.8.2/

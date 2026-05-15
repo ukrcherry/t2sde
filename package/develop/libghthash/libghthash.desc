@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libghthash/libghthash.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,13 +14,12 @@
 [U] http://www.ipd.bth.se/ska/sim_home/libghthash.html
 
 [A] Simon Kagstrom <ska@bth.se>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [F] CROSS
 
 [L] LGPL
-[S] Beta
 [V] 0.6.2
 
 [D] 32dcbf40d160e4066053d57f3ff24037989898d53f95ee1b422d5438 libghthash-0.6.2.tar.gz http://www.ipd.bth.se/ska/sim_home/filer/

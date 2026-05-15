@@ -1,0 +1,41 @@
+[TIMESTAMP] 1760004680 Thu Oct  9 12:11:20 2025
+[BUILDTIME] 25 (9)
+[SIZE] 4.35 MB, 139 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] coreutils
+[DEP] cryptsetup
+[DEP] diffutils
+[OPT] docbook-xml
+[OPT] docbook-xsl
+[DEP] e2fsprogs
+[DEP] findutils
+[DEP] gawk
+[OPT] glib
+[OPT] gobject-introspection
+[DEP] grep
+[OPT] gtk-doc
+[DEP] gzip
+[DEP] json-glib
+[DEP] keyutils
+[DEP] kmod
+[DEP] libatasmart
+[DEP] libbytesize
+[DEP] libnvme
+[DEP] libyaml
+[DEP] linux-header
+[DEP] lvm2
+[DEP] make
+[DEP] ndctl
+[DEP] nspr
+[DEP] nss
+[DEP] openssl
+[DEP] parted
+[DEP] python
+[DEP] sed
+[DEP] setuptools
+[DEP] tar
+[DEP] udev
+[DEP] util-linux
+[DEP] volume_key

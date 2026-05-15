@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/copas/copas.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -18,19 +18,16 @@
 
 [A] André Carregal
 [A] Javier Guerra
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [F] CROSS
 
 [L] OpenSource
+[V] 4.10.0
 
-[S] Stable
-[V] 1.1.5
+[D] 2693bb5b22ffce97ddddc186c3af1935cb1ebcedf14f4ff1d176535b copas-4.10.0.tar.gz https://github.com/lunarmodules/copas/archive/4.10.0/
 
-[O] . $base/package/*/*/lua-conf.in
-[O] runmake=0
-[O] hook_add postmake 5 "install_lua_module"
-
-[CV-URL] http://luaforge.net/frs/?group_id=100
-[D] 7511efe84d32f34cbb9f5d3a11aa959e62bcb50b396a74ecbc1664c4 copas-1.1.5.tar.gz http://luaforge.net/frs/download.php/4027/
+. $base/package/*/*/lua-conf.in
+runmake=0
+hook_add postmake 5 install_lua_module

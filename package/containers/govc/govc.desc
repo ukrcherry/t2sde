@@ -1,0 +1,29 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/govc/govc.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] VSphere CLI built on top of govmomi
+
+[T] VSphere CLI built on top of govmomi.
+
+[U] https://github.com/vmware/govmomi/tree/master/govc
+
+[A] Govc Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] APL
+[V] 0.54.0
+
+[D] 6b8a409d65b41e7cedb5c2f640aff81a3eec43f96fc5c543c0ed95b4 govc-0.54.0.tar.gz https://github.com/vmware/govmomi/archive/v0.54.0/
+
+rungo=0
+srcdir=gov*/govc
+. $base/package/*/*/go-conf.in
+var_append makeopt ' ' all
+
+hook_add postmake 5 'install -v govc* $root$bindir/govc'

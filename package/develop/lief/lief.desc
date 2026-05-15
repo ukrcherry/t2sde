@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/lief/lief.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,12 +12,11 @@
 [U] https://lief.re/
 
 [A] Lief Authors
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [L] APL
-[S] Stable
-[V] 0.16.5
+[V] 0.17.6
 
-[D] 1c1996d3c54ad2825b1102a2e3de334762e1e6c512a4b4d87609f323 lief-0.16.5.tar.gz https://github.com/lief-project/LIEF/archive/refs/tags/0.16.5/
+[D] a1eeaae761fcbfcefd05ceccc114476272e779c8b9fd0140050f1e65 lief-0.17.6.tar.gz https://github.com/lief-project/LIEF/archive/refs/tags/0.17.6/

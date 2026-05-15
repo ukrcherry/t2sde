@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/rocprofiler-register/rocprofiler-register.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -16,20 +16,19 @@
 [U] https://github.com/ROCm/rocprofiler-register
 
 [A] Advanced Micro Devices, Inc.
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [F] CROSS
 [C] extra/development
 
 [L] MIT
-[S] Stable
-[V] 6.4.0
+[V] 7.2.3
 [P] X -----5---9 300.190
 
-[O] . $base/package/*/*/rocm-conf.in
-[O] rungpepinstall=0
-#[O] var_append cmakeopt ' ' -DROCPROFILER_REGISTER_BUILD_GLOG=OFF
-#[O] var_append cmakeopt ' ' -DROCPROFILER_REGISTER_BUILD_FMT=OFF
-
 [CV-GROUP] rocm
-[D] 8a0267061de75c1baee5ffe9f22d0067f6e9e0b82b04cc1af77b181d rocprofiler-register-rocm-6.4.0.tar.gz git+https://github.com/ROCm/rocprofiler-register rocm-6.4.0
+[D] ae194434f6c891cf43d985c7c3833a20eebf99e3867d249eebcbc5f9 rocprofiler-register-rocm-7.2.3.tar.gz git+https://github.com/ROCm/rocprofiler-register rocm-7.2.3
+
+. $base/package/*/*/rocm-conf.in
+rungpepinstall=0
+#var_append cmakeopt ' ' -DROCPROFILER_REGISTER_BUILD_GLOG=OFF
+#var_append cmakeopt ' ' -DROCPROFILER_REGISTER_BUILD_FMT=OFF

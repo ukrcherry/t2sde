@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/mrustc/mrustc.desc
-[COPY] Copyright (C) 2017 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2017 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,16 +11,16 @@
 [U] https://github.com/thepowersgang/mrustc
 
 [A] John Hodge (Mutabah/thePowersGang)
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/tool
+[F] CROSS
 
 [L] MIT
-[S] Stable
-[V] 0.10
-
-[O] makeinstopt=
-[O] hook_add postmake 5 "install bin/mrustc $root$bindir"
+[V] 0.12.0
 
 [CV-FLAGS] NO-PREFIX
-[D] 36e6f8ed141af70ac2963b2c237869919dc77331125a05fec62adb08 mrust-0.10.tar.gz https://github.com/thepowersgang/mrustc/archive/v0.10/
+[D] b9f720dceef49a2e4f8bacbd3e8d308364b78a653ea98342a4f94c89 mrust-0.12.0.tar.gz https://github.com/thepowersgang/mrustc/archive/v0.12.0/
+
+makeinstopt=
+hook_add postmake 5 "install bin/mrustc $root$bindir"

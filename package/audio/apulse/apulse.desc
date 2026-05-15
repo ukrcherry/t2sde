@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/apulse/apulse.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] PulseAudio emulation for ALSA
+
+[T] PulseAudio emulation for ALSA.
+
+[U] https://github.com/i-rinat/apulse
+
+[A] Apulse Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.1.14
+[L] MIT
+
+[D] b2a9d235c69b2e0387ad7a19266b0a378fc1cf773da450a20fd0f47d apulse-0.1.14.tar.gz https://github.com/i-rinat/apulse/archive/v0.1.14/
+
+var_append cmakeopt ' ' -DCMAKE_POLICY_VERSION_MINIMUM=3.5

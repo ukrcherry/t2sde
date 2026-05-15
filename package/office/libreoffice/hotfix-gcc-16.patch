@@ -1,0 +1,28 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/libreoffice/hotfix-gcc-16.patch
+# Copyright (C) 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0 or patched project license
+# --- T2-COPYRIGHT-END ---
+
+--- libreoffice-26.2.0.3/oox/source/drawingml/textparagraphpropertiescontext.cxx.vanilla	2026-04-29 15:22:59.594394525 +0200
++++ libreoffice-26.2.0.3/oox/source/drawingml/textparagraphpropertiescontext.cxx	2026-04-29 15:23:07.113550351 +0200
+@@ -17,6 +17,8 @@
+  *   the License at http://www.apache.org/licenses/LICENSE-2.0 .
+  */
+ 
++#include <cstdint>
++
+ #include <drawingml/textparagraphpropertiescontext.hxx>
+ 
+ #include <com/sun/star/text/WritingMode2.hpp>
+--- libreoffice-26.2.0.3/oox/inc/drawingml/textbodycontext.hxx.vanilla	2026-04-29 15:21:51.567058802 +0200
++++ libreoffice-26.2.0.3/oox/inc/drawingml/textbodycontext.hxx	2026-04-29 15:22:02.954827900 +0200
+@@ -20,6 +20,8 @@
+ #ifndef INCLUDED_OOX_DRAWINGML_TEXTBODYCONTEXT_HXX
+ #define INCLUDED_OOX_DRAWINGML_TEXTBODYCONTEXT_HXX
+ 
++#include <cstdint>
++
+ #include <drawingml/textbody.hxx>
+ #include <drawingml/textrun.hxx>
+ #include <oox/core/contexthandler2.hxx>

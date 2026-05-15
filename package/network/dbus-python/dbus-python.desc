@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/dbus-python/dbus-python.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -19,15 +19,15 @@
 [U] https://freedesktop.org/wiki/Software/dbus
 
 [A] Havoc Pennington <hp@redhat.com>
-[A] etal.
 [M] Juergen "George" Sawinski <jsaw@gmx.net>
 
 [C] extra/network
 [F] NOPARALLEL NO-AS-NEEDED
 
 [L] GPL
-[S] Alpha
 [V] 1.4.0
 [P] X -----5---9 142.100
 
-[D] 1aa3a44884887fb15ceca72eaf7aed27af45c83f44e78db074cc80f7 dbus-python-1.4.0.tar.xz http://dbus.freedesktop.org/releases/dbus-python/
+[D] 1aa3a44884887fb15ceca72eaf7aed27af45c83f44e78db074cc80f7 dbus-python-1.4.0.tar.xz https://dbus.freedesktop.org/releases/dbus-python/
+
+pkginstalled pyrexc && var_append confopt ' ' --enable-python

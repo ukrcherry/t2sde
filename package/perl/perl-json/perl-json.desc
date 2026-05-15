@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/perl-json/perl-json.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Perl module implementing a JSON encoder/decoder
+
+[T] Perl module implementing a JSON encoder/decoder.
+
+[U] https://metacpan.org/release/JSON
+
+[A] Perl-json Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 4.11
+[L] GPL Artistic
+[P] X ?----5---9 700.000
+
+[D] 23359173a72a84fd378c6748c059b5a46ef7c454bd4651dfb7c78a84 JSON-4.11.tar.gz https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/

@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/setconf/setconf.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Utility for easily changing settings in configuration files
+
+[T] Utility for easily changing settings in configuration files.
+
+[U] https://setconf.roboticoverlords.org/
+
+[A] Setconf Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.7.7
+[L] GPL
+[P] X -----5---9 180.000
+
+[D] 991e6d92e6ec59578b3e1811cc078c663443fdcaf87ff5ef0b1fd205 setconf-0.7.7.tar.gz https://files.pythonhosted.org/packages/source/s/setconf/

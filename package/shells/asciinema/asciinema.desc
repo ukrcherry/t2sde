@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/asciinema/asciinema.desc
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Terminal session recorder
+
+[T] Asciinema (aka asciinema CLI or asciinema recorder) is a command-line tool
+[T] for recording terminal sessions. Unlike typical screen recording software,
+[T] which records visual output of a screen into a heavyweight video files
+[T] (.mp4, .mov), asciinema recorder runs inside a terminal, capturing terminal
+[T] session output into a lightweight recording files in the asciicast format
+[T] (.cast).
+
+[U] https://github.com/asciinema/asciinema
+
+[A] Marcin Kulik
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/shell
+
+[L] GPL
+[V] 3.2.0
+
+[D] e11ba2e8cbe50fd4bad193a06ed697a6174de2708aeef66938cbc2aa asciinema-v3.2.0.tar.gz https://github.com/asciinema/asciinema/archive/refs/tags/v3.2.0/

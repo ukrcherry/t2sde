@@ -1,6 +1,6 @@
 # --- T2-COPYRIGHT-BEGIN ---
 # t2/misc/share/REGISTER
-# Copyright (C) 2010 - 2025 The T2 SDE Project
+# Copyright (C) 2010 - 2026 The T2 SDE Project
 # SPDX-License-Identifier: GPL-2.0
 # --- T2-COPYRIGHT-END ---
 
@@ -204,20 +204,26 @@ Licence Names (for package description):
   FDL			The GNU Free Documentation License
   MPL			The Mozilla Public Licence
   MIT			The MIT License
-  BSD			The BSD	Licence
+  BSD			The BSD Licence
+  BSL			The Boost Software Licence
   APL			The Apache License
   BSL			Boost Software License
   ISC			ISC License
   ZLIB			ZLIB License
   UNL			The Unlicense
 
+  CPL			Common Public License
   QPL			The QPL License
+  EPL			Eclipse Public License
 
   APSL			Apple Public Source License
   CDDL			Sun Common Development and Distribution License
   CC-BY-SA-4.0		CC-BY-SA-4.0 License
+  CC-BY-NC-SA-4.0	CC-BY-NC-SA-4.0 License
+  CC-BY-NC-ND-4.0	CC-BY-NC-ND-4.0 License
   CC0			Creative Commons Legal Code
 
+  CeCILL-C		CeCILL-C FREE SOFTWARE LICENSE AGREEMENT
   EUPL			EUROPEAN UNION PUBLIC LICENCE
 
   IBM-Public-License	IBM Open Source License

@@ -1,0 +1,28 @@
+[TIMESTAMP] 1774463079 Wed Mar 25 19:24:39 2026
+[BUILDTIME] 160 (9)
+[SIZE] 5.07 MB, 38 files
+
+[DEP] abseil-cpp
+[DEP] bash
+[DEP] binutils
+[DEP] brotli
+[DEP] cmake
+[DEP] coreutils
+[DEP] diffutils
+[DEP] fmt
+[DEP] gawk
+[DEP] grep
+[DEP] gtest
+[DEP] libusb
+[DEP] linux-header
+[DEP] lz4
+[DEP] make
+[DEP] pcre2
+[DEP] pkgconfig
+[DEP] protobuf
+[DEP] sed
+[DEP] tar
+[DEP] util-linux
+[DEP] xz
+[DEP] zlib
+[DEP] zstd

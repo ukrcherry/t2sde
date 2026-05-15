@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libpanel/libpanel.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,18 +14,17 @@
 [U] https://gitlab.gnome.org/GNOME/libpanel
 
 [A] The GNOME Project <gnome-devel-list@gnome.org>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development extra/desktop/gnome
 [F] CROSS
 
 [L] LGPL
-[S] Beta
-[V] 1.10.0
-[P] X -----5---9 799.999
+[V] 1.10.4
+[P] X -----5---9 200.000
 
-[O] var_append mesonopt ' ' -Ddocs=disabled
-[O] pkginstalled gobject-introspection || var_append mesonopt ' ' -Dintrospection=disabled
-[O] pkginstalled vala || var_append mesonopt ' ' -Dvapi=false
+[D] 89c541ddae089d8f803e1f9ce4823916c5cea120d4e8bc70a1c2187e libpanel-1.10.4.tar.xz https://download.gnome.org/sources/libpanel/1.10/
 
-[D] 28e4e9dbee1dfb73bf48f2fc80969364ce2e82007f4052410b5d5bce libpanel-1.10.0.tar.xz https://download.gnome.org/sources/libpanel/1.10/
+var_append mesonopt ' ' -Ddocs=disabled
+pkginstalled gobject-introspection || var_append mesonopt ' ' -Dintrospection=disabled
+pkginstalled vala || var_append mesonopt ' ' -Dvapi=false

@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/atomicparsley/atomicparsley.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A command line program for reading, parsing and setting iTunes-style metadata in MPEG4 files
+
+[T] A command line program for reading, parsing and setting iTunes-style metadata in MPEG4 files.
+
+[U] https://atomicparsley.sourceforge.net/
+
+[A] Atomicparsley Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 20240608
+[L] GPL
+
+[D] 7dfcac629a97942df47d1e04bac9965896dd6e1f1cd6d6aa68d91b08 atomicparsley-20240608.tar.gz https://github.com/wez/atomicparsley/archive/refs/tags/20240608.083822.1ed9031/

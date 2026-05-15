@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/schismtracker/schismtracker.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -16,14 +16,13 @@
 [U] https://schismtracker.org/
 
 [A] Storlek <storlek@rigelseven.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 
 [E] opt flac
 
 [L] GPL
-[S] Stable
-[V] 20240308
+[V] 20251014
 
-[D] b29e44c04a97d6f1f0e851e058044f83c7849ee5bdfac91cc9dac4dd schismtracker-20240308.source.tar.gz https://github.com/schismtracker/schismtracker/releases/download/20240308/
+[D] 52dc860f28d74781aed73957539d7ca086aa5ce4bebde1df58dbd5ab schismtracker-20251014.source.tar.gz https://github.com/schismtracker/schismtracker/releases/download/20251014/

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/mess822/mess822.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -22,15 +22,14 @@
 [U] https://cr.yp.to/mess822.html
 
 [A] Dan J. Bernstein <djb@cr.yp.to>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 
 [L] OpenSource
-[S] Stable
 [V] 0.58
 
-[O] makeinstopt="$makeopt setup"
-[O] hook_add preconf 5 'echo $root/$prefix > conf-home'
-
 [D] 94f496d9d5ec0d464d94aaac1a9fd4ac1b7c92e7451d84ad25853f40 mess822-0.58.tar.gz http://cr.yp.to/software/
+
+makeinstopt="$makeopt setup"
+hook_add preconf 5 'echo $root/$prefix > conf-home'

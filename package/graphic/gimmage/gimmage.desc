@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/gimmage/gimmage.desc
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A gtkmm image viewer
+
+[T] Gimmage is a light and simple image viewer. Having a minimalist
+[T] interface, it is perfect for visualizing a large number of
+[T] consecutive images at a reasonable size. It aims to be fully
+[T] keyboard-operable.
+
+[U] https://sourceforge.net/projects/gimmage.berlios/
+
+[A] Bartek <zoombat@runbox.com>
+[M] Johan Boyé <linuxmasterjedi@free.fr>
+
+[C] extra/multimedia
+
+[L] GPL
+[V] 0.2.3
+
+[D] f95cc66c54dade5fb52a012c64b6702c6a4a645b3455aabe1c007c06 gimmage-0.2.3.tar.gz https://downloads.sourceforge.net/gimmage.berlios/
+
+var_append makeinstopt ' ' PREFIX=$root/$prefix

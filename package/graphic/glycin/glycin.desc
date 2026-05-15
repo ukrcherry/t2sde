@@ -1,0 +1,26 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/glycin/glycin.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Sandboxed and extendable image loading
+
+[T] Glycin allows to decode, edit, and create images and read metadata. The
+[T] decoding happens in sandboxed modular image loaders and editors.
+
+[U] https://gitlab.gnome.org/GNOME/glycin
+
+[A] GNOME
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/graphic
+[F] CROSS
+
+[E] add libheif
+[E] add libjxl
+
+[L] MPL LGPL
+[V] 2.1.1
+
+[D] 72b13b653eca41ab11bce9b8bc2653d1a801db7b0dbbf504ab984aa9 glycin-2.1.1.tar.bz2 https://gitlab.gnome.org/GNOME/glycin/-/archive/2.1.1/

@@ -1,0 +1,22 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/phosh-tour/phosh-tour.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Simple tour through phosh
+
+[T] Simple tour through phosh.
+
+[U] https://gitlab.gnome.org/World/Phosh/phosh-tour
+
+[A] Phos devs
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] GPL3
+[V] 0.54.0
+
+[D] 00db0683fd0e5e86b1baf3b5bed4c23cfebe2234755c4b95c44d7ea2 phosh-tour-v0.54.0.tar.gz https://gitlab.gnome.org/World/Phosh/phosh-tour/-/archive/v0.54.0/

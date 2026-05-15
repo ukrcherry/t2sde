@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libsdl2/libsdl2.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -21,7 +21,7 @@
 [U] https://www.libsdl.org/
 
 [A] Sam Lantinga <slouken@libsdl.org>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/x11
 [F] CROSS
@@ -37,11 +37,10 @@
 [E] opt pulseaudio
 
 [L] ZLIB
-[S] Stable
-[V] 2.32.4
+[V] 2.32.10
 [P] X -----5---9 130.000
 
-[O] pkginstalled libxcb && var_append GCC_WRAPPER_INSERT ' ' "-I$root$(pkgprefix includedir libxcb)"
-[O] pkginstalled libxcb && var_append GCC_WRAPPER_INSERT ' ' "-L$root$(pkgprefix libdir libxcb)"
+[D] 9982bd1d24004006512375b10e2844871a473cfa5b86d0a1b2e2f74f SDL2-2.32.10.tar.gz https://www.libsdl.org/release/
 
-[D] 94b653b43c757bbbea1db56b4c36f3201a36d07fb7aaf8c948868afa SDL2-2.32.4.tar.gz http://www.libsdl.org/release/
+pkginstalled libxcb && var_append GCC_WRAPPER_INSERT ' ' "-I$root$(pkgprefix includedir libxcb)"
+pkginstalled libxcb && var_append GCC_WRAPPER_INSERT ' ' "-L$root$(pkgprefix libdir libxcb)"

@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/datamash/datamash.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Command-line text/math procesing
+
+[T] GNU datamash is a command-line program which performs basic numeric,
+[T] textual and statistical operations on input textual data files.
+
+[U] https://www.gnu.org/software/datamash/
+
+[A] Datamash Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.9
+[L] GPL3
+
+[D] 63802a956c3e307cfbbbb7ab889a21d984cc2562cbb41d26ac7299c2 datamash-1.9.tar.gz https://ftpmirror.gnu.org/datamash/

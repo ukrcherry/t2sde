@@ -1,0 +1,22 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/cffi-lua/cffi-lua.desc
+# Copyright (C) 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] A portable C FFI for Lua 5.1+
+
+[T] A portable C FFI for Lua 5.1+.
+
+[U] https://github.com/q66/cffi-lua
+
+[A] q66
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] MIT
+[V] 0.2.4
+
+[D] 862fb0a233694f09130c7041dd6adf98c00c3e6b70bd9a9d287728c9 cffi-lua-0.2.4.tar.gz https://github.com/q66/cffi-lua/archive/v0.2.4/

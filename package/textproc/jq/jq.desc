@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/jq/jq.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,13 +13,12 @@
 [U] https://stedolan.github.io/jq/
 
 [A] Stephen Dolan <mu@netsoc.tcd.ie>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 [F] CROSS
 
 [L] OpenSource
-[S] Stable
-[V] 1.7.1
+[V] 1.8.1
 
-[D] 2b3c8da18321f26791c54d018a08794a26552283b5a1d552f09030c9 jq-1.7.1.tar.gz https://github.com/stedolan/jq/releases/download/jq-1.7.1/
+[D] 5472664ba790156ee2427d2432edf0d886b48e0a4c84010a6abb7196 jq-1.8.1.tar.gz https://github.com/stedolan/jq/releases/download/jq-1.8.1/

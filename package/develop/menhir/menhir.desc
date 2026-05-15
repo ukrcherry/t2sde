@@ -1,0 +1,29 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/menhir/menhir.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] LR(1) parser generator for OCaml
+
+[T] Menhir is a LR(1) parser generator for the OCaml programming language. That
+[T] is, Menhir compiles LR(1) grammar specifications down to OCaml code. Menhir
+[T] was designed and implemented by Francois Pottier and Yann Regis-Gianas.
+
+[U] https://gallium.inria.fr/~fpottier/menhir/
+
+[A] INRIA
+[M] Tomas Glozar <tglozar@gmail.com>
+
+[C] extra/development
+
+[L] LGPL
+[V] 20260203
+[P] X -----5---9 510.000
+
+[D] 15e6d8d4d9d71cef989f2e57d120e3b2cc8231b90ff161a40fe45fcd menhir-20260203.tar.gz https://gitlab.inria.fr/fpottier/menhir/-/archive/20260203/
+
+runmake=0
+export OCAMLPATH=$root$libdir/site-lib
+hook_add postmake 5 "dune build --display=verbose"
+hook_add postmake 5 "dune install --display=verbose --prefix=$root/$prefix --libdir=$root$libdir/site-lib"

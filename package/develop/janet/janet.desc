@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/janet/janet.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Dynamic Lisp dialect and bytecode VM
+
+[T] Janet is a functional and imperative programming language. Janet makes a
+[T] good system scripting language, or a language to embed in other programs.
+
+[U] https://janet-lang.org/
+
+[A] Janet Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[L] MIT
+[V] 1.41.2
+
+[D] c642932922d1d5788dc718a27043c0d24e3e3010f1d6eb07b08fcd8c janet-1.41.2.tar.gz https://github.com/janet-lang/janet/archive/v1.41.2/

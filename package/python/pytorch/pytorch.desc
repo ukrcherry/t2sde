@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/pytorch/pytorch.desc
-[COPY] Copyright (C) 2009 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2009 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,16 +12,26 @@
 [U] https://pytorch.org/
 
 [A] Facebook, Inc
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [F] CROSS
 [C] extra/development
 
-[E] add python-typing-extensions pyyaml
+[E] add python-typing-extensions pyyaml six openblas
 
 [L] BSD
-[S] Stable
-[V] 2.6.0
+[V] 2.12.0
 [P] X -----5---9 300.000
 
-[D] a457e68df8c082bf231ba1ec642ff9788179fbe328b736945dac9eec pytorch-v2.6.0.tar.gz https://github.com/pytorch/pytorch/releases/download/v2.6.0/
+[D] 9cad0c307e0f0e858af82d0ae11d5291b81c861c2e620d7e19933715 pytorch-v2.12.0.tar.gz https://github.com/pytorch/pytorch/releases/download/v2.12.0/
+[D] cef96256a9adf1cba24bf6088a9dedf826d1354e21f51468c6ad3856 pytorch-v2.9.1.tar.gz https://github.com/pytorch/pytorch/releases/download/v2.9.1/
+
+if ! pkginstalled nvidia; then
+	export USE_NCCL=OFF
+	export USE_SYSTEM_NCCL=OFF
+	export USE_CUDA=0
+	export USE_CUDNN=0
+fi
+if ! pkginstalled rocm; then
+	export USE_ROCM=0
+fi

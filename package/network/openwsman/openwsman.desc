@@ -1,0 +1,29 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/openwsman/openwsman.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Openwsman server implementation and client api with bindings
+
+[T] Openwsman server implementation and client api with bindings.
+
+[U] https://github.com/Openwsman/openwsman
+
+[A] Openwsman
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] BSD
+[V] 2.8.1
+
+[D] 4fac97ad589e7dd1d93a577a7dccdab704a6daf2e89599db6dbe18c4 openwsman-2.8.1.tar.gz https://github.com/Openwsman/openwsman/archive/v2.8.1/
+
+pkginstalled mono || var_append cmakeopt ' ' -DBUILD_CSHARP=NO
+pkginstalled openjdk || var_append cmakeopt ' ' -DBUILD_JAVA=NO
+pkginstalled pam || var_append cmakeopt ' ' -DUSE_PAM=NO
+pkginstalled perl || var_append cmakeopt ' ' -DBUILD_PERL=NO
+pkginstalled ruby || var_append cmakeopt ' ' -DBUILD_RUBY=NO
+pkginstalled swig || var_append cmakeopt ' ' -DBUILD_SWIG_PLUGIN=NO

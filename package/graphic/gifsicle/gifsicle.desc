@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gifsicle/gifsicle.desc
-[COPY] Copyright (C) 2014 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2014 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,15 +13,14 @@
 [U] http://www.lcdf.org/gifsicle/
 
 [A] Eddie Kohler
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] CROSS
 
 [L] OpenSource
-[S] Stable
 [V] 1.96
 
-[O] var_append confopt ' ' '--enable-gifview --enable-gifdiff --disable-ungif --with-x'
-
 [D] ac4ec9691ecb11911f465cb6b7904fd425ff2987cdfb82876ab3a532 gifsicle-1.96.tar.gz http://www.lcdf.org/gifsicle/
+
+var_append confopt ' ' '--enable-gifview --enable-gifdiff --disable-ungif --with-x'

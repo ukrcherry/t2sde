@@ -1,0 +1,22 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/ocrmypdf/ocrmypdf.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Adds an OCR text layer to scanned PDF files
+
+[T] OCRmyPDF adds an OCR text layer to scanned PDF files, allowing them to be searched.
+
+[U] http://ocrmypdf.readthedocs.io/
+
+[A] ocrmypdf
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] MPL
+[V] 17.4.2
+
+[D] fc42cc3975793a24feadca0ec45331370743051ef88692e0e237191a OCRmyPDF-17.4.2.tar.gz https://github.com/ocrmypdf/OCRmyPDF/archive/v17.4.2/

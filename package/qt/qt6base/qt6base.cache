@@ -1,12 +1,10 @@
-[TIMESTAMP] 1746732330 Thu May  8 20:25:30 2025
-[BUILDTIME] 2200 (9)
-[SIZE] 65.54 MB, 4476 files
+[TIMESTAMP] 1760260798 Sun Oct 12 11:19:58 2025
+[BUILDTIME] 2850 (9)
+[SIZE] 71.84 MB, 4905 files
 
-[DEP] at-spi2-core
 [DEP] bash
 [DEP] binutils
 [DEP] brotli
-[DEP] cairo
 [DEP] cmake
 [DEP] coreutils
 [OPT] cups
@@ -17,7 +15,6 @@
 [DEP] fontconfig
 [DEP] freetype
 [DEP] gawk
-[DEP] gdk-pixbuf
 [DEP] glib
 [DEP] grep
 [DEP] harfbuzz
@@ -37,7 +34,6 @@
 [OPT] mysql
 [DEP] ninja
 [DEP] openssl
-[DEP] pango
 [DEP] pcre2
 [DEP] pkgconfig
 [OPT] postgresql
@@ -45,15 +41,15 @@
 [DEP] sed
 [DEP] sqlite
 [DEP] tar
-[DEP] tbb
-[DEP] tslib
+[OPT] tslib
 [DEP] udev
 [DEP] vulkan-headers
 [DEP] wayland
+[DEP] xcb-util
 [DEP] xcb-util-cursor
 [DEP] xcb-util-image
 [DEP] xcb-util-keysyms
-[DEP] xcb-util-renderutils
+[DEP] xcb-util-renderutil
 [DEP] xcb-util-wm
 [DEP] xkbcommon
 [DEP] xorgproto

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/qt6quick3d/qt6quick3d.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,18 +12,18 @@
 [U] https://qt.io
 
 [A] Trolltech AS <www.trolltech.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
-[F] CROSS NO-LTO.gcc
+[F] CROSS OBJDIR
 
 [L] LGPL
-[S] Stable
-[V] 6.9.0
-[P] X -----5---9 128.200
-
-[O] [ $prefix_auto = 1 ] && prefix=$(pkgprefix qt6base) && set_confopt
-[O] var_append GCC_WRAPPER_APPEND ' ' "-I$root/$(pkgprefix includedir libxcb)"
+[V] 6.11.1
+[P] X ?----5---9 141.200
 
 [CV-GROUP] qt6
-[D] 68fb87854b612abea205b5276b07a2af9ee3ed8669c78bd132f1b0f6 qtquick3d-everywhere-src-6.9.0.tar.xz http://download.qt.io/official_releases/qt/6.9/6.9.0/submodules/
+[D] d7f7e88b14f9fa8068477454156bfa8b0ba96a2f704d7768a6e1d819 qtquick3d-everywhere-src-6.11.1.tar.xz http://download.qt.io/official_releases/qt/6.11/6.11.1/submodules/
+
+. $base/package/*/*/qt6-conf.in
+var_append GCC_WRAPPER_APPEND ' ' "-I$root/$(pkgprefix includedir libxcb)"
+atstage toolchain && var_append cmakeopt ' ' -DFEATURE_quick3dxr_openxr=OFF

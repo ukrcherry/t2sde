@@ -1,18 +1,17 @@
-[TIMESTAMP] 1737678859 Fri Jan 24 01:34:19 2025
-[BUILDTIME] 16 (9)
-[SIZE] 3.08 MB, 148 files
+[TIMESTAMP] 1761924268 Fri Oct 31 16:24:28 2025
+[BUILDTIME] 30 (9)
+[SIZE] 3.15 MB, 155 files
 
 [DEP] bash
 [DEP] binutils
 [DEP] cairo
-[DEP] cmake
 [DEP] coreutils
 [DEP] diffutils
 [DEP] gawk
 [DEP] gdk-pixbuf
 [DEP] gettext
 [OPT] glib
-[OPT] gnupg2
+[DEP] gnupg2
 [DEP] gobject-introspection
 [DEP] graphene
 [DEP] grep
@@ -31,6 +30,7 @@
 [DEP] python
 [DEP] sed
 [DEP] setuptools
+[OPT] systemd
 [DEP] tar
 [DEP] vala
 [DEP] xz

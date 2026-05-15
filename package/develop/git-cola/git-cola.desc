@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/git-cola/git-cola.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] GUI application for git built on Python & Qt5
+
+[T] Git Cola is a sleek and powerful graphical user interface for Git.
+
+[U] https://git-cola.github.io
+
+[A] Git-cola Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/development
+[F] CROSS
+
+[L] GPL
+[V] 4.18.2
+
+[D] 87fc3b0dc0dd68c5ac2bf585384096a647210b74e7914013995eb1b3 git-cola-4.18.2.tar.gz https://github.com/git-cola/git-cola/archive/v4.18.2/

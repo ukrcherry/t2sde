@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/foomatic-db/foomatic-db.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,17 +12,16 @@
 [T] software printer driver known to us and every printer known to work with
 [T] these drivers.
 
-[U] https://www.linuxprinting.org/foomatic.html
+[U] https://openprinting.github.io/projects/02-foomatic/
 
 [A] Till Kamppeter <till.kamppeter@gmail.com>
 [A] Grant Taylor <gtaylor@picante.com>
-[M] Susanne Klaus <susan@t2-project.org>
+[M] Susanne Klaus <vadja@gmx.de>
 
 [C] extra/printing
 [F] CROSS
 
 [L] GPL
-[S] Stable
 [V] 3.0-20090114
 
-[D] 7c46961eefac2d6be53194adbf3df1e9b87e91281f32d1297702816c foomatic-db-3.0-20090114.tar.gz http://www.openprinting.org/download/foomatic/oldstuff/
+[D] 7c46961eefac2d6be53194adbf3df1e9b87e91281f32d1297702816c foomatic-db-3.0-20090114.tar.gz https://www.openprinting.org/download/foomatic/oldstuff/

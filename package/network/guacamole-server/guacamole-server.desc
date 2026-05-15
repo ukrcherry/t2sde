@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/guacamole-server/guacamole-server.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Clientless remote desktop gateway server
+
+[T] Clientless remote desktop gateway server.
+
+[U] https://guacamole.apache.org
+
+[A] Guacamole-server Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.6.0
+
+[E] opt libwebp
+
+[L] GPL3
+
+[D] 0473907da602e2545ec982a58e2dadbbf1708dd8830cfd614357c96b guacamole-server-1.6.0.tar.gz https://apache.org/dyn/closer.cgi?action=download&filename=guacamole/1.6.0/source/

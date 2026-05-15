@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/915resolution/915resolution.desc
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Intel Video BIOS Hack
+
+[T] Intel Video BIOS Hack to tweak the BIOS resolution list.
+
+[U] https://915resolution.mango-lang.org
+
+[A] Stomljen
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/graphic
+[R] + x86
+
+[L] PublicDomain
+[V] 0.5.3
+
+[D] fd550c8fcbd4637f116e4156ab03576bf4a6938cb2aef808a4cac986 915resolution-0.5.3.tar.gz http://915resolution.mango-lang.org/download.html
+
+# at least 0.5.2 shipped with the binary
+hook_add premake 5 "make clean"

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libnemesi/libnemesi.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -25,9 +25,8 @@
 [C] extra/multimedia
 
 [L] LGPL
-[S] Alpha
-[V] git-20070710
+[V] 0.7.0
 
-[O] hook_add preconf 3 'autoreconf -i'
+[D] 3eec88469f85fc3d4a697f764dd34f9b83b66f32e781580bf8c892f1 libnemesi-0.7.0.tar.gz https://github.com/lscube/libnemesi/archive/398eceb/
 
-[D] 3228445d3e82ed2df8c596fc08f853c043111791567dd428d499abf6 libnemesi-20070710.tar.gz !http://live.polito.it/gitweb/?p=libnemesi.git;a=snapshot;h=e1bfb7f4a6c42b85d94ce4982deab61472f81c08
+hook_add preconf 3 'autoreconf -i'

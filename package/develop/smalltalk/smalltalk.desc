@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/smalltalk/smalltalk.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,12 +11,21 @@
 [U] https://smalltalk.gnu.org/
 
 [A] Paolo Bonzini <bonzini@gnu.org>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [L] GPL
-[S] Stable
 [V] 3.2.5
 
 [D] 224c69013479bbe7588697dede01d878aa49b26585ab0bc84e367f56 smalltalk-3.2.5.tar.xz http://ftp.gnu.org/gnu/smalltalk/
+
+var_append confopt ' ' '--with-system-libffi --with-system-libsigsegv'
+
+if pkginstalled tk; then
+    tlibdir=`pkgprefix libdir tk`
+    var_append confopt  ' ' "--with-tk=$tlibdir --with-tcl=$tlibdir"
+fi
+
+#gtk gui is really broken atm
+#pkginstalled gtk+2 && var_append confopt ' ' --enable-gtk=blox

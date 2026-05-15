@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/iperf/iperf.desc
-[COPY] Copyright (C) 2009 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2009 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,13 +14,12 @@
 [U] https://iperf.sourceforge.net/
 
 [A] NLANR/DAST
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 [F] CROSS
 
 [L] Free-to-use
-[S] Stable
-[V] 3.9
+[V] 3.21
 
-[D] f99047bc8fa2cda707fec79069d2a21cabd94eeac3cbd7ac16f4c4e9 iperf-3.9.tar.gz http://downloads.es.net/pub/iperf/
+[D] f748fc9ae75fd09b65096b0e6e2b030c6da525e43eac6d66abb59ba9 iperf-3.21.tar.gz https://downloads.es.net/pub/iperf/

@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/efibooteditor/efibooteditor.desc
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Boot Editor for (U)EFI based systems
+
+[T] Boot Editor GUI and CLI to manipulate UEFI bootmenu entries.
+
+[U] https://github.com/Neverous/efibooteditor
+
+[A] Maciej Szeptuch
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+
+[L] LGPL
+[V] 1.5.7
+
+[D] a5e43b4cace4650246a3bf2f6ed87a0c452a73699ba7d8bbe4d6f0cc efibooteditor-1.5.7.tar.gz https://github.com/Neverous/efibooteditor/archive/refs/tags/v1.5.7/

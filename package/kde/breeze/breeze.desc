@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/breeze/breeze.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,19 +12,19 @@
 [U] https://www.kde.org
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [E] add kwin
 
 [L] GPL
-[S] Stable
-[V] 6.3.5
-[P] X -----5---9 162.900
-
-[O] . $base/package/*/*/kde-conf.in
-[O] var_append cmakeopt ' ' -DBUILD_QT5=OFF
+[V] 6.6.5
+[P] X -----5---9 200.010
 
 [CV-GROUP] kde-plasma
-[D] 3ccc0efd15668476878c4f27655eed027616d5c226c5ef96e197f2cb breeze-6.3.5.tar.xz https://download.kde.org/stable/plasma/6.3.5/
+[D] 78536405a4656c60411c2d50ac7c1ccb42be41a0b4390c2e58f28bb8 breeze-6.6.5.tar.xz https://download.kde.org/stable/plasma/6.6.5/
+
+. $base/package/*/*/kde-conf.in
+var_append cmakeopt ' ' -DBUILD_QT5=OFF

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/inkscape/inkscape.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -19,17 +19,20 @@
 [U] https://inkscape.org/
 
 [A] Bryce Harrington <bryce@users.sourceforge.net>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia extra/desktop/gnome
+[F] CROSS
+
+[E] add gnome-icon-theme
+[E] opt graphicsmagick
+[E] opt gspell
 
 [L] GPL
-[S] Beta
-[V] 1.4
-[P] X -----5---9 801.000
-
-[O] . $base/package/*/*/gnome-conf.in
-[O] var_append cmakeopt ' ' -DENABLE_POPPLER=OFF
+[V] 1.4.4
 
 [CV-URL] https://inkscape.org/release/
-[D] b80c9405231a860f92797bf7df4a206766a880924167632cafc0e76c inkscape-1.4.tar.xz https://media.inkscape.org/dl/resources/file/
+[D] 837c6d321a66d6e1d100742a29b3942d4bf4a2c4d7fb8ffb667f9c17 inkscape-1.4.4.tar.xz https://media.inkscape.org/dl/resources/file/
+
+. $base/package/*/*/gnome-conf.in
+pkginstalled poppler || var_append cmakeopt ' ' -DENABLE_POPPLER=OFF

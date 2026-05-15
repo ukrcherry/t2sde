@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/quickjs/quickjs.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Small and embeddable Javascript engine
+
+[T] Small and embeddable Javascript engine.
+
+[U] https://bellard.org/quickjs/
+
+[A] Quickjs Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 2025-09-13-2
+[L] MIT
+
+[D] f520b8da0276b86a6d2b763429392fb7e967e651632238f2de92bc0a quickjs-2025-09-13-2.tar.xz https://bellard.org/quickjs/

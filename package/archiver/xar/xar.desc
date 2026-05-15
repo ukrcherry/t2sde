@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xar/xar.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,15 +15,19 @@
 [T] users. Python bindings, Cocoa bindings, and a Finder Contextual Menu
 [T] Plugin are available separately.
 
-[U] http://code.google.com/p/xar/
+[U] https://github.com/apple-oss-distributions/xar
 
 [A] Rob Braun <bbraun@synack.net>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/tool
 
 [L] BSD
-[S] Stable
-[V] 1.5.2
+[V] 503
 
-[D] 661ece99d9cbf0d8e521755356956c0e8b77c855d05217eea8407dc8 xar-1.5.2.tar.gz http://xar.googlecode.com/files/
+[D] 49390f33562acf3692816ad188cef8de212a9d1562f479726a9c92cc xar-503.tar.gz https://github.com/apple-oss-distributions/xar/archive/xar-503/
+
+autogen=1
+hook_add preconf 5 "cd xar"
+
+var_append GCC_WRAPPER_APPEND ' ' "-I$root/usr/include/libxml2"

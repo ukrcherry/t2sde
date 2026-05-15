@@ -1,28 +1,28 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gsettings-desktop-schemas/gsettings-desktop-schemas.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
-[I] GNOME settings daemon
+[I] A collection of GSettings schemas for settings
 
-[T] GNOME settings daemon.
+[T] gsettings-desktop-schemas contains a collection of GSettings schemas for
+[T] settings shared by various components of a desktop incl GDesktopEnums.gir.
 
 [U] https://www.gnome.org
 
 [A] The GNOME Project <gnome-devel-list@gnome.org>
-[M] Aldas Nabazas <aldas@t2-project.org>
+[M] Aldas Nabazas <baldzius@gmail.com>
 
 [C] extra/base extra/desktop/gnome
 [F] CROSS
 
 [L] LGPL
-[S] Stable
-[V] 47.1
+[V] 50.1
 [P] X -----5---9 127.350
 
-[O] . $base/package/*/*/gnome-conf.in
-[O] pkginstalled gobject-introspection || var_append mesonopt ' ' -Dintrospection=false
-
 [CV-URL] https://download.gnome.org/sources/gsettings-desktop-schemas/cache.json
-[D] 87411edeb20ccb0b1d90aec63000d662480f3c719759103db1ae959e gsettings-desktop-schemas-47.1.tar.xz http://ftp.acc.umu.se/pub/GNOME/sources/gsettings-desktop-schemas/47/
+[D] 4208d42978a940aa98b900f1483829f6cd95c198d89709c44bbc1eef gsettings-desktop-schemas-50.1.tar.xz https://download.gnome.org/sources/gsettings-desktop-schemas/50/
+
+. $base/package/*/*/gnome-conf.in
+pkginstalled gobject-introspection || var_append mesonopt ' ' -Dintrospection=false

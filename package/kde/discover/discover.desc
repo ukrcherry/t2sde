@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/discover/discover.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,16 +13,17 @@
 [U] https://apps.kde.org/discover/
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 6.3.5
-[P] X -----5---9 162.900
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 6.6.5
 
 [CV-GROUP] kde-plasma
-[D] d17065fc2b8d962eb353db65567dd1531ba5d973d703996dde639f10 discover-6.3.5.tar.xz https://download.kde.org/stable/plasma/6.3.5/
+[D] aa7eb18bec8f15725c19545a6e8e1067a2fa8adf199885ee0d61b29f discover-6.6.5.tar.xz https://download.kde.org/stable/plasma/6.6.5/
+
+. $base/package/*/*/kde-conf.in
+
+atstage cross && var_append CXX_WRAPPER_APPEND ' ' "-L$root$(pkgprefix libdir glib)"

@@ -1,6 +1,6 @@
-[TIMESTAMP] 1745092253 Sat Apr 19 15:50:53 2025
-[BUILDTIME] 10 (9)
-[SIZE] 1.36 MB, 53 files
+[TIMESTAMP] 1768840824 Mon Jan 19 17:40:24 2026
+[BUILDTIME] 30 (9)
+[SIZE] 1.71 MB, 54 files
 
 [DEP] bash
 [DEP] binutils
@@ -9,11 +9,12 @@
 [DEP] coreutils
 [DEP] diffutils
 [OPT] doxygen
+[DEP] findutils
 [DEP] gawk
 [DEP] grep
 [DEP] gzip
 [DEP] icu4c
-[DEP] libxcb
+[OPT] libxcb
 [DEP] libxml
 [DEP] linux-header
 [DEP] meson
@@ -21,6 +22,6 @@
 [DEP] openssl
 [DEP] sed
 [DEP] tar
+[DEP] util-linux
 [OPT] wayland
 [DEP] wayland-protocols
-[OPT] xorg-server

@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/deluge/deluge.desc
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A bittorrent client written in PyGTK
+
+[T] Deluge is a Bittorrent client written in Python and GTK+. Deluge
+[T] is intended to bring a native, full-featured client to Linux,
+[T] BSD, and other *NIX GTK desktop environments such as Gnome and
+[T] XFCE.
+
+[U] https://deluge-torrent.org
+
+[A] Zach Tibbitts <zach@collegegeek.org>
+[A] Alon Zakai <kripkensteiner@gmail.com>
+[M] Johan Boyé <linuxmasterjedi@free.fr>
+
+[C] extra/network
+[E] add pyxdg pygtk
+
+[L] GPL
+[V] 2.2.0
+
+[D] 0be117adaa9eff51da6465f43244082fa58f30c33439887408b41e6e deluge-2.2.0.tar.xz http://download.deluge-torrent.org/source/2.2/

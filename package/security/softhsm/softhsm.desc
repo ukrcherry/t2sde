@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/softhsm/softhsm.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Cryptographic store accessible through a PKCS #11
+
+[T] SoftHSM is an implementation of a cryptographic store accessible through a
+[T] PKCS #11 interface.
+
+[U] https://www.softhsm.org/
+
+[A] Softhsm Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[L] BSD
+[V] 2.7.0
+
+[D] 8340637f6e34196c02d3abf2765ae5a67ecbf461657e0d94ad47dbd7 softhsm-2.7.0.tar.gz https://github.com/softhsm/SoftHSMv2/archive/2.7.0/

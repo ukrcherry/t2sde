@@ -1,13 +1,12 @@
+[TIMESTAMP] 1765392258 Wed Dec 10 19:44:18 2025
+[BUILDTIME] 170 (9)
+[SIZE] 4.84 MB, 318 files
 
-[TIMESTAMP] 1718737322 Tue Jun 18 21:02:02 2024
-[BUILDTIME] 155 (9)
-[SIZE] 3.37 MB, 229 files
-
-[DEP] 00-dirtree
 [DEP] bash
 [DEP] binutils
 [DEP] cmake
 [DEP] coreutils
+[DEP] cups
 [DEP] diffutils
 [DEP] gawk
 [DEP] grep
@@ -15,12 +14,12 @@
 [DEP] linux-header
 [DEP] make
 [DEP] pkgconfig
+[DEP] python
 [DEP] qt6base
 [DEP] qt6declarative
 [DEP] qt6quick3d
 [DEP] qt6shadertools
 [DEP] sed
 [DEP] tar
-[DEP] tbb
 [DEP] vulkan-headers
 [DEP] xz

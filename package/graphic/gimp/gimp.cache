@@ -1,10 +1,11 @@
-[TIMESTAMP] 1743166996 Fri Mar 28 14:03:16 2025
-[BUILDTIME] 270 (9)
-[SIZE] 113.95 MB, 2993 files
+[TIMESTAMP] 1777313714 Mon Apr 27 20:15:14 2026
+[BUILDTIME] 500 (9)
+[SIZE] 156.33 MB, 6326 files
 
 [DEP] 00-dirtree
 [OPT] aalib
 [DEP] alsa-lib
+[DEP] appstream
 [DEP] appstream-glib
 [DEP] at-spi2-core
 [DEP] babl
@@ -16,24 +17,28 @@
 [DEP] cmake
 [DEP] coreutils
 [DEP] diffutils
-[DEP] docbook-xml
-[DEP] docbook-xsl
+[OPT] docbook-xml
+[OPT] docbook-xsl
 [DEP] exiv2
-[DEP] findutils
 [DEP] flex
 [DEP] font-alias
 [DEP] font-util
 [DEP] fontconfig
+[DEP] freefonts
 [DEP] freetype
 [DEP] gawk
 [DEP] gdk-pixbuf
 [DEP] gegl
 [DEP] gettext
 [DEP] gexiv2
+[DEP] gexiv2-014
 [OPT] ghostscript
+[OPT] gi-docgen
 [OPT] glib
+[DEP] gnome-icon-theme
 [DEP] gobject-introspection
 [DEP] grep
+[DEP] gtk
 [DEP] gtk+
 [DEP] gudev
 [DEP] harfbuzz
@@ -41,10 +46,11 @@
 [DEP] iso-codes
 [DEP] json-glib
 [DEP] lcms2
-[DEP] libadwaita
 [DEP] libarchive
+[OPT] libbacktrace
 [OPT] libheif
 [DEP] libjpeg
+[DEP] libjxl
 [DEP] libmng
 [DEP] libmypaint
 [DEP] libpng
@@ -77,8 +83,8 @@
 [DEP] sed
 [DEP] setuptools
 [DEP] tar
-[DEP] tbb
 [DEP] unwind
+[DEP] util-linux
 [DEP] vala
 [DEP] wayland
 [DEP] xorgproto

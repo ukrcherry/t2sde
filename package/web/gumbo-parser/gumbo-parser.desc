@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/gumbo-parser/gumbo-parser.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] An HTML5 parsing library in pure C99
+
+[T] An HTML5 parsing library in pure C99.
+
+[U] https://codeberg.org/gumbo-parser/gumbo-parser/
+
+[A] Gumbo-parser Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.13.2
+[L] APL
+
+[D] 99e65659546599acb6a16bdaa2fa3a7cff916ad9293562dd93ca2182 gumbo-parser-0.13.2.tar.gz !https://codeberg.org/gumbo-parser/gumbo-parser/archive/0.13.2.tar.gz
+
+runconf=0 runpysetup=0
+hook_add postmake 5 "${pyscript:-python} setup.py build install ${pyconfopt:=--prefix $root/$prefix}"
+var_append mesonopt ' ' -Dtests=false

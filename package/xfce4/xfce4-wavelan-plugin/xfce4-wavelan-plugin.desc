@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xfce4-wavelan-plugin/xfce4-wavelan-plugin.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,15 +13,14 @@
 [U] http://xfce-goodies.berlios.de/
 
 [A] Benedikt Meurer
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/desktop/xfce
 [F] CROSS
 
 [L] BSD
-[S] Stable
-[V] 0.6.4
+[V] 0.7.0
 
-[O] . $base/package/xfce4/*/xfce4-conf.in
+[D] d283a375b38cf82e56becfc3b591751787fcfc2514ba64c59e140e5e xfce4-wavelan-plugin-0.7.0.tar.xz https://archive.xfce.org/src/panel-plugins/xfce4-wavelan-plugin/0.7/
 
-[D] 6f9ca168ea4f26a9a8c6eba2e32db143bafcfcaea582777f90cb345e xfce4-wavelan-plugin-0.6.4.tar.bz2 https://archive.xfce.org/src/panel-plugins/xfce4-wavelan-plugin/0.6/
+. $base/package/xfce4/*/xfce4-conf.in

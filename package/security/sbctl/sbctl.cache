@@ -1,0 +1,15 @@
+[TIMESTAMP] 1767197911 Wed 31 Dec 2025 05:18:31 PM CET
+[BUILDTIME] 16 (9)
+[SIZE] 10.11 MB, 7 files
+
+[DEP] bash
+[DEP] coreutils
+[DEP] diffutils
+[DEP] gawk
+[DEP] go
+[DEP] grep
+[DEP] gzip
+[DEP] linux-header
+[DEP] pcsc-lite
+[DEP] sed
+[DEP] tar

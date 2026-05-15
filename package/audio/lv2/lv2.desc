@@ -1,0 +1,27 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/lv2/lv2.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Extensible open standard for audio plugins
+
+[T] Extensible open standard for audio plugins.
+
+[U] https://lv2plug.in
+
+[A] Lv2 Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[E] opt asciidoc
+[E] opt doxygen
+[E] opt gtk+2
+
+[L] ISC
+[V] 1.18.10
+[P] X -----5---9 179.448
+
+[D] 6eaff2249e9f60791613cc7f8f7345ab97aa855e1fcfc74cf3cbb810 lv2-1.18.10.tar.xz https://lv2plug.in/spec/

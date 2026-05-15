@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/scribus/scribus.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -19,16 +19,15 @@
 
 [A] Franz Schmid <Franz.Schmid@altmuehlnet.de>
 [M] Juergen "George" Sawinski <jsaw@gmx.net>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office
 
 [L] GPL
-[S] Stable
-[V] 1.6.3
+[V] 1.6.6
 [P] X -----5---9 750.500
 
-[O] runconf=0
-[O] var_append cmakeopt ' ' -DWANT_QT6=YES
+[D] 4fba1aff525d2b8afe9e8a7eb15da40d37c771c8cfd980812a1616db scribus-1.6.6.tar.xz https://download.sourceforge.net/project/scribus/scribus/1.6.6/
 
-[D] 9ef390c629a9b549862da99f6733ef83ace0f7fd3e0a77e502db3171 scribus-1.6.3.tar.xz http://dl.sourceforge.net/project/scribus/scribus/1.6.3/
+runconf=0
+var_append cmakeopt ' ' -DWANT_QT6=YES

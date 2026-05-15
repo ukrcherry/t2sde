@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/mesa-demos/mesa-demos.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -9,19 +9,17 @@
 [T] Mesa 3D demos - installed are the well known glxinfo and glxgears.
 
 [A] Brian Paul <brian@mesa3d.org>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [U] https://www.mesa3d.org/
 
 [C] base/x11
-[L] OpenSource
-[S] Stable
 [F] CROSS
-[R] - sparc
 
+[L] OpenSource
 [V] 9.0.0
 
-[O] . package/*/*/modular-x-conf.in
-[O] var_append GCC_WRAPPER_APPEND ' ' -I$root/usr/X11/include
-
 [D] 5e976d273140e1bd45f45c312cc264ed02bd47561b038de5c73fc12f mesa-demos-9.0.0.tar.xz https://archive.mesa3d.org/demos/
+
+. package/*/*/modular-x-conf.in
+var_append GCC_WRAPPER_APPEND ' ' -I$root/usr/X11/include

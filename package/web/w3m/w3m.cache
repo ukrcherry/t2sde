@@ -1,0 +1,23 @@
+[TIMESTAMP] 1752521356 Mon Jul 14 21:29:16 2025
+[BUILDTIME] 8 (9)
+[SIZE] 2.16 MB, 38 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] boehm-gc
+[DEP] coreutils
+[DEP] diffutils
+[DEP] findutils
+[DEP] gawk
+[DEP] gettext
+[DEP] grep
+[DEP] gzip
+[DEP] imlib2
+[DEP] libx11
+[DEP] linux-header
+[DEP] make
+[DEP] openssl
+[DEP] sed
+[DEP] tar
+[DEP] xorgproto
+[DEP] zlib

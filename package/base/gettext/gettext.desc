@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gettext/gettext.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -16,7 +16,7 @@
 [U] https://www.gnu.org/software/gettext/
 
 [A] The GNU Project / FSF
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/library
 [F] CROSS NO-LIBTOOL-FIX NO-LTO.gcc LATOMIC.sparc
@@ -25,8 +25,32 @@
 [E] opt openjdk
 
 [L] LGPL
-[S] Stable
-[V] 0.25
+[V] 1.0
 [P] X 01---56--9 105.800
 
-[D] 4261b06274c6f8169cae5090bdc22434a2ba71ff41f8fb7f2a2e2aea gettext-0.25.tar.xz http://ftp.gnu.org/pub/gnu/gettext/
+[D] 98054a0b5f15d2469460bf12478f4a7905db412af93d62295124facc gettext-1.0.tar.xz http://ftp.gnu.org/pub/gnu/gettext/
+
+# flistdel="$flistdel|usr/share/locale/locale.alias"
+
+if atstage toolchain; then
+	var_append confopt ' ' --with-included-libxml
+fi
+
+if ! atstage native; then
+	var_append confopt ' ' "--disable-csharp" # files outside base dir
+	var_append confopt ' ' '--disable-openmp' # unresolved symbol on ARM
+
+	var_append confopt ' ' '--without-emacs'; export EMACS=false
+	hook_add preconf 5 "echo 'gl_cv_func_unsetenv_works=yes
+gl_cv_func_fopen_mode_e=yes
+gl_cv_func_fopen_mode_x=yes' >> config.cache"
+else
+	hook_add postmake 5 "rm -f $root/po-mode.el" # ???
+fi
+
+var_append GCC_WRAPPER_APPEND ' ' -std=gnu17
+
+# our usual libtool fixup strategies fail on this package in
+# a "maintainable" way, thus work around broken libtool by not
+# adding CC additionally, already set from env at configure time
+var_remove_regex makeopt ' ' 'CC=.*'

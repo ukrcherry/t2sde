@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/tcpflow/tcpflow.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -19,13 +19,12 @@
 [U] https://www.circlemud.org/~jelson/software/tcpflow/
 
 [A] Jeremy Elson <jelson@circlemud.org>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 0.21
+[V] 1.6.1
 
-[D] dee7d72f66128b7ff5f3dbb91f15307992b86b42c4588251f2da4091 tcpflow-0.21.tar.gz http://www.circlemud.org/pub/jelson/tcpflow/
+[D] d0a5f2f1b15497b0e5c20503b5ce60d859cae466dbab24fe11a3f6cc tcpflow-1.6.1.tar.gz https://github.com/simsong/tcpflow/releases/download/tcpflow-1.6.1/

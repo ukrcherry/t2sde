@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/ncdu/ncdu.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Text-based disk usage viewer
+
+[T] Ncdu is a disk usage analyzer with a text-mode user interface.
+
+[U] https://dev.yorhel.nl/ncdu
+
+[A] Ncdu Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 2.9.2
+[L] MIT
+
+[D] ea44b1c700ea5767d3d0fc7e414ddf853bbeb641c8d4a1ffb6c02219 ncdu-2.9.2.tar.gz https://dev.yorhel.nl/download/

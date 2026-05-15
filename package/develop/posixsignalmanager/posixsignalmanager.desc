@@ -1,0 +1,27 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/posixsignalmanager/posixsignalmanager.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Posix Signal Manager
+
+[T] Library safe, synchronous and asynchronous handling of posix signals for Qt
+[T] applications and libraries.
+
+[U] https://github.com/textshell/posixsignalmanager/
+
+[A] textshell
+[M] Chriwro <chrisiwro@gmail.com>
+
+[C] extra/development
+[F] CROSS
+[E] opt qt5base
+
+[L] BSL
+[V] 0.3.1
+[P] X -----5---9 200.000
+
+[D] 19b909de12382e7ab960b8842e632e4bfac186678d529479e8a41ca8 posixsignalmanager-0.3.1.tar.gz https://github.com/textshell/posixsignalmanager/archive/0.3.1/
+
+pkginstalled qt6base && var_append mesonopt ' ' -Dqt=qt6

@@ -1,0 +1,25 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/xdg-desktop-portal-tde/xdg-desktop-portal-tde.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] XDG Desktop portal for Trinity Desktop Environment
+
+[T] Implementation of the XDG Desktop Portal API for TDE.
+
+[U] https://www.trinitydesktop.org/
+
+[A] Trinity Desktop Developers
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/x11
+[F] OBJDIR
+
+[L] GPL
+[V] 14.1.6
+
+[CV-GROUP] tde
+[D] da7c4e5c4ddc7fee793c415a8a79853a616cca7a1094179143e60035 xdg-desktop-portal-tde-trinity-14.1.6.tar.xz https://mirror.ppa.trinitydesktop.org/trinity/releases/R14.1.6/main/applications/system/
+
+. $base/package/*/*/tde-conf.in

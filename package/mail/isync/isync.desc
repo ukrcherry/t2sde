@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/isync/isync.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] IMAP and MailDir mailbox synchronizer
+
+[T] IMAP and MailDir mailbox synchronizer.
+
+[U] https://isync.sourceforge.io
+
+[A] Isync Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[E] opt cyrus-sasl2
+
+[V] 1.5.1
+[L] GPL3
+
+[D] 7a2d9bc48382c942baf08db33904b13b4c1a30eaf1a66928ba089190 isync-1.5.1.tar.gz https://prdownloads.sourceforge.net/sourceforge/isync/

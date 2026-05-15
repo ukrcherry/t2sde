@@ -1,16 +1,16 @@
-[TIMESTAMP] 1745941204 Tue Apr 29 18:40:04 2025
-[BUILDTIME] 60 (9)
-[SIZE] 54.32 MB, 1840 files
+[TIMESTAMP] 1759867952 Tue Oct  7 22:12:32 2025
+[BUILDTIME] 110 (9)
+[SIZE] 50.96 MB, 1788 files
 
 [DEP] bash
 [DEP] binutils
 [DEP] cmake
 [DEP] coreutils
 [DEP] diffutils
+[DEP] fmt
 [DEP] gawk
 [DEP] grep
 [DEP] libsdl2
-[DEP] libsdl2_gfx
 [DEP] libsdl2_image
 [DEP] libsdl2_mixer
 [DEP] libsdl2_ttf
@@ -19,10 +19,8 @@
 [DEP] libxslt
 [DEP] linux-header
 [DEP] make
-[DEP] physfs
 [DEP] pkgconfig
 [DEP] sed
 [DEP] tar
-[DEP] tbb
 [DEP] xz
 [DEP] zlib

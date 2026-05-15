@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/nanosvg/nanosvg.desc
+[COPY] Copyright (C) 2023 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A single-header-file SVG parser
+
+[T] NanoSVG is a simple stupid single-header-file SVG parse. The output of the
+[T] parser is a list of cubic bezier shapes.
+
+[U] https://github.com/memononen/nanosvg/
+
+[A] vaxerski
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/cad
+
+[L] OpenSource
+[V] 9da543e
+[P] X -----5---9 160.000
+
+[D] 5643ed614b1611a43e678d5a2a467f9a72918527460760fa95e1f4cc nanosvg-9da543e.tar.gz https://github.com/memononen/nanosvg/archive/9da543e/

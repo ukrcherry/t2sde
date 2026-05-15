@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/cpssharedcalendar/cpssharedcalendar.desc
-[COPY] Copyright (C) 2005 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2005 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -21,18 +21,17 @@
 [T] * meeting helper that looks for free time,
 [T] * etc.
 
-[U] http://www.cps-project.org/sections/projects/calendar_server
+[U] https://web.archive.org/web/20070828034442/https://www.cps-project.org/sections/projects/calendar_server
 
 [A] Nuxeo
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 
 [L] GPL
 
-[S] Stable
 [V] 1.3.3
 
-[O] . $base/package/*/zope/zope-conf.in
-
 [D] 29f9c96daff88a2d70863cfbaecd5bff394ed9e80adc6c9e909e1e64 CPSSharedCalendar-bundle-1.3.3.tgz http://www.cps-project.org/static/misc/
+
+. $base/package/*/zope/zope-conf.in

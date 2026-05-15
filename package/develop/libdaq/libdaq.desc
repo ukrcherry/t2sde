@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libdaq/libdaq.desc
-[COPY] Copyright (C) 2023 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2023 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,16 +12,15 @@
 [U] https://github.com/snort3/libdaq/
 
 [A] Sourcefire, Inc.
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network
 [F] NO-LTO.gcc
 
 [L] GPL
-[S] Stable
-[V] 3.0.18
+[V] 3.0.27
 [P] X -----5---9 222.000
 
-[O] hook_add preconf 5 "autoreconf -ivf --warnings=all"
+[D] 0297758e8a22faaa1b21b9e3165b9deb91515aa4d47bf829f99a2bfc libdaq-3.0.27.tar.gz https://github.com/snort3/libdaq/archive/v3.0.27/
 
-[D] 6fc4ce2e31aeda3a7e3399b08cba16ed1649a0eb90b963dc9cd8fca5 libdaq-3.0.18.tar.gz https://github.com/snort3/libdaq/archive/v3.0.18/
+autogen=2

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/hfsplusutils/hfsplusutils.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,13 +12,20 @@
 [U] https://developer.apple.com/
 
 [A] Apple Inc.
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/system extra/filesystem
 [F] CROSS
 
 [L] APSL
-[S] Beta
-[V] 332.25
+[V] 757
 
-[D] 3328993262eecc3768a00a532f7344bf1214545f36aa72f1b009b7dd diskdev_cmds-332.25.tar.gz https://github.com/apple-oss-distributions/diskdev_cmds/archive/refs/tags/diskdev_cmds-332.25/
+[D] 556eeea7b7d83949ea898ff59755ed5c5c8c6defea97ae1daf079c6a diskdev_cmds-757.tar.gz https://github.com/apple-oss-distributions/diskdev_cmds/archive/refs/tags/diskdev_cmds-757/
+
+[ $prefix_auto = 1 ] && prefix= && set_confopt
+
+var_insert makeopt ' ' '-f Makefile.lnx' # CFLAGS="-DDEBUG_BUILD=0 -D_FILE_OFFSET_BITS=64 -D LINUX=1 -D BSD=1 -I$PWD/../include"'
+makeinstopt=
+
+hook_add postmake 5 'install fsck_hfs.tproj/fsck_hfs $root$sbindir/fsck.hfsplus'
+hook_add postmake 5 'install newfs_hfs.tproj/newfs_hfs $root$sbindir/mkfs.hfsplus'

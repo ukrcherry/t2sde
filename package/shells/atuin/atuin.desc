@@ -1,0 +1,27 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/atuin/atuin.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Magical shell history
+
+[T] Atuin replaces your existing shell history with a SQLite database, and
+[T] records additional context for your commands.
+
+[U] https://github.com/atuinsh/atuin
+
+[A] Ellie Huxtable
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] MIT
+[V] 18.16.1
+
+[D] 770f35ea65adf3bcfde90c285b379f0ae5a46834f3ea6d0b69796a3f atuin-18.16.1.tar.gz https://github.com/atuinsh/atuin/archive/v18.16.1/
+
+cargoinstopt=
+atstage cross && hook_add postmake 5 "install target/${arch_target}/*/atuin $root$bindir"
+atstage native && hook_add postmake 5 "install target/*/atuin $root$bindir"

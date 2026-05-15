@@ -1,0 +1,27 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/openrgb/openrgb.desc
+[COPY] Copyright (C) 2014 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] RGB lighting control that doesn't depend on manufacturer software
+
+[T] Open Source RGB lighting control that doesn't depend on manufacturer
+[T] software. Supports Windows and Linux. ASUS, ASRock, Corsair, G.Skill,
+[T] Gigabyte, HyperX, MSI, Razer, ThermalTake, and more supported
+
+[U] https://gitlab.com/CalcProgrammer1/OpenRGB
+
+[A] CalcProgrammer1
+[M] René Rebe <rene@exactco.de>
+
+[C] base/system
+[F] CROSS
+
+[L] GPL
+[V] 1.0rc2
+
+[D] 79e3dc477c78109a369243d8ebc019fbed834df048a907261fad4d14 OpenRGB-release_candidate_1.0rc2.tar.gz https://gitlab.com/CalcProgrammer1/OpenRGB/-/archive/release_candidate_1.0rc2/
+
+atstage cross && hook_add preconf 5 "$root/$(pkgprefix qt5base)/bin/qmake PREFIX=$root/usr OpenRGB.pro"
+atstage native && hook_add preconf 5 "qmake OpenRGB.pro"

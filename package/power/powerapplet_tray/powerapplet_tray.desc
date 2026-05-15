@@ -1,0 +1,42 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/powerapplet_tray/powerapplet_tray.desc
+[COPY] Copyright (C) 2014 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Displays battery state-of-charge, applet for desktop tray
+
+[T] Displays battery state-of-charge, gtk2 applet for desktop tray.
+
+[U] https://bkhome.org/news
+
+[A] Barry Kauler
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/graphic
+
+[E] opt libwebp
+
+[L] GPL
+[V] 2.6
+
+[D] 5424e916e568c03ac5213bfe19a2a4eff52d9eb2156b334ed7acd658 powerapplet_tray-2.6.tar.bz2 http://distro.ibiblio.org/quirky/quirky6/sources/t2/april/
+
+build_patray() {
+    #./compile
+    rm -f powerapplet_tray
+    rm -f powerapplet_tray.pot
+    $CC `pkg-config --cflags --libs gtk+-2.0` powerapplet_tray.c -o powerapplet_tray
+    xgettext --keyword="_" powerapplet_tray.c  -o powerapplet_tray.pot
+    if [ -f powerapplet_tray ];then
+	mkdir -p $root/root/Startup
+	cp -a -f powerapplet_tray $root/root/Startup/
+	mkdir -p $root/usr/share/doc/nls/powerapplet_tray
+	cp -a -f powerapplet_tray.pot $root/usr/share/doc/nls/powerapplet_tray/
+    fi
+}
+runmake=0
+hook_add postmake 5 build_patray
+
+#oh dear, installs into root/Startup, but T2 doesn't put it into the binary tarball.
+flistroot='root usr var'

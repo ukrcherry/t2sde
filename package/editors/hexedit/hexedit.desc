@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/hexedit/hexedit.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -12,16 +12,17 @@
 [T] search through it. You have also copy&paste, and save to file functions.
 [T] Truncating or appending to the file. Modifications are shown in bold.
 
-[U] https://merd.net/pixel/hexedit.html
+[U] https://github.com/pixel/hexedit/
 
 [A] Pixel (Pascal Rigaux) <pixel_@geocities.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/editor
 [F] CROSS
 
 [L] OpenSource
-[S] Stable
-[V] 1.2.10
+[V] 1.6
 
-[D] 100409428 hexedit-1.2.10.src.tgz http://merd.net/pixel/
+[D] 2595bdbe3702831bc4c395e5515e83a728c1194affe5218d40d78121 hexedit-1.6.tar.gz https://github.com/pixel/hexedit/archive/1.6/
+
+autogen=1

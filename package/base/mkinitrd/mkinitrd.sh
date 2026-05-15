@@ -1,7 +1,7 @@
 #!/bin/bash
 # --- T2-COPYRIGHT-BEGIN ---
 # t2/package/*/mkinitrd/mkinitrd.sh
-# Copyright (C) 2005 - 2025 The T2 SDE Project
+# Copyright (C) 2005 - 2026 The T2 SDE Project
 # Copyright (C) 2005 - 2021 René Rebe <rene@exactcode.de>
 # SPDX-License-Identifier: GPL-2.0
 # --- T2-COPYRIGHT-END ---
@@ -27,12 +27,15 @@ vitalmods[xhci-pci.ko]=1 # probably every modern machine
 vitalmods[r8152.ko]=1
 vitalmods[r8169.ko]=1
 
+# firmware only needed for rare / embedded variants
+declare -A fwopt
+fwopt[e100.ko]=1	# popular vintage
+
+
 # TODO: defauls for vintage vs. latest, usb, pata, etc.
-filter="-e /loop -e ext2 -e ext4 -e /xfs -e isofs -e nfsv4 -e zram -e pata_legacy
+filter="-e /loop -e ext2 -e ext4 -e /xfs -e isofs -e zram -e pata_legacy
 -e pata_.*platform -e pata_macio -e mac_esp -e sym53c8xx -e /aic7xxx -e qla1280
--e pci-host-generic -e virtio_pci_.*_dev -e virtio_pci -e virtio_blk -e sunvdc
--e s[rd]_mod -e /ahci.ko -e /nvme.ko -e [uoex]hci-[ph][c][id] -e usbhid
--e /offb -e /bochs -e ps3fb"
+-e s[rd]_mod -e /ahci.ko -e [uo]hci-[ph][c][id] -e usbhid -e /offb -e ps3fb"
 
 declare -A added
 
@@ -59,20 +62,32 @@ while [ "$1" ]; do
 done
 
 # -e ps3vram -e net/phy
-[ -z "$minimal" ] && filter="$filter -e reiserfs -e btrfs -e /jfs -e /xfs -e jffs2
--e /udf -e overlayfs -e ntfs -e /fat -e /hfs -e floppy -e efivarfs
--e pci/controller -e /ata/ -e /scsi/ -e /fusion/ -e /sdhci/ -e nvme/host -e /mmc/
+[ -z "$minimal" ] && filter="$filter -e reiserfs -e btrfs -e /jfs -e /zfs -e jffs2
+-e /udf -e overlayfs -e ntfs -e /fat -e /exfat -e /hfs -e floppy -e efivarfs -e watchdog
+-e pci/controller -e /ata/ -e /scsi/ -e /fusion/ -e nvme/host -e mmc/host -e mmc_block
 -e virtio.\(blk\|scsi\|net\|console\|input\|gpu\|pci\) -e ps3disk -e drivers/pcmcia
+-e /nvme.ko -e pci-host-generic -e virtio_pci_.*_dev -e sunvdc
 -e dm-mod -e dm-raid -e md/raid -e dm/mirror -e dm/linear -e dm-crypt -e dm-cache
 -e /aes -e /sha -e /blake -e /cbc -e /ecb -e xts
 -e nls_cp437 -e nls_iso8859-1 -e nls_utf8
 -e usb/host -e usb-common -e usb-storage -e firewire-ohci -e sbp2 -e uas -e thunderbolt\.
--e i2c-hid -e hid-generic -e hid-multitouch
--e hid-apple[^i] -e hid-microsoft -e hyperv-keyboard
--e cpufreq/[^_]\+$ -e hwmon.*temp -e /rtc/ -e input-leds -e /ast/"
+-e [ex]hci-[ph][c][id] -e i2c-hid -e hid-generic -e hid-multitouch
+-e hid-apple[^i] -e hid-cherry -e hid-microsoft -e hyperv-keyboard
+-e cpufreq/[^_]\+$ -e hwmon.*temp -e /rtc/ -e input-leds
+-e simpledrm -e /ast/ -e /bochs -e msm
+-e phy.*.pcie -e tcsrcc.x1e80100 -e qcom -e leds_qcom_lpg -e pwm_bl -e qrtr
+-e pmic_glink_altmode -e gpio_sbu_mux -e phy_qcom_qmp_combo -e gpucc_sc8280xp
+-e dispcc_sc8280xp -e phy_qcom_edp -e panel_edp -e typec -e i2c_hid_of -e ufshcd
+-e dw-axi-dmac -e gpio-regulator"
 
-[ "$network" ] && filter="$filter -e '/ipv4\.' -e '/ipv6\.' -e ethernet
--e aqc111 -e asix -e ax88179_178a -e cdc_ether -e /cdc_ncm -e cx82310_eth -e r8153_ecm -e rtl8150 -e r8152"
+if [ "$network" ]; then
+	filter="$filter -e '/ipv4\.' -e nfsv4"
+
+	[ "$minimal" ] ||
+		filter="$filter -e '/ipv6\.' -e netconsole -e ethernet \
+-e aqc111 -e asix -e ax88179_178a -e cdc_ether -e /cdc_ncm -e cx82310_eth -e r8153_ecm \
+-e rtl8150 -e r8152"
+fi
 
 [ "$kernelver" ] || kernelver=`uname -r`
 [ "$moddir" ] || moddir="$root/lib/modules/$kernelver"
@@ -175,6 +190,8 @@ if [ "$moddir" ]; then
 		    fi
 		done
 		echo
+	     elif [ "${fwopt[$module]}" ]; then
+		echo " (optional)"
 	     else
 		echo ", skipped"
 		skipped=1
@@ -220,6 +237,7 @@ cp -ar $root/etc/{group,udev} $tmpdir/etc/
 
 [ -e $root/etc/os-release ] && cp -a $root/etc/os-release $tmpdir/etc/initrd-release
 [ -e $root/lib/udev/rules.d ] && cp -ar $root/lib/udev/rules.d $tmpdir/lib/udev/
+rm -rvf $tmpdir/lib/udev/rules.d/{60-fido-id,60-persistent-hidraw,70-memory}.rules # avoid
 [ -e $root/etc/mdadm.conf ] && cp -ar $root/etc/mdadm.conf $tmpdir/etc/
 cp -ar $root/etc/modprobe.* $root/etc/ld-* $tmpdir/etc/ 2>/dev/null || true
 
@@ -232,11 +250,12 @@ elf_magic () {
 
 # copy dynamic libraries, and optional plugins, if any.
 #
+extralibs="`ls $root/lib*/libkmod.so* 2>/dev/null || true`"
 if [ "$minimal" ]; then
-	extralibs="`ls $root/lib*/{libdl,libncurses.so}* 2>/dev/null || true`"
+	extralibs="$extralibs `ls $root/lib*/{libdl,libncurses.so}* 2>/dev/null || true`"
 else
 	# glibc only
-	extralibs="`ls $root/{lib*/libnss_files,usr/lib*/libgcc_s}.so* 2>/dev/null || true`"
+	extralibs="$extralibs `ls $root/{lib*/libnss_files,usr/lib*/libgcc_s}.so* 2>/dev/null || true`"
 fi
 
 copy_dyn_libs () {
@@ -305,8 +324,8 @@ done
 # setup optional programs
 #
 [ -z "$minimal" ] &&
-for x in $root/sbin/{insmod,blkid,lvm,vgchange,lvchange,vgs,lvs,mdadm} \
-	 $root/usr/sbin/{cryptsetup,smartctl,cache_check} $root/usr/embutils/{dmesg,mkswap,swapon}
+for x in $root/sbin/{insmod,blkid,lvm,vgchange,lvchange,vgs,lvs,dmsetup,mdadm,kexec} \
+	 $root/usr/sbin/{cache_check,cryptsetup,smartctl} $root/usr/embutils/{dmesg,mkswap,swapon}
 do
   if [ ! -e $x ]; then
 	echo "Warning: Skipped optional file ${x#$root}!"

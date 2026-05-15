@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/croc/croc.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Easily and securely send things from one computer to another
+
+[T] croc is a tool that allows any two computers to simply and securely
+[T] transfer files and folders.
+
+[U] https://github.com/schollz/croc
+
+[A] Croc Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[L] MIT
+[V] 10.4.3
+
+[D] cea4428ecaef52954f3c80b22ea2cddef205b11ea03050443110d84d croc_v10.4.3_src.tar.gz https://github.com/schollz/croc/releases/download/v10.4.3/
+
+. $base/package/*/*/go-conf.in
+var_append goconfopt ' ' -buildvcs=false
+hook_add postmake 5 'cp -vf croc $root$bindir/'

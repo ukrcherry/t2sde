@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/npapi-sdk/npapi-sdk.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Netscape Plugin API
+
+[T] Netscape Plugin API (NPAPI).
+
+[U] https://github.com/mgorny/npapi-sdk
+
+[A] Npapi-sdk Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.27.2
+[L] MPL
+
+[D] 6c8230f541df67c4ce20f439b48ef9ec2b5a1c26791211719c275b4a npapi-sdk-0.27.2.tar.bz2 https://github.com/mgorny/npapi-sdk/releases/download/npapi-sdk-0.27.2/

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/joe/joe.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -23,13 +23,12 @@
 [U] https://joe-editor.sourceforge.io
 
 [A] Joseph H. Allen <jhallen@world.std.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/editor
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 4.6
+[V] 4.8
 
-[D] 099e87f960298b208fcad550dffa583b450639f496e342658713671b joe-4.6.tar.gz https://downloads.sourceforge.net/project/joe-editor/JOE%20sources/joe-4.6/
+[D] ad650685d7bd8de42ab2dcec4a7631f792546dca81d2f87fb9fbf82d joe-4.8.tar.gz https://downloads.sourceforge.net/project/joe-editor/JOE%20sources/joe-4.8/

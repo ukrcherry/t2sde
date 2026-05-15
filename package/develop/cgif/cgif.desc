@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/cgif/cgif.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Fast and lightweight GIF encoder written in C
+
+[T] Fast and lightweight GIF encoder written in C.
+
+[U] https://github.com/dloebl/cgif
+
+[A] Cgif Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.5.3
+[L] MIT
+
+[D] 734d38e494a924b447edc1e12031fc48c0895f4f83948422a57fef94 cgif-0.5.3.tar.gz https://github.com/dloebl/cgif/archive/refs/tags/v0.5.3/

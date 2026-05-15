@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libsixel/libsixel.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] SIXEL encoder/decoder implementation
+
+[T] SIXEL encoder/decoder implementation.
+
+[U] https://github.com/libsixel/libsixel
+
+[A] Libsixel Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.10.5
+[L] MIT
+
+[D] c199f1211248060bc4549d24308655a00f74d08aa6e5c23b8c728814 libsixel-1.10.5.tar.gz https://github.com/libsixel/libsixel/archive/v1.10.5/

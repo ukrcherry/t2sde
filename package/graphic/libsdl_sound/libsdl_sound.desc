@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libsdl_sound/libsdl_sound.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -22,7 +22,7 @@
 [U] https://icculus.org/SDL_sound/
 
 [A] Ryan C. Gordon <icculus@clutteredmind.org>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] CROSS
@@ -31,8 +31,7 @@
 [E] opt speex
 
 [L] LGPL
-[S] Stable
 [V] 1.0.3
 [P] X -----5---9 213.300
 
-[D] a81c84bea64097af102810fa5fe0ff9bc4889f4668aadfff5d676b56 SDL_sound-1.0.3.tar.gz http://icculus.org/SDL_sound/downloads/
+[D] a81c84bea64097af102810fa5fe0ff9bc4889f4668aadfff5d676b56 SDL_sound-1.0.3.tar.gz https://icculus.org/SDL_sound/downloads/

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libostree/libostree.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,7 +14,7 @@
 [U] https://ostreedev.github.io/ostree/
 
 [A] The OSTree Project Developers
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [F] CROSS
@@ -23,13 +23,12 @@
 [E] opt libsoup3
 
 [L] LGPL
-[S] Stable
-[V] 2024.8
+[V] 2026.1
 [P] X -----5---9 400.000
 
-[O] pkginstalled gobject-introspection || var_append confopt ' ' --with-introspection=no
-[O] pkginstalled libselinux || var_append confopt ' ' --without-selinux
-[O] pkginstalled systemd || var_append confopt ' ' --without-libsystemd
-[O] pkginstalled gtk-doc && var_append confopt ' ' --enable-gtk-doc
+[D] a71446a34505f9dd7d2bb519d64dd2d02e240f6fff7bb5bedde9d740 libostree-2026.1.tar.xz https://github.com/ostreedev/ostree/releases/download/v2026.1/
 
-[D] fc27146ae3ba7b40f39c006481189c26ceb262849b0631cd9ed876d4 libostree-2024.8.tar.xz https://github.com/ostreedev/ostree/releases/download/v2024.8/
+pkginstalled gobject-introspection || var_append confopt ' ' --with-introspection=no
+pkginstalled libselinux || var_append confopt ' ' --without-selinux
+pkginstalled systemd || var_append confopt ' ' --without-libsystemd
+pkginstalled gtk-doc && var_append confopt ' ' --enable-gtk-doc

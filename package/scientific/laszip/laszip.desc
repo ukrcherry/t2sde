@@ -1,0 +1,28 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/laszip/laszip.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Award-winning software for efficient LiDAR compression
+
+[T] Open-source compression library for compressing LAS to LAZ. LASzip is
+[T] completely lossless: It compresses bulky LAS files into compact LAZ files
+[T] that are only 7-20% of the original size, while accurately preserving every
+[T] single bit. Likewise, LAZ files can be decompressed into a bitwise
+[T] identical LAS file. LASzip allows compressed LAZ files to be treated like
+[T] standard LAS files. They can be loaded directly from the compressed form
+[T] into an application without first decompressing them to a disk.
+
+[U] https://github.com/laszip/laszip
+
+[A] rapidlasso GmbH
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 3.5.0
+[L] APL
+
+[D] 3b5ce0e95b42fab4c8d94d2129be690bcdf13f492b62420e30fd7552 laszip-3.5.0.tar.gz https://github.com/LASzip/laszip/archive/3.5.0/

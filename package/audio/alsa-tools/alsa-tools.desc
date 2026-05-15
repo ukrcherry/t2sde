@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/alsa-tools/alsa-tools.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -13,14 +13,48 @@
 [U] https://www.alsa-project.org
 
 [A] Jaroslav Kysela <perex@suse.cz> {Maintainer}
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/system base/kernel
 [F] AUTOMAKE-QUIRK CROSS
 
 [L] GPL
-[S] Stable
-[V] 1.2.14
+[V] 1.2.15
 
 [CV-GROUP] alsa
-[D] 6808e0e627304920f553ad46adcccef23d6dec9e625b7984d4f0b514 alsa-tools-1.2.14.tar.bz2 https://www.alsa-project.org/files/pub/tools/
+[D] d09f17dbdc5ad7879744869be31443e27a2afbeb263586e7600935d1 alsa-tools-1.2.15.tar.bz2 https://www.alsa-project.org/files/pub/tools/
+
+runmake=0
+alsa_pc() {
+	subdirs="`echo */configure */*/configure`"
+	subdirs=${subdirs//\/configure/}
+	var_remove subdirs ' ' qlo10k1
+
+	if pkginstalled gtk+12; then
+		var_append confopt ' ' "--with-gtk-prefix=$root/`pkgprefix gtk+12`"
+	fi
+	if ! pkginstalled gtk+2; then
+		var_remove subdirs ' ' envy24control
+		var_remove subdirs ' ' echomixer
+		var_remove subdirs ' ' rmedigicontrol
+	fi
+	if ! pkginstalled fltk; then
+		var_remove subdirs ' ' hdspmixer
+		var_remove subdirs ' ' hdspconf
+	fi
+	if ! pkginstalled gtk+; then
+		var_remove subdirs ' ' hdajackretask
+	fi
+
+	[[ "$arch" = powerpc* ]] && var_remove subdirs ' ' sb16_csp
+
+	for x in $subdirs; do
+		echo $x
+		pushd $x
+		eval_config_command $(echo $confopt)
+		eval $MAKE $makeopt
+		eval $MAKE $makeinstopt
+		popd
+	done
+}
+hook_add inmake 5 alsa_pc

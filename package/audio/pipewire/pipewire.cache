@@ -1,8 +1,9 @@
-[TIMESTAMP] 1745935573 Tue Apr 29 17:06:13 2025
-[BUILDTIME] 95 (9)
-[SIZE] 14.71 MB, 537 files
+[TIMESTAMP] 1778698860 Wed May 13 21:01:00 2026
+[BUILDTIME] 105 (9)
+[SIZE] 28.66 MB, 607 files
 
 [OPT] alsa-lib
+[OPT] avahi
 [DEP] bash
 [DEP] binutils
 [OPT] bluez
@@ -12,6 +13,7 @@
 [DEP] dbus
 [DEP] diffutils
 [OPT] doxygen
+[OPT] fftw3
 [DEP] findutils
 [DEP] gawk
 [DEP] gettext
@@ -21,9 +23,10 @@
 [DEP] gstreamer
 [OPT] jack
 [OPT] libaac
+[OPT] libcamera
 [OPT] libcanberra
-[DEP] libcap
 [DEP] libdrm
+[OPT] libebur128
 [OPT] libfreeaptx
 [OPT] liblc3
 [OPT] libldac
@@ -48,7 +51,7 @@
 [DEP] sbc
 [DEP] sed
 [DEP] tar
-[DEP] tbb
 [DEP] udev
+[DEP] util-linux
 [OPT] webrtc-audio-processing-1
 [DEP] xorgproto

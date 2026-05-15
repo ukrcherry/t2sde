@@ -1,0 +1,34 @@
+
+[TIMESTAMP] 1697735746 Thu Oct 19 19:15:46 2023
+[BUILDTIME] 1 (9)
+[SIZE] 0.94 MB, 258 files
+
+[DEP] 00-dirtree
+[DEP] awake
+[DEP] bash
+[DEP] coreutils
+[DEP] diffutils
+[DEP] findutils
+[DEP] gaupol
+[DEP] gawk
+[DEP] grep
+[DEP] gzip
+[DEP] hamster-time-tracker
+[DEP] itstool
+[DEP] junit2html
+[DEP] lensfun
+[DEP] openssl
+[DEP] pexpect
+[DEP] psutil
+[DEP] ptyprocess
+[DEP] py-smbpasswd
+[DEP] pycups
+[DEP] python
+[DEP] pyxdg
+[DEP] ranger
+[DEP] razercfg
+[DEP] rst2html5
+[DEP] sed
+[DEP] setuptools
+[DEP] smartypants
+[DEP] tar

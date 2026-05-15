@@ -1,0 +1,30 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/runit-shutdown/runit-shutdown.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Runit companion for process related tasks
+
+[T] set of replacement tools included on sysvinit, but needed for runit
+[T] to handle processes.
+[T]
+[T] this package include bash replacements for:
+[T] * reboot
+[T] * halt
+[T] * poweroff
+[T] * runlevel (runit:1,2,3)
+[T] * shutdown
+[T] * killall5
+[T] * pidof
+
+[A] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+
+[L] GPL
+[V] 0.2
+[P] O
+
+[D] 31a0c7c0e959d71ab5d449db985a85e0655e2b0f80f212d62a50003e runit-shutdown-0.2.tar.bz2 http://dl.geeks.cl/oss/runit-shutdown/

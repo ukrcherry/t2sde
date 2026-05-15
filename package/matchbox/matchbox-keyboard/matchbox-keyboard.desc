@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/matchbox-keyboard/matchbox-keyboard.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,13 +11,14 @@
 [U] http://projects.o-hand.com/matchbox/
 
 [A] Matthew Allum <mallum@o-hand.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/x11
 [F] CROSS
 
 [L] GPL
-[S] Beta
-[V] 0.1
+[V] 0.1.1
 
-[D] f70c7860b11347f1bc56b6053fef68df777f8a8c332776e70c6a1a2d matchbox-keyboard-0.1.tar.bz2 http://projects.o-hand.com/matchbox/sources/matchbox-keyboard/0.1/
+[D] c4531d9ad9ceb10d1a2838bd09ba70ec85a1e4a8eb73a0d3b06ebf85 matchbox-keyboard-0.1.1.tar.gz https://git.yoctoproject.org/matchbox-keyboard/snapshot/
+
+autogen=1

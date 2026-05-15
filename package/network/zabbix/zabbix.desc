@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/zabbix/zabbix.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,12 +15,11 @@
 [U] https://www.zabbix.com
 
 [A] Alex <alex@zabbix.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 
 [L] GPL
-[S] Stable
-[V] 5.4.12
+[V] 7.4.10
 
-[D] d4081eb1eca98cefd19854c8827c63a449887318948c54e941112bd9 zabbix-5.4.12.tar.gz https://cdn.zabbix.com/zabbix/sources/stable/5.4/
+[D] b9b70bb239b8ddbbef03c02ddae8a0e62586167d445e336f8afef3f8 zabbix-7.4.10.tar.gz https://cdn.zabbix.com/zabbix/sources/stable/7.4/

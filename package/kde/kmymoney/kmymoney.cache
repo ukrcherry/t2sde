@@ -1,0 +1,55 @@
+[TIMESTAMP] 1764962271 Fri Dec  5 21:17:51 2025
+[BUILDTIME] 1050 (9)
+[SIZE] 40.42 MB, 684 files
+
+[DEP] alkimia
+[DEP] bash
+[DEP] binutils
+[DEP] cmake
+[DEP] coreutils
+[DEP] cups
+[DEP] diffutils
+[DEP] docbook-xml
+[DEP] docbook-xsl
+[DEP] doxygen
+[DEP] extra-cmake-modules
+[DEP] freetype
+[DEP] gawk
+[DEP] gettext
+[DEP] gmp
+[DEP] gpgme
+[DEP] gpgmepp
+[DEP] grep
+[DEP] karchive
+[DEP] kcmutils
+[DEP] kcolorscheme
+[DEP] kcompletion
+[DEP] kconfig
+[DEP] kconfigwidgets
+[DEP] kcoreaddons
+[DEP] kcrash
+[DEP] kdoctools
+[DEP] kholidays
+[DEP] ki18n
+[DEP] kio
+[DEP] kitemmodels
+[DEP] kitemviews
+[DEP] kjobwidgets
+[DEP] ktextwidgets
+[DEP] kwidgetsaddons
+[DEP] kxmlgui
+[DEP] libgpg-error
+[DEP] libical
+[DEP] libxml
+[DEP] linux-header
+[DEP] make
+[DEP] pkgconfig
+[DEP] procps
+[DEP] python
+[DEP] qt6base
+[DEP] qtkeychain
+[DEP] sed
+[DEP] sonnet
+[DEP] tar
+[DEP] vulkan-headers
+[DEP] xz

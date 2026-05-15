@@ -1,0 +1,16 @@
+[TIMESTAMP] 1768246953 Mon 12 Jan 2026 02:42:33 PM EST
+[BUILDTIME] 18 (9)
+[SIZE] 1.16 MB, 34 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] coreutils
+[DEP] diffutils
+[DEP] gawk
+[DEP] ghc
+[DEP] grep
+[DEP] gzip
+[DEP] haskell-cabal
+[DEP] linux-header
+[DEP] sed
+[DEP] tar

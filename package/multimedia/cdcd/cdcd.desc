@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/cdcd/cdcd.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,13 +14,12 @@
 
 [A] Tony Arcieri <tarcieri@gjhsnews.mesa.k12.co.us>
 [A] Fabrice Bauzac <noon@users.sourceforge.net>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] AUTOMAKE-QUIRK
 
 [L] GPL
-[S] Stable
 [V] 0.6.6
 
-[D] f20ef1733490a2b0008a880d5aeeb15ed26cd3038f959305536786ed cdcd-0.6.6.tar.gz http://dl.sourceforge.net/libcdaudio/
+[D] f20ef1733490a2b0008a880d5aeeb15ed26cd3038f959305536786ed cdcd-0.6.6.tar.gz https://download.sourceforge.net/libcdaudio/

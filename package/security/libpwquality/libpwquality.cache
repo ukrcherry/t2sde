@@ -7,11 +7,9 @@
 [DEP] bzip2
 [DEP] coreutils
 [DEP] cracklib
-[DEP] cython
 [DEP] diffutils
 [DEP] findutils
 [DEP] gawk
-[DEP] git
 [DEP] grep
 [DEP] linux-header
 [DEP] make

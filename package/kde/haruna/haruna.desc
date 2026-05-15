@@ -1,0 +1,31 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/haruna/haruna.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Video player built with Qt/QML and libmpv
+
+[T] haruna is a media player built with Qt/QML and libmpv.with features like:
+[T] play online videos, through youtube-dl, supports youtube playlists, toggle
+[T] playlist with mouse-over, playlist overlays the video, auto skip chapter
+[T] containing certain words, configurable shortcuts and mouse buttons, quick
+[T] jump to next chapter by middle click on progress bar.
+
+[U] https://apps.kde.org/de/haruna/
+
+[A] The KDE-Team
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
+
+[E] add qqc2-desktop-style
+[E] opt kdoctools docbook-xml
+
+[L] GPL
+[V] 1.7.1
+
+[D] 9627bde4c03d07e228bc758c632c85b41518a1ecb21f12c420d44ffb haruna-1.7.1.tar.xz https://download.kde.org/stable/haruna/1.7.1/
+
+. $base/package/*/*/kde-conf.in

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libei/libei.desc
-[COPY] Copyright (C) 2023 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2023 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,16 +12,16 @@
 [U] https://gitlab.freedesktop.org/libinput/libei
 
 [A] Red Hat, Inc.
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/library
 [F] CROSS
 
-[E] add attrs
+[E] add jinja2
+[E] opt systemd
 
 [L] MIT
-[S] Stable
-[V] 1.4.1
+[V] 1.6.0
 [P] X -----5---9 201.000
 
-[D] ae7d45f27650688007512ab27a054b48bd51041a25bdbb0d39e78e56 libei-1.4.1.tar.bz2 https://gitlab.freedesktop.org/libinput/libei/-/archive/1.4.1/
+[D] b0e596247f7b2d9d2bee4ea539c5e55d531da7ee3ef01a49e2a4b8fd libei-1.6.0.tar.bz2 https://gitlab.freedesktop.org/libinput/libei/-/archive/1.6.0/

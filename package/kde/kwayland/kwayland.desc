@@ -1,11 +1,11 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/kwayland/kwayland.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
-[I] KDE Frameworks 5 library that wraps Client and Server Wayland libraries
+[I] KDE Frameworks library that wraps Client and Server Wayland libraries
 
 [T] KWayland is a Qt-style API to interact with the wayland-client API. The API
 [T] is Qt-styled removing the needs to interact with a for a Qt developer
@@ -14,17 +14,17 @@
 [U] https://invent.kde.org/plasma/kwayland
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 6.3.5
+[V] 6.6.5
 [P] X -----5---9 162.900
 
-[O] . $base/package/*/*/kde-conf.in
-[O] var_append GCC_WRAPPER_INSERT ' ' -I/usr/X11/include
-
 [CV-GROUP] kde-plasma
-[D] ca0746a993b8421e8b5e87e13d089cff31f5088287428716c8c46940 kwayland-6.3.5.tar.xz https://download.kde.org/stable/plasma/6.3.5/
+[D] 490c7adba86f3ed8f7306778b272d2c396772f0352335b7aabe8c5c2 kwayland-6.6.5.tar.xz https://download.kde.org/stable/plasma/6.6.5/
+
+. $base/package/*/*/kde-conf.in
+var_append GCC_WRAPPER_INSERT ' ' -I/usr/X11/include

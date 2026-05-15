@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/st/st.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -12,13 +12,12 @@
 [U] https://st.suckless.org/
 
 [A] Laslo Hunhold <dev@frign.de>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/shell
 [F] CROSS
 
 [L] MIT
-[S] Beta
-[V] 0.9.2
+[V] 0.9.3
 
-[D] 3d22932cbbaf30f9814eafe41c91eff9937f3896753222af3ba46a52 st-0.9.2.tar.gz https://dl.suckless.org/st/
+[D] 0c6b477237aa52ef3507c67b42d2bdf3e4c205fb549b9bd7d0db5976 st-0.9.3.tar.gz https://dl.suckless.org/st/

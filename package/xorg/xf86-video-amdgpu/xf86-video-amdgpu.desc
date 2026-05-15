@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xf86-video-amdgpu/xf86-video-amdgpu.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,16 +12,14 @@
 [U] https://www.X.org
 
 [A] X.org Foundation {http://www.X.org}
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/x11
 [F] CROSS FCOMMON
-[R] - sparc
 
 [L] OpenSource
-[S] Stable
-[V] 23.0.0
+[V] 25.0.0
 
-[O] . package/*/*/modular-x-conf.in
+[D] 3dd2e8a18603602d7708dd90ec9c6ae111fec0e10703a3025141445b xf86-video-amdgpu-25.0.0.tar.xz http://xorg.freedesktop.org/releases/individual/driver/
 
-[D] 6a58c097dbe11ca7c1f7b122f5e28b21faf3eab2efb692326ef437c2 xf86-video-amdgpu-23.0.0.tar.xz http://xorg.freedesktop.org/releases/individual/driver/
+. package/*/*/modular-x-conf.in

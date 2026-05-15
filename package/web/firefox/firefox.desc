@@ -1,0 +1,142 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/firefox/firefox.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] The award-winning, fast and secure Web browser
+
+[T] The award-winning fast, more secure, and fully customizable Web browser
+[T] to your online life.
+
+[U] https://www.firefox.com/
+
+[A] The Mozilla Community <http://www.mozilla.org/about.html>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/office
+[F] CROSS NO-LIBTOOL-FIX CUSTOM-LTO LATOMIC.sparc LATOMIC.sparc64
+[R] - alpha hppa hppa64 ia64 m68k riscv
+
+[L] MPL
+[V] 150.0.3
+[P] X -----5---9 202.000
+
+[D] 728ec3bfb0a6b18b813b9d1ad48a321f235cb1ab5d009bba3fbd97ee firefox-150.0.3.source.tar.xz https://ftp.mozilla.org/pub/firefox/releases/150.0.3/source/
+
+. $base/package/*/*/mozilla-conf.in
+
+[ $prefix_auto = 1 ] && prefix=$mozilla_prefix && set_confopt
+
+export MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=system
+export HOME=$sysroot/root
+[ "$SDECFG_LIBC" = musl ] && export LDFLAGS="-Wl,-rpath=$libdir/firefox"
+
+hook_add inmake 5 "./mach build"
+hook_add postmake 5 "./mach install"
+
+firefox_config() {
+	cat <<-EOT >> .mozconfig
+. \$topsrcdir/browser/config/mozconfig
+export MOZ_PHOENIX=1
+mk_add_options MOZ_PHOENIX=1
+mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/objs
+
+#ac_add_options --enable-mathml
+#ac_add_options --enable-crypto
+#ac_add_options --enable-module=psm
+ac_add_options --enable-default-toolkit=cairo-gtk3
+ac_add_options --without-system-png
+#ac_add_options --disable-profilesharing
+ac_add_options --enable-official-branding
+ac_add_options --with-system-zlib
+#ac_add_options --with-system-bz2
+#ac_add_options --enable-system-sqlite
+ac_add_options --enable-system-ffi
+ac_add_options --enable-system-pixman
+#ac_add_options --with-pthreads
+#ac_add_options --enable-gio
+#ac_add_options --disable-gnomevfs
+ac_add_options --disable-necko-wifi
+ac_add_options --disable-crashreporter
+ac_add_options --disable-updater
+ac_add_options --disable-tests
+#ac_add_options --disable-installer
+#ac_add_options --disable-cargo-incremental
+ac_add_options --disable-jemalloc
+ac_add_options --enable-jxl
+EOT
+
+pkginstalled dbus || echo "ac_add_options --disable-dbus" >> .mozconfig
+pkginstalled libjpeg-turbo && echo "ac_add_options --with-system-jpeg" >> .mozconfig
+pkginstalled icu4c && echo "ac_add_options --with-system-icu" >> .mozconfig
+pkginstalled pulseaudio || echo "ac_add_options --disable-pulseaudio" >> .mozconfig
+pkginstalled alsa-lib && echo "ac_add_options --enable-alsa" >> .mozconfig
+pkginstalled libevent && echo "ac_add_options --with-system-libevent" >> .mozconfig
+
+	# currently little-endian only
+	if [ $arch_bigendian != yes ] && pkginstalled wasi-libc; then
+		echo "ac_add_options --with-wasi-sysroot=$root/$(pkgprefix wasi-libc)" >> .mozconfig
+	else
+		echo "ac_add_options --without-wasm-sandboxed-libraries" >> .mozconfig
+	fi
+
+	[ "$SDECFG_DEFAULT_CC" = clang ] &&
+		var_append GCC_WRAPPER_APPEND ' ' "-c?:-fuse-ld=lld" &&
+		echo "ac_add_options --disable-elf-hack" >> .mozconfig
+
+	[ "$SDECFG_POWERPC64_ENDIANESS" = 'le' ] ||
+		var_append patchfiles ' ' $confdir/hotfix-ppc-not-power8.diff
+
+	# jit and sandbox?
+	case "$arch" in
+	x86)
+		# jit needs sse on x86
+		if ! $CC -E -dM -x c /dev/null | grep -iq _sse; then
+			var_append patchfiles ' ' $confdir/no-jit.diff
+			echo "ac_add_options --disable-jit" >> .mozconfig
+		fi
+		;;
+	arm)
+		echo "ac_add_options --disable-elf-hack" >> .mozconfig
+		var_remove_regex GCC_WRAPPER_INSERT ' ' '-mfpu=.*'
+		[[ $arch_machine = armv[678]* ]] || echo "ac_add_options --disable-jit" >> .mozconfig
+		;;
+	arm64|loongarch64|riscv64|x86-64)
+		# no jit yet for x32 ABI variants
+		if [ "$SDECFG_X8664_X32" = 1 -o "$SDECFG_MIPS64_N32" = 1 ]; then
+			echo "ac_add_options --disable-jit" >> .mozconfig
+		fi
+		;;
+	*)
+		echo "ac_add_options --disable-jit" >> .mozconfig ;;
+	esac
+}
+
+# don't pass CPU optimizations to clang w/ wasi
+GCC_WRAPPER_INSERT="${GCC_WRAPPER_INSERT/-march=/--target=wasm32-wasi?:-march=}"
+GCC_WRAPPER_INSERT="${GCC_WRAPPER_INSERT/-mcpu=/--target=wasm32-wasi?:-mcpu=}"
+GCC_WRAPPER_INSERT="${GCC_WRAPPER_INSERT/-mtune=/--target=wasm32-wasi?:-mtune=}"
+GCC_WRAPPER_INSERT="${GCC_WRAPPER_INSERT/-mfpu=/--target=wasm32-wasi?:-mfpu=}"
+CLANG_WRAPPER_INSERT="${CLANG_WRAPPER_INSERT/-mcpu=/--target=wasm32-wasi?:-mcpu=}"
+GCC_WRAPPER_INSERT="${GCC_WRAPPER_INSERT/-c?:-pie/--target=wasm32-wasi?:-c?:-pie}"
+
+hook_add prepatch 5 "cargo_clear_cksum third_party/rust/*/.cargo-checksum.json"
+hook_add postpatch 5 "rust_update_arch_target third_party/rust/*/no_atomic*.rs"
+
+hook_add prepatch 4 firefox_config
+hook_add preconf 2 mozilla_branding
+
+# disable legacy component registration
+mozilla_register() {
+	:
+}
+
+firefox_postmake() {
+    for size in 16 22 24 32 48 64 128 256; do
+	install browser/branding/official/default$size.png -t \
+		$root/usr/share/icons/hicolor/${size}x$size/apps/firefox.png
+    done
+}
+hook_add postmake 6 firefox_postmake

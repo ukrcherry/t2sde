@@ -1,12 +1,13 @@
-[TIMESTAMP] 1744737888 Tue Apr 15 19:24:48 2025
-[BUILDTIME] 110 (9)
-[SIZE] 29.37 MB, 743 files
+[TIMESTAMP] 1768840976 Mon Jan 19 17:42:56 2026
+[BUILDTIME] 60 (9)
+[SIZE] 34.38 MB, 752 files
 
 [DEP] bash
 [DEP] binutils
 [DEP] cmake
 [DEP] coreutils
 [DEP] diffutils
+[DEP] findutils
 [DEP] gawk
 [DEP] gettext
 [OPT] gobject-introspection
@@ -17,9 +18,7 @@
 [DEP] meson
 [DEP] ninja
 [DEP] openssl
-[DEP] packaging
 [DEP] pcre2
-[DEP] pkgconfig
 [DEP] python
 [DEP] sed
 [DEP] setuptools

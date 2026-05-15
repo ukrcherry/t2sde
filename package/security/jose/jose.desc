@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/jose/jose.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] C-language implementation of Javascript Object Signing and Encryption
+
+[T] C-language implementation of Javascript Object Signing and Encryption.
+
+[U] https://github.com/latchset/jose
+
+[A] Jose Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[L] APL
+[V] 14
+[P] X -----5---9 200.000
+
+[D] 9ebedc4ad96693d84605ff92e640ce5bbc0f5c390787e94b9b134168 jose-14.tar.xz https://github.com/latchset/jose/releases/download/v14/
+
+pkginstalled asciidoc docbook-xml docbook-xsl libxml libxslt ||
+	var_append mesonopt ' ' -Ddocs=disabled

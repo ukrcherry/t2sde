@@ -2,11 +2,10 @@
 #
 #--- T2-COPYRIGHT-BEGIN ---
 #t2/scripts/Create-Pkg
-#Copyright (C) 2004 - 2025 The T2 SDE Project
+#Copyright (C) 2004 - 2026 The T2 SDE Project
 #Copyright (C) 1998 - 2003 ROCK Linux Project
 #SPDX-License-Identifier: GPL-2.0
 # --- T2-COPYRIGHT-END ---
-#
 
 usage() {
 	cat <<-EOT
@@ -19,59 +18,87 @@ EOT
 
 [ $# -lt 1 ] && usage
 
-info= text= url= author= category= license=GPL status=Beta code=
+dir= info= text= url= author= category=extra/tool license=GPL code=
 maintainer='The T2 Project <t2@t2-project.org>'
-
-dir=
 
 if [ $# -gt 1 ]; then
 	dir=${1#package/}; shift
-else
-	case "$1" in
+fi
+
+ver="${1%.tar.*}"
+ver="${ver##*-}"
+
+case "$1" in
 	-h|*-help)
 		usage
 		;;
 	-d|-r)
 		dir="$2"; shift
 		;;
-	*kde.org*)
-		dir=${dir:-kde} category=extra/desktop/kde author="KDE Project"
-		code=". \$base/package/*/*/kde-conf.in"
-		;;
-	*gnome.org*)
-		dir=${dir:-gnome} category=extra/desktop/gnome author="GNOME Project"
-		code=". \$base/package/*/*/gnome-conf.in"
-		;;
+
 	*github.com*)
 		curl ${1/github.com/api.github.com/repos} > repotmpfile
 		curl ${1/github.com/api.github.com/repos}/releases > releasetmpfile
 
 		ver=$(jq -r '.[0].tag_name' releasetmpfile)
-		dir=${dir:-contrib}
+		[ "$ver" = null ] && curl ${1/github.com/api.github.com/repos}/tags > releasetmpfile &&
+			ver=$(jq -r '.[0].name' releasetmpfile)
+
+		[ "$dir" ] || dir="contrib/${1##*/}"
 		info=$(jq -r .description repotmpfile)
 		text="$info"
 		author=$(jq -r .owner.login repotmpfile)
 		license=$(jq -r .license.spdx_id repotmpfile)
 
-		[[ "$ver" != 0* ]] && status=Stable
-
 		url=$1
-		set -- "${url}/archive/${ver}/${url##*/}-${ver/v/}.tar.gz"
+		dl="${url}/archive/${ver}/${url##*/}-${ver/v/}.tar.gz"
+		set -- $dl
 		rm -f repotmpfile releasetmpfile
+		;;
+
+	*gitlab*)
+		# full URL like https://gitlab.example.com/group/proj
+		[ "$dir" ] || dir="contrib/${1##*/}"
+		HOST=$(printf "%s" "$1" | sed -E 's#^[a-z]+://([^/]+)/.*#\1#')
+		PROJECT_PATH=$(printf "%s" "$1" | sed -E 's#^[a-z]+://[^/]+/##')
+		# Encoded project ID for API (slashes -> %2F)
+		PROJECT_ID=$(printf "%s" "$PROJECT_PATH" | sed 's|/|%2F|g')
+		API="https://${HOST}/api/v4/projects/${PROJECT_ID}"
+
+		PJ=$(curl "$API")
+		text=$(printf "%s" "$PJ" | jq -r '.description // "No description"')
+		info=${text%%.*}
+		license=$(printf "%s" "$PJ" | jq -r '.license.name // empty')
+		url=$(printf "%s" "$PJ" | jq -r '.homepage // empty')
+		[ "$url" ] || url=$1
+		DEFAULT_BRANCH=$(printf "%s" "$PJ" | jq -r '.default_branch // "master"')
+
+		# --- Determine latest version: prefer Releases, fallback to Tags ---
+		ver=$(curl "$API/releases?per_page=1" | jq -r '.[0].tag_name // empty')
+		# Try to get tar.gz from release assets
+		dl=$(curl "$API/releases?per_page=1" |
+			jq -r '.[0].assets.sources[]? | select(.format=="tar.gz") | .url' | head -n1)
+		set -- $dl
+		;;
+
+	*kde.org*)
+		dir=${dir:-kde} category=extra/desktop/kde author="KDE Project"
+		code=". \$base/package/*/*/kde-conf.in"
+		;;
+
+	*gnome.org*)
+		dir=${dir:-gnome} category=extra/desktop/gnome author="GNOME Project"
+		code=". \$base/package/*/*/gnome-conf.in"
 		;;
 	*)
 		dir=${dir:-contrib}
 		;;
-	esac
-
-	dir="$dir/${1##*/}"
-	dir="${dir%-[0-9]*}"
-fi
-
-ver="${1%.tar.*}"
-ver="${ver##*-}"
+esac
 
 pkg=${dir##*/}
+pkg=${pkg,,}
+dir=${dir,,}
+
 if [ "$pkg" = "$dir" ]; then
 	echo "Error: $dir must be <rep>/<pkg>!"
 	exit 1
@@ -111,7 +138,6 @@ echo -n "Creating $pkg.desc ... "
 [F] CROSS
 
 [L] ${license}
-[S] ${status}
 [V] ${ver}
 
 EOT

@@ -1,6 +1,6 @@
-[TIMESTAMP] 1737631206 Thu Jan 23 12:20:06 2025
-[BUILDTIME] 135 (9)
-[SIZE] 3.19 MB, 123 files
+[TIMESTAMP] 1759864498 Tue Oct  7 21:14:58 2025
+[BUILDTIME] 250 (9)
+[SIZE] 3.28 MB, 129 files
 
 [DEP] attr
 [DEP] bash
@@ -8,9 +8,10 @@
 [DEP] cmake
 [DEP] coreutils
 [DEP] diffutils
+[OPT] ebook-tools
 [DEP] exiv2
 [DEP] extra-cmake-modules
-[DEP] ffmpeg
+[OPT] ffmpeg
 [DEP] gawk
 [DEP] gettext
 [DEP] grep
@@ -21,12 +22,12 @@
 [DEP] linux-header
 [DEP] make
 [DEP] pkgconfig
+[DEP] poppler
 [DEP] procps
 [DEP] python
 [DEP] qt6base
 [DEP] sed
 [DEP] taglib
 [DEP] tar
-[DEP] tbb
 [DEP] vulkan-headers
 [DEP] xz

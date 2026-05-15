@@ -1,10 +1,10 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/attica/attica.desc
-[COPY] Copyright (C) 2010 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2010 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
-[I] KDE Frameworks Tier 1 Addon with Open Collaboration Services API
+[I] KDE Frameworks Addon with Open Collaboration Services API
 
 [T] Attica is a Qt library that implements the Open Collaboration Services API.
 
@@ -13,16 +13,16 @@
 [A] Eckhart Worner <ewoerner@kde.org>
 [A] Frederik Gladhorn <gladhorn@kde.org>
 [A] Cornelius Schumacher <schumacher@kde.org>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/library
+[F] CROSS OBJDIR
 
 [L] LGPL
-[S] Beta
-[V] 6.14.0
-[P] X -----5---9 162.800
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 6.26.0
+[P] X -----5---9 200.000
 
 [CV-GROUP] kde-frameworks
-[D] 982661c166914b946c6d8677cc4ccffe7a361293980e713537b0015b attica-6.14.0.tar.xz https://download.kde.org/stable/frameworks/6.14/
+[D] 19001d3b6f28d12ccd5ad52360120ba8a0f90fe82386f80764d268f6 attica-6.26.0.tar.xz https://download.kde.org/stable/frameworks/6.26/
+
+. $base/package/*/*/kde-conf.in

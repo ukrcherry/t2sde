@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/kdegraphics-thumbnailers/kdegraphics-thumbnailers.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -13,16 +13,16 @@
 [U] https://www.kde.org
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 25.04.1
-[P] X -----5---9 162.900
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 26.04.1
 
 [CV-GROUP] kde-gear
-[D] 1b6994117d8c1312ce5e838fe9790bfa0cf30906cf4e72f0a6fa00ce kdegraphics-thumbnailers-25.04.1.tar.xz https://download.kde.org/stable/release-service/25.04.1/src/
+[D] 7494a0b2759a90bb0c195d5f383b115344b9e4cff8f8aeb6bee8290d kdegraphics-thumbnailers-26.04.1.tar.xz https://download.kde.org/stable/release-service/26.04.1/src/
+
+. $base/package/*/*/kde-conf.in
+pkginstalled kdegraphics-mobipocket || var_append cmakeopt ' ' -DDISABLE_MOBIPOCKET=ON

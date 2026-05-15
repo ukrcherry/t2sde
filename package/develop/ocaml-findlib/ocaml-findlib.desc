@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/ocaml-findlib/ocaml-findlib.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -16,15 +16,16 @@
 [U] http://projects.camlcity.org/projects/findlib.html
 
 [A] Gerd Stolpmann
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [L] MIT
-[S] Stable
-[V] 1.2.2
+[V] 1.9.8
+[P] X -----5---9 191.900
 
-[O] var_remove_regex makeopt ' ' 'prefix=.*'
-[O] var_remove_regex makeinstopt ' ' 'prefix=.*'
+[D] 8118bee2bda55597a6df921e0917e0146cb569c89e482a74330a3b6c ocaml-findlib-1.9.8.tar.gz !http://download.camlcity.org/download/findlib-1.9.8.tar.gz
 
-[D] bb6640fd198902c417a12ba5b48ed40025c2414c40756d1137d7f92f ocaml-findlib-1.2.2.tar.gz !http://download.camlcity.org/download/findlib-1.2.2.tar.gz
+which ocamlopt >/dev/null && var_append makeopt ' ' 'all' # Enable build of native-code libraries
+var_remove_regex makeopt ' ' 'prefix=.*'
+var_remove_regex makeinstopt ' ' 'prefix=.*'

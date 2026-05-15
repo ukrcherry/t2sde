@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/transformers/transformers.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,7 +12,7 @@
 [U] https://github.com/huggingface/transformers
 
 [A] huggingface
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
@@ -25,8 +25,7 @@
 [E] add tqdm
 
 [L] APL
-[S] Stable
-[V] 4.51.3
+[V] 5.8.1
 [P] X -----5---9 160.005
 
-[D] 389045625c08f016d2a486c42f4b16f840e3c5ade33e8046cff8b3ea transformers-v4.51.3.tar.gz https://github.com/huggingface/transformers/archive/v4.51.3/
+[D] f32dd3cb41eb9f75ac8f42f96b4e9e66363692a5389940de9803a70d transformers-v5.8.1.tar.gz https://github.com/huggingface/transformers/archive/v5.8.1/

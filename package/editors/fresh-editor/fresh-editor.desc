@@ -1,0 +1,29 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/fresh-editor/fresh-editor.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Text editor for your terminal: easy, powerful and fast
+
+[T] Fresh is designed for discovery. It features native UIs, a full Menu
+[T] system, and a powerful Command Palette. With full mouse support,
+[T] transitioning from graphical editors is seamless.
+
+[U] https://github.com/sinelaw/fresh
+
+[A] Noam Lewis
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/editor
+[F] CROSS CUSTOM-LTO
+
+[L] GPL
+[V] 0.3.6
+
+[D] 88a65401b40ef21812670e22400a0d22b40afd0b0a4d61d5b4d0c4c3 fresh-0.3.6.tar.gz https://github.com/sinelaw/fresh/archive/v0.3.6/
+
+cargoinstopt=
+atstage cross && hook_add postmake 5 "install target/${arch_target}/*/fresh $root$bindir"
+atstage native && hook_add postmake 5 "install target/*/fresh $root$bindir"
+[ "$SDECFG_LTO" = 1 ] && export CARGO_PROFILE_RELEASE_LTO=true || export CARGO_PROFILE_RELEASE_LTO=off

@@ -1,0 +1,22 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/perl-path-tiny/perl-path-tiny.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Perl Tiny Path module
+
+[T] This module provides a small, fast utility for working with file paths. It
+[T] is friendlier to use than File::Spec and provides easy access to functions
+[T] from several other core file handling modules.
+
+[A] Dagolden
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/development
+
+[L] APL
+[V] 0.150
+[P] X -----5---9 113.700
+
+[D] a4ad63f3c866d5310a277c2984f17e2c63cbd2f343737a49939b0db4 Path-Tiny-0.150.tar.gz https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/

@@ -28,7 +28,6 @@
 [DEP] gawk
 [DEP] gdk-pixbuf
 [DEP] gettext
-[DEP] git
 [DEP] glib
 [DEP] gnutls
 [DEP] grep
@@ -48,7 +47,7 @@
 [DEP] libice
 [DEP] libidn
 [DEP] libjpeg
-[DEP] libmad
+[OPT] libmad
 [DEP] libmpeg2
 [DEP] libogg
 [OPT] libopus

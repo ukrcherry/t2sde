@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/armadillo/armadillo.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] C++ library for linear algebra & scientific computing
+
+[T] C++ library for linear algebra & scientific computing.
+
+[U] https://arma.sourceforge.net/
+
+[A] Armadillo Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[L] APL
+[V] 15.2.6
+
+[D] 9d66dc7c778ef00fb6ef658090cac76ed0a1e00f6b869825ac305780 armadillo-15.2.6.tar.xz https://downloads.sourceforge.net/project/arma/

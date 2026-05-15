@@ -1,0 +1,30 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/dfb-linux-fusion/dfb-linux-fusion.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Direct Framebuffer fusion kernel module
+
+[T] DirectFB is a thin library that provides hardware graphics
+[T] acceleration, input device handling and abstraction, integrated
+[T] windowing system with support for translucent windows and multiple
+[T] display layers on top of the Linux Framebuffer Device. It is a
+[T] complete hardware abstraction layer with software fallbacks for
+[T] every graphics operation that is not supported by the underlying
+[T] hardware. DirectFB adds graphical power to embedded systems and
+[T] sets a new standard for graphics under Linux. more...
+
+[U] https://www.directfb.org/
+
+[A] Denis Oliver Kropp <dok@directfb.org>
+[M] Michael Tross <michael@tross.org>
+
+[C] extra/multimedia
+
+[L] GPL
+[V] 8.3.0
+[P] O -----5---9 119.100
+
+[D] 568871380 linux-fusion-8.3.0.tar.gz http://www.directfb.org/downloads/Core/linux-fusion/
+#[D] X linux-fusion-20080326.tar.bz2 git://git.directfb.org/git/directfb/core/linux-fusion.git c53d14b217900928f13269ec1e11b009cc8a5913

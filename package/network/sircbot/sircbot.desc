@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/sircbot/sircbot.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Minimalistic IRC bot
+
+[T] Minimalistic IRC bot.
+
+[U] https://git.alpinelinux.org/cgit/sircbot/
+
+[A] Sircbot Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.4
+[L] GPL
+
+[D] 7458629b3cebc681ec631648401d4f0e6131c69c80e0a3debbe5b8d4 sircbot-0.4.tar.xz https://dev.alpinelinux.org/archive/sircbot/

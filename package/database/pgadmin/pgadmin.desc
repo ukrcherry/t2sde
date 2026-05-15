@@ -1,0 +1,40 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/pgadmin/pgadmin.desc
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A WXWindows-based PostgreSQL administration utility
+
+[T] PgAdmin3 is a fully functional administration package for
+[T] PostgreSQL. It has all the basic functionality you need to completely
+[T] administer a PosgreSQL server and/or database, including the ability to
+[T] administer views, sequences, stored procedures, and triggers. Features
+[T] include the ability to create and drop databases; create, copy, drop, and
+[T] alter tables/views/sequences/functions/triggers; edit and add fields (to
+[T] the extent Postgres allows); execute any SQL-statement, even
+[T] batch-queries; manage keys on fields; create and read dumps of database
+[T] and tables; and administer one single database, multiple servers, and
+[T] Postgres users/groups.
+
+[U] https://www.pgadmin.org/
+
+[A] Dave Page <dpage@vale-housing.co.uk>
+[A] pgAdmin Development Team <pgadmin-hackers-request@postgresql.org>
+[M] Nagy Karoly Gabriel <karasz@x5.ro>
+
+[C] extra/database
+
+[L] Artistic
+[V] 9.14
+
+[D] 0eed7af8e6fce2df442492cb2681ad32246062608dcd827c3a767484 pgadmin4-9.14.tar.gz https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v9.14/source/
+
+[ $prefix_auto = 1 ] && prefix="opt/pgadmin" && set_confopt
+
+[[ $libdir = *lib ]] || var_append patchfiles ' ' $confdir/configure_lib64.diff
+
+var_append confopt ' ' "--with-pgsql-include=$(pkgprefix includedir postgresql)"
+var_append confopt ' ' "--with-pgsql-lib=$(pkgprefix libdir postgresql)"
+var_append confopt ' ' "--with-pgsql-bindir=$(pkgprefix bindir postgresql)"
+var_append confopt ' ' "--with-pgsql=${root}/$(pkgprefix postgresql)"

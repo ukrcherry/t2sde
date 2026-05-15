@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/rarpd/rarpd.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -10,16 +10,16 @@
 [T] their own IP addresses from the RARP server.
 
 [A] Alexey Kuznetsov <kuznet@ms2.inr.ac.ru>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] ap1
+[V] ss981107
 
-# no DESTDIR
-[O] var_append makeinstopt ' ' PREFIX=$root/$prefix
+[D] 89da8a6e9bcb7f3013526dd4f75948f55aa155a2087ae867ba2f20ab rarpd-ss981107.tar.gz ftp://ftp.inr.ac.ru/ip-routing/dhcp.bootp.rarp/
 
-[D] 2af97dcb96b4451f9d51a14c108a8c3c8eec8f602209439d7f74f860 rarpd-ap1.tar.bz2 http://people.redhat.com/zaitcev/linux/
+var_append CC_WRAPPER_APPEND ' ' -std=gnu99
+makeinstopt=
+hook_add postmake 5 "install rarpd $root$sbindir/"

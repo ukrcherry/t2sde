@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/pipewire/pipewire.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,18 +11,52 @@
 [U] https://pipewire.org/
 
 [A] Wim Taymans
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] CROSS
 
+[E] opt avahi
 [E] opt bluez
+[E] opt fftw3
 [E] opt jack
+[E] opt libcamera
+[E] opt libebur128
 [E] opt doxygen
 
 [L] MIT
-[S] Stable
-[V] 1.4.1
+[V] 1.6.5
 [P] X -----5---9 180.000
 
-[D] efd1689b1575ec2dc5466137523f3ba0137f3fe8a77aca2697a13736 pipewire-1.4.1.tar.bz2 https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/1.4.1/
+[D] 7e3b64c9d7f4327a5855e3ab24455b96aae179d945b27f389e08f1de pipewire-1.6.5.tar.bz2 https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/1.6.5/
+
+export GI_SCANNER_DISABLE_CACHE=1
+
+var_append mesonopt ' ' -Dsession-managers= # no default wireplumber
+
+pkginstalled libx11 || var_append mesonopt ' ' -Dlibx11=disabled
+pkginstalled libsdl2 || var_append mesonopt ' ' -Dsdl2=disabled
+
+pkginstalled libusb && var_append mesonopt ' ' -Dlibusb=enabled
+
+pkginstalled alsa-lib && var_append mesonopt ' ' -Dalsa=enabled
+pkginstalled alsa-lib && var_append mesonopt ' ' -Dpipewire-alsa=enabled
+
+pkginstalled -n jack2 && var_append mesonopt ' ' -Dpipewire-jack=enabled
+pkginstalled pulseaudio && var_append mesonopt ' ' -Dlibpulse=enabled
+
+pkginstalled lv2 lilv && var_append mesonopt ' ' -Dlv2=enabled
+pkginstalled libopus && var_append mesonopt ' ' -Dopus=enabled
+pkginstalled libsndfile && var_append mesonopt ' ' -Dsndfile=enabled
+pkginstalled libmysofa && var_append mesonopt ' ' -Dlibmysofa=enabled
+pkginstalled libcanberra && var_append mesonopt ' ' -Dlibcanberra=enabled
+pkginstalled webrtc-audio-processing-1 && var_append mesonopt ' ' -Decho-cancel-webrtc=enabled
+
+pkginstalled bluez && var_append mesonopt ' ' -Dbluez5=enabled
+pkginstalled libaac && var_append mesonopt ' ' -Dbluez5-codec-aac=enabled
+pkginstalled liblc3 && var_append mesonopt ' ' -Dbluez5-codec-lc3=enabled
+pkginstalled libldac && var_append mesonopt ' ' -Dbluez5-codec-ldac=enabled
+pkginstalled libfreeaptx && var_append mesonopt ' ' -Dbluez5-codec-aptx=enabled
+
+# fix some cross builds, e.g. sparc6432
+atstage cross && var_append GCC_WRAPPER_FILTER '|' "sed 's,^/lib64/libncursesw.so,-lncursesw,'"

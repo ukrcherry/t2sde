@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/pre-commit/pre-commit.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Framework for managing and maintaining multi-language pre-commit hooks
+
+[T] pre-commit is a multi-language framework and package manager for pre-commit
+[T] hooks.
+
+[U] https://pre-commit.com
+
+[A] Anthony Sottile
+[A] Ken Struys
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] MIT
+[V] 4.6.0
+
+[D] 1ed52f69a07d55b04784753e73703e7779b6740e5b9f5a7d7303afa0 pre-commit-4.6.0.tar.gz https://github.com/pre-commit/pre-commit/archive/v4.6.0/

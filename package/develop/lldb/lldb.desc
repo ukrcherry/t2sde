@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/lldb/lldb.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,19 +15,31 @@
 
 [A] University of Illinois/NCSA
 [A] Chris Lattner <clattner@apple.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [F] OBJDIR CROSS
-[R] - alpha arc avr32 alpha blackfin m68k microblaze nios2
+[R] - alpha arc avr32 alpha blackfin cris m68k microblaze nios2
 
 [E] opt doxygen
 [E] opt lua
 
 [L] BSD
-[S] Stable
-[V] 20.1.4
+[V] 22.1.5
 
-[CV-GROUP] llvmorg
-[D] f0bbaa28962fecc0c06925067a280e4adcd24f3717fecc246cbd1f28 lldb-20.1.4.src.tar.xz https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.4/
-[D] a9713c0e19a33e061a143e6c6a7cd5c3d5706a8796c5507caa26469f llvm-cmake-20.1.4.src.tar.xz !https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.4/cmake-20.1.4.src.tar.xz
+[CV-GROUP] llvm-project
+[D] 539b0fa857272b2b18ad9b9e58e11d4e48e0f1c807ec375d5ca91913 llvm-project-22.1.5.src.tar.xz https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.5/
+
+srcdir=*/lldb
+
+if atstage toolchain; then
+	var_append cmakeopt ' ' -DLLVM_DEFAULT_TARGET_TRIPLE=$arch_target
+elif atstage cross; then
+	var_append cmakeopt ' ' -DLLVM_MAIN_INCLUDE_DIR=$root$includedir
+	var_append cmakeopt ' ' -DLLVM_LIBRARY_DIR=$root$libdir
+	var_append GCC_WRAPPER_FILTER '|' "sed 's,$root/TOOLCHAIN.*libLLVM\(.*\)\.[as].*,-lLLVM\1,g'"
+fi
+
+[ "${libdir##*/lib}" ] && var_append cmakeopt ' ' -DLLVM_LIBDIR_SUFFIX=${libdir##*/lib}
+[ "$SDECFG_STATIC" = 1 ] || var_append cmakeopt ' ' -DBUILD_SHARED_LIBS=ON
+var_append cmakeopt ' ' -DLLDB_INCLUDE_TESTS=OFF

@@ -1,12 +1,13 @@
-[TIMESTAMP] 1739219810 Mon Feb 10 21:36:50 2025
-[BUILDTIME] 240 (5)
-[SIZE] 2.79 MB, 163 files
+[TIMESTAMP] 1770493406 Sat Feb  7 20:43:26 2026
+[BUILDTIME] 60 (9)
+[SIZE] 1.96 MB, 163 files
 
 [DEP] bash
 [DEP] binutils
 [DEP] bison
 [DEP] cmake
 [DEP] coreutils
+[OPT] cups
 [DEP] diffutils
 [DEP] extra-cmake-modules
 [DEP] flex
@@ -16,14 +17,12 @@
 [DEP] linux-header
 [DEP] m4
 [DEP] make
-[DEP] pkgconfig
 [DEP] qt6base
-[DEP] qt6charts
 [DEP] qt6declarative
-[DEP] qt6svg
 [DEP] qt6tools
+[DEP] qt6translations
 [DEP] sed
 [DEP] tar
-[DEP] tbb
+[DEP] util-linux
 [DEP] vulkan-headers
 [DEP] xz

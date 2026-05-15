@@ -1,0 +1,28 @@
+[TIMESTAMP] 1759855762 Tue Oct  7 18:49:22 2025
+[BUILDTIME] 5 (9)
+[SIZE] 0.39 MB, 32 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] cmake
+[DEP] coreutils
+[DEP] diffutils
+[DEP] gawk
+[DEP] gettext
+[DEP] grep
+[DEP] libx11
+[DEP] libxml
+[DEP] libxmu
+[DEP] linux-header
+[DEP] make
+[DEP] perl
+[DEP] pkgconfig
+[DEP] sed
+[DEP] tar
+[DEP] tde-cmake
+[DEP] tdelibs
+[DEP] tdemultimedia
+[DEP] tqt
+[DEP] tqtinterface
+[DEP] xorgproto
+[DEP] xz

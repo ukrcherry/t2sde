@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/xdg-dbus-proxy/xdg-dbus-proxy.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Filtering proxy for D-Bus connections
+
+[T] Filtering proxy for D-Bus connections.
+
+[U] https://github.com/flatpak/xdg-dbus-proxy/
+
+[A] Xdg-dbus-proxy Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 0.1.7
+[L] LGPL
+
+[D] a40bef09d35b170350860bbcd305bb57965494a1873de168ac5f9a3f xdg-dbus-proxy-0.1.7.tar.xz https://github.com/flatpak/xdg-dbus-proxy/releases/download/0.1.7/

@@ -1,11 +1,11 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/kparts/kparts.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
-[I] KDE Frameworks 5 Tier 3 solution for KParts
+[I] KDE Frameworks solution for KParts
 
 [T] This library implements the framework for KDE parts, which are elaborate
 [T] widgets with a user-interface defined in terms of actions (menu items,
@@ -14,17 +14,17 @@
 [U] https://www.kde.org
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 6.14.0
+[V] 6.26.0
 [P] X -----5---9 162.918
 
-[O] . $base/package/*/*/kde-conf.in
-[O] hook_add postmake 5 "ln -sfv $libdir/plugins/kf6 $root/$(pkgprefix qt6base)/plugins/"
-
 [CV-GROUP] kde-frameworks
-[D] 92a950a3aed93a45121f755b9113644f95f84a3b9744e9dd1dc20c40 kparts-6.14.0.tar.xz https://download.kde.org/stable/frameworks/6.14/
+[D] 260cf2ab635850933377f1c526e0204613f0bf82a85833340c33b081 kparts-6.26.0.tar.xz https://download.kde.org/stable/frameworks/6.26/
+
+. $base/package/*/*/kde-conf.in
+[ "$prefix" != usr ] && hook_add postmake 5 "ln -sfv $libdir/plugins/kf6 $root/$(pkgprefix qt6base)/${libdir##*/}/qt6/plugins/"

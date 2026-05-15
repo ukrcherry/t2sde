@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/geeqie/geeqie.desc
-[COPY] Copyright (C) 2010 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2010 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -27,7 +27,8 @@
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 1.1
+[V] 2.7
 
-[D] f2496755ce5b0affe401d2a5cd36984646959eb9295f762016b3a60f geeqie-1.1.tar.gz http://dl.sourceforge.net/sourceforge/geeqie/
+[D] 400d5b701cdef19bb3472f6b95e2f948b2ddca422bc726c8667c5198 geeqie-2.7.tar.xz https://github.com/BestImageViewer/geeqie/releases/download/v2.7/
+
+var_append GCC_WRAPPER_APPEND ' ' -llua

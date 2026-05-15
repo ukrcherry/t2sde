@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/mate-control-center/mate-control-center.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,20 +12,18 @@
 [U] https://mate-desktop.org/
 
 [A] MATE developer
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/desktop/mate
 
 [E] add mate-panel
 
 [L] GPL
-[S] Stable
 [V] 1.28.1
-[P] X -----5---9 179.400
-
-[O] . $base/package/*/*/mate-conf.in
-[O] pkginstalled accountsservice || var_append mesonopt ' ' -Daccountsservice=disabled
-[O] var_append mesonopt ' ' -Dlibappindicator=disabled
-[O] var_append GCC_WRAPPER_APPEND ' ' "$(pkg-config --libs glib)"
 
 [D] d3a81544c9d5ad1c4ce797ac53693b3a7b3928aa5c36f655816b7d6a mate-control-center-1.28.1.tar.gz https://github.com/mate-desktop/mate-control-center/archive/refs/tags/v1.28.1/
+
+. $base/package/*/*/mate-conf.in
+pkginstalled accountsservice || var_append mesonopt ' ' -Daccountsservice=disabled
+pkginstalled ayatana-appindicators || var_append mesonopt ' ' -Dlibappindicator=disabled
+var_append GCC_WRAPPER_APPEND ' ' -L$root$(pkgprefix libdir glib)

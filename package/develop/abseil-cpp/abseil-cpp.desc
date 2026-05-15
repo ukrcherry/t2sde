@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/abseil-cpp/abseil-cpp.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Abseil Common Libraries
+
+[T] Abseil Common C++ Libraries.
+
+[U] https://abseil.io/
+
+[A] Abseil-cpp Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 20260107.1
+[L] APL
+[P] X -----5---9 108.000
+
+[D] 29c5b191a6c1d04af7d1f62621fbc4557c52c8568dc40392638a140d abseil-cpp-20260107.1.tar.gz https://github.com/abseil/abseil-cpp/archive/20260107.1/
+
+[ "$SDECFG_STATIC" == 1 ] || var_append cmakeopt ' ' -DBUILD_SHARED_LIBS=ON

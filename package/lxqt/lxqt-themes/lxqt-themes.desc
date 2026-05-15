@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/lxqt-themes/lxqt-themes.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,15 +11,13 @@
 [U] https://github.com/lxqt/lxqt-themes
 
 [A] Lxqt-themes Authors
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/base
 [F] OBJDIR
 
-[V] 2.2.0
+[V] 2.4.0
 [L] LGPL
-[S] Stable
-[P] X -----5---9 700.000
 
 [CV-GROUP] lxqt
-[D] c81ee2efd5e68a3e1b6db5dece0b3821454e7974d5fe5c29b97b9876 lxqt-themes-2.2.0.tar.xz https://github.com/lxqt/lxqt-themes/releases/download/2.2.0/
+[D] 7b2c6964f958a4e584d85cfcd90b2f25b030fe8c68f6f40b3a4eeecd lxqt-themes-2.4.0.tar.xz https://github.com/lxqt/lxqt-themes/releases/download/2.4.0/

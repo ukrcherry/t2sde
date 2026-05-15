@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/marlin/marlin.desc
-[COPY] Copyright (C) 2005 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2005 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,14 +13,13 @@
 [U] https://marlin.sourceforge.net/
 
 [A] Iain <iaingnome@gmail.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 
 [L] GPL
-[S] Stable
 [V] 0.9
 
-[O] . $base/package/*/*/gnome-conf.in
+[D] ece0ac31f020fca4523ed0f569d505d13956542ef009de8433814742 marlin-0.9.tar.gz https://prdownloads.sourceforge.net/sourceforge/marlin/
 
-[D] ece0ac31f020fca4523ed0f569d505d13956542ef009de8433814742 marlin-0.9.tar.gz http://dl.sourceforge.net/sourceforge/marlin/
+. $base/package/*/*/gnome-conf.in

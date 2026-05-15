@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libdex/libdex.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,14 +13,17 @@
 [U] https://gitlab.gnome.org/GNOME/libdex
 
 [A] The GNOME Project <gnome-devel-list@gnome.org>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development extra/desktop/gnome
 [F] CROSS
 
-[L] LGPL
-[S] Beta
-[V] 0.10.0
-[P] X -----5---9 799.999
+[E] opt liburing
+[E] opt libsoup3
 
-[D] 01c294b3b4df4afd388d5520d49934c9657ae225d1989ebfb573b3e6 libdex-0.10.0.tar.xz https://download.gnome.org/sources/libdex/0.10/
+[L] LGPL
+[V] 1.1.0
+[P] X -----5---9 500.000
+
+[CV-FLAGS] ODD-UNSTABLE
+[D] 79758bd68dcd828562d121b42641c8094ade9f97a249c3d35918be57 libdex-1.1.0.tar.xz https://download.gnome.org/sources/libdex/1.1/

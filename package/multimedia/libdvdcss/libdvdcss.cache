@@ -1,15 +1,20 @@
-[TIMESTAMP] 1739038283 Sat Feb  8 19:11:23 2025
-[BUILDTIME] 2 (5)
-[SIZE] 0.24 MB, 19 files
+[TIMESTAMP] 1768854150 Mon Jan 19 21:22:30 2026
+[BUILDTIME] 4 (9)
+[SIZE] 0.17 MB, 20 files
 
 [DEP] bash
 [DEP] binutils
 [DEP] bzip2
 [DEP] coreutils
 [DEP] diffutils
+[DEP] findutils
 [DEP] gawk
 [DEP] grep
 [DEP] linux-header
-[DEP] make
+[DEP] meson
+[DEP] ninja
+[DEP] openssl
+[DEP] python
 [DEP] sed
 [DEP] tar
+[DEP] util-linux

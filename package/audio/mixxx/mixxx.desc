@@ -1,0 +1,29 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/mixxx/mixxx.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] DJ software that gives you everything you need to perform live mixes
+
+[T] Mixxx is Free DJ software that gives you everything you need to perform
+[T] live DJ mixes. Mixxx works on GNU/Linux, Windows, and macOS.
+
+[U] https://mixxx.org
+
+[A] Mixxx Development Team
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/audio
+[F] CROSS OBJDIR
+
+[L] GPL
+[V] 2.5.6
+
+[D] 0a4571b7b7c7a3494d2d168d937753e721607210559010e4d709215c mixxx-2.5.6.tar.gz https://github.com/mixxxdj/mixxx/archive/2.5.6/
+
+var_append cmakeopt ' ' -DBUILD_BENCH=OFF
+var_append cmakeopt ' ' -DBUILD_TESTING=OFF
+pkginstalled portmidi || var_append cmakeopt ' ' -DPORTMIDI=OFF
+pkginstalled upower || var_append cmakeopt ' ' -DBATTERY=OFF
+pkginstalled libkeyfinder || var_append cmakeopt ' ' -DKEYFINDER=OFF

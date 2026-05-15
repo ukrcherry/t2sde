@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/snes9x/snes9x.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,7 +12,7 @@
 
 [A] Gary Henderson <gary.henderson@ntlworld.com>
 [A] Jerremy Koot <jkoot@snes9x.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/emulator
 [E] opt gtkmm3 cairomm1 glibmm2 at-spi2-core gdk-pixbuf glib glibmm2 gtk+ cairo harfbuzz wayland libsigc++2 pango pangomm1 atkmm1
@@ -20,8 +20,22 @@
 [E] opt portaudio
 
 [L] OpenSource
-[S] Stable
 [V] 1.63
 
-#[D] 6acaa3a6949043a4d937924b28c2b71fad1a9858b63a71e612850a0d snes9x-1.63.tar.gz https://github.com/snes9xgit/snes9x/archive/1.63/
+#[D] 0 snes9x-1.63.tar.gz https://github.com/snes9xgit/snes9x/archive/1.63/
 [D] 6acaa3a6949043a4d937924b28c2b71fad1a9858b63a71e612850a0d snes9x-1.63.tar.gz git+https://github.com/snes9xgit/snes9x tags/1.63
+
+var_append cmakeopt ' ' -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+var_append GCC_WRAPPER_INSERT ' ' "-c?:-L`pkgprefix libdir libx11`"
+
+pkginstalled portaudio || var_append cmakeopt ' ' -DUSE_PORTAUDIO=OFF
+
+if pkginstalled gtkmm3; then
+	hook_add preconf 5 "cd gtk"
+	var_append GCC_WRAPPER_APPEND ' ' "-L$root$(pkgprefix libdir gtkmm3)"
+else
+	hook_add preconf 5 "cd unix"
+	var_append GCC_WRAPPER_INSERT ' ' "-c?:-L`pkgprefix libdir libx11`"
+	makeinstopt=
+	hook_add postmake 5 "install snes9x $root$bindir/"
+fi

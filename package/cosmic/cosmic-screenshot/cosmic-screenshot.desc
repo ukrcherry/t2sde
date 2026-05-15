@@ -1,12 +1,12 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/cosmic-screenshot/cosmic-screenshot.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
-[I] cosmic-screenshot
+[I] Utility for capturing screenshots via XDG Desktop Portal
 
-[T] cosmic-screenshot.
+[T] Utility for capturing screenshots via XDG Desktop Portal.
 
 [U] https://github.com/pop-os/cosmic-screenshot/
 
@@ -17,10 +17,9 @@
 [F] CROSS
 
 [L] GPL3
-[S] Alpha
-[V] epoch-1.0.0-alpha.7
-
-[O] . $base/package/cosmic/*/cosmic-conf.in
+[V] 1.0.13
 
 [CV-GROUP] cosmic-desktop
-[D] c9d49a75602983aeb89fb46b885471f73bb688943ddfd14c758c6712 cosmic-screenshot-epoch-1.0.0-alpha.7.tar.gz https://github.com/pop-os/cosmic-screenshot/archive/epoch-1.0.0-alpha.7/
+[D] ff1d1696d82120b8dc27609b019e1c06f68d874018c0702d3d606c6e cosmic-screenshot-epoch-1.0.13.tar.gz https://github.com/pop-os/cosmic-screenshot/archive/epoch-1.0.13/
+
+. $base/package/cosmic/*/cosmic-conf.in

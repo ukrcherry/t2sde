@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/pdnsd/pdnsd.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -13,8 +13,7 @@
 
 [A] Thomas Moestl <tmoestl@gmx.net> {Former Maintainer}
 [A] Paul Rombouts <p.a.rombouts@home.nl> {Former Maintainer}
-[A] Paul Rombouts <p.a.rombouts@home.nl>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [U] https://home.t-online.de/home/moestl/
 [U] https://www.phys.uu.nl/~rombouts/pdnsd.html
@@ -23,11 +22,8 @@
 [F] CROSS
 
 [L] GPL
-[S] Stable
 [V] 1.2.8
 
-[P] X -----5---9 123.600
+[D] fbcc72eb9fb6cbe2d6c5df50a006e7e061c7e97a1df68229e33e8c18 pdnsd-1.2.8-par.tar.gz https://www.phys.uu.nl/~rombouts/pdnsd/releases/
 
-[O] [ $prefix_auto = 1 ] && prefix="opt/pdnsd" && set_confopt
-
-[D] fbcc72eb9fb6cbe2d6c5df50a006e7e061c7e97a1df68229e33e8c18 pdnsd-1.2.8-par.tar.gz http://www.phys.uu.nl/~rombouts/pdnsd/releases/
+[ $prefix_auto = 1 ] && prefix="opt/pdnsd" && set_confopt

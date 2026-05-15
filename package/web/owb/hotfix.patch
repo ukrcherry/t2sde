@@ -1,0 +1,17 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/owb/hotfix.patch
+# Copyright (C) 2007 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0 or patched project license
+# --- T2-COPYRIGHT-END ---
+
+--- trunk/BAL/CMakeConf.txt.vanilla	2007-10-08 16:34:25.000000000 +0200
++++ trunk/BAL/CMakeConf.txt	2007-10-08 16:34:47.000000000 +0200
+@@ -340,7 +340,7 @@
+ 
+ IF (WEBKIT_USE_FONTS_FREETYPE OR WEBKIT_USE_FONTS_SDL_TTF)
+ 	SET (OWB_DEFAULT_FONT "Vera.ttf" CACHE STRING "Font selection for browser font-rendering")
+-	EXEC_PROGRAM (find ARGS /usr/share/fonts/ -name ${OWB_DEFAULT_FONT} OUTPUT_VARIABLE OWB_DEFAULT_FONT)
++	EXEC_PROGRAM (find ARGS /usr/X11R7/lib/X11/fonts/TTF/ -name ${OWB_DEFAULT_FONT} OUTPUT_VARIABLE OWB_DEFAULT_FONT)
+ 	IF (EXISTS ${OWB_DEFAULT_FONT})
+ 		EXEC_PROGRAM (ln ARGS -sf ${OWB_DEFAULT_FONT} /usr/share/fonts/owb.ttf OUTPUT_VARIABLE OWB_DEFAULT_FONT)
+ 	ELSE (EXISTS ${OWB_DEFAULT_FONT})

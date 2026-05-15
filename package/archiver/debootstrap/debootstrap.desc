@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/debootstrap/debootstrap.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Debian/Ubuntu bootstrap scripts
+
+[T] Debian/Ubuntu bootstrap scripts.
+
+[U] https://packages.qa.debian.org/d/debootstrap.html
+
+[A] Debootstrap Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.0.143
+[L] MIT
+
+[D] b350977dcdd8975b9b92ac855ae48d5ed64c39a74b1c87bbff7a5919 debootstrap-1.0.143.tar.bz2 https://salsa.debian.org/installer-team/debootstrap/-/archive/1.0.143/

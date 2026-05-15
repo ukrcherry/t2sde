@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/0ad-data/0ad-data.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,15 +14,14 @@
 [U] https://play0ad.com/
 
 [A] Wildfire Games
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/game
 
 [L] GPL
-[S] Alpha
-[V] 0.27.0
+[V] 0.28.0
 
-[O] runmake=0
-[O] hook_add postmake 5 "cp -rfv binaries/data/* $root$datadir/0ad/"
+[D] d41c76a99804b6e090a39727821a133cf993a0860387d87d88c5d2b0 0ad-0.28.0-unix-data.tar.xz https://releases.wildfiregames.com/
 
-[D] 88ec2f41269ea324c0cc6ab60db1e8fcec05c41eeaea0735c326a70d 0ad-0.27.0-unix-data.tar.xz https://releases.wildfiregames.com/
+runmake=0
+hook_add postmake 5 "cp -rfv binaries/data/* $root$datadir/0ad/"

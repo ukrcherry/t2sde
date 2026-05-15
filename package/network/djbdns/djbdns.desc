@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/djbdns/djbdns.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -33,21 +33,70 @@
 [U] https://tinydns.org/
 
 [A] Dan J. Bernstein <djb@cr.yp.to>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool extra/server
 [F] CROSS DIETLIBC
 
 [L] Free-to-use
-[S] Stable
 [V] 1.05
 
-[CV-URL] http://cr.yp.to/djbdns/install.html
+[CV-URL] https://cr.yp.to/djbdns/install.html
 
 [D] a46dcd809935c5935a146b20502413c61ea8940804bc5a6d4d375488 djbdns-1.05.tar.gz -http://cr.yp.to/djbdns/
-[D] 7e4074866147c9b269e262f9ee93cb9722b684855b0c60d26c579a47 djbdns-1.05-man-20031023.tar.gz http://smarden.org/pape/djb/manpages/
+[D] 7e4074866147c9b269e262f9ee93cb9722b684855b0c60d26c579a47 djbdns-1.05-man-20031023.tar.gz https://smarden.org/pape/djb/manpages/
 [D] ffcfbc5b8cf8b278fb1b20230fe833186e6b335723126cd0511c54b1 djbdns-patch-1.05-tinydns_sighup.diff !http://www-dt.e-technik.uni-dortmund.de/~ma/djb/dns/djbdns-1.05-sighup.patch
 [D] 2d85b723eab4cd82abc5fdf0e68d2993164fdc541b055ece7dce18f6 djbdns-patch-1.05-tinydns_multi_data.diff !http://iksz.hu/package/djbdns-conf/djbdns-1.05-multi_tinydns_data.patch
 [D] 1ad016a3376c2f49f6c5ad836998923ca7d7821858adc1ef193e4c51 djbdns-patch-1.05-dnscache_dumpcache-v4.diff !http://efge.free.fr/djbdns/patch-dnscache-dumpcache-v4.txt
 [D] d2f99083f9a9674b8ee14548b752fc016fe4c54bb832198b3f4f3117 djbdns-patch-1.05-dnscache_dumpcache_over_sighup-v4.diff http://dl.geeks.cl/t2/
 [D] a882c77e26efc33ccb4e31383011f3125474f3bb6f641c8242179d19 djbdns-patch-1.04-fwdzone.diff !http://www.skarnet.org/software/djbdns-fwdzone/djbdns-1.04-fwdzone.patch
+
+[ "$prefix_auto" == 1 ] && prefix=opt/djbdns && set_confopt
+
+makeopt="$makeopt prog"
+makeinstopt=
+
+pkg_djbdns_config() {
+	echo $CC > conf-cc
+	echo $CC > conf-ld
+	echo /$prefix > conf-home
+	echo -e "#include \"auto_home.h\"
+const char auto_home[]=\"/$prefix\";" > auto_home.c
+}
+hook_add premake 5 pkg_djbdns_config
+
+pkg_djbdns_install() {
+	while read dir file; do
+		mkdir -p $root/$prefix/$dir
+		cp $file $root/$prefix/$dir/$file
+	done < <(grep "c(.*man\|c(.*bin" hier.c | cut -d \" --output-delimiter ' ' -f 2,4)
+}
+hook_add postmake 4 pkg_djbdns_install
+
+pkg_djbdns_installman() {
+	local x= saved_pwd=$PWD
+	cd $builddir
+
+	tar -v $taropt `match_source_file -p djbdns.*man`
+	cd djbdns-man
+	for x in 1 5 8; do
+		gzip *.$x
+		mkdir -p $root$mandir/man$x/
+		cp -v *.$x.gz $root$mandir/man$x/
+	done
+
+	cd $saved_pwd
+}
+hook_add postmake 5 pkg_djbdns_installman
+
+[ "$SDECFG_PKG_DJBDNS_SIGHUP" = "1" ] &&
+	var_append patchfiles ' ' "`match_source_file -p tinydns_sighup`"
+[ "$SDECFG_PKG_DJBDNS_MULTIDATA" = "1" ] &&
+	var_append patchfiles ' ' "`match_source_file -p multi_data`"
+if [ "$SDECFG_PKG_DJBDNS_DUMPCACHE" = "1" ]; then
+	[ "$SDECFG_PKG_DJBDNS_SIGHUP" = "1" ] &&
+		var_append patchfiles ' ' "`match_source_file -p dumpcache_over_sighup-v4`" ||
+		var_append patchfiles ' ' "`match_source_file -p dumpcache-v4`"
+fi
+[ "$SDECFG_PKG_DJBDNS_FWDZONE" = "1" ] &&
+	var_append patchfiles ' ' "`match_source_file -p fwdzone`"

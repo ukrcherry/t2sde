@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/s3cmd/s3cmd.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Command-line tool for managing Amazon S3 and CloudFront services
+
+[T] Command-line tool for managing Amazon S3 and CloudFront services.
+
+[U] https://github.com/s3tools/s3cmd
+
+[A] S3cmd Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 2.4.0
+[L] GPL
+
+[D] b067d907a2e2461c813d2bbf07981e91fa2b5af9909528176ef2221e s3cmd-2.4.0.tar.gz https://github.com/s3tools/s3cmd/archive/v2.4.0/

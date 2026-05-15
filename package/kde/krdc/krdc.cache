@@ -1,19 +1,54 @@
+[TIMESTAMP] 1770548715 Sun Feb  8 12:05:15 2026
+[BUILDTIME] 130 (9)
+[SIZE] 3.76 MB, 198 files
 
-[TIMESTAMP] 1714259186 Sun Apr 28 01:06:26 2024
-[BUILDTIME] 1 (9) ERROR
-[SIZE] 0.01 MB, 6 files
-
-[DEP] 00-dirtree
 [DEP] bash
 [DEP] binutils
 [DEP] cmake
 [DEP] coreutils
+[OPT] cyrus-sasl2
 [DEP] diffutils
-[DEP] findutils
-[DEP] gawk
-[DEP] grep
+[OPT] docbook-xml
+[OPT] docbook-xsl
 [DEP] extra-cmake-modules
+[DEP] freerdp
+[DEP] freetype
+[DEP] gawk
+[DEP] gettext
+[DEP] grep
+[DEP] kbookmarks
+[DEP] kcmutils
+[DEP] kcompletion
+[DEP] kconfig
+[DEP] kconfigwidgets
+[DEP] kcoreaddons
+[DEP] kcrash
+[DEP] kdnssd
+[OPT] kdoctools
+[DEP] kguiaddons
+[DEP] ki18n
+[DEP] kiconthemes
+[DEP] kio
+[DEP] knotifyconfig
+[DEP] kstatusnotifieritem
+[DEP] kwallet
+[DEP] kwidgetsaddons
+[DEP] kwindowsystem
+[DEP] kxmlgui
+[DEP] libssh
+[DEP] libvncserver
+[DEP] libxml
+[DEP] linux-header
 [DEP] make
+[DEP] pkgconfig
+[DEP] procps
+[DEP] qt6base
+[DEP] qtkeychain
 [DEP] sed
+[DEP] shared-mime-info
 [DEP] tar
+[DEP] util-linux
+[DEP] vulkan-headers
+[DEP] wayland
 [DEP] xz
+[DEP] zlib

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/r/r.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -17,7 +17,7 @@
 
 [A] Robert Gentleman
 [A] Ross Ihaka
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/scientific
 [F] NO-LTO.gcc
@@ -25,10 +25,8 @@
 [E] opt openjdk
 
 [L] GPL
-[S] Stable
-[V] 4.5.0
+[V] 4.6.0
 
-[O] var_append confopt ' ' "LDFLAGS=-L$root/$prefix/X11R7/${libdir##*/}"
-[O] var_append GCC_WRAPPER_APPEND ' ' -std=gnu99
+[D] 2213be471e47af7cf06b9908a4f86676d07ae62a323eed0e9b006b64 R-4.6.0.tar.gz http://cran.r-project.org/src/base/R-4/
 
-[D] 1089d9255c7d7e1fec61fe74928475c80887af0442d6b42f4915afa2 R-4.5.0.tar.gz http://cran.r-project.org/src/base/R-4/
+var_append confopt ' ' "LDFLAGS=-L$root/$prefix/X11R7/${libdir##*/}"

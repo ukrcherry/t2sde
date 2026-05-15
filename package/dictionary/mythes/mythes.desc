@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/mythes/mythes.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A simple thesaurus
+
+[T] A simple thesaurus.
+
+[U] https://hunspell.sourceforge.net/
+
+[A] Mythes Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.2.5
+[L] GPL LGPL MPL
+
+[D] cd0f673c01eef15635f994ec5d90ea51e166b29bbae92b15dfe82772 mythes-1.2.5.tar.xz https://github.com/hunspell/mythes/releases/download/v1.2.5/

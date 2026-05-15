@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/duperemove/duperemove.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Tools for deduping file systems
+
+[T] Tools for deduping file systems.
+
+[U] https://github.com/markfasheh/duperemove
+
+[A] Duperemove Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 0.15.2
+[L] GPL
+
+[D] a8bb27589f9fcbb51a886e3bcd1f191f8d79c69b21631483fc1cb49a duperemove-0.15.2.tar.gz https://github.com/markfasheh/duperemove/archive/refs/tags/v0.15.2/

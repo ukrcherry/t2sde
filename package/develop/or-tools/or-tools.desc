@@ -1,0 +1,30 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/or-tools/or-tools.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Google's software suite for combinatorial optimization
+
+[T] Fast and portable software suite for solving combinatorial optimization
+[T] problems.
+
+[U] https://github.com/google/or-tools
+
+[A] OR-tools Project
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/development
+[F] CROSS
+
+[L] APL
+[V] 9.15
+
+[D] d13c5a5b3a4d4bcdffb30dc4da6a05e9205f9c70be36b2268c497965 or-tools-9.15.tar.gz https://github.com/google/or-tools/archive/v9.15/
+
+rungo=0
+hook_add preconf 5 "rm -vf Makefile"
+
+# TODO: enable once we have the necessary packages
+var_append cmakeopt ' ' "-DUSE_fuzztest=OFF -DUSE_PDLP=OFF -DUSE_COINOR=OFF"
+var_append cmakeopt ' ' "-DUSE_HIGHS=ON -DUSE_SCIP=ON"

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/hwloc/hwloc.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -19,7 +19,7 @@
 [U] https://www.open-mpi.org/projects/hwloc/
 
 [A] The Open MPI Development Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [F] CROSS NO-LTO.gcc
@@ -28,8 +28,7 @@
 [E] opt opencl-headers
 
 [L] BSD
-[S] Stable
-[V] 2.11.2
+[V] 2.12.2
 [P] X -----5---9 109.400
 
-[D] 40bac2885ed838341d6b415bca86bf58258bc432b8de7b680af99679 hwloc-2.11.2.tar.gz https://download.open-mpi.org/release/hwloc/v2.11/
+[D] ebe65c74c86a2d87fa2f19d90fb4c14721f020672fb158e43f23454a hwloc-2.12.2.tar.bz2 https://download.open-mpi.org/release/hwloc/v2.12/

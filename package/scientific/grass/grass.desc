@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/grass/grass.desc
-[COPY] Copyright (C) 2010 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2010 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -24,7 +24,6 @@
 [E] opt jasper
 
 [L] GPL
-[S] Gamma
-[V] 6.4.6
+[V] 8.5.0
 
-[D] 85186f5c9b1d850d387c56d8226405e6add154b4596983cb3def31ab grass-6.4.6.tar.gz http://grass.osgeo.org/grass64/source/
+[D] 1bdd254487adde3c79ed3b896b102be4e79f09541755484ba63252d3 grass-8.5.0.tar.gz https://github.com/OSGeo/grass/archive/8.5.0/

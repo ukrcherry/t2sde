@@ -1,0 +1,29 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/tdewebdev/tdewebdev.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Webdev apps for Trinity Desktop Environment
+
+[T] TDE web development programs.
+
+[U] https://www.trinitydesktop.org/
+
+[A] Trinity Desktop Developers
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/x11
+[F] OBJDIR
+
+[L] GPL
+[V] 14.1.6
+
+[CV-GROUP] tde
+[D] afe24b62d425f78050e59a8d4e0657eab50b8e237816dfde6eea94b6 tdewebdev-trinity-14.1.6.tar.xz https://mirror.ppa.trinitydesktop.org/trinity/releases/R14.1.6/main/core/
+
+. $base/package/*/*/tde-conf.in
+
+var_append GCC_WRAPPER_APPEND ' ' -std=c++03
+var_append cmakeopt ' ' -DBUILD_KXSLDBG=OFF
+var_append cmakeopt ' ' -DBUILD_QUANTA=OFF

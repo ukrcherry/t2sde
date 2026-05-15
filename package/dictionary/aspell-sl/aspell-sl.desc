@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/aspell-sl/aspell-sl.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Slovenian dictionary for aspell
+
+[T] The Slovenian dictionary for aspell.
+
+[U] http://aspell.net
+
+[A] The Aspell project
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/office
+[F] CROSS
+
+[L] GPL
+[V] 0.50-0
+
+[D] cc165772ff4519a5b437a90aa5ccaa6ffc7fa04d51e3de7dbab62e62 aspell-sl-0.50-0.tar.bz2 https://ftp.gnu.org/gnu/aspell/dict/sl/
+
+confopt=

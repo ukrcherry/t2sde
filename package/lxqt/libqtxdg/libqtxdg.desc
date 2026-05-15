@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libqtxdg/libqtxdg.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,14 +11,13 @@
 [U] https://github.com/lxqt/libqtxdg
 
 [A] Libqtxdg Authors
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/base
 [F] OBJDIR
 
-[V] 4.2.0
+[V] 4.4.0
 [L] LGPL
-[S] Stable
-[P] X -----5---9 700.000
+[P] X -----5---9 500.000
 
-[D] b1bb0a5eb57a466273159fea6d4299a6609558f4b0c76cf01c1f813e libqtxdg-4.2.0.tar.xz https://github.com/lxqt/libqtxdg/releases/download/4.2.0/
+[D] 1b5ebdfc396e0423d68ef29fba859a7f7cae3974d26fa7f6065ed3b0 libqtxdg-4.4.0.tar.xz https://github.com/lxqt/libqtxdg/releases/download/4.4.0/

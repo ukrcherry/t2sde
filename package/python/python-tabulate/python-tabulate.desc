@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/python-tabulate/python-tabulate.desc
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Pretty-print tabular data
+
+[T] Pretty-print tabular data in Python, a library and a command-line utility.
+
+[U] https://pypi.org/project/tabulate/
+
+[A] Sergey Astanin <s.astanin@gmail.com>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/development
+
+[L] MIT
+[V] 0.10.0
+[P] X -----5---9 150.300
+
+[D] 7519eb79f9cf3a53fd2a81b6065942abb872fcd66eb052bc8ad1cea3 tabulate-0.10.0.tar.gz https://files.pythonhosted.org/packages/source/t/tabulate/

@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/cdw/cdw.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Cdw is a front-end for cd recoding tools
+
+[T] Cdw is a front-end for cd recoding tools.
+
+[U] https://cdw.sourceforge.net/
+
+[A] Cdw Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 0.8.1
+[L] GPL
+
+[D] 44bb4575072e67754bc703ff19a01f669039f2e4a5cabfa917b5012c cdw-0.8.1.tar.gz https://downloads.sourceforge.net/cdw/

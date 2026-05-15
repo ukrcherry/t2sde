@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/torcs/torcs.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -14,32 +14,44 @@
 [U] https://torcs.sourceforge.net/
 
 [A] Eric Espiť & Christophe Guionneau <torcs@free.fr>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [F] NOPARALLEL
 [C] extra/game
 #[C] extra/game/racing
 
 [L] GPL
-[S] Stable
-[V] 1.2.4
+[V] 1.3.8
 
-[O] var_append GCC_WRAPPER_APPEND ' ' -L`pkgprefix libdir libx11`
-[O] var_append GCC_WRAPPER_APPEND ' ' -I`pkgprefix includedir freeglut`
+[D] 2c2cbfc3edd9cc98f3d8eaac90f47c75a5f8642880b12eb8d2db241f torcs-1.3.8.tar.gz !https://prdownloads.sourceforge.net/sourceforge/torcs/torcs-1.3.8.tar.bz2
 
-[D] 2191058012 TORCS-1.2.4-src.tgz http://dl.sourceforge.net/sourceforge/torcs/
-[D] 534718156 TORCS-1.2.4-src-robots-base.tgz http://dl.sourceforge.net/sourceforge/torcs/
-[D] 263683630 TORCS-1.2.4-src-robots-berniw.tgz http://dl.sourceforge.net/sourceforge/torcs/
-[D] 3344926521 TORCS-1.2.4-src-robots-bt.tgz http://dl.sourceforge.net/sourceforge/torcs/
-[D] 2335741457 TORCS-1.2.4-src-robots-olethros.tgz http://dl.sourceforge.net/sourceforge/torcs/
-[D] 3640035336 TORCS-1.2.4-data.tgz http://dl.sourceforge.net/sourceforge/torcs/
-[D] 13458137 TORCS-1.2.4-data-tracks-road.tgz http://dl.sourceforge.net/sourceforge/torcs/
-[D] 2176116922 TORCS-1.2.4-data-tracks-oval.tgz http://dl.sourceforge.net/sourceforge/torcs/
-[D] 2576937965 TORCS-1.2.4-data-tracks-dirt.tgz http://dl.sourceforge.net/sourceforge/torcs/
-[D] 3828516005 TORCS-1.2.4-data-cars-extra.tgz http://dl.sourceforge.net/sourceforge/torcs/
-[D] 828349669 TORCS-1.2.4-data-cars-nascar.tgz http://dl.sourceforge.net/sourceforge/torcs/
-[D] 2196278454 TORCS-1.2.4-data-cars-Patwo-Design.tgz http://dl.sourceforge.net/sourceforge/torcs/
-[D] 2816467380 TORCS-1.2.4-data-cars-kcendra-gt.tgz http://dl.sourceforge.net/sourceforge/torcs/
-[D] 3723695877 TORCS-1.2.4-data-cars-kcendra-roadsters.tgz http://dl.sourceforge.net/sourceforge/torcs/
-[D] 40405216 TORCS-1.2.4-data-cars-kcendra-sport.tgz http://dl.sourceforge.net/sourceforge/torcs/
-[D] 4154990765 TORCS-1.2.4-data-cars-VM.tgz http://dl.sourceforge.net/sourceforge/torcs/
+var_append GCC_WRAPPER_APPEND ' ' -L`pkgprefix libdir libx11`
+var_append GCC_WRAPPER_APPEND ' ' -I`pkgprefix includedir freeglut`
+
+bindir=$root/$SDECFG_PKG_GAMES_BINDIR
+datadir=$root/$SDECFG_PKG_GAMES_DATADIR
+
+autoextract=0
+runconf=1
+
+torcs_preconf() {
+	for x in `match_source_file -p src`; do
+		echo "Extracting $x ..."
+		tar $taropt $x
+	done
+	cd torcs-$ver
+	apply_patchfiles
+	# delete lingering x86 object files ...
+	find -name '*.o' | xargs rm -fv
+}
+hook_add preconf 3 torcs_preconf
+
+torcs_pi() {
+	mkdir -p $root$datadir/games/torcs/
+	for x in `match_source_file -p data`; do
+		echo "Extracting $x ..."
+		tar -C $root$datadir/games/torcs/ $taropt $x
+	done
+	chown -R root:root $root$datadir/games/torcs
+}
+hook_add postinstall 5 torcs_pi

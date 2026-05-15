@@ -1,0 +1,25 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/qtile/qtile.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Hackable tiling window manager for X11 and Wayland
+
+[T] qtile is a full-featured, hackable tiling window manager written and
+[T] configured in Python (X11 + Wayland).
+
+[U] https://github.com/qtile/qtile
+
+[A] Aldo Cortesi
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/wayland extra/x11
+[F] CROSS
+
+[E] add python-cairocffi python-xcffib
+
+[L] MIT
+[V] 0.35.0
+
+[D] 4a47ee722c2f1d720e34f34fe02831a2377948bc9fdf308dfa3674f6 qtile-0.35.0.tar.gz https://files.pythonhosted.org/packages/source/q/qtile/

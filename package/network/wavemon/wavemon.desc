@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/wavemon/wavemon.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -14,19 +14,18 @@
 [T] notices the user of changes in signal level strength audibly and/or visually
 [T] full-screen level histogram displaying signal/noise levels and SNR - list of
 [T] access points in range - menu-based configuration from within the program
- 
+
 [U] http://www.wavemage.com/projects.html
 
 [A] Jan Morgenstern <jan@wavemage.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 0.9.6
+[V] 0.9.7
 
-[O] var_append makeinstopt ' ' 'bindir=$root$bindir mandir=$root$mandir'
+[D] bddb52e72c574d68b0028e4a39bdb08fd4e5818caf68e7a19763a0d7 wavemon-0.9.7.tar.gz https://github.com/uoaerg/wavemon/archive/v0.9.7/
 
-[D] 1a6142d6e79a4532e35468a2072a173dd22e2f456a41dc5f2e4b2873 wavemon-0.9.6.tar.gz https://github.com/uoaerg/wavemon/archive/v0.9.6/ 
+var_append makeinstopt ' ' 'bindir=$root$bindir mandir=$root$mandir'

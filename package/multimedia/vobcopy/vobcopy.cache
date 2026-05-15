@@ -1,18 +1,22 @@
+[TIMESTAMP] 1776788620 Tue Apr 21 18:23:40 2026
+[BUILDTIME] 6 (9)
+[SIZE] 0.21 MB, 16 files
 
-[TIMESTAMP] 1690851331 Tue Aug  1 02:55:31 2023
-[BUILDTIME] 1 (9)
-[SIZE] 0.08 MB, 9 files
-
-[DEP] 00-dirtree
+[DEP] autoconf
+[DEP] automake
 [DEP] bash
-[DEP] binutils
 [DEP] coreutils
 [DEP] diffutils
 [DEP] findutils
 [DEP] gawk
 [DEP] grep
+[DEP] gzip
 [DEP] libdvdread
+[DEP] libtool
 [DEP] linux-header
+[DEP] m4
 [DEP] make
+[DEP] perl
 [DEP] sed
 [DEP] tar
+[DEP] util-linux

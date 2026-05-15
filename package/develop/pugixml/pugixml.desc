@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/pugixml/pugixml.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Light-weight, simple and fast XML parser for C++ with XPath support
+
+[T] Light-weight, simple and fast XML parser for C++ with XPath support.
+
+[U] https://pugixml.org
+
+[A] Pugixml Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.15
+[L] MIT
+[P] X -----5---9 200.000
+
+[D] 57be2aae2f0777844e89375a19a89ac5bda00eff8042a6ec620d999e pugixml-1.15.tar.gz https://github.com/zeux/pugixml/releases/download/v1.15/

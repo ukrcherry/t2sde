@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/budgie-desktop-view/budgie-desktop-view.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,13 +11,11 @@
 [U] https://buddiesofbudgie.org/
 
 [A] Budgie Desktop Developers
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/desktop/gnome
 
 [L] APL
-[S] Stable
-[V] 1.3
-[P] X -----5---9 177.200
+[V] 10.10.2
 
-[D] 4ab2f5c332f27711154ab95162fd1f30beb33736b8cdd6a64b57af19 budgie-desktop-view-1.3.tar.gz https://github.com/BuddiesOfBudgie/budgie-desktop-view/archive/refs/tags/v1.3/
+[D] 81b7775ad2ebf7a923c27591d7014731c40bfd2934f0ac2048605965 budgie-desktop-view-10.10.2.tar.gz https://github.com/BuddiesOfBudgie/budgie-desktop-view/archive/refs/tags/v10.10.2/

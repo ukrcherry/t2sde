@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/ddclient/ddclient.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -13,14 +13,21 @@
 [U] https://ddclient.net/
 
 [A] Paul Burry
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network
 [F] CROSS
 
 [L] GPL
-[S] Stable
 [V] 4.0.0
-[P] X -----5---9 169.800
 
 [D] d4cc2152dbcb22d53c7662bd2630e119b3ad5cbc11a2476d3fdd425a ddclient-4.0.0.tar.gz https://github.com/ddclient/ddclient/archive/v4.0.0/
+
+runmake=0
+
+ddclient_install() {
+	cp -v ddclient $root$sbindir/
+	cp -v sample-etc_ddclient.conf $root$sysconfdir/ddclient.conf
+	cp -v sample-* $root$docdir
+}
+hook_add postmake 5 ddclient_install

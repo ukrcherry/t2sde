@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/okular/okular.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -14,19 +14,38 @@
 [U] https://apps.kde.org/okular/
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [E] opt cups
+[E] opt kdegraphics-mobipocket
+[E] opt qt6svg
 
 [L] GPL
-[S] Stable
-[V] 25.04.1
-[P] X -----5---9 500.000
-
-[O] . $base/package/*/*/kde-conf.in
-[O] hook_add postmake 5 "ln -sfv $libdir/plugins/okular_generators $root/$(pkgprefix qt6base)/plugins/"
+[V] 26.04.1
 
 [CV-GROUP] kde-gear
-[D] 1d7aa9ddf80ffb1241b7c547bd20138797d29086553a7001564b19c4 okular-25.04.1.tar.xz http://download.kde.org/stable/release-service/25.04.1/src/
+[D] 7348609920c5161fed54192349662811bae5b35f1b78f0e3ce24e363 okular-26.04.1.tar.xz https://download.kde.org/stable/release-service/26.04.1/src/
+
+. $base/package/*/*/kde-conf.in
+
+SKIP_DEPS=
+pkginstalled discount || var_append SKIP_DEPS ';' Discount
+pkginstalled djvulibre || var_append SKIP_DEPS ';' DjVuLibre
+pkginstalled kdoctools docbook-xml docbook-xsl || var_append SKIP_DEPS ';' KF6DocTools
+pkginstalled ebook-tools || var_append SKIP_DEPS ';' EPub
+pkginstalled kwallet || var_append SKIP_DEPS ';' KF6Wallet
+pkginstalled qt6declarative || var_append SKIP_DEPS ';' Qt6Qml
+pkginstalled purpose || var_append SKIP_DEPS ';' KF6Purpose
+pkginstalled qt6speech || var_append SKIP_DEPS ';' Qt6TextToSpeech
+pkginstalled phonon || var_append SKIP_DEPS ';' Phonon4Qt6
+pkginstalled poppler || var_append SKIP_DEPS ';' Poppler
+pkginstalled freetype || var_append SKIP_DEPS ';' Freetype
+pkginstalled libtiff || var_append SKIP_DEPS ';' TIFF
+pkginstalled libkexiv2 || var_append SKIP_DEPS ';' KExiv2Qt6
+
+var_append cmakeopt ' ' "-DFORCE_NOT_REQUIRED_DEPENDENCIES='$SKIP_DEPS'"
+
+[ "$SDECFG_LIBC" = musl ] && var_append GCC_WRAPPER_INSERT ' ' -D_GNU_SOURCE

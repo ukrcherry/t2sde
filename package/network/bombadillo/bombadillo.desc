@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/bombadillo/bombadillo.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Non-web browser for the terminal
+
+[T] Non-web (gopher, gemini, finger) browser for the terminal.
+
+[U] https://bombadillo.colorfield.space/
+
+[A] Bombadillo Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 2.4.0
+[L] GPL3
+
+[D] e8fd8959d90aefee904cfca6d6434478d5e2d0ea638b3f26c7be3731 bombadillo-2.4.0.tar.gz !https://tildegit.org/sloum/bombadillo/archive/2.4.0.tar.gz

@@ -1,18 +1,37 @@
+[TIMESTAMP] 1760525857 Wed Oct 15 12:57:37 2025
+[BUILDTIME] 50 (9)
+[SIZE] 1.45 MB, 67 files
 
-[TIMESTAMP] 1714258854 Sun Apr 28 01:00:54 2024
-[BUILDTIME] 1 (9) ERROR
-[SIZE] 0.01 MB, 6 files
-
-[DEP] 00-dirtree
 [DEP] bash
 [DEP] binutils
 [DEP] cmake
 [DEP] coreutils
 [DEP] diffutils
-[DEP] findutils
+[DEP] extra-cmake-modules
+[DEP] freetype
 [DEP] gawk
+[DEP] gettext
+[DEP] glib
 [DEP] grep
+[DEP] kconfig
+[DEP] kcoreaddons
+[DEP] kdbusaddons
+[DEP] ki18n
+[DEP] kio
+[DEP] kservice
+[DEP] kwidgetsaddons
+[DEP] libksysguard
+[DEP] libplasma
+[DEP] linux-header
 [DEP] make
+[DEP] networkmanager
+[DEP] networkmanager-qt
+[DEP] pkgconfig
+[DEP] plasma-activities
+[DEP] procps
+[DEP] qt6base
+[DEP] qt6declarative
 [DEP] sed
 [DEP] tar
+[DEP] vulkan-headers
 [DEP] xz

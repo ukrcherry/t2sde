@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/rtmidi/rtmidi.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] C++ classes that provide a common API for realtime MIDI input/output
+
+[T] C++ classes that provide a common API for realtime MIDI input/output.
+
+[U] https://github.com/thestk/rtmidi
+
+[A] Rtmidi Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[E] opt jack
+
+[V] 6.0.0
+[L] MIT
+
+[P] X -----5---9 700.000
+
+[D] 0150fba9da8b15ccd58bb2597d0dae50b2bb0a48dee787a3e3753907 rtmidi-6.0.0.tar.gz https://github.com/thestk/rtmidi/archive/refs/tags/6.0.0/

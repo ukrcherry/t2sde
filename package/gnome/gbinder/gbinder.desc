@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gbinder/gbinder.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,15 +14,14 @@
 [U] https://github.com/mer-hybris/libgbinder
 
 [A] Slava Monich <slava@monich.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [L] BSD
-[S] Stable
-[V] 1.1.42
+[V] 1.1.45
 [P] X -----5---9 120.000
 
-[O] hook_add postmake 5 "make install-dev"
+[D] 2e11c09015973c89eef28e75f46088d1b2ff5b2455c48400239b6899 libgbinder-1.1.45.tar.gz https://github.com/mer-hybris/libgbinder/archive/refs/tags/1.1.45/
 
-[D] bf053866f208e68addb4dbc81f12e5c2dd5f1df1bc1440fb751656c4 libgbinder-1.1.42.tar.gz https://github.com/mer-hybris/libgbinder/archive/refs/tags/1.1.42/
+hook_add postmake 5 "make install-dev"

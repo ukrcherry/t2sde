@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/idris/idris.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -22,10 +22,9 @@
 [C] base/development
 
 [L] BSD
-[S] Stable
-[V] 0.6.0
+[V] 1.3.4
 
-[O] var_append makeopt ' ' 'bootstrap SCHEME=scheme'
-[O] var_append makeinstopt ' ' PREFIX=$root/$prefix
+[D] b7850275bdd5b5a9b5b42518db232fcb6fd4dfecba3441fd0f01df11 idris-1.3.4.tar.gz https://github.com/idris-lang/Idris-dev/archive/refs/tags/v1.3.4/
 
-[D] 50ecb12c8432a329301524040d64a02be5726d0764c67303e951dc69 idris2-0.6.0.tgz https://www.idris-lang.org/idris2-src/
+var_append makeopt ' ' 'bootstrap SCHEME=scheme'
+var_append makeinstopt ' ' PREFIX=$root/$prefix

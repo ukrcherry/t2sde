@@ -1,18 +1,17 @@
-[TIMESTAMP] 1739220182 Mon Feb 10 21:43:02 2025
-[BUILDTIME] 150 (5)
-[SIZE] 27.39 MB, 912 files
+[TIMESTAMP] 1775039974 Wed Apr  1 12:39:34 2026
+[BUILDTIME] 90 (9)
+[SIZE] 19.58 MB, 1085 files
 
 [DEP] bash
 [DEP] binutils
-[DEP] cmake
 [DEP] coreutils
 [DEP] cython
 [DEP] diffutils
+[DEP] findutils
 [DEP] gawk
 [DEP] grep
 [DEP] gzip
 [DEP] linux-header
-[DEP] make
 [DEP] meson-python
 [DEP] ninja
 [DEP] openssl
@@ -20,5 +19,5 @@
 [DEP] python-gpep517
 [DEP] sed
 [DEP] tar
-[DEP] tbb
 [DEP] unwind
+[DEP] util-linux

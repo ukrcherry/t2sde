@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/nmap/nmap.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -22,18 +22,17 @@
 [U] http://www.insecure.org/nmap/
 
 [A] Fyodor <fyodor@dhp.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network extra/security
-[E] opt python setuptools
+[E] opt python setuptools python-build
 
 [L] GPL
-[S] Stable
-[V] 7.96
+[V] 7.99
 [P] X -----5---9 600.700
 
-[O] pkginstalled python || var_append confopt ' ' '--disable-python --without-ndiff'
-[O] var_append confopt ' ' --without-zenmap
-[O] var_append makeinstopt ' ' STRIP=
+[D] e881e4d1f247e6b49092f9d68c1a60ba465a175f7145d4bc43651e32 nmap-7.99.tar.bz2 https://nmap.org/dist/
 
-[D] 23010cab305db669282246650ddcb64a609aaf3e29fb96e5b1689c33 nmap-7.96.tar.bz2 https://nmap.org/dist/
+pkginstalled python || var_append confopt ' ' '--disable-python --without-ndiff'
+var_append confopt ' ' --without-zenmap
+var_append makeinstopt ' ' STRIP=

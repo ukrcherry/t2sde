@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/man-pages-posix/man-pages-posix.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -11,13 +11,12 @@
 [T] section 1 (with 1posix extension) of the on-line manual.
 
 [A] Andries E. Brouwer <aeb@cwi.nl>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/documentation
 [F] CROSS
 
 [L] OpenSource
-[S] Stable
 [V] 2017-a
 
 [D] 7f94b5c49c1bb8edad0c2e114886c0c06650f0af6666d0e9f80c44d8 man-pages-posix-2017-a.tar.xz https://mirrors.edge.kernel.org/pub/linux/docs/man-pages/man-pages-posix/

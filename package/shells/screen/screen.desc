@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/screen/screen.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -20,22 +20,16 @@
 [A] Oliver Laumann
 [A] Juergen Weigert <jnweiger@immd4.informatik.uni-erlangen.de>
 [A] Michael Schroeder <mlschroe@immd4.informatik.uni-erlangen.de>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/tool
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 5.0.0
-[P] X -----5---9 180.000
+[V] 5.0.1
 
-[O] autogen=1
-# This is a unnice workaround. The screen configure script should be
-# improved to check for check for shadow and pam later - and also
-# recognize the need of pam_misc ... - But I'm out of time ...
-[O] pkginstalled pam && var_append CC_WRAPPER_APPEND ' ' "-lpam -lpam_misc"
-[O] var_append confopt ' ' --with-sys-screenrc=/etc/screenrc
-[O] hook_add postmake 5 "cp -v $confdir/screenrc $root/etc/"
+[D] 40b190b90a74746bbf444039bfbc632ef7b14ee10e574620671db7be screen-5.0.1.tar.gz http://ftp.gnu.org/gnu/screen/
 
-[D] 4c7eac6b1ad6c6619fbb4a34c7bdb529ac7b806c562aaa4df47e1576 screen-5.0.0.tar.gz http://ftp.gnu.org/gnu/screen/
+pkginstalled pam && var_append CC_WRAPPER_APPEND ' ' "-lpam -lpam_misc"
+var_append confopt ' ' --with-sys-screenrc=/etc/screenrc
+hook_add postmake 5 "cp -v $confdir/screenrc $root/etc/"

@@ -1,0 +1,44 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/djbdns-tools/djbdns-tools.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Tools to complement djbdns
+
+[T] valtz: Simple validation tool, written in perl, for tinydns-data
+[T] zonefiles. Also able to filter file(s) from errors, not allowed
+[T] zones and not allowed record types.
+[T]
+[T] prettycache: program to visualize a dnscache dump. (requires a
+[T] patched dnscache)
+
+[U] https://x42.com/software/valtz/
+
+[A] Magnus Bodin <magnus@bodin.org>
+[A] Efgé <efge@free.fr>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+
+[L] OpenSource
+[V] 0.7
+
+[D] 3501367117 valtz-0.7.tgz https://x42.com/software/valtz/
+[D] 2849416643 prettycache.pl http://efge.free.fr/djbdns/
+
+[ "$prefix_auto" == 1 ] && prefix=opt/djbdns && set_confopt
+
+runmake=0
+
+djbdns_main() {
+	# valtz
+	tar $taropt `match_source_file -p valtz`
+	mkdir -p $docdir/valtz $sbindir
+	mv -v valtz*/valtz $sbindir
+	mv -v valtz*/* $docdir/valtz
+	
+	# prettycache
+	cp -v `match_source_file -p cache` $sbindir
+}
+hook_add postmake 5 djbdns_main

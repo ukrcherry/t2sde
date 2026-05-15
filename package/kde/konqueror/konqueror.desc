@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/konqueror/konqueror.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -13,21 +13,18 @@
 [U] https://apps.kde.org/konqueror/
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
-[E] opt kdoctools
-[E] opt docbook-xml
-[E] opt docbook-xsl
+[F] CROSS OBJDIR
+
+[E] opt kdoctools docbook-xml docbook-xsl
 
 [L] GPL
-[S] Stable
-[V] 25.04.1
-[P] X -----5---9 180.000
-
-[O] . $base/package/*/*/kde-conf.in
-
-[O] var_append cmakeopt ' ' -DQT_MAJOR_VERSION=6
+[V] 26.04.1
 
 [CV-GROUP] kde-gear
-[D] a5c16b6a173ef0ee8f08c73081174421c5cbd78ba1d04ddb5e0315cb konqueror-25.04.1.tar.xz https://download.kde.org/stable/release-service/25.04.1/src/
+[D] 78ed14fef0c65f8baa71b6d1031098ca099f69257192175af59896bb konqueror-26.04.1.tar.xz https://download.kde.org/stable/release-service/26.04.1/src/
+
+. $base/package/*/*/kde-conf.in
+var_append cmakeopt ' ' -DQT_MAJOR_VERSION=6

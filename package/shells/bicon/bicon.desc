@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/bicon/bicon.desc
-[COPY] Copyright (C) 2018 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2018 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,14 +13,13 @@
 
 [A] Behdad Esfahbod <bicon@behdad.org>
 [A] Muhammad A. Alkarouri <malkarouri@yahoo.co.uk>
-[M] dash <daniel.ashkenazi@gmail.com>
+[M] Daniel Ashkenazi <daniel.ashkenazi@gmail.com>
 
 [C] base/system
 
 [L] LGPL
-[S] Beta
-[V] 64ae10c
+[V] 0.5
 
-[O] autogen=1
+[D] 4e5e2f8a2af53d1c4fff370aa772e5ba5fd66c043023eb8d6e79a5c6 bicon-0.5.tar.gz https://github.com/behdad/bicon/archive/0.5/
 
-[D] a1f5393b1046aa9d6cf3b8e031803aef35bc8248547dabf05bbafe2d bicon-64ae10c.tar.gz git+https://github.com/behdad/bicon.git 64ae10c
+autogen=1

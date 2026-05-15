@@ -1,11 +1,10 @@
-[TIMESTAMP] 1745254733 Mon Apr 21 17:58:53 2025
-[BUILDTIME] 160 (9)
-[SIZE] 38.80 MB, 151 files
+[TIMESTAMP] 1769647587 Thu 29 Jan 2026 00:46:27 GMT
+[BUILDTIME] 700 (9)
+[SIZE] 80.03 MB, 257 files
 
 [DEP] alsa-lib
 [DEP] bash
 [DEP] binutils
-[DEP] clang
 [DEP] cmake
 [DEP] coreutils
 [DEP] curl
@@ -15,32 +14,38 @@
 [DEP] ffmpeg
 [DEP] freetype
 [DEP] gawk
-[DEP] git
 [DEP] grep
 [DEP] gzip
 [OPT] jack
+[DEP] kddockwidgets
 [OPT] libbacktrace
 [DEP] libjpeg
 [DEP] libpng
-[DEP] libsdl2
+[DEP] libsdl3
 [DEP] libwebp
 [DEP] libx11
+[DEP] libxcb
+[DEP] libxext
+[DEP] libxfixes
+[DEP] libxi
 [DEP] libxrandr
 [DEP] libxrender
 [DEP] linux-header
-[DEP] lld
-[DEP] llvm
 [DEP] lz4
 [DEP] make
 [DEP] pkgconfig
+[DEP] plutosvg
+[DEP] plutovg
 [DEP] pulseaudio
 [DEP] qt6base
+[DEP] qt6declarative
 [DEP] qt6tools
+[DEP] qt6translations
 [DEP] sed
 [DEP] shaderc
 [DEP] tar
-[DEP] tbb
 [DEP] udev
+[DEP] util-linux
 [DEP] vulkan-headers
 [OPT] wayland
 [DEP] xorgproto

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/collectd/collectd.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,14 +15,13 @@
 [U] https://collectd.org/
 
 [A] Florian Forster <flo@verplant.org>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network
 
 [L] GPL
-[S] Stable
 [V] 5.12.0
 
-[O] var_append confopt ' ' --without-java
+[D] 5da7d761ec7938eeae41a69e4ad11f115300767edec9ccba5c61ff27 collectd-5.12.0.tar.bz2 https://storage.googleapis.com/collectd-tarballs/
 
-[D] 5da7d761ec7938eeae41a69e4ad11f115300767edec9ccba5c61ff27 collectd-5.12.0.tar.bz2 http://collectd.org/files/
+var_append confopt ' ' --without-java

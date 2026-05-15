@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/ghex/ghex.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -9,7 +9,7 @@
 
 [T] GHex it the hex editor of the GNOME project.
 
-[U] http://pluton.ijs.si/~jaka/soft.html#GHEX
+[U] https://wiki.gnome.org/Apps/Ghex
 
 [A] Jaka Mocnik <jaka@gnu.org>
 [M] Juergen "George" Sawinski <jsaw@gmx.net>
@@ -17,11 +17,9 @@
 [C] extra/editor extra/development extra/desktop/gnome
 
 [L] GPL
-[S] Stable
-[V] 48.alpha
-[P] X -----5---9 161.800
-
-[O] . $base/package/*/*/gnome-conf.in
+[V] 50.1
 
 [CV-URL] https://download.gnome.org/sources/ghex/cache.json
-[D] 727f3cc55d70d8f5995a7cb8f401d483bd8eaa296362aff7d3927bf6 ghex-48.alpha.tar.xz https://download.gnome.org/sources/ghex/48/
+[D] dd41f5dd5c95ef5451b54d7a93f5c206f776dd08255d19c713113ced ghex-50.1.tar.xz https://download.gnome.org/sources/ghex/50/
+
+. $base/package/*/*/gnome-conf.in

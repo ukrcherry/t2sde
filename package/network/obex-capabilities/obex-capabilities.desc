@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/obex-capabilities/obex-capabilities.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Script to generate Bluetooth OBEX capabilities XML files at runtime
+
+[T] Script to generate Bluetooth OBEX capabilities XML files at runtime.
+
+[U] https://gitlab.com/postmarketOS/obex-capabilities
+
+[A] Obex-capabilities Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.2.1
+[L] GPL3
+
+[D] 8a8ce6aee54c8e0e3d0412dd1c4927059ad7d8c85467cadd253ebf0d obex-capabilities-0.2.1.tar.gz https://gitlab.com/postmarketos/obex-capabilities/-/archive/0.2.1/

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/open-isns/open-isns.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,14 +11,13 @@
 [U] https://github.com/open-iscsi/open-isns
 
 [A] Open-isns Authors
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/base
 [F] CROSS
 
 [V] 0.103
 [L] LGPL
-[S] Stable
 [P] X -----5---9 250.000
 
 [D] da98a785034b7f293b149840edf514334c35d94394e1ffbd2b7b1021 open-isns-0.103.tar.gz https://github.com/open-iscsi/open-isns/archive/v0.103/

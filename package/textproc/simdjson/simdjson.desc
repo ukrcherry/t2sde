@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/simdjson/simdjson.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -16,13 +16,13 @@
 [A] Daniel Lemire
 [A] Geoff Langdale
 [A] John Keiser
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/library
 [F] CROSS
 
 [L] APL
-[S] Stable
-[V] 3.12.3
+[V] 4.6.4
+[P] X -----5---9 199.60
 
-[D] 67b367d86c51f913c64ffc45f872d4a9671aa357cf100284037913ee simdjson-3.12.3.tar.gz https://github.com/simdjson/simdjson/archive/v3.12.3/
+[D] 10004c39a187276c5cb172e54896f652dd12c3f8e7e65348760003b9 simdjson-4.6.4.tar.gz https://github.com/simdjson/simdjson/archive/v4.6.4/

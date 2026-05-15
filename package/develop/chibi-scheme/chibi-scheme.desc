@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/chibi-scheme/chibi-scheme.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Minimal implementation of the R7RS scheme standard
+
+[T] Minimal implementation of the R7RS scheme standard.
+
+[U] https://github.com/ashinn/chibi-scheme
+
+[A] Chibi-scheme Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.12
+[L] BSD
+
+[D] 2f141d2de0ba5fa81a4607bd61189bbb38cf6b4e7bacd76ab658e0fe chibi-scheme-0.12.tar.gz https://github.com/ashinn/chibi-scheme/archive/0.12/

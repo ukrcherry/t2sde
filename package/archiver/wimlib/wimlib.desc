@@ -1,0 +1,33 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/wimlib/wimlib.desc
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] The open source Windows Imaging (WIM) library
+
+[T] Wimlib is an open source, cross-platform library for creating, extracting,
+[T] and modifying Windows Imaging (WIM) archives. WIM is a file archiving
+[T] format, somewhat comparable to ZIP (and many other file archiving formats);
+[T] but unlike ZIP, it allows storing various Windows-specific metadata, allows
+[T] storing multiple "images" in a single archive, automatically deduplicates
+[T] all file contents, and supports optional solid compression to get a better
+[T] compression ratio. wimlib and its command-line frontend wimlib-imagex
+[T] provide a free and cross-platform alternative to Microsoft's WIMGAPI,
+[T] ImageX, and DISM.
+
+[U] https://wimlib.net/
+
+[A] Eric Biggers
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/archive
+[F] CROSS
+
+[L] GPL3 LGPL3
+[V] 1.14.5
+
+[D] e9841daf1c0d2576cafec538861a126d2731bbeaead5e0fe2b42f3eb wimlib-1.14.5.tar.gz https://wimlib.net/downloads/
+
+pkginstalled fuse || var_append confopt ' ' --without-fuse
+pkginstalled ntfs-3g || var_append confopt ' ' --without-ntfs-3g

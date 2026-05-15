@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/corectrl/corectrl.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Control your hardware with application profiles
+
+[T] CoreCtrl is a Free and Open Source GNU/Linux application that allows you
+[T] to control with ease your computer hardware using application profiles.
+[T] It aims to be flexible, comfortable and accessible to regular users.
+
+[U] https://gitlab.com/corectrl/corectrl
+
+[A] Corectrl Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 1.5.2
+[L] GPL3
+
+[D] 25b5c8ef60a481c1d86ff9c54c105bc641e41b8feff1d9c2f2d33777 corectrl-v1.5.2.tar.gz https://gitlab.com/corectrl/corectrl/-/archive/v1.5.2/
+
+var_append cmakeopt ' ' -DBUILD_TESTING=OFF
+var_append GCC_WRAPPER_APPEND ' ' -L$root$(pkgprefix libdir glib)

@@ -1,0 +1,24 @@
+[TIMESTAMP] 1775584568 Tue Apr  7 19:56:08 2026
+[BUILDTIME] 55 (9)
+[SIZE] 6.36 MB, 135 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] cmake
+[DEP] coreutils
+[DEP] cython
+[DEP] diffutils
+[DEP] findutils
+[DEP] gawk
+[DEP] grep
+[DEP] gzip
+[DEP] linux-header
+[DEP] make
+[DEP] ninja
+[DEP] openssl
+[DEP] python
+[DEP] python-gpep517
+[DEP] scikit-build-core
+[DEP] sed
+[DEP] tar
+[DEP] util-linux

@@ -6,13 +6,13 @@
 [DEP] binutils
 [DEP] cmake
 [DEP] coreutils
-[DEP] cython
 [DEP] diffutils
 [DEP] gawk
 [DEP] grep
 [DEP] gzip
 [DEP] linux-header
 [DEP] ninja
+[DEP] openblas
 [DEP] openssl
 [DEP] pkgconfig
 [DEP] python
@@ -21,6 +21,6 @@
 [DEP] pyyaml
 [DEP] sed
 [DEP] setuptools
+[DEP] six
 [DEP] sysfiles
 [DEP] tar
-[DEP] tbb

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/swi-prolog/swi-prolog.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -19,13 +19,14 @@
 [U] https://www.swi-prolog.org/
 
 [A] Jan Wielemaker <jan@swi-prolog.org>
-[M] Lars Kuhtz <lars@exactcode.de>
+[M] Lars Kuhtz <lars@kuhtz.eu>
 
 [C] extra/development
-[F] NOPARALLEL AUTOMAKE-QUIRK CROSS
+[F] AUTOMAKE-QUIRK CROSS
+
+[E] opt openjdk
 
 [L] GPL
-[S] Stable
-[V] 9.2.9
+[V] 10.0.2
 
-[D] ab08e552578bafe836629df3679d19b189a21157ad36983ca744741a swipl-9.2.9.tar.gz https://www.swi-prolog.org/download/stable/src/
+[D] 146e6e8f234e290bc23bea4353280d4e234b3f0c4fbf4dd76439a265 swipl-10.0.2.tar.gz https://www.swi-prolog.org/download/stable/src/

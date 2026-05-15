@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/commons-logging/commons-logging.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,17 +15,16 @@
 [U] https://jakarta.apache.org/commons/logging/
 
 [A] Apache Jakarta Commons team
-[M] Minto van der Sluis <Minto@MultiMach.com>
+[M] Minto van der Sluis <minto@multimach.com>
 
 [C] extra/development
 
 [L] OpenSource
-[S] Alpha
-[V] 1.0.5-alpha1
+[V] 1.3.6
 
-[O] . $base/package/*/*/java-conf.in BUILD_TYPE=ANT
-[O] buildtarget="compile javadoc"
-[O] buildjardir=target
-[O] builddocdir=dist/docs
+[D] 0281a3fefe935f3ae7ed2533256a39147901a1de53876a0d37db1462 commons-logging-1.3.6-src.tar.gz https://dlcdn.apache.org//commons/logging/source/
 
-[D] dbf16de1f40cfc28c5f96f0f9af682b787ead2759111ebb92504e9cc commons-logging-1.0.5-alpha1-src.tar.gz http://cvs.apache.org/dist/jakarta/commons/logging/
+. $base/package/*/*/java-conf.in BUILD_TYPE=ANT
+buildtarget="compile javadoc"
+buildjardir=target
+builddocdir=dist/docs

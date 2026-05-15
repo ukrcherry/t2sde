@@ -1,0 +1,24 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/crystal-dock/crystal-dock.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] A cool dock for Linux desktop
+
+[T] A cool dock (desktop panel) for Linux desktop.
+
+[U] https://github.com/dangvd/crystal-dock
+
+[A] dangvd
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] GPL3
+[V] 2.16
+
+[D] 2f611de376eeab1d6adee8b7318e173125fc5f1c6a829b79d017704c crystal-dock-2.16.tar.gz https://github.com/dangvd/crystal-dock/archive/v2.16/
+
+srcdir=crystal-*/src

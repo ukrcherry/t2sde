@@ -1,12 +1,16 @@
-[TIMESTAMP] 1738850324 Thu Feb  6 14:58:44 2025
-[BUILDTIME] 4 (9)
-[SIZE] 1.11 MB, 73 files
+[TIMESTAMP] 1768844230 Mon Jan 19 18:37:10 2026
+[BUILDTIME] 10 (9)
+[SIZE] 2.11 MB, 104 files
 
 [DEP] bash
 [DEP] binutils
+[OPT] cairo
 [DEP] cmake
 [DEP] coreutils
+[OPT] cunit
 [DEP] diffutils
+[DEP] docutils
+[DEP] findutils
 [DEP] gawk
 [DEP] grep
 [DEP] libpciaccess
@@ -17,4 +21,5 @@
 [DEP] python
 [DEP] sed
 [DEP] tar
+[DEP] util-linux
 [DEP] xz

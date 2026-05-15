@@ -1,0 +1,28 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/pfetch/pfetch.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] A pretty system information tool written in POSIX sh
+
+[T] The goal of this project is to implement a simple system information tool
+[T] in POSIX sh using features built into the language itself (where possible).
+
+[U] https://github.com/Un1q32/pfetch
+
+[A] Dylan Araps
+[A] Joey Reinhart
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] MIT
+[V] 1.10.0
+
+[D] cc2696d4b9a71ea56bf8bab52bf61ccfa8d414d45f2942a466385f29 pfetch-1.10.0.tar.gz https://github.com/Un1q32/pfetch/archive//1.10.0/
+
+runmake=0
+hook_add postmake 5 'cp -vf pfetch $root$bindir/'
+hook_add postmake 5 'cp -vf pfetch.1 $root$mandir/man1/'

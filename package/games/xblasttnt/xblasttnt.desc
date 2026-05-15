@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xblasttnt/xblasttnt.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -18,16 +18,35 @@
 [U] http://www.xblast-center.com/
 
 [A] Oliver Vogel
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/game
 #[C] extra/game/arcade
 
 [L] GPL
-[S] Stable
 [V] 0.50
 
 [D] 884008459 xbtnt-unix.tar.gz http://xblast.host.sk/zips/
 [D] 2177691264 xbtnt-image-complete.tar.gz http://xblast.host.sk/zips/
 [D] 2212967838 xbtnt-sound-complete.tar.gz http://xblast.host.sk/zips/
 [D] 2350246093 xbtnt-level.tar.gz http://xblast.host.sk/zips/
+
+bindir="/$SDECFG_PKG_GAMES_BINDIR"
+datadir="/$SDECFG_PKG_GAMES_DATADIR/xblast"
+
+runxmkmf=1
+var_append makeopt ' ' "DESTDIR=$root BINDIR=$bindir XBLASTDIR=$datadir"
+var_append makeinstopt ' ' "$makeopt install"
+
+xblasttnt_premake() {
+   touch xblast.man
+}
+hook_add postmake 5 xblasttnt_postmake
+
+xblasttnt_postmake() {
+   mkdir -p $datadir; cd $datadir
+   for x in `match_source_file -p '\(complete\|level\)'`; do
+	tar -v $taropt $x
+   done
+}
+hook_add premake 5 xblasttnt_premake

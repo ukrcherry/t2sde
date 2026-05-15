@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libexif/libexif.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -15,7 +15,7 @@
 
 [A] Curtis Galloway <curtisg@users.sourceforge.net> {original author}
 [A] Lutz Müller <lutz@users.sourceforge.net>{rewrite from scratch}
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] CROSS
@@ -24,8 +24,7 @@
 [E] opt graphviz
 
 [L] GPL
-[S] Stable
-[V] 0.6.24
+[V] 0.6.26
 [P] X -----5---9 112.550
 
-[D] 2b8a92086b0bf754d1f893acee073dae7566a3bb86c5fd193bc72be9 libexif-0.6.24.tar.bz2 https://github.com/libexif/libexif/releases/download/v0.6.24/
+[D] 48ebd3864b63d96f95a6d13d9de970c5e4d8ac558a369237eeb4f17d libexif-0.6.26.tar.bz2 https://github.com/libexif/libexif/releases/download/v0.6.26/

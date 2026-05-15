@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/sigrok-cli/sigrok-cli.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,13 +12,12 @@
 [U] https://sigrok.org/wiki/Sigrok-cli
 
 [A] Bert Vermeulen <bert@biot.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [F] CROSS
 
 [L] GPL3
-[S] Beta
 [V] 0.7.2
 
 [D] 32398560ef353bbc299c68cbfac93c07aa13905172fde936b9bde1e4 sigrok-cli-0.7.2.tar.gz http://sigrok.org/download/source/sigrok-cli/

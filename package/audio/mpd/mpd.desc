@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/mpd/mpd.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -19,7 +19,7 @@
 [U] https://www.musicpd.org/
 
 [A] Warren Dukes <shank@mercury.chem.pitt.edu>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 
@@ -27,18 +27,19 @@
 [E] opt jack
 [E] opt libopus
 [E] opt libsndfile
+[E] opt libupnp
+[E] opt liburing
 [E] opt mpg123
 [E] opt pipewire
 [E] opt pulseaudio
-[E] del subversion
 [E] opt twolame
 [E] opt flac
 [E] opt lame
+[E] del subversion
 
 [L] GPL
-[S] Beta
-[V] 0.23.16
-[P] X -----5---9 197.400
+[V] 0.24.12
 
-[O] var_append mesonopt ' ' -Dmpcdec=disabled
-[D] eeeaa04e63e2e4a63dd2104775ef98a9fab3334bd6ce984e68bcb9de mpd-0.23.16.tar.xz https://www.musicpd.org/download/mpd/0.23/mpd-0.23.16.tar.xz
+[D] dd916c02525bfa467d11021e1e26d0b8525bfc9d33d85ce635b7ac56 mpd-0.24.12.tar.xz https://www.musicpd.org/download/mpd/0.24/mpd-0.24.12.tar.xz
+
+var_append mesonopt ' ' -Dmpcdec=disabled

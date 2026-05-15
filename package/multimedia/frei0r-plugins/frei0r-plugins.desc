@@ -1,0 +1,27 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/frei0r-plugins/frei0r-plugins.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A minimalistic plugin API for video sources and filters
+
+[T] Frei0r is free and open source plugin collection for video effects.
+[T] Applications can use its API to embed more than 100 video filters, sources
+[T] and mixers.
+
+[U] https://frei0r.dyne.org/
+
+[A] Frei0r-plugins Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[L] GPL
+[V] 2.5.6
+
+[D] 0543d572293391f0d5abea731576dca28333a093bb0440400394c7c5 frei0r-2.5.6.tar.gz https://github.com/dyne/frei0r/archive/v2.5.6/
+
+var_append cmakeopt ' ' -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+var_append GCC_WRAPPER_APPEND ' ' -I$root/usr/include/opencv4

@@ -1,0 +1,19 @@
+[TIMESTAMP] 1752421308 Sun Jul 13 17:41:48 2025
+[BUILDTIME] 3 (9)
+[SIZE] 0.14 MB, 7 files
+
+[DEP] autoconf
+[DEP] automake
+[DEP] bash
+[DEP] coreutils
+[DEP] diffutils
+[DEP] findutils
+[DEP] gawk
+[DEP] grep
+[DEP] libusb
+[DEP] linux-header
+[DEP] m4
+[DEP] make
+[DEP] perl
+[DEP] sed
+[DEP] unzip

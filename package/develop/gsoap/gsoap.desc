@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gsoap/gsoap.desc
-[COPY] Copyright (C) 2009 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2009 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -20,11 +20,13 @@
 [C] extra/development
 [F] NO-LTO.gcc
 
+[E] opt wolfssl
+[E] opt gnutls
+
 [L] GPL
-[S] Stable
-[V] 2.8.132
+[V] 2.8.141
+
+[D] af7ba203203822051be2db0f168b2810485f16442b0a47c017286469 gsoap_2.8.141.zip https://download.sourceforge.net/project/gsoap2/
 
 # -jn parallel build support
-[O] hook_add premake 5 'eval $MAKE -C gsoap/src $makeopt soapcpp2_yacc.h'
-
-[D] fe06f22603245e02b249146ce4fec8ecebd6e328d1112ccded25818d gsoap_2.8.132.zip http://dl.sourceforge.net/sourceforge/gsoap2/
+hook_add premake 5 'eval $MAKE -C gsoap/src $makeopt soapcpp2_yacc.h'

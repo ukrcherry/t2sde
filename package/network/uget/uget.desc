@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/uget/uget.desc
-[COPY] Copyright (C) 2014 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2014 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -16,15 +16,14 @@
 [U] https://ugetdm.com/
 
 [A] C.H. Huang <plushuang.tw@gmail.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network
 
 [L] GPL
-[S] Stable
-[V] 2.2.1
+[V] 2.2.3-1
 
-[O] pkginstalled libnotify || var_append confopt ' ' --disable-notify
-[O] var_append confopt ' ' '--without-gtk3 --disable-gstreamer'
+[D] 9998c693c2404245c345f052d6989a8d7978882eca862281b1865c61 uget-2.2.3-1.tar.gz https://download.sourceforge.net/urlget/
 
-[D] f7b4f2dbc0848c1cfa211e8996e773d025048ea359c8ab05300c98f3 uget-2.2.1.tar.gz http://dl.sourceforge.net/urlget/
+#pkginstalled libnotify || var_append confopt ' ' --disable-notify
+#var_append confopt ' ' '--without-gtk3 --disable-gstreamer'

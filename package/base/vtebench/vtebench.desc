@@ -1,0 +1,27 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/vtebench/vtebench.desc
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Terminal benchmarks
+
+[T] Generate benchmarks for terminal emulators. This benchmark is not
+[T] sufficient to get a general understanding of the performance of a terminal
+[T] emulator. It lacks support for critical factors like frame rate or latency.
+[T] The only factor this benchmark stresses is the speed at which a terminal
+[T] reads from the PTY.
+
+[U] https://github.com/alacritty/vtebench
+
+[A] Alacritty Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+
+[L] APL
+[V] 0.3.1 ead8003
+
+[D] 1889e6441b7582d60cfec293c5b868f21b33831354eac6cfe4d2c0ef vtebench-0.3.1-ead8003.tar.gz git+https://github.com/alacritty/vtebench.git ead8003
+
+hook_add postmake 5 "mkdir -p $root/opt/vtebench; cp -r {benchmarks,gnuplot,extra_benchmarks} $root/opt/vtebench"

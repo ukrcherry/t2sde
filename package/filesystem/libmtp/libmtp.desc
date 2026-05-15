@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libmtp/libmtp.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,7 +14,7 @@
 
 [A] Richard Low <richard@wentnet.com>
 [A] Linus Walleij <triad@df.lth.se>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] CROSS
@@ -22,8 +22,15 @@
 [E] opt doxygen
 
 [L] LGPL
-[S] Stable
-[V] 1.1.22
+[V] 1.1.23
 [P] X -----5---9 184.800
 
-[D] 092c52b6c8ef72f28a048af9ebeb8209b1f0e0aef066f7c19efff537 libmtp-1.1.22.tar.gz http://dl.sourceforge.net/sourceforge/libmtp/
+[D] 2c531a80edcf4e332b0340f614ff8d5dfc8877c7a4c40655db1e505f libmtp-1.1.23.tar.gz https://prdownloads.sourceforge.net/sourceforge/libmtp/
+
+libmtp_cross() {
+	patch -p1 < $confdir/cross.diff
+	cc -DHAVE_CONFIG_H -I. -Isrc -o mtp-hotplug util/mtp-hotplug.c
+	patch -p1 -R < $confdir/cross.diff
+}
+atstage cross && hook_add premake 5 libmtp_cross
+atstage cross && var_append makeopt ' ' MTP_HOTPLUG=./mtp-hotplug

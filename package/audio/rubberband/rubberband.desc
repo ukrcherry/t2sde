@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/rubberband/rubberband.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Library for audio time-stretching and pitch-shifting
+
+[T] Library for audio time-stretching and pitch-shifting.
+
+[U] https://www.breakfastquay.com/rubberband/
+
+[A] Rubberband Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[E] opt ladspa
+
+[V] 4.0.0
+[L] GPL
+[P] X -----5---9 300.000
+
+[D] 1dd9d94295d5ec43ef25ef1cf540512ae94c4abbbdc24e999c921bce rubberband-4.0.0.tar.bz2 https://breakfastquay.com/files/releases/

@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/gajim/gajim.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A full featured and easy to use XMPP client
+
+[T] A full featured and easy to use XMPP client.
+
+[U] https://gajim.org/
+
+[A] Gajim Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 2.4.6
+[L] GPL3
+
+[D] 74b6b8a17d9400ec781043587ed0b37d94fff90be34aa36f14645757 gajim-2.4.6.tar.gz https://gajim.org/downloads/2.4/

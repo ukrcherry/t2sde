@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/efl/efl.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -16,21 +16,46 @@
 [U] https://www.enlightenment.org/about-efl.md
 
 [A] Rasterman <raster@rasterman.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/desktop/enlightenment
 [C] extra/development
 
-[E] opt lua luajit
+[E] opt lua51 luajit
 [E] opt libheif
 [E] opt libwebp
 
 [L] GPL
-[S] Stable
-[V] 1.28.0
+[V] 1.28.1
 [P] X -----5---9 137.400
 
-[O] e17_from_release=1
-[O] . $base/package/*/*/e17-conf.in
+[D] c30651ecc87b45156341bcd71abff596d77eefce1454c385c66de094 efl-1.28.1.tar.xz https://download.enlightenment.org/rel/libs/efl/
 
-[D] e545175e5d6377a04e389d4947afa4a82b0f0c6d7646ee946e784e6d efl-1.28.0.tar.xz https://download.enlightenment.org/rel/libs/efl/
+e17_from_release=1
+. $base/package/*/*/e17-conf.in
+
+pkginstalled pulseaudio || var_append mesonopt ' ' -Dpulseaudio=false
+pkginstalled wayland && var_append mesonopt ' ' -Dwl=true
+pkginstalled libx11 || var_append mesonopt ' ' -Dx11=false
+
+pkginstalled mesa &&
+	var_append mesonopt ' ' -Dopengl=es-egl ||
+	var_append mesonopt ' ' -Dopengl=none
+
+pkginstalled libdrm && var_append mesonopt ' ' -Ddrm=true
+pkginstalled libsdl2 && var_append mesonopt ' ' -Dsdl=true
+pkginstalled directfb && var_append mesonopt ' ' -Dfb=true
+
+pkginstalled systemd || var_append mesonopt ' ' -Dsystemd=false
+
+var_append mesonopt ' ' -Dbindings=cxx
+var_append mesonopt ' ' -Dbuild-tests=false
+var_append mesonopt ' ' -Dbuild-examples=false
+pkginstalled luajit && var_append mesonopt ' ' -Dlua-interpreter=luajit
+
+var_append mesonopt ' ' -Devas-loaders-disabler='pdf,ps,raw,tiff,json,avif,jxl,jp2k'
+var_append mesonopt ' ' -Decore-imf-loaders-disabler=ibus,scim
+
+var_append GCC_WRAPPER_APPEND ' ' "-I$root`pkgprefix includedir xkbcommon`/ $(pkg-config --libs xcomposite xdamage xext xfixes xinerama xrandr xrender xtst xi)"
+
+var_append GCC_WRAPPER_APPEND ' ' -std=gnu17

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/dsniff/dsniff.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -22,16 +22,14 @@
 [U] https://monkey.org/~dugsong/dsniff/
 
 [A] Dug Song <dugsong@monkey.org>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/security
 
 [L] GPL
-[S] Beta
 [V] 2.4b1
-[P] O -----5---9 192.100
-
-[O] var_insert makeopt ' ' -i
 
 # [D] 2532404035 dsniff-2.3.tar.gz http://monkey.org/~dugsong/dsniff/
 [D] 2797187735 dsniff-2.4b1-sined-2.tar.bz2 http://www.groar.org/patch/
+
+var_insert makeopt ' ' -i

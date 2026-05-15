@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/ranger/ranger.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] VIM-inspired filemanager for the console
+
+[T] VIM-inspired filemanager for the console.
+
+[U] https://ranger.github.io/
+
+[A] Ranger Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.9.4
+[L] GPL3
+[P] X -----5---9 700.000
+
+[D] 8f6f764fee92c702a6f515eaeb6436e6bb4d0f05477497d641807a7a ranger-1.9.4.tar.gz https://github.com/ranger/ranger/archive/v1.9.4/

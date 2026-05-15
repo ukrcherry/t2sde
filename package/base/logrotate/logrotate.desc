@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/logrotate/logrotate.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Tool to rotate logfiles
+
+[T] Tool to rotate logfiles.
+
+[U] https://github.com/logrotate/logrotate
+
+[A] Logrotate Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 3.22.0
+[L] GPL
+
+[D] b326d8d794bd9985ddaa96a59d89d226b40442a3ede01edd42f351e1 logrotate-3.22.0.tar.xz https://github.com/logrotate/logrotate/releases/download/3.22.0/

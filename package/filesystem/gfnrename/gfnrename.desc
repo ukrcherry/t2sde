@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gfnrename/gfnrename.desc
-[COPY] Copyright (C) 2014 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2014 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,14 +14,13 @@
 [U] https://home.hccnet.nl/paul.schuurmans/
 
 [A] Paul Schuurmans
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [L] GPL
-[S] Stable
 [C] extra/filesystem
 
 [V] 0.6
 
-[O] autogen=1
-
 [D] f124679b94be2b1a78af7fdc92bf9fd53ebb3d8cd13c21b275fc0c2f gfnrename-0.6.tar.gz https://distro.ibiblio.org/easyos/source/oe/dunfell/gfnrename-0.6.tar.gz
+
+autogen=1

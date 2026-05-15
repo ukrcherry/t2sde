@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/freeradius-client/freeradius-client.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] FreeRADIUS Client Software
+
+[T] FreeRADIUS Client Software.
+
+[U] https://freeradius.org/sub_projects/
+
+[A] Freeradius-client Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.1.8
+[L] BSD
+[P] X -----5---9 700.000
+
+[CV-TR] s/\./_/g
+[D] 4a751bc4d189466f659ba7fffa860662802cc042f50b121b2bffb3b6 freeradius-client-1_1_8-release.tar.gz https://github.com/FreeRADIUS/freeradius-client/archive/release_1_1_8/

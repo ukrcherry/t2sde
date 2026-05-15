@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/evince/evince.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,20 +11,31 @@
 [T] multiple document viewers that exist on the GNOME Desktop, like ggv,
 [T] gpdf, and xpdf with a single simple application.
 
-[U] https://www.gnome.org/projects/evince/
+[U] https://wiki.gnome.org/Apps/Evince
 
 [A] Martin Kretzschmar <m_kretzschmar@gmx.net>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/desktop/gnome
+
+[E] add smartypants
 [E] opt graphviz
 
 [L] GPL
-[S] Beta
-[V] 48.0
-[P] X -----5---9 801.000
-
-[O] . $base/package/*/*/gnome-conf.in
+[V] 48.1
 
 [CV-URL] http://ftp.gnome.org/pub/gnome/sources/evince/cache.json
-[D] cad929c257e6f085bcde1d89740dc08f2245a772fabe9dd6ed43e9aa evince-48.0.tar.xz http://ftp.gnome.org/pub/gnome/sources/evince/48/
+[D] 23af7393f483c3ceee9576fe88117dd53832e74f0b6be76562f30ac3 evince-48.1.tar.xz http://ftp.gnome.org/pub/gnome/sources/evince/48/
+
+. $base/package/*/*/gnome-conf.in
+
+# without configure options it does not even try to build additional backends
+# but it will not fail if you miss a dep - so just append them all ...
+var_append confopt ' ' --enable-comics
+var_append confopt ' ' --enable-pixbuf
+var_append confopt ' ' --enable-impress
+var_append confopt ' ' --enable-djvu
+var_append confopt ' ' --enable-dvi
+var_append confopt ' ' --enable-t1lib
+var_append confopt ' ' --enable-nautilus
+var_append confopt ' ' --enable-gtk-doc

@@ -1,11 +1,11 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/kcoreaddons/kcoreaddons.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
-[I] KDE Frameworks 5 Tier 1 addon with various classes on top of QtCore
+[I] KDE Frameworks addon with various classes on top of QtCore
 
 [T] KCoreAddons provides classes built on top of QtCore to perform various
 [T] tasks such as manipulating mime types, autosaving files, creating backup
@@ -14,16 +14,16 @@
 [U] https://www.kde.org
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 6.14.0
-[P] X -----5---9 162.889
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 6.26.0
+[P] X ?----5---9 162.889
 
 [CV-GROUP] kde-frameworks
-[D] 327f090a2635d7094b0ab4df5b55306af780adc0758ce47de8f74aee kcoreaddons-6.14.0.tar.xz https://download.kde.org/stable/frameworks/6.14/
+[D] ce2d4740d08800f913b1b88c22f315162b89cff05cc3566aede8afad kcoreaddons-6.26.0.tar.xz https://download.kde.org/stable/frameworks/6.26/
+
+. $base/package/*/*/kde-conf.in

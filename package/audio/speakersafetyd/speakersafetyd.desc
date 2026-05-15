@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/speakersafetyd/speakersafetyd.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,16 +11,15 @@
 [U] https://github.com/AsahiLinux/speakersafetyd
 
 [A] The Asahi Linux Contributors
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/system
 [F] CROSS
 [R] + arm64
 
 [L] MIT
-[S] Beta
-[V] 0.1.9
+[V] 2.0.0
 
-[O] atstage native || export PKG_CONFIG_SYSROOT_DIR=$root
+[D] 8e32b62210e99ed305e27c893a246514f13bc0c161b5706872a3a6aa speakersafetyd-2.0.0.tar.gz https://github.com/AsahiLinux/speakersafetyd/archive/refs/tags/2.0.0/
 
-[D] 797adb3c58458e1b7b893e8fbb318b619fc2448ffe094dfd92a25d4d speakersafetyd-0.1.9.tar.gz https://github.com/AsahiLinux/speakersafetyd/archive/refs/tags/0.1.9/
+atstage native || export PKG_CONFIG_SYSROOT_DIR=$root

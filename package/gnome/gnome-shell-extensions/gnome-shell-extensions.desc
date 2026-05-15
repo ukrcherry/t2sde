@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gnome-shell-extensions/gnome-shell-extensions.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,17 +11,16 @@
 [U] https://www.gnome.org
 
 [A] The GNOME Project <gnome-devel-list@gnome.org>
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/shell extra/desktop/gnome
 [F] CROSS
 
 [L] LGPL
-[S] Stable
-[V] 48.0
+[V] 50.1
 [P] X -----5---9 177.200
 
-[O] . $base/package/*/*/gnome-conf.in
-
 [CV-URL] https://download.gnome.org/sources/gnome-shell-extensions/cache.json
-[D] 02bc64f15bc4c14eb57ef8e2b0b179822f7a0f0b225c9170f9922e01 gnome-shell-extensions-48.0.tar.xz https://download.gnome.org/sources/gnome-shell-extensions/48/
+[D] 44152c5e8d978cf95f0d18da5ff852ca317a5201c5d4255448a1c2a7 gnome-shell-extensions-50.1.tar.xz https://download.gnome.org/sources/gnome-shell-extensions/50/
+
+. $base/package/*/*/gnome-conf.in

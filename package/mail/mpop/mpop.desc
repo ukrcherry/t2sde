@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/mpop/mpop.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Retrieves mail from pop3 mailboxes
+
+[T] Retrieves mail from pop3 mailboxes.
+
+[U] https://marlam.de/mpop
+
+[A] Mpop Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 1.4.21
+[L] GPL3
+
+[D] 39884c93a1a0a89250e4aa1a523a74d712c44353e99d06c07976dcc7 mpop-1.4.21.tar.xz https://marlam.de/mpop/releases/

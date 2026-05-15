@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/wwwoffle/wwwoffle.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -23,15 +23,13 @@
 [U] http://www.gedanken.demon.co.uk/wwwoffle/
 
 [A] <amb@gedanken.demon.co.uk>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/server
 
 [L] GPL
-[S] Stable
 [V] 2.9j
-[P] X -----5---9 123.800
 
-[O] [ $prefix_auto = 1 ] && prefix="opt/wwwoffle" && set_confopt
+[ $prefix_auto = 1 ] && prefix="opt/wwwoffle" && set_confopt
 
 [D] b07560da8c85af6b50e25d76335a699f1b365edcf7020ffd2d65c416 wwwoffle-2.9j.tgz https://www.gedanken.org.uk/software/wwwoffle/download/

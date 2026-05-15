@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libmrss/libmrss.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -10,16 +10,17 @@
 [T] Site Summary, Really Simple Syndication, and RDF Site Summary) files
 [T] or streams.
 
-[U] https://autistici.org/bakunin/codes.php
+[U] https://github.com/bakulf/libmrss
 
 [A] Andrea Marchesini <bakunin@autistici.org>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/library
 [F] CROSS
 
 [L] LGPL
-[S] Beta
-[V] 0.19.2
+[V] 0.19.4
 
-[D] 4d29697b361031b967835f32a3dfca94b85c0880916a78fdddaca4eb libmrss-0.19.2.tar.gz http://autistici.org/bakunin/libmrss/
+[D] 106023e8765b7e8a9b692677ce172f59bc370ade2be60813ebdce4eb libmrss-0.19.4.tar.gz https://github.com/bakulf/libmrss/archive/0.19.4/
+
+autogen=1

@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/msgpuck/msgpuck.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A simple and efficient MsgPack binary serialization library
+
+[T] A simple and efficient MsgPack binary serialization library.
+
+[U] https://github.com/rtsisyk/msgpuck
+
+[A] Msgpuck Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[E] opt doxygen
+
+[L] BSD
+[V] 2.0
+
+[D] 3d8d518c2741ba9b17ca12ad404bf1463d4517662e49dea73b4d1003 msgpuck-2.0.tar.gz https://github.com/rtsisyk/msgpuck/archive/2.0/

@@ -1,0 +1,54 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/eaccelerator/eaccelerator.desc
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A PHP accelerator, optimizer, encoder and dynamic content cache
+
+[T] eAccelerator is a free open-source PHP accelerator, optimizer, encoder and
+[T] dynamic content cache. It increases the performance of PHP scripts by
+[T] caching them in their compiled state, so that the overhead of compiling is
+[T] almost completely eliminated. It also optimizes scripts to speed up their
+[T] execution. eAccelerator typically reduces server load and increases the
+[T] speed of your PHP code by 1-10 times.
+[T]
+[T] eAccelerator was born in December 2004 as a fork of the Turck MMCache
+[T] project. Turck MMCache was created by Dmitry Stogov and much of the
+[T] eAccelerator code is still based on his work.
+[T]
+[T] eAccelerator stores compiled PHP scripts in shared memory and executes code
+[T] directly from it. It creates locks only for a short time, while searching
+[T] for a compiled PHP script in the cache, so one script can be executed
+[T] simultaneously by several engines. Files that can't fit in shared memory
+[T] are cached on disk only.
+[T]
+[T] eAccelerator also contains a PHP encoder and loader. You can encode PHP
+[T] scripts using encoder.php in order to distribute them without sources.
+[T] Encoded files can be run on any site which runs PHP with eAccelerator.
+[T] The sources of encoded scripts can't be restored because they are stored
+[T] in a compiled form and the encoded version doesn't contain the source. Of
+[T] course, some internals of the scripts can be restored with different reverse
+[T] engineering tools (disassemblers, debuggers, etc.), but it is not trivial.
+
+[U] http://eaccelerator.net/
+
+[A] Dmitry Stogov {Turck MMCache author}
+[A] Shin Seung Woo <segv74@gmail.com>
+[A] Bart Vanbrabant <bart.vanbrabant@zoeloelip.be>
+[M] Vlad Glagolev <stelzy@gmail.com>
+
+[C] extra/tool
+
+[L] GPL
+[V] 0.9.6.1
+
+[D] 1e3031853618da595f05ad7eb2f03837274aaa34b61ac5c7ae976b27 eaccelerator-0.9.6.1.tar.bz2 https://prdownloads.sourceforge.net/sourceforge/eaccelerator/
+
+pkgprefix -t php
+prefix=$(pkgprefix php)
+set_confopt
+
+hook_add preconf 5 "$(pkgprefix bindir php)/phpize"
+
+var_append confopt ' ' --enable-eaccelerator=shared

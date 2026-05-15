@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/simple-scan/simple-scan.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,17 +11,15 @@
 [U] https://launchpad.net/simple-scan
 
 [A] Robert Ancell <robert.ancell@canonical.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office
 
 [E] opt libwebp
 
 [L] GPL3
-[S] Stable
-[V] 46.0
+[V] 50.0
 
-[O] . $base/package/*/*/gnome-conf.in
+[D] ca64f84c151d91fe8f2566628f07125097ba2dbd95846d569eab9703 simple-scan-50.0.tar.bz2 https://gitlab.gnome.org/GNOME/simple-scan/-/archive/50.0/
 
-[CV-URL] https://download.gnome.org/sources/simple-scan/cache.json
-[D] 2b2b8f287519894351ae8e2f61419a16384bb20e7e0fd3d30ca65d23 simple-scan-46.0.tar.xz https://download.gnome.org/sources/simple-scan/46/
+. $base/package/*/*/gnome-conf.in

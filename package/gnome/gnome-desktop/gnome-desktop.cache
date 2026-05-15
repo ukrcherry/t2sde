@@ -1,12 +1,11 @@
-[TIMESTAMP] 1745533245 Fri Apr 25 00:20:45 2025
-[BUILDTIME] 10 (9)
-[SIZE] 3.79 MB, 374 files
+[TIMESTAMP] 1765396085 Wed Dec 10 20:48:05 2025
+[BUILDTIME] 20 (9)
+[SIZE] 3.80 MB, 360 files
 
 [DEP] at-spi2-core
 [DEP] bash
 [DEP] binutils
 [DEP] cairo
-[DEP] cmake
 [DEP] coreutils
 [DEP] diffutils
 [DEP] gawk
@@ -21,18 +20,18 @@
 [DEP] harfbuzz
 [DEP] iso-codes
 [DEP] itstool
-[OPT] kdelibs
 [DEP] libseccomp
 [DEP] linux-header
 [DEP] meson
 [DEP] ninja
 [DEP] openssl
 [DEP] pango
-[DEP] pkgconfig
 [DEP] python
 [DEP] sed
 [DEP] setuptools
+[OPT] systemd
 [DEP] tar
+[DEP] udev
 [DEP] wayland
 [DEP] xkbcommon
 [DEP] xz

@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libfreeaptx/libfreeaptx.desc
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Free implementation of Audio Processing Technology codec (aptX)
+
+[T] Free implementation of Audio Processing Technology codec (aptX)
+
+[U] https://github.com/iamthehorker/libfreeaptx/
+
+[A] Aurelien Jacobs <aurel@gnuage.org>
+[A] Pali Rohár <pali.rohar@gmail.com>
+[A] Hunter Wardlaw <wardlawhunter@gmail.com>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] LGPL
+[V] 0.2.2
+[P] X -----5---9 179.500
+
+[D] faca44f182fbdff7d1379fda1e4b6c26c3c7d529c82ff87015c6f2a1 libfreeaptx-0.2.2.tar.gz https://github.com/iamthehorker/libfreeaptx/archive/0.2.2/

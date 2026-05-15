@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/webrtc-audio-processing/webrtc-audio-processing.desc
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] AudioProcessing module from the WebRTC project
+
+[T] This is meant to be a more Linux packaging friendly copy of
+[T] the AudioProcessing module from the WebRTC project.
+
+[U] https://freedesktop.org/software/pulseaudio/webrtc-audio-processing/
+
+[A] Google Inc.
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] OpenSource
+[V] 0.3.1
+
+[D] b96e12ae14f6d53a1a265a0ccf203a9a7ac5a6ba48efa7cd796dfee7 webrtc-audio-processing-v0.3.1.tar.gz https://gitlab.freedesktop.org/pulseaudio/webrtc-audio-processing/-/archive/v0.3.1/
+
+hook_add preconf 5 'autoreconf -vfi'

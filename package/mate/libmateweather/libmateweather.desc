@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libmateweather/libmateweather.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,15 +12,15 @@
 [U] https://mate-desktop.org/
 
 [A] MATE developer
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/desktop/mate
 
 [L] GPL
-[S] Stable
-[V] 1.28.0
+[V] 1.28.2
 [P] X -----5---9 179.300
 
-[O] . $base/package/*/*/mate-conf.in
+[D] 46c39c3d7a8c0711ee0f1e68f7a1ee6a1c7a3ee19646e681ceb85082 libmateweather-1.28.2.tar.gz https://github.com/mate-desktop/libmateweather/archive/v1.28.2/
 
-[D] d7c1a3bb48bc71095a2fa7ece8129d0dd2410fdbe79ebd7b26f3f081 libmateweather-1.28.0.tar.xz https://pub.mate-desktop.org/releases/1.28/
+. $base/package/*/*/mate-conf.in
+autogen=1

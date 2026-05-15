@@ -1,0 +1,24 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/tilde/tilde.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Terminal text editor
+
+[T] Tilde is a text editor for the console/terminal, which provides an
+[T] intuitive interface for people accustomed to GUI environments such as
+[T] Gnome, KDE and Windows.
+
+[U] https://os.ghalkes.nl/tilde/
+
+[A] G.P. Halkes
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/editor
+[F] CROSS
+
+[L] GPL3
+[V] 1.1.3
+
+[D] 773d084739b1e50dec526415e95c3feedefc09b7e6e9bb20ac787621 tilde-1.1.3.tar.bz2 https://os.ghalkes.nl/dist/

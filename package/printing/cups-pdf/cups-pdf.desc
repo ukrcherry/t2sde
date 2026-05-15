@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/cups-pdf/cups-pdf.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,14 +11,25 @@
 [U] https://www.cups-pdf.de/
 
 [A] Volker C. Behr <vrbehr@cip.physik.uni-wuerzburg.de>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/printing
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 3.0.2
+[V] 3.0.3
 [P] X -----5---9 122.900
 
-[D] 47423446679a169c897bddc741c286ac15bef0b4edcd7b014880c86d cups-pdf_3.0.2.tar.gz https://www.cups-pdf.de/src/
+[D] fcbfd9a6ac3568e36909ffe364cfc0a505b46000279427a2bb1e8538 cups-pdf_3.0.3.tar.gz https://www.cups-pdf.de/src/
+
+runmake=0
+hook_add inmake 5 "$CC -o cups-pdf src/cups-pdf.c"
+
+cups_pdf_install() {
+	mkdir -p $root$libdir/cups/backend
+	cp -fv cups-pdf $root$libdir/cups/backend/
+	cp -fv extra/cups-pdf.conf $root/etc/cups/
+	mkdir -p $root$datadir/cups/model
+	cp -fv extra/PostscriptColor.ppd* $root$datadir/cups/model/
+}
+hook_add postmake 5 cups_pdf_install

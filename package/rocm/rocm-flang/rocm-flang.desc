@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/rocm-flang/rocm-flang.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,17 +11,16 @@
 [U] https://github.com/ROCm/flang/
 
 [A] Advanced Micro Devices, Inc.
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [F] CROSS
 [C] extra/development
 
 [L] MIT
-[S] Stable
-[V] 6.4.0
+[V] 7.2.3
 [P] X -----5---9 300.570
 
-[O] . $base/package/*/*/rocm-conf.in
-
 [CV-GROUP] rocm
-[D] 67e4ba46e784dd36a20ca8a78efe2021247872def6a6306a2aff60b9 flang-rocm-6.4.0.tar.gz https://github.com/ROCm/flang/archive/rocm-6.4.0/
+[D] 55a074495ee3e8e10190a6a163ebe1b35473c260d558d5fbe97a4f5d flang-rocm-7.2.3.tar.gz https://github.com/ROCm/flang/archive/rocm-7.2.3/
+
+. $base/package/*/*/rocm-conf.in

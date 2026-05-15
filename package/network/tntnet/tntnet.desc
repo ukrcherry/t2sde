@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/tntnet/tntnet.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -18,12 +18,14 @@
 [U] http://www.tntnet.org/
 
 [A] Tommi Mäkitalo <tommi@tntnet.org>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network
 
 [L] GPL
-[S] Stable
-[V] 2.1
+[V] 3.0
 
-[D] 51b6b65d24f286239e5675a2d483a0131b5249b0b5dc9d2afb622734 tntnet-2.1.tar.gz http://www.tntnet.org/download/
+[D] e8f5c42d9d18d2cd40ac0a0d38e27b1cd880e9fcea9420822d427655 tntnet-3.0.tar.gz https://github.com/maekitalo/tntnet/archive/refs/tags/V3.0/
+
+hook_add preconf 5 'autoreconf -fi'
+var_append GCC_WRAPPER_APPEND ' ' -std=gnu++11

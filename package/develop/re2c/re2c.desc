@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/re2c/re2c.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,13 +15,12 @@
 [U] https://re2c.org/
 
 [A] Dan Nuffer <nuffer@users.sourceforge.net>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 [F] CROSS
 
 [L] MIT
-[S] Stable
-[V] 4.1
+[V] 4.5.1
 
-[D] d3c9378b6997d8af2b9e67e5fbb225e281c9dd029155efceffb00763 re2c-4.1.tar.gz https://github.com/skvadrik/re2c/archive/4.1/
+[D] 92d8e4340e27c67d8abadd6149ed9802fe85efef7472de913e6a2508 re2c-4.5.1.tar.gz https://github.com/skvadrik/re2c/archive/4.5.1/

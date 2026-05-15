@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/mesa/mesa.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -21,25 +21,172 @@
 [T] * OpenGL(R) is a registered trademark of Silicon Graphics, Inc.
 
 [A] Brian Paul <brian@mesa3d.org>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [U] https://www.mesa3d.org/
 
 [C] base/x11
 [F] CROSS NO-LTO LATOMIC.x86 LATOMIC.microblaze LATOMIC.sparc NO-SSP.powerpc NO-SSP.powerpc64
-[R] - sparc
 
+[E] add libarchive
+[E] add markupsafe
 [E] add mako
-[E] add pyyaml
 [E] add ply
+[E] add pycparser
+[E] add pygments
+[E] add pyyaml
 [E] opt lm_sensors
-[E] opt rustc clang cbindgen rust-bindgen
+[E] opt rustc cargo clang cbindgen rust-bindgen
+[E] opt libclc
 [E] opt libglvnd
 [E] opt opencl-loader
+# not sure why this run-time deps are not tracked during build:
+[E] opt libxml
 
 [L] OpenSource
-[S] Stable
-[V] 25.1.0
-[P] X -----5---9 127.445
+[V] 26.1.0
+[P] X ?----5---9 127.445
 
-[D] 65bc33ff520a0c3435545fe5dc5d98d5d8ffe69b3a1482d1a74702b9 mesa-25.1.0.tar.xz https://archive.mesa3d.org/
+[CV-FLAGS] NO-MAJOR
+[D] 536583ca87baf8e43c529a3c5a826d36974f1acd665e6ea4a114462f mesa-26.1.0.tar.xz https://archive.mesa3d.org/
+
+if atstage cross; then
+	# translate native llvm-config libraries to sysroot
+	var_append GCC_WRAPPER_FILTER '|' "sed 's,$root/TOOLCHAIN.*libLLVM\(.*\)\.[as].*,-lLLVM\1,'"
+	# remove native llvm-config include
+	var_append GCC_WRAPPER_REMOVE ' ' -I$root/TOOLCHAIN/cross/include
+	var_append GCC_WRAPPER_REMOVE ' ' -isystem$root/TOOLCHAIN/cross/include
+	var_append GCC_WRAPPER_REMOVE ' ' -L$root/TOOLCHAIN/cross/lib
+
+	var_append mesonopt ' ' -Dmesa-clc=system
+	var_append mesonopt ' ' -Dprecomp-compiler=system
+fi
+
+atstage toolchain &&
+	export RUSTC=/opt/rust/bin/rustc BINDGEN=/usr/bin/bindgen CBINDGEN=/usr/bincbindgen &&
+	export LDFLAGS="-Wl,-rpath,${root}${libdir}"
+
+# atomics crash on i486
+GCC_WRAPPER_INSERT="${GCC_WRAPPER_INSERT/i486/i586}"
+[ $arch_machine = powerpc ] && var_append GCC_WRAPPER_APPEND ' ' -mlongcall
+
+var_append GCC_WRAPPER_REMOVE ' ' '-Werror=int-conversion' # at least x32 :-/
+
+galdrv=
+vuldrv=
+platforms= # drm
+
+pkginstalled libx11 &&
+	var_append platforms ',' 'x11' &&
+	var_append GCC_WRAPPER_INSERT ' ' "-c?-I$root`pkgprefix includedir libx11`:-L$root`pkgprefix libdir libx11`"
+
+if pkginstalled libdrm && ! atstage toolchain; then
+    var_append mesonopt ' ' -Dgbm=enabled
+    var_append mesonopt ' ' '-Degl=enabled -Dglx=auto -Dlegacy-x11=dri2'
+    var_append mesonopt ' ' '-Dplatforms=$platforms -Dgles1=enabled -Dgles2=enabled'
+    var_append mesonopt ' ' '-Dvideo-codecs=h264dec,h264enc,h265dec,h265enc,vc1dec'
+    var_append galdrv ',' "softpipe,r600,virgl,zink"
+    pkginstalled cbindgen && var_append galdrv ',' nouveau
+    ! atstage toolchain && pkginstalled directx-headers && var_append galdrv ',' "d3d12" &&
+	var_append GCC_WRAPPER_APPEND ' ' -I$root$includedir/wsl/stubs
+    var_append galdrv ',' i915
+
+    case $arch in
+    alpha)
+	var_remove galdrv ',' i915
+	;;
+    sparc)
+	var_remove dridrv ',' "r100,r200,nouveau"
+	var_remove galdrv ',' "r600,nouveau"
+	;;
+    superh)
+	var_remove galdrv ',' "nouveau,r600"
+	;;
+    x86)
+	var_append galdrv ',' svga
+	;;
+    x86-64)
+	var_append galdrv ',' "svga,crocus"
+	;;
+    esac
+else
+    var_append mesonopt ' ' -Dglx=disabled
+fi
+
+
+if pkginstalled llvm; then
+    var_append mesonopt ' ' '-Dllvm=enabled -Dshared-llvm=enabled'
+
+    case $arch in
+	arm|arm64|powerpc64|riscv64|x86*)
+		# [ "$SDECFG_X8664_X32" != 1 ]
+		var_append galdrv ',' llvmpipe
+		var_append vuldrv ',' swrast
+		;;
+    esac
+
+    if pkginstalled libdrm; then
+	var_append galdrv ',' "iris,r300,radeonsi"
+	var_append vuldrv ',' "amd,virtio"
+	pkginstalled cbindgen && var_append vuldrv ',' nouveau
+	if atstage toolchain; then
+	    var_append mesonopt ' ' -Dgallium-rusticl=false # -Dgallium-rusticl-enable-drivers=[]
+	elif pkginstalled rustc; then
+	    var_append mesonopt ' ' -Dgallium-rusticl=true
+	    atstage native ||
+		var_append GCC_WRAPPER_FILTER '|' "sed s,$sysroot/TOOLCHAIN/cross/lib/libclang-cpp.so,-lclang-cpp,"
+	else
+	    var_append mesonopt ' ' -Dgallium-rusticl=false # -Dgallium-rusticl-enable-drivers=[]
+	fi
+	[ "$arch_sizeof_char_p" = 8 ] && var_append vuldrv ',' intel
+
+	case $arch in
+	sparc)
+		var_remove galdrv ',' "r300,radeonsi"
+		var_remove vuldrv ',' amd
+		var_remove vuldrv ',' nouveau
+		;;
+	arm|arm64)
+		var_append galdrv ',' "etnaviv,freedreno,lima,panfrost,v3d,vc4"
+		var_append vuldrv ',' "broadcom,freedreno,imagination,panfrost"
+		pkginstalled cbindgen && var_append galdrv ',' "tegra"
+
+		[[ $arch_machine = armv5* ]] && var_remove vuldrv ',' virtio
+		[[ $arch_machine = aarch* ]] && var_append galdrv ',' asahi
+		;;
+	alpha|ia64)
+		vuldrv=
+		;;
+	riscv*)
+		var_append vuldrv ',' imagination
+		;;
+	x86-64)
+		[ "$SDECFG_X8664_X32" = 1 ] &&
+			var_remove vuldrv ',' nouveau && var_remove galdrv ',' nouveau
+		;;
+	esac
+    fi
+else
+	var_append mesonopt ' ' -Dllvm=false
+fi
+
+pkginstalled vulkan-headers || var_remove galdrv ',' zink
+
+# TODO: find out where -lunwind is added in rustc or llvm/clang
+[ "$SDECFG_LIBC" = musl ] && hook_add inmake 5 "sed -i 's/-lunwind //g' objs/build.ninja"
+
+if atstage toolchain; then
+	galdrv= vuldrv=
+	var_append mesonopt ' ' -Dtools=asahi,etnaviv,freedreno,glsl,imagination,intel,lima
+	var_append mesonopt ' ' -Dinstall-mesa-clc=true
+	var_append mesonopt ' ' -Dinstall-precomp-compiler=true
+else
+	pkginstalled wayland && var_append platforms ',' wayland
+	pkginstalled libglvnd && var_append mesonopt ' ' -Dglvnd=enabled
+fi
+
+var_append mesonopt ' ' -Dvulkan-drivers=$vuldrv
+var_append mesonopt ' ' -Dgallium-drivers=$galdrv
+var_append mesonopt ' ' -Dshared-glapi=enabled
+
+[ $arch = powerpc ] && var_append GCC_WRAPPER_APPEND ' ' -mlongcall

@@ -1,7 +1,9 @@
-[TIMESTAMP] 1744892880 Thu Apr 17 14:28:00 2025
-[BUILDTIME] 2 (9)
-[SIZE] 0.24 MB, 21 files
+[TIMESTAMP] 1762362271 Wed Nov  5 18:04:31 2025
+[BUILDTIME] 6 (9)
+[SIZE] 0.17 MB, 15 files
 
+[DEP] autoconf
+[DEP] automake
 [DEP] bash
 [DEP] binutils
 [DEP] coreutils
@@ -10,9 +12,13 @@
 [DEP] gawk
 [DEP] glib
 [DEP] grep
-[DEP] libfm
+[DEP] gtk-doc
+[DEP] gzip
+[DEP] libfm-extra
+[DEP] libtool
 [DEP] linux-header
+[DEP] m4
 [DEP] make
+[DEP] perl
 [DEP] sed
 [DEP] tar
-[DEP] xz

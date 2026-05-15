@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/scapy/scapy.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Powerful interactive packet manipulation
+
+[T] Scapy is a powerful Python-based interactive packet manipulation program
+[T] and library. It is able to forge or decode packets of a wide number of
+[T] protocols, send them on the wire, capture them, store or read them using
+[T] pcap files, match requests and replies, and much more.
+
+[U] https://scapy.net/
+
+[A] Scapy Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/network
+[F] CROSS
+
+[L] GPL
+[V] 2.7.0
+
+[D] 59880992b2ae64099ae777ac5765b4631fcc8603bb61bf6237daef0a scapy-2.7.0.tar.gz https://github.com/secdev/scapy/archive/v2.7.0/

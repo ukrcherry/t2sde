@@ -1,58 +1,54 @@
-
-[TIMESTAMP] 1152283086 Fri Jul  7 14:38:06 2006
-[BUILDTIME] 65 (5)
-[SIZE] 3.37 MB, 123 files
+[TIMESTAMP] 1759857903 Tue Oct  7 19:25:03 2025
+[BUILDTIME] 55 (9)
+[SIZE] 4.98 MB, 190 files
 
 [DEP] 00-dirtree
 [DEP] alsa-lib
 [DEP] avahi
+[DEP] bash
 [DEP] binutils
-[DEP] blackdown-jdk
+[DEP] bison
 [DEP] boost
 [DEP] coreutils
 [DEP] curl
-[DEP] dbus
 [DEP] diffutils
+[DEP] faad
 [DEP] ffmpeg
-[DEP] findutils
+[DEP] fftw3
+[DEP] file
 [OPT] flac
-[DEP] freetype
-[DEP] gconf
+[DEP] flex
+[DEP] gawk
+[DEP] gettext
 [DEP] glib
-[DEP] gnome-vfs
-[DEP] gnue-common
 [DEP] grep
 [DEP] gzip
-[OPT] jack
+[DEP] jack
 [OPT] lame
-[DEP] libidn
+[DEP] libao
 [DEP] libmad
+[DEP] libmodplug
+[DEP] libmpcdec
 [DEP] libogg
-[DEP] libsdl
-[DEP] libsdl_ttf
+[DEP] libopus
+[DEP] libsamplerate
+[DEP] libshout
+[DEP] libsndfile
 [DEP] libvorbis
-[DEP] libx11
-[DEP] libxau
-[DEP] libxdmcp
-[DEP] libxext
+[DEP] libxml
 [DEP] linux-header
-[DEP] mdnsresponder
-[DEP] numpy
+[DEP] m4
+[DEP] mpg123
 [DEP] openssl
-[DEP] orbit2
-[DEP] pil
-[DEP] pkgconfig
-[DEP] pyrexc
+[DEP] opusfile
+[DEP] perl
+[DEP] pulseaudio
 [DEP] python
-[DEP] rat
+[DEP] readline
 [DEP] ruby
-[DEP] scons
 [DEP] sed
 [DEP] setuptools
+[DEP] speex
 [DEP] sqlite
-[DEP] swig
-[DEP] sysfiles
 [DEP] tar
-[DEP] wxpython
-[DEP] xvid
-[DEP] zlib
+[DEP] xz

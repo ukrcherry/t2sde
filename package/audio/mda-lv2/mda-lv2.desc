@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/mda-lv2/mda-lv2.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Port of the MDA VST plugins to LV2
+
+[T] Port of the MDA VST plugins to LV2.
+
+[U] https://gitlab.com/drobilla/mda-lv2
+
+[A] Mda-lv2 Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.2.10
+[L] GPL3
+
+[D] 347d5740fe0f405e5e54e48720784e07f200036ef745713933d53906 mda-lv2-1.2.10.tar.xz https://download.drobilla.net/

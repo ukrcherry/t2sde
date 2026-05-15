@@ -1,35 +1,59 @@
+[TIMESTAMP] 1770553640 Sun Feb  8 13:27:20 2026
+[BUILDTIME] 540 (9)
+[SIZE] 9.74 MB, 834 files
 
-[TIMESTAMP] 1714301067 Sun Apr 28 12:44:27 2024
-[BUILDTIME] 2 (9) ERROR
-[SIZE] 0.01 MB, 6 files
-
-[DEP] 00-dirtree
 [DEP] bash
 [DEP] binutils
 [DEP] cmake
 [DEP] coreutils
+[DEP] dbus
 [DEP] diffutils
-[DEP] findutils
-[DEP] gawk
-[DEP] grep
-[DEP] kcoreaddons
 [DEP] extra-cmake-modules
-[DEP] kirigami-addons
-[DEP] kpackage
+[DEP] freetype
+[DEP] gawk
+[DEP] gettext
+[DEP] grep
+[DEP] kbookmarks
+[DEP] kcolorscheme
+[DEP] kconfig
+[DEP] kcoreaddons
+[DEP] kcrash
+[DEP] kdbusaddons
+[DEP] kguiaddons
+[DEP] ki18n
+[DEP] kiconthemes
+[DEP] kio
+[DEP] kjobwidgets
+[DEP] knotifications
+[DEP] kpeople
+[DEP] kservice
+[DEP] kstatusnotifieritem
+[DEP] kwidgetsaddons
+[DEP] kwindowsystem
+[DEP] libfakekey
+[DEP] libx11
+[DEP] libxcb
+[DEP] libxi
+[DEP] libxtst
+[DEP] linux-header
 [DEP] make
-[DEP] qt63d
-[DEP] qt65compat
+[DEP] modemmanager
+[DEP] modemmanager-qt
+[DEP] openssl
+[DEP] pkgconfig
+[DEP] procps
+[DEP] pulseaudio-qt
 [DEP] qt6base
+[DEP] qt6connectivity
 [DEP] qt6declarative
 [DEP] qt6multimedia
-[DEP] qt6quick3d
-[DEP] qt6quick3dphysics
-[DEP] qt6quicktimeline
-[DEP] qt6speech
-[DEP] qt6virtualkeyboard
-[DEP] qt6webchannel
-[DEP] qt6webengine
 [DEP] sed
+[DEP] solid
 [DEP] tar
-[DEP] tbb
+[DEP] util-linux
+[DEP] vulkan-headers
+[DEP] wayland
+[DEP] wayland-protocols
+[DEP] xkbcommon
+[DEP] xorgproto
 [DEP] xz

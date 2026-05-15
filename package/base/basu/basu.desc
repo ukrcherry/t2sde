@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/basu/basu.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] The sd-bus library, extracted from systemd
+
+[T] The sd-bus library, extracted from systemd.
+
+[U] https://sr.ht/~emersion/basu/
+
+[A] Basu Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.2.1
+[L] LGPL
+[P] X -----5---9 200.000
+
+[D] d1d6f91cfcea8428928608ba8268905fbe840a0e1ffa62183f7714ee basu-0.2.1.tar.gz !https://git.sr.ht/~emersion/basu/archive/v0.2.1.tar.gz

@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/kmscube/kmscube.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] KMS 3D demo
+
+[T] Simple KMS/GBM/EGL example application.
+
+[A] Scott Moreau <oreaus@gmail.com>
+[M] René Rebe <rene@exactco.de>
+
+[U] https://www.mesa3d.org/
+
+[C] base/x11
+[F] CROSS
+
+[L] OpenSource
+[V] b2f97f53
+
+[D] 42321184b8f8619cd5b2da4d11d82d50173de3bdbf03cc4993698b2d kmscube-b2f97f53.tar.zst git+https://gitlab.freedesktop.org/mesa/kmscube b2f97f53
+
+. package/*/*/modular-x-conf.in

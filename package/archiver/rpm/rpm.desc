@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/rpm/rpm.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -12,16 +12,23 @@
 
 [A] Erik Troan <ewt@redhat.com>
 [A] Marc Ewing <marc@redhat.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/tool
-[F] FPIC
+[F] FPIC CROSS
 [E] opt doxygen
 [E] opt graphviz
 
 [L] GPL
-[S] Stable
-[V] 4.17.1.1
-[P] X -----5---9 138.600
+[V] 6.0.1
 
-[D] b9ccbaa1c61de552c1bb1123fd162cf6c980ad8c3bd60b366cc935b1 rpm-4.17.1.1.tar.bz2 https://ftp.osuosl.org/pub/rpm/releases/rpm-4.17.x/
+[D] 528cf206154c4c11db7e490eed63ba504778db5f815c885a0103dda7 rpm-6.0.1.tar.bz2 https://ftp.osuosl.org/pub/rpm/releases/rpm-6.0.x/
+
+pkginstalled python || var_append cmakeopt ' ' -DENABLE_PYTHON=OFF
+pkginstalled libselinux || var_append cmakeopt ' ' -DWITH_SELINUX=OFF
+pkginstalled rpm-sequoia || var_append cmakeopt ' ' -DWITH_SEQUOIA=OFF
+pkginstalled audit || var_append cmakeopt ' ' -DWITH_AUDIT=OFF
+pkginstalled acl || var_append cmakeopt ' ' -DWITH_ACL=OFF
+pkginstalled libcap || var_append cmakeopt ' ' -DWITH_CAP=OFF
+
+[ "$SDECFG_DEFAULT_CC" = clang ] && var_append GCC_WRAPPER_REMOVE ' ' -fhardened

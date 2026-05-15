@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gnuplot/gnuplot.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -18,7 +18,7 @@
 
 [A] Robert K. Cunningham, Jos van der Woude, Thomas Williams,
 [A] Colin Kelley, Gershon Elber, Nikos Drakos
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/scientific extra/office
 
@@ -27,10 +27,10 @@
 [E] opt qt6base qt65compat qt6svg qt6tools
 
 [L] OpenSource
-[S] Stable
-[V] 6.0.2
+[V] 6.0.4
 
-[O] var_append confopt ' ' '--with-readline=gnu --without-gd'
-[O] var_append GCC_WRAPPER_APPEND ' ' '-llua -lm'
+[D] 6538a2ba451979e2e93b0b82421884555f3d98c72b0f2f020bee891d gnuplot-6.0.4.tar.gz https://prdownloads.sourceforge.net/sourceforge/gnuplot/
 
-[D] 553ce4c4c91c5f02e2bbf053ab69b103d4b04faff05f019fcecf2afc gnuplot-6.0.2.tar.gz http://dl.sourceforge.net/sourceforge/gnuplot/
+var_append confopt ' ' '--with-readline=gnu --without-gd'
+var_append GCC_WRAPPER_APPEND ' ' '-llua -lm'
+var_append CC_WRAPPER_APPEND ' ' -std=c99

@@ -1,0 +1,27 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/zita-dpl1/zita-dpl1.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A look-ahead digital peak level limiter
+
+[T] Zita-dpl1 is a look-ahead digital peak level limiter using some special
+[T] algorithms to allow fast response without excessive LF distortion.
+
+[U] https://kokkinizita.linuxaudio.org/linuxaudio/
+
+[A] Kokkini Zita
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/multimedia
+[F] CROSS
+
+[L] GPL3
+[V] 0.3.3
+
+[D] 38262a17ab253e4593e5c83f43e0b2ca76c8c8f5f770ce395a342290 zita-dpl1-0.3.3.tar.bz2 https://kokkinizita.linuxaudio.org/linuxaudio/downloads/
+
+srcdir=*/source
+var_append GCC_WRAPPER_APPEND ' ' -I$root$includedir/freetype2
+var_append GCC_WRAPPER_APPEND ' ' -c?:-L$root$(pkgprefix libdir libxft)

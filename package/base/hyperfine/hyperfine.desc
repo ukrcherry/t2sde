@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/hyperfine/hyperfine.desc
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A command-line benchmarking tool
+
+[T] Hyperfine is a command-line benchmarking tool designed to measure and
+[T] compare the execution time of commands or programs with high precision. It
+[T] provides statistical analysis including mean time, standard deviation, and
+[T] outlier detection.
+
+[U] https://github.com/sharkdp/hyperfine
+
+[A] David Peter
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+
+[L] APL
+[V] 1.20.0
+
+[D] ed03d8e6fea8a6742d6f0300b32eff17017c70a1f62cfa6cbb7b2642 hyperfine-v1.20.0.tar.gz https://github.com/sharkdp/hyperfine/archive/v1.20.0/

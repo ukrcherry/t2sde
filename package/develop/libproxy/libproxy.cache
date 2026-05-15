@@ -1,6 +1,6 @@
-[TIMESTAMP] 1745934086 Tue Apr 29 16:41:26 2025
-[BUILDTIME] 3 (9)
-[SIZE] 1.32 MB, 78 files
+[TIMESTAMP] 1760306317 Sun Oct 12 23:58:37 2025
+[BUILDTIME] 6 (9)
+[SIZE] 1.31 MB, 77 files
 
 [DEP] bash
 [DEP] binutils
@@ -9,6 +9,7 @@
 [DEP] diffutils
 [DEP] duktape
 [DEP] gawk
+[OPT] gi-docgen
 [DEP] glib
 [OPT] gobject-introspection
 [DEP] grep

@@ -1,6 +1,6 @@
-[TIMESTAMP] 1743154082 Fri Mar 28 10:28:02 2025
-[BUILDTIME] 310 (9)
-[SIZE] 8.43 MB, 195 files
+[TIMESTAMP] 1760711668 Fri Oct 17 16:34:28 2025
+[BUILDTIME] 420 (9)
+[SIZE] 8.46 MB, 191 files
 
 [DEP] at-spi2-core
 [DEP] bash
@@ -21,12 +21,12 @@
 [DEP] glib
 [DEP] gobject-introspection
 [DEP] gperf
-[DEP] gpgme
+[OPT] gpgme
+[OPT] gpgmepp
 [DEP] grep
 [DEP] gtk+
 [DEP] harfbuzz
 [DEP] lcms2
-[DEP] libgpg-error
 [DEP] libjpeg
 [DEP] libpng
 [DEP] libtiff
@@ -42,7 +42,6 @@
 [DEP] sed
 [DEP] setuptools
 [DEP] tar
-[DEP] tbb
 [DEP] vulkan-headers
 [DEP] xz
 [DEP] zlib

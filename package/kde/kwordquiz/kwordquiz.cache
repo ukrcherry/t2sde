@@ -1,11 +1,12 @@
-[TIMESTAMP] 1745225125 Mon Apr 21 10:45:25 2025
-[BUILDTIME] 14 (9)
-[SIZE] 1.52 MB, 285 files
+[TIMESTAMP] 1770547643 Sun Feb  8 11:47:23 2026
+[BUILDTIME] 50 (9)
+[SIZE] 4.33 MB, 400 files
 
 [DEP] bash
 [DEP] binutils
 [DEP] cmake
 [DEP] coreutils
+[DEP] cups
 [DEP] diffutils
 [OPT] docbook-xml
 [OPT] docbook-xsl
@@ -24,12 +25,13 @@
 [DEP] libxml
 [DEP] linux-header
 [DEP] make
-[DEP] pkgconfig
 [DEP] procps
 [DEP] qt6base
 [DEP] qt6declarative
+[DEP] qt6multimedia
+[DEP] qt6svg
 [DEP] sed
 [DEP] tar
-[DEP] tbb
+[DEP] util-linux
 [DEP] vulkan-headers
 [DEP] xz

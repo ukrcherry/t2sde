@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libgedit-tepl/libgedit-tepl.desc
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A higher-level library for text editors built around GtkSourceView and Tepl
+
+[T] libgedit-tepl is a higher-level library that builds on top of GtkSourceView
+[T] and Tepl to ease the development of GNOME-style text editors such as gedit.
+
+[U] https://gitlab.gnome.org/World/gedit/libgedit-tepl
+
+[A] Sébastien Wilmet <swilmet@gnome.org>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/development extra/desktop/gnome
+[F] CROSS
+
+[L] LGPL
+[V] 6.14.0
+[P] X -----5---9 179.300
+
+[D] 3f482f473b699f13ed1e58cfb4b21129eff0765759d715e036dc3819 libgedit-tepl-6.14.0.tar.gz https://gitlab.gnome.org/World/gedit/libgedit-tepl/-/archive/6.14.0/
+
+. $base/package/*/*/gnome-conf.in

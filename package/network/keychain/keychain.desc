@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/keychain/keychain.desc
-[COPY] Copyright (C) 2010 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2010 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -19,16 +19,16 @@
 [U] https://www.funtoo.org/en/security/keychain/intro/
 
 [A] Gentoo developers
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 2.9.2
+[V] 2.9.8
 
-[O] makeinstopt=
-[O] hook_add postmake 5 "install keychain $root$bindir/"
-[O] hook_add postmake 5 "install keychain.1 $root$mandir/man1/"
-[D] 22f09d57137e1d7adbe231cbafa70903559bd6a27cf971e707ba4b44 keychain-2.9.2.tar.gz https://github.com/funtoo/keychain/archive/2.9.2/
+[D] c570519ee8e788a714a7fd5b286b683fe84b522227a62d12858c2531 keychain-2.9.8.tar.gz https://github.com/funtoo/keychain/archive/2.9.8/
+
+makeinstopt=
+hook_add postmake 5 "install keychain $root$bindir/"
+hook_add postmake 5 "install keychain.1 $root$mandir/man1/"

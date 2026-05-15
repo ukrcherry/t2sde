@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/sloccount/sloccount.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -17,15 +17,14 @@
 [U] https://www.dwheeler.com/sloccount/sloccount.html
 
 [A] David A. Wheeler <dwheeler@dwheeler.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [F] CROSS
 
 [L] GPL
-[S] Stable
 [V] 2.26
 
-[O] var_append makeinstopt ' ' "PREFIX=$root/$prefix DOC_DIR=$root$docdir"
-
 [D] 0dc2b533b6c2484cdb734709a3218f0b209041732ba488dd0f0c87f0 sloccount-2.26.tar.gz http://www.dwheeler.com/sloccount/
+
+var_append makeinstopt ' ' "PREFIX=$root/$prefix DOC_DIR=$root$docdir"

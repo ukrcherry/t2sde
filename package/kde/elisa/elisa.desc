@@ -1,28 +1,27 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/elisa/elisa.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
 [I] A simple music player aiming to provide a nice experience for its users
 
-[T] With Elisa, you can browse your local music collection by genre, artist, 
-[T] album, or track, listen to online radio, create and manage playlists, 
+[T] With Elisa, you can browse your local music collection by genre, artist,
+[T] album, or track, listen to online radio, create and manage playlists,
 [T] display lyrics, and more.
 
 [U] https://apps.kde.org/elisa/
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 25.04.1
-[P] X -----5---9 162.420
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 26.04.1
 
 [CV-GROUP] kde-gear
-[D] 49d042b2b8bcc7a73f4d2dd4f753fb6b9552580c2317ab34b98d6e07 elisa-25.04.1.tar.xz https://download.kde.org/stable/release-service/25.04.1/src/
+[D] 7dd0d6b0ebc2e6c19372fa74e99b0ec1044f96383228e2f0cdde7365 elisa-26.04.1.tar.xz https://download.kde.org/stable/release-service/26.04.1/src/
+
+. $base/package/*/*/kde-conf.in

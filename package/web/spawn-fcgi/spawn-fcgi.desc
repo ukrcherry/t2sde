@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/spawn-fcgi/spawn-fcgi.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Spawn FastCGI applications
+
+[T] Spawn FastCGI applications.
+
+[U] https://redmine.lighttpd.net/projects/spawn-fcgi/
+
+[A] Spawn-fcgi Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 1.6.6
+[L] BSD
+
+[D] 997c5723c3dbdf5cf3e0cad756ae744cd3e332d7f90b95e35225eb8c spawn-fcgi-1.6.6.tar.xz https://www.lighttpd.net/download/

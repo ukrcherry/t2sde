@@ -1,0 +1,30 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/midori/midori.desc
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A lightweight web browser based on webkit/gtk
+
+[T] Midori is a lightweight web browser.
+[T] * Full integration with GTK+2.
+[T] * Fast rendering with WebKit.
+[T] * Tabs, windows and session management.
+[T] * Bookmarks are stored with XBEL.
+[T] * Searchbox based on OpenSearch.
+[T] * Custom context menu actions.
+[T] * User scripts and user styles support.
+[T] * Extensible via Lua scripts.
+
+[U] https://astian.org/midori-browser/
+
+[A] Christian Dywan <christian@twotoasts.de>
+[M] Michael Tross <michael@tross.org>
+
+[C] extra/network
+[F] OBJDIR
+
+[L] LGPL
+[V] 12
+
+[D] 7fda5c43354e042354decb37ce01031a7abd42d22520ec9f532da8d3 midori-desktop-v12.tar.gz https://github.com/goastian/midori-desktop/archive/v12/

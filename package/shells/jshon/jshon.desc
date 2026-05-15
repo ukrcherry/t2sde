@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/jshon/jshon.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] SON parser designed for maximum convenience within the shell
+
+[T] SON parser designed for maximum convenience within the shell.
+
+[U] http://kmkeen.com/jshon/
+
+[A] Jshon Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 20131105
+[L] MIT
+
+[D] 5a8feeb96c94cc09aed1e4bc1542a8d6e3ea7353ba46e63e084093d2 jshon-20131105.tar.gz https://github.com/keenerd/jshon/archive/20131105/

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/thunar/thunar.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,16 +15,15 @@
 [U] https://docs.xfce.org/xfce/thunar/start
 
 [A] Benedikt Meurer <benny@xfce.org>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/desktop/xfce
 [F] CROSS NO-LTO.clang
 
 [L] GPL
-[S] Stable
-[V] 4.20.2
+[V] 4.20.8
 
-[O] . $base/package/xfce4/*/xfce4-conf.in
-[O] var_append GCC_WRAPPER_INSERT ' ' "-c?:-L`pkgprefix libdir libx11` -lX11 -lXrender"
+[D] 9dcb0358c02abd7f8db3a6cd53bd50949293c52f1c0d41adcdabe044 thunar-4.20.8.tar.bz2 https://archive.xfce.org/src/xfce/thunar/4.20/
 
-[D] 5aad7df8116ad16f4bfa27bba2a65932651f26d9ee7803e063956389 thunar-4.20.2.tar.bz2 https://archive.xfce.org/src/xfce/thunar/4.20/
+. $base/package/xfce4/*/xfce4-conf.in
+var_append GCC_WRAPPER_INSERT ' ' "-c?:-L`pkgprefix libdir libx11` -lX11 -lXrender"

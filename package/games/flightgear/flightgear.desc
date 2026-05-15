@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/flightgear/flightgear.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -23,7 +23,7 @@
 [U] https://flightgear.org/
 
 [A] Curt Olson <curt@me.umn.edu>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/game
 #[C] extra/game/simulation
@@ -31,7 +31,14 @@
 [E] opt speex
 
 [L] GPL
-[S] Stable
-[V] 2024.1.1
+[V] 2024.1.5
 
-[D] 2f7a00edf2ff06f7b3ceecd4d931d4efa8821e95fc0814035a1ed117 flightgear-v2024.1.1.tar.bz2 https://gitlab.com/flightgear/flightgear/-/archive/v2024.1.1/
+[D] 69c3ea798a253d6dcffb12660465c1c0979cd4a979178fa7087c2590 flightgear-v2024.1.5.tar.bz2 https://gitlab.com/flightgear/flightgear/-/archive/2024.1.5/
+
+bindir=$root/$SDECFG_PKG_GAMES_BINDIR
+datadir=$root/$SDECFG_PKG_GAMES_DATADIR
+
+var_append cmakeopt ' ' -DENABLE_QT=OFF
+
+var_append GCC_WRAPPER_INSERT ' ' "-I$root$(pkgprefix includedir glu)"
+var_append GCC_WRAPPER_INSERT ' ' "-L$root$(pkgprefix libdir glu)"

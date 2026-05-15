@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/mmarchitect/mmarchitect.desc
-[COPY] Copyright (C) 2014 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2014 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,12 +11,23 @@
 [U] https://mmarchitect.zeropage.cz/
 
 [A] Ondrej Tuma
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office
 
 [L] BSD
-[S] Stable
 [V] 0.5.0
 
-[D] 7b01bad12280cea55f50c2106f53019a42fb23aa857f63d2fc9848b6 mmarchitect-c-0.5.0.tar.bz2 http://dl.sourceforge.net/project/mmarchitect/c-source/
+[D] 7b01bad12280cea55f50c2106f53019a42fb23aa857f63d2fc9848b6 mmarchitect-c-0.5.0.tar.bz2 https://download.sourceforge.net/project/mmarchitect/c-source/
+
+runconf=0
+
+mma_pre_fix() {
+    sed -i -e 's%gee\-1\.0%gee-0.8%' Makefile
+    for MMAFILE in Makefile configure.mk '.build/app.c' 'src/config.vala' '.build/config.c' '.build/editform.c' '.build/main.c' '.build/mapwidgets.c' '.build/node.c' '.build/preferences.c' '.build/properties.c' '.build/welcometab.c'
+    do
+	sed -i -e 's%/usr/local%/usr%' ${MMAFILE}
+    done
+ 
+}
+hook_add premake 5 mma_pre_fix

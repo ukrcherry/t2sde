@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/rpki-client/rpki-client.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] RPKI validator to support BGP Origin Validation
+
+[T] RPKI validator to support BGP Origin Validation.
+
+[U] https://www.rpki-client.org/
+
+[A] Rpki-client Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 9.8
+[L] ISC
+
+[D] d798238f8348cbb9eaaca4cb75837674764d6ac3b58babbc1e1edef9 rpki-client-9.8.tar.gz https://cdn.openbsd.org/pub/OpenBSD/rpki-client/

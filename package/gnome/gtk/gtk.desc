@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gtk/gtk.desc
-[COPY] Copyright (C) 2013 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2013 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,20 +14,33 @@
 [U] https://www.gtk.org/
 
 [A] The GTK Team
-[M] Rene Rebe <rene@exactcode.de>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [F] CROSS
 
 [E] opt cups
-[E] opt librsvg gstreamer gst-plugins-base
+[E] opt gstreamer gst-plugins-base
+[E] opt gstreamer-vaapi
+[E] add gst-plugins-bad
 
 [L] LGPL
-[S] Stable
-[V] 4.18.5
+[V] 4.22.3
 [P] X -----5---9 201.000
 
-[O] . $base/package/*/*/gnome-conf.in
-
 [CV-FLAGS] ODD-UNSTABLE
-[D] af1c427a99f64f804a893d5eb419b44be7ed00e7f28459053fb4be6c gtk-4.18.5.tar.xz https://download.gnome.org/sources/gtk/4.18/
+[D] 6d4bd6536bc629083f11c1fe510cc3d60c91e24b5ec1ac9745592149 gtk-4.22.3.tar.xz https://download.gnome.org/sources/gtk/4.22/
+
+. $base/package/*/*/gnome-conf.in
+
+pkginstalled gst-plugins-bad || var_append mesonopt ' ' -Dmedia-gstreamer=disabled
+
+pkginstalled vulkan-headers || var_append mesonopt ' ' -Dvulkan=disabled
+
+var_append mesonopt ' ' '-Dbuild-tests=false -Dbuild-testsuite=false -Dbuild-examples=false'
+
+pkginstalled gobject-introspection &&
+	var_append mesonopt ' ' '-Dintrospection=enabled' ||
+	var_append mesonopt ' ' -Dintrospection=disabled
+
+hook_add prepatch 5 "rm -rf subprojects/*"

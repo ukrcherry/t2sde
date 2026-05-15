@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/python-libarchive/python-libarchive.desc
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A libarchive wrapper for Python supporting password protection
+
+[T] A complete wrapper for the libarchive library generated using SWIG. Also
+[T] included in the package are compatibility layers for the Python zipfile and
+[T] tarfile modules.
+
+[U] https://pypi.org/project/python-libarchive
+
+[A] Vadim Lebedev <tech@smartfile.com>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/development
+
+[L] BSD
+[V] 4.2.1
+[P] X -----5---9 138.600
+
+[D] 36d052ecdc40b17b4032ff73faf67fed3be3b4fdd470c92233cd3367 python-libarchive-4.2.1.tar.gz https://files.pythonhosted.org/packages/source/p/python-libarchive/

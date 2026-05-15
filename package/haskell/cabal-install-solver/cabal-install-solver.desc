@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/cabal-install-solver/cabal-install-solver.desc
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] The solver component of cabal-install
+
+[T] The solver component used in the cabal-install command-line program.
+
+[U] https://www.haskell.org/cabal/
+
+[A] Cabal Development Team <cabal-devel@haskell.org>
+[M] Riley Beckett <rbeckettvt@gmail.com>
+
+[C] extra/tool
+[F] CROSS
+
+[L] BSD
+[V] 3.16.1.0
+
+[D] acb2b3c6e39d877a8564bb6e93e562b852133cfd540d6accd3c1ca3a cabal-install-solver-3.16.1.0.tar.gz https://hackage.haskell.org/package/cabal-install-solver-3.16.1.0/
+
+. $base/package/*/*/haskell-conf.in

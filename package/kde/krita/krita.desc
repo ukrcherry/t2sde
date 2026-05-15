@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/krita/krita.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,15 +11,17 @@
 [U] https://krita.org/
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/graphic extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 5.2.9
-[P] X -----5---9 500.100
+[V] 6.0.1.1
 
-[O] . $base/package/*/*/kde-conf.in
+[D] 7148fbc4a3289ec7d269632d97aba3e3a5bafd931e4ddaa8f3954aa3 krita-6.0.1.1.tar.xz https://download.kde.org/stable/krita/6.0.1/
 
-[D] 4784fba3eb1990bf68336acad35c3142a6993d0d485c46fb8d211eb1 krita-5.2.9.tar.xz https://download.kde.org/stable/krita/5.2.9/
+. $base/package/*/*/kde-conf.in
+var_append cmakeopt ' ' -DBUILD_WITH_QT6=ON
+var_append cmakeopt ' ' -DKRITA_ENABLE_PCH=ON
+var_append CXX_WRAPPER_APPEND ' ' "-L$root$(pkgprefix libdir glib)"

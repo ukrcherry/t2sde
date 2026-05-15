@@ -1,14 +1,12 @@
+[TIMESTAMP] 1770548058 Sun Feb  8 11:54:18 2026
+[BUILDTIME] 190 (9)
+[SIZE] 12.26 MB, 364 files
 
-[TIMESTAMP] 1718821885 Wed Jun 19 20:31:25 2024
-[BUILDTIME] 130 (9)
-[SIZE] 12.07 MB, 360 files
-
-[DEP] 00-dirtree
 [DEP] bash
 [DEP] binutils
-[DEP] breeze-icons
 [DEP] cmake
 [DEP] coreutils
+[DEP] cups
 [DEP] diffutils
 [OPT] docbook-xml
 [OPT] docbook-xsl
@@ -23,7 +21,6 @@
 [DEP] kconfigwidgets
 [DEP] kcoreaddons
 [DEP] kcrash
-[DEP] kde-cli-tools
 [OPT] kdoctools
 [DEP] ki18n
 [DEP] kio
@@ -37,17 +34,15 @@
 [DEP] libxslt
 [DEP] linux-header
 [DEP] make
-[DEP] oxygen-icons
 [DEP] pkgconfig
 [DEP] procps
 [DEP] qt6base
-[DEP] qt6declarative
 [DEP] qt6multimedia
 [DEP] qt6svg
 [DEP] qt6webengine
 [DEP] sed
 [DEP] sonnet
 [DEP] tar
-[DEP] tbb
+[DEP] util-linux
 [DEP] vulkan-headers
 [DEP] xz

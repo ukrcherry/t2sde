@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/dnstop/dnstop.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A DNS traffic capture utility
+
+[T] A DNS traffic capture utility.
+
+[U] http://dns.measurement-factory.com/tools/dnstop/
+
+[A] Dnstop Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 20140915
+[L] BSD
+
+[D] a79dba77d159a689106aa90bbc180e37632bdff957d1ace07501e9c8 dnstop-20140915.tar.gz http://dns.measurement-factory.com/tools/dnstop/src/

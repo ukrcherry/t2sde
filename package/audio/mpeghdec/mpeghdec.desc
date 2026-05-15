@@ -1,0 +1,23 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/mpeghdec/mpeghdec.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] The Fraunhofer MPEG-H decoder
+
+[T] The Fraunhofer MPEG-H decoder (mpeghdec) is a C/C++ implementation of the
+[T] MPEG-H Audio standard as defined in ISO/IEC 23008-3:2022.
+
+[U] https://github.com/Fraunhofer-IIS/mpeghdec
+
+[A] Fraunhofer-IIS
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] OpenSource
+[V] 3.0.3
+
+[D] 164515d80b295102dc67912dd5a6e08084e9b8e62051b08525e8c401 mpeghdec-r3.0.3.tar.gz https://github.com/Fraunhofer-IIS/mpeghdec/archive/r3.0.3/

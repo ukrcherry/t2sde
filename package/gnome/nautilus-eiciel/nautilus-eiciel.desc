@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/nautilus-eiciel/nautilus-eiciel.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -8,18 +8,16 @@
 
 [T] Graphical editor of ACL entries for GNOME/Nautilus.
 
-[U] http://rofi.pinchito.com/eiciel
+[U] https://rofi.roger-ferrer.org/eiciel/
 
 [A] Roger Ferrer Ibanez <rofi@ya.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/shell extra/desktop/gnome
 
 [L] GPL
-[S] Beta
-[V] 0.9.6.1
+[V] 0.10.1
 
-[O] . $base/package/*/*/gnome-conf.in
+[D] 3591af18216c0b713cc45c178eee2a01ffd5f16099c4c353f31557d5 eiciel-0.10.1.tar.xz https://rofi.roger-ferrer.org/eiciel/files/
 
-[CV-URL] https://download.gnome.org/sources/nautilus-eiciel/cache.json
-[D] 23d5ae1b68f38b98f5b8962f5b3c41221867b2726c4fd65e6f0b6fbc eiciel-0.9.6.1.tar.bz2 http://rofi.pinchito.com/eiciel/download/
+. $base/package/*/*/gnome-conf.in

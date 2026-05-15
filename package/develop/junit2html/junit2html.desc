@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/junit2html/junit2html.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Simple self-contained python tool to produce a single html file from a single junit xml file
+
+[T] Simple self-contained python tool to produce a single html file from a single junit xml file.
+
+[U] https://gitlab.com/inorton/junit2html
+
+[A] Junit2html Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 31.0.5
+[L] MIT
+[P] X -----5---9 700.000
+
+[D] ab911889fb88c5cfeb4dd439aad966a191e6d95caea61b124849a9c5 junit2html-31.0.5.tar.gz !https://gitlab.com/inorton/junit2html/-/archive/v31.0.5/junit2html-v31.0.5.tar.gz

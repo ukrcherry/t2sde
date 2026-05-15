@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/ghc/ghc.desc
-[COPY] Copyright (C) 2009 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2009 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -17,15 +17,44 @@
 [U] https://www.haskell.org/
 
 [A] The University of Glasgow
-[M] Rene Rebe <rene@t2-project.org>
+[M] Riley Beckett <rbeckettvt@gmail.com>
 
 [C] base/development
 
 [L] BSD
-[S] Stable
-[V] 9.8.2
-[P] X -----5---9 500.000
+[V] 9.14.1
+[P] X -----5---9 400.000
 
-[O] var_append confopt ' ' --target=$arch_target
+[D] 54f897c63fd16ac9b4d2d1d1cef3c4cc089d332b73288d0cd005c210 ghc-9.14.1-src.tar.xz https://www.haskell.org/ghc/dist/9.14.1/
 
-[D] b472c42c3c4ac98120e12e171738880812f562c14cfa1fb3b6d5bda9 ghc-9.8.2-src.tar.lz http://www.haskell.org/ghc/dist/9.8.2/
+# this only needs to happen on bootstrap:
+# 	download ghc from here: https://downloads.haskell.org/~ghc/9.10.3/ghc-9.10.3-x86_64-alpine3_12-linux-static-int_native.tar.xz
+# 	export GHC=/path/to/ghc
+# 	download cabal from here: https://downloads.haskell.org/~cabal/cabal-install-3.16.0.0/
+# 	export CABAL=/path/to/cabal
+#	cabal update
+
+. $base/package/*/*/haskell-conf.in
+runsetuphs=0
+
+var_append confopt ' ' --target=$arch_target
+var_append confopt ' ' --enable-ignore-build-platform-mismatch
+export CABFLAGS=$(eval echo $setuphsopt)
+
+# ghc touches these files on install but does not do anything so just ignore them
+files=$(find $root/var/adm/flists/* -not -name '*ghc')
+packageconfd=$(grep "package.conf.d" $files | sed 's,^.*/\([^/]\.conf\)$,\1,')
+for x in $packageconfd; do
+	var_append flistrfilter '|' ".*:.*$x.*"
+	var_append flistdel '|' ".*$x.*"
+done
+
+build_ghc() {
+	./hadrian/build -j${SDECFG_PARALLEL}
+}
+hook_add inmake 5 build_ghc
+
+install_ghc() {
+	./hadrian/build install --docs=none --prefix=$root/$prefix
+}
+hook_add postmake 5 install_ghc

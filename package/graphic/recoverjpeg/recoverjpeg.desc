@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/recoverjpeg/recoverjpeg.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,13 +13,12 @@
 [U] https://www.rfc1149.net/devel/recoverjpeg
 
 [A] Samuel Tardieu <sam@rfc1149.net>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/graphic
 [F] CROSS
 
 [L] GPL
-[S] Stable
 [V] 2.6.3
 
 [D] 2151050c373644794bdc3feb99266025dbac9cdd04ad6689cdb2f824 recoverjpeg-2.6.3.tar.gz http://www.rfc1149.net/download/recoverjpeg/

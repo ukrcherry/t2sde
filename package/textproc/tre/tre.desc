@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/tre/tre.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -17,18 +17,17 @@
 [U] https://laurikari.net/tre/
 
 [A] Ville Laurikari <vlaurika@cs.hut.fi>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/library
 [F] CROSS
 
 [L] GPL
-[S] Beta
-[V] 0.8.0
+[V] 0.9.0
 [P] X -----5---9 196.000
 
-# always build the static flavour, as needed by tre
-[O] var_append confopt ' ' --enable-static
-[O] [ "$SDECFG_STATIC" != 1 ] && var_append confopt ' ' --enable-shared
+[D] 23706d91911cee8da6fe47f367cc258c99f612e4592a462c6f7d73eb tre-0.9.0.tar.gz https://github.com/laurikari/tre/releases/download/v0.9.0/
 
-[D] 8e6e9f4a1ab833585f816b559c8ae4836e7ba0c134dd2359f344d6b0 tre-0.8.0.tar.bz2 http://laurikari.net/tre/
+# always build the static flavour, as needed by tre
+var_append confopt ' ' --enable-static
+[ "$SDECFG_STATIC" != 1 ] && var_append confopt ' ' --enable-shared

@@ -1,0 +1,24 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/msedit/msedit.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] A simple editor for simple needs
+
+[T] This editor pays homage to the classic MS-DOS Editor, but with a modern
+[T] interface and input controls similar to VS Code. The goal is to provide an
+[T] accessible editor that even users largely unfamiliar with terminals can
+[T] easily use.
+
+[U] https://github.com/microsoft/edit
+
+[A] Microsoft Corporation
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/editor
+
+[L] MIT
+[V] 2.0.0
+
+[D] b282d0834f0c9227be5c4c41ef860a8ab79cbdf9087955bcbdb567ab edit-2.0.0.tar.gz https://github.com/microsoft/edit/archive/v2.0.0/

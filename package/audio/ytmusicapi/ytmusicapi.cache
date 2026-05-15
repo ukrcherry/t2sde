@@ -1,0 +1,19 @@
+[TIMESTAMP] 1770570315 Sun 08 Feb 2026 06:05:15 PM CET
+[BUILDTIME] 2 (9)
+[SIZE] 0.32 MB, 127 files
+
+[DEP] bash
+[DEP] coreutils
+[DEP] cython
+[DEP] diffutils
+[DEP] gawk
+[DEP] grep
+[DEP] gzip
+[DEP] openssl
+[DEP] python
+[DEP] python-gpep517
+[DEP] sed
+[DEP] setuptools
+[DEP] setuptools-scm
+[DEP] tar
+[DEP] util-linux

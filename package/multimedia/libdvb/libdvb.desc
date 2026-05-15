@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libdvb/libdvb.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -13,13 +13,12 @@
 [U] http://www.metzlerbros.org/dvb/index.html
 
 [A] Marcus & Ralph Metzler
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [F] CROSS NOPARALLEL
 [C] extra/multimedia
 
 [L] GPL
-[S] Beta
 [V] 0.5.5.1
 
 [D] 30777624a4f58f0693c2ee9fa6941b65fa77eb6df4d9e04219b3957b libdvb-0.5.5.1.tar.gz http://www.metzlerbros.org/dvb/

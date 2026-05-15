@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/noobaa-operator-cli/noobaa-operator-cli.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -19,12 +19,11 @@
 [F] CROSS
 
 [L] APL
-[S] Beta
-[V] 5.18.1
+[V] 5.21.0
 
-[O] rungo= makeinstopt=
+[D] 08991e4f346bffdc447c15df731a8de5ce958cb6ddfa54b9d40d713a noobaa-operator-cli-v5.21.0.tar.gz https://github.com/noobaa/noobaa-operator/archive/v5.21.0/
 
-[O] var_append makeopt ' ' cli
-[O] hook_add postmake 0 'install -Dm755 build/_output/bin/noobaa-operator-local $root$bindir/noobaa'
+rungo= makeinstopt=
 
-[D] 5168bcc9cef75ec08d22ddbf8f5c1e5124c9566d94488f4d863920b6 noobaa-operator-cli-v5.18.1.tar.gz https://github.com/noobaa/noobaa-operator/archive/v5.18.1/
+var_append makeopt ' ' cli
+hook_add postmake 0 'install -Dm755 build/_output/bin/noobaa-operator-local $root$bindir/noobaa'

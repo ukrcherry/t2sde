@@ -1,0 +1,25 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/papers/papers.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] GNOME document viewer
+
+[T] Papers is a document viewer capable of displaying multiple and single page
+[T] document formats like PDF and DejaVu.
+
+[U] https://welcome.gnome.org/app/Papers
+
+[A] The GNOME Project <gnome-devel-list@gnome.org>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/office
+[F] CROSS
+
+[L] GPL
+[V] 50.1
+
+[D] 8df3cc39dd3c4039125ee737d4fc41ff9583f6f88e75ffe978786232 papers-50.1.tar.gz https://gitlab.gnome.org/GNOME/Incubator/papers/-/archive/50.1/
+
+var_append mesonopt ' ' -Ddocumentation=false

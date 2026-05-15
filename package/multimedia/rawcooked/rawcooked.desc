@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/rawcooked/rawcooked.desc
-[COPY] Copyright (C) 2021 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2021 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -22,10 +22,9 @@
 [F] CROSS
 
 [L] BSD
-[S] Stable
-[V] 24.11
+[V] 25.12
 
-[O] autogen=1
-[O] srcdir=rawcooked/Project/GNU/CLI
+[D] 2aec3b8cee6726ad2a6b539f90e381322708b60f993025c67725a5c8 rawcooked_25.12.tar.xz https://mediaarea.net/download/source/rawcooked/25.12/
 
-[D] 87adb61a0a3282a0882a9fd515b866fd5ec1959c746684f13d38a105 rawcooked_24.11.tar.xz https://mediaarea.net/download/source/rawcooked/24.11/
+autogen=1
+srcdir=rawcooked/Project/GNU/CLI

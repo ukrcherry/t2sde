@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libnftnl/libnftnl.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,15 +11,14 @@
 [U] https://nftables.org/
 
 [A] Pablo Neira Ayuso
-[M] René Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [F] CROSS
 [K] + linux
 
 [L] LGPL
-[S] Stable
-[V] 1.2.9
+[V] 1.3.1
 [P] X -----5---9 189.800
 
-[D] b08be8bf87641867e54d020f11f5d3fdeb428c2a8cbabfc2d09df57e libnftnl-1.2.9.tar.xz https://netfilter.org/projects/libnftnl/files/
+[D] d776645d7e9263c3f2906cc511d6b9d7d769513c4a5d2e90129255b7 libnftnl-1.3.1.tar.xz https://netfilter.org/projects/libnftnl/files/

@@ -1,6 +1,6 @@
-[TIMESTAMP] 1740439638 Tue Feb 25 00:27:18 2025
-[BUILDTIME] 4450 (9)
-[SIZE] 164.04 MB, 742 files
+[TIMESTAMP] 1774030752 Fri Mar 20 19:19:12 2026
+[BUILDTIME] 7100 (9)
+[SIZE] 193.17 MB, 1019 files
 
 [DEP] abseil-cpp
 [DEP] at-spi2-core
@@ -18,6 +18,7 @@
 [DEP] freetype
 [DEP] gawk
 [DEP] gdk-pixbuf
+[DEP] git
 [DEP] glib
 [DEP] glm
 [DEP] glu
@@ -28,6 +29,7 @@
 [DEP] libgit2
 [DEP] libglvnd
 [DEP] libsecret
+[OPT] libspnav
 [DEP] libx11
 [DEP] linux-header
 [DEP] make
@@ -37,13 +39,14 @@
 [DEP] pango
 [DEP] pixman
 [DEP] pkgconfig
+[OPT] poppler
 [DEP] protobuf
 [DEP] python
 [DEP] sed
 [DEP] swig
 [DEP] tar
-[DEP] tbb
 [DEP] unixodbc
+[DEP] util-linux
 [DEP] wayland
 [DEP] wxwidgets
 [DEP] xorgproto

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/easytag/easytag.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -14,7 +14,7 @@
 [U] https://easytag.sourceforge.net/
 
 [A] Jérôme Couderc <j.couderc@ifrance.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] CROSS
@@ -24,10 +24,9 @@
 [E] opt docbook-xml docbook-xsl libxslt
 
 [L] GPL
-[S] Stable
 [V] 2.4.3
 
-[O] var_append confopt ' ' --disable-mp4
-[O] var_append GCC_WRAPPER_APPEND ' ' -std=gnu17
-
 [D] 302f04e11712946d1ac1e60905a2faac79154336fe22c33edf080bff easytag-2.4.3.tar.xz https://download.gnome.org/sources/easytag/2.4/
+
+var_append confopt ' ' --disable-mp4
+var_append GCC_WRAPPER_APPEND ' ' -std=gnu17

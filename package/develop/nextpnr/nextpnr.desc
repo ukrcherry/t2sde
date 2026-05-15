@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/nextpnr/nextpnr.desc
-[COPY] Copyright (C) 2018 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2018 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,17 +12,17 @@
 [U] https://github.com/YosysHQ/nextpnr
 
 [A] Claire Xenia Wolf <claire@clairexen.net>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [F] OBJDIR
 
 [L] ISC
-[S] Stable
-[V] 0.8
+[V] 0.10
 
-[O] var_append cmakeopt ' ' '-DARCH=all' # stable - generic,ecp5,ice40
-#[O] var_append cmakeopt ' ' -DICEBOX_ROOT=/usr/share/icebox
-#[O] var_append cmakeopt ' ' '-DTRELLIS_ROOT=/usr/share/trellis -DTRELLIS_LIBDIR=$libdir/trellis'
+[D] b72b4bd389a2a63f5195d8f8eae2a793f9507c5c82ddd89f8bec86b4 nextpnr-0.10.tar.gz https://github.com/YosysHQ/nextpnr/archive/refs/tags/
 
-[D] e2f45670cb2f5427ee5da7d840c8be14bfed69e6348027937d5313cc nextpnr-0.8.tar.gz https://github.com/YosysHQ/nextpnr/archive/refs/tags/
+var_append cmakeopt ' ' -DARCH=all # stable - generic,ecp5,ice40
+var_append cmakeopt ' ' -DBUILD_TESTS=OFF
+#var_append cmakeopt ' ' -DICEBOX_ROOT=/usr/share/icebox
+#var_append cmakeopt ' ' '-DTRELLIS_ROOT=/usr/share/trellis -DTRELLIS_LIBDIR=$libdir/trellis'

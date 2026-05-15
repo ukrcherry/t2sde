@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/pdi2iso/pdi2iso.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -18,10 +18,9 @@
 [F] CROSS
 
 [L] GPL
-[S] Stable
 [V] 0.1
 
-[O] makeinstopt="all"
-[O] hook_add postmake 4 'cp -vf pdi2iso $root$bindir'
+[D] 541f7dffc606014812609a18592f4652a3aaa9643380db207cb43f99 pdi2iso-0.1-src.tar.bz2 https://download.sourceforge.net/project/pdi2iso.berlios/
 
-[D] 541f7dffc606014812609a18592f4652a3aaa9643380db207cb43f99 pdi2iso-0.1-src.tar.bz2 http://dl.sourceforge.net/sourceforge/pdi2iso.berlios/
+makeinstopt="all"
+hook_add postmake 4 'cp -vf pdi2iso $root$bindir'

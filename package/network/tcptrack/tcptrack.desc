@@ -1,0 +1,24 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/tcptrack/tcptrack.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] A sniffer which displays information about TCP connections
+
+[T] tcptrack is a sniffer which displays information about TCP connections it
+[T] sees on a network interface.
+
+[U] https://github.com/bchretien/tcptrack
+
+[A] bchretien
+[A] Steve Benson
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] LGPL
+[V] 1.4.3
+
+[D] 73f62a421820d855891df97a9446e5b6dda8c5b736192e5f6f18c30c tcptrack-1.4.3.tar.gz https://github.com/bchretien/tcptrack/archive/v1.4.3/

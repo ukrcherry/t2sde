@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/metasploit/metasploit.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,13 +12,21 @@
 [U] https://metasploit.org/projects/Framework/
 
 [A] Metasploit Project <msfdev@metasploit.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 [F] CROSS
 
 [L] Artistic
-[S] Stable
-[V] 6.3.19
+[V] 6.4.133
 
-[D] 11646764bbcb28293c68b61070d055b2f878c92ab89ce89c197fcfdb framework-6.3.19.tar.gz https://github.com/rapid7/metasploit-framework/archive/6.3.19/
+[D] 9df96a8effca8ae4d4b8136bb23e310437beb4c41bd0b4ff54ba0031 framework-6.4.133.tar.gz https://github.com/rapid7/metasploit-framework/archive/6.4.133/
+
+[ $prefix_auto = 1 ] && prefix="opt/metasploit" && set_confopt
+runmake=0
+
+install_msf() {
+	mkdir -pv $root/$prefix
+	cp -av $builddir/$xsrcdir/* $root/$prefix/
+}
+hook_add postmake 5 install_msf

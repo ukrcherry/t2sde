@@ -1,23 +1,22 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/hyprlock/hyprlock.desc
-[COPY] Copyright (C) 2023 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2023 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
 [I] Hyprland's GPU-accelerated screen locking utility
 
-[T] Hyprland's GPU-accelerated screen locking utility
+[T] Hyprland's GPU-accelerated screen locking utility.
 
 [U] https://hyprland.org/
 
 [A] vaxerski
-[M] The T2 Project <t2@t2sde.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/x11
 [F] CROSS OBJDIR
 
 [L] BSD
-[S] Beta
-[V] 0.8.2
+[V] 0.9.5
 
-[D] 0120638e74ba1c01bebe2778100b2b8d257d838c6cccc308c5515eca hyperlock-v0.8.2.tar.gz !https://github.com/hyprwm/hyprlock/archive/refs/tags/v0.8.2.tar.gz
+[D] 72a0523914c94e7b32a6c688c459694120effc5a45ad723dd74fbd11 hyprlock-v0.9.5.tar.gz https://github.com/hyprwm/hyprlock/archive/v0.9.5/

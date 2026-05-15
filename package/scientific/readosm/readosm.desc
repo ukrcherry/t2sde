@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/readosm/readosm.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Library to extract valid data from an Open Street Map input file
+
+[T] Library to extract valid data from an Open Street Map input file.
+
+[U] https://www.gaia-gis.it/fossil/readosm/index
+
+[A] Readosm Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.1.0a
+[L] MPL GPL LGPL
+
+[D] be1b24aa17903a0cb78d54eec44d52cc3aaff54d9faf6bbb6186c612 readosm-1.1.0a.tar.gz https://www.gaia-gis.it/gaia-sins/readosm-sources/

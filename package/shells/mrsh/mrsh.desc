@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/mrsh/mrsh.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,13 +12,12 @@
 [U] https://github.com/emersion/mrsh
 
 [A] Mrsh Authors
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/base
 [F] CROSS
 
 [V] 0_git20210518
 [L] MIT
-[S] Stable
 
 [D] 410c88bc0079933feab293cad903c3f6e449613c1b563991f7a71ac1 mrsh-cd3c3a48055ab4085d83f149ff4b4feba40b40cb.tar.gz https://github.com/emersion/mrsh/archive/cd3c3a48055ab4085d83f149ff4b4feba40b40cb/

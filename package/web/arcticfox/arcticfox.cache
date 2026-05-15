@@ -1,0 +1,51 @@
+[TIMESTAMP] 1744892020 Thu Apr 17 14:13:40 2025
+[BUILDTIME] 1700 (9)
+[SIZE] 257.41 MB, 6197 files
+
+[OPT] alsa-lib
+[DEP] at-spi2-core
+[DEP] autoconf-2.13
+[DEP] bash
+[DEP] binutils
+[DEP] cairo
+[DEP] coreutils
+[DEP] dbus
+[DEP] dbus-glib
+[DEP] diffutils
+[DEP] file
+[DEP] findutils
+[DEP] fontconfig
+[DEP] freetype
+[DEP] gawk
+[DEP] gconf
+[DEP] gdk-pixbuf
+[DEP] glib
+[DEP] grep
+[DEP] gtk+
+[DEP] gtk+2
+[DEP] gzip
+[DEP] harfbuzz
+[OPT] icu4c
+[DEP] libffi
+[DEP] libice
+[DEP] libsm
+[DEP] libx11
+[DEP] libxcrypt
+[DEP] libxext
+[DEP] libxrender
+[DEP] libxt
+[DEP] linux-header
+[DEP] m4
+[DEP] make
+[OPT] nspr
+[DEP] pango
+[DEP] perl
+[DEP] pixman
+[DEP] pkgconfig
+[DEP] pulseaudio
+[DEP] python2
+[DEP] sed
+[DEP] tar
+[DEP] xorgproto
+[DEP] yasm
+[DEP] zip

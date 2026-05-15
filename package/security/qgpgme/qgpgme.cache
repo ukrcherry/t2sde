@@ -1,0 +1,23 @@
+[TIMESTAMP] 1759843480 Tue Oct  7 15:24:40 2025
+[BUILDTIME] 200 (9)
+[SIZE] 3.19 MB, 231 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] cmake
+[DEP] coreutils
+[DEP] diffutils
+[OPT] doxygen
+[DEP] gawk
+[DEP] gpgme
+[DEP] gpgmepp
+[DEP] grep
+[DEP] libgpg-error
+[DEP] linux-header
+[DEP] make
+[DEP] pkgconfig
+[OPT] qt5base
+[OPT] qt6base
+[DEP] sed
+[DEP] tar
+[DEP] xz

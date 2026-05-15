@@ -1,26 +1,35 @@
-[TIMESTAMP] 1737628746 Thu Jan 23 11:39:06 2025
-[BUILDTIME] 65 (9)
-[SIZE] 8.91 MB, 1279 files
+[TIMESTAMP] 1768843836 Mon Jan 19 18:30:36 2026
+[BUILDTIME] 115 (9)
+[SIZE] 8.59 MB, 1304 files
 
+[DEP] automake
 [DEP] bash
 [DEP] binutils
+[DEP] bison
 [DEP] brotli
 [DEP] coreutils
 [DEP] diffutils
 [DEP] findutils
 [DEP] gawk
+[DEP] gettext
 [DEP] gmp
 [DEP] grep
 [OPT] guile
 [DEP] gzip
+[OPT] libidn2
+[DEP] libseccomp
 [DEP] libtasn1
 [DEP] libunistring
 [DEP] linux-header
 [DEP] make
 [DEP] nettle
+[DEP] openssl
+[DEP] pkgconfig
 [DEP] sed
 [DEP] tar
-[DEP] tbb
+[OPT] tpm2-tss
+[DEP] unbound
+[DEP] util-linux
 [DEP] xz
 [DEP] zlib
 [DEP] zstd

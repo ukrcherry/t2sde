@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/maxima/maxima.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -24,12 +24,10 @@
 [E] opt graphviz
 
 [L] GPL
-[S] Stable
-[V] 5.47.0
-[P] X -----5---9 810.000
+[V] 5.49.0
 
-[O] prefix=opt/maxima
-[O] set_confopt
-[O] var_append confopt ' ' --enable-gcl
+[D] 2248b6417447371eea091f40498a5cc02c02d568bcf8e3111a8d42ca maxima-5.49.0.tar.gz https://prdownloads.sourceforge.net/sourceforge/maxima/
 
-[D] 7ff8985afc2c4b428cae0362387548b1278a4413ed9110eda171302a maxima-5.47.0.tar.gz http://dl.sourceforge.net/sourceforge/maxima/
+prefix=opt/maxima
+set_confopt
+var_append confopt ' ' --enable-gcl

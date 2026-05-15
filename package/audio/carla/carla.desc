@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/carla/carla.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Fully-featured audio plugin host
+
+[T] Fully-featured audio plugin host.
+
+[U] https://github.com/falkTX/Carla
+
+[A] Carla Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 2.5.10
+[L] GPL
+
+[D] 598ccd158edc2d1cbf079c0d85abefde5c47f6c57fc4960e70dbab97 carla-2.5.10.tar.gz https://github.com/falkTX/Carla/archive/refs/tags/v2.5.10/

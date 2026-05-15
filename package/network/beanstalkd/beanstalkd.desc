@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/beanstalkd/beanstalkd.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Beanstalk is a simple, fast work queue
+
+[T] Beanstalk is a simple, fast work queue.
+
+[U] https://kr.github.io/beanstalkd/
+
+[A] Beanstalkd Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 1.13
+[L] MIT
+
+[D] 72767da3ad17f6d321e8e829b928268f085a9bb4f49bb29de1b0294e beanstalkd-1.13.tar.gz https://github.com/kr/beanstalkd/archive/v1.13/

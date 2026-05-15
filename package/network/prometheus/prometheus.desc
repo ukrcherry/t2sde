@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/prometheus/prometheus.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -21,10 +21,22 @@
 [F] CROSS NO-LTO
 
 [L] APL
-[S] Stable
-[V] 3.3.1
-[P] X -----5---9 189.900
+[V] 3.11.3
 
-[O] . $base/package/*/*/go-conf.in
+[D] e0a45c866be642f738dfd8b063579cf6f7c1237af9a9ec3022345a07 prometheus-3.11.3.tar.gz https://github.com/prometheus/prometheus/archive/v3.11.3/
 
-[D] 22acebd5376ec03b0a760563a7ece6d997440bcaee33cc8503e917e5 prometheus-3.3.1.tar.gz https://github.com/prometheus/prometheus/archive/v3.3.1/
+export CGO_ENABLED=1
+
+. $base/package/*/*/go-conf.in
+
+var_remove GCC_WRAPPER_REMOVE ' ' "-gdwarf*"
+
+var_append goconfopt ' ' '-tags netgo ./cmd/prometheus'
+hook_add postmake 5 prometheus_postmake
+
+prometheus_postmake() {
+	mkdir -pv $root$sysconfdir/prometheus
+
+	install prometheus $root$bindir
+	install -Dm644 documentation/examples/prometheus.yml $root$sysconfdir/prometheus/
+}

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/wofi/wofi.desc
-[COPY] Copyright (C) 2023 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2023 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -17,7 +17,6 @@
 [F] NO-LTO
 
 [L] GPL3
-[S] Stable
-[V] 1.4.1
+[V] 1.5.3
 
-[D] 397a216639a5a85f161ceb444996936cf68443bb3a929dce86c379b7 wofi-1.4.1.tar.gz !https://hg.sr.ht/~scoopta/wofi/archive/v1.4.1.tar.gz
+[D] 449ce351639614f6a9439d35916a5b6d8fef6bc4683a33b21322fbb5 wofi-1.5.3.tar.gz !https://hg.sr.ht/~scoopta/wofi/archive/v1.5.3.tar.gz

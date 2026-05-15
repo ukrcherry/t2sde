@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/sccache/sccache.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Shared compilation cache for C/C++ and Rust
+
+[T] Sccache is a ccache-like tool. It is used as a compiler wrapper and avoids
+[T] compilation when possible.
+
+[U] https://github.com/mozilla/sccache/
+
+[A] Mozilla
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/development
+[F] NO-LTO
+
+[L] APL
+[V] 0.15.0
+
+[D] 4606e331cf9745287e71ed2a91c3cbac22a97b94f0fc0f8301b63d34 sccache-0.15.0.tar.gz https://github.com/mozilla/sccache/archive/v0.15.0/

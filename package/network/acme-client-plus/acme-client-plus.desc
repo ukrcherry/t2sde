@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/acme-client-plus/acme-client-plus.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Script for periodic renewal of certificates using BSD's acme-client
+
+[T] Script for periodic renewal of certificates using BSD's acme-client.
+
+[U] https://github.com/jirutka/acme-client-plus
+
+[A] Acme-client-plus Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.1.1
+[L] ISC
+
+[D] fc21327c8db96cf1758ad5f6b521b715cae8d5f1d1a80bef627733fc acme-client-plus-0.1.1.tar.gz https://github.com/jirutka/acme-client-plus/archive/v0.1.1/

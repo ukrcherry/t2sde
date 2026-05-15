@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/fpm2/fpm2.desc
-[COPY] Copyright (C) 2014 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2014 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,13 +12,12 @@
 [U] https://als.regnet.cz/fpm2/
 
 [A] John Conneely (orig fpm), Ales Koval (current)
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/tool
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 0.90.1
+[V] 0.90.2
 
-[D] a9957462ab78ba7af7e32dc280850de7373a8ecd921dc607891337c3 fpm2-0.90.1.tar.xz https://als.regnet.cz/fpm2/download/
+[D] d520d3552e8b21c921133774b39a0693638e3f121524aa68c4b368b8 fpm2-0.90.2.tar.xz https://als.regnet.cz/fpm2/download/

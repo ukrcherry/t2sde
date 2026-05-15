@@ -1,0 +1,29 @@
+[TIMESTAMP] 1764365316 Fri Nov 28 22:28:36 2025
+[BUILDTIME] 18 (9)
+[SIZE] 1.80 MB, 118 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] cmake
+[DEP] coreutils
+[DEP] curl
+[DEP] diffutils
+[DEP] gawk
+[DEP] grep
+[DEP] gzip
+[DEP] libxcrypt
+[DEP] libxml
+[DEP] linux-header
+[DEP] make
+[OPT] mono
+[OPT] openjdk
+[DEP] openssl
+[OPT] pam
+[OPT] perl
+[DEP] pkgconfig
+[DEP] python
+[OPT] ruby
+[DEP] sblim-sfcc
+[DEP] sed
+[OPT] swig
+[DEP] tar

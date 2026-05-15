@@ -1,27 +1,27 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/ki18n/ki18n.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
-[I] KDE Frameworks 5 Tier 1 addon for localization
+[I] KDE Frameworks addon for localization
 
-[T] KDE Frameworks 5 Tier 1 addon for localization.
+[T] KDE Frameworks addon for localization.
 
 [U] https://www.kde.org
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 6.14.0
-[P] X -----5---9 162.800
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 6.26.0
+[P] X ?----5---9 162.800
 
 [CV-GROUP] kde-frameworks
-[D] e69527698db4f54c1b0e737f76359380b66141a4f9ae5e4b4a0130bb ki18n-6.14.0.tar.xz https://download.kde.org/stable/frameworks/6.14/
+[D] 5e0674890b543b8d7dfd027c8f7c71dd5bc8c43d0d06c0216463cce2 ki18n-6.26.0.tar.xz https://download.kde.org/stable/frameworks/6.26/
+
+. $base/package/*/*/kde-conf.in

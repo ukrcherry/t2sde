@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libgssglue/libgssglue.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Exports a gssapi interface which calls other random gssapi libraries
+
+[T] Exports a gssapi interface which calls other random gssapi libraries.
+
+[U] http://www.citi.umich.edu/projects/nfsv4/linux/
+
+[A] Libgssglue Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.9
+[L] BSD
+
+[D] c8774280133918b4eb9f8b2d0529c13d9494c3df7b2e2075a26634c1 libgssglue-libgssglue-0.9.tar.bz2 https://gitlab.com/gsasl/libgssglue/-/archive/libgssglue-0.9/
+
+autogen=2
+hook_add prepatch 5 "touch ChangeLog"

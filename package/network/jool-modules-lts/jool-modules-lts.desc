@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/jool-modules-lts/jool-modules-lts.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] SIIT and NAT64 for Linux
+
+[T] SIIT and NAT64 for Linux (kernel modules for linux-lts).
+
+[U] https://jool.mx
+
+[A] Jool-modules-lts Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 4.1.15
+[L] GPL
+
+[D] 76c61b531fa9fef985cc46ba36b5a51560f08662dca56d4f3dfa39ad jool-4.1.15.tar.gz https://github.com/NICMx/Jool/releases/download/v4.1.15/

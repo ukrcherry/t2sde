@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/t2-src/t2-src.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -13,11 +13,39 @@
 [U] https://www.t2-project.org
 
 [A] The T2 Project <t2@exactcode.de>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/development
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 0000
+[V] 25.9
+
+srctar= runmake=0
+
+src_main() {
+    local svndir=$root/usr/src/$pkg/.svn
+    ln -srfv $root/usr/src/$pkg/t2 $root$sbindir/t2
+    [ -e $root/usr/src/$pkg ] && return
+    mkdir -pv $svndir
+    cp -fv $base/.svn/* $svndir/ || true # not recursive
+    mkdir -p $svndir/tmp # template pristine
+
+    local t2cksum=$(sqlite3 $svndir/wc.db "select checksum from NODES where local_relpath = 't2'")
+    local t2="${t2cksum#\$*\$}.svn-base" # remove hash algo
+
+    mkdir -pv $svndir/pristine/${t2:0:2}
+    cp -fv $base/.svn/pristine/${t2:0:2}/$t2 $svndir/pristine/${t2:0:2}/
+    cp -fv $base/t2 $root/usr/src/$pkg/
+
+    sqlite3 $svndir/wc.db "delete from NODES where local_relpath != '' and local_relpath != 't2'"
+    sqlite3 $svndir/wc.db "update NODES set presence = 'incomplete' where local_relpath != 't2'"
+    sqlite3 $svndir/wc.db "delete from PRISTINE where checksum != '$t2cksum'"
+    sqlite3 $svndir/wc.db "delete from WORK_QUEUE"
+    sqlite3 $svndir/wc.db "delete from ACTUAL_NODE"
+    # switch from tags to trunk
+    sqlite3 $svndir/wc.db "update NODES set repos_path = 'trunk/t2' WHERE repos_path like 'tags/%/t2'"
+    sqlite3 $svndir/wc.db "update NODES set repos_path = 'trunk' WHERE repos_path  like 'tags/%'"
+    sqlite3 $svndir/wc.db "vacuum"
+}
+hook_add postmake 5 src_main

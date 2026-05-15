@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libthreadar/libthreadar.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A C++ library that provides several classes to manipulate threads
+
+[T] A C++ library that provides several classes to manipulate threads.
+
+[U] https://libthreadar.sourceforge.net/
+
+[A] Libthreadar Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[E] opt doxygen
+
+[L] LGPL3
+[V] 1.6.1
+
+[D] 2aae69fd01f720e9c18eda083e0603e4c92e689689d48f03cd0cc91e libthreadar-1.6.1.tar.gz https://downloads.sourceforge.net/libthreadar/

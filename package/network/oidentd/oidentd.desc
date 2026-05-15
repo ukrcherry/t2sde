@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/oidentd/oidentd.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Configurable IDENT server that supports NAT/IP masq
+
+[T] Configurable IDENT server that supports NAT/IP masq.
+
+[U] https://oidentd.janikrabe.com
+
+[A] Oidentd Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 3.1.0
+[L] GPL
+
+[D] ec5a749731a9ada8daf6a3c2787ed66bb946951ef0614d3d30649586 oidentd-3.1.0.tar.xz https://files.janikrabe.com/pub/oidentd/releases/3.1.0/

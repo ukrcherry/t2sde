@@ -1,0 +1,28 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libcap-ng/libcap-ng.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] POSIX capabilities library
+
+[T] POSIX capabilities library.
+
+[U] https://people.redhat.com/sgrubb/libcap-ng/index.html
+
+[A] Libcap-ng Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[E] opt python swig
+
+[V] 0.9.3
+[L] GPL LGPL
+[P] X -----5---9 186.600
+
+[D] 7a4fcf4bcf71ae1620ffd0ddd0d642cfcf36ab9b39f03fb8a5779fc5 libcap-ng-0.9.3.tar.gz https://github.com/stevegrubb/libcap-ng/archive/v0.9.3/
+
+autogen=1
+pkginstalled python || var_append confopt ' ' --without-python3

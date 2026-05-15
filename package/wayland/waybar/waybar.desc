@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/waybar/waybar.desc
-[COPY] Copyright (C) 2023 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2023 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -16,17 +16,20 @@
 [C] extra/graphic
 [F] CROSS
 
-[E] opt jack2
+[E] opt gpsd
+[E] opt jack
+[E] opt libdbusmenu
+[E] opt libmpdclient
 [E] opt pipewire pulseaudio wireplumber
+#[E] opt spdlog
 [E] opt upower
 
 [L] MIT
-[S] Gamma
-[V] 0.12.0
+[V] 0.15.0
 
-[O] var_append mesonopt ' ' -Dtests=disabled
-[O] var_append mesonopt ' ' -Dcava=disabled
-[O] pkginstalled playerctl && var_append mesonopt ' ' -Dmpris=enabled
-[O] pkginstalled systemd || var_append mesonopt ' ' -Dsystemd=disabled
+[D] d1398fd2c4efedebdddd292807a2b19e3d021f2d3c31d3728edf7378 waybar-0.15.0.tar.gz https://github.com/Alexays/Waybar/archive/0.15.0/
 
-[D] 170a922f31583fe3424f6ddb08b21df98c0ccf7a86aad9f6509ad63c waybar-0.12.0.tar.gz https://github.com/Alexays/Waybar/archive/0.12.0/
+var_append mesonopt ' ' -Dtests=disabled
+var_append mesonopt ' ' -Dcava=disabled
+pkginstalled playerctl && var_append mesonopt ' ' -Dmpris=enabled
+pkginstalled systemd || var_append mesonopt ' ' -Dsystemd=disabled

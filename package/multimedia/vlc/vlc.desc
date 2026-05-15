@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/vlc/vlc.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -18,23 +18,59 @@
 [A] Christophe Massiot <massiot@videolan.org>
 [A] Michel Kaempf <maxx@videolan.org>
 [A] Any many more {http://www.videolan.org/team/}
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 
 [E] opt flac
-[E] opt speex
 [E] opt mpg123
-[E] opt libopus
-[E] opt libraw1394
 [E] opt libavc1394
+[E] opt libmad
+[E] opt libraw1394
+[E] opt libopus
+[E] opt speex
 
 [L] GPL
-[S] Beta
-[V] 3.0.21
+[V] 3.0.23
 [P] X -----5---9 204.500
 
-[O] var_append GCC_WRAPPER_APPEND ' ' "-I`pkgprefix includedir libva`"
-
 [CV-URL] http://www.videolan.org/vlc/download-sources.html
-[D] 9a140a9b4d628a6dc4193cd2b56df16c71ad650d42338732dd858d73 vlc-3.0.21.tar.xz http://get.videolan.org/vlc/3.0.21/
+[D] 3edd3039a02f6d6707b28e5aa1a4761965ce121bac600e7c324f6c30 vlc-3.0.23.tar.xz http://get.videolan.org/vlc/3.0.23/
+
+var_append GCC_WRAPPER_APPEND ' ' "-I`pkgprefix includedir libva`"
+
+pkginstalled lirc && var_append confopt ' ' --enable-lirc
+pkginstalled faad && var_append confopt ' ' --enable-faad
+pkginstalled twolame && var_append confopt ' ' --enable-twolame
+pkginstalled libtheora && var_append confopt ' ' --enable-theora
+
+if pkginstalled firefox; then
+	#xpidldir=`firefox-config --libs | sed 's/-L//'`
+	:
+elif pkginstalled seamonkey; then
+	#xpidldir=`seamonkey-config --libs | sed 's/-L//'`
+	:
+fi
+if [ "$xpidldir" ]; then
+	var_append confopt ' ' --enable-mozilla
+	var_append configprefix ' ' XPIDL=$xpidldir/xpidl
+fi
+
+var_append confopt ' ' --enable-dvdread
+var_append confopt ' ' '--enable-v4l --enable-dvb'
+var_append confopt ' ' --enable-release
+
+# it is not lib64 aware and thus path the X11/lib* to it ...
+var_append GCC_WRAPPER_APPEND ' ' -L$root/usr/X11/${libdir##*/}
+
+var_append GCC_WRAPPER_APPEND ' ' "-I$root/$(pkgprefix includedir librsvg)"
+
+# vlc configure puts it into CC which is used later by the SDE
+var_append CC_WRAPPER_APPEND ' ' -std=gnu99
+
+pkginstalled lua &&
+	var_append GCC_WRAPPER_APPEND ' ' '-c?:-llua -c?:-lm' ||
+	var_append confopt ' ' --disable-lua
+
+#don't run vlc-cache-gen in chroot build
+[ ! -f $root/var/lib/dbus/machine-id ] && var_append confopt ' ' --disable-dbus

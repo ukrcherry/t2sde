@@ -1,0 +1,28 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/liborcus/liborcus.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Library for processing spreadsheet documents
+
+[T] Orcus is a library that provides a collection of standalone file processing
+[T] filters. It is focused primarily on providing filters for spreadsheet
+[T] documents.
+
+[U] https://gitlab.com/orcus/orcus
+
+[A] Kohei Yoshida
+[M] René Rebe <rene@exactco.de>
+
+[C] base/library
+[F] CROSS
+
+[L] MPL
+[V] 0.21.0
+[P] X -----5---9 201.800
+
+[CV-FLAGS] NO-MAJOR # 0.21.x not compatible w/ libreoffice
+[D] dd0f2089f0f52bdd34d60cf059ff4d9a1d0cfcf63a652affd64ade6e liborcus-0.21.0.tar.xz https://gitlab.com/api/v4/projects/orcus%2Forcus/packages/generic/source/0.21.0/
+
+pkginstalled python || var_append confopt ' ' --disable-python

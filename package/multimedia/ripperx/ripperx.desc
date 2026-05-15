@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/ripperx/ripperx.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -19,13 +19,11 @@
 
 [A] TeJun Huh (original code)
 [A] Jos Dehaes (maintainer)
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
-[F] NOPARALLEL
 [C] extra/multimedia
 
 [L] GPL
-[S] Stable
-[V] 2.7.3
+[V] 3.0.2
 
-[D] 01cdb64a32c125577cf7899ac337752ed2f99f1c8b58277f11e45329 ripperX-2.7.3.tar.gz http://dl.sourceforge.net/sourceforge/ripperx/
+[D] 34b9d77982d5bcc67ea6cdd01eed1931c2fb8a65cfee0ae8de084139 ripperx-3.0.2.tar.gz !https://codeberg.org/thothix/ripperx/archive/3.0.2.tar.gz

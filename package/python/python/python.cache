@@ -1,8 +1,10 @@
-[TIMESTAMP] 1737989507 Mon Jan 27 15:51:47 2025
-[BUILDTIME] 130 (9)
-[SIZE] 64.98 MB, 2719 files
+[TIMESTAMP] 1775642969 Wed Apr  8 12:09:29 2026
+[BUILDTIME] 125 (9)
+[SIZE] 72.92 MB, 3018 files
 
+[DEP] automake
 [DEP] bash
+[OPT] bdb
 [DEP] binutils
 [DEP] bzip2
 [DEP] coreutils
@@ -12,16 +14,19 @@
 [DEP] gdbm
 [DEP] grep
 [DEP] libffi
-[DEP] libxcrypt
 [DEP] linux-header
 [DEP] make
 [DEP] ncurses
 [DEP] openssl
+[DEP] pkgconfig
 [DEP] readline
 [DEP] sed
 [OPT] sqlite
 [DEP] sysfiles
 [DEP] tar
+[OPT] tcl
+[OPT] tk
 [DEP] util-linux
 [DEP] xz
 [DEP] zlib
+[DEP] zstd

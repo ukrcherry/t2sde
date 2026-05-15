@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/zls/zls.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -21,7 +21,6 @@
 [F] CROSS
 
 [L] MIT
-[S] Stable
-[V] b401aab
+[V] 0.16.0
 
-[D] 837f1a91fca3082e088e7e380d9319101694fa878115144cb81a78ed zls-b401aab.tar.gz https://github.com/zigtools/zls/archive/b401aab/
+[D] 6c9cbbd789399ae5e77507219f4ad65b8088daf400ea87d7d3517ae7 zls-0.16.0.tar.gz https://github.com/zigtools/zls/archive/0.16.0/

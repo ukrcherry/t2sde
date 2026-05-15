@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/huggingface_hub/huggingface_hub.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,7 +14,7 @@
 [U] https://github.com/huggingface/huggingface_hub
 
 [A] Hugging Face, Inc. <julien@huggingface.co>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
@@ -33,8 +33,7 @@
 [E] add tqdm
 
 [L] APL
-[S] Stable
-[V] 0.28.1
+[V] 1.3.7
 [P] X -----5---9 160.000
 
-[D] b8783aacc1d6622e265f779fbda33077f8705fd14ea6a6810cdb02c9 huggingface_hub-0.28.1.tar.gz https://files.pythonhosted.org/packages/e7/ce/a734204aaae6c35a22f9956ebcd8d8708ae5b842e15d6f42bd6f49e634a4/
+[D] 7fc24fb9df50b1a801ab4b3813c364a3266bbbdd2bbe1c2ddfdd13f1 huggingface_hub-1.3.7.tar.gz https://files.pythonhosted.org/packages/source/h/huggingface-hub/

@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/g2reverb/g2reverb.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] LADSPA stereo reverb plugin based on greverb
+
+[T] LADSPA stereo reverb plugin based on greverb.
+
+[U] https://kokkinizita.linuxaudio.org/linuxaudio/
+
+[A] Kokkini Zita
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/multimedia
+[F] CROSS
+
+[L] GPL3
+[V] 0.7.1
+
+[D] f06d35f088c2e2d2500947f17f6ee2980c4dad75fc83a6dfacde59b1 g2reverb-0.7.1.tar.bz2 https://kokkinizita.linuxaudio.org/linuxaudio/downloads/

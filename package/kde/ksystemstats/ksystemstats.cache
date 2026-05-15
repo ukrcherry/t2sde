@@ -1,9 +1,7 @@
+[TIMESTAMP] 1765390736 Wed Dec 10 19:18:56 2025
+[BUILDTIME] 140 (9)
+[SIZE] 1.64 MB, 67 files
 
-[TIMESTAMP] 1718741308 Tue Jun 18 22:08:28 2024
-[BUILDTIME] 60 (9)
-[SIZE] 1.24 MB, 61 files
-
-[DEP] 00-dirtree
 [DEP] bash
 [DEP] binutils
 [DEP] cmake
@@ -13,23 +11,28 @@
 [DEP] freetype
 [DEP] gawk
 [DEP] gettext
+[DEP] glib
 [DEP] grep
-[DEP] kconfig
 [DEP] kcoreaddons
+[DEP] kcrash
 [DEP] ki18n
 [DEP] kio
+[DEP] libcap
+[DEP] libdrm
 [DEP] libksysguard
 [DEP] libnl
 [DEP] linux-header
 [DEP] lm_sensors
 [DEP] make
+[DEP] networkmanager
+[DEP] networkmanager-qt
 [DEP] pkgconfig
 [DEP] procps
 [DEP] qt6base
+[DEP] qt6declarative
 [DEP] sed
 [DEP] solid
 [DEP] tar
-[DEP] tbb
 [DEP] udev
 [DEP] vulkan-headers
 [DEP] xz

@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/cava/cava.desc
+[COPY] Copyright (C) 2023 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Cross-platform Audio Visualizer
+
+[T] Cava is a bar spectrum audio visualizer for terminal (ncurses)
+[T] or desktop (SDL) written to look responsive and aesthetic when
+[T] used to visualize music.
+
+[U] https://github.com/karlstav/cava/
+
+[A] Karl Stavestrand <karl@stavestrand.no>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/multimedia
+[F] CROSS
+
+[V] 0.10.7
+[L] MIT
+
+[D] 04804066d67920f7b4c1adab6fd9f0f2849e2a12a2dd6511b0d8002f cava-0.10.7.tar.gz https://github.com/karlstav/cava/archive/0.10.7/
+
+autogen=1

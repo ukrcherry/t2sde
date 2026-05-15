@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/hyperlight/hyperlight.desc
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A lightweight Virtual Machine Manager (VMM)
+
+[T] Hyperlight is a lightweight Virtual Machine Manager (VMM) designed to be
+[T] embedded within applications. It enables safe execution of untrusted code
+[T] within micro virtual machines with very low latency and minimal overhead.
+
+[U] https://github.com/hyperlight-dev/hyperlight
+
+[A] Hyperlight devs
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/library
+[F] CROSS
+
+[L] APL
+[V] 0.15.0
+
+[D] 700abcc5fd67a66f92d015dad36455354a69853f531c2d0218ad2161 hyperlight-0.15.0.tar.gz https://github.com/hyperlight-dev/hyperlight/archive/v0.15.0/

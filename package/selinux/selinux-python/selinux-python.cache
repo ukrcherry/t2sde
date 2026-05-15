@@ -8,11 +8,9 @@
 [DEP] bash
 [DEP] cmake
 [DEP] coreutils
-[DEP] cython
 [DEP] diffutils
 [DEP] gawk
 [DEP] gettext
-[DEP] git
 [DEP] grep
 [DEP] gzip
 [DEP] libselinux

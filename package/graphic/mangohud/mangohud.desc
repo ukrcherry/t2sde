@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/mangohud/mangohud.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -17,12 +17,15 @@
 [C] extra/graphic
 [F] CROSS NO-LTO.clang
 
+[E] add mako
+[E] add markupsafe
+[E] add pygments
+
 [L] MIT
-[S] Gamma
-[V] 0.8.1
+[V] 0.8.3
 
-[O] var_append mesonopt ' ' -Dappend_libdir_mangohud=false
-[O] var_append mesonopt ' ' '-Dwith_nvml=disabled -Dwith_xnvctrl=disabled'
-[O] pkginstalled wayland && var_append mesonopt ' ' -Dwith_wayland=enabled
+[D] 9c232e38b977d1107587567081470c84f4a1de528d6c6e9f5fe0f1f7 MangoHud-v0.8.3-Source.tar.xz https://github.com/flightlessmango/MangoHud/releases/download/v0.8.3/
 
-[D] d0818411cbf2a59d7cf93b7e336fe28003a86479e200d8faa91b73d5 MangoHud-v0.8.1-Source.tar.xz https://github.com/flightlessmango/MangoHud/releases/download/v0.8.1/
+var_append mesonopt ' ' -Dappend_libdir_mangohud=false
+pkginstalled nvidia-settings || var_append mesonopt ' ' '-Dwith_nvml=disabled -Dwith_xnvctrl=disabled'
+pkginstalled wayland && var_append mesonopt ' ' -Dwith_wayland=enabled

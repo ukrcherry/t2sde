@@ -20,9 +20,11 @@ base/editor
 base/firmware
 base/kernel
 base/library
+base/network
 base/setup
 base/system
 base/tool
+base/wayland
 base/x11
 
 # Application-Programs and Libraries for special tasks go to this categories.
@@ -72,5 +74,6 @@ extra/text
 extra/theme
 extra/tool
 extra/toy
+extra/wayland
 extra/windowmanager
 extra/x11

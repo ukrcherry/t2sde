@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xfce4-battery-plugin/xfce4-battery-plugin.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,15 +13,14 @@
 
 [A] Nick Penwarden
 [A] Edscott Wilson Garcia
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/desktop/xfce
 [F] CROSS
 
 [L] BSD
-[S] Stable
-[V] 1.1.6
+[V] 1.2.0
 
-[O] . $base/package/xfce4/*/xfce4-conf.in
+[D] 4b4b2cee5d74c7d1553abb0a32876b4c9cdacb4f799a27e7d3478bd9 xfce4-battery-plugin-1.2.0.tar.xz https://archive.xfce.org/src/panel-plugins/xfce4-battery-plugin/1.2/
 
-[D] a684d51a97c9c137cf19ca779489dd02735c0355d81c78e181ffbe22 xfce4-battery-plugin-1.1.6.tar.bz2 https://archive.xfce.org/src/panel-plugins/xfce4-battery-plugin/1.1/
+. $base/package/xfce4/*/xfce4-conf.in

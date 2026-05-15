@@ -1,0 +1,25 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/wild/wild.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] A very fast linker for Linux
+
+[T] A very fast linker for Linux.
+
+[U] https://github.com/davidlattimore/wild
+
+[A] davidlattimore
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] APL
+[V] 0.8.0
+
+[D] dd54c009f657aaee8b74fbcb6c9498206392a336e3d142ac54592bc5 wild-0.8.0.tar.gz https://github.com/davidlattimore/wild/archive/0.8.0/
+
+cargoinstopt=
+hook_add postmake 5 "install target/*/wild $root$bindir"

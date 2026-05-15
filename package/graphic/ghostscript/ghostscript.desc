@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/ghostscript/ghostscript.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -20,14 +20,22 @@
 [C] extra/printing extra/office
 [F] CROSS FPIC
 
+[E] opt glu libglvnd
+[E] opt libx11 libice libsm libxt xorgproto
+
 [L] AGPL3
-[S] Stable
-[V] 10.05.0
+[V] 10.06.0
 [P] X -----5---9 142.450
 
-[O] var_append CC_WRAPPER_APPEND ' ' -std=gnu17
-[O] var_append makeopt ' ' so
-[O] var_append makeinstopt ' ' 'soinstall -j1'
-[O] [[ $arch = arm* && "$SDECFG_DEFAULT_CC" = clang ]] && var_append GCC_WRAPPER_REMOVE ' ' -mfpu=neon
+# only for the dir
+[CV-TR] s/\.//
+[D] 836880cfb4ca9457197664857186e37639335b463332d0c2cc360f16 ghostscript-10.06.0.tar.xz https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10060/
 
-[D] 149feadcc854d7933c704f9c55d100c38aadf87bf2286b707b38d2c8 ghostscript-10.05.0.tar.xz https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10050/
+var_append CC_WRAPPER_REMOVE ' ' -Werror=declaration-after-statement
+var_append CC_WRAPPER_APPEND ' ' -std=gnu17
+var_append SYSCC_WRAPPER_APPEND ' ' -std=gnu17
+
+var_append makeopt ' ' so
+var_append makeinstopt ' ' 'soinstall -j1'
+
+[[ $arch = arm* && "$SDECFG_DEFAULT_CC" = clang ]] && var_append GCC_WRAPPER_REMOVE ' ' -mfpu=neon

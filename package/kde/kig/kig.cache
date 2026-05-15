@@ -1,19 +1,38 @@
+[TIMESTAMP] 1770546873 Sun Feb  8 11:34:33 2026
+[BUILDTIME] 180 (9)
+[SIZE] 8.36 MB, 387 files
 
-[TIMESTAMP] 1714259711 Sun Apr 28 01:15:11 2024
-[BUILDTIME] 1 (9) ERROR
-[SIZE] 0.01 MB, 6 files
-
-[DEP] 00-dirtree
 [DEP] bash
 [DEP] binutils
+[DEP] boost
 [DEP] cmake
 [DEP] coreutils
+[DEP] cups
 [DEP] diffutils
-[DEP] findutils
-[DEP] gawk
-[DEP] grep
 [DEP] extra-cmake-modules
+[DEP] freetype
+[DEP] gawk
+[DEP] gettext
+[DEP] grep
+[DEP] karchive
+[DEP] kcompletion
+[DEP] kconfig
+[DEP] kconfigwidgets
+[DEP] kcoreaddons
+[DEP] kcrash
+[DEP] ki18n
+[DEP] kiconthemes
+[DEP] kparts
+[DEP] kwidgetsaddons
+[DEP] kxmlgui
+[DEP] linux-header
 [DEP] make
+[DEP] pkgconfig
+[DEP] procps
+[DEP] qt6base
+[DEP] qt6svg
 [DEP] sed
 [DEP] tar
+[DEP] util-linux
+[DEP] vulkan-headers
 [DEP] xz

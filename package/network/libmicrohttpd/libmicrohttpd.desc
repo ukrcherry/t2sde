@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libmicrohttpd/libmicrohttpd.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Small C library that is supposed to make it easy to run an HTTP server as part of another application
+
+[T] Small C library that is supposed to make it easy to run an HTTP server as part of another application.
+
+[U] https://www.gnu.org/software/libmicrohttpd/
+
+[A] Libmicrohttpd Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.0.5
+[L] LGPL
+[P] X -----5---9 700.000
+
+[D] 83bbcbdd01bad7bbe35f3b3772ec6fb27f6fe619b8f9199aa0118c8d libmicrohttpd-1.0.5.tar.gz https://ftp.gnu.org/gnu/libmicrohttpd/

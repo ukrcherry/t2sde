@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/longrun/longrun.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -12,7 +12,7 @@
 [T] are compiled into the kernel or availible as modules.
 
 [A] Daniel Quinlan <quinlan@transmeta.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 [F] CROSS
@@ -20,10 +20,9 @@
 [R] + x86 x86-64
 
 [L] GPL
-[S] Stable
 [V] 0.9-22.1
-
-[O] hook_add prepatch 3 "zstd -d < `match_source_file -p .*.diff.*` | patch -p1"
 
 [D] 3845247910 longrun-0.9.tar.bz2 http://cdn.kernel.org/pub/linux/utils/cpu/crusoe/
 [D] 7f7550d38d9c24ce11b78d89a41b3a5a54007d47cea0f993664a8d29 longrun_0.9-22.1.diff.gz http://ftp.debian.org/debian/pool/main/l/longrun/
+
+hook_add prepatch 3 "zstd -d < `match_source_file -p .*.diff.*` | patch -p1"

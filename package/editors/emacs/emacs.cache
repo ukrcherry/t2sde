@@ -1,6 +1,6 @@
-[TIMESTAMP] 1745224317 Mon Apr 21 10:31:57 2025
-[BUILDTIME] 65 (9)
-[SIZE] 139.43 MB, 4461 files
+[TIMESTAMP] 1773871209 Wed Mar 18 22:00:09 2026
+[BUILDTIME] 25 (9)
+[SIZE] 139.91 MB, 4461 files
 
 [DEP] 00-dirtree
 [OPT] acl
@@ -19,7 +19,7 @@
 [DEP] gawk
 [OPT] gconf
 [DEP] gdk-pixbuf
-[DEP] glib
+[OPT] glib
 [DEP] gmp
 [OPT] gnutls
 [OPT] gpm
@@ -32,22 +32,26 @@
 [OPT] libjpeg
 [OPT] libpng
 [DEP] librsvg
-[DEP] libseccomp
+[OPT] libseccomp
 [OPT] libtiff
 [OPT] libwebp
 [OPT] libx11
 [DEP] libxml
 [DEP] linux-header
 [DEP] make
+[DEP] ncurses
 [OPT] openssh
 [DEP] pango
 [DEP] perl
-[DEP] perl-libintl
+[DEP] pkgconfig
 [DEP] sed
 [OPT] sqlite
+[OPT] systemd
 [DEP] tar
 [DEP] texinfo
 [OPT] tree-sitter
+[DEP] util-linux
 [OPT] wayland
+[DEP] xorgproto
 [DEP] xz
 [DEP] zlib

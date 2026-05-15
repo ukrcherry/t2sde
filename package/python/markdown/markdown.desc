@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/markdown/markdown.desc
-[COPY] Copyright (C) 2020 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2020 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,14 +11,13 @@
 [U] https://pypi.org/project/Markdown/
 
 [A] Manfred Stienstra, Yuri Takhteyev
-[M] Rene Rebe <rene@exactcode.de>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [F] CROSS
 [L] BSD
 
-[S] Stable
-[V] 3.7
+[V] 3.10.2
 [P] X -----5---9 136.800
 
-[D] db7f4252b310a23690a96ec74b005a5fa9a582c9f809c950c092bdff markdown-3.7.tar.gz https://files.pythonhosted.org/packages/54/28/3af612670f82f4c056911fbbbb42760255801b3068c48de792d354ff4472/
+[D] 8b0bf0da52e77f4b28fede2ecaaf1f3d3f08dd11a482d96adacc645b markdown-3.10.2.tar.gz https://files.pythonhosted.org/packages/source/m/markdown/

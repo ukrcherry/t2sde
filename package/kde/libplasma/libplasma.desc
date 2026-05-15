@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libplasma/libplasma.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,16 +11,16 @@
 [U] https://www.kde.org
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 6.3.5
-[P] X -----5---9 200.200
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 6.6.5
+[P] X -----5---9 200.018
 
 [CV-GROUP] kde-plasma
-[D] b73028c63b0085648b3b2ba38dfcf9eef0bd7cf9a6a8b8ef0d462016 libplasma-6.3.5.tar.xz https://download.kde.org/stable/plasma/6.3.5/
+[D] 1f7b158a6fd383cda7f86b11284ba95235244b725a2c4f1280680a48 libplasma-6.6.5.tar.xz https://download.kde.org/stable/plasma/6.6.5/
+
+. $base/package/*/*/kde-conf.in

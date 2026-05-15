@@ -1,0 +1,30 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/cloudflared/cloudflared.desc
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Cloudflare Tunnel client (formerly Argo Tunnel)
+
+[T] Cloudflare Tunnel, a tunneling daemon that proxies traffic
+[T] from the Cloudflare network to your origins.
+[T] This daemon sits between Cloudflare network and your origin.
+[T] Cloudflare attracts client requests and sends them to you via this daemon,
+[T] without requiring you to poke holes on your firewall
+[T] your origin can remain as closed as possible.
+
+[U] https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/get-started/
+
+[A] Cloudflared Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 2026.5.0
+[L] APL
+
+[D] e6b05666e6b10582c5363f994fd79d0cdfb7d77347b75f35928a7bcd cloudflared-2026.5.0.tar.gz https://github.com/cloudflare/cloudflared/archive/2026.5.0/
+
+rungo=0
+var_append makeinstopt ' ' VERSION=$desc_V

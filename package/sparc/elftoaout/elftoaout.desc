@@ -1,18 +1,17 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/elftoaout/elftoaout.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
 [I] ELF to a.out convertor
 
-[T] ELF to a.out convertor for SPARC and SPARC64 bootstraps
+[T] ELF to a.out convertor for SPARC and SPARC64 bootstraps.
 
 [A] Pete A. Zaitcev <zaitcev@vger.rutgers.edu>
 [A] Jakub Jelinek <jj@ultra.linux.cz>
- 
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/development
 # sparc64
@@ -20,10 +19,9 @@
 [F] CROSS
 
 [L] GPL
-[S] Stable
 [V] 2.3
 [P] X 0----5---9 190.800
 
-[O] var_append makeinstopt ' ' PREFIX=$root/$prefix
-
 [D] 4134b771af5a04b3e093a01b9a9cc7033f08392fefca53acb03a8913 elftoaout-2.3.tgz ftp://ultra.linux.cz/OS/Linux/Sparc/local/elftoaout/
+
+var_append makeinstopt ' ' PREFIX=$root/$prefix

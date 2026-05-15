@@ -1,6 +1,6 @@
 # --- T2-COPYRIGHT-BEGIN ---
 # t2/package/*/linux/linux-conf.in
-# Copyright (C) 2004 - 2025 The T2 SDE Project
+# Copyright (C) 2004 - 2026 The T2 SDE Project
 # Copyright (C) 1998 - 2003 ROCK Linux Project
 # SPDX-License-Identifier: GPL-2.0
 # --- T2-COPYRIGHT-END ---
@@ -49,6 +49,11 @@ auto_config() {
 	esac
 	cp .config{,.1}
 
+	pkginstalled rustc rust-src && echo CONFIG_RUST=y >> .config
+
+	[ "$SDECFG_DEBUG" = 1 ] &&
+		m4 $base/architecture/share/linux-debug.conf.m4 >> .config
+		
 	# all modules needs to be first so modules can be disabled by i.e.
 	# the targets later
 	echo "Enabling all modules ..."

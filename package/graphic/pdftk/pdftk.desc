@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/pdftk/pdftk.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -19,19 +19,11 @@
 [U] http://www.pdfhacks.com/pdftk/
 
 [A] Sid Steward
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/printing
 
 [L] OpenSource
-[S] Stable
-[V] 2.02
+[V] 3.3.3
 
-[O] srcdir="pdftk-*/pdftk"
-[O] makeinstopt=
-[O] var_insert makeopt ' ' '-f Makefile.Slackware*'
-[O] hook_add premake 5 'eval $MAKE $makeopt	javalib' # fix parallel make
-[O] hook_add postmake 5 "install pdftk $root$bindir/"
-[O] hook_add postmake 6 "install ../pdftk.1 $root$mandir/man1/"
-
-[D] 915bbb4130fc5c10a86e91525372ec7afad8c302d4c16c0ccf12ccee pdftk-2.02-src.zip http://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/
+[D] 30cd5aaf95f99b45217689803cad01cbaba0e3a315f758a710dbb960 pdftk-v3.3.3.tar.bz2 https://gitlab.com/pdftk-java/pdftk/-/archive/v3.3.3/

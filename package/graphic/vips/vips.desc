@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/vips/vips.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -29,7 +29,7 @@
 [E] opt libwebp
 
 [L] GPL
-[S] Stable
-[V] 8.16.1
+[V] 8.18.2
+[P] X -----5---9 600.000
 
-[D] abba0816a8c2d5dc434df569c1fad36becc5ce6dae258c751d0eb9ec vips-8.16.1.tar.gz https://github.com/libvips/libvips/archive/refs/tags/v8.16.1/
+[D] 1ca7ff4e5dd908f471c8f6975f666650b6cb71fde7f785ebedcf9dee vips-8.18.2.tar.gz https://github.com/libvips/libvips/archive/refs/tags/v8.18.2/

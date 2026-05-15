@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/wavpack/wavpack.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Audio compression format with lossless, lossy, and hybrid compression modes
+
+[T] WavPack is a completely open audio compression format providing lossless,
+[T] high-quality lossy, and a unique hybrid compression mode.
+
+[U] https://www.wavpack.com/
+
+[A] Wavpack Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[L] BSD
+[V] 5.9.0
+[P] X -----5---9 400.000
+
+[D] 5f50356bcaed01f9f71161e9f9c29a1e456ac3df9cd80379cdf7201b wavpack-5.9.0.tar.xz https://www.wavpack.com/

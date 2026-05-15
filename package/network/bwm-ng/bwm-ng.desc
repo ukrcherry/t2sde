@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/bwm-ng/bwm-ng.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A small and simple console-based live bandwidth monitor
+
+[T] A small and simple console-based live bandwidth monitor.
+
+[U] https://www.gropp.org/
+
+[A] Bwm-ng Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 0.6.3
+[L] GPL
+
+[D] 925dd49d078c01aa0569fba890fd9b62fd775c736b410d071533882d bwm-ng-0.6.3.tar.gz https://github.com/vgropp/bwm-ng/archive/refs/tags/v0.6.3/
+
+var_append GCC_WRAPPER_APPEND ' ' -ltinfo

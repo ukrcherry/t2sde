@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/tiptop/tiptop.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Hardware Performance Counters for the Masses
+
+[T] Tiptop: Hardware Performance Counters for the Masses.
+
+[U] https://gitlab.inria.fr/rohou/tiptop
+
+[A] Tiptop Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 2.3.2
+[L] GPL
+
+[D] 30836115a8abaaca4bdc987a7d29901a7738f7d663b06e98289792e3 tiptop-2.3.2.tar.gz https://files.inria.fr/pacap/tiptop/

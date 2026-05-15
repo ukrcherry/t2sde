@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xpdf/xpdf.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -14,16 +14,19 @@
 [U] https://www.foolabs.com/xpdf/
 
 [A] Derek B. Noonburg <derekn@foolabs.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office
 [F] CROSS
 
+# TODO: ||
+[E] opt qt4 qt5base qt6base
+
 [L] GPL
-[S] Stable
-[V] 4.04
+[V] 4.06
 
-[O] var_append GCC_WRAPPER_APPEND ' ' "`pkg-config fontconfig --cflags --libs-only-L`"
-[O] var_append GCC_WRAPPER_APPEND ' ' "-I$(pkgprefix includedir fontconfig)"
+[D] bce804b482dcad2f7681bb06e2d512532195bfcbc4d5c3558e52cde9 xpdf-4.06.tar.gz https://dl.xpdfreader.com/
 
-[D] 6b9037a783dd8c16b56007af8981ed6a8a9137d8653afc835c85d5b3 xpdf-4.04.tar.gz https://dl.xpdfreader.com/
+var_append cmakeopt ' ' -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+var_append GCC_WRAPPER_APPEND ' ' "`pkg-config fontconfig --cflags --libs-only-L`"
+var_append GCC_WRAPPER_APPEND ' ' "-I$(pkgprefix includedir fontconfig)"

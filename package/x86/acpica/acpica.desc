@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/acpica/acpica.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,17 +15,15 @@
 [U] https://www.acpica.org/
 
 [A] Intel Corp.
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 [F] CROSS
 
 [L] Free-to-use
-[S] Stable
-[V] 20241212
+[V] 20260408
 [P] X -----5---9 179.200
 
-[O] hook_add postmake 5 "install -v -m 644 $confdir/LICENSE $root$docdir/"
+[D] 8b80e03f48b69103d0aef41c58e1507b9d75386166592733776df1ab acpica-20260408.tar.gz https://github.com/acpica/acpica/archive/20260408/
 
-[CV-URL] https://acpica.org/downloads/
-[D] 720960cad3e3a3d4a616cc575140733f6cbaf15ffccb80998a3673e5 acpica-20241212.tar.gz https://github.com/acpica/acpica/archive/refs/tags/R03_31_23/
+hook_add postmake 5 "install -v -m 644 $confdir/LICENSE $root$docdir/"

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/mod_perl/mod_perl.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,14 +14,13 @@
 [U] https://perl.apache.org/
 
 [A] Per Einar Ellefsen <pereinar@oslo.online.no>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [L] APL
-[S] Stable
 [V] 2.0.13
 
-[O] plconfopt="MP_APXS=$root/opt/apache/sbin/apxs"
-
 [D] 5b63e32fbe09f0724a406cd2a55522f2e1f8a1b47a77725cf3040ea1 mod_perl-2.0.13.tar.gz https://apache.org/dist/perl/
+
+plconfopt="MP_APXS=$root/opt/apache/sbin/apxs"

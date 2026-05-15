@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/tokenizers/tokenizers.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,17 +12,16 @@
 [U] https://github.com/huggingface/tokenizers
 
 [A] Anthony MOI <m.anthony.moi@gmail.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [E] add pyrequests
 
 [L] APL
-[S] Stable
-[V] 0.21.1
+[V] 0.23.1
 [P] X -----5---9 110.300
 
-[O] hook_add preconf 5 "cd bindings/python"
+[D] ab6ad09159d2a3e151d41ed0ed4a0623a4b822370913e540b5966a2a tokenizers-0.23.1.tar.gz https://github.com/huggingface/tokenizers/archive/v0.23.1/
 
-[D] 0887602807bc964fa6d30e2f86dcf86f0856d12a3d22660d2d9864c2 tokenizers-0.21.1.tar.gz https://github.com/huggingface/tokenizers/archive/v0.21.1/
+hook_add preconf 5 "cd bindings/python"

@@ -1,6 +1,6 @@
-[TIMESTAMP] 1739038956 Sat Feb  8 19:22:36 2025
-[BUILDTIME] 5 (5)
-[SIZE] 0.92 MB, 42 files
+[TIMESTAMP] 1759916420 Wed Oct  8 11:40:20 2025
+[BUILDTIME] 10 (9)
+[SIZE] 5.55 MB, 385 files
 
 [DEP] bash
 [DEP] binutils
@@ -11,9 +11,11 @@
 [DEP] gawk
 [DEP] grep
 [DEP] gzip
+[DEP] libheif
 [DEP] libjpeg
 [DEP] linux-header
 [DEP] make
+[DEP] perl
 [DEP] pkgconfig
 [DEP] sed
 [DEP] tar

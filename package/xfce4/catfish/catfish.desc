@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/catfish/catfish.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,17 +13,15 @@
 
 [A] Christian Dywan <christian@twotoasts.de>
 [A] Sean Davis <bluesabre@xfce.org>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/desktop/xfce
 
 [E] add pexpect pydbus
 
 [L] GPL
-[S] Stable
-[V] 4.20.0
-[P] X -----5---9 700.000
+[V] 4.20.1
 
-[O] . $base/package/xfce4/*/xfce4-conf.in
+[D] 4cc73397dba490b783d17eb149e27ee45e48edf00c4af076a72444d3 catfish-4.20.1.tar.xz https://archive.xfce.org/src/apps/catfish/4.20/
 
-[D] 6bce0ab1cb0927f0aeaa93b44bb2e50d906209b76d5edbfcabc74b75 catfish-4.20.0.tar.bz2 https://archive.xfce.org/src/apps/catfish/4.20/catfish-4.20.0.tar.bz2
+. $base/package/xfce4/*/xfce4-conf.in

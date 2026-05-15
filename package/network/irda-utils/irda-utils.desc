@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/irda-utils/irda-utils.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -15,17 +15,15 @@
 [U] https://irda.sourceforge.net/
 
 [A] Dag Brattli <dag@brattli.net>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/system
 [F] CROSS
 
 [L] GPL
-[S] Stable
 [V] 0.9.18
-[P] X -----5---9 190.600
 
-# TODO: their Makefiles have /usr hardcoded and uses both ROOT and PREFIX as DESTDIR
-[O] var_append makeinstopt ' ' "ROOT=$root PREFIX=$root"
+[D] 61812600d2832faa82a9500636ea8cffcee34feb6f1432fcf5d81df7 irda-utils-0.9.18.tar.gz https://prdownloads.sourceforge.net/sourceforge/irda/
 
-[D] 61812600d2832faa82a9500636ea8cffcee34feb6f1432fcf5d81df7 irda-utils-0.9.18.tar.gz http://dl.sourceforge.net/sourceforge/irda/
+# TODO: the Makefiles have /usr hardcoded and uses both ROOT and PREFIX as DESTDIR
+var_append makeinstopt ' ' "ROOT=$root PREFIX=$root"

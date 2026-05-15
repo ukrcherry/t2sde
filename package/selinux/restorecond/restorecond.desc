@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/restorecond/restorecond.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,13 +11,13 @@
 [U] https://github.com/SELinuxProject/selinux
 
 [A] NSA SElinux Team
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/security
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 3.7
+[V] 3.10
 
-[D] 24b324e76b86cea5f34defa453c4f93f47371f4909bc2e5b6020735d restorecond-3.7.tar.gz https://github.com/SELinuxProject/selinux/releases/download/3.7/
+[CV-GROUP] selinux
+[D] 02debfc35c1396aaec51b9e4c6e04ca616b70ae33184ab8c290142b6 restorecond-3.10.tar.gz https://github.com/SELinuxProject/selinux/releases/download/3.10/

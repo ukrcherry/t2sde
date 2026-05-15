@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gprbuild/gprbuild.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -17,10 +17,32 @@
 [C] extra/development
 
 [L] GPL
-[S] Stable
-[V] 25.0.0
+[V] 26.0.0
 [P] X -----5---9 200.500
 
-[D] b77312636a087f251fe1969f957d2e97f47d4e4c08607faba42e228c gprbuild-25.0.0.tar.gz https://github.com/AdaCore/gprbuild/archive/v25.0.0/
-[D] 32e03f5d2f0523401e757a0952d2d6e3a06df00ed4a2d058b65d931c gprconfig_kb-25.0.0.tar.gz https://github.com/AdaCore/gprconfig_kb/archive/v25.0.0/
-[D] 1b02bcf9b7dce14a87cf1112a1dc334447d6dc30e1295920cf751b4d xmlada-25.0.0.tar.gz https://github.com/AdaCore/xmlada/archive/v25.0.0/
+[D] e08a8c192f8582eb8b404fca021e73cfd2187037a188f09dd0ef1550 gprbuild-26.0.0.tar.gz https://github.com/AdaCore/gprbuild/archive/v26.0.0/
+[D] 22d25a1b77f5eb24e21c19d3f1852c950e3549b943a3387a3496e447 gprconfig_kb-26.0.0.tar.gz https://github.com/AdaCore/gprconfig_kb/archive/v26.0.0/
+[D] 253f3245ca7577341e263fa67eeaea6bc559a90ad7290161220e9308 xmlada-26.0.0.tar.gz https://github.com/AdaCore/xmlada/archive/v26.0.0/
+
+gprconfig_extract() {
+	tar -xf $(match_source_file -p gprconfig_kb-.*tar.*)
+	mv gprconfig_kb-* gprconfig_kb
+	# Note: gprbuild bootstrap needs xmlada source, not installed xmlada
+	if ! which gprbuild >/dev/null; then
+		tar -xf $(match_source_file -p xmlada-.*tar.*)
+		mv xmlada-* xmlada
+	fi
+}
+hook_add prepatch 2 gprconfig_extract
+
+gprbuild_bootstrap() {
+	if ! which gprbuild >/dev/null; then
+		# gprbuild requires itself to build
+		CC=$HOSTCC ./bootstrap.sh --with-xmlada=./xmlada --with-kb=./gprconfig_kb --prefix=./bootstrap
+		export PATH=$PATH:$PWD/bootstrap/bin
+	fi
+}
+hook_add preconf 2 gprbuild_bootstrap
+
+# libgpr is needed by gnatcoll
+var_append makeinstopt ' ' libgpr.install.static

@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/perl-imager/perl-imager.desc
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A Perl extension for generating 24-bit images
+
+[T] Imager is a Perl extension for generating 24-bit images.
+
+[U] http://imager.perl.org/
+
+[A] Tony Cook <tonyc@cpan.org>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/multimedia
+
+[L] Artistic GPL
+[V] 1.030
+
+[D] 33c21ccca019fbb1f93e9e44a1763c995f35870ec07ca8ece0d0c3f1 Imager-1.030.tar.gz http://search.cpan.org/CPAN/authors/id/T/TO/TONYC/

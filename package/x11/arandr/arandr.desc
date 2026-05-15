@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/arandr/arandr.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] ARandR provides a simple visual front end for XRandR
+
+[T] ARandR provides a simple visual front end for XRandR.
+
+[U] https://christian.amsuess.com/tools/arandr/
+
+[A] Arandr Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 0.1.11
+[L] GPL3
+
+[D] ea1f08e4506165b6ec69c66b497966f6330a5fccc7ac9314d24bf460 arandr-0.1.11.tar.gz https://christian.amsuess.com/tools/arandr/files/

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/sword/sword.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -23,11 +23,10 @@
 [C] extra/religion
 
 [L] GPL
-[S] Stable
-[V] 1.6.2
+[V] 1.9.0
 [P] X -----5---9 221.400
 
-[O] var_append confopt ' ' --without-lucene
-[O] hook_add postmake 3 "make install_config"
+[D] 0b84f631fc45ffc5588ea379edc17f8e78cb8799d11e7e9e52c22147 sword-1.9.0.tar.gz http://www.crosswire.org/ftpmirror/pub/sword/source/v1.9/
 
-[D] 9ae77bf68618b6798d15d84a2bce4efd01a7ffbab40276a9a09d07fc sword-1.6.2.tar.gz http://www.crosswire.org/ftpmirror/pub/sword/source/v1.6/
+var_append confopt ' ' --without-lucene
+hook_add postmake 3 "make install_config"

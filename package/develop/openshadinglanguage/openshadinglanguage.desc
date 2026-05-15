@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/openshadinglanguage/openshadinglanguage.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,23 +11,22 @@
 [T] materials, lights, displacement, and pattern generation.
 
 [A] Academy Software Foundation
-[M] Aleksi V <aleksi.venalainen@outlook.com>
+[M] Aleksi Venäläinen <aleksi.venalainen@outlook.com>
 
 [U] https://github.com/AcademySoftwareFoundation/OpenShadingLanguage
 
 [C] extra/development
 [F] OBJDIR
-# NO-LTO NO-AS-NEEDED
+
+[E] opt qt6base
 
 [L] BSD
-[S] Stable
-[V] 1.14.5.1
+[V] 1.15.4.0
 [P] X -----5---9 400.000
 
-[O] var_append CXX_WRAPPER_APPEND ' ' -std=c++17
-[O] var_append cmakeopt ' ' -DPYTHON_INCLUDE_DIR=$libdir
-[O] var_append cmakeopt ' ' -DPYTHON_LIBRARY=$libdir
-[O] var_append cmakeopt ' ' -DPYTHON_SITE_DIR=$libdir/python3.12/site-packages
-[O] var_append cmakeopt ' ' "-DPYTHON_EXECUTABLE:FILEPATH=`which python3`"
+[D] c81583b4fa21a9cd99982a2d800adbcf68f40fd5f45fad8c95a6f126 OpenShadingLanguage-1.15.4.0.tar.gz https://github.com/AcademySoftwareFoundation/OpenShadingLanguage/archive/v1.15.4.0/
 
-[D] 3739a9888d42c888733190d23ea6b0fbeb2f3ed8c87f56a7f061ef96 OpenShadingLanguage-1.14.5.1.tar.gz https://github.com/AcademySoftwareFoundation/OpenShadingLanguage/archive/v1.14.5.1/
+var_append cmakeopt ' ' -DPYTHON_INCLUDE_DIR=$libdir
+var_append cmakeopt ' ' -DPYTHON_LIBRARY=$libdir
+var_append cmakeopt ' ' -DPYTHON_SITE_DIR=$libdir/python$(pkgprefix ver python| sed 's/\.[[:digit:]]*$//')/site-packages
+var_append cmakeopt ' ' -DPYTHON_EXECUTABLE:FILEPATH=$(which python3)

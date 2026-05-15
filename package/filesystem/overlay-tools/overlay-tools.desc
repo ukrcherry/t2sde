@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/overlay-tools/overlay-tools.desc
-[COPY] Copyright (C) 2020 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2020 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,16 +11,15 @@
 [U] https://www.kernel.org/doc/html/latest/filesystems/overlayfs.html
 
 [A] kxzkxz7139@gmail.com
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/system
 [F] CROSS
 
 [L] PublicDomain
-[S] Beta
 [V] 291c7f4
 
-[O] makeinstopt=
-[O] hook_add postmake 5 "install overlay $root$sbindir"
-
 [D] 5a491792642b903b05fcc0209b01036aa6578422e9a676fcc7b7ecd9 overlay-tools-291c7f4.tar.gz !https://codeload.github.com/kmxz/overlayfs-tools/tar.gz/291c7f4
+
+makeinstopt=
+hook_add postmake 5 "install overlay $root$sbindir"

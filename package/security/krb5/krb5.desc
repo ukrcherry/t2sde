@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/krb5/krb5.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,18 +13,18 @@
 [U] https://web.mit.edu/kerberos/dist/index.html
 
 [A] MIT
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/security
 [F] CROSS
 
 [L] MIT
-[S] Stable
-[V] 1.21.3
-[P] X -----5---9 660.000
-
-[O] srcdir="*/src"
-[O] var_append CC_WRAPPER_APPEND ' ' -std=gnu17
+[V] 1.22.2
+[P] X -----5---9 300.000
 
 [CV-URL] https://web.mit.edu/kerberos/dist/krb5/
-[D] 1280804dadf2a6b3738202c3f64f56244a7dc2ae62ef591218df1a27 krb5-1.21.3.tar.gz https://web.mit.edu/kerberos/dist/krb5/1.21/
+[D] fccfabd8e3a746183479b5e9574b259c4ad75d8cb80cb7b3cd4ca0cd krb5-1.22.2.tar.gz https://web.mit.edu/kerberos/dist/krb5/1.22/
+
+srcdir="*/src"
+var_append confopt ' ' "--enable-shared --with-system-et --with-system-ss"
+var_append GCC_WRAPPER_APPEND ' ' -std=gnu17

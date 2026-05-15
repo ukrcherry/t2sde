@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/blender/blender.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -16,16 +16,39 @@
 [A] NaN
 [A] The Blender Foundation
 [A] Ton Roosendaal
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] OBJDIR
 
+[E] add sse2neon
 [E] opt libwebp
+[E] opt opensubdiv
 
 [L] GPL
-[S] Stable
-[V] 4.4.3
+[V] 5.1.1
 
 [CV-URL] https://www.blender.org/download/
-[D] fc2786dbff6f6d9c50921111d70aee4148d235669d571765c5215286 blender-4.4.3.tar.xz https://download.blender.org/source/
+[D] 527207591fc84f4a4a32082b1ddf27b45acca57800dd38794c2eb9b9 blender-5.1.1.tar.xz https://download.blender.org/source/
+
+if pkginstalled embree; then
+	var_append cmakeopt ' ' '-DWITH_CYCLES_DEVICE_CUDA=OFF -DWITH_CYCLES_DEVICE_OPTIX=OFF'
+	var_append cmakeopt ' ' '-DWITH_CYCLES_DEVICE_HIP=OFF -DWITH_CYCLES_DEVICE_ONEAPI=OFF'
+
+	var_append cmakeopt ' ' '-DWITH_CYCLES=ON -DWITH_CYCLES_OSL=ON'
+else
+	var_append cmakeopt ' ' -DWITH_CYCLES_EMBREE=OFF
+fi
+
+var_append cmakeopt ' ' "-DWITH_INSTALL_PORTABLE=OFF -DWITH_LIBS_PRECOMPILED=OFF"
+var_append cmakeopt ' ' "-DEpoxy_INCLUDE_DIR=$(pkgprefix includedir epoxy)"
+
+pkginstalled tbb || var_append cmakeopt ' ' -DWITH_TBB=OFF
+#pkginstalled numpy || var_append cmakeopt ' ' -DWITH_PYTHON_NUMPY=OFF
+
+var_append cmakeopt ' ' -DWITH_PYTHON_INSTALL=OFF
+if pkginstalled python; then
+	var_append cmakeopt ' ' -DPYTHON_VERSION=$(pkgprefix ver python | sed 's/\.[[:digit:]]*$//')
+else
+	var_append cmakeopt ' ' -DWITH_PYTHON=OFF
+fi

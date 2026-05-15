@@ -1,0 +1,23 @@
+[TIMESTAMP] 1750597003 Sun Jun 22 14:56:43 2025
+[BUILDTIME] 65 (9)
+[SIZE] 8.44 MB, 167 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] coreutils
+[DEP] curl
+[DEP] diffutils
+[DEP] findutils
+[DEP] flex
+[DEP] gawk
+[DEP] grep
+[DEP] groff
+[DEP] gzip
+[DEP] libtirpc
+[DEP] libxml
+[DEP] linux-header
+[DEP] m4
+[DEP] make
+[DEP] sed
+[DEP] tar
+[DEP] util-linux

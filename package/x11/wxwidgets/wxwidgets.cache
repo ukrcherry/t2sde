@@ -1,6 +1,6 @@
-[TIMESTAMP] 1742462074 Thu Mar 20 10:14:34 2025
-[BUILDTIME] 520 (5)
-[SIZE] 59.61 MB, 1690 files
+[TIMESTAMP] 1774030186 Fri Mar 20 19:09:46 2026
+[BUILDTIME] 740 (9)
+[SIZE] 70.29 MB, 1730 files
 
 [DEP] at-spi2-core
 [DEP] bash
@@ -12,7 +12,6 @@
 [DEP] curl
 [DEP] diffutils
 [DEP] expat
-[DEP] findutils
 [DEP] fontconfig
 [DEP] freetype
 [DEP] gawk
@@ -27,12 +26,14 @@
 [DEP] harfbuzz
 [DEP] libglvnd
 [DEP] libjpeg
-[DEP] libmspack
+[OPT] libmspack
 [DEP] libnotify
 [DEP] libpng
 [DEP] libsdl2
 [DEP] libsecret
+[OPT] libsoup3
 [DEP] libtiff
+[OPT] libwebp
 [DEP] libx11
 [DEP] libxi
 [DEP] libxtst
@@ -43,8 +44,9 @@
 [DEP] pkgconfig
 [DEP] sed
 [DEP] tar
-[DEP] tbb
+[DEP] util-linux
 [DEP] wayland
+[OPT] webkitgtk41
 [DEP] xkbcommon
 [DEP] xorgproto
 [DEP] xz

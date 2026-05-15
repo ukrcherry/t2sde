@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libxkbui/libxkbui.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,15 +12,16 @@
 [U] https://www.X.org
 
 [A] X.org Foundation {http://www.X.org}
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/x11
 [F] CROSS NO-PIE NO-LTO.mips NO-LTO.mips64
 
+[E] add libxt
+
 [L] OpenSource
-[S] Stable
 [V] 1.0.2
 
-[O] . package/*/*/modular-x-conf.in
-
 [D] 66bf5c4f45a63dab372f4d55c68633f19d6bc65910feb3b05d23dbec libxkbui-1.0.2.tar.bz2 http://xorg.freedesktop.org/releases/individual/lib/
+
+. package/*/*/modular-x-conf.in

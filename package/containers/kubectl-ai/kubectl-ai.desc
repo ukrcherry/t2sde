@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/kubectl-ai/kubectl-ai.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,16 +13,16 @@
 [U] https://github.com/GoogleCloudPlatform/kubectl-ai
 
 [A] Google Inc.
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 
 [E] add kubectl
 
 [L] APL
-[S] Stable
-[V] 0.0.8
+[V] 0.0.31
 
-[O] hook_add postmake 5 "cp -vf kubectl-ai $root$bindir/"
+[D] 75ec8e1c0d7fcb2d79bab80eff5fe13b0b92b282205fda4fea49a85f kubectl-ai-0.0.31.tar.gz https://github.com/GoogleCloudPlatform/kubectl-ai/archive/v0.0.31/
 
-[D] 92cf377969b3372e013f77d1a2abaafa64f9f69f720cf0850a77893e kubectl-ai-0.0.8.tar.gz https://github.com/GoogleCloudPlatform/kubectl-ai/archive/v0.0.8/
+hook_add postmake 5 "cp -vf kubectl-ai $root$bindir/"
+var_append goconfopt ' ' '-o kubectl-ai ./cmd'

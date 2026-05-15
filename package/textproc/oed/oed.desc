@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/oed/oed.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Portable version of the OpenBSD ed text editor
+
+[T] Portable version of the OpenBSD ed text editor.
+
+[U] https://github.com/ibara/oed
+
+[A] Oed Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 7.4
+[L] BSD ISC
+
+[D] b0736d36af8fdb34257af5a660fc475e3a36c2305ccc8e3c2c466698 oed-7.4.tar.gz https://github.com/ibara/oed/archive/refs/tags/

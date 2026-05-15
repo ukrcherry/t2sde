@@ -1,12 +1,15 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/cosmic-store/cosmic-store.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
-[I] cosmic-store
+[I] COSMIC Store
 
-[T] cosmic-store.
+[T] COSMIC Store supports system packages via PackageKit, support for
+[T] installing media codecs on the host, managing system and user flatpak
+[T] repositories, supports system and user flatpak repositories, installing
+[T] COSMIC applets, and a dedicated category for "Made for COSMIC" apps.
 
 [U] https://github.com/pop-os/cosmic-store/
 
@@ -19,10 +22,10 @@
 [E] add flatpak
 
 [L] GPL3
-[S] Alpha
-[V] epoch-1.0.0-alpha.7
-
-[O] . $base/package/cosmic/*/cosmic-conf.in
+[V] 1.0.13
 
 [CV-GROUP] cosmic-desktop
-[D] 5c444b1901a051263b5b3251099d39330f3961f57ced8661d7df6745 cosmic-store-epoch-1.0.0-alpha.7.tar.gz https://github.com/pop-os/cosmic-store/archive/epoch-1.0.0-alpha.7/
+[D] d2eef1a0d5a813368e7aad6c68d562d7dbf112bc13b3388a2b0bd98d cosmic-store-epoch-1.0.13.tar.gz https://github.com/pop-os/cosmic-store/archive/epoch-1.0.13/
+
+. $base/package/cosmic/*/cosmic-conf.in
+var_append GCC_WRAPPER_APPEND ' ' -c?:-lzstd

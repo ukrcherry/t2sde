@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/rkdeveloptool/rkdeveloptool.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Opensource client for rockusb devices
+
+[T] Opensource client for rockusb devices.
+
+[U] https://github.com/rockchip-linux/rkdeveloptool/
+
+[A] Rkdeveloptool Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.32
+[L] GPL
+
+[D] c1ca78c65cf3df7a698884a407d7ff4d152ef9292384ad0dbf157664 rkdeveloptool-1.32.zip !https://github.com/rockchip-linux/rkdeveloptool/archive/46bb4c073624226c3f05b37b9ecc50bbcf543f5a.zip
+
+hook_add preconf 5 'rm CMakeLists.txt'
+hook_add preconf 5 'autoreconf -fi'
+var_append GCC_WRAPPER_APPEND ' ' -I$root$(pkgprefix includedir libusb)/libusb-1.0/

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/pulseaudio-qt/pulseaudio-qt.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,15 +13,17 @@
 [U] https://github.com/KDE/pulseaudio-qt
 
 [A] The KDE-Team
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] LGPL
-[S] Stable
-[V] 1.7.0
+[V] 1.8.1
 [P] X -----5---9 162.918
 
-[O] . $base/package/*/*/kde-conf.in
+[D] 94a9e8b644612591000cbb20e490b40e5b002610b99c955a2b152ef3 pulseaudio-qt-1.8.1.tar.xz https://download.kde.org/stable/pulseaudio-qt/
 
-[D] 25a5a4137931ef57b0c8e7bdad0cfa28c6fa78442e413ad98dceecfd pulseaudio-qt-1.7.0.tar.xz https://download.kde.org/stable/pulseaudio-qt/
+. $base/package/*/*/kde-conf.in
+
+atstage cross && var_append CXX_WRAPPER_APPEND ' ' "-L$root$(pkgprefix libdir glib)"

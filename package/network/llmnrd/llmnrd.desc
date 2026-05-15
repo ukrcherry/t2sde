@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/llmnrd/llmnrd.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Link-Local Multicast Resolution Daemon for Linux
+
+[T] Link-Local Multicast Resolution (LLMNR) Daemon for Linux.
+
+[U] https://github.com/tklauser/llmnrd
+
+[A] Llmnrd Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.7
+[L] GPL
+
+[D] 90c9be20932aed269d473b2abe70549f50a93d25c6d19d32e192d942 llmnrd-0.7.tar.gz https://github.com/tklauser/llmnrd/archive/v0.7/

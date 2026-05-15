@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xfce4-mixer/xfce4-mixer.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -13,18 +13,16 @@
 
 [A] Danny Milosavljevic <danny_milo@yahoo.com>
 [A] Benedikt Meurer <Benedikt.Meurer@unix-ag.uni-siegen.de>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/desktop/xfce
 [F] NOPARALLEL
 
 [L] BSD
-[S] Alpha
-[V] 4.18.2
-[P] X -----5---9 224.100
+[V] 4.20.0
 
-[O] pkginstalled alsa-lib && var_append confopt ' ' --with-sound=alsa
-[O] autogen=1
-[O] . $base/package/xfce4/*/xfce4-conf.in
+[D] 7fae7a7bb4f949b5065911102afab7cd1943bbce25cff28c9d3623e3 xfce4-mixer-4.20.0.tar.xz https://archive.xfce.org/src/apps/xfce4-mixer/4.20/
 
-[D] aaaede266bf48d9b1b5a32582eb5b1f1ff47d1ee9623d07766067220 xfce4-mixer-4.18.2.tar.bz2 https://archive.xfce.org/src/apps/xfce4-mixer/4.18/
+. $base/package/xfce4/*/xfce4-conf.in
+pkginstalled alsa-lib && var_append confopt ' ' --with-sound=alsa
+autogen=1

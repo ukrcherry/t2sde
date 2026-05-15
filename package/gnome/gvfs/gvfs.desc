@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gvfs/gvfs.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,17 +11,40 @@
 [T] systems, http, ftp and others. It provides a URI-based API, a backend
 [T] supporting asynchronous file operations, and other features.
 
+[U] https://wiki.gnome.org/Projects/gvfs
+
 [A] Alexander Larsson <alexl@redhat.com>
-[M] Susanne Klaus <susan@t2-project.org>
+[M] Susanne Klaus <vadja@gmx.de>
 
 [C] extra/development extra/filesystem extra/desktop/gnome
 
 [L] LGPL
-[S] Stable
-[V] 1.57.2
+[V] 1.60.0
 [P] X -----5---9 142.400
 
-[O] . $base/package/*/*/gnome-conf.in
-
 [CV-URL] https://download.gnome.org/sources/gvfs/cache.json
-[D] fd2f17b7a6023521651c5a04e6bf7fb2ca804ca10a0849fb791961ae gvfs-1.57.2.tar.xz https://download.gnome.org/sources/gvfs/1.57/
+[D] 73b1b1e79937474176eacf09a964986105cc174bcc8300714f6b9911 gvfs-1.60.0.tar.xz https://download.gnome.org/sources/gvfs/1.60/
+
+. $base/package/*/*/gnome-conf.in
+
+if ! pkginstalled systemd; then
+	var_append mesonopt ' ' -Dsystemduserunitdir=no
+	var_append mesonopt ' ' -Dtmpfilesdir=no
+	var_append mesonopt ' ' -Dlogind=False
+fi
+
+pkginstalled avahi || var_append mesonopt ' ' -Ddnssd=False
+pkginstalled libcdio libcdio-paranoia || var_append mesonopt ' ' -Dcdda=False
+pkginstalled gcr || var_append mesonopt ' ' -Dgcr=False
+pkginstalled libarchive || var_append mesonopt ' ' -Darchive=False
+pkginstalled libbluray || var_append mesonopt ' ' -Dbluray=False
+pkginstalled libimobiledevice libplist || var_append mesonopt ' ' -Dafc=False
+pkginstalled libmtp || var_append mesonopt ' ' -Dmtp=False
+pkginstalled libnfs || var_append mesonopt ' ' -Dnfs=False
+pkginstalled libsoup3 || var_append mesonopt ' ' -Dhttp=False
+pkginstalled polkit || var_append mesonopt ' ' -Dprivileged_group=False
+pkginstalled samba|| var_append mesonopt ' ' -Dsmb=False
+pkginstalled udisks || var_append mesonopt ' ' -Dudisks2=False
+
+# these libs are currently missing
+var_append mesonopt ' ' "-Dgoa=False -Dgoogle=False -Donedrive=False"

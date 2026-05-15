@@ -1,0 +1,28 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/plasma-keyboard/plasma-keyboard.desc
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Virtual Keyboard for Qt based desktops
+
+[T] Virtual Keyboard for Qt based desktops.
+
+[U] https://invent.kde.org/plasma/plasma-keyboard
+
+[A] The KDE-Team
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/desktop/kde
+[F] CROSS OBJDIR
+
+[L] GPL
+[V] 6.6.5
+
+[CV-GROUP] kde-plasma
+[D] 1231c25c0995a979c77e2a38ae704ecc3c37738f9291d57fce8f9d54 plasma-keyboard-v6.6.5.tar.bz2 https://invent.kde.org/plasma/plasma-keyboard/-/archive/v6.6.5/
+
+. $base/package/*/*/kde-conf.in
+
+atstage cross &&
+	var_append cmakeopt ' ' -DQtWaylandScanner_EXECUTABLE=$root/TOOLCHAIN/cross/qt/libexec/qt6/qtwaylandscanner

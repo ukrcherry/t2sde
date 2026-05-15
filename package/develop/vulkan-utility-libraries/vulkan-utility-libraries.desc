@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/vulkan-utility-libraries/vulkan-utility-libraries.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -19,10 +19,9 @@
 [F] CROSS
 
 [L] APL
-[S] Stable
-[V] 1.4.309.0
-
-[O] var_append cmakeopt ' ' "-DCMAKE_INSTALL_INCLUDEDIR=$root$(pkgprefix includedir vulkan-headers)"
+[V] 1.4.351
 
 [CV-GROUP] vulkan
-[D] 9da1d735a5f94accdd24efe7c72e9ce3a495f51dd83b93976af87fa0 Vulkan-Utility-Libraries-1.4.309.0.tar.gz https://github.com/KhronosGroup/Vulkan-Utility-Libraries/archive/refs/tags/vulkan-sdk-1.4.309.0/
+[D] d69b273499c247cd1211847f23739705e3705dff97a0d63ad5731b18 Vulkan-Utility-Libraries-1.4.351.tar.gz https://github.com/KhronosGroup/Vulkan-Utility-Libraries/archive/v1.4.351/
+
+var_append cmakeopt ' ' "-DCMAKE_INSTALL_INCLUDEDIR=$root$(pkgprefix includedir vulkan-headers)"

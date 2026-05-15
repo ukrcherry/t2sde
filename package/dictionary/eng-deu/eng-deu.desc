@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/eng-deu/eng-deu.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -19,13 +19,20 @@
 
 [A] Horst Eyermann <Horst@freedict.de>
 [A] freedict project <freedict-beta@lists.sourceforge.net>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/education
 [F] CROSS
 
 [L] GPL
-[S] Alpha
 [V] 20030917
 
-[D] e8a9212b58039ff544c9b89db46b21ce438f6b55c041a0dc73973058 eng-deu-20030917.tar.gz !http://freedict.sourceforge.net/download/linux/eng-deu.tar.gz
+[D] e8a9212b58039ff544c9b89db46b21ce438f6b55c041a0dc73973058 eng-deu-20030917.tar.gz !https://freedict.sourceforge.net/download/linux/eng-deu.tar.gz
+
+copy_dictionary() {
+	mkdir -p $root/$prefix/share/dictd
+	tar -v $taropt `match_source_file -p eng-deu`
+	cp -f $builddir/eng-deu.dict.dz $builddir/eng-deu.index $root/$prefix/share/dictd
+}
+runmake=0
+hook_add postmake 5 copy_dictionary

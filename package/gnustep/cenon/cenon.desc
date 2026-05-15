@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/cenon/cenon.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,14 +14,13 @@
 [U] https://www.cenon.info/
 
 [A] TODO: Name <info@vhf.de>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 
 [L] OpenSource
-[S] Stable
-[V] 3.83
+[V] 4.0.6
 
-[O] . $base/package/*/*/gnustep-conf.in
+[D] e7228dd2d49df25d4a04674e72eb979656f076e1e0f047f2bb173be3 Cenon-4.0.6.tar.bz2 https://cenon.download/source/
 
-[D] 625941223ba1a5fe7b60f6f8e462efdf266b8d7e3267d2a8c42838f6 Cenon-3.83.tar.bz2 http://www.vhf-group.com/vhfInterservice/download/source/
+. $base/package/*/*/gnustep-conf.in

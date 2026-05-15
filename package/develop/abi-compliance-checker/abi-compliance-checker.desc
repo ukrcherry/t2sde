@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/abi-compliance-checker/abi-compliance-checker.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A tool for checking backward compatibility of a C/C++ library
+
+[T] A tool for checking backward compatibility of a C/C++ library.
+
+[U] https://github.com/lvc/abi-compliance-checker
+
+[A] Abi-compliance-checker Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 2.3
+[L] LGPL
+[P] X -----5---9 700.000
+
+[D] c96ea9881b668ff835be53164884b4bf7a7cffcee39d9084d250f350 abi-compliance-checker-2.3.tar.gz https://github.com/lvc/abi-compliance-checker/archive/2.3/

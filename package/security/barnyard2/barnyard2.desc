@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/barnyard2/barnyard2.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -13,15 +13,14 @@
 [U] http://www.securixlive.com/barnyard2/index.php
 
 [A] SecurixLive <dev@securixlive.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network
 
 [L] GPL
-[S] Stable
 [V] 2.1.13
 
-[O] autogen=1
-[O] var_append GCC_WRAPPER_APPEND ' ' -std=gnu17
-
 [D] 48b81a8f9153577891eaea606d4c611525d49260a010c28728e8f56e barnyard2-2.1.13.tar.gz https://github.com/firnsy/barnyard2/archive/refs/tags/v2-1.13/
+
+autogen=1
+var_append GCC_WRAPPER_APPEND ' ' -std=gnu17

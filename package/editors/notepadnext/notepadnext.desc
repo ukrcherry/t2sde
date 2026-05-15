@@ -1,0 +1,23 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/notepadnext/notepadnext.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] A rich text-editor and reimplementation of Notepad++
+
+[T] NotepadNext is a cross-platform, reimplementation of Notepad++.
+
+[U] https://github.com/dail8859/NotepadNext
+
+[A] dail8859
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/editor
+
+[L] GPL
+[V] 0.14
+
+[D] 89c7fe0e8ec1b945a41a5e72a9132617d5437e7c50ed8800440e3110 NotepadNext-0.14-git.tar.gz git+https://github.com/dail8859/NotepadNext v0.14
+
+var_append GCC_WRAPPER_APPEND ' ' "-I$(pkgprefix includedir libxcb) -L$(pkgprefix libdir libxcb)"

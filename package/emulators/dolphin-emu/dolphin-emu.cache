@@ -1,41 +1,68 @@
+[TIMESTAMP] 1758007175 Tue Sep 16 09:19:35 2025
+[BUILDTIME] 1850 (9)
+[SIZE] 70.51 MB, 2563 files
 
-[TIMESTAMP] 1545043504 Mon Dec 17 10:45:04 2018
-[BUILDTIME] 100 (5)
-[SIZE] 0.02 MB, 6 files
-
+[DEP] 00-dirtree
 [DEP] alsa-lib
-[DEP] bdb
+[DEP] bash
 [DEP] binutils
+[DEP] bluez
+[DEP] bzip2
 [DEP] cmake
 [DEP] coreutils
 [DEP] curl
+[DEP] dbus
 [DEP] diffutils
-[DEP] findutils
+[DEP] ffmpeg
+[DEP] fmt
 [DEP] freetype
 [DEP] gawk
+[DEP] gettext
+[DEP] graphviz
 [DEP] grep
-[DEP] libao
+[DEP] gtest
+[DEP] gzip
+[DEP] hidapi
+[DEP] jack
+[DEP] libdecor
+[DEP] libdrm
+[DEP] libedit
 [DEP] libevdev
-[DEP] libpthread-stubs
+[DEP] libglvnd
+[DEP] liburing
 [DEP] libusb
 [DEP] libx11
-[DEP] libxau
 [DEP] libxcb
-[DEP] libxdmcp
+[DEP] libxcursor
 [DEP] libxext
 [DEP] libxfixes
 [DEP] libxi
+[DEP] libxml
 [DEP] libxrandr
 [DEP] libxrender
+[DEP] libxscrnsaver
 [DEP] linux-header
 [DEP] llvm
+[DEP] lz4
+[DEP] lzo
 [DEP] make
+[DEP] mbedtls
+[DEP] mesa
+[DEP] pipewire
 [DEP] pkgconfig
-[DEP] portaudio
+[DEP] pugixml
 [DEP] pulseaudio
+[DEP] python
+[DEP] qt6base
 [DEP] sed
-[DEP] sysfiles
+[DEP] speexdsp
 [DEP] tar
-[DEP] wxwidgets
+[DEP] udev
+[DEP] vulkan-headers
+[DEP] wayland
+[DEP] xkbcommon
 [DEP] xorgproto
+[DEP] xxhash
+[DEP] xz
 [DEP] zlib
+[DEP] zstd

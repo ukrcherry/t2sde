@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gnatcoll-bindings/gnatcoll-bindings.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -16,8 +16,33 @@
 [C] extra/development
 
 [L] GPL
-[S] Stable
-[V] 25.0.0
-[P] X -----5---9 200.700
+[V] 26.0.0
 
-[D] 1512127c3eb71678dbeda7b864e419386e19d208d6a0853118d31921 gnatcoll-bindings-25.0.0.tar.gz https://github.com/AdaCore/gnatcoll-bindings/archive/v25.0.0/
+[D] d627c8a25b3a7f1d0e66b97866fcf8343600c2ad76614ddb4863d680 gnatcoll-bindings-26.0.0.tar.gz https://github.com/AdaCore/gnatcoll-bindings/archive/v26.0.0/
+
+components="gmp iconv lzma omp readline syslog zlib"
+
+build() {
+	for component in $components
+	do
+		[ "$component" == readline ] && accept_gpl="--accept-gpl" || unset accept_gpl
+		mkdir -p build/$component
+		cd build/$component
+		python3 ../../$component/setup.py build $accept_gpl --library-types static
+		cd ../..
+	done
+}
+
+install() {
+	for component in $components
+	do
+		cd build/$component
+		python3 ../../$component/setup.py install --prefix=$root/$prefix
+		cd ../..
+	done
+}
+
+runmake=0
+
+hook_add inmake 2 build
+hook_add postmake 2 install

@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/email2trac/email2trac.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Utilities for converting emails to trac tickets
+
+[T] Utilities for converting emails to trac tickets.
+
+[U] https://oss.trac.surfsara.nl/email2trac
+
+[A] Email2trac Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 2.14.0
+[L] GPL
+
+[D] 4bc831c650598652f3596bfdff889c69227bc9b6e667e8aa213ce33c email2trac-2.14.0.tar.gz https://ftp.sara.nl/pub/outgoing/

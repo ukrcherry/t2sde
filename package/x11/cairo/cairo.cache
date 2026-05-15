@@ -1,12 +1,13 @@
-[TIMESTAMP] 1737564924 Wed Jan 22 17:55:24 2025
-[BUILDTIME] 14 (9)
-[SIZE] 1.70 MB, 49 files
+[TIMESTAMP] 1768844224 Mon Jan 19 18:37:04 2026
+[BUILDTIME] 25 (9)
+[SIZE] 1.82 MB, 50 files
 
 [DEP] bash
 [DEP] binutils
 [DEP] cmake
 [DEP] coreutils
 [DEP] diffutils
+[DEP] findutils
 [DEP] fontconfig
 [DEP] freetype
 [DEP] gawk
@@ -26,6 +27,7 @@
 [DEP] python
 [DEP] sed
 [DEP] tar
+[DEP] util-linux
 [OPT] xcb-util
 [DEP] xorgproto
 [DEP] xz

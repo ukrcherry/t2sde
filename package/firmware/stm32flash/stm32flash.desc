@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/stm32flash/stm32flash.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Flash STM32 ARM SoCs using built-in ST serial bootloader over UART or I2C
+
+[T] Flash STM32 ARM SoCs using built-in ST serial bootloader over UART or I2C.
+
+[U] https://sourceforge.net/p/stm32flash/wiki/Home/
+
+[A] Stm32flash Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.7
+[L] GPL
+
+[D] ef6b664119ba6b8539d214739ff096472dc28eede199891a002408cf stm32flash-0.7.tar.gz https://downloads.sourceforge.net/stm32flash/

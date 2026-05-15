@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/networkmanager-qt/networkmanager-qt.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -12,16 +12,18 @@
 [U] https://www.kde.org
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 6.14.0
-[P] X -----5---9 162.420
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 6.26.0
+[P] X -----5---9 200.000
 
 [CV-GROUP] kde-frameworks
-[D] 77002d8785da478317851c3a228af5bf259acb38e73d57c71e25f9ea networkmanager-qt-6.14.0.tar.xz https://download.kde.org/stable/frameworks/6.14/
+[D] 73ea78a230418b00d62c68530beadccab0165c876479d7bf39a854fa networkmanager-qt-6.26.0.tar.xz https://download.kde.org/stable/frameworks/6.26/
+
+. $base/package/*/*/kde-conf.in
+
+atstage cross && var_append CXX_WRAPPER_APPEND ' ' "-L$root$(pkgprefix libdir glib)"

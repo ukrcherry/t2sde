@@ -1,0 +1,32 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/qhull/qhull.desc
+[COPY] Copyright (C) 2023 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A general dimension code for computing convex hulls and related structures
+
+[T] Qhull is a general dimension convex hull program that reads a set
+[T] of points from stdin, and outputs the smallest convex set that contains
+[T] the points to stdout. It also generates Delaunay triangulations, Voronoi
+[T] diagrams, furthest-site Voronoi diagrams, and halfspace intersections
+[T] about a point.
+
+[U] http://qhull.org/
+
+[A] C.B. Barber <qhull@qhull.org>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] OBJDIR
+
+[V] 2020.8.0.2
+[L] OpenSource
+[P] X -----5---9 700.000
+
+[D] 8f4656ab326e3c2329efc9e1a147b9b7e8d6fe51971ba34e95acb960 qhull-2020-src-8.0.2.tgz http://www.qhull.org/download/
+
+runmake=0
+var_append cmakeopt ' ' -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+hook_add inmake 5 "eval make $makeopt all libqhull"
+hook_add postmake 5 "eval make $makeinstopt && cp -v libqhull.so* $root$libdir"

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/icestorm/icestorm.desc
-[COPY] Copyright (C) 2018 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2018 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,12 +14,11 @@
 
 [A] Claire Xenia Wolf <claire@clairexen.net>
 [A] David Shah <d@ds0.me>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [L] ISC
-[S] Beta
 [V] 1a40ae7
 [P] X -----5---9 200.800
 

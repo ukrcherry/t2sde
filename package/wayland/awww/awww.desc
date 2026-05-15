@@ -1,0 +1,27 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/awww/awww.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Wayland animated wallpaper tool
+
+[T] awww is an efficient animated wallpaper daemon for wayland, controlled at
+[T] runtime.
+
+[U] https://codeberg.org/LGFae/awww
+
+[A] Leonardo Gibrowski Faé
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/wayland
+[F] CROSS
+
+[L] GPL3
+[V] 0.12.1
+
+[D] 7f3e47aae64b688189ad59e3506b697be65c35e4f49603b7a9e0ca4e awww-0.12.1.tar.gz !https://codeberg.org/LGFae/awww/archive/v0.12.1.tar.gz
+
+cargoinstopt=
+atstage native && hook_add postmake 5 "cp -vf target/release/{awww,awww-daemon} $root$bindir/"
+atstage cross && hook_add postmake 5 "cp -vf target/${arch_target}/*/{awww,awww-daemon} $root$bindir/"

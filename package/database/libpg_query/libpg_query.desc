@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libpg_query/libpg_query.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] C library for accessing the PostgreSQL parser outside of the server
+
+[T] libpg_query is a C library for accessing the PostgreSQL parser outside of
+[T] the server. This library uses the actual PostgreSQL server source to parse
+[T] SQL queries and return the internal PostgreSQL parse tree.
+
+[U] https://github.com/pganalyze/libpg_query
+
+[A] Duboce Labs, Inc. (pganalyze) <team@pganalyze.com>
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[L] BSD
+[V] 17-6.2.2
+
+[D] bd77d67efb0aba7d616b2a9b2c5e82a8105fd00e6fcff9f231d92a67 libpg_query-17-6.2.2.tar.gz https://github.com/pganalyze/libpg_query/archive/17-6.2.2/

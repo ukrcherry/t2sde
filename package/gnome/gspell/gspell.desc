@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/gspell/gspell.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,18 +11,16 @@
 [U] https://www.gnome.org
 
 [A] The GNOME Project <gnome-devel-list@gnome.org>
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/shell extra/desktop/gnome
 
 [L] LGPL
-[S] Stable
-[V] 1.14.0
+[V] 1.14.3
 [P] X -----5---9 177.200
 
-[O] . $base/package/*/*/gnome-conf.in
-[O] pkginstalled vala || var_append mesonopt ' ' -Dvapi=false
-[O] (pkginstalled gtk-doc && pkginstalled docbook-xml && pkginstalled docbook-xsl) || var_append mesonopt ' ' -Dgtk_doc=false
+[D] 4232eb8628b24dc448e2de1ee87ad97a2d0e324db4d8e6bfd6360dd6 gspell-1.14.3.tar.gz https://gitlab.gnome.org/GNOME/gspell/-/archive/1.14.3/
 
-[CV-URL] https://download.gnome.org/sources/gspell/cache.json
-[D] 893bd11a2e19ae0c7e3c5e687c3fd4a49a24eda7273dafa35dde4f4a gspell-1.14.0.tar.xz https://download.gnome.org/sources/gspell/1.14/
+. $base/package/*/*/gnome-conf.in
+pkginstalled vala || var_append mesonopt ' ' -Dvapi=false
+pkginstalled gtk-doc docbook-xml docbook-xsl || var_append mesonopt ' ' -Dgtk_doc=false

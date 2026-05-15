@@ -1,0 +1,40 @@
+[TIMESTAMP] 1778750026 Thu May 14 11:13:46 2026
+[BUILDTIME] 50 (9)
+[SIZE] 19.45 MB, 323 files
+
+[DEP] automake
+[DEP] bash
+[DEP] binutils
+[DEP] bzip2
+[DEP] coreutils
+[DEP] diffutils
+[DEP] findutils
+[DEP] freetype
+[DEP] gawk
+[OPT] ghostscript
+[DEP] grep
+[OPT] highway
+[OPT] jasper
+[OPT] jbigkit
+[OPT] lcms2
+[OPT] libheif
+[OPT] libjpeg
+[OPT] libjxl
+[OPT] libpng
+[OPT] libtiff
+[OPT] libwebp
+[DEP] libx11
+[DEP] libxext
+[DEP] libxml
+[OPT] libzip
+[DEP] linux-header
+[DEP] make
+[OPT] mbedtls
+[DEP] pkgconfig
+[DEP] sed
+[DEP] tar
+[DEP] util-linux
+[DEP] xorgproto
+[DEP] xz
+[DEP] zlib
+[DEP] zstd

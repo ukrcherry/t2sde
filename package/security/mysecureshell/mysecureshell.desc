@@ -1,0 +1,21 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/mysecureshell/mysecureshell.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A solution which has been made to bring more features to sftp/scp protocol given by OpenSSH
+
+[T] A solution which has been made to bring more features to sftp/scp protocol given by OpenSSH.
+
+[U] https://github.com/mysecureshell/mysecureshell
+
+[A] Mysecureshell Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[V] 2.00
+[L] GPL
+
+[D] 178a99071a1d42fbbf54daeff0cd9650544e548a29c4729f2a507578 mysecureshell-2.00.tar.gz https://github.com/mysecureshell/mysecureshell/archive/v2.00/

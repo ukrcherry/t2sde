@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/admesh/admesh.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A program for processing triangulated solid meshes
+
+[T] A program for processing triangulated solid meshes.
+
+[U] https://github.com/admesh/admesh
+
+[A] Admesh Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.98.5
+[L] GPL
+
+[D] 3e58b6bf98492a70f90e11a3725ae40aec52c3e378e51a41d5dbce00 admesh-0.98.5.tar.gz https://github.com/admesh/admesh/releases/download/v0.98.5/

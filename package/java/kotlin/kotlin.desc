@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/kotlin/kotlin.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,13 +12,42 @@
 [U] https://kotlinlang.org/
 
 [A] The JetBrains Team
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [F] CROSS
 
 [L] BSD
-[S] Stable
-[V] 2.1.20
+[V] 2.3.21
 
-[D] e5a87c9786a0f29ce52af01161c6c731c12ebeb65be49103dd9098f4 kotlin-2.1.20.tar.gz https://github.com/JetBrains/kotlin/archive/refs/tags/v2.1.20/
+[D] 8cac7f5c05949c799aa6604a0250704b2fa2c8ed6196edd62977f6fb kotlin-2.3.21.tar.gz https://github.com/JetBrains/kotlin/archive/refs/tags/v2.3.21/
+
+runmake=0
+
+hook_add inmake 5 "eval ./gradlew dist --info -Pbuild.number=$ver -Pteamcity=true --no-daemon"
+
+install_files() {
+	cd dist/kotlinc
+
+	setconf bin/kapt DIR $root$bindir
+	setconf bin/kotlin DIR $root$bindir
+	setconf bin/kotlin-dce-js DIR $root$bindir
+	setconf bin/kotlinc-js DIR $root$bindir
+	setconf bin/kotlinc-jvm DIR $root$bindir
+	setconf bin/kotlinc KOTLIN_HOME $root$datadir/kotlin
+
+	install -m755 bin/kapt $root$bindir
+	install -m755 bin/kotlin $root$bindir
+	install -m755 bin/kotlin-dce-js $root$bindir
+	install -m755 bin/kotlinc-js $root$bindir
+	install -m755 bin/kotlinc-jvm $root$bindir
+	install -m755 bin/kotlinc $root$bindir
+
+	install -d $root$datadir/$pkg/lib
+	for jar in lib/*.jar; do
+		install -m644 $jar $root$datadir/$pkg/lib
+	done
+
+	install -m644 build.txt $root$datadir/$pkg
+}
+hook_add postmake 5 install_files

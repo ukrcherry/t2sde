@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/openal/openal.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -17,7 +17,7 @@
 [U] https://www.openal.org
 
 [A] Loki Entertainment Software (http://www.lokigames.com)
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] CROSS
@@ -28,13 +28,12 @@
 [E] opt pulseaudio
 
 [L] LGPL
-[S] Stable
-[V] 1.23.1
+[V] 1.25.2
 [P] X -----5---9 166.750
 
-[O] var_append cmakeopt ' ' -DALSOFT_EXAMPLES=FALSE
-[O] pkginstalled pipewire || var_append cmakeopt ' ' -DALSOFT_BACKEND_PIPEWIRE=FALSE
-[O] pkginstalled qt5base || var_append cmakeopt ' ' -DALSOFT_UTILS=FALSE
-[O] var_append GCC_WRAPPER_REMOVE ' ' -Wno-c++20-attribute-extensions
+[D] eff8049d1ba56833e955aa55c63a431f8cc9f3b92596482a64e4b5a7 openal-soft-1.25.2.tar.gz https://github.com/kcat/openal-soft/archive/1.25.2/
 
-[D] 811c5cd19058380feeac5a762b3ede81d65cbabb498f45d0c3aa2199 openal-soft-1.23.1.tar.bz2 https://github.com/kcat/openal-soft/releases/download/1.23.1/
+var_append cmakeopt ' ' -DALSOFT_EXAMPLES=FALSE
+pkginstalled pipewire || var_append cmakeopt ' ' -DALSOFT_BACKEND_PIPEWIRE=FALSE
+pkginstalled qt5base || var_append cmakeopt ' ' -DALSOFT_UTILS=FALSE
+var_append GCC_WRAPPER_REMOVE ' ' -Wno-c++20-attribute-extensions

@@ -1,0 +1,15 @@
+[TIMESTAMP] 1776698957 Mon Apr 20 17:29:17 2026
+[BUILDTIME] 4 (9)
+[SIZE] 0.15 MB, 8 files
+
+[DEP] bash
+[DEP] bzip2
+[DEP] coreutils
+[DEP] diffutils
+[DEP] findutils
+[DEP] gawk
+[DEP] grep
+[DEP] perl
+[DEP] sed
+[DEP] tar
+[DEP] util-linux

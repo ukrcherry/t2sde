@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/oh-my-posh/oh-my-posh.desc
-[COPY] Copyright (C) 2023 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2023 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -17,9 +17,24 @@
 [F] CROSS NO-LTO
 
 [L] MIT
-[S] Stable
-[V] 25.23.0
+[V] 29.13.1
 
-[O] . $base/package/*/*/go-conf.in
+[D] 910ce5d571dcb49e4441ffcde76ee8f08cc293b564ed9ecf0661c91f oh-my-posh-29.13.1.tar.gz https://github.com/JanDeDobbeleer/oh-my-posh/archive/refs/tags/v29.13.1/
 
-[D] d80fef62b37b362910838bc7fb1dc98eaae9b383e1b74d3d7950cdf9 oh-my-posh-25.23.0.tar.gz https://github.com/JanDeDobbeleer/oh-my-posh/archive/refs/tags/v25.23.0/
+. $base/package/*/*/go-conf.in
+export CGO_ENABLED=1
+var_append goconfopt ' ' "-o $pkg"
+var_remove GCC_WRAPPER_REMOVE ' ' '-gdwarf*'
+
+omp_conf() {
+	cd src
+	sed -i "s/= \"development\"/= \"${ver}\"/g" main.go
+}
+hook_add preconf 5 omp_conf
+
+omp_install() {
+	mkdir -pv $root$datadir/$pkg
+	cp -v $pkg $root$bindir/
+	cp -rv ../themes $root$datadir/$pkg/
+}
+hook_add postmake 5 omp_install

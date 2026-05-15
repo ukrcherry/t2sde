@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libxpresent/libxpresent.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A Xlib-compatible API for the Present extension
+
+[T] A Xlib-compatible API for the Present extension.
+
+[U] https://xorg.freedesktop.org/
+
+[A] Libxpresent Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 1.0.2
+[L] MIT
+[P] X -----5---9 300.000
+
+[D] 525eddb5e9bffad2fcaff318a92857dbad607e8f3e028e65af5b4f24 libXpresent-1.0.2.tar.xz https://www.x.org/releases/individual/lib/
+
+. package/*/*/modular-x-conf.in
+runmeson=0

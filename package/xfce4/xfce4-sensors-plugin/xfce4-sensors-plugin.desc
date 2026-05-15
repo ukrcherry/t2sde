@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xfce4-sensors-plugin/xfce4-sensors-plugin.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,15 +12,13 @@
 [U] https://www.xfce.org/
 
 [A] Fabian Nowak
-[M] Johan <linuxmasterjedi@free.fr>
+[M] Johan Boyé <linuxmasterjedi@free.fr>
 
 [C] extra/desktop/xfce
 
 [L] GPL
-[S] Beta
-[V] 1.4.5
-[P] X -----5---9 600.000
+[V] 1.5.0
 
-[O] . $base/package/xfce4/*/xfce4-conf.in
+[D] aad289ec2383cc86755cb864a44260800dd8baf393952071a4e28942 xfce4-sensors-plugin-1.5.0.tar.xz https://archive.xfce.org/src/panel-plugins/xfce4-sensors-plugin/1.5/
 
-[D] b7cd58d86a808fb5729f678bd6c23581f263ba6920385a158b8ccc05 xfce4-sensors-plugin-1.4.5.tar.bz2 https://archive.xfce.org/src/panel-plugins/xfce4-sensors-plugin/1.4/
+. $base/package/xfce4/*/xfce4-conf.in

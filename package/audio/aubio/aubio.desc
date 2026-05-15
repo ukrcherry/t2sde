@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/aubio/aubio.desc
-[COPY] Copyright (C) 2009 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2009 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -16,16 +16,21 @@
 [M] Aldas Nabazas <baldzius@gmail.com>
 
 [C] extra/multimedia
+
 [E] opt doxygen
+[E] opt ffmpeg
+[E] opt jack
+[E] opt libsamplerate
+[E] opt libsndfile
 
 [L] GPL
-[S] Stable
-[V] 0.4.9
+[V] 0.4.9 e559ff1
 [P] X -----5---9 400.500
 
-[O] runmake=0
-[O] hook_add preconf 5 "./waf configure --prefix=/$prefix"
-[O] hook_add inmake 5 "./waf build -j$SDECFG_PARALLEL"
-[O] hook_add postmake 5 "./waf install --destdir=$root"
+[D] 76696dc9afdc22b84e2f58adbd500f969c8013f9a14fdb784a873cac aubio-0.4.9-e559ff1.tar.gz !https://github.com/aubio/aubio/archive/e559ff1.tar.gz
 
-[D] b76b4a5dc305a9fd768365d1deffd70cb74ab6ffd10e8f007261d74a aubio-0.4.9.tar.bz2 https://aubio.org/pub/
+runmake=0 runpysetup=0 runmeson=0
+hook_add preconf 2 "./scripts/get_waf.sh" # TODO: avoid!
+hook_add preconf 5 "python waf configure --prefix=/$prefix"
+hook_add inmake 5 "python waf build -j$SDECFG_PARALLEL"
+hook_add postmake 5 "python waf install --destdir=$root"

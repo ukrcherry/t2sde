@@ -1,0 +1,25 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/ptex/ptex.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Texture mapping system by Walt Disney Animation Studios
+
+[T] Texture mapping system by Walt Disney Animation Studios.
+
+[U] https://ptex.us/
+
+[A] Ptex Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 2.5.2
+
+[E] opt doxygen
+
+[L] BSD
+
+[D] 4dbb2b5dd61f895e4352011e4f67a1144382fd7464739aee55eabfb7 ptex-2.5.2.tar.gz https://github.com/wdas/ptex/archive/v2.5.2/

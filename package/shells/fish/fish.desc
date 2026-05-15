@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/fish/fish.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -21,19 +21,17 @@
 [U] https://fishshell.com/
 
 [A] liljencrantz <liljencrantz@gmail.com>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/system
-[F] CROSS
+[F] CROSS NO-LTO LATOMIC.x86
 
-[E] add pcre2
 [E] opt sphinx-doc
 
 [L] GPL
-[S] Stable
-[V] 4.0.1
+[V] 4.7.1
 
-[O] var_append cmakeopt ' ' -DFISH_USE_SYSTEM_PCRE2=ON
-[O] runcargo=0
+[D] 6fc0b597f7cfe3151ecebdf0ba313db955efdcdddbde0c27a35c477f fish-4.7.1.tar.xz https://github.com/fish-shell/fish-shell/releases/download/4.7.1/
 
-[D] 376e6a8f7509bba27889da3dbe074befbc4717824536d08ba2427781 fish-4.0.1.tar.xz https://github.com/fish-shell/fish-shell/releases/download/4.0.1/
+runcargo=0 rungpepinstall=0
+var_append cmakeopt ' ' -DFISH_USE_SYSTEM_PCRE2=ON

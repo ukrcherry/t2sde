@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/nwcc/nwcc.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,16 +13,15 @@
 [U] https://nwcc.sourceforge.net/
 
 [A] Nils Weller <nils@gnulinux.nl>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/development
 
 [L] BSD
-[S] Beta
 [V] 0.8.3
 
-# this configure does not take many more options
-[O] confopt="--installprefix=$root/$prefix"
-[O] cleanconfopt=0
+[D] 352664d003195f24b4011fadb7c9ddbb3688fdd9a6cb910a048e579b nwcc_0.8.3.tar.gz https://prdownloads.sourceforge.net/sourceforge/nwcc/
 
-[D] 352664d003195f24b4011fadb7c9ddbb3688fdd9a6cb910a048e579b nwcc_0.8.3.tar.gz http://dl.sourceforge.net/sourceforge/nwcc/
+# this configure does not take many more options
+cleanconfopt=0
+confopt="--installprefix=$root/$prefix"

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/rr/rr.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,16 +14,17 @@
 [U] https://rr-project.org/
 
 [A] Mozilla Foundation
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
-[F] OBJDIR
+[F] OBJDIR CROSS NO-LTO.gcc
+
+[R] + x86-64 arm64
 
 [L] BSD
-[S] Stable
 [V] 5.9.0
 
-[O] runconf=0
-[O] var_append cmakeopt ' ' -DBUILD_TESTS=NO
-
 [D] c59054b06e2a07cf21c235ebcecbe35f2ccb934c64f7ed048194dc2b rr-5.9.0.tar.gz https://github.com/mozilla/rr/archive/5.9.0/
+
+runconf=0
+var_append cmakeopt ' ' -DBUILD_TESTS=NO

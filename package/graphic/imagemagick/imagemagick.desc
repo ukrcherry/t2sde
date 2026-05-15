@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/imagemagick/imagemagick.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -16,13 +16,15 @@
 [U] https://www.imagemagick.org/
 
 [A] John Cristy <magick@wizards.dupont.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] CROSS NO-LTO
 
 [E] opt djvulibre
 [E] opt graphviz
+[E] opt ghostscript
+[E] opt jbigkit
 [E] opt lcms2
 [E] opt libheif
 [E] opt libjpeg
@@ -36,9 +38,30 @@
 [E] opt libx11 libxext xorgproto
 
 [L] OpenSource
-[S] Stable
-[V] 7.1.1-47
+[V] 7.1.2-22
 [P] X -----5---9 150.900
 
-[CV-URL] https://imagemagick.org/archive/
-[D] cd52a4863b76df3690960846af8a01e8561bb95b062e90756e43c9f3 ImageMagick-7.1.1-47.tar.xz https://imagemagick.org/archive/
+[CV-URL] https://imagemagick.org/archive/releases/
+[D] 60a18e9ec1f34840a36813efdd1019382cc2c7e14dcf3a8ac7ed0a09 ImageMagick-7.1.2-22.tar.xz https://imagemagick.org/archive/releases/
+
+var_append confopt ' ' --disable-ltdl-install
+var_append confopt ' ' --docdir=$docdir
+
+var_append confopt ' ' --enable-shared
+var_append confopt ' ' --with-modules
+var_append confopt ' ' --with-x
+var_append confopt ' ' --enable-lzw
+pkginstalled perl || var_append confopt ' ' --without-perl
+
+if atstage cross; then
+       var_append configprefix ' ' "CPPFLAGS=\"-I$root/$(pkg-config --variable=includedir fontconfig) -I$root/$(pkg-config --variable=includedir libxml-2.0)/libxml2\""
+       var_append configprefix ' ' "CFLAGS=\"-I$root/$(pkg-config --variable=includedir fontconfig) -I$root/$(pkg-config --variable=includedir libxml-2.0)/libxml2\""
+       var_append configprefix ' ' "LDFLAGS=\"-L$root/$(pkg-config --variable=libdir fontconfig)\""
+fi
+
+libtool_remove_la() {
+	:
+}
+
+# Quick & Dirty hack for the perllocal problem
+. $base/package/*/perl/perllocal_hack.sh

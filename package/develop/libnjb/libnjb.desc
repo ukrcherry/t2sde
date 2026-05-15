@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libnjb/libnjb.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,7 +15,7 @@
 [U] https://libnjb.sourceforge.net/
 
 [A] The libnjb Project
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [F] CROSS
@@ -24,9 +24,8 @@
 
 [L] OpenSource
 
-[S] Stable
 [V] 2.2.7
 
-[O] atstage native || hook_add preconf 5 "echo 'ac_cv_func_malloc_0_nonnull=yes' >> config.cache"
+[D] f0f8098af81a324b8d6c2321c17f57bce323af6f1ccda7fa52d2e434 libnjb-2.2.7.tar.gz https://prdownloads.sourceforge.net/sourceforge/libnjb/
 
-[D] f0f8098af81a324b8d6c2321c17f57bce323af6f1ccda7fa52d2e434 libnjb-2.2.7.tar.gz http://dl.sourceforge.net/sourceforge/libnjb/
+atstage native || hook_add preconf 5 "echo 'ac_cv_func_malloc_0_nonnull=yes' >> config.cache"

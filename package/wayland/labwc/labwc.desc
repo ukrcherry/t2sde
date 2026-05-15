@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/labwc/labwc.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -18,8 +18,9 @@
 [C] extra/x11
 [F] CROSS
 
-[L] GPL
-[S] Beta
-[V] 0.8.4
+[E] opt librsvg
 
-[D] 40905b86988e99ff8dffe8a803be47e6898bb7a0138f06a40464e202 labwc-0.8.4.tar.gz https://github.com/labwc/labwc/archive/0.8.4/
+[L] GPL
+[V] 0.9.7
+
+[D] 39f9710bd1119f7c034bec5369939f2b62c402fafc7126f01f804266 labwc-0.9.7.tar.gz https://github.com/labwc/labwc/archive/0.9.7/

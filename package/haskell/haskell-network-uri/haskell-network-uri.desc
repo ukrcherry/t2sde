@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/haskell-network-uri/haskell-network-uri.desc
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Provides facilities for parsing and unparsing URIs
+
+[T] Provides facilities for parsing and unparsing URIs.
+
+[U] https://github.com/haskell/network-uri
+
+[A] <ezra@ezrakilty.net>
+[M] Riley Beckett <rbeckettvt@gmail.com>
+
+[C] extra/tool
+[F] CROSS
+
+[L] BSD
+[V] 2.7.0.0
+
+[D] 9bad0846bdeaa5a5c8aac62fc88c2aacbe443aefc1e89f72f18d72ab haskell-network-uri-2.7.0.0.tar.gz !https://hackage.haskell.org/package/network-uri-2.7.0.0/network-uri-2.7.0.0.tar.gz
+
+. $base/package/*/*/haskell-conf.in

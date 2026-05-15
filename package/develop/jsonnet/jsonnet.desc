@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/jsonnet/jsonnet.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] The data templating language
+
+[T] The data templating language.
+
+[U] https://jsonnet.org/
+
+[A] Jsonnet Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.22.0
+[L] APL
+
+[D] 399f4904c829ad4798dfaa3d4ff1d81eda80005f9caeb02b035208cf jsonnet-0.22.0.tar.gz https://github.com/google/jsonnet/archive/v0.22.0/

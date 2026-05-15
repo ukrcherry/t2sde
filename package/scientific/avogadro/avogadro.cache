@@ -1,0 +1,31 @@
+[TIMESTAMP] 1758314606 Fri Sep 19 22:43:26 2025
+[BUILDTIME] 470 (9)
+[SIZE] 663.15 MB, 2982 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] cmake
+[DEP] coreutils
+[DEP] curl
+[DEP] diffutils
+[DEP] eigen
+[DEP] gawk
+[DEP] gettext
+[DEP] glew
+[DEP] glu
+[DEP] grep
+[DEP] gzip
+[DEP] libarchive
+[DEP] libmsym
+[DEP] linux-header
+[DEP] make
+[DEP] mesa
+[DEP] openssl
+[DEP] pkgconfig
+[DEP] python
+[OPT] qt5base
+[OPT] qt6base
+[DEP] sed
+[DEP] spglib
+[DEP] tar
+[DEP] vulkan-headers

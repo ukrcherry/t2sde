@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libxspf/libxspf.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,15 +13,14 @@
 [U] https://libspiff.sourceforge.net/
 
 [A] Sebastian Pipping <webmaster@hartwork.org>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] CROSS
 
 [L] BSD
-[S] Beta
 [V] 1.2.1
 
-[O] configprefix="LDFLAGS=-L$libdir"
+[D] a66dd91b3580a9f2c502f8297775a13f148f312661089fe806c30ca6 libxspf-1.2.1.tar.bz2 https://prdownloads.sourceforge.net/sourceforge/libspiff/
 
-[D] a66dd91b3580a9f2c502f8297775a13f148f312661089fe806c30ca6 libxspf-1.2.1.tar.bz2 http://dl.sourceforge.net/sourceforge/libspiff/
+configprefix="LDFLAGS=-L$libdir"

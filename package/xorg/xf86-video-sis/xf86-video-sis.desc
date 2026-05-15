@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xf86-video-sis/xf86-video-sis.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,17 +15,16 @@
 [U] https://www.X.org
 
 [A] X.org Foundation {http://www.X.org}
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/x11
 [F] CROSS FCOMMON.mips FCOMMON.mips64
-[R] + x86 x86-64
+[R] + alpha x86 x86-64
 
 [L] OpenSource
-[S] Stable
-[V] 0.12.0-cc2f4d68
+[V] 0.12.1 cc2f4d68
 
-[O] . package/*/*/modular-x-conf.in
-[O] autogen=1
+[D] f270b9a6a18e65581682e48475e691bc19b73a444bc7701a2d564c2b xf86-video-sis-0.12.1-cc2f4d68.tar.zst git+https://gitlab.freedesktop.org/xorg/driver/xf86-video-sis cc2f4d68
 
-[D] f270b9a6a18e65581682e48475e691bc19b73a444bc7701a2d564c2b xf86-video-sis-0.12.0-cc2f4d68.tar.zst git+https://gitlab.freedesktop.org/xorg/driver/xf86-video-sis cc2f4d68
+. package/*/*/modular-x-conf.in
+autogen=1

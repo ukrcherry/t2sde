@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/xsimd/xsimd.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] C++ wrappers for SIMD intrinsics and parallelized, optimized mathematical functions
+
+[T] C++ wrappers for SIMD intrinsics and parallelized, optimized mathematical functions (SSE, AVX, NEON, AVX512).
+
+[U] https://github.com/xtensor-stack/xsimd
+
+[A] Xsimd Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 14.2.0
+[L] BSD
+
+[D] 609ec52b4eb350783b386b6fe794a7c9939f1a3517b71bea860cce46 xsimd-14.2.0.tar.gz https://github.com/xtensor-stack/xsimd/archive/refs/tags/14.2.0/

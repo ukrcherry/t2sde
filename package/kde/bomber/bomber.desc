@@ -1,31 +1,29 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/bomber/bomber.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
 [I] Arcade bombing game
 
-[T] Bomber is a single player arcade game. The player is invading various 
+[T] Bomber is a single player arcade game. The player is invading various
 [T] cities in a plane that is decreasing in height.
 
 [U] https://apps.kde.org/bomber/
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
-[E] opt kdoctools
-[E] opt docbook-xml
-[E] opt docbook-xsl
+[F] CROSS OBJDIR
+
+[E] opt kdoctools docbook-xml docbook-xsl
 
 [L] GPL
-[S] Stable
-[V] 25.04.1
-[P] X -----5---9 162.900
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 26.04.1
 
 [CV-GROUP] kde-gear
-[D] 9aa7f0f73cda3bfab340528efb16dc889834b115d8f1d35419d58e8d bomber-25.04.1.tar.xz https://download.kde.org/stable/release-service/25.04.1/src/
+[D] 744823ffcb367fc615f2567811c39825d2e7597cf739f035b9ac8986 bomber-26.04.1.tar.xz https://download.kde.org/stable/release-service/26.04.1/src/
+
+. $base/package/*/*/kde-conf.in

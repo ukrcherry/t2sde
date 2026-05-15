@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xfce4-screensaver/xfce4-screensaver.desc
-[COPY] Copyright (C) 2025 The T2 SDE Project
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,12 +13,15 @@
 
 [A] Sean Davis <bluesabre@xfce.org>
 [A] Simon Steinbeiss <ochosi@xfce.org>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/desktop/xfce
 
-[L] LGPL
-[S] Stable
-[V] 4.18.4
+[E] opt consolekit
 
-[D] a99a975eaca6155d025bc0134b9715379587254620ed6c9207330ce3 xfce4-screensaver-4.18.4.tar.bz2 https://archive.xfce.org/src/apps/xfce4-screensaver/4.18/
+[L] LGPL
+[V] 4.20.2
+
+[D] 280bc31581b922fa93770a0be258991c33877e5aaa625af1dba42dfb xfce4-screensaver-4.20.2.tar.xz https://archive.xfce.org/src/apps/xfce4-screensaver/4.20/
+
+pkginstalled systemd || var_append mesonopt ' ' -Dsession-manager=consolekit

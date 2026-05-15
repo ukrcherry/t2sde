@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/layer-shell-qt/layer-shell-qt.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -12,16 +12,16 @@
 [U] https://invent.kde.org/plasma/layer-shell-qt
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 6.3.5
-[P] X -----5---9 200.300
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 6.6.5
+[P] X -----5---9 200.016
 
 [CV-GROUP] kde-plasma
-[D] 263a5fa73d59dcd8367ea797abcb7d61c00d1fbabced61569ace25f6 layer-shell-qt-6.3.5.tar.xz https://download.kde.org/stable/plasma/6.3.5/
+[D] 6213d75f875356e5e7da5419c0e7699757a5224c8d4fff5634019a9a layer-shell-qt-6.6.5.tar.xz https://download.kde.org/stable/plasma/6.6.5/
+
+. $base/package/*/*/kde-conf.in

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/inadyn/inadyn.desc
-[COPY] Copyright (C) 2018 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2018 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -16,13 +16,21 @@
 
 [A] Narcis Ilisei's (original INADYN)
 [A] Joachim Nilsson
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/network extra/tool
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 2.9.1
+[V] 2.13.0
 
-[D] 092eb755d093ee5a879f4697bc4a9f65f0a4c49d34e6f67210d625a6 inadyn-2.9.1.tar.xz https://github.com/troglobit/inadyn/releases/download/v2.9.1/
+[D] 9c79ee9ff6a7796104b5dcec7d6b66ab2f13d21d41f9267c2ed30004 inadyn-2.13.0.tar.xz https://github.com/troglobit/inadyn/releases/download/v2.13.0/
+
+PKG_CONFIG_PATH="$root/usr/lib/pkgconfig"
+
+var_append confopt ' ' --sysconfdir=/etc
+var_append confopt ' ' --localstatedir=/var
+
+if pkginstalled openssl; then
+	var_append confopt ' ' --enable-openssl
+fi

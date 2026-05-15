@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/kscreen/kscreen.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,16 +13,16 @@
 [U] https://invent.kde.org/plasma/kscreen
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
+[F] CROSS OBJDIR
 
 [L] GPL
-[S] Stable
-[V] 6.3.5
-[P] X -----5---9 162.420
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 6.6.5
+[P] X -----5---9 200.020
 
 [CV-GROUP] kde-plasma
-[D] 88359f28ee42bc9a0ee6b144137548b57efa5483b77a8468bd0c56a0 kscreen-6.3.5.tar.xz https://download.kde.org/stable/plasma/6.3.5/
+[D] d9801e2388fae9f75c664bb650b16e24587a6deb845e04b4ebe2f573 kscreen-6.6.5.tar.xz https://download.kde.org/stable/plasma/6.6.5/
+
+. $base/package/*/*/kde-conf.in

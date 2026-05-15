@@ -1,10 +1,10 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libultrahdr/libultrahdr.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
-[I] Image compression library 
+[I] Image compression library
 
 [T] libultrahdr is an image compression library that uses gain map technology
 [T] to store and distribute HDR images.
@@ -12,12 +12,11 @@
 [U] https://github.com/google/libultrahdr
 
 [A] Google Authors
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [L] APL
-[S] Stable
 [V] 1.4.0
 
 [D] af3e8779884c655265480c9826cf7709809433df3f9ce489732a6dc6 libultrahdr-1.4.0.tar.gz https://github.com/google/libultrahdr/archive/refs/tags/v1.4.0/

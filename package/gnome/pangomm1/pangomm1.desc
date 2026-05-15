@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/pangomm1/pangomm1.desc
-[COPY] Copyright (C) 2008 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2008 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,19 +12,18 @@
 
 [A] Murray Cumming <murrayc@usa.net>
 [A] Daniel Elstner <daniel.elstner@gmx.net>
-[M] Rene Rebe <rene@exactcode.de>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development extra/desktop/gnome
 [F] CROSS
 
 [L] LGPL
-[S] Stable
 [V] 2.46.2
 
 [P] X -----5---9 153.000
 
-[O] . $base/package/*/*/gnome-conf.in
-[O] var_append GCC_WRAPPER_INSERT ' ' "-c?:-L$(pkgprefix libdir glibmm2)"
-
 [CV-FLAGS] NO-AUTO
 [D] ca643d3a696b31931dcb7eda4ea066cbb856ec2e0da2391a9952793d pangomm-2.46.2.tar.xz https://download.gnome.org/sources/pangomm/2.46/
+
+. $base/package/*/*/gnome-conf.in
+var_append GCC_WRAPPER_INSERT ' ' "-c?:-L$(pkgprefix libdir glibmm2)"

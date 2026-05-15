@@ -1,0 +1,17 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/sudo/sudo-group.patch
+# Copyright (C) 2025 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0 or patched project license
+# --- T2-COPYRIGHT-END ---
+
+--- sudo-1.9.17/plugins/sudoers/sudoers.in.vanilla	2025-06-26 23:34:05.609815116 +0200
++++ sudo-1.9.17/plugins/sudoers/sudoers.in	2025-06-26 23:34:09.323198743 +0200
+@@ -128,7 +128,7 @@
+ # %wheel ALL=(ALL:ALL) NOPASSWD: ALL
+ 
+ ## Uncomment to allow members of group sudo to execute any command
+-# %sudo ALL=(ALL:ALL) ALL
++%sudo ALL=(ALL:ALL) ALL
+ 
+ ## Uncomment to allow any user to run sudo if they know the password
+ ## of the user they are running the command as (root by default).

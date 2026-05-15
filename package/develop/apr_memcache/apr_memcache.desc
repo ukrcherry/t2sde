@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/apr_memcache/apr_memcache.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -10,16 +10,15 @@
 [T] It provides pooled client connections and is thread safe,
 [T] making it perfect for use inside Apache Modules.
 
-[U] http://www.outoforder.cc/projects/libs/apr_memcache/
+[U] https://www.outoforder.cc/projects/libs/apr_memcache/
 
 [A] outoforder.cc <http://www.outoforder.cc>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [L] OpenSource
 
-[S] Stable
 [V] 0.7.0
 
-[D] f162345af07a95001bf6a12d8d17a71d0209a5e2957e9d6b8c3aa22c apr_memcache-0.7.0.tar.bz2 http://www.outoforder.cc/downloads/apr_memcache/
+[D] f162345af07a95001bf6a12d8d17a71d0209a5e2957e9d6b8c3aa22c apr_memcache-0.7.0.tar.bz2 https://www.outoforder.cc/downloads/apr_memcache/

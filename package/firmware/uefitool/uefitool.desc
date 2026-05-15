@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/uefitool/uefitool.desc
-[COPY] Copyright (C) 2009 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2009 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,12 +13,11 @@
 [U] https://github.com/LongSoft/UEFITool
 
 [A] Nikolaj Schlej
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 
 [L] BSD
-[S] Alpha
-[V] A68
+[V] A73
 
-[D] 24e3e007f5557f6f797bbc403bce178eee543aa3980f4d21544f52c7 uefitools-A68.tar.gz https://github.com/LongSoft/UEFITool/archive/refs/tags/A68/
+[D] 2bcc14e521fa6d6ac18ad9233f5acc2fc37de53c70d2d6ea5b6ee882 uefitools-A73.tar.gz https://github.com/LongSoft/UEFITool/archive/refs/tags/A73/

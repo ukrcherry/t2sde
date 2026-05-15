@@ -1,0 +1,29 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/micro/micro.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] A modern and intuitive terminal-based text editor
+
+[T] micro is a terminal-based text editor that aims to be easy to use and
+[T] intuitive, while also taking advantage of the capabilities of modern
+[T] terminals.
+
+[U] https://micro-editor.github.io/
+
+[A] Zachary Yedidia, et al.
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/editor
+[F] CROSS
+
+[L] MIT
+[V] 2.0.15
+
+[D] 3dc8c1bd5fbcc73c9a1990a43f568999d2faf4a71cb667e1991e2ebd micro-2.0.15.tar.gz https://github.com/zyedidia/micro/archive/v2.0.15/
+
+. $base/package/*/*/go-conf.in
+var_append goconfopt ' ' '-o micro ./cmd/micro'
+hook_add postmake 5 'cp -vf micro $root$bindir/'
+hook_add postmake 5 'cp -vf assets/packaging/micro.1 $root$mandir/man1'

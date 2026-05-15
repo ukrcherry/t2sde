@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/mysql/mysql.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -15,17 +15,35 @@
 [U] https://www.mysql.com/
 
 [A] User List <mysql@lists.mysql.com> {Support List}
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/database
 [F] JAIL OBJDIR
 
-[E] opt xfsprogs
 [E] opt doxygen
+[E] opt numactl
+[E] opt xfsprogs
 
 [L] LGPL
-[S] Stable
 [V] 8.4.0
 [P] X -----5---9 123.500
 
 [D] b7559bfa435d2569b5fcad7a7707498517a8442928946fccbdde8da1 mysql-8.4.0.tar.gz https://cdn.mysql.com/Downloads/MySQL-8.4/
+
+var_append confopt ' ' --with-berkeley-db
+var_append confopt ' ' --with-ssl
+var_append confopt ' ' --with-embedded-server
+
+#needed by bacula
+var_append confopt ' ' --enable-thread-safe-client
+
+[ $prefix_auto = 1 ] && prefix="opt/mysql" && set_confopt
+
+var_append cmakeopt ' ' -DINSTALL_LIBDIR=$libdir/mysql
+
+if [ "$SDECFG_PKG_MYSQL_CLIENTONLY" = "1" ]; then
+	var_append confopt ' ' --without-server
+fi
+
+# create mysql db directory with suitable ownership, mysql_db_install in postinstall
+hook_add postmake 5 "mkdir -p $root$localstatedir/mysql; chown 39:39 $root$localstatedir/mysql"

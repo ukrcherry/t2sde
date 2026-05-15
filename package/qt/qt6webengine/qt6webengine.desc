@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/qt6webengine/qt6webengine.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,29 +11,32 @@
 [U] https://qt.io
 
 [A] Trolltech AS <www.trolltech.com>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
-[F] CROSS NOPARALLEL OBJDIR NO-LTO.gcc
+[F] CROSS OBJDIR NO-LTO
 
 [E] add html5lib
+[E] opt abseil-cpp
+[E] opt cups
 [E] opt libwebp
 [E] opt libopus
+[E] opt re2
 
 [L] LGPL
-[S] Stable
-[V] 6.9.0
-[P] X -----5---9 153.000
-
-[O] [ $prefix_auto = 1 ] && prefix=$(pkgprefix qt6base) && set_confopt
-[O] var_append cmakeopt ' ' -GNinja
-[O] var_append cmakeopt ' ' -DQT_BUILD_EXAMPLES_BY_DEFAULT=OFF
-#[O] var_append cmakeopt ' ' -DQT_FEATURE_webengine_jumbo_build=OFF
-[O] pkginstalled icu4c && var_append cmakeopt ' ' -DQT_FEATURE_webengine_system_icu=ON
-[O] var_append cmakeopt ' ' -DQT_FEATURE_qtwebengine_widgets_build=ON
-[O] pkginstalled libevent && var_append cmakeopt ' ' -DQT_FEATURE_webengine_system_libevent=ON
-[O] var_append GCC_WRAPPER_INSERT ' ' "-I$root`pkgprefix includedir libxcb`"
-[O] var_append GCC_WRAPPER_INSERT ' ' "-c?:-L$root`pkgprefix libdir libxcb`"
+[V] 6.11.1
+[P] X -----5---9 201.000
 
 [CV-GROUP] qt6
-[D] ec7eec7935fe52b04b0df0f84074ca5a959365d7a342d159a29144e3 qtwebengine-everywhere-src-6.9.0.tar.xz http://download.qt.io/official_releases/qt/6.9/6.9.0/submodules/
+[D] 82f5cc6b7fa8208323cf481ed323005ec84fb28ef9fb3ae0f9af1234 qtwebengine-everywhere-src-6.11.1.tar.xz http://download.qt.io/official_releases/qt/6.11/6.11.1/submodules/
+
+. $base/package/*/*/qt6-conf.in
+
+var_append cmakeopt ' ' -GNinja
+var_append cmakeopt ' ' -DQT_BUILD_EXAMPLES_BY_DEFAULT=OFF
+#var_append cmakeopt ' ' -DQT_FEATURE_webengine_jumbo_build=OFF
+pkginstalled icu4c && var_append cmakeopt ' ' -DQT_FEATURE_webengine_system_icu=ON
+var_append cmakeopt ' ' -DQT_FEATURE_qtwebengine_widgets_build=ON
+pkginstalled libevent && var_append cmakeopt ' ' -DQT_FEATURE_webengine_system_libevent=ON
+var_append GCC_WRAPPER_INSERT ' ' "-I$root`pkgprefix includedir libxcb`"
+var_append GCC_WRAPPER_INSERT ' ' "-c?:-L$root`pkgprefix libdir libxcb`"

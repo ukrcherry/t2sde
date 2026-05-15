@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/asymptote/asymptote.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -18,17 +18,16 @@
 [U] https://asymptote.sourceforge.net/
 
 [A] Andy Hammerlind, John Bowman, Tom Prince
-[M] Valentin Ziegler <valentin@t2-project.org>
+[M] Valentin Ziegler <valentin.ziegler@googlemail.com>
 
 [C] extra/graphic
 
 [L] GPL
-[S] Stable
-[V] 2.85
+[V] 3.11
+
+[D] 195a53cd4f3fb04ce8b7ae59b54db572be4df228b012dc69fb398103 asymptote-3.11.src.tgz https://prdownloads.sourceforge.net/sourceforge/asymptote/
 
 # disable garbage collecting - TODO: patch it to compile with
 # var_append confopt ' ' --enable-gc=system
-[O] var_append confopt ' ' --disable-gc
-[O] makeinstopt="${makeinstopt/install/} install-notexhash"
-
-[D] ee5039a852633978cf063ccad697feed03c0a6c8b361f544bc501354 asymptote-2.85.src.tgz http://dl.sourceforge.net/sourceforge/asymptote/
+var_append confopt ' ' --disable-gc
+makeinstopt="${makeinstopt/install/} install-notexhash"

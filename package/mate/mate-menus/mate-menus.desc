@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/mate-menus/mate-menus.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,15 +12,14 @@
 [U] https://mate-desktop.org/
 
 [A] MATE developer
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/desktop/mate
 
 [L] GPL
-[S] Stable
-[V] 1.28.0
+[V] 1.28.1
 [P] X -----5---9 179.300
 
-[O] . $base/package/*/*/mate-conf.in
+[D] 9e9eb3eca7ae3f398f1cef93ad228537ba25f77340f217ec06af9cf7 mate-menus-1.28.1.tar.gz https://github.com/mate-desktop/mate-menus/archive/v1.28.1/
 
-[D] cdcea5fc10dc4ca948a0058d167d7085a0a00f5f86b53878e9f9d9c5 mate-menus-1.28.0.tar.xz https://pub.mate-desktop.org/releases/1.28/
+. $base/package/*/*/mate-conf.in

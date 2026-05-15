@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/lvm2/lvm2.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -18,16 +18,54 @@
 [U] http://sources.redhat.com/lvm2/
 
 [A] linux-lvm@redhat.com
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/system extra/filesystem
 [F] CROSS NO-LTO.clang
 
+[E] opt xfsprogs
+
 [L] GPL
-[S] Stable
-[V] 2.03.30
-[P] X --2--5---9 184.000
+[V] 2.03.40
+[P] X --2--5---9 179.000
 
-[O] [ "$arch" = powerpc64 ] && CC_WRAPPER_INSERT="${CC_WRAPPER_INSERT/-O1/-O2}"
+[D] 1ade6fa87a543362c6eec6098bfa1a1d46dbec8228b88132695f5200 LVM2.2.03.40.tgz http://sourceware.org/pub/lvm2/
 
-[D] 134b38333285982a03f6811bedfc8126050986ebaf18bd39149f33af LVM2.2.03.30.tgz http://sourceware.org/pub/lvm2/
+[ $prefix_auto = 1 ] && prefix= && set_confopt
+
+var_append flistroot ' ' 'libexec' # TODO: maybe always allow?
+
+var_append confopt ' ' --enable-pkgconfig
+var_append confopt ' ' --datarootdir=$datadir
+#var_append confopt ' ' '--enable-cmdlib --enable-dmeventd'
+
+#var_append confopt ' ' --enable-udev-rules
+#var_append confopt ' ' --enable-udev-sync
+var_append confopt ' ' --disable-systemd-journal
+
+[ "$arch" = powerpc64 ] && CC_WRAPPER_INSERT="${CC_WRAPPER_INSERT/-O1/-O2}"
+
+if [ "$SDECFG_STATIC" == 1 ]; then
+	var_append patchfiles ' ' $confdir/no_dynamic.diff
+	var_append confopt ' ' --enable-static_link=yes
+
+	# let it read lvm1 format metadata (via device-mapper)
+	var_append confopt ' ' --with-lvm1=internal
+else
+	var_append confopt ' ' --with-lvm1=shared
+fi
+
+[ "$arch" = "avr32" -o "$arch" = "microblaze" ] &&
+	var_append patchfiles ' ' $confdir/no-symver.diff
+
+if ! atstage native; then
+	hook_add preconf 5 "echo 'ac_cv_func_malloc_0_nonnull=yes
+ac_cv_func_realloc_0_nonnull=yes
+ac_cv_path_MODPROBE_CMD=/sbin/modprobe' >> config.cache"
+fi
+
+# defining STRIP conflicts with this package passing it as arg to install
+var_remove_regex makeinstopt ' ' 'STRIP=.*'
+
+pkginstalled systemd &&
+	hook_add postinstall 5 "pkg_systemd_install_service $confdir/lvm2-activate.service"

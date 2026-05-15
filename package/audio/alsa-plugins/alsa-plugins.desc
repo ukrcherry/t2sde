@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/alsa-plugins/alsa-plugins.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -17,7 +17,7 @@
 [U] https://www.alsa-project.org
 
 [A] Jaroslav Kysela <perex@suse.cz> {Maintainer}
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/system base/kernel
 [F] CROSS
@@ -28,11 +28,9 @@
 [E] opt speexdsp
 
 [L] GPL
-[S] Stable
 [V] 1.2.12
-[P] X -----5---9 110.800
-
-[O] pkginstalled pulseaudio && var_append confopt ' ' --enable-pulseaudio
 
 [CV-GROUP] alsa
 [D] ce46a0914bad43c479737ae3b28993ab58777c009a4da0f3fd0e28c2 alsa-plugins-1.2.12.tar.bz2 https://www.alsa-project.org/files/pub/plugins/
+
+pkginstalled pulseaudio && var_append confopt ' ' --enable-pulseaudio

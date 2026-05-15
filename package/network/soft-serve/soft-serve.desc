@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/soft-serve/soft-serve.desc
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Self-hostable Git server
+
+[T] A self-hostable git server for the command line.
+
+[U] https://github.com/charmbracelet/soft-serve
+
+[A] Charmbracelet, Inc
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/development
+
+[L] MIT
+[V] 0.11.6
+
+[D] 21c99570294b9a8efae215d6f16370771a5e813dc793100ed15a8416 soft-serve-0.11.6.tar.gz https://github.com/charmbracelet/soft-serve/archive/refs/tags/v0.11.6/
+
+var_append goconfopt ' ' "-v -o soft ./cmd/soft"
+hook_add postmake 5 "cp -vf soft $root$bindir"

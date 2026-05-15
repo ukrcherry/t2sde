@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libowfat/libowfat.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -15,19 +15,18 @@
 [U] https://www.fefe.de/libowfat/
 
 [A] Felix von Leitner <felix-dietlibc@fefe.de>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [F] CROSS DIETLIBC NOPARALLEL NO-LTO.gcc
 [C] extra/development
 
 [L] GPL
-[S] Stable
 [V] 0.34
 [P] X -----5---9 126.900
 
 [CV-URL] http://www.fefe.de/libowfat/
-
-[O] atstage cross && var_append makeopt ' ' CROSS=$archprefix
-[O] var_append makeopt ' ' "prefix=$root/$prefix INCLUDEDIR=$root$includedir LIBDIR=$root$libdir DIET="
-[O] makeinstopt="$makeopt install"
 [D] 607a1689a14e582fce08c96eafc2d91d4d62ff7da41f26cc7fb02b2f libowfat-0.34.tar.xz http://www.fefe.de/libowfat/
+
+atstage cross && var_append makeopt ' ' CROSS=$archprefix
+var_append makeopt ' ' "prefix=$root/$prefix INCLUDEDIR=$root$includedir LIBDIR=$root$libdir DIET="
+makeinstopt="$makeopt install"

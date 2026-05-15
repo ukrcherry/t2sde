@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/pyqt/pyqt.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,7 +14,7 @@
 [U] https://sourceforge.net/projects/pyqt/
 
 [A] Riverbank Computing Ltd. <http://www.riverbankcomputing.co.uk>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
@@ -22,8 +22,15 @@
 
 [L] GPL
 
-[S] Stable
 [V] 3.18.1
 [P] X -----5---9 210.000
 
 [D] b61a881422ccc55b4623075f6647f743a484025a87c4201edf3b8995 PyQt-x11-gpl-3.18.1.tar.gz https://downloads.sourceforge.net/project/pyqt/PyQt3/
+
+pyqt_pm() {
+	echo "yes" | (CXX_WRAPPER_BYPASS=1; eval python configure.py $pyconfopt)
+}
+
+var_append pyconfopt ' ' "-y qt-mt"
+
+hook_add premake 5 pyqt_pm

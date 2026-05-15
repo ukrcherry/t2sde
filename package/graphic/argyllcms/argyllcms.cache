@@ -1,13 +1,13 @@
+[TIMESTAMP] 1770718190 Tue Feb 10 11:09:50 2026
+[BUILDTIME] 75 (9)
+[SIZE] 109.17 MB, 59 files
 
-[TIMESTAMP] 1729791122 Thu Oct 24 19:32:02 2024
-[BUILDTIME] 40 (9)
-[SIZE] 108.64 MB, 57 files
-
-[DEP] 00-dirtree
+[DEP] automake
 [DEP] bash
 [DEP] binutils
 [DEP] coreutils
 [DEP] diffutils
+[DEP] findutils
 [DEP] gawk
 [DEP] grep
 [DEP] jam
@@ -25,4 +25,5 @@
 [DEP] openssl
 [DEP] sed
 [DEP] unzip
+[DEP] util-linux
 [DEP] xorgproto

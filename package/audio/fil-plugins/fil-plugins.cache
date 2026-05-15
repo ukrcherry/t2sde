@@ -1,0 +1,13 @@
+[TIMESTAMP] 1762950002 Wed Nov 12 14:20:02 2025
+[BUILDTIME] 2 (9)
+[SIZE] 0.01 MB, 6 files
+
+[DEP] bash
+[DEP] bzip2
+[DEP] coreutils
+[DEP] diffutils
+[DEP] gawk
+[DEP] grep
+[DEP] make
+[DEP] sed
+[DEP] tar

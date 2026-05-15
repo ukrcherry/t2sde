@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/openobex/openobex.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -12,7 +12,7 @@
 [U] https://triq.net/obex/
 
 [A] Christian W. Zuckschwerdt <zany@triq.net>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/filesystem
 [F] CROSS
@@ -21,10 +21,10 @@
 [E] opt doxygen
 
 [L] GPL
-[S] Stable
 [V] 1.7.2
 [P] X -----5---9 137.100
 
-[O] var_append confopt ' ' --enable-apps
-
 [D] fd3332c80297763bdacd15f45600de5c90f0d2b15569996666e0867a openobex-1.7.2-Source.tar.gz https://downloads.sourceforge.net/project/openobex/openobex/1.7.2/
+
+var_append cmakeopt ' ' -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+var_append confopt ' ' --enable-apps

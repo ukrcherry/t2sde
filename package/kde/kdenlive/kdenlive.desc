@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/kdenlive/kdenlive.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -9,26 +9,23 @@
 
 [T] Kdenlive is an open source video editor. Kdenlive is built on Qt and the
 [T] KDE Frameworks libraries. Most of the video processing is done by the MLT
-[T] Framework, which relies on many other open source projects like FFmpeg,
-[T] frei0r, movit, ladspa, sox, etc.
+[T] Framewor
 
 [U] https://kdenlive.org/
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
-[E] opt kdoctools
-[E] opt docbook-xml
-[E] opt docbook-xsl
+[F] CROSS OBJDIR
+
+[E] opt kdoctools docbook-xml docbook-xsl
 
 [L] GPL
-[S] Stable
-[V] 25.04.1
-[P] X -----5---9 162.420
-
-[O] . $base/package/*/*/kde-conf.in
-[O] var_append cmakeopt ' ' -DBUILD_TESTING=OFF
+[V] 26.04.1
 
 [CV-GROUP] kde-gear
-[D] cdb55ec0e7edd3a46463770421d54a5824f4c01ca177b8295918a1c5 kdenlive-25.04.1.tar.gz https://github.com/KDE/kdenlive/archive/v25.04.1/
+[D] 99606063e0981359635dc32e7d8175cbf1a7a997c317ac84c68647ac kdenlive-26.04.1.tar.gz https://github.com/KDE/kdenlive/archive/v26.04.1/
+
+. $base/package/*/*/kde-conf.in
+var_append cmakeopt ' ' -DBUILD_TESTING=OFF

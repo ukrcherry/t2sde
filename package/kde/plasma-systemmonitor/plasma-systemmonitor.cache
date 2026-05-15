@@ -1,6 +1,6 @@
-[TIMESTAMP] 1739216197 Mon Feb 10 20:36:37 2025
-[BUILDTIME] 105 (5)
-[SIZE] 2.16 MB, 221 files
+[TIMESTAMP] 1770548383 Sun Feb  8 11:59:43 2026
+[BUILDTIME] 145 (9)
+[SIZE] 2.55 MB, 230 files
 
 [DEP] bash
 [DEP] binutils
@@ -22,8 +22,8 @@
 [DEP] kio
 [DEP] kitemmodels
 [DEP] knewstuff
-[DEP] kpackage
 [DEP] kservice
+[OPT] ksystemstats
 [DEP] kwindowsystem
 [DEP] libksysguard
 [DEP] linux-header
@@ -32,9 +32,8 @@
 [DEP] procps
 [DEP] qt6base
 [DEP] qt6declarative
-[DEP] qt6translations
 [DEP] sed
 [DEP] tar
-[DEP] tbb
+[DEP] util-linux
 [DEP] vulkan-headers
 [DEP] xz

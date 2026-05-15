@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/icewm/icewm.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -25,25 +25,24 @@
 
 [A] Marko Macek { Project leader }
 [A] Mathias Hasselmann <mathias.hasselmann@gmx.de> { Packager }
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/windowmanager
-[F] NO-LTO.gcc
+[F] CROSS
 
+# TODO: imlib2 || xyimage
 [E] opt libao
 [E] opt alsa-lib
+[E] opt libjpeg
 [E] opt libsndfile
 
 [L] LGPL
-[S] Stable
-[V] 3.7.4
-[P] X -----5---9 162.100
+[V] 4.0.0
 
-[O] pkginstalled imlib2 || var_append cmakeopt ' ' -DCONFIG_IMLIB2=off
-[O] pkginstalled librsvg && var_append cmakeopt ' ' -DCONFIG_LIBRSVG=on
-[O] pkginstalled libpng && var_append cmakeopt ' ' -DCONFIG_LIBPNG=on
-[O] (pkginstalled libjpeg || pkginstalled libjpeg-turbo) && var_append cmakeopt ' ' -DCONFIG_LIBJPEG=on
-[O] hook_add postmake 3 "mkdir -p $root/etc/X11/icewm; cp -f lib/programs $datadir/$pkg"
-[O] hook_add postinstall 3 "register_wm icewm-session Icewm $bindir/icewm"
+[D] f84981dd640b2f0f744b9a79d052af72a2f1d536b11cf58fcecca660 icewm-4.0.0.tar.gz https://github.com/ice-wm/icewm/archive/4.0.0/
 
-[D] 8e9d3f40dd536aaeb8b61d38b6543e8f1bc194fd10d6e1c2655efdd9 icewm-3.7.4.tar.gz https://github.com/ice-wm/icewm/archive/3.7.4/
+pkginstalled -n imlib2 || var_append cmakeopt ' ' -DCONFIG_IMLIB2=off
+pkginstalled librsvg && var_append cmakeopt ' ' -DCONFIG_LIBRSVG=on
+pkginstalled libpng && var_append cmakeopt ' ' -DCONFIG_LIBPNG=on
+(pkginstalled libjpeg || pkginstalled libjpeg-turbo) && var_append cmakeopt ' ' -DCONFIG_LIBJPEG=on
+hook_add postmake 3 "mkdir -p $root/etc/X11/icewm; cp -f lib/programs $root$datadir/$pkg"

@@ -1,31 +1,33 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/localsearch/localsearch.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
 [I] Offers a series of D-Bus services to index filesystem resources
 
-[T] LocalSearch is the indexer and search engine that powers desktop search
-[T] for core GNOME components.
+[T] Previously known as tracker-miners (tracker3), is the indexer and search
+[T] engine that powers the desktop search for core GNOME components. It stores
+[T] data about user files structured by the Nepomuk definitions, features a
+[T] tightly sandboxed metadata extractor, and provides facilities to alter file
+[T] metadata.
 
 [U] https://gitlab.gnome.org/GNOME/localsearch
 
 [A] The GNOME Project <gnome-devel-list@gnome.org>
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/shell extra/desktop/gnome
 
 [L] GPL
-[S] Stable
-[V] 3.9.0
-[P] X -----5---9 190.800
-
-[O] . $base/package/*/*/gnome-conf.in
-[O] pkginstalled systemd || var_append mesonopt ' ' -Dsystemd_user_services=false
-[O] pkginstalled upower || var_append mesonopt ' ' -Dbattery_detection=none
-[O] var_append mesonopt ' ' -Dlandlock=disabled
+[V] 3.11.1
 
 [CV-URL] https://download.gnome.org/sources/localsearch/cache.json
-[D] de304f2b3ba79422543e4640624d65a73041cd3eca30794f01165ac4 localsearch-3.9.0.tar.xz https://download.gnome.org/sources/localsearch/3.9/
+[D] e6d7c18f9ceaece9191f1cc2f8cdfffe6a6891369ded52ccba0695bb localsearch-3.11.1.tar.xz https://download.gnome.org/sources/localsearch/3.11/
+
+. $base/package/*/*/gnome-conf.in
+pkginstalled systemd || var_append mesonopt ' ' -Dsystemd_user_services=false
+pkginstalled upower || var_append mesonopt ' ' -Dbattery_detection=none
+var_append mesonopt ' ' -Dlandlock=disabled
+var_append mesonopt ' ' '-Dfunctional_tests=false -Dsandbox_tests=false'

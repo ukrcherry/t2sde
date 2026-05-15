@@ -1,19 +1,25 @@
+[TIMESTAMP] 1770546810 Sun Feb  8 11:33:30 2026
+[BUILDTIME] 8 (9)
+[SIZE] 0.02 MB, 7 files
 
-[TIMESTAMP] 1714259147 Sun Apr 28 01:05:47 2024
-[BUILDTIME] 1 (9) ERROR
-[SIZE] 0.01 MB, 6 files
-
-[DEP] 00-dirtree
 [DEP] bash
 [DEP] binutils
 [DEP] cmake
 [DEP] coreutils
 [DEP] diffutils
-[DEP] findutils
-[DEP] gawk
-[DEP] grep
 [DEP] extra-cmake-modules
+[DEP] freetype
+[DEP] gawk
+[DEP] gettext
+[DEP] grep
+[DEP] kcoreaddons
+[DEP] kio
+[DEP] linux-header
 [DEP] make
+[DEP] pkgconfig
+[DEP] qt6base
 [DEP] sed
 [DEP] tar
+[DEP] util-linux
+[DEP] vulkan-headers
 [DEP] xz

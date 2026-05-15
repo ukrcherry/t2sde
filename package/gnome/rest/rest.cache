@@ -1,31 +1,20 @@
+[TIMESTAMP] 1760525708 Wed Oct 15 12:55:08 2025
+[BUILDTIME] 6 (9)
+[SIZE] 2.64 MB, 231 files
 
-[TIMESTAMP] 1714321158 Sun Apr 28 18:19:18 2024
-[BUILDTIME] 12 (9)
-[SIZE] 0.89 MB, 68 files
-
-[DEP] 00-dirtree
 [DEP] bash
 [DEP] binutils
 [DEP] cairo
-[DEP] cmake
 [DEP] coreutils
-[DEP] curl
-[DEP] dejavu-ttf-fonts
 [DEP] diffutils
-[DEP] encodings
-[DEP] findutils
-[DEP] font-alias
-[DEP] font-util
-[DEP] fontconfig
-[DEP] freefonts
 [DEP] gawk
 [DEP] gdk-pixbuf
-[DEP] gettext
+[DEP] gi-docgen
 [OPT] glib
 [DEP] gobject-introspection
+[DEP] graphene
 [OPT] graphviz
 [DEP] grep
-[DEP] gst-plugins-base
 [DEP] gtk
 [DEP] gtksourceview
 [DEP] harfbuzz
@@ -34,14 +23,12 @@
 [DEP] libsoup3
 [DEP] libxml
 [DEP] linux-header
-[DEP] make
 [DEP] meson
 [DEP] ninja
 [DEP] openssl
 [DEP] pango
-[DEP] pkgconfig
 [DEP] python
 [DEP] sed
+[DEP] setuptools
 [DEP] tar
-[DEP] xorgproto
 [DEP] xz

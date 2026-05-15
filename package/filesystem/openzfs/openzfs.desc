@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/openzfs/openzfs.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,14 +14,12 @@
 
 [A] Sun
 [A] Oracle
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/server
 [F] CROSS
 
 [L] CDDL
-[S] Stable
-[V] 2.3.2
-[P] X -----5---9 189.600
+[V] 2.4.2
 
-[D] 90396ea2549bee1fe4d4c04c61756feb8e544e62d159e0f1cad3bb66 zfs-2.3.2.tar.gz https://github.com/openzfs/zfs/releases/download/zfs-2.3.2/
+[D] 648a44f074856c110b50b69b8b585e028b20624e749fd3026b9f35b6 zfs-2.4.2.tar.gz https://github.com/openzfs/zfs/releases/download/zfs-2.4.2/

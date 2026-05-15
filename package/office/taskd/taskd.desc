@@ -1,0 +1,22 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/taskd/taskd.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Taskserver synchronises taskwarrior across multiple clients
+
+[T] Taskserver synchronises taskwarrior across multiple clients.
+
+[U] https://taskwarrior.org
+
+[A] Taskd Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+
+[L] MIT
+[V] 1.1.0
+
+[CV-FLAGS] NO-AUTO
+[D] 6ae3c500620d928a21a64a5b8673d66ddcc48a6c50beecf0dbaaa1af taskd-1.1.0.tar.gz https://github.com/GothenburgBitFactory/taskserver/releases/download/v1.1.0/

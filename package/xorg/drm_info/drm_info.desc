@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/drm_info/drm_info.desc
-[COPY] Copyright (C) 2022 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,12 +11,11 @@
 [U] https://github.com/ascent12/drm_info
 
 [A] Drm_info Authors
-[M] T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/base
 
-[V] 2.7.0
+[V] 2.9.0
 [L] MIT
-[S] Stable
 
-[D] 607a2913690e5c508fc67ea093dd62241a5dca14dbf7d455768cdca6 drm_info-2.7.0.tar.gz https://gitlab.freedesktop.org/emersion/drm_info/-/releases/v2.7.0/downloads/
+[D] d75a884ca39da4b41a647b45ab6edbbe20ee3b15a3ab6f0648ef7653 drm_info-2.9.0.tar.gz https://gitlab.freedesktop.org/emersion/drm_info/-/releases/v2.9.0/downloads/

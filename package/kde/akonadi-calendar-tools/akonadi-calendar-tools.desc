@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/akonadi-calendar-tools/akonadi-calendar-tools.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -12,19 +12,18 @@
 [U] https://invent.kde.org/pim/akonadi-calendar-tools
 
 [A] The KDE-Team
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/office extra/desktop/kde
-[E] opt kdoctools
-[E] opt docbook-xml
-[E] opt docbook-xsl
+[F] CROSS OBJDIR
+
+[E] opt kdoctools docbook-xml docbook-xsl
 
 [L] GPL
-[S] Stable
-[V] 25.04.1
-[P] X -----5---9 179.300
-
-[O] . $base/package/*/*/kde-conf.in
+[V] 26.04.1
+[P] X -----5---9 190.000
 
 [CV-GROUP] kde-gear
-[D] 7ec3efa1938199fd2e8ec430ecf5a98dc4ebe8407a40dec6c11254f8 akonadi-calendar-tools-25.04.1.tar.xz https://download.kde.org/stable/release-service/25.04.1/src/
+[D] ce0bef6e9cd5c877f5a087757870cd2f511784900c75b332fadc1e0f akonadi-calendar-tools-26.04.1.tar.xz https://download.kde.org/stable/release-service/26.04.1/src/
+
+. $base/package/*/*/kde-conf.in

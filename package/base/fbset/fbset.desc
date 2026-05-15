@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/fbset/fbset.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -12,13 +12,20 @@
 [T] interface to access different kinds of graphic displays.
 
 [A] Geert Uytterhoeven <Geert.Uytterhoeven@cs.kuleuven.ac.be>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [F] CROSS NOPARALLEL
 [C] extra/tool
 
 [L] GPL
-[S] Stable
 [V] 2.1
 
 [D] a8129548ad641acd1fb35244716d4742d2e8176dc47635ecc689f98d fbset-2.1.tar.gz http://home.tvd.be/cr26864/Linux/fbdev/
+
+fbset_postmake() {
+	cp -fv modeline2fb $root/sbin
+	cp -fv etc/fb.modes.ATI $root$sysconfdir/fb.modes
+	cp -fv etc/fb.modes.* $root$docdir
+}
+
+hook_add postmak5 5 fbset_postmake

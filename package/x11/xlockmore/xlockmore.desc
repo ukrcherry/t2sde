@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xlockmore/xlockmore.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
@@ -16,20 +16,18 @@
 [U] http://sillycycle.com/xlockmore.html
 
 [A] Patrick Naughton, David Bagley <bagleyd@tux.org> and many others
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/screensaver
 [E] opt gtk+12 glib12
 [E] opt gtk+2 harfbuzz pango cairo gdk-pixbuf
 
 [L] BSD
-[S] Stable
-[V] 5.82
-[P] X -----5---9 131.800
+[V] 5.88
 
-[O] . package/*/*/modular-x-conf.in
-[O] var_append CC_WRAPPER_APPEND ' ' -std=gnu17
-[O] var_append confopt ' ' '--enable-bad-pam --without-magick' # our pam considered broken?
-[O] pkginstalled pam && hook_add postmake 5 "cp -v etc/xlock.pamd $root/etc/pam.d/xlock"
+[D] cdf9acc3d976b08ce89766f3e57da3470411cf75fb7a586e11405e9a xlockmore-5.88.tar.xz http://sillycycle.com/xlock/
 
-[D] c87d6fd9ffce44d3a273c8a44e9fff6fc1c6dd5392efa10e0d74f1bc xlockmore-5.82.tar.xz http://sillycycle.com/xlock/
+. package/*/*/modular-x-conf.in
+var_append CC_WRAPPER_APPEND ' ' -std=gnu17
+var_append confopt ' ' '--enable-bad-pam --without-magick' # our pam considered broken?
+pkginstalled pam && hook_add postmake 5 "cp -v etc/xlock.pamd $root/etc/pam.d/xlock"

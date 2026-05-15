@@ -1,12 +1,12 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/kismet/kismet.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] Copyright (C) 1998 - 2003 ROCK Linux Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
 [I] An 802.11 wireless network sniffer
- 
+
 [T] Kismet is an 802.11 wireless network sniffer that is able to identify
 [T] and separate and different wireless networks within range.
 [T] Kismet works with any 802.11b wireless card which is capable of
@@ -17,17 +17,19 @@
 [T] cards which use the ar5k chipset.
 
 [U] https://www.kismetwireless.net
+
 [A] Mike Kershaw <dragorn@kismetwireless.net>
-[M] Valentin Ziegler <valentin@t2-project.org>
+[M] Valentin Ziegler <valentin.ziegler@googlemail.com>
 
 [C] extra/network
 
 [L] GPL
-[S] Stable
-[V] 2010-07-R1
+[V] 2025-09-R1
 
-[O] var_append confopt ' ' --enable-syspcap
-[O] hook_add preconf 3 "autoheader; autoconf;"
-[O] hook_add postmake 5 "cp -fv conf/*.conf $root$sysconfdir"
+[D] 1db856f73c04622a681f2e703b8d92598f3a2ef16296face3f275b76 kismet-2025-09-R1.tar.xz https://www.kismetwireless.net/code/
 
-[D] a8a787122df6ba63e3a93d05f49324fccff875b758341a3502b71c8e kismet-2010-07-R1.tar.gz http://www.kismetwireless.net/code/
+pkginstalled lm_sensors || var_append confopt ' ' --disable-lmsensors
+pkginstalled librtlsdr || var_append confopt ' ' --disable-librtlsdr
+pkginstalled mosquitto || var_append confopt ' ' --disable-mosquitto
+pkginstalled networkmanager || var_append confopt ' ' --disable-libnm
+var_append confopt ' ' --with-suidgroup=root

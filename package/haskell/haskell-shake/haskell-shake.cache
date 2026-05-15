@@ -1,0 +1,29 @@
+[TIMESTAMP] 1768251419 Mon 12 Jan 2026 03:56:59 PM EST
+[BUILDTIME] 50 (9)
+[SIZE] 36.66 MB, 179 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] coreutils
+[DEP] diffutils
+[DEP] gawk
+[DEP] ghc
+[DEP] grep
+[DEP] gzip
+[DEP] haskell-cabal
+[DEP] haskell-clock
+[DEP] haskell-extra
+[DEP] haskell-filepattern
+[DEP] haskell-hashable
+[DEP] haskell-heaps
+[DEP] haskell-js-dgtable
+[DEP] haskell-js-flot
+[DEP] haskell-js-jquery
+[DEP] haskell-primitive
+[DEP] haskell-random
+[DEP] haskell-splitmix
+[DEP] haskell-unordered-containers
+[DEP] haskell-utf8-string
+[DEP] linux-header
+[DEP] sed
+[DEP] tar

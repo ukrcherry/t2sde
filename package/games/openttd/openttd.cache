@@ -1,6 +1,6 @@
-[TIMESTAMP] 1745075926 Sat Apr 19 16:18:46 2025
-[BUILDTIME] 920 (9)
-[SIZE] 45.10 MB, 208 files
+[TIMESTAMP] 1769437558 Mon 26 Jan 2026 14:25:58 GMT
+[BUILDTIME] 1300 (9)
+[SIZE] 45.44 MB, 210 files
 
 [DEP] 00-dirtree
 [DEP] bash
@@ -19,16 +19,20 @@
 [DEP] harfbuzz
 [DEP] icu4c
 [DEP] libglvnd
+[DEP] libogg
+[DEP] libopus
 [DEP] libpng
 [DEP] libsdl2
 [DEP] linux-header
+[DEP] lsb-release-minimal
 [DEP] lzo
 [DEP] make
+[DEP] opusfile
 [DEP] pkgconfig
 [DEP] sed
 [DEP] sysfiles
 [DEP] tar
-[DEP] tbb
 [DEP] unzip
+[DEP] util-linux
 [DEP] xz
 [DEP] zlib

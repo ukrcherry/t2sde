@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/felix86/felix86.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,15 +13,15 @@
 [U] https://felix86.com/
 
 [A] Paris Oplopoios
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/emulator
-
-[F] OBJDIR CROSS CUSTOM-LTO
+[F] OBJDIR CROSS
 [R] + riscv64
 
-[L] MIT
-[S] Beta
-[V] 2504
+[E] opt doxygen
 
-[D] 144d1bf5caef31f17f3948c705f2d2d184ae370634726132a9632552 felix86-25.05.tar.gz https://github.com/OFFTKP/felix86/archive/25.05/
+[L] MIT
+[V] 26.04
+
+[D] 41dcf7ac3c7507f12bf250500d8185229c511c63f2f23a69fa6f8e0e felix86-26.04.tar.gz git+https://github.com/OFFTKP/felix86 26.04

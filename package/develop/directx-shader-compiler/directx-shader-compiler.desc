@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/directx-shader-compiler/directx-shader-compiler.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,7 +15,7 @@
 [U] https://github.com/microsoft/DirectXShaderCompiler
 
 [A] Microsoft
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [F] CROSS OBJDIR
@@ -23,13 +23,13 @@
 [E] opt go
 
 [L] OpenSource
-[S] Stable
-[V] 1.8.2502
+[V] 1.10.2605.2
 [P] X -----5---9 127.443
 
-[O] var_append cmakeopt ' ' -C../cmake/caches/PredefinedParams.cmake
-[O] makeinstopt=
-[O] hook_add postmake 5 "install bin/dxc $root$bindir/"
-[O] hook_add postmake 5 "install lib/libdxcompiler.so* $root$libdir/"
+[D] 4aa8ac221c9ced83eddd0b37337c4ff0fed527e6921f56b2ca25d350 DirectXShaderCompiler-v1.10.2605.2.tar.gz git+https://github.com/microsoft/DirectXShaderCompiler v1.10.2605.2
 
-[D] 7ff6864a12ee89e740bb4282f38935edfedd69b38e273c43d63a3f39 DirectXShaderCompiler-v1.8.2502.tar.gz git+https://github.com/microsoft/DirectXShaderCompiler v1.8.2502
+makeinstopt=
+var_append cmakeopt ' ' -C../cmake/caches/PredefinedParams.cmake
+
+hook_add postmake 5 "install bin/dxc $root$bindir/"
+hook_add postmake 5 "install lib/libdxcompiler.so* $root$libdir/"

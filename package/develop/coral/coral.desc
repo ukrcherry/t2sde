@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/coral/coral.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,17 +11,16 @@
 [T] to develop editors for other modeling languages and to implement
 [T] MDA and QVT-like model transformations.
 
-[U] http://mde.abo.fi/tools/Coral/
+[U] https://web.archive.org/web/20050207111503/http://mde.abo.fi/tools/Coral/
 
 [A] Ivan Porres <iporres@abo.fi>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [L] GPL
-[S] Stable
 [V] 0.8.1
 
-[O] hook_add premake 5 'export PYTHONPATH=$PWD:$PYTHONPATH'
+[D] cdab823f2224a09af3fcfa40691fc251e75b32ebeab6401cd8ed1adc coral-0.8.1.tar.gz https://prdownloads.sourceforge.net/sourceforge/coral/
 
-[D] cdab823f2224a09af3fcfa40691fc251e75b32ebeab6401cd8ed1adc coral-0.8.1.tar.gz http://dl.sourceforge.net/sourceforge/coral/
+hook_add premake 5 'export PYTHONPATH=$PWD:$PYTHONPATH'

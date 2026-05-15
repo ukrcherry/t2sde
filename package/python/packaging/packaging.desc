@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/packaging/packaging.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,14 +15,13 @@
 [U] https://github.com/pypa/packaging
 
 [A] Donald Stufft <donald@stufft.io>
-[M] The T2 Project
+[M] René Rebe <rene@exactco.de>
 
 [E] add python-flit-core python-installer
 
 [C] extra/development
 [L] APL BSD
 
-[S] Stable
 [V] 24.2
 [P] X -----5---9 109.005
 

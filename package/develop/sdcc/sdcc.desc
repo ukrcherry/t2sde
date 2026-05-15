@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/sdcc/sdcc.desc
-[COPY] Copyright (C) 2006 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2006 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -19,15 +19,13 @@
 [U] https://sdcc.sourceforge.net/
 
 [A] Michael Hope <michaelh@juju.net.nz>
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 
 [L] GPL
-[S] Stable
-[V] 4.1.0
+[V] 4.5.0
 
-# used for dependency generation and cpp does not understand all opts used
-[O] var_append makeopt ' ' CPP=$CC
+[D] bc3fcce730583478e33843766a823df31435e707916e3008b952f0fa sdcc-src-4.5.0.tar.bz2 https://prdownloads.sourceforge.net/sourceforge/sdcc/
 
-[D] 09292f6730b6e3c23df5098986ad578d286a30cae596ac0dc3725ce0 sdcc-src-2.6.0.tar.gz http://dl.sourceforge.net/sourceforge/sdcc/
+var_append makeopt ' ' CPP=$CC # used for dependency generation and cpp does not understand all options

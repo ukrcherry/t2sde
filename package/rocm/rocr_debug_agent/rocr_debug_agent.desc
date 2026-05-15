@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/rocr_debug_agent/rocr_debug_agent.desc
-[COPY] Copyright (C) 2024 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2024 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -17,17 +17,16 @@
 [U] https://github.com/ROCm/rocr_debug_agent
 
 [A] Advanced Micro Devices, Inc.
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [F] CROSS
 [C] extra/development
 
 [L] MIT
-[S] Stable
-[V] 6.4.0
+[V] 7.2.3
 [P] X -----5---9 300.765
 
-[O] . $base/package/*/*/rocm-conf.in
-
 [CV-GROUP] rocm
-[D] d346491c3f8d574ad3df8956ca4f16367efa7b5987f45021d67b5a93 rocr_debug_agent-rocm-6.4.0.tar.gz https://github.com/ROCm/rocr_debug_agent/archive/rocm-6.4.0/
+[D] 5d1503a1d3f50f77171b3b5097255362d4a90940f0f157f92844efcd rocr_debug_agent-rocm-7.2.3.tar.gz https://github.com/ROCm/rocr_debug_agent/archive/rocm-7.2.3/
+
+. $base/package/*/*/rocm-conf.in

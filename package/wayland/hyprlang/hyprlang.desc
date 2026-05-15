@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/hyprlang/hyprlang.desc
-[COPY] Copyright (C) 2023 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2023 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -11,14 +11,13 @@
 [U] https://hyprland.org/hyprlang
 
 [A] vaxerski
-[M] The T2 Project <t2@t2sde.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/x11
 [F] CROSS OBJDIR
 
 [L] BSD
-[S] Beta
-[V] 0.6.3
+[V] 0.6.8
 [P] X -----5---9 200.000
 
-[D] 32edce251297d018353f52d5ce05c6ec88c65bc13fdd6bf1c3c357cf hyprlang-v0.6.3.tar.gz https://github.com/hyprwm/hyprlang/archive/refs/tags/v0.6.3/
+[D] 5fdaa4e10b28df1164e3d59e77aaa7c28062ec520424544f7215d4fa hyprlang-v0.6.8.tar.gz https://github.com/hyprwm/hyprlang/archive/refs/tags/v0.6.8/

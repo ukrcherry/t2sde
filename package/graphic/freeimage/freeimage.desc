@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/freeimage/freeimage.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -15,16 +15,15 @@
 
 [A] Floris van den Berg <flvdberg@wxs.nl>
 [A] Herve Drolon
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/graphic
 [F] CROSS
 
 [L] GPL
-[S] Stable
 [V] 3.19.10
 [P] X -----5---9 159.000
 
-[O] var_append makeinstopt ' ' 'INCDIR=$root$includedir INSTALLDIR=$root$libdir'
-
 [D] f5b4f1f474e929e892deb7750cb5354256d39eb1294f42389e6f183f freeimage-3.19.10.tar.gz !https://github.com/danoli3/FreeImage/archive/refs/tags/3.19.10.tar.gz
+
+var_append makeinstopt ' ' 'INCDIR=$root$includedir INSTALLDIR=$root$libdir'

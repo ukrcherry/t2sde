@@ -1,9 +1,7 @@
+[TIMESTAMP] 1760475675 Tue Oct 14 23:01:15 2025
+[BUILDTIME] 80 (9)
+[SIZE] 6.20 MB, 631 files
 
-[TIMESTAMP] 1691063931 Thu Aug  3 13:58:51 2023
-[BUILDTIME] 30 (9)
-[SIZE] 5.41 MB, 570 files
-
-[DEP] 00-dirtree
 [DEP] bash
 [DEP] binutils
 [DEP] coreutils
@@ -13,15 +11,30 @@
 [DEP] gawk
 [DEP] glib
 [DEP] grep
+[DEP] gzip
+[DEP] hiredis
 [DEP] json-c
 [DEP] libcap
+[DEP] libdbi
+[DEP] libesmtp
+[DEP] libmaxminddb
+[DEP] libnet
+[DEP] liburing
+[DEP] libyaml
 [DEP] linux-header
 [DEP] m4
+[DEP] mailcap
 [DEP] make
+[DEP] net-snmp
+[OPT] openjdk
 [DEP] openssl
 [DEP] pcre2
 [DEP] python
 [DEP] rustc
 [DEP] sed
+[DEP] sysfiles
 [DEP] tar
 [DEP] tcp_wrappers
+[DEP] unwind
+[DEP] util-linux
+[DEP] zlib

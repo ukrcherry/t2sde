@@ -1,0 +1,32 @@
+[TIMESTAMP] 1751066916 Sat Jun 28 01:28:36 2025
+[BUILDTIME] 240 (9)
+[SIZE] 5.58 MB, 30 files
+
+[DEP] bash
+[DEP] binutils
+[DEP] botan
+[DEP] bzip2
+[DEP] cmake
+[DEP] coreutils
+[DEP] diffutils
+[DEP] gawk
+[DEP] glib
+[DEP] grep
+[DEP] gzip
+[DEP] libdrm
+[DEP] linux-header
+[DEP] make
+[DEP] pkgconfig
+[DEP] polkit
+[DEP] pugixml
+[DEP] qt65compat
+[DEP] qt6base
+[DEP] qt6charts
+[DEP] qt6declarative
+[DEP] qt6tools
+[DEP] quazip
+[DEP] sed
+[DEP] spdlog
+[DEP] tar
+[DEP] vulkan-headers
+[DEP] zlib

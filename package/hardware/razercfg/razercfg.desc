@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---.
+[COPY] t2/package/*/razercfg/razercfg.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---.
+
+[I] Razer mouse configuration tool
+
+[T] Razer mouse configuration tool.
+
+[U] https://bues.ch/cms/hacking/razercfg.html
+
+[A] Razercfg Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 0.44
+[L] GPL
+[P] X -----5---9 700.000
+
+[D] 10d3779a642fa51fe2db1947c5c277a64ebc96ee31c78c28ed4fd547 razercfg-0.44.tar.gz https://github.com/mbuesch/razer/archive/

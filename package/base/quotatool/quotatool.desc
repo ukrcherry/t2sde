@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/quotatool/quotatool.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,16 +13,15 @@
 [U] https://quotatool.ekenberg.se
 
 [A] Mike Glover <mpg4-fm@duluoz.net>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] base/system
 [F] CROSS
 
 [L] GPL
-[S] Stable
-[V] 1.6.2
+[V] 1.8.0
+
+[D] edcfc69e113ba924edd6785ff69dab17d02375194715929899437178 quotatool-1.8.0.tar.gz https://github.com/ekenberg/quotatool/archive/refs/tags/v1.8.0/
 
 # no DESTDIR
-[O] var_append confopt ' ' '--bindir=\${DESTDIR}$bindir --datadir=\${DESTDIR}$datadir --mandir=\${DESTDIR}$mandir'
-
-[D] 6df993223994fa5426ca7ae1eec8dbdda4141d8d0b35274ea1ce521e quotatool-1.6.2.tar.gz http://quotatool.ekenberg.se/
+var_append confopt ' ' '--bindir=\${DESTDIR}$bindir --datadir=\${DESTDIR}$datadir --mandir=\${DESTDIR}$mandir'

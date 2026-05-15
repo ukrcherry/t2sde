@@ -1,12 +1,12 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/mtpaint/mtpaint.desc
-[COPY] Copyright (C) 2009 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2009 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
-[I] A simple GTK+1/2 painting program
+[I] A simple GTK+ painting program
 
-[T] MtPaint is a simple GTK+1/2 painting program designed for creating icons
+[T] MtPaint is a simple GTK+ painting program designed for creating icons
 [T] and pixel-based artwork. It can edit indexed palette or 24 bit RGB images
 [T] and offers basic painting and palette manipulation tools. Its main file
 [T] format is PNG, although it can also handle JPEG, GIF, TIFF, BMP, TGA,
@@ -15,19 +15,18 @@
 [U] https://mtpaint.sourceforge.net/
 
 [A] Mark Tyler <marktyler@users.sourceforge.net>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/graphic
 
 [E] opt libwebp
 
 [L] GPL
-[S] Stable
 [V] 3.50
 
-[O] cleanconfopt=0 confopt=''
-[O] var_append confopt ' ' '--prefix=/$prefix nogif'
-[O] var_append GCC_WRAPPER_APPEND ' ' -std=gnu17
-[O] var_append GCC_WRAPPER_APPEND ' ' -L$(pkgprefix libdir libx11)
+[D] 64e1c651c02b588b9d2660dc4da9b046f9f52d6adaff2422e722b428 mtpaint-3.50.tar.bz2 https://prdownloads.sourceforge.net/sourceforge/mtpaint/
 
-[D] 64e1c651c02b588b9d2660dc4da9b046f9f52d6adaff2422e722b428 mtpaint-3.50.tar.bz2 http://dl.sourceforge.net/sourceforge/mtpaint/
+cleanconfopt=0 confopt=''
+var_append confopt ' ' '--prefix=/$prefix nogif'
+var_append GCC_WRAPPER_APPEND ' ' -std=gnu17
+var_append GCC_WRAPPER_APPEND ' ' -L$(pkgprefix libdir libx11)

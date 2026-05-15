@@ -1,0 +1,23 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/uzdoom/uzdoom.desc
+# Copyright (C) 2025 - 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Feature centric port for all Doom engine games
+
+[T] UZDoom is a feature centric port for all Doom engine games, based on
+[T] GZDoom, adding an advanced renderer and powerful scripting capabilities.
+
+[U] https://github.com/UZDoom/UZDoom
+
+[A] UZDoom Developers
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/game
+[F] NO-LTO
+
+[L] GPL
+[V] 4.14.3
+
+[D] 7458d5a1718f4042af708d293a6c14adca85740b27fdb76447e3cf9f UZDoom-4.14.3.tar.gz https://github.com/UZDoom/UZDoom/archive/refs/tags/4.14.3/

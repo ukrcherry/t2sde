@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: GPL-2.0
 # --- T2-COPYRIGHT-END ---
 
-. scripts/core-functions.in
+. scripts/functions.in
 
 # Extract packagename and version number from the script arguments.
 pkg="$1"; shift
@@ -14,13 +14,21 @@ ver="$1"; shift
 # Remote URL
 #
 if [[ "$pkg" == http*://* ]]; then
-	curl $pkg/ | tr '"' '\n' | grep "tar.[^.<>]*$"| sort -u |
-		sed 's/\.tar.*//'|
+	curl $pkg/ | tr '"' '\n' | grep "tar.[^.<>]*$"| sort -u | sed 's/\.tar.*//' |
 	while read p; do
 		scripts/Update-Pkg $p
 	done
 
 	exit	# TODO: return any update download error
+else
+	# Get ver from Repology if not specified
+	if [ ! "$ver" ]; then
+	    if curl -H "User-Agent: T2/Update" "https://repology.org/api/v1/project/$pkg" > $$.diff; then
+		ver=$(jq -r 'if . == [] then "" else map(select(.status == "newest")) | .[0].version end' < $$.diff)
+	    fi
+	    rm $$.diff
+	    [ ! "$ver" ] && echo "No data, no project name match?" && exit 1
+	fi
 fi
 
 # The script also supports the package name and version separated by a '-',
@@ -67,13 +75,18 @@ rm -f $$.diff
 pkg=`echo "$pkg" | tr A-Z a-z`
 
 update_pkg() {
-	local pkg="$1"
-	local ver="$2"
+	local base=$PWD pkg=$1 ver
+	parse_desc $pkg
+	ver="$2"
+
+	if [ "$ver" == "$desc_V" ]; then
+		echo "Version is identical, nothing to patch."
+		return
+	fi
 
 	if [ "$ver" != "refresh" ]; then
 		# The package exists so now update the package descriptor
-		# for the given package to the new version. Luckily we have
-		# a script for that too :-)
+		# for the given package to the new version.
 		scripts/Create-PkgUpdPatch "$pkg" "$ver" | tee $$.diff
 		patch -p1 < $$.diff
 		rm -f $$.diff
@@ -82,13 +95,14 @@ update_pkg() {
 	# Step 2: Use the modified package descriptor to download
 	# the package. Again, nothing more that calling an existing
 	# script.
-	scripts/Download $pkg || exit 1
+	scripts/Download $pkg || return 1
 
 	# Third and final step is updating the checksum for the
 	# new download.
 	scripts/Create-CkSumPatch "$pkg" | patch -p0
 }
 
+errors=0
 # check if pkg exists
 if [ -d package/*/$pkg ]; then
 	update_pkg $pkg $ver
@@ -97,11 +111,17 @@ else
 	pkgs=$(grep "^\[CV-GROUP\] $pkg" package/*/*/*.desc | cut -d / -f 3)
 	if [ "$pkgs" ]; then
 		for p in $pkgs; do
-			update_pkg $p $ver
+			update_pkg $p $ver || ((++errors))
 		done
 	else
 		echo "ERROR: package $pkg doesn't exist"
+		((++error))
 		pkg=$(pkgsimilar $pkg)
 		[ "$pkg" ] && echo "Did you mean: $pkg?"
 	fi
+fi
+
+if [ $errors -gt 0 ]; then
+	echo "$errors errors."
+	exit 1
 fi

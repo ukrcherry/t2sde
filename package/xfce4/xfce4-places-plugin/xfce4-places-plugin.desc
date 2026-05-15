@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/xfce4-places-plugin/xfce4-places-plugin.desc
-[COPY] Copyright (C) 2007 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2007 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -12,15 +12,14 @@
 [U] http://xfce-goodies.berlios.de/
 
 [A] Diego Ongaro
-[M] Johan <linuxmasterjedi@free.fr>
+[M] Johan Boyé <linuxmasterjedi@free.fr>
 
 [C] extra/desktop/xfce
 [F] CROSS
 
 [L] GPL
-[S] Beta
-[V] 1.8.4
+[V] 1.9.0
 
-[O] . $base/package/xfce4/*/xfce4-conf.in
+[D] b0197c5e93e24604b764511d4bf5b34936b1fb0be1036cfbac6ee152 xfce4-places-plugin-1.9.0.tar.xz https://archive.xfce.org/src/panel-plugins/xfce4-places-plugin/1.9/
 
-[D] a9db0deb8397324418a11acd2537f57b5ff1bf843326e77604f92313 xfce4-places-plugin-1.8.4.tar.bz2 https://archive.xfce.org/src/panel-plugins/xfce4-places-plugin/1.8/
+. $base/package/xfce4/*/xfce4-conf.in

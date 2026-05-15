@@ -1,0 +1,23 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/offpunk/offpunk.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] An offline-first browser for the small internet
+
+[T] Offpunk allows you to browse the Web, Gemini, Gopher and subscribe to RSS
+[T] feeds without leaving your terminal and while being offline.
+
+[U] https://git.sr.ht/~lioploum/offpunk
+
+[A] Offpunk Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[V] 3.1
+[L] BSD
+
+[D] ab2784ebb118a96580d2b8e149f5d261cbf9d1f21ba1dad1e89166dd offpunk-3.1.tar.gz !https://git.sr.ht/~lioploum/offpunk/archive/v3.1.tar.gz

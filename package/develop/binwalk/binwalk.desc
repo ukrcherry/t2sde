@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/binwalk/binwalk.desc
-[COPY] Copyright (C) 2014 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2014 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -9,16 +9,15 @@
 [T] Binwalk is a fast, easy to use tool for analyzing and extracting firmware
 [T] images.
 
-[U] http://binwalk.org/
+[U] https://github.com/ReFirmLabs/binwalk/
 
 [A] Craig Heffner
-[M] Rene Rebe <rene@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/tool
 
 [F] CROSS
 [L] GPL
-[S] Stable
 [V] 3.1.0
 
 [D] 6d49ee3a1ec0e57f05c18fef3234d790ebe692c6b5e5834accec0b61 binwalk-v3.1.0.tar.gz https://github.com/devttys0/binwalk/archive/v3.1.0/

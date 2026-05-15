@@ -1,23 +1,19 @@
-[TIMESTAMP] 1744235049 Wed Apr  9 23:44:09 2025
+[TIMESTAMP] 1760437785 Tue Oct 14 12:29:45 2025
 [BUILDTIME] 8 (9)
-[SIZE] 25.19 MB, 427 files
+[SIZE] 25.19 MB, 426 files
 
 [DEP] bash
 [DEP] binutils
-[DEP] cmake
 [DEP] coreutils
-[DEP] curl
 [DEP] diffutils
 [DEP] gawk
 [DEP] geocode-glib
 [DEP] gettext
+[OPT] gi-docgen
 [OPT] glib
-[DEP] gnome-shell-extensions
 [DEP] gobject-introspection
 [OPT] graphviz
 [DEP] grep
-[DEP] gsettings-desktop-schemas
-[DEP] gtk+
 [DEP] json-glib
 [DEP] libsoup3
 [DEP] libxml

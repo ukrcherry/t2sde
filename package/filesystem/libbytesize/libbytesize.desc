@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libbytesize/libbytesize.desc
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
+[COPY] Copyright (C) 1998 - 2004 ROCK Linux Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A library that facilitate the common operations with sizes in bytes
+
+[T] A tiny library that would facilitate the common operations with sizes in bytes.
+
+[U] https://www.gnome.org
+
+[A] Storaged Project
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/shell extra/desktop/gnome
+[F] CROSS
+
+[E] opt gtk-doc docbook-xml docbook-xsl
+
+[L] LGPL
+[V] 2.12
+[P] X -----5---9 177.200
+
+[D] 063af41da28fbef6d93896d29ac1c8cbcebf281757d33c739f28d69e libbytesize-2.12.tar.gz https://github.com/storaged-project/libbytesize/releases/download/2.12/

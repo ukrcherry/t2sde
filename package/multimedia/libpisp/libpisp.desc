@@ -1,0 +1,25 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/libpisp/libpisp.desc
+# Copyright (C) 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] A library to generate run-time configuration for the Raspberry Pi ISP
+
+[T] A helper library to generate run-time configuration for the Raspberry Pi
+[T] ISP (PiSP), consisting of the Frontend and Backend hardware components.
+
+[U] https://github.com/raspberrypi/libpisp
+
+[A] raspberrypi
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+[R] + arm arm64
+
+[L] BSD
+[V] 1.5.0
+[P] X -----5---9 120.000
+
+[D] c6015a0a74e5111e4659a9164bcada3603443f84e35c207b64be817d libpisp-1.5.0.tar.gz https://github.com/raspberrypi/libpisp/archive/v1.5.0/

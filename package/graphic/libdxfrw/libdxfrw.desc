@@ -1,0 +1,24 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/libdxfrw/libdxfrw.desc
+# Copyright (C) 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] C++ library to read and write DXF/DWG files
+
+[T] C++ library to read and write DXF/DWG files.
+
+[U] https://github.com/LibreCAD/libdxfrw/
+
+[A] codelibs
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] GPL
+[V] 2.2.0
+
+[D] ae2b97732567aabec0cad75f084db0ea503d4d94742ac738ca1220b2 libdxfrw-2.2.0.tar.gz https://github.com/LibreCAD/libdxfrw/archive/refs/tags/LC2.2.0/
+
+var_append cmakeopt ' ' -DCMAKE_POLICY_VERSION_MINIMUM=3.5

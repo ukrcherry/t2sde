@@ -1,0 +1,26 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/doctl/doctl.desc
+[COPY] Copyright (C) 2022 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Official command line interface for the DigitalOcean API
+
+[T] doctl is a command-line interface (CLI) for the DigitalOcean API.
+
+[U] https://github.com/digitalocean/doctl
+
+[A] Doctl Authors
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/base
+[F] CROSS
+
+[L] APL
+[V] 1.159.0
+
+[D] b914f06d5a04c271bd7416d5c5dacec4469919d3c31c479d16a933c6 doctl-1.159.0.tar.gz https://github.com/digitalocean/doctl/archive/v1.159.0/
+
+. $base/package/*/*/go-conf.in
+var_append goconfopt ' ' '-o doctl ./cmd/doctl'
+hook_add postmake 5 'cp -vf doctl $root$bindir/'

@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/ladspa-tap/ladspa-tap.desc
-[COPY] Copyright (C) 2004 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2004 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -13,16 +13,15 @@
 [U] https://tap-plugins.sourceforge.net/
 
 [A] Tom Szilagyi <tszilagyi@users.sourceforge.net>
-[M] The T2 Project <t2@t2-project.org>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/multimedia
 [F] CROSS
 
 [L] GPL
-[S] Beta
-[V] 1.0.0
+[V] 1.0.1
 
-[O] var_append makeinstopt ' ' INSTALL_LRDF_DIR=$root/$prefix/share/ladspa/rdf
-[O] . $base/package/*/ladspa/ladspa.in
+[D] a410037b4ed938d80fed4acf5f9780517003735eb71f0dc5d85efae9 tap-plugins-1.0.1.tar.gz https://github.com/tomszilagyi/tap-plugins/archive/1.0.1/
 
-[D] e0f7bd39ab1b53d9e87a5a96e1221a1b94067424c2c28bec99c4fc7c tap-plugins-1.0.0.tar.gz http://dl.sourceforge.net/sourceforge/tap-plugins/
+. $base/package/*/ladspa/ladspa.in
+var_append makeinstopt ' ' INSTALL_LRDF_DIR=$root/$prefix/share/ladspa/rdf

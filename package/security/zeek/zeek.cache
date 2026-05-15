@@ -1,26 +1,35 @@
-[TIMESTAMP] 1740798961 Fri Feb 28 19:16:01 2025
-[BUILDTIME] 2900 (9)
-[SIZE] 103.62 MB, 3274 files
+[TIMESTAMP] 1778671265 Wed May 13 13:21:05 2026
+[BUILDTIME] 1400 (9)
+[SIZE] 109.20 MB, 3467 files
 
+[DEP] automake
 [DEP] bash
 [DEP] binutils
 [DEP] bison
 [DEP] cmake
 [DEP] coreutils
 [DEP] diffutils
+[DEP] e2fsprogs
 [DEP] findutils
 [DEP] flex
 [DEP] gawk
 [DEP] grep
 [DEP] gzip
+[DEP] hiredis
+[DEP] krb5
+[DEP] libmaxminddb
 [DEP] libpcap
+[DEP] libzmq
 [DEP] linux-header
 [DEP] m4
 [DEP] make
+[OPT] nodejs
 [DEP] openssl
+[DEP] pkgconfig
 [DEP] python
+[DEP] readline
 [DEP] sed
 [DEP] swig
 [DEP] tar
-[DEP] tbb
+[DEP] util-linux
 [DEP] zlib

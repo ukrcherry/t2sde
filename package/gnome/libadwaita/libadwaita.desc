@@ -1,6 +1,6 @@
 [COPY] --- T2-COPYRIGHT-BEGIN ---
 [COPY] t2/package/*/libadwaita/libadwaita.desc
-[COPY] Copyright (C) 2021 - 2025 The T2 SDE Project
+[COPY] Copyright (C) 2021 - 2026 The T2 SDE Project
 [COPY] SPDX-License-Identifier: GPL-2.0
 [COPY] --- T2-COPYRIGHT-END ---
 
@@ -14,17 +14,19 @@
 [U] https://gitlab.gnome.org/GNOME/libadwaita/
 
 [A] The GTK Team
-[M] Rene Rebe <rene@exactcode.de>
+[M] René Rebe <rene@exactco.de>
 
 [C] extra/development
 [F] CROSS
 
 [L] LGPL
-[S] Stable
-[V] 1.7.2
+[V] 1.9.0
 [P] X -----5---9 161.700
 
-[O] . $base/package/*/*/gnome-conf.in
-[O] var_append mesonopt ' ' -Dtests=false
+[D] 3c90873b6556f2409c8f94642ab60a926f8ef1631bc00a61026e5a89 libadwaita-1.9.0.tar.xz https://download.gnome.org/sources/libadwaita/1.9/
 
-[D] 852f4d479795a9efe28a33e93a28ca95beb290427691183f25849518 libadwaita-1.7.2.tar.bz2 https://gitlab.gnome.org/GNOME/libadwaita/-/archive/1.7.2/
+. $base/package/*/*/gnome-conf.in
+var_append mesonopt ' ' -Dtests=false
+
+# Prevent libadwaita from building deps behind our back
+hook_add preconf 5 "rm -rf subprojects/*"
