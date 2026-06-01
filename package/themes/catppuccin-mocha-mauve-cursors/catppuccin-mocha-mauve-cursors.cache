@@ -1,0 +1,13 @@
+[TIMESTAMP] 1779118442 Mon May 18 17:34:02 2026
+[BUILDTIME] 4 (9)
+[SIZE] 11.41 MB, 363 files
+
+[DEP] bash
+[DEP] coreutils
+[DEP] diffutils
+[DEP] findutils
+[DEP] gawk
+[DEP] grep
+[DEP] sed
+[DEP] unzip
+[DEP] util-linux

@@ -19,6 +19,6 @@
 [F] CROSS
 
 [L] BSD
-[V] 12.2.0
+[V] 12.3.2
 
-[D] e668dfa4dba810bb0c059ba42e1dcb6ad8da1106977447774d93b224 limine-12.2.0.tar.xz https://github.com/Limine-Bootloader/Limine/releases/download/v12.2.0/
+[D] 0df4c565773ae546ffd8c64c9aec624733b2c57dc884ae1aed2b9e22 limine-12.3.2.tar.xz https://github.com/Limine-Bootloader/Limine/releases/download/v12.3.2/

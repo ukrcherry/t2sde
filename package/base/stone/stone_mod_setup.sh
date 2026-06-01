@@ -155,6 +155,9 @@ create_user() {
 	else
 		usermod -l "$name" -d "/home/$name" -m user
 		groupmod -n "$name" user
+
+		sed -i "s,/home/user,/home/$name,g" \
+			/home/$name/{.local/share/user-places.xbel,config/session/dolphin_dolphin_dolphin}
 	fi
 
 	while ! set_passwd "$name"; do :; done
@@ -168,10 +171,11 @@ main() {
 	while ! set_passwd root; do :; done
 	unset gui_nocancel
 
-	create_user
-
 	# temp live desktop demo hack
-	rm -f /etc/plasmalogin.conf /home/user/Desktop/install.desktop 2>/dev/null
+	rm -f /etc/plasmalogin.conf /home/user/Desktop/install.desktop \
+	      /etc/polkit-1/rules.d/10-installer.rules 2>/dev/null
+
+	create_user
 
 	# run the stone modules that registered itself for the first SETUP pass
 	while read -u 200 a b c cmd; do

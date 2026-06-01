@@ -19,10 +19,10 @@
 [C] extra/development
 
 [L] MIT
-[V] 7.2.2
+[V] 7.2.4
 [P] X -----5---9 300.675
 
 [CV-GROUP] rocm
-[D] 2726d013da19cd414cbd16da67724a20e339dd50a71cf685f16d4251 rocprofiler-compute-rocm-7.2.2.tar.gz https://github.com/ROCm/rocprofiler-compute/archive/rocm-7.2.2/
+[D] d29c893fc703edf18696baeb59635d1c0337113fc5a4fb5875de2dda rocprofiler-compute-rocm-7.2.4.tar.gz https://github.com/ROCm/rocprofiler-compute/archive/rocm-7.2.4/
 
 . $base/package/*/*/rocm-conf.in

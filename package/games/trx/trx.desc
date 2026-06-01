@@ -1,0 +1,35 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/trx/trx.desc
+[COPY] Copyright (C) 2020 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Open source re-implementation of Tomb Raider
+
+[T] An open-source reimplementation of Tomb Raider 1, Tomb Raider 2 and Tomb
+[T] Raider 3. TRX aims to enhance these classic games through decompilation and
+[T] the implementation of open-source alternatives to proprietary components.
+
+[U] https://github.com/LostArtefacts/TRX
+
+[A] LostArtefacts
+[M] Boudewijn van der Heide <boudewijn@delta-utec.com>
+
+[C] extra/game
+
+[L] GPL3
+[V] 1.7.1
+
+[D] 77d4138fa010bf2e630baa555ea3164b917d93be9187e847e22cab58 trx-1.7.1.tar.gz https://github.com/LostArtefacts/trx/archive/refs/tags/trx-1.7.1/
+
+srcdir=*/src
+
+var_append GCC_WRAPPER_APPEND ' ' -L$root$(pkgprefix libdir libx11)
+
+var_append mesonopt ' ' -Dstaticdeps=false
+
+install_paths() {
+	mkdir -p $root$datadir/trx
+	cp -rfv ../data/trx/ship/* $root$datadir/trx/
+}
+hook_add postmake 5 install_paths

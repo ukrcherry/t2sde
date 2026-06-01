@@ -18,14 +18,15 @@
 [C] extra/multimedia
 [F] CROSS
 
-[E] opt doxygen
+[E] opt doxygen graphviz
 [E] opt libde265
 [E] opt libwebp
+[E] opt x264
 
 [L] LGPL
-[V] 1.21.2
+[V] 1.23.0
 [P] X -----5---9 130.301
 
-[D] e9d7d120d672644e56fe74fba37d27c23f894c32e6419b39b241c22d libheif-1.21.2.tar.gz https://github.com/strukturag/libheif/releases/download/v1.21.2/
+[D] 8fce4b59028bbfea699c503db36474e05a6aa674f1904784096d135e libheif-1.23.0.tar.gz https://github.com/strukturag/libheif/releases/download/v1.23.0/
 
 var_append confopt ' ' --disable-go

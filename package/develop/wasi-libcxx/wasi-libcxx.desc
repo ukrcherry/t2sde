@@ -20,11 +20,11 @@
 [R] - alpha hppa hppa64 ia64
 
 [L] BSD MIT
-[V] 22.1.5
+[V] 22.1.6
 [P] X -----5---9 152.700
 
 [CV-GROUP] llvm-project
-[D] 539b0fa857272b2b18ad9b9e58e11d4e48e0f1c807ec375d5ca91913 llvm-project-22.1.5.src.tar.xz https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.5/
+[D] 7033e7771c421a353d7d644e1aadcbf0f2dd848cc1f7299070e20884 llvm-project-22.1.6.src.tar.xz https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.6/
 
 # TODO: sync w/ wasi-libc
 [ $prefix_auto = 1 ] && prefix=opt/wasi && set_confopt
@@ -61,7 +61,7 @@ var_append cmakeopt ' ' "-DLIBCXX_ABI_VERSION=2 \
 -DLIBCXX_HAS_PTHREAD_API=OFF \
 -DLIBCXX_HAS_WIN32_THREAD_API=OFF \
 -DLIBCXX_INCLUDE_BENCHMARKS=OFF \
--DLIBCXX_LIBDIR_SUFFIX=/wasm32-wasi \
+-DLIBCXX_LIBDIR_SUFFIX=/wasm32-wasip1 \
 -DLIBCXX_STANDALONE_BUILD=ON"
 
 var_append cmakeopt ' ' "-DLIBCXXABI_BUILD_EXTERNAL_THREAD_LIBRARY=OFF \
@@ -75,7 +75,7 @@ var_append cmakeopt ' ' "-DLIBCXXABI_BUILD_EXTERNAL_THREAD_LIBRARY=OFF \
 -DLIBCXXABI_HAS_WIN32_THREAD_API=OFF \
 -DLIBCXXABI_LIBCXX_INCLUDES=libcxxabi/include/c++/v1 \
 -DLIBCXXABI_LIBCXX_PATH=libcxx \
--DLIBCXXABI_LIBDIR_SUFFIX=/wasm32-wasi \
+-DLIBCXXABI_LIBDIR_SUFFIX=/wasm32-wasip1 \
 -DLIBCXXABI_INCLUDE_TESTS=OFF \
 -DLIBCXXABI_SILENT_TERMINATE:BOOL=ON \
 -DLIBCXXABI_STANDALONE_BUILD=ON"

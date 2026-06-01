@@ -1,14 +1,17 @@
-[TIMESTAMP] 1760003167 Thu Oct  9 11:46:07 2025
-[BUILDTIME] 25 (9)
-[SIZE] 3.41 MB, 200 files
+[TIMESTAMP] 1779660344 Mon May 25 00:05:44 2026
+[BUILDTIME] 40 (9)
+[SIZE] 3.37 MB, 198 files
 
 [DEP] bash
 [DEP] binutils
 [DEP] cairo
 [DEP] coreutils
+[DEP] cython
 [DEP] diffutils
+[DEP] file
 [DEP] findutils
 [DEP] gawk
+[DEP] gettext
 [DEP] glib
 [DEP] grep
 [DEP] groff
@@ -24,7 +27,11 @@
 [DEP] pango
 [OPT] perl
 [DEP] perl-html-parser
+[DEP] pkgconfig
 [OPT] python
 [DEP] sed
 [DEP] setuptools
 [DEP] tar
+[DEP] tcp_wrappers
+[DEP] util-linux
+[DEP] vcs-versioning

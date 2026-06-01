@@ -1,6 +1,6 @@
-[TIMESTAMP] 1745197190 Sun Apr 20 20:59:50 2025
-[BUILDTIME] 55 (9)
-[SIZE] 6.19 MB, 6 files
+[TIMESTAMP] 1779800723 Tue May 26 13:05:23 2026
+[BUILDTIME] 75 (9)
+[SIZE] 6.15 MB, 7 files
 
 [DEP] bash
 [DEP] cargo
@@ -15,3 +15,4 @@
 [DEP] rustc
 [DEP] sed
 [DEP] tar
+[DEP] util-linux

@@ -17,9 +17,9 @@
 [F] CROSS OBJDIR
 
 [L] GPL
-[V] 6.6.5
+[V] 6.6.90
 
 [CV-GROUP] kde-plasma
-[D] 3c2fe572b2c7e1e10803b2362fc74097dcb6f506ca28476b00083950 sddm-kcm-6.6.5.tar.xz https://download.kde.org/stable/plasma/6.6.5/
+[D] 8cffe3b67d6b2209c330330b9e1ebe9caa5d825cd1e9798e1c450891 sddm-kcm-6.6.90.tar.xz https://download.kde.org/unstable/plasma/6.6.90/
 
 . $base/package/*/*/kde-conf.in

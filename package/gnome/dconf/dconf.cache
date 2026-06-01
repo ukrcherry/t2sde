@@ -1,6 +1,6 @@
-[TIMESTAMP] 1745785257 Sun Apr 27 23:20:57 2025
-[BUILDTIME] 6 (9)
-[SIZE] 0.31 MB, 27 files
+[TIMESTAMP] 1779658495 Sun May 24 23:34:55 2026
+[BUILDTIME] 16 (9)
+[SIZE] 0.34 MB, 29 files
 
 [DEP] bash
 [DEP] binutils
@@ -10,8 +10,9 @@
 [OPT] docbook-xml
 [OPT] docbook-xsl
 [DEP] gawk
-[OPT] glib
+[DEP] glib
 [DEP] grep
+[DEP] libxslt
 [DEP] linux-header
 [DEP] meson
 [DEP] ninja
@@ -19,5 +20,6 @@
 [DEP] python
 [DEP] sed
 [DEP] tar
-[DEP] vala
+[DEP] util-linux
+[OPT] vala
 [DEP] xz

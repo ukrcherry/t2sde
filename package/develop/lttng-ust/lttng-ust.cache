@@ -1,6 +1,6 @@
-[TIMESTAMP] 1739229572 Tue Feb 11 00:19:32 2025
-[BUILDTIME] 18 (5)
-[SIZE] 1.69 MB, 164 files
+[TIMESTAMP] 1779700272 Mon May 25 11:11:12 2026
+[BUILDTIME] 85 (9)
+[SIZE] 2.03 MB, 166 files
 
 [DEP] asciidoc
 [DEP] bash
@@ -11,14 +11,19 @@
 [DEP] diffutils
 [DEP] docbook-xml
 [DEP] docbook-xsl
+[DEP] file
+[DEP] findutils
 [DEP] gawk
 [DEP] grep
+[DEP] libpaper
 [DEP] liburcu
 [DEP] libxml
 [DEP] libxslt
 [DEP] linux-header
 [DEP] make
+[DEP] ncurses
 [DEP] numactl
+[DEP] pkgconfig
 [DEP] python
 [DEP] sed
 [DEP] tar

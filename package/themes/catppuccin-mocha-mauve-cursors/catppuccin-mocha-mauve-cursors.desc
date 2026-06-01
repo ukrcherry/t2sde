@@ -1,0 +1,32 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/catppuccin-mocha-mauve-cursors/catppuccin-mocha-mauve-cursors.desc
+[COPY] Copyright (C) 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] Catppuccin Mocha Mauve cursor theme
+
+[T] Catppuccin Cursors is a soothing pastel cursor theme based on Volantes.
+[T] This package installs the Mocha Mauve variant for Xcursor and Hyprcursor.
+
+[U] https://github.com/catppuccin/cursors
+
+[A] Catppuccin Org
+[M] LpcPaul <LpcPaul@users.noreply.github.com>
+
+[C] extra/theme
+[F] CROSS
+
+[L] GPL
+[V] 2.0.0
+
+[D] 025e798952fb28d9722dff6f3169d955bec51c8a2b0a3eeefd3ab19e catppuccin-mocha-mauve-cursors-2.0.0.zip !https://github.com/catppuccin/cursors/releases/download/v2.0.0/catppuccin-mocha-mauve-cursors.zip
+
+runmake=0
+
+install_catppuccin_mocha_mauve_cursors() {
+	mkdir -p $root$datadir/icons/catppuccin-mocha-mauve-cursors
+	cp -rfv cursors cursors_scalable hyprcursors index.theme manifest.hl \
+		$root$datadir/icons/catppuccin-mocha-mauve-cursors/
+}
+hook_add postmake 5 install_catppuccin_mocha_mauve_cursors

@@ -21,9 +21,9 @@
 [R] + x86 x86-64 arm arm64 ppc64le mips mips64 mipsel
 
 [L] MPL
-[V] 1.15.3
+[V] 1.15.5
 
-[D] 7279a40f156441110a3275f802b7e230cfaf9290857cfe95929e6a86 terraform-1.15.3.tar.gz https://github.com/hashicorp/terraform/archive/v1.15.3/
+[D] 032b4f9392da599266094927e41660a541e6b2bda0a575ce3708eb1a terraform-1.15.5.tar.gz https://github.com/hashicorp/terraform/archive/v1.15.5/
 
 . $base/package/*/*/go-conf.in
 var_append goconfopt ' ' "-o bin/$pkg"

@@ -27,10 +27,10 @@
 [E] opt lua
 
 [L] GPL
-[V] 1.9.0
+[V] 1.10.3
 [P] X -----5---9 127.401
 
-[D] 0b13173f3795e546d68544d586e7612051eb915d2f2652d16d74ffa8 rrdtool-1.9.0.tar.gz https://github.com/oetiker/rrdtool-1.x/releases/download/v1.9.0/
+[D] d3e39493d9a830c01ab444140353a4da25542b8ad4ea4b8cfa5de5ef rrdtool-1.10.3.tar.gz https://github.com/oetiker/rrdtool-1.x/releases/download/v1.10.3/
 
 atstage native || hook_add preconf 5 "echo 'rd_cv_ieee_works=yes' >> config.cache"
 

@@ -1,18 +1,21 @@
-[TIMESTAMP] 1737680364 Fri Jan 24 01:59:24 2025
-[BUILDTIME] 20 (9)
-[SIZE] 3.32 MB, 111 files
+[TIMESTAMP] 1779709785 Mon May 25 13:49:45 2026
+[BUILDTIME] 55 (9)
+[SIZE] 3.27 MB, 113 files
 
 [DEP] bash
-[DEP] bzip2
+[DEP] binutils
 [DEP] check
 [DEP] coreutils
 [DEP] diffutils
+[DEP] file
 [DEP] findutils
 [DEP] gawk
 [DEP] glib
-[DEP] gobject-introspection
+[OPT] gobject-introspection
 [DEP] grep
-[DEP] gtk-doc
+[OPT] gtk-doc
+[DEP] gzip
+[DEP] libtool
 [DEP] libxml
 [DEP] linux-header
 [DEP] make
@@ -22,3 +25,4 @@
 [DEP] sed
 [DEP] setuptools
 [DEP] tar
+[DEP] util-linux

@@ -1,0 +1,32 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/libabw/libabw.desc
+[COPY] Copyright (C) 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A library for reading Apple iWork Pages documents
+
+[T] Libabw is a library and a set of tools for reading and converting
+[T] Apple iWork Pages documents.
+
+[U] https://wiki.documentfoundation.org/DLP/Libraries/libabw
+
+[A] Fridrich Strba <fridrich.strba@bluewin.ch>
+[M] JeremyZeng77 <JeremyZeng77@users.noreply.github.com>
+
+[C] extra/office
+[F] CROSS
+
+[E] opt doxygen
+
+[L] MPL
+[V] 0.1.4
+[P] X -----5---9 201.000
+
+[D] 7e596bf0f33f1d52d421b64405c6bd5d3a7b7f80190b45035108d576 libabw-0.1.4.tar.xz https://dev-www.libreoffice.org/src/
+
+var_append confopt ' ' --disable-tests
+
+# fix "missing" wrapper break it
+var_append makeopt ' ' 'PERL=perl GPERF=gperf'
+

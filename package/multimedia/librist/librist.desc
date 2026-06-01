@@ -16,7 +16,7 @@
 [C] extra/base
 [F] CROSS
 
-[V] 0.2.14
+[V] 0.2.16
 [L] BSD
 
-[D] c1e1174b656232a14f44ce5cd754ce36bfae89c02f09832c27772d5d librist-v0.2.14.tar.gz https://code.videolan.org/rist/librist/-/archive/v0.2.14/
+[D] 0d02306118b553dd191cbd8b66dfe0713f713e2ee81c6277a296fbb4 librist-v0.2.16.tar.gz https://code.videolan.org/rist/librist/-/archive/v0.2.16/

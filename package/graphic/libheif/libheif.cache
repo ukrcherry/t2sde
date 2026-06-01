@@ -1,6 +1,6 @@
-[TIMESTAMP] 1758128807 Wed Sep 17 19:06:47 2025
-[BUILDTIME] 115 (9)
-[SIZE] 2.40 MB, 55 files
+[TIMESTAMP] 1779790896 Tue May 26 12:21:36 2026
+[BUILDTIME] 200 (9)
+[SIZE] 5.25 MB, 60 files
 
 [DEP] bash
 [DEP] binutils
@@ -11,6 +11,7 @@
 [DEP] gawk
 [DEP] gdk-pixbuf
 [DEP] glib
+[OPT] graphviz
 [DEP] grep
 [DEP] gzip
 [DEP] libaom
@@ -22,7 +23,11 @@
 [OPT] libwebp
 [DEP] linux-header
 [DEP] make
+[DEP] openh264
 [DEP] pkgconfig
 [DEP] sed
 [DEP] tar
+[DEP] util-linux
+[OPT] x264
+[DEP] x265
 [DEP] zlib

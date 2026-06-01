@@ -328,7 +328,7 @@ if [ $this_is_the_2nd_run = 0 ]; then
 			printf(\"%d\", int((buildtime + q/2) / q) * q); }"`
 
 		{
-			date '+[TIMESTAMP] %s %c'
+			LANG=C date '+[TIMESTAMP] %s %c'
 
 			[ -f $root/var/adm/logs/$stagelevel-$xpkg.err ] &&
 				x=" ERROR" || x=""
@@ -373,7 +373,7 @@ var_append flistrfilter '|' ".*:	.*/lib.*\.so.*"
 var_append flistrfilter '|' ".*\.dot.*:	.*font.*"
 var_append flistrfilter '|' ".*cmake\.open:	.*/(bin|sbin)"
 var_append flistrfilter '|' ".*cmake\..*:	.*/lib.*/.*\.cmake"
-var_append flistrfilter '|' ".*qmake\..*:	.*/mkspecs/.*\.p.*"
+var_append flistrfilter '|' ".*qmake.*\..*:	.*/mkspecs/.*\.p.*"
 var_append flistrfilter '|' ".*qmlcachegen\..*:	.*"
 var_append flistrfilter '|' ".*:	.*/gettext/its/.*.loc"
 var_append flistrfilter '|' ".*python.*:	.*/bin/(git|hg)"

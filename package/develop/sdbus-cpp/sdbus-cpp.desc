@@ -23,7 +23,7 @@
 [E] opt doxygen
 
 [L] LGPL
-[V] 2.2.1
+[V] 2.3.1
 [P] X -----5---9 274.000
 
-[D] 76f82598ea112edd8c1ea2fc7b7e2287b3b9d5de667253323d28f109 sdbus-cpp-2.2.1.tar.gz https://github.com/Kistler-Group/sdbus-cpp/archive/refs/tags/v2.2.1/
+[D] 6e4c5a2432e2839156e9b47ccf1c3567e7171d343f77757fbe23ee80 sdbus-cpp-2.3.1.tar.gz https://github.com/Kistler-Group/sdbus-cpp/archive/refs/tags/v2.3.1/

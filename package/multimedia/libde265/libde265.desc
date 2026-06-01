@@ -19,9 +19,9 @@
 [E] opt libsdl2
 
 [L] LGPL
-[V] 1.0.18
+[V] 1.1.0
 [P] X -----5---9 124.500
 
-[D] 5d01a89af43e3d04a79f997d4d18debc90895605088d2b20396fd8b7 libde265-1.0.18.tar.gz https://github.com/strukturag/libde265/archive/v1.0.18/
+[D] 79088dc18eb5c787ac63285c8874c1e8791529c46af123a4abb1204c libde265-1.1.0.tar.gz https://github.com/strukturag/libde265/archive/v1.1.0/
 
 pkginstalled qt5base || var_append confopt ' ' --disable-sherlock265

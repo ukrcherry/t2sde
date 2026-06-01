@@ -1,0 +1,29 @@
+# --- T2-COPYRIGHT-BEGIN ---
+# t2/package/*/scrcpy/scrcpy.desc
+# Copyright (C) 2026 The T2 SDE Project
+# SPDX-License-Identifier: GPL-2.0
+# --- T2-COPYRIGHT-END ---
+
+[I] Display and control your Android device
+
+[T] This application mirrors Android devices (video and audio) connected via
+[T] USB or TCP/IP and allows control using the computer's keyboard and mouse.
+[T] It does not require root access or an app installed on the device.
+
+[U] https://github.com/Genymobile/scrcpy
+
+[A] Genymobile
+[M] Aleksi Venäläinen <aleksi.venalainen@outlook.com>
+
+[C] extra/tool
+
+[L] APL
+[V] 4.0
+[P] X -----5---9 800.000
+
+[CV-FLAGS] NO-PREFIX
+[D] ec298a9936c99b790453631f07f75c17c39d118a200eb5c88d966cd5 srcpy-v4.0.tar.gz https://github.com/Genymobile/scrcpy/archive/v4.0/
+
+export GRADLE_ALLOW_ROOT=true
+export GRADLE_HOME=/usr/java/gradle
+export ANDROID_HOME=/run/media/root/heaven/SDK

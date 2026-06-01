@@ -22,9 +22,9 @@
 [F] NOPARALLEL FPIC
 
 [L] LGPL
-[V] 2026.04.22
+[V] 2026.05.30
 
-[D] 121c6dd0f7526d67acbfdaac7964fd2a4b657fec528d5031b2226571 live.2026.04.22.tar.gz https://download.live555.com/
+[D] 808a2830633963d4191e3b9bb25fd06071493bdbc5af2686010a65d6 live.2026.05.30.tar.gz https://download.live555.com/
 
 rtsp_pm() {
 	echo "Manually installing files ..."

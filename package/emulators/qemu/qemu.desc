@@ -18,10 +18,10 @@
 
 [C] extra/emulator
 [F] NO-SSP CROSS NO-LTO.gcc LATOMIC.sparc
-[R] - alpha ia64 riscv
+[R] - alpha riscv
 
 [L] GPL
-[V] 11.0.0
+[V] 11.0.1
 
 [E] add packaging
 [E] opt capstone
@@ -45,9 +45,15 @@
 [E] opt cyrus-sasl2
 [E] opt vte
 [E] opt snappy
+[E] opt usbredir
+[E] opt multipath-tools
+[E] opt libxdp
+[E] opt libsdl2_image
+[E] opt libcbor
+[E] opt indent
 
 [CV-URL] http://www.qemu.org/
-[D] d602413af11622f8e6adba6c7e4f415acceeadb553b26a64c6b02c9a qemu-11.0.0.tar.xz https://wiki.qemu.org/download/
+[D] 31948931f8455d18396ced84d8f2c21482d3059140c43084f35fa433 qemu-11.0.1.tar.xz https://wiki.qemu.org/download/
 
 runmeson=0
 
@@ -73,11 +79,21 @@ else
 fi
 
 case $arch_machine in
-	alpha|armv*eb|hppa*|ia64|m68k|sparc|sparcv*|sh[0-9])
+	alpha|armv*eb|hppa*|m68k|sparc|sparcv*|sh[0-9])
 		var_append confopt ' ' --enable-tcg-interpreter ;;
 	powerpc)
 		# undefined reference to `_restgpr_29_x'
 		var_append GCC_WRAPPER_APPEND ' ' '*/pc-bios/*?-O2:' ;;
+	ia64)
+		# on ia64, we build 2.10.1 which uses python2
+		export PYTHON=$root$bindir/python2
+		unset PYTHONPATH
+		var_append confopt ' ' --python=$PYTHON
+		# 2.10.1 GL bindings are incompatible with modern Mesa, patches welcome
+		var_append confopt ' ' --disable-opengl
+		# user target not fully up-to-date with 10 years newer kernels
+		var_append confopt ' ' --disable-user
+		;;
 esac
 [ "$SDECFG_X8664_X32" = 1 ] && var_append confopt ' ' --enable-tcg-interpreter
 

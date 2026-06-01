@@ -6,7 +6,6 @@
 
 https://github.com/raspberrypi/linux rpi-7.0.y
 
-diff --git a/Documentation/admin-guide/media/bcm2835-isp.rst b/Documentation/admin-guide/media/bcm2835-isp.rst
 new file mode 100644
 index 000000000000..e1c19f78435e
 --- /dev/null
@@ -9757,10 +9756,10 @@ index 000000000000..398c8d65de19
 +clean-files	:= *.dtbo
 diff --git a/arch/arm/boot/dts/overlays/README b/arch/arm/boot/dts/overlays/README
 new file mode 100644
-index 000000000000..9bb5b8a6e58c
+index 000000000000..9842ca1f8fb2
 --- /dev/null
 +++ b/arch/arm/boot/dts/overlays/README
-@@ -0,0 +1,6284 @@
+@@ -0,0 +1,6286 @@
 +Introduction
 +============
 +
@@ -15485,6 +15484,7 @@ index 000000000000..9bb5b8a6e58c
 +        touchscreen-inverted-y  Inverts Y direction of touch controller
 +        touchscreen-swapped-x-y Swaps X & Y axes of touch controller
 +        rotate                  Display rotation {0,90,180,270} (default 0)
++        backlight-pwm           Use PWM instead of GPIO for backlight
 +
 +
 +Name:   vc4-kms-dpi-hyperpixel4
@@ -15685,6 +15685,7 @@ index 000000000000..9bb5b8a6e58c
 +        4_0_inchC               4.0" 720x720
 +        5_0_inch                5.0" 720x1280
 +        6_25_inch               6.25" 720x1560
++        6_25_inchB              6.25" B 720x1560
 +        8_8_inch                8.8" 480x1920
 +        7_0_inchC               7.0" C 1024x600
 +        7_0_inchH               7.0" H 1280x720
@@ -46626,10 +46627,10 @@ index 000000000000..585402a3b9b4
 +};
 diff --git a/arch/arm/boot/dts/overlays/vc4-kms-dpi-hyperpixel2r-overlay.dts b/arch/arm/boot/dts/overlays/vc4-kms-dpi-hyperpixel2r-overlay.dts
 new file mode 100644
-index 000000000000..4cd9d6a55c48
+index 000000000000..1526d6637263
 --- /dev/null
 +++ b/arch/arm/boot/dts/overlays/vc4-kms-dpi-hyperpixel2r-overlay.dts
-@@ -0,0 +1,114 @@
+@@ -0,0 +1,167 @@
 +/*
 + * vc4-kms-dpi-hyperpixel2r-overlay.dts
 + */
@@ -46663,7 +46664,6 @@ index 000000000000..4cd9d6a55c48
 +					reg = <0>;
 +					/* 100 kHz */
 +					spi-max-frequency = <100000>;
-+					backlight = <&backlight>;
 +					rotation = <0>;
 +
 +					port {
@@ -46672,11 +46672,6 @@ index 000000000000..4cd9d6a55c48
 +						};
 +					};
 +				};
-+			};
-+
-+			backlight: backlight {
-+				compatible = "gpio-backlight";
-+				gpios = <&gpio 19 0>;
 +			};
 +		};
 +	};
@@ -46735,12 +46730,71 @@ index 000000000000..4cd9d6a55c48
 +		};
 +	};
 +
++	fragment@4 {
++		target = <&panel>;
++		__overlay__ {
++			backlight = <&backlight>;
++		};
++	};
++
++	fragment@5 {
++		target-path = "/";
++		__overlay__ {
++			backlight: backlight {
++				compatible = "gpio-backlight";
++				gpios = <&gpio 19 0>;
++			};
++		};
++	};
++
++	fragment@6 {
++		target = <&panel>;
++		__dormant__ {
++			backlight = <&backlight_pwm>;
++		};
++	};
++
++	fragment@7 {
++		target-path = "/";
++		__dormant__ {
++			backlight_pwm: backlight_pwm {
++				compatible = "pwm-backlight";
++				pwms = <&pwm 1 200000 0>;
++				brightness-levels = <0 255>;
++				num-interpolated-steps = <255>;
++				default-brightness-level = <1>;
++			};
++
++		};
++	};
++
++	fragment@8 {
++		target = <&pwm>;
++		__dormant__ {
++			pinctrl-names = "default";
++			pinctrl-0 = <&pwm_pins>;
++			assigned-clock-rates = <1000000>;
++			status = "okay";
++		};
++	};
++
++	fragment@9 {
++		target = <&gpio>;
++		__dormant__ {
++			pwm_pins: pwm_pins {
++				brcm,pins = <19>;
++				brcm,function = <2>; /* Alt5 */
++			};
++		};
++	};
++
 +	__overrides__ {
 +		disable-touch = <0>,"-3";
 +		touchscreen-inverted-x = <&polytouch>,"touchscreen-inverted-x?";
 +		touchscreen-inverted-y = <&polytouch>,"touchscreen-inverted-y!";
 +		touchscreen-swapped-x-y = <&polytouch>,"touchscreen-swapped-x-y!";
 +		rotate = <&panel>, "rotation:0";
++		backlight-pwm = <0>,"-4-5+6+7+8+9";
 +	};
 +
 +};
@@ -47856,10 +47910,10 @@ index 000000000000..7a7058d14d6c
 +};
 diff --git a/arch/arm/boot/dts/overlays/vc4-kms-dsi-waveshare-panel-overlay.dts b/arch/arm/boot/dts/overlays/vc4-kms-dsi-waveshare-panel-overlay.dts
 new file mode 100644
-index 000000000000..c9faf02c907f
+index 000000000000..7af0f3763fc4
 --- /dev/null
 +++ b/arch/arm/boot/dts/overlays/vc4-kms-dsi-waveshare-panel-overlay.dts
-@@ -0,0 +1,146 @@
+@@ -0,0 +1,149 @@
 +/*
 + * Device Tree overlay for Waveshare DSI Touchscreens
 + *
@@ -47985,6 +48039,9 @@ index 000000000000..c9faf02c907f
 +				   <&touch>, "touchscreen-inverted-x?",
 +				   <&touch>, "touchscreen-inverted-y?";
 +		6_25_inch = <&panel>, "compatible=waveshare,6.25inch-panel",
++				   <&touch>, "touchscreen-inverted-x?",
++				   <&touch>, "touchscreen-inverted-y?";
++		6_25_inchB = <&panel>, "compatible=waveshare,6.25inch-b-panel",
 +				   <&touch>, "touchscreen-inverted-x?",
 +				   <&touch>, "touchscreen-inverted-y?";
 +		8_8_inch = <&panel>, "compatible=waveshare,8.8inch-panel";
@@ -52206,21 +52263,28 @@ index 000000000000..c72d752e7400
 @@ -0,0 +1 @@
 +#include "arm/broadcom/bcm2711-rpi-cm4s.dts"
 diff --git a/arch/arm64/boot/dts/broadcom/bcm2712-d-rpi-5-b.dts b/arch/arm64/boot/dts/broadcom/bcm2712-d-rpi-5-b.dts
-index 7de24d60bcd1..4c8d28a1a0dc 100644
+index 127be0fc27c2..4c8d28a1a0dc 100644
 --- a/arch/arm64/boot/dts/broadcom/bcm2712-d-rpi-5-b.dts
 +++ b/arch/arm64/boot/dts/broadcom/bcm2712-d-rpi-5-b.dts
-@@ -35,3 +35,11 @@ &gio_aon {
- 		"PMIC_SCL", // AON_SGPIO_04
+@@ -36,16 +36,10 @@ &gio_aon {
  		"PMIC_SDA"; // AON_SGPIO_05
  };
-+
-+&pinctrl_aon {
-+	compatible = "brcm,bcm2712d0-aon-pinctrl";
-+};
-+
+ 
+-&pinctrl {
+-	compatible = "brcm,bcm2712d0-pinctrl";
+-	reg = <0x7d504100 0x20>;
+-};
+-
+ &pinctrl_aon {
+ 	compatible = "brcm,bcm2712d0-aon-pinctrl";
+-	reg = <0x7d510700 0x1c>;
+ };
+ 
+-&uart10 {
+-	interrupts = <GIC_SPI 120 IRQ_TYPE_LEVEL_HIGH>;
 +&pinctrl {
 +	compatible = "brcm,bcm2712c0-aon-pinctrl";
-+};
+ };
 diff --git a/arch/arm64/boot/dts/broadcom/bcm2712-ds.dtsi b/arch/arm64/boot/dts/broadcom/bcm2712-ds.dtsi
 new file mode 100644
 index 000000000000..32a40daba68a
@@ -63516,10 +63580,10 @@ index 000000000000..4b7faf084e0c
 +module_param(mem_base, uint, 0644);
 diff --git a/drivers/char/broadcom/vcio.c b/drivers/char/broadcom/vcio.c
 new file mode 100644
-index 000000000000..9db2408c781a
+index 000000000000..b40d4e779d10
 --- /dev/null
 +++ b/drivers/char/broadcom/vcio.c
-@@ -0,0 +1,187 @@
+@@ -0,0 +1,358 @@
 +/*
 + *  Copyright (C) 2010 Broadcom
 + *  Copyright (C) 2015 Noralf Trønnes
@@ -63552,12 +63616,138 @@ index 000000000000..9db2408c781a
 +#define IOCTL_MBOX_PROPERTY32 _IOWR(VCIO_IOC_MAGIC, 0, compat_uptr_t)
 +#endif
 +
-+struct vcio_data {
-+	struct rpi_firmware *fw;
-+	struct miscdevice misc_dev;
++/* Tags permitted via /dev/vcio_provisioning. */
++static const u32 vcio_provisioning_tags[] = {
++	0x00038021, /* SET_CUSTOMER_OTP */
++	0x00038024, /* SET_USER_OTP */
++	0x00038082, /* SET_CUSTOMER_ETHER_MAC_OTP */
++	0x00038083, /* SET_CUSTOMER_WIFI_MAC_OTP */
++	0x00038084, /* SET_CUSTOMER_BT_MAC_OTP */
++	0x00030085, /* TST_MAC_OTP */
++	0x00030086, /* SET_CUSTOMER_OTP_LOCK */
 +};
 +
-+static int vcio_user_property_list(struct vcio_data *vcio, void *user)
++/* Tags permitted via /dev/vcio_ab. */
++static const u32 vcio_ab_tags[] = {
++	0x00030048, /* SET_NOTIFY_REBOOT */
++	0x00030057, /* SET_GLOBAL_RESET */
++	0x00030064, /* GET_REBOOT_FLAGS */
++	0x00038064, /* SET_REBOOT_FLAGS */
++	0x0003008b, /* GET_REBOOT_ORDER */
++	0x0003808b, /* SET_REBOOT_ORDER */
++	0x0003008c, /* GET_REBOOT_ARG */
++	0x0003808c, /* SET_REBOOT_ARG */
++	0x0003008d, /* GET_BOOT_COUNT */
++	0x0003808d, /* SET_BOOT_COUNT */
++	0x00040011, /* GET_RSTS */
++	0x00030096, /* GET_EEPROM_PACKET */
++	0x00038096, /* SET_EEPROM_PACKET */
++	0x00030097, /* GET_EEPROM_UPDATE_STATUS */
++	0x00038097, /* SET_EEPROM_UPDATE_STATUS */
++	0x00030098, /* GET_EEPROM_PARTITION */
++	0x00038098, /* SET_EEPROM_PARTITION */
++	0x00030099, /* GET_EEPROM_AB_PARAMS */
++	0x00038099, /* SET_EEPROM_AB_PARAMS */
++};
++
++/* Tags permitted via /dev/vcio_gencmd. */
++static const u32 vcio_gencmd_tags[] = {
++	0x00030080, /* GET_GENCMD_RESULT */
++};
++
++/* Tags permitted via /dev/vcio_crypto. */
++static const u32 vcio_crypto_tags[] = {
++	0x0003008e, /* GET_CRYPTO_LAST_ERROR */
++	0x0003008f, /* GET_CRYPTO_NUM_OTP_KEYS */
++	0x00030090, /* GET_CRYPTO_KEY_STATUS */
++	0x00038090, /* SET_CRYPTO_KEY_STATUS */
++	0x00030091, /* GET_CRYPTO_ECDSA_SIGN */
++	0x00030092, /* GET_CRYPTO_HMAC_SHA256 */
++	0x00030093, /* GET_CRYPTO_PUBLIC_KEY */
++	0x00030094, /* GET_CRYPTO_PRIVATE_KEY */
++	0x00030095, /* GET_CRYPTO_GEN_ECDSA */
++};
++
++struct vcio_group {
++	const char *name;
++	const u32 *tags;
++	size_t num_tags;
++};
++
++#define VCIO_GROUP(suffix) {						\
++	.name = "vcio_" #suffix,					\
++	.tags = vcio_ ## suffix ## _tags,				\
++	.num_tags = ARRAY_SIZE(vcio_ ## suffix ## _tags),		\
++}
++
++static const struct vcio_group vcio_groups[] = {
++	VCIO_GROUP(provisioning),
++	VCIO_GROUP(ab),
++	VCIO_GROUP(gencmd),
++	VCIO_GROUP(crypto),
++};
++
++struct vcio_dev {
++	struct miscdevice misc_dev;
++	struct rpi_firmware *fw;
++	const u32 *allowed_tags;
++	size_t num_allowed_tags;
++};
++
++struct vcio_data {
++	struct rpi_firmware *fw;
++	struct vcio_dev vcio;
++	struct vcio_dev groups[ARRAY_SIZE(vcio_groups)];
++};
++
++static bool vcio_tag_allowed(const struct vcio_dev *vdev, u32 tag)
++{
++	size_t i;
++
++	if (!vdev->allowed_tags)
++		return true;
++
++	for (i = 0; i < vdev->num_allowed_tags; i++)
++		if (vdev->allowed_tags[i] == tag)
++			return true;
++
++	return false;
++}
++
++static int vcio_check_tags(const struct vcio_dev *vdev, const u32 *buf,
++			   size_t size)
++{
++	size_t offset = 8; /* skip total size and status words */
++
++	if (!vdev->allowed_tags)
++		return 0;
++
++	while (offset + 12 <= size) {
++		u32 tag = buf[offset / 4];
++		u32 val_size;
++
++		if (tag == 0)
++			return 0;
++
++		if (!vcio_tag_allowed(vdev, tag)) {
++			pr_warn_ratelimited("%s: tag 0x%08x not permitted\n",
++					    vdev->misc_dev.name, tag);
++			return -EPERM;
++		}
++
++		val_size = buf[offset / 4 + 1];
++		if (val_size > size - offset - 12)
++			return -EINVAL;
++		offset += 12 + ALIGN(val_size, 4);
++
++		if (offset > size)
++			return -EINVAL;
++	}
++
++	return 0;
++}
++
++static int vcio_user_property_list(struct vcio_dev *vdev, void *user)
 +{
 +	u32 *buf, size;
 +	int ret;
@@ -63565,6 +63755,9 @@ index 000000000000..9db2408c781a
 +	/* The first 32-bit is the size of the buffer */
 +	if (copy_from_user(&size, user, sizeof(size)))
 +		return -EFAULT;
++
++	if (size < 12)
++		return -EINVAL;
 +
 +	buf = kmalloc(size, GFP_KERNEL);
 +	if (!buf)
@@ -63575,8 +63768,14 @@ index 000000000000..9db2408c781a
 +		return -EFAULT;
 +	}
 +
++	ret = vcio_check_tags(vdev, buf, size);
++	if (ret) {
++		kfree(buf);
++		return ret;
++	}
++
 +	/* Strip off protocol encapsulation */
-+	ret = rpi_firmware_property_list(vcio->fw, &buf[2], size - 12);
++	ret = rpi_firmware_property_list(vdev->fw, &buf[2], size - 12);
 +	if (ret) {
 +		kfree(buf);
 +		return ret;
@@ -63608,12 +63807,12 @@ index 000000000000..9db2408c781a
 +static long vcio_device_ioctl(struct file *file, unsigned int ioctl_num,
 +			      unsigned long ioctl_param)
 +{
-+	struct vcio_data *vcio = container_of(file->private_data,
-+					      struct vcio_data, misc_dev);
++	struct vcio_dev *vdev = container_of(file->private_data,
++					     struct vcio_dev, misc_dev);
 +
 +	switch (ioctl_num) {
 +	case IOCTL_MBOX_PROPERTY:
-+		return vcio_user_property_list(vcio, (void *)ioctl_param);
++		return vcio_user_property_list(vdev, (void *)ioctl_param);
 +	default:
 +		pr_err("unknown ioctl: %x\n", ioctl_num);
 +		return -EINVAL;
@@ -63624,12 +63823,12 @@ index 000000000000..9db2408c781a
 +static long vcio_device_compat_ioctl(struct file *file, unsigned int ioctl_num,
 +				     unsigned long ioctl_param)
 +{
-+	struct vcio_data *vcio = container_of(file->private_data,
-+					      struct vcio_data, misc_dev);
++	struct vcio_dev *vdev = container_of(file->private_data,
++					     struct vcio_dev, misc_dev);
 +
 +	switch (ioctl_num) {
 +	case IOCTL_MBOX_PROPERTY32:
-+		return vcio_user_property_list(vcio, compat_ptr(ioctl_param));
++		return vcio_user_property_list(vdev, compat_ptr(ioctl_param));
 +	default:
 +		pr_err("unknown ioctl: %x\n", ioctl_num);
 +		return -EINVAL;
@@ -63646,6 +63845,21 @@ index 000000000000..9db2408c781a
 +	.release = vcio_device_release,
 +};
 +
++static int vcio_register(struct device *dev, struct vcio_dev *vdev,
++			 struct rpi_firmware *fw, const char *name,
++			 const u32 *allowed_tags, size_t num_allowed_tags)
++{
++	vdev->fw = fw;
++	vdev->allowed_tags = allowed_tags;
++	vdev->num_allowed_tags = num_allowed_tags;
++	vdev->misc_dev.fops = &vcio_fops;
++	vdev->misc_dev.minor = MISC_DYNAMIC_MINOR;
++	vdev->misc_dev.name = name;
++	vdev->misc_dev.parent = dev;
++
++	return misc_register(&vdev->misc_dev);
++}
++
 +static int vcio_probe(struct platform_device *pdev)
 +{
 +	struct device *dev = &pdev->dev;
@@ -63653,6 +63867,8 @@ index 000000000000..9db2408c781a
 +	struct device_node *fw_node;
 +	struct rpi_firmware *fw;
 +	struct vcio_data *vcio;
++	size_t i;
++	int ret;
 +
 +	fw_node = of_get_parent(np);
 +	if (!fw_node) {
@@ -63665,24 +63881,43 @@ index 000000000000..9db2408c781a
 +	if (!fw)
 +		return -EPROBE_DEFER;
 +
-+	vcio = devm_kzalloc(dev, sizeof(struct vcio_data), GFP_KERNEL);
++	vcio = devm_kzalloc(dev, sizeof(*vcio), GFP_KERNEL);
 +	if (!vcio)
 +		return -ENOMEM;
 +
 +	vcio->fw = fw;
-+	vcio->misc_dev.fops = &vcio_fops;
-+	vcio->misc_dev.minor = MISC_DYNAMIC_MINOR;
-+	vcio->misc_dev.name = "vcio";
-+	vcio->misc_dev.parent = dev;
++	platform_set_drvdata(pdev, vcio);
 +
-+	return misc_register(&vcio->misc_dev);
++	ret = vcio_register(dev, &vcio->vcio, fw, "vcio", NULL, 0);
++	if (ret)
++		return ret;
++
++	for (i = 0; i < ARRAY_SIZE(vcio_groups); i++) {
++		const struct vcio_group *g = &vcio_groups[i];
++
++		ret = vcio_register(dev, &vcio->groups[i], fw, g->name,
++				    g->tags, g->num_tags);
++		if (ret)
++			goto err_groups;
++	}
++
++	return 0;
++
++err_groups:
++	while (i--)
++		misc_deregister(&vcio->groups[i].misc_dev);
++	misc_deregister(&vcio->vcio.misc_dev);
++	return ret;
 +}
 +
 +static void vcio_remove(struct platform_device *pdev)
 +{
-+	struct device *dev = &pdev->dev;
++	struct vcio_data *vcio = platform_get_drvdata(pdev);
++	size_t i = ARRAY_SIZE(vcio_groups);
 +
-+	misc_deregister(dev_get_drvdata(dev));
++	while (i--)
++		misc_deregister(&vcio->groups[i].misc_dev);
++	misc_deregister(&vcio->vcio.misc_dev);
 +}
 +
 +static const struct of_device_id vcio_ids[] = {
@@ -64232,15 +64467,16 @@ index 61b42c83ced8..2a7dee1e1807 100644
  	.probe = tpm_tis_spi_driver_probe,
  	.remove = tpm_tis_spi_remove,
 diff --git a/drivers/clk/Kconfig b/drivers/clk/Kconfig
-index 3d803b4cf5c1..67ad8602cb4d 100644
+index 3d803b4cf5c1..2384150b1757 100644
 --- a/drivers/clk/Kconfig
 +++ b/drivers/clk/Kconfig
-@@ -89,13 +89,19 @@ config COMMON_CLK_RK808
+@@ -89,13 +89,20 @@ config COMMON_CLK_RK808
  
  config COMMON_CLK_RP1
  	tristate "Raspberry Pi RP1-based clock support"
 -	depends on MISC_RP1 || COMPILE_TEST
 +	depends on MISC_RP1 || MFD_RP1 || COMPILE_TEST
++	select REGMAP_MMIO
  	default MISC_RP1
  	help
  	  Enable common clock framework support for Raspberry Pi RP1.
@@ -64256,7 +64492,7 @@ index 3d803b4cf5c1..67ad8602cb4d 100644
  config COMMON_CLK_HI655X
  	tristate "Clock driver for Hi655x" if EXPERT
  	depends on (MFD_HI655X_PMIC || COMPILE_TEST)
-@@ -106,6 +112,12 @@ config COMMON_CLK_HI655X
+@@ -106,6 +113,12 @@ config COMMON_CLK_HI655X
  	  multi-function device has one fixed-rate oscillator, clocked
  	  at 32KHz.
  
@@ -70965,7 +71201,7 @@ index a1d16762ac7a..4055be2e5ee2 100644
  		if (connector->ycbcr_420_allowed) {
  			ret = hdmi_compute_format_bpc(connector, conn_state,
 diff --git a/drivers/gpu/drm/drm_atomic.c b/drivers/gpu/drm/drm_atomic.c
-index f2cd2e25f009..750ebca87014 100644
+index ec7534227f66..3819d443be6a 100644
 --- a/drivers/gpu/drm/drm_atomic.c
 +++ b/drivers/gpu/drm/drm_atomic.c
 @@ -471,10 +471,11 @@ static void drm_atomic_crtc_print_state(struct drm_printer *p,
@@ -73462,7 +73698,7 @@ index dc4bb8ad9131..043877de257d 100644
  	/* Look up the DSI host.  It needs to probe before we do. */
  	endpoint = of_graph_get_endpoint_by_regs(dev->of_node, 0, -1);
 diff --git a/drivers/gpu/drm/panel/panel-simple.c b/drivers/gpu/drm/panel/panel-simple.c
-index 91ab280869ba..f892cf8a8ea3 100644
+index 91ab280869ba..cae66a7b3bb5 100644
 --- a/drivers/gpu/drm/panel/panel-simple.c
 +++ b/drivers/gpu/drm/panel/panel-simple.c
 @@ -160,8 +160,6 @@ struct panel_simple {
@@ -73516,7 +73752,7 @@ index 91ab280869ba..f892cf8a8ea3 100644
  
  	/* Extract bus_flags from display_timing */
  	bus_flags = 0;
-@@ -478,6 +463,8 @@ static struct panel_desc *panel_dpi_probe(struct device *dev)
+@@ -478,10 +463,96 @@ static struct panel_desc *panel_dpi_probe(struct device *dev)
  
  	/* We do not know the connector for the DT node, so guess it */
  	desc->connector_type = DRM_MODE_CONNECTOR_DPI;
@@ -73525,7 +73761,115 @@ index 91ab280869ba..f892cf8a8ea3 100644
  
  	return desc;
  }
-@@ -693,12 +680,6 @@ static struct panel_simple *panel_simple_probe(struct device *dev)
+ 
++static struct panel_desc *panel_dsi_probe(struct device *dev)
++{
++	const struct device_node *np = dev->of_node;
++	struct panel_desc_dsi *desc_dsi;
++	struct panel_desc *desc;
++	const char *dsi_color_format;
++	const char *dsi_mode_flags;
++	struct property *prop;
++	int dsi_lanes;
++
++	desc = panel_dpi_probe(dev);
++	if (IS_ERR(desc)) {
++		pr_err("Failed panel_dpi_probe\n");
++		return desc;
++	}
++
++	desc->connector_type = DRM_MODE_CONNECTOR_DSI;
++
++	desc_dsi = devm_kzalloc(dev, sizeof(*desc_dsi), GFP_KERNEL);
++	if (!desc_dsi)
++		return ERR_PTR(-ENOMEM);
++
++	desc_dsi->desc = *desc;
++	devm_kfree(dev, desc);
++
++	desc = &desc_dsi->desc;
++
++	dsi_lanes = drm_of_get_data_lanes_count_ep(np, 0, 0, 1, 4);
++
++	if (dsi_lanes < 0) {
++		dev_err(dev, "%pOF: no or too many data-lanes defined", np);
++		return ERR_PTR(dsi_lanes);
++	}
++
++	desc_dsi->lanes = dsi_lanes;
++
++	of_property_read_string(np, "dsi-color-format", &dsi_color_format);
++	if (!strcmp(dsi_color_format, "RGB888")) {
++		desc_dsi->format = MIPI_DSI_FMT_RGB888;
++		desc_dsi->desc.bpc = 8;
++	} else if (!strcmp(dsi_color_format, "RGB565")) {
++		desc_dsi->format = MIPI_DSI_FMT_RGB565;
++		desc_dsi->desc.bpc = 6;
++	} else if (!strcmp(dsi_color_format, "RGB666")) {
++		desc_dsi->format = MIPI_DSI_FMT_RGB666;
++		desc_dsi->desc.bpc = 6;
++	} else if (!strcmp(dsi_color_format, "RGB666_PACKED")) {
++		desc_dsi->format = MIPI_DSI_FMT_RGB666_PACKED;
++		desc_dsi->desc.bpc = 6;
++	} else {
++		dev_err(dev, "%pOF: no valid dsi-color-format defined", np);
++		return ERR_PTR(-EINVAL);
++	}
++
++	of_property_for_each_string(np, "mode", prop, dsi_mode_flags) {
++		if (!strcmp(dsi_mode_flags, "MODE_VIDEO"))
++			desc_dsi->flags |= MIPI_DSI_MODE_VIDEO;
++		else if (!strcmp(dsi_mode_flags, "MODE_VIDEO_BURST"))
++			desc_dsi->flags |= MIPI_DSI_MODE_VIDEO_BURST;
++		else if (!strcmp(dsi_mode_flags, "MODE_VIDEO_SYNC_PULSE"))
++			desc_dsi->flags |= MIPI_DSI_MODE_VIDEO_SYNC_PULSE;
++		else if (!strcmp(dsi_mode_flags, "MODE_VIDEO_AUTO_VERT"))
++			desc_dsi->flags |= MIPI_DSI_MODE_VIDEO_AUTO_VERT;
++		else if (!strcmp(dsi_mode_flags, "MODE_VIDEO_HSE"))
++			desc_dsi->flags |= MIPI_DSI_MODE_VIDEO_HSE;
++		else if (!strcmp(dsi_mode_flags, "MODE_VIDEO_NO_HFP"))
++			desc_dsi->flags |= MIPI_DSI_MODE_VIDEO_NO_HFP;
++		else if (!strcmp(dsi_mode_flags, "MODE_VIDEO_NO_HBP"))
++			desc_dsi->flags |= MIPI_DSI_MODE_VIDEO_NO_HBP;
++		else if (!strcmp(dsi_mode_flags, "MODE_VIDEO_NO_HSA"))
++			desc_dsi->flags |= MIPI_DSI_MODE_VIDEO_NO_HSA;
++		else if (!strcmp(dsi_mode_flags, "MODE_NO_EOT_PACKET"))
++			desc_dsi->flags |= MIPI_DSI_MODE_NO_EOT_PACKET;
++		else if (!strcmp(dsi_mode_flags, "CLOCK_NON_CONTINUOUS"))
++			desc_dsi->flags |= MIPI_DSI_CLOCK_NON_CONTINUOUS;
++		else if (!strcmp(dsi_mode_flags, "MODE_LPM"))
++			desc_dsi->flags |= MIPI_DSI_MODE_LPM;
++		else if (!strcmp(dsi_mode_flags, "HS_PKT_END_ALIGNED"))
++			desc_dsi->flags |= MIPI_DSI_HS_PKT_END_ALIGNED;
++	}
++
++	return &desc_dsi->desc;
++}
++
+ #define PANEL_SIMPLE_BOUNDS_CHECK(to_check, bounds, field) \
+ 	(to_check->field.typ >= bounds->field.min && \
+ 	 to_check->field.typ <= bounds->field.max)
+@@ -581,8 +652,17 @@ static const struct panel_desc *panel_simple_get_desc(struct device *dev)
+ 		const struct panel_desc_dsi *dsi_desc;
+ 
+ 		dsi_desc = of_device_get_match_data(dev);
+-		if (!dsi_desc)
+-			return ERR_PTR(-ENODEV);
++		if (!dsi_desc) {
++			/*
++			 * panel-dsi probes without a descriptor and
++			 * panel_dsi_probe() will initialize one for us
++			 * based on the device tree.
++			 */
++			if (of_device_is_compatible(dev->of_node, "panel-dsi"))
++				return panel_dsi_probe(dev);
++			else
++				return ERR_PTR(-ENODEV);
++		}
+ 
+ 		return &dsi_desc->desc;
+ 	}
+@@ -693,12 +773,6 @@ static struct panel_simple *panel_simple_probe(struct device *dev)
  		return dev_err_cast_probe(dev, panel->enable_gpio,
  					  "failed to request GPIO\n");
  
@@ -73538,7 +73882,17 @@ index 91ab280869ba..f892cf8a8ea3 100644
  	ddc = of_parse_phandle(dev->of_node, "ddc-i2c-bus", 0);
  	if (ddc) {
  		panel->ddc = of_find_i2c_adapter_by_node(ddc);
-@@ -2381,6 +2362,32 @@ static const struct panel_desc friendlyarm_hd702e = {
+@@ -708,7 +782,8 @@ static struct panel_simple *panel_simple_probe(struct device *dev)
+ 			return ERR_PTR(-EPROBE_DEFER);
+ 	}
+ 
+-	if (!of_device_is_compatible(dev->of_node, "panel-dpi") &&
++	if (!(of_device_is_compatible(dev->of_node, "panel-dpi") ||
++	      of_device_is_compatible(dev->of_node, "panel-dsi")) &&
+ 	    !of_get_display_timing(dev->of_node, "panel-timing", &dt))
+ 		panel_simple_parse_panel_timing_node(dev, panel, &dt);
+ 
+@@ -2381,6 +2456,32 @@ static const struct panel_desc friendlyarm_hd702e = {
  	},
  };
  
@@ -73571,7 +73925,7 @@ index 91ab280869ba..f892cf8a8ea3 100644
  static const struct drm_display_mode giantplus_gpg482739qs5_mode = {
  	.clock = 9000,
  	.hdisplay = 480,
-@@ -2586,6 +2593,38 @@ static const struct panel_desc innolux_at043tn24 = {
+@@ -2586,6 +2687,38 @@ static const struct panel_desc innolux_at043tn24 = {
  	.bus_flags = DRM_BUS_FLAG_DE_HIGH | DRM_BUS_FLAG_PIXDATA_DRIVE_POSEDGE,
  };
  
@@ -73610,7 +73964,7 @@ index 91ab280869ba..f892cf8a8ea3 100644
  static const struct drm_display_mode innolux_at070tn92_mode = {
  	.clock = 33333,
  	.hdisplay = 800,
-@@ -4208,6 +4247,31 @@ static const struct panel_desc rocktech_rk043fn48h = {
+@@ -4208,6 +4341,31 @@ static const struct panel_desc rocktech_rk043fn48h = {
  	.connector_type = DRM_MODE_CONNECTOR_DPI,
  };
  
@@ -73642,7 +73996,7 @@ index 91ab280869ba..f892cf8a8ea3 100644
  static const struct display_timing rocktech_rk070er9427_timing = {
  	.pixelclock = { 26400000, 33300000, 46800000 },
  	.hactive = { 800, 800, 800 },
-@@ -5289,6 +5353,9 @@ static const struct of_device_id platform_of_match[] = {
+@@ -5289,6 +5447,9 @@ static const struct of_device_id platform_of_match[] = {
  	}, {
  		.compatible = "friendlyarm,hd702e",
  		.data = &friendlyarm_hd702e,
@@ -73652,7 +74006,7 @@ index 91ab280869ba..f892cf8a8ea3 100644
  	}, {
  		.compatible = "giantplus,gpg482739qs5",
  		.data = &giantplus_gpg482739qs5
-@@ -5313,6 +5380,9 @@ static const struct of_device_id platform_of_match[] = {
+@@ -5313,6 +5474,9 @@ static const struct of_device_id platform_of_match[] = {
  	}, {
  		.compatible = "innolux,at043tn24",
  		.data = &innolux_at043tn24,
@@ -73662,7 +74016,7 @@ index 91ab280869ba..f892cf8a8ea3 100644
  	}, {
  		.compatible = "innolux,at070tn92",
  		.data = &innolux_at070tn92,
-@@ -5496,6 +5566,9 @@ static const struct of_device_id platform_of_match[] = {
+@@ -5496,6 +5660,9 @@ static const struct of_device_id platform_of_match[] = {
  	}, {
  		.compatible = "rocktech,rk043fn48h",
  		.data = &rocktech_rk043fn48h,
@@ -73672,152 +74026,41 @@ index 91ab280869ba..f892cf8a8ea3 100644
  	}, {
  		.compatible = "rocktech,rk070er9427",
  		.data = &rocktech_rk070er9427,
-@@ -5834,6 +5907,9 @@ static const struct panel_desc_dsi osd101t2045_53ts = {
- 	.lanes = 4,
- };
- 
-+// for panels using generic panel-dsi binding
-+static struct panel_desc_dsi panel_dsi;
-+
- static const struct of_device_id dsi_of_match[] = {
- 	{
- 		.compatible = "auo,b080uan01",
-@@ -5853,12 +5929,113 @@ static const struct of_device_id dsi_of_match[] = {
+@@ -5853,6 +6020,9 @@ static const struct of_device_id dsi_of_match[] = {
  	}, {
  		.compatible = "osddisplays,osd101t2045-53ts",
  		.data = &osd101t2045_53ts
 +	}, {
 +		/* Must be the last entry */
 +		.compatible = "panel-dsi",
-+		.data = &panel_dsi,
  	}, {
  		/* sentinel */
  	}
- };
- MODULE_DEVICE_TABLE(of, dsi_of_match);
+@@ -5861,7 +6031,7 @@ MODULE_DEVICE_TABLE(of, dsi_of_match);
  
-+
-+/* Checks for DSI panel definition in device-tree, analog to panel_dpi */
-+static int panel_dsi_dt_probe(struct device *dev,
-+			  struct panel_desc_dsi *desc_dsi)
-+{
-+	struct panel_desc *desc;
-+	struct display_timing *timing;
-+	const struct device_node *np;
-+	const char *dsi_color_format;
-+	const char *dsi_mode_flags;
-+	struct property *prop;
-+	int dsi_lanes, ret;
-+
-+	np = dev->of_node;
-+
-+	desc = devm_kzalloc(dev, sizeof(*desc), GFP_KERNEL);
-+	if (!desc)
-+		return -ENOMEM;
-+
-+	timing = devm_kzalloc(dev, sizeof(*timing), GFP_KERNEL);
-+	if (!timing)
-+		return -ENOMEM;
-+
-+	ret = of_get_display_timing(np, "panel-timing", timing);
-+	if (ret < 0) {
-+		dev_err(dev, "%pOF: no panel-timing node found for \"panel-dsi\" binding\n",
-+			np);
-+		return ret;
-+	}
-+
-+	desc->timings = timing;
-+	desc->num_timings = 1;
-+
-+	of_property_read_u32(np, "width-mm", &desc->size.width);
-+	of_property_read_u32(np, "height-mm", &desc->size.height);
-+
-+	dsi_lanes = drm_of_get_data_lanes_count_ep(np, 0, 0, 1, 4);
-+
-+	if (dsi_lanes < 0) {
-+		dev_err(dev, "%pOF: no or too many data-lanes defined", np);
-+		return dsi_lanes;
-+	}
-+
-+	desc_dsi->lanes = dsi_lanes;
-+
-+	of_property_read_string(np, "dsi-color-format", &dsi_color_format);
-+	if (!strcmp(dsi_color_format, "RGB888")) {
-+		desc_dsi->format = MIPI_DSI_FMT_RGB888;
-+		desc->bpc = 8;
-+	} else if (!strcmp(dsi_color_format, "RGB565")) {
-+		desc_dsi->format = MIPI_DSI_FMT_RGB565;
-+		desc->bpc = 6;
-+	} else if (!strcmp(dsi_color_format, "RGB666")) {
-+		desc_dsi->format = MIPI_DSI_FMT_RGB666;
-+		desc->bpc = 6;
-+	} else if (!strcmp(dsi_color_format, "RGB666_PACKED")) {
-+		desc_dsi->format = MIPI_DSI_FMT_RGB666_PACKED;
-+		desc->bpc = 6;
-+	} else {
-+		dev_err(dev, "%pOF: no valid dsi-color-format defined", np);
-+		return -EINVAL;
-+	}
-+
-+
-+	of_property_for_each_string(np, "mode", prop, dsi_mode_flags) {
-+		if (!strcmp(dsi_mode_flags, "MODE_VIDEO"))
-+			desc_dsi->flags |= MIPI_DSI_MODE_VIDEO;
-+		else if (!strcmp(dsi_mode_flags, "MODE_VIDEO_BURST"))
-+			desc_dsi->flags |= MIPI_DSI_MODE_VIDEO_BURST;
-+		else if (!strcmp(dsi_mode_flags, "MODE_VIDEO_SYNC_PULSE"))
-+			desc_dsi->flags |= MIPI_DSI_MODE_VIDEO_SYNC_PULSE;
-+		else if (!strcmp(dsi_mode_flags, "MODE_VIDEO_AUTO_VERT"))
-+			desc_dsi->flags |= MIPI_DSI_MODE_VIDEO_AUTO_VERT;
-+		else if (!strcmp(dsi_mode_flags, "MODE_VIDEO_HSE"))
-+			desc_dsi->flags |= MIPI_DSI_MODE_VIDEO_HSE;
-+		else if (!strcmp(dsi_mode_flags, "MODE_VIDEO_NO_HFP"))
-+			desc_dsi->flags |= MIPI_DSI_MODE_VIDEO_NO_HFP;
-+		else if (!strcmp(dsi_mode_flags, "MODE_VIDEO_NO_HBP"))
-+			desc_dsi->flags |= MIPI_DSI_MODE_VIDEO_NO_HBP;
-+		else if (!strcmp(dsi_mode_flags, "MODE_VIDEO_NO_HSA"))
-+			desc_dsi->flags |= MIPI_DSI_MODE_VIDEO_NO_HSA;
-+		else if (!strcmp(dsi_mode_flags, "MODE_NO_EOT_PACKET"))
-+			desc_dsi->flags |= MIPI_DSI_MODE_NO_EOT_PACKET;
-+		else if (!strcmp(dsi_mode_flags, "CLOCK_NON_CONTINUOUS"))
-+			desc_dsi->flags |= MIPI_DSI_CLOCK_NON_CONTINUOUS;
-+		else if (!strcmp(dsi_mode_flags, "MODE_LPM"))
-+			desc_dsi->flags |= MIPI_DSI_MODE_LPM;
-+		else if (!strcmp(dsi_mode_flags, "HS_PKT_END_ALIGNED"))
-+			desc_dsi->flags |= MIPI_DSI_HS_PKT_END_ALIGNED;
-+	}
-+
-+	desc->connector_type = DRM_MODE_CONNECTOR_DSI;
-+	desc_dsi->desc = *desc;
-+
-+	return 0;
-+}
-+
  static int panel_simple_dsi_probe(struct mipi_dsi_device *dsi)
  {
- 	const struct panel_desc_dsi *desc;
-@@ -5870,6 +6047,21 @@ static int panel_simple_dsi_probe(struct mipi_dsi_device *dsi)
+-	const struct panel_desc_dsi *desc;
++	const struct panel_desc_dsi *dsi_desc;
+ 	struct panel_simple *panel;
+ 	int err;
+ 
+@@ -5869,10 +6039,11 @@ static int panel_simple_dsi_probe(struct mipi_dsi_device *dsi)
+ 	if (IS_ERR(panel))
  		return PTR_ERR(panel);
  
- 	desc = container_of(panel->desc, struct panel_desc_dsi, desc);
+-	desc = container_of(panel->desc, struct panel_desc_dsi, desc);
+-	dsi->mode_flags = desc->flags;
+-	dsi->format = desc->format;
+-	dsi->lanes = desc->lanes;
++	dsi_desc = container_of(panel->desc, struct panel_desc_dsi, desc);
 +
-+	if (desc == &panel_dsi) {
-+		/* Handle the generic panel-dsi binding */
-+		struct panel_desc_dsi *dt_desc;
-+		dt_desc = devm_kzalloc(&dsi->dev, sizeof(*dt_desc), GFP_KERNEL);
-+		if (!dt_desc)
-+			return -ENOMEM;
-+
-+		err = panel_dsi_dt_probe(&dsi->dev, dt_desc);
-+		if (err < 0)
-+			return err;
-+
-+		desc = dt_desc;
-+	}
-+
- 	dsi->mode_flags = desc->flags;
- 	dsi->format = desc->format;
- 	dsi->lanes = desc->lanes;
++	dsi->mode_flags = dsi_desc->flags;
++	dsi->format = dsi_desc->format;
++	dsi->lanes = dsi_desc->lanes;
+ 
+ 	err = mipi_dsi_attach(dsi);
+ 	if (err) {
 diff --git a/drivers/gpu/drm/panel/panel-sitronix-st7701.c b/drivers/gpu/drm/panel/panel-sitronix-st7701.c
 index 2f79ec4a2063..99d8fbc0e5eb 100644
 --- a/drivers/gpu/drm/panel/panel-sitronix-st7701.c
@@ -76759,10 +77002,10 @@ index 000000000000..e15dae58a19d
 +MODULE_LICENSE("GPL");
 diff --git a/drivers/gpu/drm/panel/panel-waveshare-dsi.c b/drivers/gpu/drm/panel/panel-waveshare-dsi.c
 new file mode 100644
-index 000000000000..711b4c36c62f
+index 000000000000..02e1bd9fa15a
 --- /dev/null
 +++ b/drivers/gpu/drm/panel/panel-waveshare-dsi.c
-@@ -0,0 +1,633 @@
+@@ -0,0 +1,657 @@
 +// SPDX-License-Identifier: GPL-2.0
 +/*
 + * Copyright © 2023 Raspberry Pi Ltd
@@ -77007,6 +77250,27 @@ index 000000000000..711b4c36c62f
 +
 +static const struct ws_panel_data ws_panel_6_25_data = {
 +	.mode = &ws_panel_6_25_mode,
++	.lanes = 2,
++	.mode_flags = MIPI_DSI_MODE_VIDEO_HSE | MIPI_DSI_MODE_VIDEO | MIPI_DSI_CLOCK_NON_CONTINUOUS,
++};
++
++/* 6.25inch B 720x1560
++ * https://www.waveshare.com/6.25inch-dsi-lcd-b.htm
++ */
++static const struct drm_display_mode ws_panel_6_25_b_mode = {
++	.clock = 83333,
++	.hdisplay = 720,
++	.hsync_start = 720 + 50,
++	.hsync_end = 720 + 50 + 50,
++	.htotal = 720 + 50 + 50 + 50,
++	.vdisplay = 1560,
++	.vsync_start = 1560 + 9,
++	.vsync_end = 1560 + 9 + 9,
++	.vtotal = 1560 + 9 + 9 + 9,
++};
++
++static const struct ws_panel_data ws_panel_6_25_b_data = {
++	.mode = &ws_panel_6_25_b_mode,
 +	.lanes = 2,
 +	.mode_flags = MIPI_DSI_MODE_VIDEO_HSE | MIPI_DSI_MODE_VIDEO | MIPI_DSI_CLOCK_NON_CONTINUOUS,
 +};
@@ -77364,6 +77628,9 @@ index 000000000000..711b4c36c62f
 +	}, {
 +		.compatible = "waveshare,6.25inch-panel",
 +		.data = &ws_panel_6_25_data,
++	}, {
++		.compatible = "waveshare,6.25inch-b-panel",
++		.data = &ws_panel_6_25_b_data,
 +	}, {
 +		.compatible = "waveshare,8.8inch-panel",
 +		.data = &ws_panel_8_8_data,
@@ -85066,7 +85333,7 @@ index 000000000000..f3d30ef5de4e
 +	return ret;
 +}
 diff --git a/drivers/gpu/drm/v3d/v3d_submit.c b/drivers/gpu/drm/v3d/v3d_submit.c
-index 18f2bf1fe89f..4fbe084cacd3 100644
+index fc74351efad5..51654d49280e 100644
 --- a/drivers/gpu/drm/v3d/v3d_submit.c
 +++ b/drivers/gpu/drm/v3d/v3d_submit.c
 @@ -103,6 +103,9 @@ v3d_job_free(struct kref *ref)
@@ -125622,10 +125889,10 @@ index 000000000000..61446165d5e5
 +#endif
 diff --git a/drivers/media/platform/raspberrypi/hevc_dec/hevc_d_h265.c b/drivers/media/platform/raspberrypi/hevc_dec/hevc_d_h265.c
 new file mode 100644
-index 000000000000..f393e0555e82
+index 000000000000..2004dba5dcff
 --- /dev/null
 +++ b/drivers/media/platform/raspberrypi/hevc_dec/hevc_d_h265.c
-@@ -0,0 +1,2493 @@
+@@ -0,0 +1,2505 @@
 +// SPDX-License-Identifier: GPL-2.0-or-later
 +/*
 + * Raspberry Pi HEVC driver
@@ -127206,6 +127473,8 @@ index 000000000000..f393e0555e82
 +	bool slice_temporal_mvp;
 +	unsigned int ctb_size_y;
 +	bool sps_changed = false;
++	/* Old (downstream only) bit size meanings */
++	bool old_bits = false;
 +
 +	de = dec_env_new(ctx);
 +	if (!de) {
@@ -127274,6 +127543,7 @@ index 000000000000..f393e0555e82
 +		de->chroma_stride = de->luma_stride;
 +		de->frame_chroma_addr = de->frame_luma_addr +
 +					(ctx->dst_fmt.height * 128);
++		old_bits = true;
 +		break;
 +	}
 +
@@ -127404,15 +127674,24 @@ index 000000000000..f393e0555e82
 +	for (i = 0; i != run->h265.slice_ents; ++i) {
 +		const struct v4l2_ctrl_hevc_slice_params *const sh = sh0 + i;
 +		const bool last_slice = i + 1 == run->h265.slice_ents;
-+		const u32 byte_size = DIV_ROUND_UP(sh->bit_size, 8);
++		unsigned int bit_size = old_bits ? sh->bit_size - 8 * sh->data_byte_offset :
++						   sh->bit_size;
++		const u32 byte_size = DIV_ROUND_UP(bit_size, 8);
 +		unsigned int j;
 +
 +		s->sh = sh;
 +
++		if (old_bits && sh->bit_size <= 8 * sh->data_byte_offset) {
++			v4l2_warn(&dev->v4l2_dev,
++				  "data_byte_offset %d * 8 >= bits %d\n",
++				  sh->data_byte_offset, sh->bit_size);
++			goto fail;
++		}
++
 +		if (sh->data_byte_offset + byte_size > run->src->planes[0].bytesused) {
 +			v4l2_warn(&dev->v4l2_dev,
 +				  "data_byte_offset %d + bits %d (= %d bytes) > bytesused %d\n",
-+				  sh->data_byte_offset, sh->bit_size, byte_size,
++				  sh->data_byte_offset, bit_size, byte_size,
 +				  run->src->planes[0].bytesused);
 +			goto fail;
 +		}
@@ -127422,7 +127701,7 @@ index 000000000000..f393e0555e82
 +		 * actual size of the buffer (which may well be what is used to set
 +		 * bit_size if the caller isn't being very pedantic).
 +		 */
-+		s->data_len = min(sh->bit_size / 8 + 1,
++		s->data_len = min(bit_size / 8 + 1,
 +				  run->src->planes[0].bytesused - sh->data_byte_offset);
 +
 +		s->slice_qp = 26 + s->pps.init_qp_minus26 + sh->slice_qp_delta;
@@ -128907,7 +129186,7 @@ index 000000000000..765b27ab161b
 +#endif
 diff --git a/drivers/media/platform/raspberrypi/hevc_dec/hevc_d_video.c b/drivers/media/platform/raspberrypi/hevc_dec/hevc_d_video.c
 new file mode 100644
-index 000000000000..21f299142a18
+index 000000000000..c4a39d588204
 --- /dev/null
 +++ b/drivers/media/platform/raspberrypi/hevc_dec/hevc_d_video.c
 @@ -0,0 +1,695 @@
@@ -129057,7 +129336,7 @@ index 000000000000..21f299142a18
 +	case V4L2_PIX_FMT_NV12_COL128:
 +		/* Width rounds up to columns */
 +		width = ALIGN(width, 128);
-+		height = ALIGN(height, 8);
++		height = ALIGN(height, 16);
 +
 +		/* column height
 +		 * Accept suggested shape if at least min & < 2 * min
@@ -129071,7 +129350,7 @@ index 000000000000..21f299142a18
 +		 * columns
 +		 */
 +		width = ALIGN(((width + 2) / 3), 32) * 3;
-+		height = ALIGN(height, 8);
++		height = ALIGN(height, 16);
 +
 +		/* column height
 +		 * Accept suggested shape if at least min & < 2 * min
@@ -140728,25 +141007,27 @@ index be5cf338bdeb..fd1cba96a80f 100644
  
  	kfree(card);
 diff --git a/drivers/mmc/core/card.h b/drivers/mmc/core/card.h
-index 1200951bab08..ce00466411fa 100644
+index a7c364d0030a..573d9310113d 100644
 --- a/drivers/mmc/core/card.h
 +++ b/drivers/mmc/core/card.h
-@@ -88,11 +88,13 @@ struct mmc_fixup {
+@@ -88,12 +88,15 @@ struct mmc_fixup {
  #define CID_MANFID_GIGASTONE    0x12
  #define CID_MANFID_MICRON       0x13
  #define CID_MANFID_SAMSUNG      0x15
 +#define CID_MANFID_SAMSUNG_SD	0x1b
  #define CID_MANFID_APACER       0x27
+ #define CID_MANFID_SANDISK_MMC  0x45
  #define CID_MANFID_SWISSBIT     0x5D
  #define CID_MANFID_KINGSTON     0x70
++#define CID_MANFID_TRANSCEND_SD 0x74
  #define CID_MANFID_HYNIX	0x90
  #define CID_MANFID_KINGSTON_SD	0x9F
 +#define CID_MANFID_LONGSYS_SD	0xAD
  #define CID_MANFID_NUMONYX	0xFE
  
  #define END_FIXUP { NULL }
-@@ -305,4 +307,9 @@ static inline int mmc_card_no_uhs_ddr50_tuning(const struct mmc_card *c)
- 	return c->quirks & MMC_QUIRK_NO_UHS_DDR50_TUNING;
+@@ -316,4 +319,9 @@ static inline int mmc_card_fixed_secure_erase_trim_time(const struct mmc_card *c
+ 	return c->quirks & MMC_QUIRK_FIXED_SECURE_ERASE_TRIM_TIME;
  }
  
 +static inline int mmc_card_working_sd_cq(const struct mmc_card *c)
@@ -140840,10 +141121,10 @@ index 88c95dbfd9cf..049ec4867268 100644
  	if (device_property_read_u32(dev, "fixed-emmc-driver-type", &drv_type) == 0) {
  		if (host->caps & MMC_CAP_NONREMOVABLE)
 diff --git a/drivers/mmc/core/mmc.c b/drivers/mmc/core/mmc.c
-index 7c86efb1044a..183e4cc78a85 100644
+index 8846550a8892..3f6621698219 100644
 --- a/drivers/mmc/core/mmc.c
 +++ b/drivers/mmc/core/mmc.c
-@@ -1668,6 +1668,7 @@ static int mmc_init_card(struct mmc_host *host, u32 ocr,
+@@ -1680,6 +1680,7 @@ static int mmc_init_card(struct mmc_host *host, u32 ocr,
  		card->ocr = ocr;
  		card->type = MMC_TYPE_MMC;
  		card->rca = 1;
@@ -140851,7 +141132,7 @@ index 7c86efb1044a..183e4cc78a85 100644
  		memcpy(card->raw_cid, cid, sizeof(card->raw_cid));
  	}
  
-@@ -1926,13 +1927,14 @@ static int mmc_init_card(struct mmc_host *host, u32 ocr,
+@@ -1938,13 +1939,14 @@ static int mmc_init_card(struct mmc_host *host, u32 ocr,
  			host->cqe_enabled = true;
  
  			if (card->ext_csd.cmdq_en) {
@@ -140869,10 +141150,10 @@ index 7c86efb1044a..183e4cc78a85 100644
  	}
  
 diff --git a/drivers/mmc/core/queue.c b/drivers/mmc/core/queue.c
-index 13000fc57e2e..1b0353991631 100644
+index 39fcb662c43f..9fa39052169f 100644
 --- a/drivers/mmc/core/queue.c
 +++ b/drivers/mmc/core/queue.c
-@@ -266,6 +266,11 @@ static blk_status_t mmc_mq_queue_rq(struct blk_mq_hw_ctx *hctx,
+@@ -271,6 +271,11 @@ static blk_status_t mmc_mq_queue_rq(struct blk_mq_hw_ctx *hctx,
  			spin_unlock_irq(&mq->lock);
  			return BLK_STS_RESOURCE;
  		}
@@ -140884,7 +141165,7 @@ index 13000fc57e2e..1b0353991631 100644
  		break;
  	default:
  		/*
-@@ -282,6 +287,8 @@ static blk_status_t mmc_mq_queue_rq(struct blk_mq_hw_ctx *hctx,
+@@ -287,6 +292,8 @@ static blk_status_t mmc_mq_queue_rq(struct blk_mq_hw_ctx *hctx,
  	/* Parallel dispatch of requests is not supported at the moment */
  	mq->busy = true;
  
@@ -140893,7 +141174,7 @@ index 13000fc57e2e..1b0353991631 100644
  	mq->in_flight[issue_type] += 1;
  	get_card = (mmc_tot_in_flight(mq) == 1);
  	cqe_retune_ok = (mmc_cqe_qcnt(mq) == 1);
-@@ -321,6 +328,8 @@ static blk_status_t mmc_mq_queue_rq(struct blk_mq_hw_ctx *hctx,
+@@ -326,6 +333,8 @@ static blk_status_t mmc_mq_queue_rq(struct blk_mq_hw_ctx *hctx,
  		bool put_card = false;
  
  		spin_lock_irq(&mq->lock);
@@ -140915,7 +141196,7 @@ index c254e6580afd..28784c9b448a 100644
  #define MMC_CQE_DCMD_BUSY	BIT(0)
  	bool			busy;
 diff --git a/drivers/mmc/core/quirks.h b/drivers/mmc/core/quirks.h
-index c417ed34c057..40469584bf9c 100644
+index 6f727b4a60a5..ac05d6740970 100644
 --- a/drivers/mmc/core/quirks.h
 +++ b/drivers/mmc/core/quirks.h
 @@ -18,10 +18,22 @@
@@ -140944,7 +141225,7 @@ index c417ed34c057..40469584bf9c 100644
  		   0, -1ull, SDIO_ANY_ID, SDIO_ANY_ID, add_quirk_sd,
  		   MMC_QUIRK_BROKEN_SD_CACHE, EXT_CSD_REV_ANY),
  
-@@ -50,6 +62,32 @@ static const struct mmc_fixup __maybe_unused mmc_sd_fixups[] = {
+@@ -50,6 +62,36 @@ static const struct mmc_fixup __maybe_unused mmc_sd_fixups[] = {
  	MMC_FIXUP(CID_NAME_ANY, CID_MANFID_SANDISK_SD, 0x5344, add_quirk_sd,
  		  MMC_QUIRK_BROKEN_SD_DISCARD),
  
@@ -140974,19 +141255,17 @@ index c417ed34c057..40469584bf9c 100644
 +		   cid_rev(1, 0, 0, 0), -1ull, SDIO_ANY_ID, SDIO_ANY_ID, add_quirk_sd,
 +		   MMC_QUIRK_WORKING_SD_CQ, EXT_CSD_REV_ANY),
 +
++	_FIXUP_EXT(CID_NAME_ANY, CID_MANFID_TRANSCEND_SD, 0x4a60, CID_YEAR_ANY, CID_MONTH_ANY,
++		   cid_rev(2, 0, 2026, 4), -1ull, SDIO_ANY_ID, SDIO_ANY_ID, add_quirk_sd,
++		   MMC_QUIRK_WORKING_SD_CQ, EXT_CSD_REV_ANY),
++
  	END_FIXUP
  };
  
-@@ -153,6 +191,29 @@ static const struct mmc_fixup __maybe_unused mmc_blk_fixups[] = {
- 	MMC_FIXUP("M62704", CID_MANFID_KINGSTON, 0x0100, add_quirk_mmc,
- 		  MMC_QUIRK_TRIM_BROKEN),
+@@ -162,6 +204,23 @@ static const struct mmc_fixup __maybe_unused mmc_blk_fixups[] = {
+ 	MMC_FIXUP("IB2932", CID_MANFID_KINGSTON, 0x0100, add_quirk_mmc,
+ 		  MMC_QUIRK_FIXED_SECURE_ERASE_TRIM_TIME),
  
-+	/*
-+	 * Some SD cards reports discard support while they don't
-+	 */
-+	MMC_FIXUP(CID_NAME_ANY, CID_MANFID_SANDISK_SD, 0x5344, add_quirk_sd,
-+		  MMC_QUIRK_BROKEN_SD_DISCARD),
-+
 +	/*
 +	 *  On some Kingston SD cards, multiple erases of less than 64
 +	 *  sectors can cause corruption.
@@ -144089,10 +144368,28 @@ index b6a571d866fa..847b72ba7aec 100644
  
  #ifdef CONFIG_MMC_SDHCI_IO_ACCESSORS
 diff --git a/drivers/net/ethernet/broadcom/genet/bcmgenet.c b/drivers/net/ethernet/broadcom/genet/bcmgenet.c
-index 482a31e7b72b..8598e883dcda 100644
+index 482a31e7b72b..3e40097fea8f 100644
 --- a/drivers/net/ethernet/broadcom/genet/bcmgenet.c
 +++ b/drivers/net/ethernet/broadcom/genet/bcmgenet.c
-@@ -2725,7 +2725,7 @@ static void bcmgenet_init_tx_ring(struct bcmgenet_priv *priv,
+@@ -1368,13 +1368,12 @@ void bcmgenet_eee_enable_set(struct net_device *dev, bool enable)
+ 		reg &= ~(TBUF_EEE_EN | TBUF_PM_EN);
+ 	bcmgenet_writel(reg, priv->base + off);
+ 
+-	/* Do the same for thing for RBUF */
++	/* RBUF EEE/PM can break the RX path on GENET. Keep it disabled. */
+ 	reg = bcmgenet_rbuf_readl(priv, RBUF_ENERGY_CTRL);
+-	if (enable)
+-		reg |= RBUF_EEE_EN | RBUF_PM_EN;
+-	else
++	if (reg & (RBUF_EEE_EN | RBUF_PM_EN)) {
+ 		reg &= ~(RBUF_EEE_EN | RBUF_PM_EN);
+-	bcmgenet_rbuf_writel(priv, reg, RBUF_ENERGY_CTRL);
++		bcmgenet_rbuf_writel(priv, reg, RBUF_ENERGY_CTRL);
++	}
+ 
+ 	if (!enable && priv->clk_eee_enabled) {
+ 		clk_disable_unprepare(priv->clk_eee);
+@@ -2725,7 +2724,7 @@ static void bcmgenet_init_tx_ring(struct bcmgenet_priv *priv,
  
  	bcmgenet_tdma_ring_writel(priv, index, 0, TDMA_PROD_INDEX);
  	bcmgenet_tdma_ring_writel(priv, index, 0, TDMA_CONS_INDEX);
@@ -144101,7 +144398,7 @@ index 482a31e7b72b..8598e883dcda 100644
  	/* Disable rate control for now */
  	bcmgenet_tdma_ring_writel(priv, index, flow_period_val,
  				  TDMA_FLOW_PERIOD);
-@@ -4077,8 +4077,10 @@ static int bcmgenet_probe(struct platform_device *pdev)
+@@ -4077,8 +4076,10 @@ static int bcmgenet_probe(struct platform_device *pdev)
  	netif_set_real_num_rx_queues(priv->dev, priv->hw_params->rx_queues + 1);
  
  	/* Set default coalescing parameters */
@@ -145116,6 +145413,20 @@ index dc8634e7bcbe..53f6f7c89237 100644
  	/* these values can be used to identify internal PHY */
  	priv->chip_id = phy_read_mmd(phydev, 3, LAN88XX_MMD3_CHIP_ID);
  	priv->chip_rev = phy_read_mmd(phydev, 3, LAN88XX_MMD3_CHIP_REV);
+diff --git a/drivers/net/phy/phy_device.c b/drivers/net/phy/phy_device.c
+index 3bd415710bf3..788bb3d4f62f 100644
+--- a/drivers/net/phy/phy_device.c
++++ b/drivers/net/phy/phy_device.c
+@@ -2933,7 +2933,8 @@ EXPORT_SYMBOL_GPL(phy_advertise_eee_all);
+  */
+ void phy_support_eee(struct phy_device *phydev)
+ {
+-	linkmode_copy(phydev->advertising_eee, phydev->supported_eee);
++	linkmode_andnot(phydev->advertising_eee, phydev->supported_eee,
++			phydev->eee_disabled_modes);
+ 	phydev->eee_cfg.tx_lpi_enabled = true;
+ 	phydev->eee_cfg.eee_enabled = true;
+ }
 diff --git a/drivers/net/usb/lan78xx.c b/drivers/net/usb/lan78xx.c
 index 19cdf69fa589..41a51deca9a2 100644
 --- a/drivers/net/usb/lan78xx.c
@@ -145885,7 +146196,7 @@ index 45b342ea0637..5299968ece18 100644
  		goto fail;
  
 diff --git a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/sdio.c b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/sdio.c
-index 30f6fcb68632..ff3eac9d8d22 100644
+index 8fb595733b9c..89967ddc0954 100644
 --- a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/sdio.c
 +++ b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/sdio.c
 @@ -35,9 +35,12 @@
@@ -145964,7 +146275,7 @@ index 30f6fcb68632..ff3eac9d8d22 100644
  
  	return intstatus;
  }
-@@ -2580,6 +2596,182 @@ static int brcmf_sdio_intr_rstatus(struct brcmf_sdio *bus)
+@@ -2581,6 +2597,182 @@ static int brcmf_sdio_intr_rstatus(struct brcmf_sdio *bus)
  	return ret;
  }
  
@@ -146147,7 +146458,7 @@ index 30f6fcb68632..ff3eac9d8d22 100644
  static void brcmf_sdio_dpc(struct brcmf_sdio *bus)
  {
  	struct brcmf_sdio_dev *sdiod = bus->sdiodev;
-@@ -2651,8 +2843,11 @@ static void brcmf_sdio_dpc(struct brcmf_sdio *bus)
+@@ -2652,8 +2844,11 @@ static void brcmf_sdio_dpc(struct brcmf_sdio *bus)
  
  	/* Handle host mailbox indication */
  	if (intstatus & I_HMB_HOST_INT) {
@@ -146160,7 +146471,7 @@ index 30f6fcb68632..ff3eac9d8d22 100644
  	}
  
  	sdio_release_host(bus->sdiodev->func1);
-@@ -2697,7 +2892,7 @@ static void brcmf_sdio_dpc(struct brcmf_sdio *bus)
+@@ -2698,7 +2893,7 @@ static void brcmf_sdio_dpc(struct brcmf_sdio *bus)
  	brcmf_sdio_clrintr(bus);
  
  	if (bus->ctrl_frame_stat && (bus->clkstate == CLK_AVAIL) &&
@@ -146169,7 +146480,7 @@ index 30f6fcb68632..ff3eac9d8d22 100644
  		sdio_claim_host(bus->sdiodev->func1);
  		if (bus->ctrl_frame_stat) {
  			err = brcmf_sdio_tx_ctrlframe(bus,  bus->ctrl_frame_buf,
-@@ -3568,6 +3763,10 @@ static int brcmf_sdio_bus_preinit(struct device *dev)
+@@ -3569,6 +3764,10 @@ static int brcmf_sdio_bus_preinit(struct device *dev)
  	if (err < 0)
  		goto done;
  
@@ -146180,7 +146491,7 @@ index 30f6fcb68632..ff3eac9d8d22 100644
  	bus->tx_hdrlen = SDPCM_HWHDR_LEN + SDPCM_SWHDR_LEN;
  	if (sdiodev->sg_support) {
  		bus->txglom = false;
-@@ -4218,7 +4417,7 @@ static void brcmf_sdio_firmware_callback(struct device *dev, int err,
+@@ -4219,7 +4418,7 @@ static void brcmf_sdio_firmware_callback(struct device *dev, int err,
  	u8 saveclk, bpreq;
  	u8 devctl;
  
@@ -146189,7 +146500,7 @@ index 30f6fcb68632..ff3eac9d8d22 100644
  
  	if (err)
  		goto fail;
-@@ -4396,12 +4595,25 @@ static void brcmf_sdio_firmware_callback(struct device *dev, int err,
+@@ -4397,12 +4596,25 @@ static void brcmf_sdio_firmware_callback(struct device *dev, int err,
  	}
  
  	/* Attach to the common layer, reserve hdr space */
@@ -146216,7 +146527,7 @@ index 30f6fcb68632..ff3eac9d8d22 100644
  	/* ready */
  	return;
  
-@@ -4649,3 +4861,40 @@ int brcmf_sdio_sleep(struct brcmf_sdio *bus, bool sleep)
+@@ -4651,3 +4863,40 @@ int brcmf_sdio_sleep(struct brcmf_sdio *bus, bool sleep)
  
  	return ret;
  }
@@ -169261,7 +169572,7 @@ index 5c7538d498dd..60622ef76b6b 100644
  	 * If the channel was halted due to a dequeue, the qtd list might
  	 * be empty or at least the first entry will not be the active qtd.
 diff --git a/drivers/usb/dwc3/core.c b/drivers/usb/dwc3/core.c
-index 161a4d58b2ce..2a84cca4e3ce 100644
+index 0d3c7e7b2262..5007d73b94ef 100644
 --- a/drivers/usb/dwc3/core.c
 +++ b/drivers/usb/dwc3/core.c
 @@ -1327,6 +1327,24 @@ static void dwc3_config_threshold(struct dwc3 *dwc)
@@ -169329,7 +169640,7 @@ index 161a4d58b2ce..2a84cca4e3ce 100644
 +		u8 tx_maxburst = dwc->tx_max_burst_prd;
 +
 +		if (tx_thr_num && tx_maxburst) {
-+			reg = dwc3_readl(dwc->regs, DWC3_GTXTHRCFG);
++			reg = dwc3_readl(dwc, DWC3_GTXTHRCFG);
 +			reg |= DWC3_GTXTHRCFG_PKTCNTSEL;
 +
 +			reg &= ~DWC3_GTXTHRCFG_TXPKTCNT(~0);
@@ -169338,7 +169649,7 @@ index 161a4d58b2ce..2a84cca4e3ce 100644
 +			reg &= ~DWC3_GTXTHRCFG_MAXTXBURSTSIZE(~0);
 +			reg |= DWC3_GTXTHRCFG_MAXTXBURSTSIZE(tx_maxburst);
 +
-+			dwc3_writel(dwc->regs, DWC3_GTXTHRCFG, reg);
++			dwc3_writel(dwc, DWC3_GTXTHRCFG, reg);
 +		}
 +	}
 +
@@ -236197,19 +236508,19 @@ index 517288da19fd..626c450d71f4 100644
  #define PHY_ARDENNES_MMD_DEV_3_PHY_CFG		(0x806A)
  #define PHY_ARDENNES_MMD_DEV_3_PHY_CFG_ZD_DLY_EN_	(0x2000)
 diff --git a/include/linux/mmc/card.h b/include/linux/mmc/card.h
-index e9e964c20e53..9eaea0ec7950 100644
+index 9dc4750296af..c964aaf00160 100644
 --- a/include/linux/mmc/card.h
 +++ b/include/linux/mmc/card.h
-@@ -329,6 +329,8 @@ struct mmc_card {
- #define MMC_QUIRK_BROKEN_CACHE_FLUSH	(1<<16)	/* Don't flush cache until the write has occurred */
- #define MMC_QUIRK_BROKEN_SD_POWEROFF_NOTIFY	(1<<17) /* Disable broken SD poweroff notify support */
+@@ -331,6 +331,8 @@ struct mmc_card {
  #define MMC_QUIRK_NO_UHS_DDR50_TUNING	(1<<18) /* Disable DDR50 tuning */
+ #define MMC_QUIRK_BROKEN_MDT    (1<<19) /* Wrong manufacturing year */
+ #define MMC_QUIRK_FIXED_SECURE_ERASE_TRIM_TIME	(1<<20) /* Secure erase/trim time is fixed regardless of size */
 +#define MMC_QUIRK_WORKING_SD_CQ	(1<<30)		/* SD card has known-good CQ implementation */
 +#define MMC_QUIRK_ERASE_BROKEN	(1<<31)		/* Skip erase */
  
  	bool			written_flag;	/* Indicates eMMC has been written since power on */
  	bool			reenable_cmdq;	/* Re-enable Command Queue */
-@@ -353,6 +355,7 @@ struct mmc_card {
+@@ -355,6 +357,7 @@ struct mmc_card {
  	struct sd_switch_caps	sw_caps;	/* switch (CMD6) caps */
  	struct sd_ext_reg	ext_power;	/* SD extension reg for PM */
  	struct sd_ext_reg	ext_perf;	/* SD extension reg for PERF */
@@ -236217,7 +236528,7 @@ index e9e964c20e53..9eaea0ec7950 100644
  
  	struct sd_uhs2_config	uhs2_config;	/* SD UHS-II config */
  
-@@ -377,6 +380,8 @@ struct mmc_card {
+@@ -379,6 +382,8 @@ struct mmc_card {
  	unsigned int    nr_parts;
  
  	struct workqueue_struct *complete_wq;	/* Private workqueue */
@@ -239375,10 +239686,10 @@ index 000000000000..a9a54d3322ec
 +
 +#endif
 diff --git a/kernel/cgroup/cgroup.c b/kernel/cgroup/cgroup.c
-index 4ca3cb993da2..e3da950393f8 100644
+index 6b2ee75c63eb..49eebf1f15f1 100644
 --- a/kernel/cgroup/cgroup.c
 +++ b/kernel/cgroup/cgroup.c
-@@ -7209,6 +7209,39 @@ static int __init cgroup_disable(char *str)
+@@ -7195,6 +7195,39 @@ static int __init cgroup_disable(char *str)
  }
  __setup("cgroup_disable=", cgroup_disable);
  

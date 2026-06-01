@@ -16,9 +16,9 @@
 [C] extra/base
 
 [L] BSD
-[V] 1.98.2
+[V] 1.98.5
 
-[D] 0542150bf5e2ca20c7eb2f4c47dfd7c540873cac5756d804afddc344 tailscale-1.98.2.tar.gz https://github.com/tailscale/tailscale/archive/v1.98.2/
+[D] 685ea0259e9df9f6c4e384e2f3c3e9883ff1cf4a110d64653d20b97c tailscale-1.98.5.tar.gz https://github.com/tailscale/tailscale/archive/v1.98.5/
 
 . $base/package/*/*/go-conf.in
 

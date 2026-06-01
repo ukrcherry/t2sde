@@ -22,11 +22,11 @@
 [F] OBJDIR CROSS
 
 [L] BSD
-[V] 22.1.5
+[V] 22.1.6
 [P] X -1---5---9 102.390
 
 [CV-GROUP] llvm-project
-[D] 539b0fa857272b2b18ad9b9e58e11d4e48e0f1c807ec375d5ca91913 llvm-project-22.1.5.src.tar.xz https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.5/
+[D] 7033e7771c421a353d7d644e1aadcbf0f2dd848cc1f7299070e20884 llvm-project-22.1.6.src.tar.xz https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.6/
 
 srcdir=*/compiler-rt
 
@@ -45,7 +45,7 @@ if atstage toolchain; then
 	hook_add inmake 5 "build_minimal_cross" # -DCOMPILER_RT_BAREMETAL_BUILD=ON ?
 fi
 
-if [ $SDECFG_LIBC == "musl" ]; then
+if [ $SDECFG_LIBC = "musl" ]; then
 	var_append cmakeopt ' ' "-DCOMPILER_RT_BUILD_SANITIZERS=OFF -DCOMPILER_RT_BUILD_XRAY=OFF"
 	var_append cmakeopt ' ' -DCOMPILER_RT_BUILD_PROFILER=OFF
 fi

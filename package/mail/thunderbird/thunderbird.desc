@@ -21,10 +21,10 @@
 [R] - alpha hppa hppa64 ia64 m68k riscv
 
 [L] MPL
-[V] 150.0.1
+[V] 151.0.1
 
 #[CV-URL] https://download.mozilla.org/?product=thunderbird-latest&os=linux&lang=en-US
-[D] ff3ca7c46e131a0adb7f5bd1716c93dc30e79a1ae7ae891879d32414 thunderbird-150.0.1.source.tar.xz https://ftp.mozilla.org/pub/thunderbird/releases/150.0.1/source/
+[D] beb4cb214f6a6f6cfe8e06cea98e77c07bc6a25f7adc13cc13674027 thunderbird-151.0.1.source.tar.xz https://ftp.mozilla.org/pub/thunderbird/releases/151.0.1/source/
 
 . $base/package/*/*/mozilla-conf.in
 
@@ -96,11 +96,11 @@ mozilla_register() {
 }
 
 # don't pass CPU optimizations to clang w/ wasi
-GCC_WRAPPER_INSERT="${GCC_WRAPPER_INSERT/-march=/--target=wasm32-wasi?:-march=}"
-GCC_WRAPPER_INSERT="${GCC_WRAPPER_INSERT/-mcpu=/--target=wasm32-wasi?:-mcpu=}"
-GCC_WRAPPER_INSERT="${GCC_WRAPPER_INSERT/-mtune=/--target=wasm32-wasi?:-mtune=}"
-GCC_WRAPPER_INSERT="${GCC_WRAPPER_INSERT/-mfpu=/--target=wasm32-wasi?:-mfpu=}"
-GCC_WRAPPER_INSERT="${GCC_WRAPPER_INSERT/-c?:-pie/--target=wasm32-wasi?:-c?:-pie}"
+GCC_WRAPPER_INSERT="${GCC_WRAPPER_INSERT/-march=/--target=wasm32-wasip1?:-march=}"
+GCC_WRAPPER_INSERT="${GCC_WRAPPER_INSERT/-mcpu=/--target=wasm32-wasip1?:-mcpu=}"
+GCC_WRAPPER_INSERT="${GCC_WRAPPER_INSERT/-mtune=/--target=wasm32-wasip1?:-mtune=}"
+GCC_WRAPPER_INSERT="${GCC_WRAPPER_INSERT/-mfpu=/--target=wasm32-wasip1?:-mfpu=}"
+GCC_WRAPPER_INSERT="${GCC_WRAPPER_INSERT/-c?:-pie/--target=wasm32-wasip1?:-c?:-pie}"
 
 hook_add prepatch 2 "cargo_clear_cksum {,comm/}third_party/rust/*/.cargo-checksum.json"
 hook_add prepatch 4 thunderbird_config

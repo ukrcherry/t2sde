@@ -44,11 +44,11 @@
 [E] opt libxml
 
 [L] OpenSource
-[V] 26.1.0
+[V] 26.1.1
 [P] X ?----5---9 127.445
 
 [CV-FLAGS] NO-MAJOR
-[D] 536583ca87baf8e43c529a3c5a826d36974f1acd665e6ea4a114462f mesa-26.1.0.tar.xz https://archive.mesa3d.org/
+[D] b3aeed3f6069612a2e8e46eeaf66bd856bab9ab7bcdbcd3bcbdee2de mesa-26.1.1.tar.xz https://archive.mesa3d.org/
 
 if atstage cross; then
 	# translate native llvm-config libraries to sysroot
@@ -177,7 +177,7 @@ pkginstalled vulkan-headers || var_remove galdrv ',' zink
 
 if atstage toolchain; then
 	galdrv= vuldrv=
-	var_append mesonopt ' ' -Dtools=asahi,etnaviv,freedreno,glsl,imagination,intel,lima
+	var_append mesonopt ' ' -Dtools=asahi,etnaviv,freedreno,glsl,imagination,intel,lima,panfrost
 	var_append mesonopt ' ' -Dinstall-mesa-clc=true
 	var_append mesonopt ' ' -Dinstall-precomp-compiler=true
 else

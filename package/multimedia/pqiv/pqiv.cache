@@ -1,14 +1,15 @@
-[TIMESTAMP] 1746825627 Fri May  9 23:20:27 2025
-[BUILDTIME] 4 (9)
-[SIZE] 0.21 MB, 8 files
+[TIMESTAMP] 1779732179 Mon May 25 20:02:59 2026
+[BUILDTIME] 10 (9)
+[SIZE] 0.22 MB, 9 files
 
 [DEP] at-spi2-core
 [DEP] bash
 [DEP] cairo
 [DEP] coreutils
 [DEP] diffutils
-[DEP] ffmpeg
+[OPT] ffmpeg
 [DEP] findutils
+[DEP] gawk
 [DEP] gdk-pixbuf
 [DEP] glib
 [DEP] grep
@@ -16,10 +17,15 @@
 [DEP] gzip
 [DEP] harfbuzz
 [DEP] libarchive
-[DEP] libwebp
+[OPT] libspectre
+[OPT] libwebp
+[DEP] libx11
 [DEP] linux-header
 [DEP] make
 [DEP] pango
 [DEP] pkgconfig
+[OPT] poppler
+[DEP] sed
 [DEP] tar
+[DEP] util-linux
 [DEP] xorgproto

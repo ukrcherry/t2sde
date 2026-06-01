@@ -1,6 +1,6 @@
-[TIMESTAMP] 1760006270 Thu Oct  9 12:37:50 2025
-[BUILDTIME] 310 (9)
-[SIZE] 8.17 MB, 307 files
+[TIMESTAMP] 1780324881 Mon Jun  1 16:41:21 2026
+[BUILDTIME] 90 (9)
+[SIZE] 11.80 MB, 313 files
 
 [DEP] alsa-lib
 [DEP] at-spi2-core
@@ -28,6 +28,7 @@
 [DEP] jack
 [DEP] json-glib
 [DEP] lame
+[DEP] libbs2b
 [DEP] libcdio
 [DEP] libcdio-paranoia
 [DEP] libglvnd
@@ -61,8 +62,10 @@
 [DEP] qt6base
 [DEP] qt6multimedia
 [DEP] sed
+[DEP] sndio
 [DEP] soxr
 [DEP] tar
+[DEP] util-linux
 [DEP] wavpack
 [DEP] wayland
 [DEP] xorgproto

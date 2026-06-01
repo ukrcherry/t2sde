@@ -1,18 +1,17 @@
-[TIMESTAMP] 1768853001 Mon Jan 19 21:03:21 2026
-[BUILDTIME] 30 (9)
-[SIZE] 8.70 MB, 818 files
+[TIMESTAMP] 1779868063 Wed May 27 09:47:43 2026
+[BUILDTIME] 50 (9)
+[SIZE] 9.56 MB, 831 files
 
 [DEP] bash
 [DEP] binutils
 [DEP] brotli
-[DEP] cmake
 [DEP] coreutils
 [DEP] diffutils
-[DEP] findutils
+[DEP] file
 [DEP] gawk
 [DEP] gettext
 [OPT] gi-docgen
-[OPT] glib
+[DEP] glib
 [DEP] gobject-introspection
 [OPT] graphviz
 [DEP] grep
@@ -34,3 +33,4 @@
 [OPT] vala
 [DEP] xz
 [DEP] zlib
+[DEP] zstd

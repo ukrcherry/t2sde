@@ -1,21 +1,21 @@
-[TIMESTAMP] 1739184503 Mon Feb 10 11:48:23 2025
-[BUILDTIME] 3 (5)
-[SIZE] 0.45 MB, 19 files
+[TIMESTAMP] 1779868261 Wed May 27 09:51:01 2026
+[BUILDTIME] 12 (9)
+[SIZE] 0.71 MB, 31 files
 
-[DEP] 00-dirtree
 [DEP] bash
 [DEP] binutils
-[DEP] bison
 [DEP] coreutils
 [DEP] diffutils
-[DEP] flex
 [DEP] gawk
 [DEP] grep
 [DEP] gzip
-[DEP] libyaml
 [DEP] linux-header
-[DEP] m4
-[DEP] make
-[DEP] pkgconfig
+[DEP] meson
+[DEP] ninja
+[DEP] openssl
+[DEP] python
+[DEP] python-gpep517
 [DEP] sed
+[DEP] swig
 [DEP] tar
+[DEP] util-linux

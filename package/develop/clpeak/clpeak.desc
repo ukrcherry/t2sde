@@ -1,0 +1,24 @@
+[COPY] --- T2-COPYRIGHT-BEGIN ---
+[COPY] t2/package/*/clpeak/clpeak.desc
+[COPY] Copyright (C) 2025 - 2026 The T2 SDE Project
+[COPY] SPDX-License-Identifier: GPL-2.0
+[COPY] --- T2-COPYRIGHT-END ---
+
+[I] A benchmarking tool to measure peak capabilities of opencl devices
+
+[T] A synthetic benchmarking tool to measure peak capabilities of opencl
+[T] devices. It only measures the peak metrics that can be achieved using
+[T] vector operations and does not represent a real-world use case.
+
+[U] https://github.com/krrishnarraj/clpeak
+
+[A] Krishnaraj Bhat
+[M] René Rebe <rene@exactco.de>
+
+[C] extra/tool
+[F] CROSS
+
+[L] APL
+[V] 2.0.9
+
+[D] 71ecbfc1d09d7b2d3e2d73ecb443845cb99b5153b98315b6c8cb5a04 clpeak-2.0.9.tar.gz https://github.com/krrishnarraj/clpeak/archive/2.0.9/

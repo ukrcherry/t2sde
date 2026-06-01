@@ -20,10 +20,10 @@
 [R] - alpha hppa hppa64 ia64 m68k riscv
 
 [L] MPL
-[V] 150.0.3
+[V] 151.0.1
 [P] X -----5---9 202.000
 
-[D] 728ec3bfb0a6b18b813b9d1ad48a321f235cb1ab5d009bba3fbd97ee firefox-150.0.3.source.tar.xz https://ftp.mozilla.org/pub/firefox/releases/150.0.3/source/
+[D] 451e119f469f8e749cce5041e04142ec76011324843edbf940075888 firefox-151.0.1.source.tar.xz https://ftp.mozilla.org/pub/firefox/releases/151.0.1/source/
 
 . $base/package/*/*/mozilla-conf.in
 
@@ -115,12 +115,12 @@ pkginstalled libevent && echo "ac_add_options --with-system-libevent" >> .mozcon
 }
 
 # don't pass CPU optimizations to clang w/ wasi
-GCC_WRAPPER_INSERT="${GCC_WRAPPER_INSERT/-march=/--target=wasm32-wasi?:-march=}"
-GCC_WRAPPER_INSERT="${GCC_WRAPPER_INSERT/-mcpu=/--target=wasm32-wasi?:-mcpu=}"
-GCC_WRAPPER_INSERT="${GCC_WRAPPER_INSERT/-mtune=/--target=wasm32-wasi?:-mtune=}"
-GCC_WRAPPER_INSERT="${GCC_WRAPPER_INSERT/-mfpu=/--target=wasm32-wasi?:-mfpu=}"
-CLANG_WRAPPER_INSERT="${CLANG_WRAPPER_INSERT/-mcpu=/--target=wasm32-wasi?:-mcpu=}"
-GCC_WRAPPER_INSERT="${GCC_WRAPPER_INSERT/-c?:-pie/--target=wasm32-wasi?:-c?:-pie}"
+GCC_WRAPPER_INSERT="${GCC_WRAPPER_INSERT/-march=/--target=wasm32-wasip1?:-march=}"
+GCC_WRAPPER_INSERT="${GCC_WRAPPER_INSERT/-mcpu=/--target=wasm32-wasip1?:-mcpu=}"
+GCC_WRAPPER_INSERT="${GCC_WRAPPER_INSERT/-mtune=/--target=wasm32-wasip1?:-mtune=}"
+GCC_WRAPPER_INSERT="${GCC_WRAPPER_INSERT/-mfpu=/--target=wasm32-wasip1?:-mfpu=}"
+CLANG_WRAPPER_INSERT="${CLANG_WRAPPER_INSERT/-mcpu=/--target=wasm32-wasip1?:-mcpu=}"
+GCC_WRAPPER_INSERT="${GCC_WRAPPER_INSERT/-c?:-pie/--target=wasm32-wasip1?:-c?:-pie}"
 
 hook_add prepatch 5 "cargo_clear_cksum third_party/rust/*/.cargo-checksum.json"
 hook_add postpatch 5 "rust_update_arch_target third_party/rust/*/no_atomic*.rs"

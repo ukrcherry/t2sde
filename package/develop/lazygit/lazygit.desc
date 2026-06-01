@@ -18,9 +18,9 @@
 
 [C] extra/base
 
-[V] 0.61.1
+[V] 0.62.1
 [L] MIT
 
-[D] c49bdce4c87e59cd07073b8301dca5a415245d2e4ee8b6d1105afe1b lazygit-0.61.1.tar.gz https://github.com/jesseduffield/lazygit/archive/v0.61.1/
+[D] e60d3e4a4082c8c565a3f1a23b4013f9d938eae01901ef2ae4c58fe4 lazygit-0.62.1.tar.gz https://github.com/jesseduffield/lazygit/archive/v0.62.1/
 
 hook_add postmake 5 'install -m755 lazygit $root$bindir/lazygit'

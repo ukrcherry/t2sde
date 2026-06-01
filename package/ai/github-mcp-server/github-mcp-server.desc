@@ -20,9 +20,9 @@
 [F] CROSS
 
 [L] MIT
-[V] 1.0.4
+[V] 1.1.2
 
-[D] 3ae64093e3185679b3f4d72cb5aba39770650e9765a18a1a3ad82e12 github-mcp-server-1.0.4.tar.gz https://github.com/github/github-mcp-server/archive/v1.0.4/
+[D] 7d54d7d6f420c405b7dc03693d4230eba294fb3cb54e648cab28e299 github-mcp-server-1.1.2.tar.gz https://github.com/github/github-mcp-server/archive/v1.1.2/
 
 . $base/package/*/*/go-conf.in
 var_append goconfopt ' ' '-o build/ ./cmd/github-mcp-server ./cmd/mcpcurl'
